@@ -24,7 +24,18 @@ function loadPages(urlAssets, arrAssets){
 	var i=0, lengthArrAssets = arrAssets.length;
 
 	for(i;i<lengthArrAssets;i++){
-		loadExternalHTML(urlAssets+arrAssets[i]+"/index.html",$('#'+arrAssets[i]));
+		loadExternalHTML(urlAssets+arrAssets[i]+"/index.html",$('#container'));
+
+		if(i==lengthArrAssets-1){
+			//Add script jquery mobile after add assets
+			//console.log($('body'));
+			
+			setTimeout(function(){
+				$("#container").show();
+				$('body').append('<script src="framework/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>');
+			},500);
+			
+		}
 	}
 }
 
