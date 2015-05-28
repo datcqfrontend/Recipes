@@ -1,10 +1,36 @@
 <div data-role="page" id="home">
   <div data-role="panel" id="panelMenuHome" data-display="overlay"  data-position-fixed="true">
-    <p>Open Menu</p>
+    
+      <div data-role="collapsibleset" data-inset="false">
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false">
+          <h3>Tutorials</h3>
+          <p>Tutorials.</p>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false">
+          <h3>Lists</h3>
+          <p>Lists.</p>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false">
+          <h3>Forms</h3>
+          <p>Forms.</p>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false">
+          <h3>Themes</h3>
+          <p>Themes.</p>
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false">
+          <h3>Events</h3>
+          <p>Events.</p>
+        </div>
+      </div>    
+    
   </div>
 
+
   <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-position="fixed" >
-    <h1 class="ui-title" role="heading" aria-level="1">jQuery Mobile Recipe</h1>
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow ui-btn-active">Menu</a>
+    <h1 class="ui-title">jQuery Mobile Recipe</h1>
+    <a href="#panelMenuHome" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
   </div>
 
 
@@ -15,15 +41,17 @@
 
     <a href="#dialog1" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" data-transition="fade">Open dialog 1</a>
     <br>
-    <a href="#page1" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow" data-transition="slide">Go to Page 1</a>
+    
   </div>
 
 
-  <div data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit" data-position="fixed" >
-    <h1 class="ui-title" role="heading" aria-level="1">Edited by datcq</h1>
-  </div>
 
-  <link rel="stylesheet" href="assets/home/main.css">
-  <script src="assets/home/main.js"></script>
+
+  <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
+    <h1 class="ui-title">Edited by datcq</h1>    
+  </div>
 </div>
+
+<link rel="stylesheet" href="assets/home/main.css">
+<script src="assets/home/main.js"></script>
 
