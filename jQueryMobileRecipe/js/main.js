@@ -3,7 +3,7 @@ $(document).on('ready',function(){
 
 	urlAssets = "assets/";
 	arrAssets = [
-					"home","page1"
+					"home","getStarted"
 
 					//"home","page1","page2","page3",
 					//"dialog1"	

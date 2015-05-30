@@ -1,1 +1,19 @@
 /*#home h1 { color: yellow;}*/
+#home #contentHome #logo{
+	width:100%;
+	text-align: center;
+}
+
+#home #contentHome #logo img{
+	width: 30%;
+	height: auto;
+}
+
+	@media only screen and (min-width: 768px) {
+		#home #contentHome #logo img{
+			width: 215px;
+			height: 215px;
+		}
+	}
+
+	
