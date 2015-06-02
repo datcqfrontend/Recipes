@@ -1,30 +1,70 @@
 <div data-role="page" id="home">
-  <div data-role="panel" id="panelMenuHome" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
+  <div data-role="panel" id="panelMenu_Home" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
       <a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow ui-btn-active">Home</a>
       <div data-role="collapsibleset" data-inset="false">
         <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+          
           <h3>Tutorials</h3>
           <div data-role="controlgroup" data-type="vertical">
             <a href="#getStarted" class="ui-btn">Get Started</a>
             <a href="#pages" class="ui-btn">Pages</a>
             <a href="#transitions" class="ui-btn">Transitions</a>
+            <a href="#buttons" class="ui-btn">Buttons</a>
+            <a href="#icons" class="ui-btn">Icons</a>
+            <a href="#popups" class="ui-btn">Popups</a>
+            <a href="#toolbars" class="ui-btn">Toolbars</a>
+            <a href="#navbars" class="ui-btn">Navbars</a>
+            <a href="#panels" class="ui-btn">Panels</a>
+            <a href="#collapsobles" class="ui-btn">Collapsibles</a>
+            <a href="#tables" class="ui-btn">Tables</a>
+            <a href="#grids" class="ui-btn">Grids</a>
           </div>
+
         </div>
         <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
           <h3>Lists</h3>
-          <p>Lists.</p>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#listViews" class="ui-btn">List Views</a>
+            <a href="#listContent" class="ui-btn">List Content</a>
+            <a href="#filterItems" class="ui-btn">Filter Items</a>
+            
+          </div>
+
         </div>
         <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
           <h3>Forms</h3>
-          <p>Forms.</p>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#formBasic" class="ui-btn">Form Basic</a>
+            <a href="#formInputs" class="ui-btn">Form Inputs</a>
+            <a href="#formSelect" class="ui-btn">Form Select</a>
+            <a href="#formSliders" class="ui-btn">Form Sliders</a>
+            
+          </div>
+
         </div>
         <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
           <h3>Themes</h3>
-          <p>Themes.</p>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#themes" class="ui-btn">Themes</a>
+            
+          </div>
+
         </div>
         <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
           <h3>Events</h3>
-          <p>Events.</p>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#events" class="ui-btn">Events</a>
+            <a href="#touch" class="ui-btn">Touch</a>
+            <a href="#scroll" class="ui-btn">Scroll</a>
+            <a href="#orientation" class="ui-btn">Orientation</a>
+            <a href="#pageEvents" class="ui-btn">Page Events</a>
+            
+          </div>
+
         </div>
       </div>    
     
@@ -34,60 +74,58 @@
   <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-position="fixed" >
     <a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow ui-btn-active">Menu</a>
     <h1 class="ui-title">jQuery Mobile Recipe</h1>
-    <a href="#panelMenuHome" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
+    <a href="#panelMenu_Home" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
   </div>
 
 
-  <div id="contentHome" data-role="main" class="ui-content">
+  <div id="content_Home" data-role="main" class="ui-content">
   
       <div id="logo">
         <img src="media/images/w3jquerymobile.png"></img>
       </div>
       <div id="group" style="">
-        <h1>What is jQuery Mobile</h1>
+        <h3>What is jQuery Mobile</h3>
 
-        <p>jQuery Mobile is a touch-optimized web framework for creating <span style="color:black; font-weight:bold;">mobile web applications</spam>.</p>
+        <p>jQuery Mobile is a touch-optimized web framework for creating <span style="color:black; font-weight:bold;">mobile web applications</span>.
+        <br>
+        jQuery Mobile works on <a href="#list_home_devices" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style="color:blue; font-weight:bold;">all popular smartphones and tablets</span></a>.
+        <br>
+        jQuery Mobile is built on top of the jQuery library, which makes it easy to learn if you already know jQuery.<
+        <br>
+        jQuery Mobile uses HTML5 & CSS3 for laying out pages with <span style="color:black; font-weight:bold;">minimal scripting</span>.</p>
+      </div> 
 
-        <p>jQuery Mobile works on <a href="#list_home_devices" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style="color:blue; font-weight:bold;">all popular smartphones and tablets</span></a>.</p>
-
-        <div data-role="popup" id="list_home_devices" data-overlay-theme="b">
-          <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-          <p>
-            <ul>
-              <li>iOS</li>
-              <li>Android</li>
-              <li>Black Berry</li>
-              <li>Bada</li>
-              <li>Windows Phone</li>
-              <li>Palm Web OS</li>
-              <li>Symbian</li>
-              <li>MeeGo</li>
-            </ul>
-          </p>
-        </div>
-
-        <p>jQuery Mobile is built on top of the jQuery library, which makes it easy to learn if you already know jQuery.</p>
-
-        <p>jQuery Mobile uses HTML5 & CSS3 for laying out pages with <span style="color:black; font-weight:bold;">minimal scripting</span>.</p>
-      </div>    
-
-      <div style="">
-        <h1>Why use jQuery Mobile</h1>
-        <p>jQuery Mobile takes the <span style="color:black; font-weight:bold;">"write less, do more"</span> to a new level: It automatically design web pages with an attractive and <span style="color:black; font-weight:bold;">"easy-to-use"</span> look, that will work the <a href="#list_home_sameway" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style="color:blue; font-weight:bold;">same way</span></a> on all mobile devices.</p>
-
-        <div data-role="popup" id="list_home_sameway" data-overlay-theme="b">
-          <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-          <p>Instead of writing one application for each mobile device or OS:</p>
-            <ul>
-              <li>Android and Blackberry is written in Java</li>
-              <li>iOS is written in Objective C</li>
-              <li>Windows Phone is written in C# and .net, etc.</li>              
-            </ul>
-          <p>jQuery Mobile solves this problem, as it only uses HTML, CSS and JavaScript, which is standard for all mobile web browsers!</p?
-          </p>
-        </div>
+      <div data-role="popup" id="list_home_devices" data-overlay-theme="b">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>        
+        <ul>
+          <li>iOS</li>
+          <li>Android</li>
+          <li>Black Berry</li>
+          <li>Bada</li>
+          <li>Windows Phone</li>
+          <li>Palm Web OS</li>
+          <li>Symbian</li>
+          <li>MeeGo</li>
+        </ul>       
       </div>
 
+      <br>
+      <div style="">
+        <h3>Why use jQuery Mobile</h3>
+        <p>jQuery Mobile takes the <span style="color:black; font-weight:bold;">"write less, do more"</span> to a new level: It automatically design web pages with an attractive and <span style="color:black; font-weight:bold;">"easy-to-use"</span> look, that will work the <a href="#list_home_sameway" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style="color:blue; font-weight:bold;">same way</span></a> on all mobile devices.</p>        
+      </div>
+
+      <div data-role="popup" id="list_home_sameway" data-overlay-theme="b">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <p>Instead of writing one application for each mobile device or OS:</p>
+        <ul>
+          <li>Android and Blackberry is written in Java</li>
+          <li>iOS is written in Objective C</li>
+          <li>Windows Phone is written in C# and .net, etc.</li>              
+        </ul>
+        <p>jQuery Mobile solves this problem, as it only uses HTML, CSS and JavaScript, which is standard for all mobile web browsers!</p>
+        
+      </div>
 
   </div>
 

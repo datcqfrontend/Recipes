@@ -3,10 +3,13 @@ $(document).on('ready',function(){
 
 	urlAssets = "assets/";
 	arrAssets = [
-					"home","getStarted"
+					"home",
 
-					//"home","page1","page2","page3",
-					//"dialog1"	
+					//Assets
+					"getStarted","pages","transitions","buttons",
+
+					//Dialogs
+					"pageDialog"	
 				];
 
 	loadPages(urlAssets,arrAssets);
