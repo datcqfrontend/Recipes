@@ -79,11 +79,11 @@
 
   <div id="content_Buttons" data-role="main" class="ui-content">
     <h3>Creating a Button in jQuery Mobile</h3>    
-    <span>A button in jQuery Mobile can be created in three ways:</span>
+    <span>A button in jQuery Mobile can be created in <a href="#pop_buttons" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style=" color:blue; font-weight:bold;">three ways:</span></a></span>
     <ul>
-      <li>Using the <span style="color:red;">&lt;input&gt;</span> element <input type="button" class="ui-btn" value="Button by Input"></li>
-      <li>Using the <span style="color:red;">&lt;button&gt;</span> element with class="ui-btn" <button class="ui-btn">Button by button</button></li>
-      <li>Using the <span style="color:red;">&lt;a&gt;</span> element with class="ui-btn" <a href="#" class="ui-btn ">Button by a</a></li>
+      <li>Using the <span style="color:red;">&lt;input&gt;</span> element </li>
+      <li>Using the <span style="color:red;">&lt;button&gt;</span> element with class="ui-btn" </li>
+      <li>Using the <span style="color:red;">&lt;a&gt;</span> element with class="ui-btn" </li>
     </ul>
     <span>We recommend that you use the &lt;a&gt; element with class=&quot;ui-btn&quot; to link between pages, and &lt;input&gt; or &lt;button&gt; elements for form submission.</span>
 
@@ -94,59 +94,96 @@
     </pre>
 
     <h3>Grouped Buttons</h3>    
-    <span>jQuery Mobile provides an easy way for grouping buttons together. Use the <span style="color:red;">data-role="controlgroup"</span> attribute together with <span style="color:red;">data-type="horizontal|vertical"</span> in a container element, to specify whether to group buttons horizontally or vertically:</span>
+    <span>jQuery Mobile provides an easy way for grouping buttons together. Use the <span style="color:red;">data-role="controlgroup"</span> attribute together with <span style="color:red;">data-type="horizontal|vertical"</span> in a container element, to specify whether to group buttons <a href="#pop_buttons_grouphorizontally" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style=" color:blue; font-weight:bold;">horizontally</span></a> or <a href="#pop_buttons_groupvertically" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style=" color:blue; font-weight:bold;">vertically</span></a>.</span><br/>
+    <span>By default, grouped buttons are grouped vertically with no margins and space between them. And only the first and the last button has rounded corners, which creates a nice look when grouped together.</span>
 
     <h3>Back Buttons</h3>    
+    <span>To create a Back button, use the <span style="color:red;">data-rel="back"</span> attribute (Note: this will ignore the anchor's href value):</span>
+    <pre>
+  &lt;a <span style="color:red;">href=&quot;#&quot;</span> class=&quot;ui-btn&quot; <span style="color:red;">data-rel=&quot;back&quot;</span>&gt;Go Back&lt;/a&gt;
+    </pre>
 
     <h3>Inline Buttons</h3>    
+    <span>By default, buttons take up the full width of the screen. If you want a button that is only as wide as its content, or if you want two or more buttons to appear side by side, add the <span style="color:red;">"ui-btn-inline"</span> class:</span>
+    <pre>
+  &lt;a href=&quot;#pagetwo&quot; class=&quot;ui-btn <span style="color:red;">ui-btn-inline</span>&quot;&gt;Go to Page Two&lt;/a&gt;
+    </pre>
 
-    <h3>More CSS Classes For Link Buttons</h3>    
+    <h3>More <a href="#pop_buttons_cssclass" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style=" color:blue; font-weight:bold;">CSS Classes For Link Buttons</span></a></h3>    
 
   </div>
 
   <!-- List POPUP -->
-  <div data-role="popup" id="pop_getStarted_CDN" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-            
-    <p>A CDN (Content Delivery Network) is used to distribute often-used files across the web.<br/>
-       This makes download speed much faster for the user.<p/>
-       
-    <p>As with jQuery core, there is nothing to install on your computer; you just include the following stylesheet (.css) and JavaScript libraries (.js) directly into your HTML page, to get jQuery Mobile to work:<p/>
-
-    <pre>
-  &lt;head&gt;
-    &lt;!-- Include meta tag to ensure proper rendering and touch zooming --&gt;
-    <span style="color:red;">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
-
-    &lt;!-- Include jQuery Mobile stylesheets --&gt;
-    <span style="color:red;">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css&quot;&gt;</span>
-
-    &lt;!-- Include the jQuery library --&gt;
-    <span style="color:red;">&lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;</span>
-
-    &lt;!-- Include the jQuery Mobile library --&gt;
-    <span style="color:red;">&lt;script src=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-    
-
-
-  </div>
-  <div data-role="popup" id="pop_getStarted_externalLink" data-overlay-theme="b">
+  <div data-role="popup" id="pop_buttons" data-overlay-theme="b">
     <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
     
-    <p>If you want to host the jQuery Mobile library yourself, you must first download it from jQuerymobile.com. Then add the following code to your page:
+    <p>
+      <input type="button" class="ui-btn" value="Button by Input">
+      <button class="ui-btn">Button by button</button>
+      <a href="#" class="ui-btn ">Button by a</a>
+      <a href="#" class="ui-btn ui-btn-inline">Button by a and ui-btn-inline</a>
     </p>
 
-    <pre>
-  &lt;head&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    <span style="color:red;">&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery.mobile-1.4.5.css&quot;&gt;</span>
-    <span style="color:red;">&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span>
-    <span style="color:red;">&lt;script src=&quot;jquery.mobile-1.4.5.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
+  </div>
 
+  <div data-role="popup" id="pop_buttons_cssclass" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>    
+    <p>
+      <h3>ui-btn</h3>
+      <a href="#" class="ui-btn ">ui-btn</a>
+      <a href="#" class="ui-btn ui-btn-b">ui-btn-b</a>
+      <a href="#" class="ui-btn ui-corner-all">ui-corner-all</a>
+      <a href="#" class="ui-btn ui-mini">ui-mini</a>
+      <a href="#" class="ui-btn ui-shadow">ui-shadow</a>
+    </p>
+    <p>
+      <h3>ui-btn-inline</h3>
+      <a href="#" class="ui-btn ui-btn-inline">ui-btn-inline</a>
+      <a href="#" class="ui-btn ui-btn-inline ui-btn-b">ui-btn-b</a>
+      <a href="#" class="ui-btn ui-btn-inline ui-corner-all">ui-corner-all</a>
+      <a href="#" class="ui-btn ui-btn-inline ui-mini">ui-mini</a>
+      <a href="#" class="ui-btn ui-btn-inline ui-shadow">ui-shadow</a>
+    </p>
+  </div>
+
+  <div data-role="popup" id="pop_buttons_grouphorizontally" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    
+    <p>
+      <div data-role="controlgroup" data-type="horizontal">
+        <a href="#" class="ui-btn">Button 1</a>
+        <a href="#" class="ui-btn">Button 2</a>
+        <a href="#" class="ui-btn">Button 3</a>
+      </div>
+
+      <pre>
+    &lt;div <span style="color:red;">data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;</span>&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn&quot;&gt;Button 1&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn&quot;&gt;Button 2&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn&quot;&gt;Button 3&lt;/a&gt;
+    &lt;/div&gt;
+      </pre>
+    </p>
+  </div>
+
+  <div data-role="popup" id="pop_buttons_groupvertically" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        
+    <p>
+      <div data-role="controlgroup" data-type="vertical">
+        <a href="#" class="ui-btn">Button 1</a>
+        <a href="#" class="ui-btn">Button 2</a>
+        <a href="#" class="ui-btn">Button 3</a>
+      </div>
+
+      <pre>
+    &lt;div <span style="color:red;">data-role=&quot;controlgroup&quot; data-type=&quot;vertical&quot;</span>&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn&quot;&gt;Button 1&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn&quot;&gt;Button 2&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn&quot;&gt;Button 3&lt;/a&gt;
+    &lt;/div&gt;
+      </pre>
+    </p>
   </div>
   <!-- End List POPUP -->
 
