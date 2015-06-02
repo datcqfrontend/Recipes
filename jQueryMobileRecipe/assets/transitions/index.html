@@ -1,0 +1,159 @@
+<div data-role="page" id="transitions">
+  <div data-role="panel" id="panelMenu_Transitions" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
+      <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
+      <div data-role="collapsibleset" data-inset="false">
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" data-collapsed="false">
+          
+          <h3 class="collapsible_active">Tutorials</h3>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#getStarted" class="ui-btn">Get Started</a>
+            <a href="#pages" class="ui-btn">Pages</a>
+            <a href="#" class="ui-btn ui-btn-active">Transitions</a>
+            <a href="#buttons" class="ui-btn">Buttons</a>
+            <a href="#icons" class="ui-btn">Icons</a>
+            <a href="#popups" class="ui-btn">Popups</a>
+            <a href="#toolbars" class="ui-btn">Toolbars</a>
+            <a href="#navbars" class="ui-btn">Navbars</a>
+            <a href="#panels" class="ui-btn">Panels</a>
+            <a href="#collapsobles" class="ui-btn">Collapsibles</a>
+            <a href="#tables" class="ui-btn">Tables</a>
+            <a href="#grids" class="ui-btn">Grids</a>
+          </div>
+
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
+          <h3>Lists</h3>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#listViews" class="ui-btn">List Views</a>
+            <a href="#listContent" class="ui-btn">List Content</a>
+            <a href="#filterItems" class="ui-btn">Filter Items</a>
+            
+          </div>
+
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
+          <h3>Forms</h3>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#formBasic" class="ui-btn">Form Basic</a>
+            <a href="#formInputs" class="ui-btn">Form Inputs</a>
+            <a href="#formSelect" class="ui-btn">Form Select</a>
+            <a href="#formSliders" class="ui-btn">Form Sliders</a>
+            
+          </div>
+
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
+          <h3>Themes</h3>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#themes" class="ui-btn">Themes</a>
+            
+          </div>
+
+        </div>
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+
+          <h3>Events</h3>
+          <div data-role="controlgroup" data-type="vertical">
+            <a href="#events" class="ui-btn">Events</a>
+            <a href="#touch" class="ui-btn">Touch</a>
+            <a href="#scroll" class="ui-btn">Scroll</a>
+            <a href="#orientation" class="ui-btn">Orientation</a>
+            <a href="#pageEvents" class="ui-btn">Page Events</a>
+            
+          </div>
+
+        </div>
+      </div>   
+
+  </div>
+
+
+  <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-position="fixed" >
+    <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
+    <h1 class="ui-title">Transitions</h1>
+    <a href="#panelMenu_Transitions" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
+  </div>
+
+  <div id="content_transitions" data-role="main" class="ui-content">
+    <h3>jQuery Mobile Transition Effects</h3>    
+    <p>
+      jQuery Mobile includes CSS3 effects that lets you choose the way a page should open.<br/>
+      jQuery Mobile has a variety of effects for how to transition from one page to the next.<br/>
+      <a href="#pop_transitions_browsersupport" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style=" color:blue; font-weight:bold;">Browser Support</span></a>
+    </p>    
+
+    <span>The transition effect can be applied to any link or form submission by using the data-transition attribute:</span>
+        
+    <pre>
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;fade&quot;</span>&gt;<a href="#pageDialog" data-transition="fade" style="text-decoration:none;">Fade to Page Dialog</a>&lt;/a&gt;    
+    
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;flip&quot;</span>&gt;<a href="#pageDialog" data-transition="flip" style="text-decoration:none;">Flip to Page Dialog</a>&lt;/a&gt;    
+      
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;flow&quot;</span>&gt;<a href="#pageDialog" data-transition="flow" style="text-decoration:none;">Flow to Page Dialog</a>&lt;/a&gt;    
+       
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;pop&quot;</span>&gt;<a href="#pageDialog" data-transition="pop" style="text-decoration:none;">Pop to Page Dialog</a>&lt;/a&gt;    
+          
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;slide&quot;</span>&gt;<a href="#pageDialog" data-transition="slide" style="text-decoration:none;">Slide to Page Dialog</a>&lt;/a&gt;    
+            
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;slidefade&quot;</span>&gt;<a href="#pageDialog" data-transition="slidefade" style="text-decoration:none;">SlideFade to Page Dialog</a>&lt;/a&gt;    
+      
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;slideup&quot;</span>&gt;<a href="#pageDialog" data-transition="slideup" style="text-decoration:none;">SlideUp to Page Dialog</a>&lt;/a&gt;    
+    
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;slidedown&quot;</span>&gt;<a href="#pageDialog" data-transition="slidedown" style="text-decoration:none;">SlideDown to Page Dialog</a>&lt;/a&gt;    
+      
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;turn&quot;</span>&gt;<a href="#pageDialog" data-transition="turn" style="text-decoration:none;">Turn to Page Dialog</a>&lt;/a&gt;    
+    
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;none&quot;</span>&gt;<a href="#pageDialog" data-transition="none" style="text-decoration:none;">None to Page Dialog</a>&lt;/a&gt;        
+    </pre>
+
+    <span>All effects above also support reverse/backward actions, e.g. if you want the page to slide from left to right, instead of right to left, use the data-direction attribute with value "reverse".</span>
+
+    <pre>
+    &lt;a href=&quot;#pageDialog&quot; <span style="color:red;">data-transition=&quot;slide&quot; data-direction=&quot;reverse&quot;</span>&gt;<a href="#pageDialog" data-transition="slide" data-direction="reverse" style="text-decoration:none;">Slide Reverse to Page Dialog</a>&lt;/a&gt;    
+    </pre>
+  </div>
+
+  <!-- List POPUP -->
+  <div data-role="popup" id="pop_transitions_browsersupport" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            
+    <span>To achieve the transition effect, the browser must support CSS3 3D Transforms:</span>
+    <table data-role="table" class="ui-responsive" id="table_transitions_browsersupport">
+      <thead>
+        <tr>
+          <th data-priority="1">Chrome</th>
+          <th data-priority="2">IE</th>
+          <th data-priority="3">Firefox</th>
+          <th data-priority="4">Safari</th>
+          <th data-priority="5">Opera</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12.0</td>
+          <td>10.0</td>
+          <td>16.0</td>
+          <td>4.0</td>
+          <td>15.0</td>          
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  </div> 
+  <!-- End List POPUP -->
+
+  <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
+    <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
+    <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
+      
+  </div>
+</div>
+
+<link rel="stylesheet" href="assets/transitions/main.css">
+<script src="assets/transitions/main.js"></script>
+

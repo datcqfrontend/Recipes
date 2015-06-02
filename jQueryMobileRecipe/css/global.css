@@ -1,0 +1,7 @@
+.collapsible_active > a {
+	background-color: #38c !important;
+  	border-color: #38c !important;
+  	color: #fff !important;
+  	text-shadow: 0 1px 0 #059 !important;
+}
+
