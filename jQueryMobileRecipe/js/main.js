@@ -6,7 +6,7 @@ $(document).on('ready',function(){
 					"home",
 
 					//Assets
-					"getStarted","pages","transitions","buttons",
+					"getStarted","pages","transitions","buttons","icons","popups",
 
 					//Dialogs
 					"pageDialog"	

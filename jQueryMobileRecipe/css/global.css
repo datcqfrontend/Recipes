@@ -1,3 +1,4 @@
+/* PANEL MENU ACTIVE */
 .collapsible_active > a {
 	background-color: #38c !important;
   	border-color: #38c !important;
@@ -5,3 +6,11 @@
   	text-shadow: 0 1px 0 #059 !important;
 }
 
+span.red {
+	color:red;	
+}
+
+span.blue-bold {
+	color:blue;
+	font-weight:bold;
+}
