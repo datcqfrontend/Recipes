@@ -102,6 +102,57 @@
       <a href="#pop_popups_origin" data-rel="popup" data-position-to="origin" class="ui-btn ui-btn-inline ui-corner-all">origin</a>
 
     <h3>Transitions Popups</h3>
+    <p>By default, popups do not have any transition effects added to them. You can use any of the effects that we introduced in the "Transitions" chapter. Just apply the <span class="red">data-transition="value"</span> attribute to the link that opens the popup:</p>
+    <a href="#pop_popups_window" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all" data-transition="fade">Fade</a>
+    <pre>
+  &lt;a href=&quot;#myPopup&quot; data-rel=&quot;popup&quot; class=&quot;ui-btn&quot; <span class="red">data-transition=&quot;fade&quot;</span>&gt;Fade&lt;/a&gt;
+    </pre>
+
+    <h3>Popup Arrows</h3>
+    <p>To add an arrow to the popup's border, use the <span class="red">data-arrow</span> attribute, and specify the value "l" (left), "t" (top), "r" (right) or "b" (bottom):   </p>
+    <a href="#pop_popups_arrow_t" data-rel="popup" class="ui-btn ui-btn-inline">Arrow Top</a>
+    <a href="#pop_popups_arrow_r" data-rel="popup" class="ui-btn ui-btn-inline">Arrow Right</a>
+    <a href="#pop_popups_arrow_b" data-rel="popup" class="ui-btn ui-btn-inline">Arrow Bottom</a>
+    <a href="#pop_popups_arrow_l" data-rel="popup" class="ui-btn ui-btn-inline">Arrow Left</a>
+    <pre>
+  &lt;a href=&quot;#myPopup&quot; data-rel=&quot;popup&quot; class=&quot;ui-btn&quot;&gt;Open Popup&lt;/a&gt;
+
+  &lt;div data-role=&quot;popup&quot; id=&quot;myPopup&quot; class=&quot;ui-content&quot; <span class="red">data-arrow=&quot;l&quot;</span>&gt;
+    &lt;p&gt;There is an arrow on my LEFT border.&lt;/p&gt;
+  &lt;/div&gt;
+    </pre>
+
+    <h3>Popup Dialogs</h3>
+    <p>You can add standard dialog markup into a popup (header, content and footer markup):</p>
+    <a href="#pop_popups_dialog" data-rel="popup" class="ui-btn ui-btn-inline">Popup Dialogs</a>
+    <pre>
+  &lt;a href=&quot;#myPopupDialog&quot; data-rel=&quot;popup&quot; class=&quot;ui-btn&quot;&gt;Open Dialog Popup&lt;/a&gt;
+
+  &lt;div data-role=&quot;popup&quot; id=&quot;myPopupDialog&quot;&gt;
+    <span class="red">&lt;div data-role=&quot;header&quot;&gt;&lt;h1&gt;Header Text..&lt;/h1&gt;&lt;/div&gt;
+    &lt;div data-role=&quot;main&quot; class=&quot;ui-content&quot;&gt;&lt;p&gt;Some text..&lt;/p&gt;&lt;a href=&quot;#&quot;&gt;some links..&lt;/a&gt;
+    &lt;div data-role=&quot;footer&quot;&gt;&lt;h1&gt;Footer Text..&lt;/h1&gt;&lt;/div&gt;</span>
+  &lt;/div&gt;
+    </pre>
+
+    <h3>Popup Photo</h3>
+    <p>You can also display images in a popup:</p>
+    <a href="#pop_popups_photo" data-rel="popup" data-position-to="window">
+<img src="media/images/skaret.jpg" alt="Skaret View" style="width:200px;"></a>
+    <pre>
+  &lt;a href=&quot;#myPopup&quot; data-rel=&quot;popup&quot; data-position-to=&quot;window&quot;&gt;
+ <span class="red">&lt;img src=&quot;skaret.jpg&quot; alt=&quot;Skaret View&quot; style=&quot;width:200px;&quot;&gt;</span>&lt;/a&gt;
+
+  &lt;div data-role=&quot;popup&quot; id=&quot;myPopup&quot;&gt;
+    <span class="red">&lt;img src=&quot;skaret.jpg&quot; style=&quot;width:800px;height:400px;&quot; alt=&quot;Skaret View&quot;&gt;</span>
+  &lt;/div&gt;
+    </pre>
+
+    <h3>Popup Overlay</h3>
+    <p>You can control the background color behind the popup (the page itself) with the data-overlay-theme attribute. By default the overlay is transparent. Use <span class="red">data-overlay-theme="a"</span> to add a light overlay and <span class="red">data-overlay-theme="b"</span> to add a dark overlay:
+    </p>  
+    <a href="#pop_popups_dialog" data-rel="popup" class="ui-btn ui-btn-inline">data-overlay-theme="a"</a>
+    <a href="#pop_popups_photo" data-rel="popup" class="ui-btn ui-btn-inline">data-overlay-theme="b"</a>
 
 
   </div>
@@ -152,7 +203,34 @@
     &lt;a href=&quot;#pop_popups_origin&quot; data-rel=&quot;popup&quot; <span class="red">data-position-to=&quot;origin&quot;</span> class=&quot;ui-btn ui-btn-inline ui-corner-all&quot;&gt;origin&lt;/a&gt;
   </div>
 
-</div>
+
+  <div id="pop_popups_arrow_t" class="ui-content" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-arrow="t">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <p>This is a popup with arrow top.</p>
+  </div>
+  <div id="pop_popups_arrow_r" class="ui-content" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-arrow="r">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <p>This is a popup with arrow right.</p>
+  </div>
+  <div id="pop_popups_arrow_b" class="ui-content" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-arrow="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <p>This is a popup with arrow bottom.</p>
+  </div>
+  <div id="pop_popups_arrow_l" class="ui-content" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-arrow="l">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <p>This is a popup with arrow left.</p>
+  </div>
+
+  <div data-role="popup" id="pop_popups_dialog" data-overlay-theme="a">
+    <div data-role="header"><h1>Header Text..</h1></div>
+    <div data-role="main" class="ui-content"><p>Some text..</p><a href="#">some links..</a>
+    <div data-role="footer"><h1>Footer Text..</h1></div>
+  </div>
+
+  <div data-role="popup" id="pop_popups_photo" data-overlay-theme="b">
+    <img src="media/images/skaret.jpg" style="width:800px;height:400px;" alt="Skaret View">
+  </div>
+
 
 <link rel="stylesheet" href="assets/popups/main.css">
 <script src="assets/popups/main.js"></script>
