@@ -79,9 +79,129 @@
 
   <div id="content_FormSelect" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Select Menus</h3>
+      <p>The &lt;select&gt; element creates a drop-down list with several options.<br/>
+      The &lt;option&gt; elements inside the &lt;select&gt; element define the available options in the list:</p>
+      <form method="post" action="demoform.asp">
+        <fieldset class="ui-field-contain">
+          <label for="day">Select Day</label>
+          <select name="day" id="day">
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+          </select>
+        </fieldset>
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;fieldset class=&quot;ui-field-contain&quot;&gt;
+      &lt;label for=&quot;day&quot;&gt;Select Day&lt;/label&gt;
+      &lt;select name=&quot;day&quot; id=&quot;day&quot;&gt;
+        &lt;option value=&quot;mon&quot;&gt;Monday&lt;/option&gt;
+        &lt;option value=&quot;tue&quot;&gt;Tuesday&lt;/option&gt;
+        &lt;option value=&quot;wed&quot;&gt;Wednesday&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+      </pre>
+      <p>If you have a long list of options that are related, use the &lt;optgroup&gt; element inside &lt;select&gt;:</p>
+      <select name="day" id="day2">
+        <optgroup label="Weekdays">
+          <option value="mon">Monday</option>
+          <option value="tue">Tuesday</option>
+          <option value="wed">Wednesday</option>
+        </optgroup>
+        <optgroup label="Weekends">
+          <option value="sat">Saturday</option>
+          <option value="sun">Sunday</option>
+        </optgroup>
+      </select>
+      <pre>
+  &lt;select name=&quot;day&quot; id=&quot;day&quot;&gt;
+    &lt;optgroup label=&quot;Weekdays&quot;&gt;
+      &lt;option value=&quot;mon&quot;&gt;Monday&lt;/option&gt;
+      &lt;option value=&quot;tue&quot;&gt;Tuesday&lt;/option&gt;
+      &lt;option value=&quot;wed&quot;&gt;Wednesday&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label=&quot;Weekends&quot;&gt;
+      &lt;option value=&quot;sat&quot;&gt;Saturday&lt;/option&gt;
+      &lt;option value=&quot;sun&quot;&gt;Sunday&lt;/option&gt;
+    &lt;/optgroup&gt;
+  &lt;/select&gt;
+      </pre>
+    </article>
 
+    <article>
+      <h3>Custom Select Menus</h3>
+      <p>The images on top of this page, shows how mobile platforms have their own way of showing a select menu. If you want the select menu to display the same on all mobile devices, use jQuery's own custom select menu, the <span class="red">data-native-menu="false"</span> attribute:
+      </p>
+      <form method="post" action="demoform.asp">
+        <fieldset class="ui-field-contain">
+          <label for="day">Select Day</label>
+          <select name="day" id="day3" data-native-menu="false">
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+          </select>
+        </fieldset>        
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;fieldset class=&quot;ui-field-contain&quot;&gt;
+      &lt;label for=&quot;day&quot;&gt;Select Day&lt;/label&gt;
+      &lt;select name=&quot;day&quot; id=&quot;day3&quot; <span class="red">data-native-menu=&quot;false&quot;</span>&gt;
+        &lt;option value=&quot;mon&quot;&gt;Monday&lt;/option&gt;
+        &lt;option value=&quot;tue&quot;&gt;Tuesday&lt;/option&gt;
+        &lt;option value=&quot;wed&quot;&gt;Wednesday&lt;/option&gt;
+        &lt;option value=&quot;thu&quot;&gt;Thursday&lt;/option&gt;
+        &lt;option value=&quot;fri&quot;&gt;Friday&lt;/option&gt;
+        &lt;option value=&quot;sat&quot;&gt;Saturday&lt;/option&gt;
+        &lt;option value=&quot;sun&quot;&gt;Sunday&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/fieldset&gt;        
+  &lt;/form&gt;
+      </pre>
+    </article>
+
+    <article>
+      <h3>Multiple Selections</h3>
+      <P>To select multiple options in the select menu, use the multiple attribute in the &lt;select&gt; element:</P>
+      <form method="post" action="demoform.asp">
+        <fieldset>
+          <label for="day">Select As Many Days As You'd Like:</label>
+          <select name="day" id="day" multiple="multiple" data-native-menu="false">
+            <option>Day</option>
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+          </select>
+        </fieldset>        
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;fieldset&gt;
+      &lt;label for=&quot;day&quot;&gt;Select As Many Days As You&apos;d Like:&lt;/label&gt;
+      &lt;select name=&quot;day&quot; id=&quot;day&quot; <span class="red">multiple=&quot;multiple&quot;</span> data-native-menu=&quot;false&quot;&gt;
+        &lt;option&gt;Day&lt;/option&gt;
+        &lt;option value=&quot;mon&quot;&gt;Monday&lt;/option&gt;
+        &lt;option value=&quot;tue&quot;&gt;Tuesday&lt;/option&gt;
+        &lt;option value=&quot;wed&quot;&gt;Wednesday&lt;/option&gt;
+        &lt;option value=&quot;thu&quot;&gt;Thursday&lt;/option&gt;
+        &lt;option value=&quot;fri&quot;&gt;Friday&lt;/option&gt;
+        &lt;option value=&quot;sat&quot;&gt;Saturday&lt;/option&gt;
+        &lt;option value=&quot;sun&quot;&gt;Sunday&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/fieldset&gt;        
+  &lt;/form&gt;
+      </pre>
     </article>
 
   </div>
