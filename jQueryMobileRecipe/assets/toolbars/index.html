@@ -1,21 +1,21 @@
-<div data-role="page" id="getStarted">
-  <div data-role="panel" id="panelMenuGetStarted" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
-      <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
+<div data-role="page" id="toolbars">
+  <div data-role="panel" id="panelMenu_Toolbars" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
+    <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
       <div data-role="collapsibleset" data-inset="false">
         <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" data-collapsed="false">
           
           <h3 class="collapsible_active">Tutorials</h3>
           <div data-role="controlgroup" data-type="vertical">
-            <a href="#" class="ui-btn ui-btn-active">Get Started</a>
+            <a href="#getStarted" class="ui-btn">Get Started</a>
             <a href="#pages" class="ui-btn">Pages</a>
             <a href="#transitions" class="ui-btn">Transitions</a>
             <a href="#buttons" class="ui-btn">Buttons</a>
-            <a href="#icons" class="ui-btn">Icons</a>
+            <a href="#icons" class="ui-btn ">Icons</a>
             <a href="#popups" class="ui-btn">Popups</a>
-            <a href="#toolbars" class="ui-btn">Toolbars</a>
+            <a href="#" class="ui-btn ui-btn-active">Toolbars</a>
             <a href="#navbars" class="ui-btn">Navbars</a>
             <a href="#panels" class="ui-btn">Panels</a>
-            <a href="#collapsobles" class="ui-btn">Collapsibles</a>
+            <a href="#collapsibles" class="ui-btn">Collapsibles</a>
             <a href="#tables" class="ui-btn">Tables</a>
             <a href="#grids" class="ui-btn">Grids</a>
           </div>
@@ -66,80 +66,175 @@
           </div>
 
         </div>
-      </div>   
+      </div>       
 
   </div>
 
 
   <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-position="fixed" >
     <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
-    <h1 class="ui-title">Get Started</h1>
-    <a href="#panelMenuGetStarted" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
+    <h1 class="ui-title">Toolbars</h1>
+    <a href="#panelMenu_Toolbars" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
   </div>
 
-  <div id="contentGetStarted" data-role="main" class="ui-content">
-    <h3>Adding jQuery Mobile to Your Web Pages</h3>    
-    <span>There are two ways to add jQuery Mobile to your web site. You can:</span>
-    <ul>
-      <li>Link to a jQuery Mobile library stored at a <a href="#pop_getStarted_CDN" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">CDN</span></a> (recommended)</li>
-      
-      <li>Link to a jQuery Mobile library stored at <a href="#pop_getStarted_externalLink" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">your computer</span></a></li>
-    </ul>    
+  <div id="content_Toolbars" data-role="main" class="ui-content">
+    <article>
+      <h3>jQuery Mobile Toolbars</h3>    
+      <p>Toolbar elements are often placed inside headers and footers - for "easy-access" navigation. <span class="red">A header can contain one or two buttons, while the footer has no limit.</span></p>
+    </article>
+
+    <article>
+      <h3>Header Bars</h3>    
+      <div data-role="header">
+        <a href="#" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1>Welcome To My Homepage</h1>
+        <a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+      </div>
+      <p>The header is located at the top of the page and usually contain a page title/logo or one or two buttons (typically home, options or search). You can add buttons to the left and/or to the right side in the header. The code below, will add a "Home" button to the left and a "Search" button to the right of the header title text:</p>
+      <pre>
+  &lt;div data-role=&quot;header&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;ui-btn <span class="red">ui-btn-left</span> ui-icon-home ui-btn-icon-left&quot;&gt;Home&lt;/a&gt;
+    &lt;h1&gt;Welcome To My Homepage&lt;/h1&gt;
+    &lt;a href=&quot;#&quot; class=&quot;ui-btn <span class="red">ui-btn-right</span> ui-icon-search ui-btn-icon-left&quot;&gt;Search&lt;/a&gt;
+  &lt;/div&gt;
+      </pre>
+    </article>
+
+    <article>  
+      <h3>Footer Bars</h3>    
+      <div data-role="footer" style="text-align:center;">
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Facebook</a>
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Twitter</a>
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Instagram</a>
+      </div>
+      <p>The footer is located at the bottom of the page. The footer is more flexible than the header - it is more functional and changeable throughout pages, and can therefore contain as many buttons as needed. The buttons in the footer are not centered by default. To fix this, simply use CSS <span class="red">"text-align:center"</span>.</p>
+
+      <p>You can also group buttons in the footer <a href="#pop_toolbars_horizontally" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">horizontally</span></a> or <a href="#pop_toolbars_vertically" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">vertically</span></a>.</p>
+    </article>
+
+    <article>
+      <h3>Positioning Headers and Footers</h3>
+      <p>The header and the footer can be positioned in three ways:
+      <ul>
+        <li><a href="#pop_toolbars_inline" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">Inline</span></a> - Default. Headers and footers are inline with the page content</li>
+        <li><a href="#pop_toolbars_fixed" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">Fixed</span></a> - Headers and footers will remain positioned at the top and bottom of the page</li>
+        <li><a href="#pop_toolbars_fullscreen" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">Fullscreen</span></a> - Behaves like fixed; headers and footers will remain positioned at the top and bottom, but also over the page content. It is also slightly see-through</li>
+      </ul>
+      Use the <span class="red">data-position</span> attribute to position your headers and footers.</br>
+      The fullscreen position is ideal for photos, images and videos.</br>
+      Tapping the screen will hide and show headers and footers for both fixed and fullscreen positions.</br>
+      </p>
+    </article>
   </div>
-
-  <!-- List POPUP -->
-  <div data-role="popup" id="pop_getStarted_CDN" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-            
-    <p>A CDN (Content Delivery Network) is used to distribute often-used files across the web.<br/>
-       This makes download speed much faster for the user.<p/>
-       
-    <p>As with jQuery core, there is nothing to install on your computer; you just include the following stylesheet (.css) and JavaScript libraries (.js) directly into your HTML page, to get jQuery Mobile to work:<p/>
-
-    <pre>
-  &lt;head&gt;
-    &lt;!-- Include meta tag to ensure proper rendering and touch zooming --&gt;
-    <span class="red">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
-
-    &lt;!-- Include jQuery Mobile stylesheets --&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css&quot;&gt;</span>
-
-    &lt;!-- Include the jQuery library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;</span>
-
-    &lt;!-- Include the jQuery Mobile library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-    
-
-
-  </div>
-  <div data-role="popup" id="pop_getStarted_externalLink" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-    
-    <p>If you want to host the jQuery Mobile library yourself, you must first download it from jQuerymobile.com. Then add the following code to your page:
-    </p>
-
-    <pre>
-  &lt;head&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery.mobile-1.4.5.css&quot;&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.mobile-1.4.5.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-
-  </div>
-  <!-- End List POPUP -->
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
     <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
     <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
       
   </div>
+
+  <!-- List POPUP -->
+  <div data-role="popup" id="pop_toolbars_horizontally" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            
+    <div data-role="footer" style="text-align:center;">
+      <div data-role="controlgroup" data-type="horizontal">
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Facebook</a>
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Twitter</a>
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Instagram</a>
+      </div>
+    </div>
+    <pre>
+  &lt;div data-role=&quot;footer&quot; style=&quot;text-align:center;&quot;&gt;
+    <span class="red">&lt;div data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;&gt;</span>
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-plus ui-btn-icon-left&quot;&gt;Add Me On Facebook&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-plus ui-btn-icon-left&quot;&gt;Add Me On Twitter&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-plus ui-btn-icon-left&quot;&gt;Add Me On Instagram&lt;/a&gt;
+    <span class="red">&lt;/div&gt;</span>
+  &lt;/div&gt;
+    </pre>
+  </div>
+
+  <div data-role="popup" id="pop_toolbars_vertically" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            
+    <div data-role="footer" style="text-align:center; width:50%;">
+      <div data-role="controlgroup" data-type="vertical">
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Facebook</a>
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Twitter</a>
+        <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Me On Instagram</a>
+      </div>
+    </div>
+    <pre>
+  &lt;div data-role=&quot;footer&quot; style=&quot;text-align:center; width:50%;&quot;&gt;
+    <span class="red">&lt;div data-role=&quot;controlgroup&quot; data-type=&quot;vertical&quot;&gt;</span>
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-plus ui-btn-icon-left&quot;&gt;Add Me On Facebook&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-plus ui-btn-icon-left&quot;&gt;Add Me On Twitter&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-plus ui-btn-icon-left&quot;&gt;Add Me On Instagram&lt;/a&gt;
+    <span class="red">&lt;/div&gt;</span>
+  &lt;/div&gt;
+    </pre>
+  </div>
+
+  <div data-role="popup" id="pop_toolbars_inline" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <pre>
+    &lt;div data-role=&quot;page&quot;&gt;
+     &lt;div data-role=&quot;header&quot; <span class="red">data-position=&quot;inline&quot;</span>&gt;
+        &lt;h1&gt;Inline Header&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div data-role=&quot;main&quot; class=&quot;ui-content&quot;&gt;
+        
+      &lt;/div&gt;
+      &lt;div data-role=&quot;footer&quot; <span class="red">data-position=&quot;inline&quot;</span>&gt;
+        &lt;h1&gt;Inline Footer&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+  </div>
+
+  <div data-role="popup" id="pop_toolbars_fixed" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+   
+    <pre>
+    &lt;div data-role=&quot;page&quot;&gt;
+     &lt;div data-role=&quot;header&quot; <span class="red">data-position=&quot;fixed&quot;</span>&gt;
+        &lt;h1&gt;Fixed Header&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div data-role=&quot;main&quot; class=&quot;ui-content&quot;&gt;
+        
+      &lt;/div&gt;
+      &lt;div data-role=&quot;footer&quot; <span class="red">data-position=&quot;fixed&quot;</span>&gt;
+        &lt;h1&gt;Fixed Footer&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+  </div>
+   
+  <div data-role="popup" id="pop_toolbars_fullscreen" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+
+    <pre>
+    &lt;div data-role=&quot;page&quot;&gt;
+      &lt;div data-role=&quot;header&quot; <span class="red">data-position=&quot;fixed&quot; data-fullscreen=&quot;true&quot;</span>&gt;
+        &lt;h1&gt;Fullscreen Header&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div data-role=&quot;main&quot; class=&quot;ui-content&quot;&gt;
+        
+      &lt;/div&gt;
+      &lt;div data-role=&quot;footer&quot; <span class="red">data-position=&quot;fixed&quot; data-fullscreen=&quot;true&quot;</span>&gt;
+        &lt;h1&gt;Fullscreen Footer&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+  </div>
+
+
+  <!-- End List POPUP -->
+
+
 </div>
 
-<link rel="stylesheet" href="assets/getStarted/main.css">
-<script src="assets/getStarted/main.js"></script>
+<link rel="stylesheet" href="assets/toolbars/main.css">
+<script src="assets/toolbars/main.js"></script>
 

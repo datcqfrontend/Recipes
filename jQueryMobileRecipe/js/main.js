@@ -6,7 +6,17 @@ $(document).on('ready',function(){
 					"home",
 
 					//Assets
-					"getStarted","pages","transitions","buttons","icons","popups",
+					"getStarted","pages","transitions","buttons","icons",
+					"popups","toolbars","navbars","panels","collapsibles",
+					"tables","grids",
+
+					/*"listViews","listContent","filterItems",
+
+					"formBasic","formInputs","formSelect","formSliders",
+
+					"themes",
+
+					"events","touch","scroll","orientation","pageEvents",*/
 
 					//Dialogs
 					"pageDialog"	

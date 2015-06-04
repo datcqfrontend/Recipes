@@ -15,7 +15,7 @@
             <a href="#toolbars" class="ui-btn">Toolbars</a>
             <a href="#navbars" class="ui-btn">Navbars</a>
             <a href="#panels" class="ui-btn">Panels</a>
-            <a href="#collapsobles" class="ui-btn">Collapsibles</a>
+            <a href="#collapsibles" class="ui-btn">Collapsibles</a>
             <a href="#tables" class="ui-btn">Tables</a>
             <a href="#grids" class="ui-btn">Grids</a>
           </div>
@@ -78,85 +78,91 @@
   </div>
 
   <div id="content_Pages" data-role="main" class="ui-content">
-    <h3>Create a Page</h3>    
-    <a href="#pop_pages_code1" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">Standard jQuery Mobile Page</span></a>
+    <article>
+      <h3>Create a Page</h3>    
+      <a href="#pop_pages_code1" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">Standard jQuery Mobile Page</span></a>
+    </article>
 
-    <h3>Adding Pages in jQuery Mobile</h3>
-    <span>In jQuery Mobile, you can create multiple pages in <a href="#pop_pages_code2" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">a single HTML file</span></a>. Separate each page with a unique id and use the href attribute to link between them.</span>
-  
-    <h3>Using Pages as Dialogs</h3>
-    <span>A dialog box is a type of window used to show special information or request input. To create a dialog box that opens when a user taps on a link, add <a href="#pageDialog" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all"><span class="blue-bold">data-dialog="true"</span></a> to the page you want displayed as a dialog.
-    </span>
+    <article>
+      <h3>Adding Pages in jQuery Mobile</h3>
+      <span>In jQuery Mobile, you can create multiple pages in <a href="#pop_pages_code2" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">a single HTML file</span></a>. Separate each page with a unique id and use the href attribute to link between them.</span>
+    </article>
 
+    <article>
+      <h3>Using Pages as Dialogs</h3>
+      <span>A dialog box is a type of window used to show special information or request input. To create a dialog box that opens when a user taps on a link, add <a href="#pageDialog" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all"><span class="blue-bold">data-dialog="true"</span></a> to the page you want displayed as a dialog.
+      </span>
+    </article>
   </div>
-
-  <!-- List POPUP -->
-  <div data-role="popup" id="pop_pages_code1" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-    
-    <h3>Code</h3>
-    <pre>
-  &lt;body&gt;
-    &lt;div <span class="red">data-role=&quot;page&quot;</span>&gt;
-      &lt;div <span class="red">data-role=&quot;header&quot;</span>&gt;
-        &lt;h1&gt;Welcome To My Homepage&lt;/h1&gt;
-      &lt;/div&gt;
-
-      &lt;div <span class="red">data-role=&quot;main&quot; class=&quot;ui-content&quot;</span>&gt;
-        &lt;p&gt;I Am Now A Mobile Developer!!&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;div <span class="red">data-role=&quot;footer&quot;</span>&gt;
-        &lt;h1&gt;Footer Text&lt;/h1&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-    </pre>
-
-    <h3>Explained</h3>
-    <ul>
-      <li>The data-role="page" is the page displayed in the browser</li>
-      <li>The data-role="header" creates a toolbar at the top of the page (often used for title or search buttons)</li>
-      <li>The data-role="main" defines the content of the page, like text, images, buttons, forms, etc.</li>
-      <li>The "ui-content" class adds extra padding and margin inside the page content</li>
-      <li>The data-role="footer" creates a toolbar at the bottom of the page</li>
-      <li>Inside these containers, you can add any HTML elements - paragraphs, images, headings, lists, etc.</li>
-      <li>The HTML5 data-* attributes are used throughout jQuery Mobile to create a "touch-friendly" and attractive look for mobile devices.</li>
-    </ul>
-
-  </div>
-
-  <div data-role="popup" id="pop_pages_code2" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-    
-    <h3>Code</h3>
-    <pre>
-  &lt;div <span class="red">data-role=&quot;page&quot; id=&quot;pageone&quot;</span>&gt;
-    &lt;div <span class="red">data-role=&quot;main&quot; class=&quot;ui-content&quot;</span>&gt;
-      &lt;a href=&quot;#pagetwo&quot;&gt;Go to Page Two&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div <span class="red">data-role=&quot;page&quot; id=&quot;pagetwo&quot;</span>&gt;
-    &lt;div <span class="red">data-role=&quot;main&quot; class=&quot;ui-content&quot;</span>&gt;
-      &lt;a href=&quot;#pageone&quot;&gt;Go to Page One&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-    </pre>
-
-    <span>Tip: The load time will be affected by web applications with a lot of content (i.e text, links, images, scripts etc). Use external files if you don't want to link pages internally:</span>
-    <pre>
-  &lt;a <span class="red">href=&quot;externalfile.html&quot;</span>&gt;Go To External Page&lt;/a&gt;
-    </pre>
-
-  </div>
-  <!-- End List POPUP -->
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
     <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
     <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
       
   </div>
+
+  <!-- List POPUP -->
+    <div data-role="popup" id="pop_pages_code1" data-overlay-theme="b">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      
+      <h3>Code</h3>
+      <pre>
+    &lt;body&gt;
+      &lt;div <span class="red">data-role=&quot;page&quot;</span>&gt;
+        &lt;div <span class="red">data-role=&quot;header&quot;</span>&gt;
+          &lt;h1&gt;Welcome To My Homepage&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div <span class="red">data-role=&quot;main&quot; class=&quot;ui-content&quot;</span>&gt;
+          &lt;p&gt;I Am Now A Mobile Developer!!&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div <span class="red">data-role=&quot;footer&quot;</span>&gt;
+          &lt;h1&gt;Footer Text&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+      </pre>
+
+      <h3>Explained</h3>
+      <ul>
+        <li>The data-role="page" is the page displayed in the browser</li>
+        <li>The data-role="header" creates a toolbar at the top of the page (often used for title or search buttons)</li>
+        <li>The data-role="main" defines the content of the page, like text, images, buttons, forms, etc.</li>
+        <li>The "ui-content" class adds extra padding and margin inside the page content</li>
+        <li>The data-role="footer" creates a toolbar at the bottom of the page</li>
+        <li>Inside these containers, you can add any HTML elements - paragraphs, images, headings, lists, etc.</li>
+        <li>The HTML5 data-* attributes are used throughout jQuery Mobile to create a "touch-friendly" and attractive look for mobile devices.</li>
+      </ul>
+
+    </div>
+
+    <div data-role="popup" id="pop_pages_code2" data-overlay-theme="b">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      
+      <h3>Code</h3>
+      <pre>
+    &lt;div <span class="red">data-role=&quot;page&quot; id=&quot;pageone&quot;</span>&gt;
+      &lt;div <span class="red">data-role=&quot;main&quot; class=&quot;ui-content&quot;</span>&gt;
+        &lt;a href=&quot;#pagetwo&quot;&gt;Go to Page Two&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div <span class="red">data-role=&quot;page&quot; id=&quot;pagetwo&quot;</span>&gt;
+      &lt;div <span class="red">data-role=&quot;main&quot; class=&quot;ui-content&quot;</span>&gt;
+        &lt;a href=&quot;#pageone&quot;&gt;Go to Page One&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+      </pre>
+
+      <span>Tip: The load time will be affected by web applications with a lot of content (i.e text, links, images, scripts etc). Use external files if you don't want to link pages internally:</span>
+      <pre>
+    &lt;a <span class="red">href=&quot;externalfile.html&quot;</span>&gt;Go To External Page&lt;/a&gt;
+      </pre>
+
+    </div>
+  <!-- End List POPUP -->
+
 </div>
 
 <link rel="stylesheet" href="assets/pages/main.css">

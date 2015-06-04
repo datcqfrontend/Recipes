@@ -15,7 +15,7 @@
             <a href="#toolbars" class="ui-btn">Toolbars</a>
             <a href="#navbars" class="ui-btn">Navbars</a>
             <a href="#panels" class="ui-btn">Panels</a>
-            <a href="#collapsobles" class="ui-btn">Collapsibles</a>
+            <a href="#collapsibles" class="ui-btn">Collapsibles</a>
             <a href="#tables" class="ui-btn">Tables</a>
             <a href="#grids" class="ui-btn">Grids</a>
           </div>
@@ -78,40 +78,44 @@
   </div>
 
   <div id="content_Icons" data-role="main" class="ui-content">
-    <h3>jQuery Mobile Button Icons</h3>    
-    <p>jQuery Mobile provides a set of icons that will make your buttons look more desirable.</p>
-    <a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-left">Home</a>
-    <a href="#" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-left">Options</a>
-    <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">Search</a>
-    <a href="#" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Information</a>
+    <article>
+      <h3>jQuery Mobile Button Icons</h3>    
+      <p>jQuery Mobile provides a set of icons that will make your buttons look more desirable.</p>
+      <a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-left">Home</a>
+      <a href="#" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-left">Options</a>
+      <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">Search</a>
+      <a href="#" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Information</a>
+    </article>
 
-    <h3><a href="#pop_icons_list" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">List Icons Reference</span></a></h3>  
+    <article>
+      <h3><a href="#pop_icons_list" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">List Icons Reference</span></a></h3>  
+    </article>
 
-    <h3>Add Icons to jQuery Mobile Buttons</h3>        
-    <p>To add an icon to your &lt;a&gt; and &lt;button&gt; elements, use the ui-icon class, and position the icon with an icon position class <span class="red">(ui-btn-icon-pos)</span></p>
-    <pre>
+    <article>
+      <h3>Add Icons to jQuery Mobile Buttons</h3>        
+      <p>To add an icon to your &lt;a&gt; and &lt;button&gt; elements, use the ui-icon class, and position the icon with an icon position class <span class="red">(ui-btn-icon-pos)</span></p>
+      <pre>
   &lt;a href=&quot;#&quot; class=&quot;ui-btn <span class="red">ui-icon-search ui-btn-icon-left</span>&quot;&gt;Search&lt;/a&gt;
   &lt;button class=&quot;ui-btn <span class="red">ui-icon-search ui-btn-icon-left</span>&quot;&gt;Search&lt;/button&gt;
-    </pre>
-
-    <p>To add an icon to your &lt;input&gt; buttons, use the data-icon attribute:</p>
-    <pre>
+      </pre>
+      <p>To add an icon to your &lt;input&gt; buttons, use the data-icon attribute:</p>
+      <pre>
   &lt;input type="button" value="Search" data-icon=&quot;<span class="red">search</span>&quot;&gt;;
-    </pre>
-
-    <p>To add an icon to your <span class="red">navbar buttons</span>, use the data-icon attribute: </p>
-    <pre>
+      </pre>
+      <p>To add an icon to your <span class="red">navbar buttons</span>, use the data-icon attribute: </p>
+      <pre>
   &lt;a href=&quot;#&quot; data-icon=&quot;search&quot;&gt;Search&lt;/a&gt;
-    </pre>
-
-    <p>To add an icon to your <span class="red">list buttons</span>, use the data-icon attribute: </p>
-    <pre>
+      </pre>
+      <p>To add an icon to your <span class="red">list buttons</span>, use the data-icon attribute: </p>
+      <pre>
   &lt;li data-icon=&quot;search&quot;&gt;&lt;a href=&quot;#&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
-    </pre>
+      </pre>
+    </article>
 
-    <h3>Positioning Icons</h3>    
-    <p>With <span class="red">ui-btn-icon-*</span> you can specify one of four values for where the icon should be positioned in the button: op, right, bottom or left.</p>
-    <pre>
+    <article>
+      <h3>Positioning Icons</h3>    
+      <p>With <span class="red">ui-btn-icon-*</span> you can specify one of four values for where the icon should be positioned in the button: op, right, bottom or left.</p>
+      <pre>
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-top">Top</a>  
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search <span class="red">ui-btn-icon-top</span>&quot;&gt;Top&lt;/a&gt;
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-right">Right</a>
@@ -120,298 +124,304 @@
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search <span class="red">ui-btn-icon-bottom</span>&quot;&gt;Bottom&lt;/a&gt;
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">Left</a>
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search <span class="red">ui-btn-icon-left</span>&quot;&gt;Left&lt;/a&gt;
-    </pre>
-    <p>If you do not specify the icon position for link buttons, the icon will not be shown.</p>
+      </pre>
+      <p>If you do not specify the icon position for link buttons, the icon will not be shown.</p>
+    </article>
 
-    <h3>Display Only The Icon</h3>    
-    <p>To only display the icon, use <span class="red">"notext"</span> as value for icon position:</p>
-    <pre>
+    <article>
+      <h3>Display Only The Icon</h3>    
+      <p>To only display the icon, use <span class="red">"notext"</span> as value for icon position:</p>
+      <pre>
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-btn-icon-notext">With circle (default)</a>
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search <span class="red">ui-btn-icon-notext</span>&quot;&gt;Search&lt;/a&gt;
-    </pre>
+      </pre>
+    </article>
 
-    <h3>Removing The Circle</h3> 
-    <p>By default, all icons have a gray circle (disc) around them. To remove the circle, add the <span class="red">"ui-nodisc-icon"</span> class to the element or its container:</p>
-    <pre>
+    <article>
+      <h3>Removing The Circle</h3> 
+      <p>By default, all icons have a gray circle (disc) around them. To remove the circle, add the <span class="red">"ui-nodisc-icon"</span> class to the element or its container:</p>
+      <pre>
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">With circle (default)</a>
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search ui-btn-icon-left&quot;&gt;With circle (default)&lt;/a&gt;
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-nodisc-icon">Without circle</a>
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search ui-btn-icon-left <span class="red">ui-nodisc-icon</span>&quot;&gt;Without circle&lt;/a&gt;
-    </pre>
+      </pre>
+    </article>
 
-    <h3>Black or White Icons</h3>
-    <p>By default, all icons are white. To change the icon color to black, add the <span class="red">"ui-alt-icon"</span> to the element or its container:</p>
-    <pre>  
+    <article>
+      <h3>Black or White Icons</h3>
+      <p>By default, all icons are white. To change the icon color to black, add the <span class="red">"ui-alt-icon"</span> to the element or its container:</p>
+      <pre>  
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left">White</a>
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search ui-btn-icon-left&quot;&gt;White&lt;/a&gt;
   <a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left ui-alt-icon">Black</a>
   &lt;a href=&quot;#anylink&quot; class=&quot;ui-btn ui-icon-search ui-btn-icon-left <span class="red">ui-alt-icon</span>&quot;&gt;Black&lt;/a&gt;
-    </pre>
-
+      </pre>
+    </article>
 
   </div>
-
-  <!-- List POPUP -->
-  <div data-role="popup" id="pop_icons_list" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-    <table>
-      <tbody>
-        <tr>
-          <th style="30%">Value</th>
-          <th style="20%">Icon</th>          
-          <th style="50%">Description</th>
-        </tr>
-
-        <tr>
-          <td>action</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>          
-          <td>Action (arrow pointing clockwise out of a box)</td>
-        </tr>
-        <tr>
-          <td>alert</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Alert</td>
-        </tr>
-        <tr>
-          <td>audio</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-audio ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Audio / Sound / Speakers</td>
-        </tr>
-        <tr>
-          <td>arrow-d-l</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-d-l ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Arrow pointing downwards to the left</td>
-        </tr>
-        <tr>
-          <td>arrow-d-r</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-d-r ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Arrow pointing downwards to the right</td>
-        </tr>
-        <tr>
-          <td>arrow-u-l</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-u-l ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Arrow pointing upwards to the left</td>
-        </tr>
-        <tr>
-          <td>arrow-u-r</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-u-r ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Arrow pointing upwards to the right</td>
-        </tr>
-        <tr>
-          <td>arrow-l</td><td><a href="#" class="ui-btn ui-btn-arrow-l ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing left</td></tr>
-        <tr>
-          <td>arrow-r</td><td><a href="#" class="ui-btn ui-btn-arrow-r ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing right</td></tr>
-        <tr>
-          <td>arrow-u</td><td><a href="#" class="ui-btn ui-btn-arrow-u ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing up</td></tr>
-        <tr>
-          <td>arrow-d</td><td><a href="#" class="ui-btn ui-btn-arrow-d ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing down</td></tr>
-        <tr>
-          <td>back</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-back ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Back (curved arrow pointing counterclockwise upwards)</td>
-        </tr>
-        <tr>
-          <td>bars</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Bars (three horizontal bars over each other)</td>
-        </tr>
-        <tr>
-          <td>bullets</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-bullets ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Bullets (three horizontal bullets over each other)</td>
-        </tr>
-        <tr>
-          <td>calendar</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-calendar ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Calendar</td>
-        </tr>
-        <tr>
-          <td>camera</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-camera ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Camera</td>
-        </tr>
-        <tr>
-          <td>carat-d</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-d ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Carat pointing down</td>
-        </tr>
-        <tr>
-          <td>carat-l</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-l ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Carat pointing left</td>
-        </tr>
-        <tr>
-          <td>carat-r</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-r ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Carat pointing right</td>
-        </tr>
-        <tr>
-          <td>carat-u</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-u ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Carat pointing up</td>
-        </tr>
-        <tr>
-          <td>check</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Checkmark</td>
-        </tr>
-        <tr>
-          <td>clock</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-clock ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Clock</td>
-        </tr>
-        <tr>
-          <td>cloud</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-cloud ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Cloud</td>
-        </tr>
-        <tr>
-          <td>comment</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-comment ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Comment</td>
-        </tr>
-        <tr>
-          <td>delete</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Delete (X)</td>
-        </tr>
-        <tr>
-          <td>edit</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-edit ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Edit / Pencil</td>
-        </tr>
-        <tr>
-          <td>eye</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-eye ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Eye</td>
-        </tr>
-        <tr>
-          <td>forbidden</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-forbidden ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Forbidden sign</td>
-        </tr>
-        <tr>
-          <td>forward</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-forward ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Forward</td>
-        </tr>
-        <tr>
-          <td>gear</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-gear ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Gear</td>
-        </tr>
-        <tr>
-          <td>grid</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Grid</td>
-        </tr>
-        <tr>
-          <td>heart</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-heart ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Heart / Love symbol</td>
-        </tr>
-        <tr>
-          <td>home</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Home</td>
-        </tr>
-        <tr>
-          <td>info</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Information</td>
-        </tr>
-        <tr>
-          <td>location</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-location ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Location / GPS</td>
-        </tr>
-        <tr>
-          <td>lock</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-lock ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Lock / Padlock</td>
-        </tr>
-        <tr>
-          <td>mail</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Mail / Letter</td>
-        </tr>
-        <tr>
-          <td>minus</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-minus ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Minus</td>
-        </tr>
-        <tr>
-          <td>navigation</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-navigation ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Navigation</td>
-        </tr>
-        <tr>
-          <td>phone</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Telephone</td>
-        </tr>
-        <tr>
-          <td>power</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-power ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Power (On/off)</td>
-        </tr>
-        <tr>
-          <td>plus</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Plus</td>
-        </tr>
-        <tr>
-          <td>recycle</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-recycle ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Recycle</td>
-        </tr>
-        <tr>
-          <td>refresh</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-refresh ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Refresh</td>
-        </tr>
-        <tr>
-          <td>search</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Search</td>
-        </tr>
-        <tr>
-          <td>shop</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Shop / Pag / Purse</td>
-        </tr>
-        <tr>
-          <td>star</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-star ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Star</td>
-        </tr>
-        <tr>
-          <td>tag</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Tag</td>
-        </tr>
-        <tr>
-          <td>user</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-user ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>User / Person</td>
-        </tr>
-        <tr>
-          <td>video</td>
-          <td><a href="#" class="ui-btn ui-btn-inline ui-icon-video ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
-          <td>Video Camera</td>
-        </tr>
-
-      </tbody>        
-    </table>  
-  </div>
-
-  <!-- End List POPUP -->
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
     <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
     <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
       
   </div>
+
+  <!-- List POPUP -->
+    <div data-role="popup" id="pop_icons_list" data-overlay-theme="b">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <table>
+        <tbody>
+          <tr>
+            <th style="30%">Value</th>
+            <th style="20%">Icon</th>          
+            <th style="50%">Description</th>
+          </tr>
+
+          <tr>
+            <td>action</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>          
+            <td>Action (arrow pointing clockwise out of a box)</td>
+          </tr>
+          <tr>
+            <td>alert</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Alert</td>
+          </tr>
+          <tr>
+            <td>audio</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-audio ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Audio / Sound / Speakers</td>
+          </tr>
+          <tr>
+            <td>arrow-d-l</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-d-l ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Arrow pointing downwards to the left</td>
+          </tr>
+          <tr>
+            <td>arrow-d-r</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-d-r ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Arrow pointing downwards to the right</td>
+          </tr>
+          <tr>
+            <td>arrow-u-l</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-u-l ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Arrow pointing upwards to the left</td>
+          </tr>
+          <tr>
+            <td>arrow-u-r</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-arrow-u-r ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Arrow pointing upwards to the right</td>
+          </tr>
+          <tr>
+            <td>arrow-l</td><td><a href="#" class="ui-btn ui-btn-arrow-l ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing left</td></tr>
+          <tr>
+            <td>arrow-r</td><td><a href="#" class="ui-btn ui-btn-arrow-r ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing right</td></tr>
+          <tr>
+            <td>arrow-u</td><td><a href="#" class="ui-btn ui-btn-arrow-u ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing up</td></tr>
+          <tr>
+            <td>arrow-d</td><td><a href="#" class="ui-btn ui-btn-arrow-d ui-icon-action ui-btn-icon-notext ui-corner-all ui-shadow"></a></td><td>Arrow pointing down</td></tr>
+          <tr>
+            <td>back</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-back ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Back (curved arrow pointing counterclockwise upwards)</td>
+          </tr>
+          <tr>
+            <td>bars</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Bars (three horizontal bars over each other)</td>
+          </tr>
+          <tr>
+            <td>bullets</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-bullets ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Bullets (three horizontal bullets over each other)</td>
+          </tr>
+          <tr>
+            <td>calendar</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-calendar ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Calendar</td>
+          </tr>
+          <tr>
+            <td>camera</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-camera ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Camera</td>
+          </tr>
+          <tr>
+            <td>carat-d</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-d ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Carat pointing down</td>
+          </tr>
+          <tr>
+            <td>carat-l</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-l ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Carat pointing left</td>
+          </tr>
+          <tr>
+            <td>carat-r</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-r ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Carat pointing right</td>
+          </tr>
+          <tr>
+            <td>carat-u</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-carat-u ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Carat pointing up</td>
+          </tr>
+          <tr>
+            <td>check</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Checkmark</td>
+          </tr>
+          <tr>
+            <td>clock</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-clock ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Clock</td>
+          </tr>
+          <tr>
+            <td>cloud</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-cloud ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Cloud</td>
+          </tr>
+          <tr>
+            <td>comment</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-comment ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Comment</td>
+          </tr>
+          <tr>
+            <td>delete</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Delete (X)</td>
+          </tr>
+          <tr>
+            <td>edit</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-edit ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Edit / Pencil</td>
+          </tr>
+          <tr>
+            <td>eye</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-eye ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Eye</td>
+          </tr>
+          <tr>
+            <td>forbidden</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-forbidden ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Forbidden sign</td>
+          </tr>
+          <tr>
+            <td>forward</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-forward ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Forward</td>
+          </tr>
+          <tr>
+            <td>gear</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-gear ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Gear</td>
+          </tr>
+          <tr>
+            <td>grid</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Grid</td>
+          </tr>
+          <tr>
+            <td>heart</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-heart ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Heart / Love symbol</td>
+          </tr>
+          <tr>
+            <td>home</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Home</td>
+          </tr>
+          <tr>
+            <td>info</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Information</td>
+          </tr>
+          <tr>
+            <td>location</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-location ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Location / GPS</td>
+          </tr>
+          <tr>
+            <td>lock</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-lock ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Lock / Padlock</td>
+          </tr>
+          <tr>
+            <td>mail</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-mail ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Mail / Letter</td>
+          </tr>
+          <tr>
+            <td>minus</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-minus ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Minus</td>
+          </tr>
+          <tr>
+            <td>navigation</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-navigation ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Navigation</td>
+          </tr>
+          <tr>
+            <td>phone</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Telephone</td>
+          </tr>
+          <tr>
+            <td>power</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-power ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Power (On/off)</td>
+          </tr>
+          <tr>
+            <td>plus</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Plus</td>
+          </tr>
+          <tr>
+            <td>recycle</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-recycle ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Recycle</td>
+          </tr>
+          <tr>
+            <td>refresh</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-refresh ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Refresh</td>
+          </tr>
+          <tr>
+            <td>search</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Search</td>
+          </tr>
+          <tr>
+            <td>shop</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Shop / Pag / Purse</td>
+          </tr>
+          <tr>
+            <td>star</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-star ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Star</td>
+          </tr>
+          <tr>
+            <td>tag</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-tag ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Tag</td>
+          </tr>
+          <tr>
+            <td>user</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-user ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>User / Person</td>
+          </tr>
+          <tr>
+            <td>video</td>
+            <td><a href="#" class="ui-btn ui-btn-inline ui-icon-video ui-btn-icon-notext ui-corner-all ui-shadow"></a></td>
+            <td>Video Camera</td>
+          </tr>
+
+        </tbody>        
+      </table>  
+    </div>
+  <!-- End List POPUP -->
+  
 </div>
 
 <link rel="stylesheet" href="assets/icons/main.css">

@@ -15,7 +15,7 @@
             <a href="#toolbars" class="ui-btn">Toolbars</a>
             <a href="#navbars" class="ui-btn">Navbars</a>
             <a href="#panels" class="ui-btn">Panels</a>
-            <a href="#collapsobles" class="ui-btn">Collapsibles</a>
+            <a href="#collapsibles" class="ui-btn">Collapsibles</a>
             <a href="#tables" class="ui-btn">Tables</a>
             <a href="#grids" class="ui-btn">Grids</a>
           </div>
@@ -78,13 +78,21 @@
   </div>
 
   <div id="content_GetStarted" data-role="main" class="ui-content">
-    <h3>Adding jQuery Mobile to Your Web Pages</h3>    
-    <span>There are two ways to add jQuery Mobile to your web site. You can:</span>
-    <ul>
-      <li>Link to a jQuery Mobile library stored at a <a href="#pop_getStarted_CDN" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">CDN</span></a> (recommended)</li>
+    <article>
+      <h3>Adding jQuery Mobile to Your Web Pages</h3>    
+      <span>There are two ways to add jQuery Mobile to your web site. You can:</span>
+      <ul>
+        <li>Link to a jQuery Mobile library stored at a <a href="#pop_getStarted_CDN" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">CDN</span></a> (recommended)</li>
+        
+        <li>Link to a jQuery Mobile library stored at <a href="#pop_getStarted_externalLink" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">your computer</span></a></li>
+      </ul>   
+    </article> 
+  </div>
+
+  <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
+    <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
+    <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
       
-      <li>Link to a jQuery Mobile library stored at <a href="#pop_getStarted_externalLink" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">your computer</span></a></li>
-    </ul>    
   </div>
 
   <!-- List POPUP -->
@@ -111,10 +119,8 @@
     <span class="red">&lt;script src=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js&quot;&gt;&lt;/script&gt;</span>
   &lt;/head&gt;
     </pre>
-    
-
-
   </div>
+  
   <div data-role="popup" id="pop_getStarted_externalLink" data-overlay-theme="b">
     <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
     
@@ -132,12 +138,7 @@
 
   </div>
   <!-- End List POPUP -->
-
-  <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
-    <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
-    <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
-      
-  </div>
+  
 </div>
 
 <link rel="stylesheet" href="assets/getStarted/main.css">

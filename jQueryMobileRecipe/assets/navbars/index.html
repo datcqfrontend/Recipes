@@ -1,21 +1,21 @@
-<div data-role="page" id="getStarted">
-  <div data-role="panel" id="panelMenuGetStarted" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
-      <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
+<div data-role="page" id="navbars">
+  <div data-role="panel" id="panelMenu_Navbars" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
+    <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
       <div data-role="collapsibleset" data-inset="false">
         <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" data-collapsed="false">
           
           <h3 class="collapsible_active">Tutorials</h3>
           <div data-role="controlgroup" data-type="vertical">
-            <a href="#" class="ui-btn ui-btn-active">Get Started</a>
+            <a href="#getStarted" class="ui-btn">Get Started</a>
             <a href="#pages" class="ui-btn">Pages</a>
             <a href="#transitions" class="ui-btn">Transitions</a>
             <a href="#buttons" class="ui-btn">Buttons</a>
-            <a href="#icons" class="ui-btn">Icons</a>
+            <a href="#icons" class="ui-btn ">Icons</a>
             <a href="#popups" class="ui-btn">Popups</a>
-            <a href="#toolbars" class="ui-btn">Toolbars</a>
-            <a href="#navbars" class="ui-btn">Navbars</a>
+            <a href="#toolbars" class="ui-btn ">Toolbars</a>
+            <a href="#" class="ui-btn ui-btn-active">Navbars</a>
             <a href="#panels" class="ui-btn">Panels</a>
-            <a href="#collapsobles" class="ui-btn">Collapsibles</a>
+            <a href="#collapsibles" class="ui-btn">Collapsibles</a>
             <a href="#tables" class="ui-btn">Tables</a>
             <a href="#grids" class="ui-btn">Grids</a>
           </div>
@@ -66,80 +66,232 @@
           </div>
 
         </div>
-      </div>   
+      </div>       
 
   </div>
 
 
   <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-position="fixed" >
     <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
-    <h1 class="ui-title">Get Started</h1>
-    <a href="#panelMenuGetStarted" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
+    <h1 class="ui-title">Navbars</h1>
+    <a href="#panelMenu_Navbars" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
   </div>
 
-  <div id="contentGetStarted" data-role="main" class="ui-content">
-    <h3>Adding jQuery Mobile to Your Web Pages</h3>    
-    <span>There are two ways to add jQuery Mobile to your web site. You can:</span>
-    <ul>
-      <li>Link to a jQuery Mobile library stored at a <a href="#pop_getStarted_CDN" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">CDN</span></a> (recommended)</li>
+  <div id="content_Navbars" data-role="main" class="ui-content">
+    <article>
+      <h3>jQuery Mobile Naviagation Bars</h3> 
+      <p>A navigation bar consists of a group of links that are aligned horizontally, typically within a header or footer.</br>
+        The bar is coded as an unordered list of links wrapped inside a &lt;div&gt; element that has the <span class="red">data-role="navbar"</span> attribute.</p>   
       
-      <li>Link to a jQuery Mobile library stored at <a href="#pop_getStarted_externalLink" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">your computer</span></a></li>
-    </ul>    
+      <div data-role="header" style="text-align:center;">
+        Welcome to jQuery Mobile Recipe
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Page Two</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <pre>
+  &lt;div data-role=&quot;header&quot; style=&quot;text-align:center;&quot;&gt;
+    Welcome to jQuery Mobile Recipe
+    <span class="red">&lt;div data-role=&quot;navbar&quot;&gt;</span>
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page Two&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    <span class="red">&lt;/div&gt;</span>
+  &lt;/div&gt;
+      </pre>
+      <p>By default, links inside a navigation bar will automatically turn into a button (no need for class="ui-btn" or data-role="button").<br/>
+      The buttons are, by default, as wide as its content. Use an unordered list to divide the buttons equally: <span class="red">1 button takes 100% of the width, 2 buttons share 50% each, 3 buttons 33,3%, etc. However, if you specify more than 5 buttons in the navbar, it will wrap to multiple lines</span>.</p>
+    </article>
+
+    <article>
+      <h3>Icons in Navigation Buttons</h3>
+      <p>To add an icon to your navigation button, use the <span class="red">data-icon</span> attribute:</p>
+      <div data-role="header" style="text-align:center;">
+        Welcome to jQuery Mobile Recipe
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#" data-icon="home">Home</a></li>
+            <li><a href="#" data-icon="arrow-r">Page Two</a></li>
+            <li><a href="#" data-icon="search">Search</a></li>
+          </ul>
+        </div>
+      </div>
+      <pre>
+  &lt;a href=&quot;#anylink&quot; <span class="red">data-icon=&quot;search&quot;</span>&gt;Search&lt;/a&gt;
+      </pre>
+      <p>The data-icon attribute use the same values as the CSS classes specified in the "Icons" chapter. The only difference is that, instead of specifying <span class="red">class="ui-icon-value"</span>, you specify the attribute of <span class="red">data-icon="value"</span>.</p>
+    </article>
+
+    <article>
+      <h3>Positioning Icons</h3>
+      <p>Just like with the "ui-btn-icon-position" class (specified in the "Icons" chapter), you can choose where the icon should be positioned in the navigation button: top, right, bottom or left.The icon position is set on the navbar container - it is not possible to position each individual button link. Use the <span class="red">data-iconpos</span> attribute to specify the position: 
+      <a href="#pop_navbars_iconpos_top" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">data-iconpos="top"</span></a>
+      <a href="#pop_navbars_iconpos_right" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">data-iconpos="right"</span></a>
+      <a href="#pop_navbars_iconpos_bottom" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">data-iconpos="bottom"</span></a>
+      <a href="#pop_navbars_iconpos_left" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">data-iconpos="left"</span></a>      
+      </p> 
+    </article>
+
+    <article>
+      <h3>Active Buttons</h3>
+      <p>When a link in the navbar is tapped/clicked, it gets the selected (pressed down) look. To achieve this look without having to tap the link, use the <a href="#pop_navbars_active" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">class="ui-btn-active"</span></a>.</p>
+      <p>For multiple pages, you might want the "selected" look for each button that represents the page the user is on. To do so, add the <span class="red">"ui-state-persist"</span> class to your links, as well as the <span class="red">"ui-btn-active"</span> class.</p>
+    </article>
   </div>
 
-  <!-- List POPUP -->
-  <div data-role="popup" id="pop_getStarted_CDN" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-            
-    <p>A CDN (Content Delivery Network) is used to distribute often-used files across the web.<br/>
-       This makes download speed much faster for the user.<p/>
-       
-    <p>As with jQuery core, there is nothing to install on your computer; you just include the following stylesheet (.css) and JavaScript libraries (.js) directly into your HTML page, to get jQuery Mobile to work:<p/>
 
-    <pre>
-  &lt;head&gt;
-    &lt;!-- Include meta tag to ensure proper rendering and touch zooming --&gt;
-    <span class="red">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
-
-    &lt;!-- Include jQuery Mobile stylesheets --&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css&quot;&gt;</span>
-
-    &lt;!-- Include the jQuery library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;</span>
-
-    &lt;!-- Include the jQuery Mobile library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-    
-
-
-  </div>
-  <div data-role="popup" id="pop_getStarted_externalLink" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-    
-    <p>If you want to host the jQuery Mobile library yourself, you must first download it from jQuerymobile.com. Then add the following code to your page:
-    </p>
-
-    <pre>
-  &lt;head&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery.mobile-1.4.5.css&quot;&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.mobile-1.4.5.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-
-  </div>
-  <!-- End List POPUP -->
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
     <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
     <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
-      
   </div>
+
+
+  <!-- List POPUP -->
+  <div data-role="popup" id="pop_navbars_iconpos_top" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            
+    <div data-role="header" style="text-align:center;">
+      Navbar with data-iconpos="top"
+      <div data-role="navbar" data-iconpos="top">
+        <ul>
+          <li><a href="#" data-icon="home" >Home</a></li>
+          <li><a href="#" data-icon="arrow-r">Page Two</a></li>            
+          <li><a href="#" data-icon="search">Search</a></li>
+        </ul>
+      </div>      
+    </div>
+    <pre>
+    &lt;div data-role=&quot;header&quot; style=&quot;text-align:center;&quot;&gt;
+      Navbar with data-iconpos=&quot;top&quot;
+      &lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;top&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;home&quot; &gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;arrow-r&quot;&gt;Page Two&lt;/a&gt;&lt;/li&gt;            
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;search&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+  </div>
+  <div data-role="popup" id="pop_navbars_iconpos_right" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+       
+    <div data-role="header" style="text-align:center;">
+      Navbar with data-iconpos="right"
+      <div data-role="navbar" data-iconpos="right">
+        <ul>
+          <li><a href="#" data-icon="home" >Home</a></li>
+          <li><a href="#" data-icon="arrow-r">Page Two</a></li>            
+          <li><a href="#" data-icon="search">Search</a></li>
+        </ul>
+      </div>      
+    </div>     
+    <pre>
+    &lt;div data-role=&quot;header&quot; style=&quot;text-align:center;&quot;&gt;
+      Navbar with data-iconpos=&quot;right&quot;
+      &lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;right&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;home&quot; &gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;arrow-r&quot;&gt;Page Two&lt;/a&gt;&lt;/li&gt;            
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;search&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+    
+  </div>
+  <div data-role="popup" id="pop_navbars_iconpos_bottom" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            
+    <div data-role="header" style="text-align:center;">
+      Navbar with data-iconpos="bottom"
+      <div data-role="navbar" data-iconpos="bottom">
+        <ul>
+          <li><a href="#" data-icon="home" >Home</a></li>
+          <li><a href="#" data-icon="arrow-r">Page Two</a></li>            
+          <li><a href="#" data-icon="search">Search</a></li>
+        </ul>
+      </div>      
+    </div>
+    <pre>
+    &lt;div data-role=&quot;header&quot; style=&quot;text-align:center;&quot;&gt;
+      Navbar with data-iconpos=&quot;bottom&quot;
+      &lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;bottom&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;home&quot; &gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;arrow-r&quot;&gt;Page Two&lt;/a&gt;&lt;/li&gt;            
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;search&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+  </div>
+  <div data-role="popup" id="pop_navbars_iconpos_left" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            
+    <div data-role="header" style="text-align:center;">
+      Navbar with data-iconpos="left"
+      <div data-role="navbar" data-iconpos="left">
+        <ul>
+          <li><a href="#" data-icon="home">Home</a></li>
+          <li><a href="#" data-icon="arrow-r">Page Two</a></li>            
+          <li><a href="#" data-icon="search">Search</a></li>
+        </ul>
+      </div>      
+    </div>
+    <pre>
+    &lt;div data-role=&quot;header&quot; style=&quot;text-align:center;&quot;&gt;
+      Navbar with data-iconpos=&quot;left&quot;
+      &lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;left&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;home&quot; &gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;arrow-r&quot;&gt;Page Two&lt;/a&gt;&lt;/li&gt;            
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;search&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+  </div>
+
+  <div data-role="popup" id="pop_navbars_active" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+            
+    <div data-role="header" style="text-align:center;">
+      Navbar with data-iconpos="left"
+      <div data-role="navbar" data-iconpos="top">
+        <ul>
+          <li><a href="#" data-icon="home" class="ui-btn-active">Home</a></li>
+          <li><a href="#" data-icon="arrow-r">Page Two</a></li>            
+          <li><a href="#" data-icon="search">Search</a></li>
+        </ul>
+      </div>      
+    </div>
+    <pre>
+    &lt;div data-role=&quot;header&quot; style=&quot;text-align:center;&quot;&gt;
+      Navbar with data-iconpos=&quot;left&quot;
+      &lt;div data-role=&quot;navbar&quot; data-iconpos=&quot;left&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;home&quot; <span class="red">class=&quot;ui-btn-active&quot;</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;arrow-r&quot;&gt;Page Two&lt;/a&gt;&lt;/li&gt;            
+          &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;search&quot;&gt;Search&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+  </div>
+
+  <!-- End List POPUP -->
+
 </div>
 
-<link rel="stylesheet" href="assets/getStarted/main.css">
-<script src="assets/getStarted/main.js"></script>
+<link rel="stylesheet" href="assets/navbars/main.css">
+<script src="assets/navbars/main.js"></script>
 
