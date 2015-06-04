@@ -89,16 +89,86 @@
     <article>
       <h3>Reflow Table</h3>
       <p>The reflow mode positions the table data horizontally until it reaches a minimum size, then all rows are grouped together vertically.<br/>
-      Create a table, add the <span class="red">data-role="table"</span> and a class of <span class="red">"ui-responsive"</span> on the &lt;table&lt; element:</p>
+      Create a table, add the <span class="red">data-role="table"</span> and a class of <span class="red">"ui-responsive"</span> on the &lt;table&gt; element:</p>
       <pre>
   &lt;table <span class="red">data-role=&quot;table&quot; class=&quot;ui-responsive&quot;</span>&gt;
       </pre>
+      <p>For the responsive table to work correctly, you must include the &lt;thead&gt; and &lt;tbody&gt; elements. <span class="red">Do not use rowspan or colspan attributes; they are not supported in responsive tables</span>.</p>
     </article>
 
     <article>
       <h3>Column Toggle Table</h3>
-
+      The "column toggle" mode will hide columns when there is not enough width to display the data.<br/>
+      To create a column toggle table, add the following to the &lt;table&gt; element:</p>
+      <pre>
+  &lt;table <span class="red">data-role=&quot;table&quot; data-mode=&quot;columntoggle&quot; class=&quot;ui-responsive&quot;</span> 
+  id=&quot;myTable&quot;&gt;
+      </pre>
+      <p>By default, jQuery Mobile will hide columns from the right side of the table. However, you are allowed to specify which column that should be hidden or shown in a specific order. Add the data-priority attribute to the table's header (&lt;th&gt;) and specify a <span class="red">number between 1 (highest priority) to 6 (lowest priority)</span>. If you do not specify a priority for a column, the column will be persistent and not available for hiding.
+      </p>
+      <pre>
+  &lt;th&gt;I will never be hidden&lt;/th&gt;
+  &lt;th <span class="red">data-priority=&quot;1&quot;</span>&gt;I am very important - I will probably not be hidden&lt;/th&gt;
+  &lt;th <span class="red">data-priority=&quot;3&quot;</span>&gt;I am less important - I could be hidden&lt;/th&gt;
+  &lt;th <span class="red">data-priority=&quot;5&quot;</span>&gt;I am not that important - there is a good chance that 
+  I will be hidden&lt;/th&gt;
+      </pre>
+      <p>Put it all together and you have created a column toggle table! Notice that the framework automatically adds a button in the top right corner of the table. This lets the user to choose which column to display in the table. To change the toggle table button text, use the <span class="red">data-column-btn-text</span> attribute</p>
+      <pre>
+  &lt;table data-role=&quot;table&quot; data-mode=&quot;columntoggle&quot; class=&quot;ui-responsive&quot;
+  data-column-btn-text=&quot;Hide/Show Columns!&quot; id=&quot;myTable&quot;&gt;
+      </pre>
+      <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" data-column-btn-text="Hide/Show Columns!" id="myTable">
+        <thead>
+          <tr>
+            <th data-priority="6">CustomerID</th>
+            <th>CustomerName</th>
+            <th data-priority="1">ContactName</th>
+            <th data-priority="2">Address</th>
+            <th data-priority="3">City</th>
+            <th data-priority="4">PostalCode</th>
+            <th data-priority="5">Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Obere Str. 57</td>
+            <td>Berlin</td>
+            <td>12209</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dat Chau</td>
+            <td>Dat Chau</td>
+            <td>Binh Thanh</td>
+            <td>Ho Chi Minh</td>
+            <td>084</td>
+            <td>VietNam</td>
+          </tr>
+        </tbody>
+      </table>      
     </article>
+
+    <article>
+      <h3>Styling Tables</h3>
+      <p>Use the "ui-shadow" class to add shadows to the table:</p>
+      <pre>
+  &lt;table data-role=&quot;table&quot; data-mode=&quot;columntoggle&quot; 
+  <span class="red">class=&quot;ui-responsive ui-shadow&quot;</span> id=&quot;myTable&quot;&gt;
+      </pre>
+      <p>For further table styling, use CSS:</p>
+      <pre>
+  &lt;style&gt;
+    th { border-bottom: 1px solid #d6d6d6;  }
+    tr:nth-child(even) {  background: #e9e9e9;  }
+  &lt;/style&gt;
+      <pre>
+    </article>
+
   </div>
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
