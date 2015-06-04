@@ -79,10 +79,130 @@
 
   <div id="content_FormInputs" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Text Inputs</h3>
+      <p>Input fields are coded with standard HTML elements, and jQuery Mobile will style them to look attractive and easy-to-use for mobile devices. You can also use the new HTML5 &lt;input&gt; types:</p>
+      <form method="post" action="demoform.asp">
+        <div class="ui-field-contain">
+          <label for="fullname">Full name:</label>
+          <input type="text" name="fullname" id="fullname">
+
+          <label for="bday">Date of Birth:</label>
+          <input type="date" name="bday" id="bday">
+
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" placeholder="Your email..">
+        </div>
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;div class=&quot;ui-field-contain&quot;&gt;
+      &lt;label for=&quot;fullname&quot;&gt;Full name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;fullname&quot; id=&quot;fullname&quot;&gt;
+
+      &lt;label for=&quot;bday&quot;&gt;Date of Birth:&lt;/label&gt;
+      &lt;input type=&quot;date&quot; name=&quot;bday&quot; id=&quot;bday&quot;&gt;
+
+      &lt;label for=&quot;email&quot;&gt;E-mail:&lt;/label&gt;
+      &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Your email..&quot;&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+      </pre>
 
     </article>
+
+    <article>
+      <h3>Text Area</h3>
+      <p>Use &lt;textarea&gt; for multi-line text inputs.<br/>
+      The text area will automatically grow to fit new lines as you type some text.</p> 
+      <label for="info">Additional Information:</label>
+      <textarea name="addinfo" id="info"></textarea>
+      <pre>
+  &lt;label for=&quot;info&quot;&gt;Additional Information:&lt;/label&gt;
+  &lt;textarea name=&quot;addinfo&quot; id=&quot;info&quot;&gt;&lt;/textarea&gt;
+      </pre>
+    </article>
+
+    <article>
+      <h3>Search Input</h3>
+      <p>The input type="search" is new in HTML5, and defines a text field for entering a search:</p>
+      <label for="search">Search:</label>
+      <input type="search" name="search" id="search">
+      <pre>
+  &lt;label for=&quot;search&quot;&gt;Search:&lt;/label&gt;
+  &lt;input type=&quot;search&quot; name=&quot;search&quot; id=&quot;search&quot;&gt;
+      </pre>
+    </article>
+
+    <article>
+      <h3>Radio Buttons</h3>
+      <p>Radio buttons are used when a user can select only one of a limited number of choices.<br/>
+      To create a set of radio buttons, add an input with type="radio" and a corresponding label. Wrap the radio buttons in a &lt;fieldset&gt; element. You can also add a &lt;legend&gt; element to define a caption for the &lt;fieldset&gt;.<br/>
+      Use <span class="red">data-role="controlgroup"</span>, to group the buttons together:</p>
+      <form method="post" action="demoform.asp">
+        <fieldset data-role="controlgroup">
+          <legend>Choose your gender:</legend>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female"> 
+        </fieldset>
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;fieldset data-role=&quot;controlgroup&quot;&gt;
+      &lt;legend&gt;Choose your gender:&lt;/legend&gt;
+        &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;male&quot; value=&quot;male&quot;&gt;
+        &lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;female&quot; value=&quot;female&quot;&gt; 
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+      </pre>
+
+    </article>
+
+    <article>
+      <h3>Checkboxes</h3>
+      <p>Checkboxes are used when a user can select one or more options of a limited number of choices:</p>
+      <form method="post" action="demoform.asp">
+        <fieldset data-role="controlgroup">
+          <legend>Choose as many favorite colors as you'd like:</legend>
+            <label for="red">Red</label>
+            <input type="checkbox" name="favcolor" id="red" value="red">
+            <label for="green">Green</label>
+            <input type="checkbox" name="favcolor" id="green" value="green">
+            <label for="blue">Blue</label>
+            <input type="checkbox" name="favcolor" id="blue" value="blue"> 
+        </fieldset>
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;fieldset data-role=&quot;controlgroup&quot;&gt;
+      &lt;legend&gt;Choose as many favorite colors as you&apos;d like:&lt;/legend&gt;
+        &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;red&quot; value=&quot;red&quot;&gt;
+        &lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;green&quot; value=&quot;green&quot;&gt;
+        &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;blue&quot; value=&quot;blue&quot;&gt; 
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+      </pre>
+    </article>
+
+    <article>
+      <h3>More</h3>
+      <p><a href="#pop_forminputs_1" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">To group radio buttons or checkboxes horizontally, use the data-type="horizontal".</span></a></p>
+      
+      <p><a href="#pop_forminputs_2" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">You can also wrap a field container around the &lt;fieldset&gt;.</span></a></p>
+      
+      <p><a href="#pop_forminputs_3" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">If you want one of your buttons to be "pre-selected", use the HTML &lt;input&gt; checked attribute</span></a></p>
+
+      <p>You can also place your form inside a popup</p>
+    </article>
+
+    
+
 
   </div>
 
@@ -93,12 +213,146 @@
 
 
   <!-- List POPUP -->
-  <div data-role="popup" id="pop_" data-overlay-theme="b">
+  <div data-role="popup" id="pop_forminputs_1" data-overlay-theme="b">
     <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>            
     
+    <form method="post" action="demoform.asp">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>Choose your gender:</legend>
+        <label for="male1">Male</label>
+        <input type="radio" name="gender1" id="male1" value="male">
+        <label for="female1">Female</label>
+        <input type="radio" name="gender1" id="female1" value="female"> 
+      </fieldset>
+
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>Choose as many favorite colors as you'd like:</legend>
+          <label for="red1">Red</label>
+          <input type="checkbox" name="favcolor1" id="red1" value="red">
+          <label for="green1">Green</label>
+          <input type="checkbox" name="favcolor1" id="green1" value="green">
+          <label for="blue1">Blue</label>
+          <input type="checkbox" name="favcolor1" id="blue1" value="blue">  
+      </fieldset>        
+    </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;fieldset data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;&gt;
+    &lt;legend&gt;Choose your gender:&lt;/legend&gt;
+      &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;male&quot; value=&quot;male&quot;&gt;
+      &lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;female&quot; value=&quot;female&quot;&gt; 
+    &lt;/fieldset&gt;
+
+    &lt;fieldset data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;&gt;
+      &lt;legend&gt;Choose as many favorite colors as you&apos;d like:&lt;/legend&gt;
+        &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;red&quot; value=&quot;red&quot;&gt;
+        &lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;green&quot; value=&quot;green&quot;&gt;
+        &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;blue&quot; value=&quot;blue&quot;&gt;  
+    &lt;/fieldset&gt;        
+  &lt;/form&gt;
+      </pre>
   </div>
   
+  <div data-role="popup" id="pop_forminputs_2" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>  
 
+    <form method="post" action="demoform.asp">
+        <div class="ui-field-contain">
+          <fieldset data-role="controlgroup">
+          <legend>Choose your gender:</legend>
+            <label for="male2">Male</label>
+            <input type="radio" name="gender2" id="male2" value="male">
+            <label for="female2">Female</label>
+            <input type="radio" name="gender2" id="female2" value="female"> 
+          </fieldset>
+        </div>
+        <div class="ui-field-contain">
+          <fieldset data-role="controlgroup">
+            <legend>Choose as many favorite colors as you'd like:</legend>
+              <label for="red2">Red</label>
+              <input type="checkbox" name="favcolor2" id="red2" value="red">
+              <label for="green2">Green</label>
+              <input type="checkbox" name="favcolor2" id="green2" value="green">
+              <label for="blue2">Blue</label>
+              <input type="checkbox" name="favcolor2" id="blue2" value="blue">  
+          </fieldset>
+        </div>        
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;div class=&quot;ui-field-contain&quot;&gt;
+      &lt;fieldset data-role=&quot;controlgroup&quot;&gt;
+      &lt;legend&gt;Choose your gender:&lt;/legend&gt;
+        &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;male&quot; value=&quot;male&quot;&gt;
+        &lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;female&quot; value=&quot;female&quot;&gt; 
+      &lt;/fieldset&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ui-field-contain&quot;&gt;
+      &lt;fieldset data-role=&quot;controlgroup&quot;&gt;
+        &lt;legend&gt;Choose as many favorite colors as you&apos;d like:&lt;/legend&gt;
+          &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
+          &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;red&quot; value=&quot;red&quot;&gt;
+          &lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;
+          &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;green&quot; value=&quot;green&quot;&gt;
+          &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;
+          &lt;input type=&quot;checkbox&quot; name=&quot;favcolor&quot; id=&quot;blue&quot; value=&quot;blue&quot;&gt;  
+      &lt;/fieldset&gt;
+    &lt;/div&gt;        
+  &lt;/form&gt;
+      </pre>
+  </div>
+
+  <div data-role="popup" id="pop_forminputs_3" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+
+    <form method="post" action="demoform.asp">
+      <fieldset data-role="controlgroup">
+      <legend>Choose your gender:</legend>
+        <label for="male3">Male</label>
+        <input type="radio" name="gender3" id="male3" value="male" checked>
+        <label for="female3">Female</label>
+        <input type="radio" name="gender3" id="female3" value="female"> 
+      </fieldset>
+
+      <fieldset data-role="controlgroup">
+        <legend>Choose as many favorite colors as you'd like:</legend>
+          <label for="red3">Red</label>
+          <input type="checkbox" name="favcolor3" id="red3" value="red" checked>
+          <label for="green3">Green</label>
+          <input type="checkbox" name="favcolor3" id="green3" value="green">
+          <label for="blue3">Blue</label>
+          <input type="checkbox" name="favcolor3" id="blue3" value="blue" checked>  
+      </fieldset>      
+    </form>
+    <pre>
+&lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+  &lt;fieldset data-role=&quot;controlgroup&quot;&gt;
+  &lt;legend&gt;Choose your gender:&lt;/legend&gt;
+    &lt;label for=&quot;male3&quot;&gt;Male&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender3&quot; id=&quot;male3&quot; value=&quot;male&quot; checked&gt;
+    &lt;label for=&quot;female3&quot;&gt;Female&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender3&quot; id=&quot;female3&quot; value=&quot;female&quot;&gt; 
+  &lt;/fieldset&gt;
+
+  &lt;fieldset data-role=&quot;controlgroup&quot;&gt;
+    &lt;legend&gt;Choose as many favorite colors as you&apos;d like:&lt;/legend&gt;
+      &lt;label for=&quot;red3&quot;&gt;Red&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;favcolor3&quot; id=&quot;red3&quot; value=&quot;red&quot; checked&gt;
+      &lt;label for=&quot;green3&quot;&gt;Green&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;favcolor3&quot; id=&quot;green3&quot; value=&quot;green&quot;&gt;
+      &lt;label for=&quot;blue3&quot;&gt;Blue&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;favcolor3&quot; id=&quot;blue3&quot; value=&quot;blue&quot; checked&gt;  
+  &lt;/fieldset&gt;      
+&lt;/form&gt;
+    </pre>
+  </div>
   <!-- End List POPUP -->
 
 </div>

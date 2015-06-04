@@ -79,9 +79,162 @@
 
   <div id="content_FormBasic" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Forms</h3>
+      <p>jQuery Mobile automatically style HTML forms to make them look engaging and touch-friendly.</p>
 
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Form Structure</h3>
+      <p>jQuery Mobile uses CSS to style HTML form elements, making them attractive and easy to use.<br/>
+      In jQuery Mobile you can use the following form controls:</p>
+      <ul>
+        <li>Text Inputs</li>
+        <li>Search Inputs</li>
+        <li>Radio Buttons</li>
+        <li>Checkboxes</li>
+        <li>Select Menus</li>
+        <li>Sliders</li>
+        <li>Flip Toggle Switches</li>
+      </ul>
+      When working with jQuery Mobile forms you should know:
+      <ul>
+        <li>The &lt;form&gt; element must have a method and an action attribute</li>
+        <li>Each form element must have a unique "id" attribute. The id must be unique across the pages in the site. This is because jQuery Mobile's single-page navigation model allows many different "pages" to be present at the same time</li>
+        <li>Each form element must have a label. Set the for attribute of the label to match the id of the element</li>
+      </ul>
+      <form method="post" action="demoform.asp">
+        <label for="fname">First name:</label>
+        <input type="text" name="fname" id="fname" placeholder="First name...">
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;fname&quot; placeholder=&quot;First name...&quot;&gt;
+  &lt;/form&gt;
+      </pre>
+      <p>To hide the label, use the <span class="red">"ui-hidden-accessible"</span> class. This is often used when you want the element's placeholder attribute to serve as the label:</p>
+      <form method="post" action="demoform.asp">
+        <label for="fname" class="ui-hidden-accessible">First name:</label>
+        <input type="text" name="fname" id="fname" placeholder="First name...">
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;label for=&quot;fname&quot; <span class="red">class=&quot;ui-hidden-accessible&quot;</span>&gt;First name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;fname&quot; placeholder=&quot;First name...&quot;&gt;
+  &lt;/form&gt;
+      </pre>
+      <p>If you want a "clear button" (an X icon on the right side of the input field that clears the contents of the field), add the <span class="red">data-clear-btn="true"</span> attribute:</p>
+      <form method="post" action="demoform.asp">
+        <label for="fname" class="ui-hidden-accessible">First name:</label>
+        <input type="text" name="fname" id="fname" placeholder="First name..." data-clear-btn="true">
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;label for=&quot;fname&quot; <span class="red">class=&quot;ui-hidden-accessible&quot;</span>&gt;First name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;fname&quot; placeholder=&quot;First name...&quot;
+    <span class="red">data-clear-btn=&quot;true&quot;</span>&gt;
+  &lt;/form&gt;
+      </pre>
+      <p>The "clear button" can be added on any &lt;input&gt; element, except for &lt;textarea&gt;. Search fields have this attribute set to "true" as default - to change it, simply specify <span class="red">data-clear-btn="false"</span>.</p>
+    </article>
+
+
+    <article>
+      <h3>jQuery Mobile Form Buttons</h3>
+      <p>Buttons in forms are coded with standard HTML &lt;input&gt; elements (button, reset, submit). They are automatically styled, making them attractive and easy-to-use on both mobile devices and desktop computers:</p>
+      <form method="post" action="demoform.asp">
+        <input type="button" value="Button">
+        <input type="reset" value="Reset Button">
+        <input type="submit" value="Submit Button">
+      </form>
+      <pre>
+  &lt;input <span class="red">type=&quot;button&quot;</span> value=&quot;Button&quot;&gt;
+  &lt;input <span class="red">type=&quot;reset&quot;</span> value=&quot;Reset Button&quot;&gt;
+  &lt;input <span class="red">type=&quot;submit&quot;</span> value=&quot;Submit Button&quot;&gt;
+      </pre>
+      <p>To additionally style an &lt;input&gt; button, use any of the data-* attributes listed in the table below:<br/>
+      Bold value indicates default value</p>  
+      <table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Hide/Show Columns!" id="table_myTable">
+        <thead>
+          <tr>
+            <th data-priority="1">Attribute</th>
+            <th data-priority="2">Value</th>
+            <th data-priority="3">Description</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="red">data-corners</span></td>
+            <td><span class="bold">true</span>|false</td>
+            <td>Specifies whether the button should have rounded corners or not</td>            
+          </tr>
+          <tr>
+            <td><span class="red">data-icon</span></td>
+            <td>Icons Reference</td>
+            <td>Specifies the icon of the button</td>
+          </tr>
+          <tr>
+            <td><span class="red">data-iconpos</span></td>
+            <td><span class="bold">left</span>|right|top|bottom|notext</td>
+            <td>Specifies the position of the icon</td>
+          </tr>
+          <tr>
+            <td><span class="red">data-inline</span></td>
+            <td>true|<span class="bold">false</span></td>
+            <td>Specifies whether the button should be inline or not</td>
+          </tr>
+          <tr>
+            <td><span class="red">data-mini</span></td>
+            <td>true|<span class="bold">false</span></td>
+            <td>Specifies whether the button should be small or not</td>
+          </tr>
+          <tr>
+            <td><span class="red">data-shadow</span></td>
+            <td><span class="bold">true</span>|false</td>
+            <td>Specifies whether the button should have shadows or not</td>
+          </tr>
+        </tbody>
+      </table>  
+      <pre>
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; data-icon=&quot;check&quot; data-iconpos=&quot;right&quot; data-inline=&quot;true&quot;&gt;
+      </pre>
+
+    </article>
+
+    <article>
+      <h3>Field Containers</h3>
+      <p>To make labels and form elements look properly on wider screens, wrap a &lt;div&gt; or &lt;fieldset&gt; element with the <span class="red">"ui-field-contain"</span> class around the label/form element. The "ui-field-contain" class style labels and form controls based upon the width of the page. When the width of the page is greater than 480px, it automatically place the label on the same line as the form control. When less than 480px, the label will be placed above the form element.</p>
+      <form method="post" action="demoform.asp">
+        <div class="ui-field-contain">
+          <label for="fname">First name:</label>
+          <input type="text" name="fname" id="fname">
+          <label for="lname">Last name:</label>
+          <input type="text" name="lname" id="lname">
+        </div>
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;div <span class="red">class=&quot;ui-field-contain&quot;</span>&gt;
+      &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;fname&quot;&gt;
+      &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;lname&quot; id=&quot;lname&quot;&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+      </pre>
+      <p>To prevent jQuery Mobile to automatically style tappable/clickable elements, use the <span class="red">data-role="none"</span> attribute:</p>
+      <form method="post" action="demoform.asp">
+        <label for="fname">First name:</label>
+        <input type="text" name="fname" id="fname" data-role="none">
+      </form>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;fname&quot; <span class="red">data-role=&quot;none&quot;</span>&gt;
+  &lt;/form&gt;
+      </pre>
     </article>
 
   </div>

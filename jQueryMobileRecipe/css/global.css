@@ -14,3 +14,7 @@ span.blue-bold {
 	color:blue;
 	font-weight:bold;
 }
+
+span.bold {
+	font-weight:bold;
+}
