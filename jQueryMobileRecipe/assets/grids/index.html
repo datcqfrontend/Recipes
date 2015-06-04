@@ -79,8 +79,103 @@
 
   <div id="content_Grids" data-role="main" class="ui-content">
     <article>
-      <h3>Collapsible Content Blocks</h3>
-      
+      <h3>jQuery Mobile Layout Grids</h3>
+      <p>jQuery Mobile provides a set of CSS-based column layouts. However, column layouts are not generally recommended on a mobile device, due to the mobile's screen width.<br/>
+      But there are times you want to position smaller elements, like buttons or navigation tabs, side-by-side as if it was in a table. Then, columns are perfect.<br/>
+      Columns in a grid are of equal width (and 100% wide in total), with no border, background, margin or padding.<br/>
+      There are five layout grids that can be used:</p>
+      <table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Hide/Show Columns!" id="table_myTable">
+        <thead>
+          <tr>
+            <th data-priority="1">Grid Class</th>
+            <th data-priority="4">Columns</th>
+            <th data-priority="2">Column Widths</th>
+            <th data-priority="3">Corresponds To</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="red">ui-grid-solo</span></td>
+            <td>1</td>
+            <td>100%</td>
+            <td><span class="red">ui-block-a</span></td>            
+          </tr>
+          <tr>
+            <td><span class="red">ui-grid-a</span></td>
+            <td>2</td>
+            <td>50%|50%</td>
+            <td><span class="red">ui-block-a|b</span></td>            
+          </tr>
+          <tr>
+            <td><span class="red">ui-grid-b</span></td>
+            <td>3</td>
+            <td>33%|33%|33%</td>
+            <td><span class="red">ui-block-a|b|c</span></td>            
+          </tr>
+          <tr>
+            <td><span class="red">ui-grid-c</span></td>
+            <td>4</td>
+            <td>25%|25%|25%|25%</td>
+            <td><span class="red">ui-block-a|b|c|d</span></td>            
+          </tr>
+          <tr>
+            <td><span class="red">ui-grid-d</span></td>
+            <td>5</td>
+            <td>20%|20%|20%|20%|20%</td>
+            <td><span class="red">ui-block-a|b|c|d|e</span></td>            
+          </tr>
+        </tbody>
+      </table>  
+      <p>Within the column container, child elements can have the class ui-block-a|b|c|d|e, depending on the number of columns. The columns will float side-by-side.<br/>
+      Example 1: For the ui-grid-a class (which is a two-column layout), you must specify two child elements of ui-block-a and ui-block-b.<br/>
+      Example 2: For ui-grid-b (three-column layout), add three child elements of ui-block-a, ui-block-b and ui-block-c.</p>
+    </article>
+
+    <article>
+      <h3>Customize Grids</h3>
+      <p>You can customize your column blocks by using CSS:</p>
+      <pre>
+  &lt;style&gt;
+  .ui-block-a, .ui-block-b, .ui-block-c {
+      background-color: lightgray;
+      border: 1px solid black;
+      height: 100px;
+      font-weight: bold;
+      text-align: center;
+      padding: 30px;
+  }
+  &lt;/style&gt; 
+      </pre>
+      <p>You can also customize your blocks by using inline styles:</p>
+      <pre>
+  &lt;div class=&quot;ui-block-a&quot; <span class="red">style=&quot;border:1px solid black;&quot;</span>&gt;&lt;span&gt;Text..&lt;/span&gt;&lt;/div&gt;     
+      </pre>
+    </article>
+
+    <article>
+      <h3>Multiple Rows</h3>
+      <p>It is also possible to have have multiple rows inside your columns.<br/>
+      Note: The ui-block-a-class will always create a new line:</p>
+      <pre>
+  <span class="red">&lt;div class=&quot;ui-grid-b&quot;&gt;</span>
+    <span class="red">&lt;div class=&quot;ui-block-a&quot;&gt;&lt;span&gt;Some Text&lt;/span&gt;&lt;/div&gt;</span>
+    &lt;div class=&quot;ui-block-b&quot;&gt;&lt;span&gt;Some Text&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-block-c&quot;&gt;&lt;span&gt;Some Text&lt;/span&gt;&lt;/div&gt;
+    <span class="red">&lt;div class=&quot;ui-block-a&quot;&gt;&lt;span&gt;Some Text&lt;/span&gt;&lt;/div&gt;</span>
+    &lt;div class=&quot;ui-block-b&quot;&gt;&lt;span&gt;Some Text&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui-block-a&quot;&gt;&lt;span&gt;Some Text&lt;/span&gt;&lt;/div&gt;
+  <span class="red">&lt;/div&gt;</span>
+      </pre>
+    </article>
+
+    <article>
+      <h3>Multiple Rows</h3>
+      <p>On small screens, it is not recommended to have too many buttons with text side-by-side on one row - as the text might get shortened.<br/>
+      For responsive grids, add the <span class="red">ui-responsive</span> class to the container:
+      </p>
+      <pre>
+  &lt;div class=&quot;ui-grid-b <span class="red">ui-responsive</span>&quot;&gt;
+      </pre>
     </article>
   </div>
 

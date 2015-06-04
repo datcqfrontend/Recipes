@@ -10,13 +10,13 @@ $(document).on('ready',function(){
 					"popups","toolbars","navbars","panels","collapsibles",
 					"tables","grids",
 
-					/*"listViews","listContent","filterItems",
+					"listViews","listContent","filterItems",
 
 					"formBasic","formInputs","formSelect","formSliders",
 
 					"themes",
 
-					"events","touch","scroll","orientation","pageEvents",*/
+					"events","touch","scroll","orientation","pageEvents",
 
 					//Dialogs
 					"pageDialog"	

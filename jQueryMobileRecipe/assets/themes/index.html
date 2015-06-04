@@ -1,20 +1,20 @@
-<div data-role="page" id="getStarted">
-  <div data-role="panel" id="panelMenuGetStarted" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
-      <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
+<div data-role="page" id="themes">
+  <div data-role="panel" id="panelMenu_Themes" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
+    <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
       <div data-role="collapsibleset" data-inset="false">
-        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" data-collapsed="false">
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" >
           
-          <h3 class="collapsible_active">Tutorials</h3>
+          <h3>Tutorials</h3>
           <div data-role="controlgroup" data-type="vertical">
-            <a href="#" class="ui-btn ui-btn-active">Get Started</a>
+            <a href="#getStarted" class="ui-btn">Get Started</a>
             <a href="#pages" class="ui-btn">Pages</a>
             <a href="#transitions" class="ui-btn">Transitions</a>
             <a href="#buttons" class="ui-btn">Buttons</a>
-            <a href="#icons" class="ui-btn">Icons</a>
+            <a href="#icons" class="ui-btn ">Icons</a>
             <a href="#popups" class="ui-btn">Popups</a>
-            <a href="#toolbars" class="ui-btn">Toolbars</a>
+            <a href="#toolbars" class="ui-btn ">Toolbars</a>
             <a href="#navbars" class="ui-btn">Navbars</a>
-            <a href="#panels" class="ui-btn">Panels</a>
+            <a href="#panel" class="ui-btn ">Panels</a>
             <a href="#collapsibles" class="ui-btn">Collapsibles</a>
             <a href="#tables" class="ui-btn">Tables</a>
             <a href="#grids" class="ui-btn">Grids</a>
@@ -25,7 +25,7 @@
 
           <h3>Lists</h3>
           <div data-role="controlgroup" data-type="vertical">
-            <a href="#listViews" class="ui-btn">List Views</a>
+            <a href="#listViews" class="ui-btn ">List Views</a>
             <a href="#listContent" class="ui-btn">List Content</a>
             <a href="#filterItems" class="ui-btn">Filter Items</a>
             
@@ -44,11 +44,11 @@
           </div>
 
         </div>
-        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" data-collapsed="false">
 
-          <h3>Themes</h3>
+          <h3 class="collapsible_active">Themes</h3>
           <div data-role="controlgroup" data-type="vertical">
-            <a href="#themes" class="ui-btn">Themes</a>
+            <a href="#" class="ui-btn ui-btn-active">Themes</a>
             
           </div>
 
@@ -66,80 +66,43 @@
           </div>
 
         </div>
-      </div>   
+      </div>       
 
   </div>
 
 
   <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-position="fixed" >
     <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
-    <h1 class="ui-title">Get Started</h1>
-    <a href="#panelMenuGetStarted" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
+    <h1 class="ui-title">Themes</h1>
+    <a href="#panelMenu_Themes" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
   </div>
 
-  <div id="contentGetStarted" data-role="main" class="ui-content">
-    <h3>Adding jQuery Mobile to Your Web Pages</h3>    
-    <span>There are two ways to add jQuery Mobile to your web site. You can:</span>
-    <ul>
-      <li>Link to a jQuery Mobile library stored at a <a href="#pop_getStarted_CDN" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">CDN</span></a> (recommended)</li>
+  <div id="content_Themes" data-role="main" class="ui-content">
+    <article>
+      <h3></h3>
       
-      <li>Link to a jQuery Mobile library stored at <a href="#pop_getStarted_externalLink" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">your computer</span></a></li>
-    </ul>    
-  </div>
 
-  <!-- List POPUP -->
-  <div data-role="popup" id="pop_getStarted_CDN" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-            
-    <p>A CDN (Content Delivery Network) is used to distribute often-used files across the web.<br/>
-       This makes download speed much faster for the user.<p/>
-       
-    <p>As with jQuery core, there is nothing to install on your computer; you just include the following stylesheet (.css) and JavaScript libraries (.js) directly into your HTML page, to get jQuery Mobile to work:<p/>
-
-    <pre>
-  &lt;head&gt;
-    &lt;!-- Include meta tag to ensure proper rendering and touch zooming --&gt;
-    <span class="red">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
-
-    &lt;!-- Include jQuery Mobile stylesheets --&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css&quot;&gt;</span>
-
-    &lt;!-- Include the jQuery library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;</span>
-
-    &lt;!-- Include the jQuery Mobile library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-    
-
+    </article>
 
   </div>
-  <div data-role="popup" id="pop_getStarted_externalLink" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-    
-    <p>If you want to host the jQuery Mobile library yourself, you must first download it from jQuerymobile.com. Then add the following code to your page:
-    </p>
-
-    <pre>
-  &lt;head&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery.mobile-1.4.5.css&quot;&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.mobile-1.4.5.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-
-  </div>
-  <!-- End List POPUP -->
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
     <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
     <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
-      
   </div>
+
+
+  <!-- List POPUP -->
+  <div data-role="popup" id="pop_" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>            
+    
+  </div>
+  
+
+  <!-- End List POPUP -->
+
 </div>
 
-<link rel="stylesheet" href="assets/getStarted/main.css">
-<script src="assets/getStarted/main.js"></script>
+<link rel="stylesheet" href="assets/themes/main.css">
+<script src="assets/themes/main.js"></script>
 

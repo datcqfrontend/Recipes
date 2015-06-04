@@ -1,31 +1,31 @@
-<div data-role="page" id="getStarted">
-  <div data-role="panel" id="panelMenuGetStarted" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
-      <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
+<div data-role="page" id="listViews">
+  <div data-role="panel" id="panelMenu_ListViews" data-display="overlay"  data-position-fixed="true" style="text-align:center;">
+    <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>
       <div data-role="collapsibleset" data-inset="false">
-        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" data-collapsed="false">
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" >
           
-          <h3 class="collapsible_active">Tutorials</h3>
+          <h3>Tutorials</h3>
           <div data-role="controlgroup" data-type="vertical">
-            <a href="#" class="ui-btn ui-btn-active">Get Started</a>
+            <a href="#getStarted" class="ui-btn">Get Started</a>
             <a href="#pages" class="ui-btn">Pages</a>
             <a href="#transitions" class="ui-btn">Transitions</a>
             <a href="#buttons" class="ui-btn">Buttons</a>
-            <a href="#icons" class="ui-btn">Icons</a>
+            <a href="#icons" class="ui-btn ">Icons</a>
             <a href="#popups" class="ui-btn">Popups</a>
-            <a href="#toolbars" class="ui-btn">Toolbars</a>
+            <a href="#toolbars" class="ui-btn ">Toolbars</a>
             <a href="#navbars" class="ui-btn">Navbars</a>
-            <a href="#panels" class="ui-btn">Panels</a>
+            <a href="#panel" class="ui-btn ">Panels</a>
             <a href="#collapsibles" class="ui-btn">Collapsibles</a>
             <a href="#tables" class="ui-btn">Tables</a>
             <a href="#grids" class="ui-btn">Grids</a>
           </div>
 
         </div>
-        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true">
+        <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-inset="false" data-mini="true" data-collapsed="false">
 
-          <h3>Lists</h3>
+          <h3 class="collapsible_active">Lists</h3>
           <div data-role="controlgroup" data-type="vertical">
-            <a href="#listViews" class="ui-btn">List Views</a>
+            <a href="#" class="ui-btn ui-btn-active">List Views</a>
             <a href="#listContent" class="ui-btn">List Content</a>
             <a href="#filterItems" class="ui-btn">Filter Items</a>
             
@@ -66,80 +66,105 @@
           </div>
 
         </div>
-      </div>   
+      </div>       
 
   </div>
 
 
   <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-position="fixed" >
     <a href="#home" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
-    <h1 class="ui-title">Get Started</h1>
-    <a href="#panelMenuGetStarted" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
+    <h1 class="ui-title">List Views</h1>
+    <a href="#panelMenu_ListViews" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-notext ui-corner-all ui-shadow">Menu</a>
   </div>
 
-  <div id="contentGetStarted" data-role="main" class="ui-content">
-    <h3>Adding jQuery Mobile to Your Web Pages</h3>    
-    <span>There are two ways to add jQuery Mobile to your web site. You can:</span>
-    <ul>
-      <li>Link to a jQuery Mobile library stored at a <a href="#pop_getStarted_CDN" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">CDN</span></a> (recommended)</li>
-      
-      <li>Link to a jQuery Mobile library stored at <a href="#pop_getStarted_externalLink" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span class="blue-bold">your computer</span></a></li>
-    </ul>    
+  <div id="content_ListViews" data-role="main" class="ui-content">
+    <article>
+      <h3>jQuery Mobile List Views</h3>
+      <p>List views in jQuery Mobile are standard HTML lists; ordered (&lt;ol&gt;) and unordered (&lt;ul&gt;).<br/>
+      To create a list, apply the <span class="red">data-role="listview"</span> to the &lt;ol&gt; or &lt;ul&gt; element. To make the items tappable, specify a link inside each list item (&lt;li&gt;):</p>
+      <ol data-role="listview">
+        <li><a href="#">List Item 1</a></li>
+        <li><a href="#">List Item 2</a></li>
+      </ol>
+      <pre>  
+  &lt;ol <span class="red">data-role=&quot;listview&quot;</span>&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+      </pre>       
+      <ul data-role="listview">
+        <li><a href="#">List Item 1</a></li>
+        <li><a href="#">List Item 2</a></li>
+      </ul>
+      <pre> 
+  &lt;ul <span class="red">data-role=&quot;listview&quot;</span>&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+      </pre>
+      <p>To style your lists with rounded corners and some margin, use the <span class="red">data-inset="true"</span> attribute.</p>
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#">List Item 1</a></li>
+        <li><a href="#">List Item 2</a></li>
+      </ul>
+      <pre>
+  &lt;ul data-role=&quot;listview&quot; <span class="red">data-inset=&quot;true&quot;</span>&gt;
+      </pre>
+      <p>By default, links inside a list item will automatically turn into a button (no need for ui-class="btn" or data-role="button")</p>
+    </article>   
+
+    <article>
+      <h3>List Dividers</h3>
+      <p>List dividers are used to organize and group items into categories/sections.<br/>
+      To specify a list divider, add the <span class="red">data-role="list-divider"</span> attribute to an &lt;li&gt; element:</p>
+      <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Europe</li>
+        <li><a href="#">Norway</a></li>
+        <li><a href="#">Germany</a></li>
+      </ul>
+      <pre>
+  &lt;ul data-role=&quot;listview&quot; data-inset=&quot;true&quot;&gt;
+    <span class="red">&lt;li data-role=&quot;list-divider&quot;&gt;Europe&lt;/li&gt;</span>
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Norway&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Germany&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+      </pre>
+      <p>If you have an alphabetically list, (for example a phone book) jQuery Mobile automatically adds appropriate dividers by setting the <span class="red">ata-autodividers="true"</span> attribute on the &lt;o&gt; or &lt;ul&gt; element. The data-autodividers="true" attribute creates dividers with uppercased first letters of the item's text.</p>
+      <ul data-role="listview" data-inset="true" data-autodividers="true">
+        <li><a href="#">Adele</a></li>
+        <li><a href="#">Agnes</a></li>
+        <li><a href="#">Billy</a></li>
+        <li><a href="#">Calvin</a></li>        
+      </ul>
+      <pre>
+  &lt;ul data-role=&quot;listview&quot; <span class="red">data-autodividers=&quot;true&quot;</span>&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Adele&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Agnes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Billy&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Calvin&lt;/a&gt;&lt;/li&gt;  
+  &lt;/ul&gt;
+      </pre>
+
+    </article> 
   </div>
-
-  <!-- List POPUP -->
-  <div data-role="popup" id="pop_getStarted_CDN" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-            
-    <p>A CDN (Content Delivery Network) is used to distribute often-used files across the web.<br/>
-       This makes download speed much faster for the user.<p/>
-       
-    <p>As with jQuery core, there is nothing to install on your computer; you just include the following stylesheet (.css) and JavaScript libraries (.js) directly into your HTML page, to get jQuery Mobile to work:<p/>
-
-    <pre>
-  &lt;head&gt;
-    &lt;!-- Include meta tag to ensure proper rendering and touch zooming --&gt;
-    <span class="red">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
-
-    &lt;!-- Include jQuery Mobile stylesheets --&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css&quot;&gt;</span>
-
-    &lt;!-- Include the jQuery library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;</span>
-
-    &lt;!-- Include the jQuery Mobile library --&gt;
-    <span class="red">&lt;script src=&quot;http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-    
-
-
-  </div>
-  <div data-role="popup" id="pop_getStarted_externalLink" data-overlay-theme="b">
-    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-    
-    <p>If you want to host the jQuery Mobile library yourself, you must first download it from jQuerymobile.com. Then add the following code to your page:
-    </p>
-
-    <pre>
-  &lt;head&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    <span class="red">&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery.mobile-1.4.5.css&quot;&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span>
-    <span class="red">&lt;script src=&quot;jquery.mobile-1.4.5.js&quot;&gt;&lt;/script&gt;</span>
-  &lt;/head&gt;
-    </pre>
-
-  </div>
-  <!-- End List POPUP -->
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">
     <a id="btnPrev" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-corner-all ui-shadow">Prev</a>
     <a id="btnNext" href="#" class="ui-btn ui-btn-inline ui-icon-arrow-r ui-btn-icon-notext ui-corner-all ui-shadow">Next</a>
-      
   </div>
+
+
+  <!-- List POPUP -->
+  <div data-role="popup" id="pop_" data-overlay-theme="b">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>            
+    
+  </div>
+  
+
+  <!-- End List POPUP -->
+
 </div>
 
-<link rel="stylesheet" href="assets/getStarted/main.css">
-<script src="assets/getStarted/main.js"></script>
+<link rel="stylesheet" href="assets/listViews/main.css">
+<script src="assets/listViews/main.js"></script>
 
