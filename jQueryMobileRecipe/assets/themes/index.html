@@ -79,10 +79,170 @@
 
   <div id="content_Themes" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Themes</h3>
+      <p>jQuery Mobile provides two different style themes, "a" and "b" - each with different colors for buttons, bars, content blocks, and so on.<br/>
+      To customize the look of your application, use the data-theme attribute, and assign the attribute with a letter:</p>  
+      <pre>
+  &lt;div data-role=&quot;page&quot; <span class="red">data-theme=&quot;a|b&quot;</span>&gt;
+      </pre>
+      <table data-role="table" class="ui-responsive" id="table_myTable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="red">Theme a</span></td>
+            <td>Black text on a light gray background for page content<br/>
+            Black text on a gray background for headers and footers<br/>
+            Black text on a light gray background for buttons<br/>
+            White text on a blue background for active buttons<br/>
+            Blue text on links<br/>
+            Light gray text (placeholder) or black text (value) on a white background for input fields</td>            
+          </tr>
+          <tr>
+            <td><span class="red">Theme b</span></td>
+            <td>White text on a dark gray background for page content<br/>
+            White text on a dark gray background for headers and footers<br/>
+            White text on a charcoal background for buttons<br/>
+            White text on a "cyan" blue background for active buttons<br/>
+            "Cyan" blue text on links<br/>
+            Gray text (placeholder) or white text (value) on a black background for input fields</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>For buttons with class="ui-btn", use the <span class="red">"ui-btn-a|b"</span> class to style the button either gray (default) or black: <a href="#" class="ui-btn ui-btn-inline ui-btn-a">Button</a> <a href="#" class="ui-btn ui-btn-inline ui-btn-b">Button</a></p>
 
     </article>
+
+    <article>
+      <h3>Theming Header and Footer</h3>
+      <pre>
+  &lt;div data-role=&quot;header&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;&lt;/div&gt;
+  &lt;div data-role=&quot;footer&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;&lt;/div&gt;
+      </pre>
+
+      <h3>Theming Header and Footer in Dialogs</h3>
+      <pre>
+  &lt;div data-role=&quot;page&quot; data-dialog=&quot;true&quot; id=&quot;pagetwo&quot;&gt;
+    &lt;div data-role=&quot;header&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;&lt;/div&gt;
+    &lt;div data-role=&quot;footer&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;&lt;/div&gt;
+  &lt;/div&gt;
+      </pre>
+
+      <h3>Theming Icons</h3>
+      <pre>
+  &lt;a href=&quot;#&quot; class=&quot;ui-btn <span class="red">ui-btn-b ui-icon-search ui-btn-icon-notext</span>&quot;&gt;Search&lt;/a&gt;
+      </pre>
+
+      <h3>Theming Popups</h3>
+      <pre>
+  &lt;div data-role=&quot;popup&quot; id=&quot;myPopup&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;  
+      </pre>
+
+      <h3>Theming Navigation Bars</h3>
+      <pre>
+  &lt;div data-role=&quot;footer&quot; data-theme=&quot;b&quot;&gt;
+    &lt;h1&gt;Insert Footer Text Here&lt;/h1&gt;
+    &lt;div data-role=&quot;navbar&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;home&quot; <span class="red">data-theme=&quot;a&quot;</span>&gt;Button 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;arrow-r&quot;&gt;Button 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;arrow-r&quot;&gt;Button 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;search&quot; <span class="red">data-theme=&quot;a&quot;</span>&gt;Button 4&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+      </pre>
+
+      <h3>Theming Panels</h3>
+      <pre>
+  &lt;div data-role=&quot;panel&quot; id=&quot;myPanel&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;
+      </pre>
+
+      <h3>Theming Collapsible Button and Content</h3>
+      <pre>
+  &lt;div data-role=&quot;collapsible&quot; <span class="red">data-theme=&quot;b&quot; data-content-theme=&quot;b&quot;</span>&gt;
+    &lt;h1&gt;Click me - I&apos;m collapsible!&lt;/h1&gt;
+    &lt;p&gt;I&apos;m the expanded content.&lt;/p&gt;
+  &lt;/div&gt;
+      </pre>
+
+      <h3>Theming Lists</h3>
+      <pre>
+  &lt;ul data-role=&quot;listview&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li <span class="red">data-theme=&quot;a&quot;</span>&gt;&lt;a href=&quot;#&quot;&gt;List Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List Item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+      </pre>
+
+      <h3>Theming Split Buttons</h3>
+      <pre>
+  &lt;ul data-role=&quot;listview&quot; <span class="red">data-split-theme=&quot;b&quot;</span>&gt;
+      </pre>
+
+      <h3>Theming Collapsible Lists</h3>
+      <pre>
+  &lt;div data-role=&quot;collapsible&quot; <span class="red">data-theme=&quot;b&quot; data-content-theme=&quot;b&quot;</span>&gt;
+    &lt;ul data-role=&quot;listview&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Agnes&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+      </pre>
+
+      <h3>Theming Forms</h3>
+      <pre>
+  &lt;label for=&quot;name&quot;&gt;Full Name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; name=&quot;text&quot; id=&quot;name&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;
+
+  &lt;label for=&quot;colors&quot;&gt;Choose Favorite Color:&lt;/label&gt;
+  &lt;select id=&quot;colors&quot; name=&quot;colors&quot; <span class="red">data-theme=&quot;b&quot;</span>&gt;
+    &lt;option value=&quot;red&quot;&gt;Red&lt;/option&gt;
+    &lt;option value=&quot;green&quot;&gt;Green&lt;/option&gt;
+    &lt;option value=&quot;blue&quot;&gt;Blue&lt;/option&gt;
+  &lt;/select&gt;
+    </pre>
+
+      <h3>Theming Collapsible Forms</h3>
+      <pre>
+  &lt;fieldset data-role=&quot;collapsible&quot; <span class="red">data-theme=&quot;b&quot; data-content-theme=&quot;b&quot;</span>&gt;
+  &lt;legend&gt;Click me - I&apos;m collapsible!&lt;/legend&gt;
+    </pre>
+    </article>
+
+    <article>
+      <h3>Add New Themes</h3>
+      <p>jQuery Mobile also lets you add new themes to your mobile pages.<br>
+      Add or edit new themes by editing the CSS file (if you have download jQuery Mobile). Just copy a block of styles and rename the classes with a letter name (c-z), and adjust colors and fonts as you like.<br>
+      You can also add new styles by using theme classes in the HTML document - add the class <span class="red">"ui-bar-(a-z)"</span> for toolbars, <span class="red">"ui-body-(a-z)"</span> for the content and <span class="red">ui-page-theme-(a-z)"</span> for the page:</p> 
+      <pre>
+  &lt;style&gt;
+  <span class="red">.ui-bar-f</span> {
+      color: red;
+      background-color: yellow;
+  }
+
+  <span class="red">.ui-body-f</span> {
+      font-weight: bold;
+      color: white;
+      background-color: purple;
+  }
+
+ <span class="red">.ui-page-theme-f</span> {
+      font-weight: bold;
+      background-color: green;
+  }
+  &lt;/style&gt;
+      </pre>
+      <p>he jQuery Mobile team has created a tool, which helps you to create your own custom theme: The <span class="red"><a href="http://themeroller.jquerymobile.com/">ThemeRoller</a></span>.</p>
+      
+    </article>
+    
 
   </div>
 

@@ -79,10 +79,52 @@
 
   <div id="content_FormSlider" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
-
+      <h3>jQuery Mobile Slider Controls</h3>
+      <p>A slider allows you to select a value from a range of numbers:</p>
+      <form method="post" action="demoform.asp">
+        <label for="points">Points:</label>
+        <input type="range" name="points" id="points" value="50" step="2" min="0" max="100">
+      </form>
+      <p>To create a slider, use <span class="red">&lt;input type="range"&gt;</span>:</p>
+      <pre>
+  &lt;form method=&quot;post&quot; action=&quot;demoform.asp&quot;&gt;
+    &lt;label for=&quot;points&quot;&gt;Points:&lt;/label&gt;
+    <span class="red">&lt;input type=&quot;range&quot; name=&quot;points&quot; id=&quot;points&quot; value=&quot;50&quot; step=&quot;2&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;</span>
+  &lt;/form&gt;
+      </pre>
+      <p>If you want to show the value on the slider button, add <span class="red">data-show-value="true"</span>:<input type="range" name="points" id="points2" value="50" step="2" min="0" max="100" data-show-value="true"></p>
+      <pre>
+  &lt;input type=&quot;range&quot; <span class="red">data-show-value=&quot;true&quot;</span>&gt;
+      </pre>
+      <p>If you want to the value to pop up on your screen like a tooltip (as you slide), add <span class="red">data-popup-enabled="true"</span>:<input type="range" name="points" id="points2" value="50" step="2" min="0" max="100" data-popup-enabled="true"></p>
+      <pre>
+  &lt;input type=&quot;range&quot; <span class="red">data-popup-enabled=&quot;true&quot;</span>&gt;
+      </pre>
+      <p>If you want to highlight the track up to the slider value, add <span class="red">data-highlight="true"</span>:<input type="range" name="points" id="points2" value="50" step="2" min="0" max="100" data-highlight="true"></p>
+      <pre>
+  &lt;input type=&quot;range&quot; <span class="red">data-highlight=&quot;true&quot;</span>&gt;
+      </pre>
     </article>
+
+     <article>
+      <h3>Flip Toggle Switch</h3>
+      <p>A flip switch is often used for on/off or true/false buttons: <input type="checkbox" data-role="flipswitch" name="switch" id="switch"><br/>
+      To create a flip switch, use <span class="red">&lt;input type="checkbox"&gt;</span> and specify a <span class="red">data-role="flipswitch"</span>.
+      </p>
+      <pre>
+  &lt;input <span class="red">type=&quot;checkbox&quot; data-role=&quot;flipswitch&quot;</span> name=&quot;switch&quot; id=&quot;switch&quot;&gt;
+      </pre>
+      <p>By default, the text on the flip switch is "On" and "Off". Use the <span class="red">data-on-text</span> and <span class="red">data-off-text</span> attributes to change this: <input type="checkbox" data-role="flipswitch" name="switch" id="switch" data-on-text="True" data-off-text="False"></p>
+      <pre>
+  &lt;input type=&quot;checkbox&quot; data-role=&quot;flipswitch&quot; name=&quot;switch&quot; id=&quot;switch&quot; 
+  <span class="red">data-on-text=&quot;True&quot; data-off-text=&quot;False&quot;</span>&gt;
+      </pre>
+      <p>Use the <span class="red">"checked"</span> attribute to set one of the options to be pre-selected: <input type="checkbox" data-role="flipswitch" name="switch" id="switch" checked></p>
+      <pre>
+  &lt;input type=&quot;checkbox&quot; data-role=&quot;flipswitch&quot; name=&quot;switch&quot; id=&quot;switch&quot; <span class="red">checked</span>&gt;
+      </pre>
+    </article>
+
 
   </div>
 

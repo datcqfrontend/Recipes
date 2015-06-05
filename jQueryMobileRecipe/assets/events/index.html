@@ -79,9 +79,39 @@
 
   <div id="content_Events" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Events</h3>
+      <p>You can use any standard jQuery events in jQuery Mobile.<br>
+      In addition, jQuery Mobile also offers several events that are tailor-made for mobile-browsing:
+      <ul>
+        <li>Touch events - triggers when a user touches the screen (tap and swipe)</li>
+        <li>Scroll events - triggers when a user scrolls up and down</li>
+        <li>Orientation events - triggers when the device rotates vertically or horizontally</li>
+        <li>Page events - triggers when a page is shown, hidden, created, loaded and/or unloaded</li>
+      </ul>
+      For a complete reference of all the jQuery Mobile events, please go to our <a href="#pop_events_listevents" data-rel="popup" style="text-decoration:none; padding:0px; margin:0px;" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slidedown" data-position-to="window"><span style=" color:blue; font-weight:bold;">jQuery Mobile Events Reference</span></a>.</p>
 
+    </article>
+
+    <article>
+      <h3>Initializing jQuery Mobile Events</h3>
+      <p>In jQuery, you have learned to use the document ready event to prevent any jQuery code from running before the document is finished loading (is ready):</p>
+      <pre>
+  &lt;script&gt;
+  $(document).ready(function(){
+     // jQuery methods go here...
+  });
+  &lt;/script&gt;
+      </pre>
+      <p>However, in jQuery Mobile, we use the pagecreate event, which occurs when the page has been been created in the DOM, but before enhancement is complete.<br>
+      The second parameter ("#pageone") points to the id of the page to specify the event(s) for:</p>
+      <pre>
+  &lt;script&gt;
+  <span class="red">$(document).on(&quot;pagecreate&quot;,&quot;#pageone&quot;,function(){</span>
+     // jQuery events go here...
+  });
+  &lt;/script&gt;
+      </pre>
+      <p>The jQuery on() method is used to attach event handlers.</p>
     </article>
 
   </div>
@@ -93,9 +123,57 @@
 
 
   <!-- List POPUP -->
-  <div data-role="popup" id="pop_" data-overlay-theme="b">
+  <div data-role="popup" id="pop_events_listevents" data-overlay-theme="b">
     <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>            
     
+    <table data-role="table" class="ui-responsive" id="table_myTable">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class='red'>hashchange</span></td><td>Enables bookmarkable #hash history</td></tr>
+          <tr><td><span class='red'>navigate </span></td><td>A wrapper event for both hashchange and popstate</td></tr>
+          <tr><td><span class='red'>orientationchange</span></td><td>Triggered when the user rotates the mobile device vertically or horizontally</td></tr>
+          <tr><td><span class='red'>pagebeforechange</span></td><td>Triggered twice during the page change cycle: First prior to any page loading or transition and next after page loading completes successfully, but before the browser history has been modified by the navigation process.</td></tr>
+          <tr><td><span class='red'>pagebeforecreate</span></td><td>Triggered when the page is about to be initialized, but before enhancement has begun</td></tr>
+          <tr><td><span class='red'>pagebeforehide</span></td><td>Triggered on the "from" page, before transition animation starts</td></tr>
+          <tr><td><span class='red'>pagebeforeload</span></td><td>Deprecated in version 1.4.0. Usepagecontainerbeforeload instead. Triggered before any load request is made</td></tr>
+          <tr><td><span class='red'>pagebeforeshow</span></td><td>Triggered on the "to" page, before transition animation starts</td></tr>
+          <tr><td><span class='red'>pagechange</span></td><td>Triggered after the changePage() request has finished loading the page into the DOM and all page transition animations have completed</td></tr>
+          <tr><td><span class='red'>pagechangefailed</span></td><td>Triggered when the changePage() request fails to load the page. Callbacks for this particular event will be passed a data object as the 2nd arg</td></tr>
+          <tr><td><span class='red'>pagecontainerbeforeload</span></td><td>Triggered before any load request is made</td></tr>
+          <tr><td><span class='red'>pagecontainerload</span></td><td>Triggered after the page is successfully loaded and inserted into the DOM</td></tr>
+          <tr><td><span class='red'>pagecontainerloadfailed</span></td><td>Triggered if the page load request fails</td></tr>
+          <tr><td><span class='red'>pagecreate</span></td><td>Triggered when the page has been created, but before enhancement is complete</td></tr>
+          <tr><td><span class='red'>pagehide</span></td><td>Triggered on the "from" page, after transition animation completes</td></tr>
+          <tr><td><span class='red'>pageinit</span></td><td>Deprecated in version 1.4.0. Use pagecreateinstead. Triggered when the page has been initialized and enhancement is complete</td></tr>
+          <tr><td><span class='red'>pageload</span></td><td>Deprecated in version 1.4.0. Use pagecontainerloadinstead. Triggered after the page is successfully loaded and inserted into the DOM</td></tr>
+          <tr><td><span class='red'>pageloadfailed</span></td><td>Deprecated in version 1.4.0. Usepagecontainerloadfailed instead. Triggered if the page load request fails</td></tr>
+          <tr><td><span class='red'>pageremove</span></td><td>Triggered just before the framework attempts to remove an external page from the DOM</td></tr>
+          <tr><td><span class='red'>pageshow</span></td><td>Triggered on the "to" page, after transition animation completes</td></tr>
+          <tr><td><span class='red'>scrollstart</span></td><td>Triggered when the user starts to scroll the page</td></tr>
+          <tr><td><span class='red'>scrollstop</span></td><td>Triggered when the user stops to scroll the page</td></tr>
+          <tr><td><span class='red'>swipe</span></td><td>Triggered when the user swipes over an element horizontally</td></tr>
+          <tr><td><span class='red'>swipeleft</span></td><td>Triggered when the user swipes over an element in the left direction by more than 30px</td></tr>
+          <tr><td><span class='red'>swiperight</span></td><td>Triggered when the user swipes over an element in the right direction by more than 30px</td></tr>
+          <tr><td><span class='red'>tap</span></td><td>Triggered when the user taps on an element</td></tr>
+          <tr><td><span class='red'>taphold</span></td><td>Triggerd when the user taps on an element and hold for one second</td></tr>
+          <tr><td><span class='red'>throttledresize</span></td><td>Enables bookmarkable #hash history</td></tr>
+          <tr><td><span class='red'>updatelayout</span></td><td>Triggered by jQuery Mobile components that dynamically show/hide content</td></tr>
+          <tr><td><span class='red'>vclick</span></td><td>Virtualized click event handler</td></tr>
+          <tr><td><span class='red'>vmousecancel</span></td><td>Virtualized mousecancel handler</td></tr>
+          <tr><td><span class='red'>vmousedown</span></td><td>Virtualized mousedown event handler</td></tr>
+          <tr><td><span class='red'>vmousemove</span></td><td>Virtualized mousemove event handler</td></tr>
+          <tr><td><span class='red'>vmouseout</span></td><td>Virtualized mouseout event handler</td></tr>
+          <tr><td><span class='red'>vmouseover</span></td><td>Virtualized mouseover event handler</td></tr>
+          <tr><td><span class='red'>vmouseup</span></td><td>Virtualized mouseup event handler</td></tr>
+          
+        </tbody>
+      </table>
   </div>
   
 
