@@ -79,9 +79,33 @@
 
   <div id="content_Orientation" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
-
+      <h3>jQuery Mobile orientationchange Event</h3>
+      <p>The orientationchange event is triggered when the user rotates the mobile device vertically or horizontally. To use the orientationchange event, attach it to the window object:</p>
+      <pre>
+  <span class="red">$(window).on("orientationchange",function(){</span>
+    alert("The orientation has changed!");
+  });
+      </pre>
+      <p>The callback function can have one argument, the event object, which returns the orientation of the mobile device: "portrait" (the device is held in a vertical position) or "landscape" (the device is held in a horizontal position):</p>
+      <pre>
+  <span class="red">$(window).on("orientationchange",function(event){</span>
+    alert("Orientation is: " + event.orientation);
+  });
+      </pre>
+      <p>Because the orientationchange event is bound to the window object, we can use the window.orientation property to, for example, set different styles to distinguish between portrait and landscape views:</p>
+      <pre>
+  <span class="red">$(window).on("orientationchange",function(){</span>
+    if(window.orientation == 0) // Portrait
+    {
+      $("p").css({"background-color":"yellow","font-size":"300%"});
+    }
+    else // Landscape
+    {
+      $("p").css({"background-color":"pink","font-size":"200%"});
+    }
+  });
+      </pre>
+      <p>The window.orientation property returns 0 for portrait and 90 or -90 for landscape view.</p> 
     </article>
 
   </div>

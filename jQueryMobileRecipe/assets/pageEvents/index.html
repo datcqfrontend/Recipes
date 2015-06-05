@@ -79,11 +79,142 @@
 
   <div id="content_PageEvents" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Page Events</h3>
+      <p>Events for handling pages in jQuery Mobile are divided into four categories:
+        <ul>
+          <li>Page Initialization - Before page creation, and when the page has been created</li>
+          <li>Page Load/Unload - When an external page is loading, unloading or encounters a failure</li>
+          <li>Page Transition - Before and after page transitions</li>
+          <li>Page Change - When pages are changed to or from, or encounters a failure</li>
+        </ul>
+      </p>
 
     </article>
 
+    <article>
+      <h3>jQuery Mobile Initialization Events</h3>
+      <p>When a typical page in jQuery Mobile is initialized, it goes through two stages:
+        <ul>
+          <li>Before page creation</li>
+          <li>Page creation</li>
+        </ul>
+      Each stage has an event that can be used to insert or manipulate code before or when jQuery Mobile enhances the page.</p>
+      <table data-role="table" class="ui-responsive" id="table_myTable">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class='red'>pagebeforecreate</span></td>
+            <td>Triggered when the page is about to be initialized, and before jQuery Mobile has started enhancing the page</td>
+          </tr>
+          <tr>
+            <td><span class='red'>pagecreate</span></td>
+            <td>Triggered when the page has been created, but before enhancement is complete</td>
+          </tr>          
+        </tbody>
+      </table>
+      <p>The example below demonstrates when each event fires when a page is created in jQuery Mobile:</p>
+      <pre>
+  <span class="red">$(document).on("pagebeforecreate",function(event){</span>
+    alert("pagebeforecreate event fired!");
+  }); 
+  <span class="red">$(document).on("pagecreate",function(event){</span>
+    alert("pagecreate event fired!");
+  });
+      </pre>
+
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Load Events</h3>
+      <p>Page load events are for external pages. Whenever an external page is loaded into the DOM, 2 events fire. The first is pagecontainerbeforeload, and the second will either be pagecontainerload (success) or pagecontainerloadfailed (fail).<br>
+      These events are explained in the table below:</p>  
+      <table data-role="table" class="ui-responsive" id="table_myTable">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class='red'>pagecontainerbeforeload</span></td>
+            <td>Triggered before any page load request is made</td>
+          </tr>
+          <tr>
+            <td><span class='red'>pagecontainerload</span></td>
+            <td>Triggered after the page has been successfully loaded and inserted into the DOM</td>
+          </tr>
+          <tr>
+            <td><span class='red'>pagecontainerloadfailed</span></td>
+            <td>Triggered if the page load request fails. By default, it will show the "Error Loading Page" message</td>
+          </tr>            
+        </tbody>
+      </table>
+      <p>The example below demonstrates how the pagecontainerload and pagecontainerloadfailed events work:</p>
+      <pre>
+  <span class="red">$(document).on("pagecontainerload",function(event,data){</span>
+    alert("pageload event fired!\nURL: " + data.url);
+  });
+  <span class="red">$(document).on("pagecontainerloadfailed",function(event,data){</span>
+    alert("Sorry, requested page does not exist.");
+  });
+      </pre>
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Transition Events</h3>
+      <p>We can also use events for when we transition from one page to the next.<br>
+      Page transitions involve two pages: a "from" page and a "to" page - these transitions animate the change from the current active page (fromPage) to a new page (toPage).</p>   
+      <table data-role="table" class="ui-responsive" id="table_myTable">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class='red'>pagebeforeshow</span></td>
+            <td>Triggered on the "to" page, before the transition animation starts</td>
+          </tr>
+          <tr>
+            <td><span class='red'>pageshow</span></td>
+            <td>Triggered on the "to" page, after the transition animation completes</td>
+          </tr>
+          <tr>
+            <td><span class='red'>pagebeforehide</span></td>
+            <td>Triggered on the "from" page, before the transition animation starts</td>
+          </tr> 
+          <tr>
+            <td><span class='red'>pagehide</span></td>
+            <td>Triggered on the "from" page, after the transition animation completes</td>
+          </tr>            
+        </tbody>
+      </table>
+      <p>The example below demonstrates how the transition events work:</p> 
+      <pre>
+  <span class="red">$(document).on("pagebeforeshow","#pagetwo",function(){</span> // When entering pagetwo
+    alert("pagetwo is about to be shown");
+  });
+  <span class="red">$(document).on("pageshow","#pagetwo",function(){</span> // When entering pagetwo
+    alert("pagetwo is now shown");
+  });
+  <span class="red">$(document).on("pagebeforehide","#pagetwo",function(){</span> // When leaving pagetwo
+    alert("pagetwo is about to be hidden");
+  });
+  <span class="red">$(document).on("pagehide","#pagetwo",function(){</span> // When leaving pagetwo
+    alert("pagetwo is now hidden");
+  });
+      </pre>
+    </article>
   </div>
 
   <div data-role="footer" role="banner" class="ui-footer ui-bar-inherit" data-position="fixed" style="text-align:center;">

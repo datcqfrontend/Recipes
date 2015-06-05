@@ -79,8 +79,24 @@
 
   <div id="content_Scroll" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Scrollstart</h3>
+      <p>The scrollstart event is triggered when the user starts to scroll the page:</p>
+      <pre>
+  <span class="red">$(document).on("scrollstart",function(){</span>
+    alert("Started scrolling!");
+  });   
+      </pre>
+      <p>iOS devices freeze DOM manipulation during scrolls, which means that it is not possible to change something when the user scrolls. However, the jQuery team are working on a solution for this.</p>
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Scrollstop</h3>
+      <p>The scrollstop event is triggered when the user stops to scroll the page:</p>
+      <pre>
+  <span class="red">$(document).on("scrollstop",function(){</span>
+    alert("Stopped  scrolling!");
+  });   
+      </pre>
 
     </article>
 

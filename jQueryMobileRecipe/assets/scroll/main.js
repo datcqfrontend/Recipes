@@ -6,7 +6,6 @@ $(document).on("pagebeforeshow","#scroll",function(){ // When entering pagetwo
 
   $('#btnPrev', slide).attr('href','#touch');
   $('#btnNext', slide).attr('href','#orientation');
-
 });
 $(document).on("pageshow","#scroll",function(){ // When entering pagetwo
  //alert("Home is now shown");
@@ -17,3 +16,4 @@ $(document).on("pagebeforehide","#scroll",function(){ // When leaving pagetwo
 $(document).on("pagehide","#scroll",function(){ // When leaving pagetwo
   //alert("Home is now hidden");
 });
+

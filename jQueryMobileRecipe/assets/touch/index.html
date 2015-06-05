@@ -79,8 +79,57 @@
 
   <div id="content_Touch" data-role="main" class="ui-content">
     <article>
-      <h3></h3>
-      
+      <h3>jQuery Mobile Tap</h3>
+      <p>The tap event is triggered when the user taps on an element.<br>
+      The following example says: When a tap event fires on a &lt;p&gt; element; hide the current &lt;p&gt; element:</p>    
+      <pre>
+  <span class="red">$("p").on("tap",function(){</span>
+    $(this).hide();
+  });
+      </pre>
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Taphold</h3>
+      <p>The taphold event is triggered when the user taps on an element and hold for one second:</p>
+      <pre>
+  <span class="red">$("p").on("taphold",function(){</span>
+    $(this).hide();
+  });   
+      </pre>
+
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Swipe</h3>
+      <p>The swipe event is triggered when the user swipes over an element horizontally by more than 30px:</p>
+      <pre>
+  <span class="red">$("p").on("swipe",function(){</span>
+    $("span").text("Swipe detected!");
+  });   
+      </pre>
+
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Swipeleft</h3>
+      <p>The swipeleft event is triggered when the user swipes over an element in the left direction by more than 30px:</p>
+      <pre>
+  <span class="red">$("p").on("swipeleft",function(){</span>
+    alert("You swiped left!");
+  });  
+      </pre>
+
+    </article>
+
+    <article>
+      <h3>jQuery Mobile Swiperight</h3>
+      <p>The swiperight event is triggered when the user drags over an element in the right direction by more than 30px:</p>
+      <pre>
+  <span class="red">$("p").on("swiperight",function(){</span>
+    alert("You swiped right!");
+  });  
+      </pre>
 
     </article>
 
