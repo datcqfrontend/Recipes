@@ -1,4 +1,8 @@
 /* PANEL MENU ACTIVE */
+pre{
+	overflow-x: scroll;
+}
+
 .collapsible_active > a {
 	background-color: #38c !important;
   	border-color: #38c !important;
