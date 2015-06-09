@@ -1,5 +1,8 @@
 $(document).on("pagebeforeshow","#home",function(){ // When entering pagetwo
   //alert("Home is about to be shown");
+  var slide = '#home';
+  anddev.setIndex(slide.replace('#',''));
+  
 });
 $(document).on("pageshow","#home",function(){ // When entering pagetwo
  //alert("Home is now shown");

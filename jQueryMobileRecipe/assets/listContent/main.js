@@ -1,7 +1,7 @@
 $(document).on("pagebeforeshow","#listContent",function(){ // When entering pagetwo
   //alert("Home is about to be shown");
   var slide = '#listContent';
-
+  anddev.setIndex(slide.replace('#',''));
   //$('h3.active a', slide).addClass('ui-btn-active');
 
   $('#btnPrev', slide).attr('href','#listViews');

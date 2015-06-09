@@ -1,6 +1,8 @@
 $(document).on("pagebeforeshow","#pages",function(){ // When entering pagetwo
   //alert("Home is about to be shown");
    var slide = '#pages';
+   anddev.setIndex(slide.replace('#',''));
+
   $('#btnPrev', slide).attr('href','#getStarted');
   $('#btnNext', slide).attr('href','#transitions');
 

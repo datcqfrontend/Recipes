@@ -1,6 +1,14 @@
+#container {
+	width: 100%;
+	height: 100%;
+}
+
 /* PANEL MENU ACTIVE */
 pre{
+	display: block;
 	overflow-x: scroll;
+	background-color: #dedede;
+	-webkit-overflow-scrolling: touch;
 }
 
 .collapsible_active > a {

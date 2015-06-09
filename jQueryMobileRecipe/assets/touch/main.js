@@ -1,7 +1,7 @@
 $(document).on("pagebeforeshow","#touch",function(){ // When entering pagetwo
   //alert("Home is about to be shown");
   var slide = '#touch';
-
+  anddev.setIndex(slide.replace('#',''));
   //$('h3.active a', slide).addClass('ui-btn-active');
 
   $('#btnPrev', slide).attr('href','#events');

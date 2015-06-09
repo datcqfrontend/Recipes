@@ -1,7 +1,7 @@
 $(document).on("pagebeforeshow","#themes",function(){ // When entering pagetwo
   //alert("Home is about to be shown");
   var slide = '#themes';
-
+  anddev.setIndex(slide.replace('#',''));
   //$('h3.active a', slide).addClass('ui-btn-active');
 
   $('#btnPrev', slide).attr('href','#formSliders');
