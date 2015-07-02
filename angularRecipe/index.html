@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-  <!-- Include meta tag to ensure proper rendering and touch zooming -->
-  <title>Angular Recipes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<title>Angular Recipes</title>
+	<meta charset="utf-8">
+	<meta name="description" content="DatChau Inc.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Include the jQuery library -->
-  <script src="framework/jquery/jquery-1.11.3.min.js"></script>
-  
-  
-
-  <link rel="stylesheet" href="css/global.css">
+	<!-- Include css bootstrap -->	
+	<link rel="stylesheet" href="component/bootstrap-3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="component/bootstrap-3.1.1/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="component/bootstrap-3.1.1/css/font-awesome.min.css">
+		
+	<link rel="stylesheet" href="css/global.css">
 </head>
-<body>
-
-<div id="container" class="container"></div>
-
-
-<!--script src="js/main.js"></script-->
-
+<body ng-app="webApp">
+	<div ng-include='"templates/header.html"'></div>
+	<div ng-view></div>
+	<div ng-include='"templates/footer.html"'></div>
+	
+	
+	
+	<!-- Include the jQuery library -->
+	<script src="component/jquery-2.1.1/jquery.min.js"></script>
+	
+	<!-- Include the Bootstrap library -->
+	<script src="component/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+		
+	<!-- Include angular library -->
+	<script src="component/angular-1.4.1/angular.min.js"></script>  
+	<script src="component/angular-1.4.1/angular-route.min.js"></script>  
+	
+	<script src="js/app.js"></script> 
 </body>
 </html>
