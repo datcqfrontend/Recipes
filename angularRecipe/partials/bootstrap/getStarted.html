@@ -1,25 +1,122 @@
-<div class="section">
+<div id="bdGetStarted" class="section">
 
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Bootstrap Get Started</h2>                
+            <div class="col-lg-12">
+                <h1>Bootstrap Get Started</h2>                
+                <ol class="breadcrumb">
+                    <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
+                    <li class="active">Get Started</li>
+                </ol>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>What is Bootstrap? <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modalHistoryBS">History</button></h3> </div>
+                  <div class="panel-body">  
+                    <ul>
+                        <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+                        <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
+                        <li>Bootstrap also gives you the ability to easily create <a href="" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="What is Responsive Web Design?" data-content="Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.">responsive designs</a></li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Modal -->
+                <div id="modalHistoryBS" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Bootstrap History</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, and released as an open source product in August 2011 on GitHub.<br>
+                        <b>In June 2014</b> Bootstrap was the No.1 project on GitHub!</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
                 
             </div>
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h2>What is Bootstrap?</h2></div>
+                  <div class="panel-heading"><h3>Why Use Bootstrap?</h3></div>
                   <div class="panel-body">  
+                    <p>Advantages of Bootstrap:</p>
                     <ul>
-                        <li>Bootstrap is a free front-end framework for faster and easier web development</li>
-                        <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
-                        <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+                        <li><b>Easy to use:</b> Anybody with just basic knowledge of HTML and CSS can start using Bootstrap</li>
+                        <li><b>Responsive features:</b> Bootstrap's responsive CSS adjusts to phones, tablets, and desktops</li>
+                        <li><b>Mobile-first approach:</b> In Bootstrap 3, mobile-first styles are part of the core framework</li>
+                        <li><b>Browser compatibility:</b> Bootstrap is compatible with all modern browsers (Chrome, Firefox, Internet Explorer, Safari, and Opera)</li>
                     </ul>
+                  </div>
+                </div>             
+                
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Where to Get Bootstrap?</h3></div>
+                  <div class="panel-body">  
+                    <p>There are two ways to start using Bootstrap on your own web site. You can:</p>
+                    <ul>
+                        <li><a href="" class="btn" data-toggle="modal" data-target="#modalDownloadBootstrap">Download Bootstrap</a> from getbootstrap.com</li>
+                        <li>Include Bootstrap from a <a href="" class="btn" data-toggle="modal" data-target="#modalCDNBootstrap">CDN</a></li>                       
+                    </ul>                    
+                   
+                  </div>
+                </div>             
+                
+                <!-- Modal -->
+                <div id="modalDownloadBootstrap" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Downloading Bootstrap</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>If you want to download and host Bootstrap yourself, go to <a href="http://getbootstrap.com/getting-started/">getbootstrap.com</a>, and follow the instructions there.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
 
                   </div>
                 </div>
+                <div id="modalCDNBootstrap" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Bootstrap CDN</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>If you don't want to download and host Bootstrap yourself, you can include it from a CDN (Content Delivery Network).<br>
+                        MaxCDN provide CDN support for Bootstrap's CSS and JavaScript. Also include jQuery:</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
             </div>
 
         </div>
@@ -31,4 +128,8 @@
 </div>
 <!-- /.section -->
 
-
+<script>
+    $(document).ready(function(){
+        $('#bdGetStarted [data-toggle="popover"]').popover(); 
+    });
+</script>
