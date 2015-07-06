@@ -124,7 +124,7 @@ body {
 
 /* Footer Styles */
 footer {
-    margin: 50px 0;
+    margin: 10px 0;
 }
 
 /* Responsive Styles */
@@ -147,4 +147,25 @@ footer {
 
 .bold {
      font-weight: bold;
+}
+
+.code-span {
+    font-weight: bold;
+    color: red;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.table.grid td {
+    border: 4px solid blueviolet;
+}
+.test [class*="col-"] {
+  padding: 15px;
+  background-color: #f1f1f1;
+  border: 1px solid #D8D8D8;
 }

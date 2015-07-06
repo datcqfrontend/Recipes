@@ -1,36 +1,193 @@
-<div class="section">
+<div  id="bsGridBasic" class="section">
 
     <div class="container">
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Bootstrap 3 Tutorial</h2>                
-            </div>
-            <div class="col-lg-12">                
-                <p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.<br>Bootstrap is completely free to download and use!</p>
-                <hr>
-            </div>
-            
-            <div class="col-sm-4">
-                <h3>Get Started</h3>
-                <p>What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?</p> 
-                <a href="#bootstrap/getStarted" class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a> 
+         <div class="row">
+            <div class="col-lg-12">
+                <h1>Bootstrap Get Started</h2>                
+                <ol class="breadcrumb">
+                    <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
+                    <li class="active">Grid Basic</li>
+                </ol>
             </div>
 
-            <div class="col-sm-4">
-                <h3>Grid Basic</h3>
-                <p>What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?</p>
-                <a href="#bootstrap/gridBasic" class="btn btn-link btn-sm pull-right">More <i class="fa fa-angle-right"></i></a>  
+        
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Grid System</h3> </div>
+                  <div class="panel-body">  
+                    <p>Bootstrap's grid system allows up to 12 columns across the page.
+                    <br>If you do not want to use all 12 column individually, you can group the columns together to create wider columns:</p>
+                    <div class="table-responsive">
+                        <table class="table grid">
+                        <tbody><tr>
+                          <td>span 1</td>
+                          <td>span 1</td>       
+                          <td>span 1</td>
+                          <td>span 1</td>
+                          <td>span 1</td>       
+                          <td>span 1</td>
+                          <td>span 1</td>
+                          <td>span 1</td>       
+                          <td>span 1</td>
+                          <td>span 1</td>
+                          <td>span 1</td>       
+                          <td>span 1</td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">&nbsp;span 4</td>
+                          <td colspan="4">&nbsp;span 4</td>     
+                          <td colspan="4">&nbsp;span 4</td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">span 4</td>
+                          <td colspan="8">span 8</td>       
+                        </tr>
+                        <tr>
+                          <td colspan="6">span 6</td>
+                          <td colspan="6">span 6</td>       
+                        </tr>
+                        <tr>
+                          <td colspan="12">span 12</td>
+                        </tr>
+                        </tbody></table>
+                    </div>
+                    <p>Bootstrap's grid system is responsive, and the columns will re-arrange automatically depending on the screen size.</p>
+                  </div>
+                </div>
+            </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Grid Classes</h3> </div>
+                  <div class="panel-body">  
+                    <p>The Bootstrap grid system has four classes:</p>
+                    <ul>
+                        <li>xs (for phones)</li>
+                        <li>sm (for tablets)</li>
+                        <li>md (for desktops)</li>
+                        <li>lg (for larger desktops)</li>
+                    </ul>
+                    <p>The classes above can be combined to create more dynamic and flexible layouts.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Basic Structure of a Bootstrap Grid</h3> </div>
+                  <div class="panel-body">  
+                    <p>The following is a basic structure of a Bootstrap grid:</p>
+                    <p class="code-body">
+                       &lt;div class=&quot;row&quot;&gt; 
+                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt; 
+                       <br>&lt;div class=&quot;row&quot;&gt; 
+                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt; 
+                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt; 
+                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt; 
+                       <br>&lt;/div&gt; 
+                       <br>&lt;div class=&quot;row&quot;&gt; 
+                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp... 
+                       <br>&lt;/div&gt;
+                    </p>
+
+                    <p>First; create a row (<span class="code-span">&lt;div class="row"&gt;</span>). Then, add the desired number of columns (tags with appropriate <span class="code-span">.col-*-*</span> classes). Note that numbers in <span class="code-span">.col-*-*</span> should always add up to 12 for each row.</p>
+
+                    <p>Some basic bootstrap grid layout</p>
+                    <ul>
+                        <li><a href="" class="btn" data-toggle="modal" data-target="#modalGridBasic1">Three Equal Columns</a></li>
+                        <li><a href="" class="btn" data-toggle="modal" data-target="#modalGridBasic2">Two Unequal Columns</a></li>
+                    </ul>
+
+
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="modalGridBasic1" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title bold">Three Equal Columns</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container-fluid" style="margin:8px 0 15px 0;">
+                            <div class="row test">
+                              <div class="col-sm-4">.col-sm-4</div>
+                              <div class="col-sm-4">.col-sm-4</div>
+                              <div class="col-sm-4">.col-sm-4</div>
+                            </div>
+                        </div>
+
+                        <p>The following example shows how to get a three equal-width columns starting at tablets and scaling to large desktops. On mobile phones, the columns will automatically stack:</p>
+
+                        <p class="code-body">                        
+                           &lt;div class=&quot;row&quot;&gt; 
+                           <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt; 
+                           <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt; 
+                           <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt; 
+                           <br>&lt;/div&gt;                           
+                        </p>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="modalGridBasic2" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title bold">Two Unequal Columns</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container-fluid" style="margin:8px 0 15px 0;">
+                            <div class="row test">
+                              <div class="col-sm-4">.col-sm-4</div>
+                              <div class="col-sm-8">.col-sm-8</div>
+                            </div>
+                        </div>
+                        
+                        <p>The following example shows how to get two various-width columns starting at tablets and scaling to large desktops:</p>
+
+                        <p class="code-body">                        
+                           &lt;div class=&quot;row&quot;&gt; 
+                           <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt; 
+                           <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-8&quot;&gt;.col-sm-8&lt;/div&gt;                            
+                           <br>&lt;/div&gt;                           
+                        </p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
             </div>
 
 
         </div>
-        <!-- /.row -->
-
     </div>
     <!-- /.container -->
 
 </div>
 <!-- /.section -->
 
-
+<script>
+    $(document).ready(function(){
+        $('#bsGridBasic [data-toggle="popover"]').popover(); 
+    });
+</script>
