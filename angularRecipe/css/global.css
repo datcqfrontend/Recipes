@@ -140,5 +140,11 @@ footer {
 
 .code-body {
     background-color: #ebebeb;
+    color: blueviolet;
     overflow: scroll;
+    padding: 10px;
+}
+
+.bold {
+     font-weight: bold;
 }
