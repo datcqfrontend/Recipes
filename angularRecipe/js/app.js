@@ -24,6 +24,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 		.when("/bootstrap/getStarted", {templateUrl: "partials/bootstrap/getStarted.html", controller: "PageCtrl"})
 		.when("/bootstrap/gridBasic", {templateUrl: "partials/bootstrap/gridBasic.html", controller: "PageCtrl"})
 		.when("/bootstrap/typography", {templateUrl: "partials/bootstrap/typography.html", controller: "PageCtrl"})
+		.when("/bootstrap/tableBasic", {templateUrl: "partials/bootstrap/tableBasic.html", controller: "PageCtrl"})
 
 		/*
 		
