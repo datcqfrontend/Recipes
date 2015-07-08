@@ -24,8 +24,10 @@ app.config(['$routeProvider', function ($routeProvider) {
 		.when("/bootstrap/getStarted", {templateUrl: "partials/bootstrap/getStarted.html", controller: "PageCtrl"})
 		.when("/bootstrap/gridBasic", {templateUrl: "partials/bootstrap/gridBasic.html", controller: "PageCtrl"})
 		.when("/bootstrap/typography", {templateUrl: "partials/bootstrap/typography.html", controller: "PageCtrl"})
+		.when("/bootstrap/glyphicons", {templateUrl: "partials/bootstrap/glyphicons.html", controller: "PageCtrl"})
+		.when("/bootstrap/badgesLabel", {templateUrl: "partials/bootstrap/badgesLabel.html", controller: "PageCtrl"})
 		.when("/bootstrap/tableBasic", {templateUrl: "partials/bootstrap/tableBasic.html", controller: "PageCtrl"})
-
+		
 		/*
 		
 		
@@ -48,17 +50,19 @@ app.config(['$routeProvider', function ($routeProvider) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function (/* $scope, $location, $http */) {
-  /*console.log("Page Controller reporting for duty.");
+	//Active popup modal
+ 	$('[data-toggle="popover"]').popover(); 
 
-  // Activates the Carousel
-  $('.carousel').carousel({
-    interval: 5000
-  });
+ 	/*console.log("Page Controller reporting for duty.");
+	  // Activates the Carousel
+	  $('.carousel').carousel({
+	    interval: 5000
+	  });
 
-  // Activates Tooltips for Social Links
-  $('.tooltip-social').tooltip({
-    selector: "a[data-toggle=tooltip]"
-  })*/
+	  // Activates Tooltips for Social Links
+	  $('.tooltip-social').tooltip({
+	    selector: "a[data-toggle=tooltip]"
+	  })*/
 });
 
 /**
