@@ -13,26 +13,135 @@
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Button Styles</h3> </div>
                   <div class="panel-body">  
-                    
+                    <p>Bootstrap provides seven styles of buttons:
+                      <br><button type="button" class="btn btn-default">Default</button>
+                      <button type="button" class="btn btn-primary">Primary</button>
+                      <button type="button" class="btn btn-success">Success</button>
+                      <button type="button" class="btn btn-info">Info</button>
+                      <button type="button" class="btn btn-warning">Warning</button>
+                      <button type="button" class="btn btn-danger">Danger</button>
+                      <button type="button" class="btn btn-link">Link</button>
                       
+                      <br>To achieve the button styles above, Bootstrap has the following classes:
+                      <ul>
+                        <li><span class="code-span">.btn-default</span></li>
+                        <li><span class="code-span">.btn-primary</span></li>
+                        <li><span class="code-span">.btn-success</span></li>
+                        <li><span class="code-span">.btn-info</span></li>
+                        <li><span class="code-span">.btn-warning</span></li>
+                        <li><span class="code-span">.btn-danger</span></li>
+                        <li><span class="code-span">.btn-link</span></li>
+                      </ul>
+                    </p>
+
+                    <p>The following example shows the code for the different button styles:
                     <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                      &lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-default&quot;</span>&gt;Default&lt;/button&gt; 
+                      <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary&quot;</span>&gt;Primary&lt;/button&gt; 
+                      <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-success&quot;</span>&gt;Success&lt;/button&gt; 
+                      <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-info&quot;</span>&gt;Info&lt;/button&gt; 
+                      <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-warning&quot;</span>&gt;Warning&lt;/button&gt; 
+                      <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-danger&quot;</span>&gt;Danger&lt;/button&gt; 
+                      <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-link&quot;</span>&gt;Link&lt;/button&gt;
+                    </div>  
+                    </p>                             
+                    
+                    <p>The button classes can be used on an <span class="code-span">&lt;a&gt;, &lt;button&gt;, or &lt;input&gt;</span> element:<br>
+                      <a href="#" class="btn btn-info" role="button">Link Button</a>
+                      <button type="button" class="btn btn-info">Button</button>
+                      <input type="button" class="btn btn-info" value="Input Button">
+                      <input type="submit" class="btn btn-info" value="Submit Button">
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
-
+                      <div class="code-body" style="">
+                        &lt;<span class="yellow">a</span> href=&quot;#&quot; <span class="yellow">class=&quot;btn btn-info&quot;</span> role=&quot;button&quot;&gt;Link Button&lt;/a&gt;
+                        <br>&lt;<span class="yellow">button</span> type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-info&quot;</span>&gt;Button&lt;/button&gt; 
+                        <br>&lt;<span class="yellow">input</span> type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-info&quot;</span> value=&quot;Input Button&quot;&gt;
+                        <br>&lt;<span class="yellow">input</span> type=&quot;submit&quot; <span class="yellow">class=&quot;btn btn-info&quot;</span> value=&quot;Submit Button&quot;&gt;
+                      </div>
+                    </p>
+                    
+                    <p>
+                      <div class="panel panel-info"> 
+                           <div class="panel-heading">Why do we put a # in the href attribute of the link?</div> 
+                           <div class="panel-body">Since we do not have any page to link it to, and we do not want to get a "404" message, we put # as the link. In real life it should of course been a real URL to the "Search" page.</div> 
+                      </div>
+                    </p>
                   </div>
                 </div>
             </div>    
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Button Sizes</h3> </div>
+                  <div class="panel-body">  
+                    <p>Bootstrap provides four button sizes:<br>
+                      <button type="button" class="btn btn-primary btn-lg">Large</button>
+                      <button type="button" class="btn btn-primary btn-md">Medium</button>
+                      <button type="button" class="btn btn-primary btn-sm">Small</button>
+                      <button type="button" class="btn btn-primary btn-xs">XSmall</button>
+                      <br>
+                      <br>The classes that define the different sizes are:
+                      <ul>
+                        <li><span class="code-span">.btn-lg</span></li>
+                        <li><span class="code-span">.btn-md</span></li>
+                        <li><span class="code-span">.btn-sm</span></li>
+                        <li><span class="code-span">.btn-xs</span></li>
+                      </ul>
+                      The following example shows the code for different button sizes:
+                      <div class="code-body" style="">
+                       &lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary btn-lg&quot;</span>&gt;Large&lt;/button&gt;
+                       <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary btn-md&quot;</span>&gt;Medium&lt;/button&gt; 
+                       <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary btn-sm&quot;</span>&gt;Small&lt;/button&gt; 
+                       <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary btn-xs&quot;</span>&gt;XSmall&lt;/button&gt;
+                      </div>
+                    </p>
+
+                  </div>
+                </div>
+            </div>  
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Block Level Buttons</h3> </div>
+                  <div class="panel-body">  
+                    <p>A block level button spans the entire width of the parent element.<br>
+                      <button type="button" class="btn btn-primary btn-block">Button 1</button>
+                      <button type="button" class="btn btn-default btn-block">Button 2</button>
+                                            
+                      <br>Add class .btn-block to create a block level button:                      
+                      <div class="code-body" style="">
+                       &lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary btn-block&quot;</span>&gt;Button 1&lt;/button&gt;
+                       <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-default btn-block&quot;</span>&gt;Button 2&lt;/button&gt; 
+                       
+                      </div>
+                    </p>
+
+                  </div>
+                </div>
+            </div>  
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Active/Disabled Buttons</h3> </div>
+                  <div class="panel-body">  
+                    <p>A button can be set to an active (appear pressed) or a disabled (unclickable) state:<br>
+                      <button type="button" class="btn btn-primary active">Active Primary</button>
+                      <button type="button" class="btn btn-primary disabled">Disabled Primary</button>                      
+                      <div class="code-body" style="">
+                       &lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary active&quot;</span>&gt;Active Primary&lt;/button&gt;
+                       <br>&lt;button type=&quot;button&quot; <span class="yellow">class=&quot;btn btn-primary disabled&quot;</span>&gt;Disabled Primary&lt;/button&gt; 
+                       
+                      </div>
+                    </p>
+
+                  </div>
+                </div>
+            </div>  
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>
