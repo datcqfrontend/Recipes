@@ -17,24 +17,20 @@ app.config(['$routeProvider', function ($routeProvider) {
 	.when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
 
 		// jQuery
-		.when("/jquery/home", {templateUrl: "partials/jquery/home.html", controller: "PageCtrl"})
+		//.when("/jquery/home", {templateUrl: "partials/jquery/home.html", controller: "PageCtrl"})
 
 		// Bootstrap
-		.when("/bootstrap/tutorial", {templateUrl: "partials/bootstrap/tutorial.html", controller: "PageCtrl"})
-		.when("/bootstrap/getStarted", {templateUrl: "partials/bootstrap/getStarted.html", controller: "PageCtrl"})
-		.when("/bootstrap/gridBasic", {templateUrl: "partials/bootstrap/gridBasic.html", controller: "PageCtrl"})
-		.when("/bootstrap/typography", {templateUrl: "partials/bootstrap/typography.html", controller: "PageCtrl"})
-		.when("/bootstrap/glyphicons", {templateUrl: "partials/bootstrap/glyphicons.html", controller: "PageCtrl"})
-		.when("/bootstrap/badgesLabel", {templateUrl: "partials/bootstrap/badgesLabel.html", controller: "PageCtrl"})
-		.when("/bootstrap/tableBasic", {templateUrl: "partials/bootstrap/tableBasic.html", controller: "PageCtrl"})
-		
-		/*
-		
-		
-		.when("/bootstrap/tutorial", {templateUrl: "partials/bootstrap/tutorial.html", controller: "PageCtrl"})*/
+		.when("/:groupName/:pageName", {
+			templateUrl: function(params){
+				initPage(params.groupName,params.pageName);
+				return "partials/"+params.groupName+"/"+params.pageName+".html";
+			}, 
+			controller: "PageCtrl"
+		})
 
+		
 		// Angular
-		.when("/angular/home", {templateUrl: "partials/angular/home.html", controller: "PageCtrl"})
+		//.when("/angular/home", {templateUrl: "partials/angular/home.html", controller: "PageCtrl"})
 
 	
 	// Blog
@@ -49,9 +45,33 @@ app.config(['$routeProvider', function ($routeProvider) {
 /**
  * Controls all other Pages
  */
-app.controller('PageCtrl', function (/* $scope, $location, $http */) {
+app.controller('PageCtrl', function ( $scope, $location, $http ) {
 	//Active popup modal
  	$('[data-toggle="popover"]').popover(); 
+
+ 	console.log($location.$$path);
+
+ 	if(!fw.canNext)	$('.pager li:nth-child(2)').hide();
+ 	if(!fw.canBack)	$('.pager li:nth-child(1)').hide();
+
+ 	$('.pager').on('click','a',function(e){
+ 		e.preventDefault();
+
+ 		switch(this.innerHTML){
+ 			case "Previous":
+ 				prevPage();
+ 				break;
+
+ 			case "Next":
+ 				nextPage();
+ 				break;
+ 		}
+ 		//console.log(this.innerHTML);
+ 	});
+
+ 	/*console.log(fw.pages);
+
+ 	*/
 
  	/*console.log("Page Controller reporting for duty.");
 	  // Activates the Carousel

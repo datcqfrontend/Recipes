@@ -1,0 +1,232 @@
+<div  id="bsPanels" class="bs section">
+
+    <div class="container">
+
+         <div class="row">
+            <div class="col-lg-12">
+                <h1>Bootstrap Panels</h2>                
+                <ol class="breadcrumb">
+                    <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
+                    <li class="active">Panels</li>
+                </ol>
+            </div>
+        
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Panels</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <p>A panel in bootstrap is a bordered box with some padding around its content:
+                      <div class="panel panel-default">
+                        <div class="panel-body">A Basic Panel</div>
+                      </div>
+                    </p>
+                      
+                    <p>Panels are created with the <span class="code-span">.panel</span> class, and content inside the panel has a <span class="code-span">.panel-body</span> class:</p>
+
+                    <div class="code-body" style="">
+                      &lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;A Basic Panel&lt;/div&gt;
+                      <br>&lt;/div&gt;
+                    </div>                               
+                    <p>The <span class="code-span">.panel-default</span> class is used to style the color of the panel. See the last example on this page for more contextual classes.</p>
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Panel Heading</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <p>The .panel-heading class adds a heading to the panel:
+                      <div class="panel panel-default">
+                        <div class="panel-heading">Panel Heading</div>
+                        <div class="panel-body">Panel Content</div>
+                      </div>
+                    </p>
+                   
+                    <div class="code-body" style="">
+                      &lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel Heading&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&lt;/div&gt;
+                    </div>                               
+                    
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Panel Footer</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <p>The .panel-heading class adds a heading to the panel:
+                      <div class="panel panel-default">
+                        
+                        <div class="panel-body">Panel Content</div>
+                        <div class="panel-footer">Panel Footer</div>
+                      </div>
+                    </p>
+                   
+                    <div class="code-body" style="">
+                      &lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer&lt;/div&gt;
+                      <br>&lt;/div&gt;
+                    </div>                               
+                    
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Panel Group</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <p>To group many panels together, wrap a <span class="code-span">&lt;div&gt;</span> with class <span class="code-span">.panel-group</span> around them. The <span class="code-span">.panel-group</span> class clears the bottom-margin of each panel:
+                      <div class="panel-group">
+                        <div class="panel panel-default">                        
+                          <div class="panel-heading">Panel Heading 1</div>
+                          <div class="panel-body">Panel Content 1</div>
+                          <div class="panel-footer">Panel Footer 1</div>
+                        </div>
+
+                        <div class="panel panel-default">              
+                          <div class="panel-heading">Panel Heading 2</div>          
+                          <div class="panel-body">Panel Content 2</div>
+                          <div class="panel-footer">Panel Footer 2</div>
+                        </div>
+                      </div>
+                    </p>
+                   
+                    <div class="code-body" style="">
+                      <br>&lt;div <span class="yellow">class=&quot;panel-group&quot;</span>&gt;                      
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel Heading 1&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content 1&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer 1&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel Heading 2&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content 2&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer 2&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&lt;/div&gt;                      
+
+
+                    </div>                               
+                    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Panel with Contextual Classes</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <p>To color the panel, use contextual classes (<span class="code-span">.panel-default, .panel-primary, .panel-success, .panel-info, .panel-warning, or .panel-danger</span>):                  
+                     
+                      <div class="panel-group">
+                        <div class="panel panel-default">                        
+                          <div class="panel-heading">Panel with panel-default class</div>
+                          <div class="panel-body">Panel Content</div>
+                          <div class="panel-footer">Panel Footer</div>
+                        </div>
+
+                        <div class="panel panel-primary">              
+                          <div class="panel-heading">Panel with panel-primary class</div>          
+                          <div class="panel-body">Panel Content</div>
+                          <div class="panel-footer">Panel Footer</div>
+                        </div>
+
+                        <div class="panel panel-success ">              
+                          <div class="panel-heading">Panel with panel-success  class</div>          
+                          <div class="panel-body">Panel Content</div>
+                          <div class="panel-footer">Panel Footer</div>
+                        </div>
+
+                        <div class="panel panel-info ">              
+                          <div class="panel-heading">Panel with panel-info  class</div>          
+                          <div class="panel-body">Panel Content</div>
+                          <div class="panel-footer">Panel Footer</div>
+                        </div>
+
+                        <div class="panel panel-warning ">              
+                          <div class="panel-heading">Panel with panel-warning  class</div>          
+                          <div class="panel-body">Panel Content</div>
+                          <div class="panel-footer">Panel Footer</div>
+                        </div>
+
+                        <div class="panel panel-danger ">              
+                          <div class="panel-heading">Panel with panel-danger  class</div>          
+                          <div class="panel-body">Panel Content</div>
+                          <div class="panel-footer">Panel Footer</div>
+                        </div>
+                      </div>
+                    </p>
+                   
+                    <div class="code-body" style="">
+                      <br>&lt;div <span class="yellow">class=&quot;panel-group&quot;</span>&gt;                      
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel with panel-default class&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-primary &quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel with panel-primary  class&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-success &quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel with panel-success  class&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-info &quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel with panel-info  class&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-warning &quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel with panel-warning  class&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-danger &quot;</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-heading&quot;</span>&gt;Panel with panel-danger  class&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-body&quot;</span>&gt;Panel Content&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel-footer&quot;</span>&gt;Panel Footer&lt;/div&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                      <br>&lt;/div&gt;                      
+
+
+                    </div>                               
+                    
+                  </div>
+                </div>
+            </div> 
+
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->

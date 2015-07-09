@@ -1,0 +1,174 @@
+<div  id="bsImages" class="bs section">
+
+    <div class="container">
+
+         <div class="row">
+            <div class="col-lg-12">
+                <h1>Bootstrap Images</h2>                
+                <ol class="breadcrumb">
+                    <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
+                    <li class="active">Images</li>
+                </ol>
+            </div>
+        
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-body">  
+                    
+                      <div style="float:left;width:33%">
+                        <p>Rounded Corners:</p>
+                        <img src="images/bs.png" class="img-responsive img-rounded" alt="Bootstrap" style="width:204px;height:auto;">
+                      </div>
+                      <div style="float:left;width:33%">
+                        <p>Circle:</p>
+                        <img src="images/bs.png" class="img-responsive img-circle" alt="Bootstrap" style="width:204px;height:auto;">
+                      </div>
+                      <div style="float:left;width:33%">
+                        <p>Thumbnail:</p>
+                        <img src="images/bs.png" class="img-responsive img-thumbnail" alt="Bootstrap" style="width:204px;height:auto;">
+                      </div>                    
+                      <div style="clear:both"></div>
+
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;!-- Rounded Corners --&gt;
+                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+
+                      <br>
+                      <br>&lt;!-- Circle --&gt;
+                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                      
+                      <br>
+                      <br>&lt;!-- Thumbnail --&gt;
+                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    </div>                               
+
+                  </div>
+                </div>
+            </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Responsive Images</h3> </div>
+                  <div class="panel-body">  
+                    <p>Images comes in all sizes. So do screens. Responsive images automatically adjust to fit the size of the screen. Create responsive images by adding an <span class="code-span">.img-responsive</span> class to the &lt;img&gt; tag. The image will then scale nicely to the parent element. The <span class="code-span">.img-responsive</span> class applies <span class="code-span">max-width: 100%; and height: auto;</span> to the image:
+                    <img src="images/bs.png" class="img-responsive" alt="Bootstrap" style="width:204px;height:auto;">
+                    </p>                    
+
+                    <div class="code-body">
+                      &lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    </div>                                   
+
+                  </div>
+                </div>
+            </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Image Gallery</h3> </div>
+                  <div class="panel-body">  
+                    <p>You can also use Bootstrap's grid system in conjunction with the <span class="code-span">.thumbnail</span> class to create an image gallery (<a href="" class="" style="color:orange; font-weight:bold;" data-toggle="modal" data-target="#modalImage1">View Source</a>):</p>
+
+                    <p>
+                    <div class="row example-body">
+                      <div class="col-md-4">
+                        <a href="images/bs.png" class="thumbnail">
+                          <p>Pulpit Rock: A famous tourist attraction in Forsand, Ryfylke, Norway.</p> 
+                          <img src="images/bs.png" alt="Pulpit Rock" style="width:150px;height:150px">
+                        </a>
+                      </div>
+                      <div class="col-md-4">
+                        <a href="images/bs.png" class="thumbnail">
+                          <p>Moustiers-Sainte-Marie: Considered as one of the "most beautiful villages of France".</p>                          
+                          <img src="images/bs.png" alt="Moustiers Sainte Marie" style="width:150px;height:150px">
+                        </a>
+                      </div>
+                      <div class="col-md-4">
+                        <a href="images/bs.png" class="thumbnail">
+                          <p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p> 
+                          <img src="images/bs.png" alt="Cinque Terre" style="width:150px;height:150px">
+                        </a>
+                      </div>
+                    </div>
+                  </p>                                     
+
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="modalImage1" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title bold">Image Gallery</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="code-body">
+                          &lt;div class=&quot;row&quot;&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-md-4&quot;&gt; 
+                          <br><span class="yellow">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href=&quot;images/bs.png&quot; class=&quot;thumbnail&quot;&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Pulpit Rock: A famous tourist attraction in Forsand, Ryfylke, Norway.&lt;/p&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;img src=&quot;images/bs.png&quot; alt=&quot;Pulpit Rock&quot; style=&quot;width:150px;height:150px&quot;&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/a&gt;</span> 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                          
+                          <br>
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-md-4&quot;&gt; 
+                          <br><span class="yellow">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href=&quot;images/bs.png&quot; class=&quot;thumbnail&quot;&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Moustiers-Sainte-Marie: Considered as one of the &quot;most beautiful villages of France&quot;.&lt;/p&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;img src=&quot;images/bs.png&quot; alt=&quot;Moustiers Sainte Marie&quot; style=&quot;width:150px;height:150px&quot;&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/a&gt;</span>  
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                          <br>
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-md-4&quot;&gt; 
+                          <br><span class="yellow">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href=&quot;images/bs.png&quot; class=&quot;thumbnail&quot;&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.&lt;/p&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;img src=&quot;images/bs.png&quot; alt=&quot;Cinque Terre&quot; style=&quot;width:150px;height:150px&quot;&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/a&gt;</span>  
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+            </div>   
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Responsive Embeds</h3> </div>
+                  <div class="panel-body">  
+                    <p>Also let videos or slideshows scale properly on any device. Classes can be applied directly to <span class="code-span">&lt;iframe&gt;, &lt;embed&gt;, &lt;video&gt;, and &lt;object&gt;</span> elements. The following example creates a responsive video by adding an <span class="code-span">.embed-responsive-item</span> class to an <span class="code-span">&lt;iframe&gt;</span> tag (the video will then scale nicely to the parent element). The containing<span class="code-span">&lt;div&gt;</span> defines the aspect ratio of the video:
+                    </p>                    
+
+                    <div class="code-body">
+                      &lt;div <span class="yellow">class=&quot;embed-responsive embed-responsive-16by9&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;iframe <span class="yellow">class=&quot;embed-responsive-item&quot; src=&quot;...&quot;</span>&gt;&lt;/iframe&gt; 
+                      <br>&lt;/div&gt;
+                    </div>                                   
+
+                  </div>
+                </div>
+            </div> 
+
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
