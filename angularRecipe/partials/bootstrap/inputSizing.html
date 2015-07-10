@@ -1,38 +1,181 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsInputSizing" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Input Sizing</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Input Sizing</li>
                 </ol>
             </div>
         
-             <div class="col-lg-12">                
+            <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Input Sizing in Forms</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
-
+                    <p>Set the heights of input elements using classes like <span class="code-span">.input-lg and .input-sm</span>. Set the widths of elements using grid column classes like <span class="code-span">.col-lg-*and .col-sm-*</span>.
+                    </p>
                   </div>
                 </div>
             </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Height Sizing</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      <form role="form">
+                        <div class="form-group">
+                          <label for="inputdefault">Default input</label>
+                          <input class="form-control" id="inputdefault" type="text">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputlg">input-lg</label>
+                          <input class="form-control input-lg" id="inputlg" type="text">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputsm">input-sm</label>
+                          <input class="form-control input-sm" id="inputsm" type="text">
+                        </div>
+                      </form>
+
+                      <div class="code-body" style="">
+                        &lt;form role=&quot;form&quot;&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;inputdefault&quot;&gt;Default input&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input <span class="yellow">class=&quot;form-control&quot;</span> id=&quot;inputdefault&quot; type=&quot;text&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;inputlg&quot;&gt;input-lg&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input <span class="yellow">class=&quot;form-control input-lg&quot;</span> id=&quot;inputlg&quot; type=&quot;text&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;inputsm&quot;&gt;input-sm&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input <span class="yellow">class=&quot;form-control input-sm&quot;</span> id=&quot;inputsm&quot; type=&quot;text&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&lt;/form&gt;
+                      </div> 
+
+                      <br>You can quickly size labels and form controls within a Horizontal form by adding <span class="code-span">.form-group-*</span> to the <span class="code-span">&lt;div class="form-group"&gt;</span> element:
+                      
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group form-group-lg">
+                          <label class="col-sm-2 control-label" for="lg">form-group-lg</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="text" id="lg">
+                          </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                          <label class="col-sm-2 control-label" for="sm">form-group-sm</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="text" id="sm">
+                          </div>
+                        </div>
+                      </form>
+
+                      <div class="code-body" style="">
+                        &lt;form <span class="yellow">class="form-horizontal"</span> role=&quot;form&quot;&gt; 
+                        
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;form-group form-group-lg&quot;</span>&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;lg&quot;&gt;form-group-lg&lt;/label&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;lg&quot;&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;form-group form-group-sm&quot;</span>&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;sm&quot;&gt;form-group-sm&lt;/label&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;sm&quot;&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                         <br>&lt;/form&gt;                        
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div>   
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Column Sizing</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <div class="col-xs-2">
+                      <label for="ex1">col-xs-2</label>
+                      <input class="form-control" id="ex1" type="text">
+                    </div>
+                    <div class="col-xs-3">
+                      <label for="ex2">col-xs-3</label>
+                      <input class="form-control" id="ex2" type="text">
+                    </div>
+                    <div class="col-xs-4">
+                      <label for="ex3">col-xs-4</label>
+                      <input class="form-control" id="ex3" type="text">
+                    </div>
+                                  
+                    <div class="code-body col-sm-12" style="margin-top:20px;">
+                      &lt;div <span class="yellow">class=&quot;col-xs-2&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;ex1&quot;&gt;col-xs-2&lt;/label&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class=&quot;form-control&quot; id=&quot;ex1&quot; type=&quot;text&quot;&gt; 
+                      <br>&lt;/div&gt; 
+
+                      <br>&lt;div <span class="yellow">class=&quot;col-xs-3&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;ex2&quot;&gt;col-xs-3&lt;/label&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class=&quot;form-control&quot; id=&quot;ex2&quot; type=&quot;text&quot;&gt; 
+                      <br>&lt;/div&gt; 
+
+                      <br>&lt;div <span class="yellow">class=&quot;col-xs-4&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;ex3&quot;&gt;col-xs-4&lt;/label&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class=&quot;form-control&quot; id=&quot;ex3&quot; type=&quot;text&quot;&gt; 
+                      <br>&lt;/div&gt;
+                    </div>
+              
+                  </div>
+                </div>
+            </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Help Text</h3> </div>
+                  <div class="panel-body">  
+                    <p>Use the <span class="code-span">.help-block</span> class to add a block level help text in forms:
+                    </p>
+
+                    <div class="form-group">
+                      <label for="pwd">Password:</label>
+                      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                      <span class="help-block">This is some help text...</span>
+                    </div>
+                                  
+                    <div class="code-body col-sm-12" style="margin-top:20px;">
+                      
+                      &lt;form <span class="yellow">class=&quot;form-horizontal&quot; role=&quot;form&quot;</span>&gt; 
+                                                                            
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;form-group&quot;</span>&gt; 
+
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;pwd&quot;&gt;Password:&lt;/label&gt; 
+                         
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;pwd&quot; placeholder=&quot;Enter password&quot;&gt; 
+                         
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span <span class="yellow">class="help-block"</span>&gt;This is some help text...&lt;/span&gt;
+
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                      <br>&lt;/form&gt;    
+                      
+                    </div>
+              
+                  </div>
+                </div>
+            </div>  
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>
