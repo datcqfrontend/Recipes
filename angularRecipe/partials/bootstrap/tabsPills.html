@@ -150,7 +150,7 @@
 
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Vertical  Pills</h3> </div>
+                  <div class="panel-heading"><h3>Vertical Pills</h3> </div>
                   <div class="panel-body">  
                     <p>Pills can also be displayed vertically. Just add the <span class="code-span">.nav-stacked</span> class. 
                       <div class="col-md-3">
@@ -165,7 +165,7 @@
                       <br>
                       <div class="code-body" style="">
                         &lt;div <span class="yellow">class="col-md-3"</span>&gt;  
-                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class="navnav-pills nav-stacked"</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class="nav nav-pills nav-stacked"</span>&gt; 
                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="active"&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 1&lt;/a&gt;&lt;/li&gt; 
                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 2&lt;/a&gt;&lt;/li&gt; 
@@ -262,7 +262,116 @@
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dynamic Tabs</h3> </div>
+                  <div class="panel-body">  
+                    <p>To make the tabs toggable, add the <span class="code-span">data-toggle="tab"</span> attribute to each link. Then add a <span class="code-span">.tab-pane</span> class with a unique ID for every tab and wrap them inside a <span class="code-span">&lt;div&gt;</span> element with class <span class="code-span">.tab-content</span>. If you want the tabs to fade in and out when clicking on them, add the <span class="code-span">.fade</span> class to <span class="code-span">.tab-pane</span>:
+
+                      <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home" target="_self">Home</a></li>
+                        <li><a data-toggle="tab" href="#menu1" target="_self">Menu 1</a></li>
+                        <li><a data-toggle="tab" href="#menu2" target="_self">Menu 2</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                          <h3>HOME</h3>
+                          <p>Some content.</p>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                          <h3>Menu 1</h3>
+                          <p>Some content in menu 1.</p>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                          <h3>Menu 2</h3>
+                          <p>Some content in menu 2.</p>
+                        </div>
+                      </div>
+                      
+                      <br>
+                      <div class="code-body" style="">
+                        &lt;ul <span class="yellow">class="nav nav-tab"</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="active"&gt;&lt;a <span class="yellow">data-toggle="tab" href=&quot;#home&quot; target="_self"</span>&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a <span class="yellow">data-toggle="tab" href=&quot;#menu1&quot; target="_self"</span>&gt;Menu 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a <span class="yellow">data-toggle="tab" href=&quot;#menu2&quot; target="_self"</span>&gt;Menu 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&lt;/ul&gt;       
+                        
+                        <br>&lt;div <span class="yellow">class="tab-content"</span>&gt;      
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div id="home" class="tab-pane fade in active">
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h3&gt;HOME&lt;/h3&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Some content.&lt;/p&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div id="menu1" class="tab-pane fade"&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h3&gt;Menu 1&lt;/h3&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Some content in menu 1.&lt;/p&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div id="menu2" class="tab-pane fade"&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h3&gt;Menu 2&lt;/h3&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Some content in menu 2.&lt;/p&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&lt;/div&gt;       
+                                     
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dynamic Pills</h3> </div>
+                  <div class="panel-body">  
+                    <p>To make the pills toggable, add the <span class="code-span">data-toggle="pill"</span> attribute to each link. Then add a <span class="code-span">.tab-pane</span> class with a unique ID for every tab and wrap them inside a <span class="code-span">&lt;div&gt;</span> element with class <span class="code-span">.tab-content</span>. If you want the tabs to fade in and out when clicking on them, add the <span class="code-span">.fade</span> class to <span class="code-span">.tab-pane</span>:
+
+                      <ul class="nav nav-pills">
+                        <li class="active"><a data-toggle="pill" href="#home_pill" target="_self">Home</a></li>
+                        <li><a data-toggle="pill" href="#menu1_pill" target="_self">Menu 1</a></li>
+                        <li><a data-toggle="pill" href="#menu2_pill" target="_self">Menu 2</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div id="home_pill" class="tab-pane fade in active">
+                          <h3>HOME</h3>
+                          <p>Some content.</p>
+                        </div>
+                        <div id="menu1_pill" class="tab-pane fade">
+                          <h3>Menu 1</h3>
+                          <p>Some content in menu 1.</p>
+                        </div>
+                        <div id="menu2_pill" class="tab-pane fade">
+                          <h3>Menu 2</h3>
+                          <p>Some content in menu 2.</p>
+                        </div>
+                      </div>
+                      
+                      <br>
+                      <div class="code-body" style="">
+                        &lt;ul <span class="yellow">class="nav nav-pills"</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="active"&gt;&lt;a <span class="yellow">data-toggle="pill" href=&quot;#home_pill&quot; target="_self"</span>&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a <span class="yellow">data-toggle="pill" href=&quot;#menu1_pill&quot; target="_self"</span>&gt;Menu 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a <span class="yellow">data-toggle="pill" href=&quot;#menu2_pill&quot; target="_self"</span>&gt;Menu 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&lt;/ul&gt;       
+                        
+                        <br>&lt;div <span class="yellow">class="tab-content"</span>&gt;      
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div id="home_pill" class="tab-pane fade in active">
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h3&gt;HOME&lt;/h3&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Some content.&lt;/p&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div id="menu1_pill" class="tab-pane fade"&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h3&gt;Menu 1&lt;/h3&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Some content in menu 1.&lt;/p&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div id="menu2_pill" class="tab-pane fade"&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h3&gt;Menu 2&lt;/h3&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Some content in menu 2.&lt;/p&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&lt;/div&gt;       
+                                     
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>

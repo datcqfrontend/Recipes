@@ -39,7 +39,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 	
 
 	// else 404
-	.otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+	//.otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
 
 /**

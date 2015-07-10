@@ -1,38 +1,350 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsNavbar" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Navigation Bar</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Navigation Bar</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Navigation Bars</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    <p>A navigation bar is a navigation header that is placed at the top of the page:
+                      <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            <a class="navbar-brand" href="#">WebSiteName</a>
+                          </div>
+                          <div>
+                            <ul class="nav navbar-nav">
+                              <li class="active"><a href="#">Home</a></li>
+                              <li><a href="#">Page 1</a></li>
+                              <li><a href="#">Page 2</a></li> 
+                              <li><a href="#">Page 3</a></li> 
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      With Bootstrap, a navigation bar can extend or collapse, depending on the screen size. A standard navigation bar is created with <span class="code-span">&lt;nav class="navbar navbar-default"&gt;</span>.
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
+                      <div class="code-body" style="">
+                        &lt;nav <span class="yellow">class=&quot;navbar navbar-default&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;container-fluid&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;navbar-header&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class=&quot;navbar-brand&quot;</span> href=&quot;#&quot;&gt;WebSiteName&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/nav&gt;                     
+                      </div>     
+                    </p>                                                                 
 
                   </div>
                 </div>
             </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Inverted Navigation Bar</h3> </div>
+                  <div class="panel-body">  
+                    <p>If you don't like the style of the default navigation bar, Bootstrap provides an alternative, black navbar:
+                      <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            <a class="navbar-brand" href="#">WebSiteName</a>
+                          </div>
+                          <div>
+                            <ul class="nav navbar-nav">
+                              <li class="active"><a href="#">Home</a></li>
+                              <li><a href="#">Page 1</a></li>
+                              <li><a href="#">Page 2</a></li> 
+                              <li><a href="#">Page 3</a></li> 
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      Just change the <span class="code-span">.navbar-default</span> class into <span class="code-span">.navbar-inverse</span>:                      
+
+                      <div class="code-body" style="">
+                        &lt;nav <span class="yellow">class=&quot;navbar navbar-inverse&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;container-fluid&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;navbar-header&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class=&quot;navbar-brand&quot;</span> href=&quot;#&quot;&gt;WebSiteName&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/nav&gt;                     
+                      </div>  
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Fixed  Navigation Bar</h3> </div>
+                  <div class="panel-body">  
+                    <p>The navigation bar can also be fixed at the top or at the bottom of the page.A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.<br>
+                      The <span class="code-span">.navbar-fixed-top</span> class makes the navigation bar fixed at the top:
+                      <div class="code-body" style="">
+                        &lt;nav <span class="yellow">class=&quot;navbar navbar-inverse navbar-fixed-top&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;container-fluid&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;navbar-header&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class=&quot;navbar-brand&quot;</span> href=&quot;#&quot;&gt;WebSiteName&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/nav&gt;                     
+                      </div> 
+                      <br>
+                      The <span class="code-span">.navbar-fixed-bottom</span> class makes the navigation bar stay at the bottom:
+                      <div class="code-body" style="">
+                        &lt;nav <span class="yellow">class=&quot;navbar navbar-inverse navbar-fixed-bottom&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;container-fluid&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;navbar-header&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class=&quot;navbar-brand&quot;</span> href=&quot;#&quot;&gt;WebSiteName&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/nav&gt;                     
+                      </div>  
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Navigation Bar With Dropdown</h3> </div>
+                  <div class="panel-body">  
+                    <p>Navigation bars can also hold dropdown menus.
+                      <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            <a class="navbar-brand" href="#" >WebSiteName</a>
+                          </div>
+                          <div>
+                            <ul class="nav navbar-nav">
+                              <li class="active"><a href="#" >Home</a></li>
+                              <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" target="_self">Page 1
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#" >Page 1-1</a></li>
+                                  <li><a href="#" >Page 1-2</a></li>
+                                  <li><a href="#" >Page 1-3</a></li> 
+                                </ul>
+                              </li>
+                              <li><a href="#" >Page 2</a></li> 
+                              <li><a href="#" >Page 3</a></li> 
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      
+                      <div class="code-body" style="">
+                        &lt;nav <span class="yellow">class=&quot;navbar navbar-inverse&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;container-fluid&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;navbar-header&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class=&quot;navbar-brand&quot;</span> href=&quot;#&quot;&gt;WebSiteName&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="dropdown"</span>&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class="dropdown-toggle" data-toggle="dropdown" href="#"</span>&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Page 1 &lt;span class="caret"&gt;&lt;/span&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/a&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class="dropdown-menu"</span>&gt;
+                            <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href="#">Page 1-1&lt;/a&gt;&lt;/li&gt;
+                            <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href="#">Page 1-2&lt;/a&gt;&lt;/li&gt;
+                            <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href="#">Page 1-3&lt;/a&gt;&lt;/li&gt; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/ul&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/li&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 1&lt;/a&gt;&lt;/li&gt; 
+
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/nav&gt;                     
+                      </div>  
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Right-Aligned Navigation Bar</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            <a class="navbar-brand" href="#">WebSiteName</a>
+                          </div>
+                          <div>
+                            <ul class="nav navbar-nav">
+                              <li class="active"><a href="#">Home</a></li>
+                              <li><a href="#">Page 1</a></li>
+                              <li><a href="#">Page 2</a></li> 
+                              <li><a href="#">Page 3</a></li> 
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+
+                      The <span class="code-span">.navbar-right</span> class is used to right-align navigation bar buttons. In the following example we insert a "Sign Up" button and a "Login" button to the right in the navigation bar. We also add a glyphicon on each of the two new buttons:                   
+
+                      <div class="code-body" style="">
+                        &lt;nav <span class="yellow">class=&quot;navbar navbar-inverse&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;container-fluid&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;navbar-header&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class=&quot;navbar-brand&quot;</span> href=&quot;#&quot;&gt;WebSiteName&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav navbar-right&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt; &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span> Sign Up&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt; &lt;span class="glyphicon glyphicon-log-in"&gt;&lt;/span&gt; Login&lt;/a&gt;&lt;/li&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/nav&gt;                     
+                      </div>  
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Collapsing The Navigation Bar</h3> </div>
+                  <div class="panel-body">  
+                    <p>The navigation bar takes up too much space on a small screen. We should hide the navigation bar; and only show it when it is needed. In the following example the navigation bar is replaced by a button in the top right corner. Only when the button is clicked, the navigation bar will be displayed:
+                      <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span> 
+                            </button>
+                            <a class="navbar-brand" href="#">WebSiteName</a>
+                          </div>
+                          <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                              <li class="active"><a href="#">Home</a></li>
+                              <li><a href="#">Page 1</a></li>
+                              <li><a href="#">Page 2</a></li> 
+                              <li><a href="#">Page 3</a></li> 
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      
+                      <div class="code-body" style="">
+                        &lt;nav <span class="yellow">class=&quot;navbar navbar-inverse&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;container-fluid&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;navbar-header&quot;</span>&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button type="button" <span class="yellow">class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"</span>&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class="icon-bar"&gt;&lt;/span&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class="icon-bar"&gt;&lt;/span&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class="icon-bar"&gt;&lt;/span&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">class=&quot;navbar-brand&quot;</span> href=&quot;#&quot;&gt;WebSiteName&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class="collapse navbar-collapse" id="myNavbar"</span>&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page 3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav navbar-right&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt; &lt;span class="glyphicon glyphicon-user"&gt;&lt;/span> Sign Up&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt; &lt;span class="glyphicon glyphicon-log-in"&gt;&lt;/span&gt; Login&lt;/a&gt;&lt;/li&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/nav&gt;                     
+                      </div>  
+                    </p>
+                  </div>
+                </div>
+            </div>
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>
