@@ -28,7 +28,7 @@ var fw = {
 
 					{"page":"buttonGroups"  },
 					{"page":"progressBars"  },
-					{"page":"paginations"  },
+					{"page":"pagination"  },
 
 					{"page":"pager"  },
 					{"page":"listGroups"  },

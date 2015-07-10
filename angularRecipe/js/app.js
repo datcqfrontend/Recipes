@@ -34,8 +34,8 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 	
 	// Blog
-	.when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
-	.when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
+	//.when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
+	//.when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
 	
 
 	// else 404
@@ -51,13 +51,17 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
 
  	console.log($location.$$path);
 
- 	if(!fw.canNext)	$('.pager li:nth-child(2)').hide();
- 	if(!fw.canBack)	$('.pager li:nth-child(1)').hide();
+ 	if(!fw.canNext)	$('.pager li:nth-child(2):not(.deactive)').hide();
+ 	if(!fw.canBack)	$('.pager li:nth-child(1):not(.deactive)').hide();
 
- 	$('.pager').on('click','a',function(e){
+ 	$('.pager').on('click','li',function(e){
  		e.preventDefault();
 
- 		switch(this.innerHTML){
+ 		console.log($('a',this)[0].innerHTML);
+
+ 		if($(this).hasClass('deactive')) return;
+
+ 		switch($('a',this)[0].innerHTML){
  			case "Previous":
  				prevPage();
  				break;

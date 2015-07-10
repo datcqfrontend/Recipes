@@ -1,10 +1,10 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsPagination" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Pagination</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
                     <li class="active">Images</li>
@@ -13,23 +13,127 @@
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Basic Pagination</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    <p>If you have a web site with lots of pages, you may wish to add some sort of pagination to each page. A basic pagination in Bootstrap looks like this:
+                      <ul class="pagination">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                      </ul>
+                    </p>
+                    <p>To create a basic pagination, add the <span class="code-span">.pagination</span> class to an <span class="code-span">&lt;ul&gt;</span> element:
+                      <div class="code-body" style="">
+                        &lt;ul <span class="yellow">class=&quot;pagination&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt; 
+                        <br>&lt;/ul&gt;                      
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Active State</h3> </div>
+                  <div class="panel-body">  
+                    <p>The active state shows what is the current page:
+                      <ul class="pagination">
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                      </ul>
+                    </p>
+                    <p>To create a basic pagination, add the <span class="code-span">.pagination</span> class to an <span class="code-span">&lt;ul&gt;</span> element:
+                      <div class="code-body" style="">
+                        &lt;ul <span class="yellow">class=&quot;pagination&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="active"</span>&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt; 
+                        <br>&lt;/ul&gt;                      
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div>    
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Disabled State</h3> </div>
+                  <div class="panel-body">  
+                    <p>A disabled link cannot be clicked:
+                      <ul class="pagination">
+                        <li><a href="#">1</a></li>
+                        <li class="disabled"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                      </ul>
+                    </p>
+                    <p>To create a basic pagination, add the <span class="code-span">.pagination</span> class to an <span class="code-span">&lt;ul&gt;</span> element:
+                      <div class="code-body" style="">
+                        &lt;ul <span class="yellow">class=&quot;pagination&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="disabled"</span>&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt; 
+                        <br>&lt;/ul&gt;                      
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Pagination Sizing</h3> </div>
+                  <div class="panel-body">  
+                    <p>Pagination blocks can also be sized to a larger size or a smaller size:
+                      <ul class="pagination pagination-lg">
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                      </ul>
+                      <ul class="pagination pagination-sm">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                      </ul>
+                    </p>
+                    <p>Add class <span class="code-span">.pagination-lg</span> for larger blocks or <span class="code-span">.pagination-sm</span> for smaller blocks:
+                      <div class="code-body" style="">
+                        &lt;ul <span class="yellow">class=&quot;pagination pagination-lg&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="active"</span>&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt; 
+                        <br>&lt;/ul&gt; 
+                        <br>
+                        <br>&lt;ul <span class="yellow">class=&quot;pagination pagination-sm&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="active"</span>&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt; 
+                        <br>&lt;/ul&gt;                      
+                      </div>                               
+                    </p>
                   </div>
                 </div>
             </div>    

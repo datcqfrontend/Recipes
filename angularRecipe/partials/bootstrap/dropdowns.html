@@ -1,38 +1,285 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsDropdowns" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Dropdowns</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Dropdowns</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Basic Dropdown</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
-
+                    <p>A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list:
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">HTML</a></li>
+                          <li><a href="#">CSS</a></li>
+                          <li><a href="#">JavaScript</a></li>
+                        </ul>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;div <span class="yellow">class=&quot;dropdown&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button <span class="yellow">class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;</span>&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDropdown Example &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;dropdown-menu&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&lt;/div&gt;                        
+                      </div>                               
+                    </p>
                   </div>
                 </div>
             </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dropdown Devider</h3> </div>
+                  <div class="panel-body">  
+                    <p>The <span class="code-span">.divider</span> class is used to separate links inside the dropdown menu:
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Devider Example
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">HTML</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">CSS</a></li>
+                          <li><a href="#">JavaScript</a></li>
+                        </ul>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;div <span class="yellow">class=&quot;dropdown&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button <span class="yellow">class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;</span>&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDropdown Devider Example &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;dropdown-menu&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="divider"</span>&gt;&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&lt;/div&gt;                        
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dropdown Header</h3> </div>
+                  <div class="panel-body">  
+                    <p>The <span class="code-span">.dropdown-header</span> class is used to add headers inside the dropdown menu:
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Header Example
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-header">Dropdown header 1</li>
+                          <li><a href="#">HTML</a></li>                          
+                          <li><a href="#">CSS</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Dropdown header 2</li>
+                          <li><a href="#">JavaScript</a></li>
+                        </ul>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;div <span class="yellow">class=&quot;dropdown&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button <span class="yellow">class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;</span>&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDropdown Header Example &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;dropdown-menu&quot;</span>&gt;                         
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="dropdown-header"</span>&gt;Dropdown header 1&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="divider" &gt;&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="dropdown-header"</span>&gt;Dropdown header 2&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&lt;/div&gt;
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Disable an Item</h3> </div>
+                  <div class="panel-body">  
+                    <p>To disable an item in the dropdown menu, use the <span class="code-span">.disabled</span> class:
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Disable Example
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-header">Dropdown header 1</li>
+                          <li><a href="#">HTML</a></li>                          
+                          <li class="disabled"><a href="#">CSS</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Dropdown header 2</li>
+                          <li><a href="#">JavaScript</a></li>
+                        </ul>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;div <span class="yellow">class=&quot;dropdown&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button <span class="yellow">class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;</span>&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDropdown Disable Example &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        
+                       
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;dropdown-menu&quot;</span>&gt;      
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 1&lt;/li&gt;  
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class="disabled"</span>&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="divider"&gt;&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 2&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&lt;/div&gt;
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dropdown Position</h3> </div>
+                  <div class="panel-body">  
+                    <p>To right-align the dropdown, add the <span class="code-span">.dropdown-menu-right</span> class to the element with <span class="code-span">.dropdown-menu</span>:
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Right Example
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li class="dropdown-header">Dropdown header 1</li>
+                          <li><a href="#">HTML</a></li>                          
+                          <li class="disabled"><a href="#">CSS</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Dropdown header 2</li>
+                          <li><a href="#">JavaScript</a></li>
+                        </ul>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;div <span class="yellow">class=&quot;dropdown&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button <span class="yellow">class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;</span>&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDropdown Right Example &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                                                
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;dropdown-menu dropdown-menu-right&quot;</span>&gt;                         
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 1&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="disabled"&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="divider"&gt;&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 2&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&lt;/div&gt;
+                      </div>                               
+                    </p>
+
+                    <p>If you want the dropdown menu to expand upwards instead of downwards, change the <span class="code-span">&lt;div&gt;</span> element with <span class="code-span">class="dropdown" to "dropup"</span>:                      
+                      <div class="dropup">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropup Example
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-header">Dropdown header 1</li>
+                          <li><a href="#">HTML</a></li>                          
+                          <li class="disabled"><a href="#">CSS</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Dropdown header 2</li>
+                          <li><a href="#">JavaScript</a></li>
+                        </ul>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;div <span class="yellow">class=&quot;dropup&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button class=&quot;btn btn-primary dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDropup Example &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt;                         
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;                         
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 1&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="disabled"&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="divider"&gt;&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 2&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&lt;/div&gt;
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dropdown Accessibility</h3> </div>
+                  <div class="panel-body">  
+                    <p>To help improve accessibility for people using screen readers, you should include the following <span class="code-span">role</span> and <span class="code-span">aria-*</span> attributes, when creating a dropdown menu:
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorial
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                          <li class="dropdown-header">Dropdown header 1</li>
+                          <li><a href="#">HTML</a></li>                          
+                          <li class="disabled"><a href="#">CSS</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Dropdown header 2</li>
+                          <li><a href="#">JavaScript</a></li>
+                        </ul>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;div <span class="yellow">class=&quot;dropdown&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button <span class="yellow">class=&quot;btn btn-primary dropdown-toggle&quot; id="menu1" type=&quot;button&quot; data-toggle=&quot;dropdown&quot;</span>&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDropdown Disable Example &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;dropdown-menu&quot; role="menu" aria-labelledby="menu1"</span>&gt;                         
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 1&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="disabled"&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="divider"&gt;&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li class="dropdown-header"&gt;Dropdown header 2&lt;/li&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt; 
+                        <br>&lt;/div&gt;
+                      </div>                               
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>

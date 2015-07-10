@@ -1,38 +1,189 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsListGroups" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap List Groups</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">List Groups</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Basic List Groups</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    <p>The most basic list group is an unordered list with list items:
+                      <ul class="list-group">
+                        <li class="list-group-item">First item</li>
+                        <li class="list-group-item">Second item</li>
+                        <li class="list-group-item">Third item</li>
+                      </ul>
+                    </p>
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
-
+                    <p>To create a basic list group, use an <span class="code-span">&lt;ul&gt; </span>element with class .list-group, and <span class="code-span">&lt;li&gt;</span> elements with class .list-group-item:
+                      <div class="code-body" style="">
+                      &lt;ul <span class="yellow">class=&quot;list-group&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;First item&lt;/li&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;Second item&lt;/li&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;Third item&lt;/li&gt; 
+                      <br>&lt;/ul&gt;                      
+                    </div> 
+                    </p>
                   </div>
                 </div>
-            </div>    
+            </div>   
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>List Group With Badges</h3> </div>
+                  <div class="panel-body">  
+                    <p>You can also add badges to a list group. The badges will automatically be positioned on the right:
+                      <ul class="list-group">
+                        <li class="list-group-item"><span class="badge">12</span> New</li>
+                        <li class="list-group-item"><span class="badge">5</span> Delete</li>
+                        <li class="list-group-item"><span class="badge">3</span> Warnings</li>
+                      </ul>
+                    </p>
+
+                    <p>To create a badge, create a  <span class="code-span">&lt;span&gt;</span> element with class <span class="code-span">.badge</span> inside the list item:                     
+                      <div class="code-body" style="">
+                      &lt;ul <span class="yellow">class=&quot;list-group&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;&lt;span <span class="yellow">class="badge"</span>&gt;12&lt;/span&gt; New&lt;/li&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;&lt;span <span class="yellow">class="badge"</span>&gt;5&lt;/span&gt; Delete&lt;/li&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;&lt;span <span class="yellow">class="badge"</span>&gt;3&lt;/span&gt; Warnings&lt;/li&gt; 
+                      <br>&lt;/ul&gt;                      
+                    </div> 
+                    </p>
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>List Group With Linked Items</h3> </div>
+                  <div class="panel-body">  
+                    <p>The items in a list group can also be hyperlinks:
+                      <div class="list-group">
+                        <a href="#" class="list-group-item active">First item</a>
+                        <a href="#" class="list-group-item">Second item</a>
+                        <a href="#" class="list-group-item">Third item</a>
+                      </div>
+                    </p>
+
+                    <p>To create a list group with linked items, use <span class="code-span">&lt;div&gt; </span> instead of <span class="code-span">&lt;ul&gt; </span> and <span class="code-span">&lt;a&gt; </span> instead of <span class="code-span">&lt;li&gt; </span>:
+                     
+                      <div class="code-body" style="">
+                      &lt;div <span class="yellow">class=&quot;list-group&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href="#" <span class="yellow">class=&quot;list-group-item active&quot;</span>&gt;First item&lt;/a&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href="#" <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;Second item&lt;/a&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href="#" <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;Third item&lt;/a&gt; 
+                      <br>&lt;/div&gt;                      
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Disabled Item</h3> </div>
+                  <div class="panel-body">  
+                    <p>The following list group has a disabled item::
+                      <div class="list-group">
+                        <a href="#" class="list-group-item disabled">First item</a>
+                        <a href="#" class="list-group-item">Second item</a>
+                        <a href="#" class="list-group-item">Third item</a>
+                      </div>
+                    </p>
+
+                    <p>To disable an item, add the <span class="code-span">.disabled</span> class:
+                      <div class="code-body" style="">
+                      &lt;div <span class="yellow">class=&quot;list-group&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href="#" <span class="yellow">class=&quot;list-group-item disabled&quot;</span>&gt;First item&lt;/a&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href="#" <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;Second item&lt;/a&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href="#" <span class="yellow">class=&quot;list-group-item&quot;</span>&gt;Third item&lt;/a&gt; 
+                      <br>&lt;/div&gt;                      
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Contextual Classes</h3> </div>
+                  <div class="panel-body">  
+                    <p>Contextual classes can be used to color list items:
+                      <ul class="list-group">
+                        <li class="list-group-item list-group-item-success">First item</li>
+                        <li class="list-group-item list-group-item-info">Second item</li>
+                        <li class="list-group-item list-group-item-warning">Third item</li>
+                        <li class="list-group-item list-group-item-danger">Fourth item</li>
+                      </ul>
+                    </p>
+
+                    <p>The classes for coloring list-items are: <span class="code-span">.list-group-item-success, list-group-item-info, list-group-item-warning, and .list-group-item-danger</span>:                      
+                      <div class="code-body" style="">
+                      &lt;ul <span class="yellow">class=&quot;list-group&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item list-group-item-success&quot;</span>&gt;First item&lt;/li&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item list-group-item-info&quot;</span>&gt;Second item&lt;/li&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item list-group-item-warning&quot;</span>&gt;Third item&lt;/li&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li <span class="yellow">class=&quot;list-group-item list-group-item-danger&quot;</span>&gt;Fourth item&lt;/li&gt; 
+                      <br>&lt;/ul&gt;                      
+                    </div> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Custom Content</h3> </div>
+                  <div class="panel-body">  
+                    <p>You can add nearly any HTML inside a list group item. Bootstrap provides the classes <span class="code-span">.list-group-item-heading</span> and <span class="code-span">.list-group-item-text</span> which can be used as follows:
+                      <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                          <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                          <p class="list-group-item-text">List Group Item Text</p>
+                        </a>
+                        <a href="#" class="list-group-item">
+                          <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+                          <p class="list-group-item-text">List Group Item Text</p>
+                        </a>
+                        <a href="#" class="list-group-item">
+                          <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+                          <p class="list-group-item-text">List Group Item Text</p>
+                        </a>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                      &lt;div <span class="yellow">class=&quot;list-group&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href=&quot;#&quot; <span class="yellow">class=&quot;list-group-item active&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 <span class="yellow">class=&quot;list-group-item-heading&quot;</span>&gt;First List Group Item Heading&lt;/h4&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p <span class="yellow">class=&quot;list-group-item-text&quot;</span>&gt;List Group Item Text&lt;/p&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/a&gt; 
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href=&quot;#&quot; <span class="yellow">class=&quot;list-group-item&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 <span class="yellow">class=&quot;list-group-item-heading&quot;</span>&gt;Second List Group Item Heading&lt;/h4&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p <span class="yellow">class=&quot;list-group-item-text&quot;</span>&gt;List Group Item Text&lt;/p&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/a&gt; 
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a href=&quot;#&quot; <span class="yellow">class=&quot;list-group-item&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 <span class="yellow">class=&quot;list-group-item-heading&quot;</span>&gt;Third List Group Item Heading&lt;/h4&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p <span class="yellow">class=&quot;list-group-item-text&quot;</span>&gt;List Group Item Text&lt;/p&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/a&gt; 
+                      <br>&lt;/div&gt;
+
+                                     
+                    </div> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>
