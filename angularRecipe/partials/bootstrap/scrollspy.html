@@ -1,34 +1,82 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsScrollspy" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Scrollspy Plugin</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Scrollspy</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>The Scrollspy Plugin</h3> </div>
                   <div class="panel-body">  
-                    
+                    <p>The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.
+                      <iframe src="partials/bootstrap/trybs_scrollspy.htm" style="width:100%;height:255px;" scrolling="yes" frameborder="0"></iframe>
+                    </p>
                       
                     <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                      &lt;!-- The navbar: used to jump to a section in the scrollable area --&gt; 
+                      <br>&lt;nav <span class="yellow">class=&quot;navbar navbar-inverse navbar-fixed-top&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp... 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul <span class="yellow">class=&quot;nav navbar-nav&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a <span class="yellow">href=&quot;#section1&quot;</span>&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp... 
+                      <br>&lt;/nav&gt; 
+                      <br>
+                      <br>&lt;!-- The scrollable area --&gt; 
+                      <br>&lt;div <span class="yellow">data-spy=&quot;scroll&quot; data-target=&quot;.navbar&quot; data-offset=&quot;12&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;!-- Section 1 --&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">id=&quot;section1&quot</span>;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h1&gt;Section 1&lt;/h1&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Try to scroll this page and look at the navigation bar while scrolling!&lt;/p&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp... 
+                      <br>&lt;/div&gt;
+                    </div>
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                  </div>
+                </div>
+            </div>   
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Scrollspy Vertical Menu</h3> </div>
+                  <div class="panel-body">  
+                    <p>The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.
+                      <iframe src="partials/bootstrap/trybs_scrollspy2.htm" style="width:100%;height:255px;" scrolling="yes" frameborder="0"></iframe>
+                    </p>
                       
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
+                    <div class="code-body" style="">
+
+                      &lt;body data-spy=&quot;scroll&quot; data-target=&quot;#myScrollspy&quot; data-offset=&quot;20&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;container&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;row&quot;&gt; 
+                      
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;nav class=&quot;col-sm-3&quot; id=&quot;myScrollspy&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul class=&quot;nav nav-pills nav-stacked&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;li&gt;&lt;a href=&quot;#section1&quot;&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp... 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/nav&gt; 
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <&lt;div class=&quot;col-sm-9&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div id=&quot;section1&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h1&gt;Section 1&lt;/h1&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Try to scroll this page and look at the navigation list while scrolling!&lt;/p&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp... 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&lt;/body&gt;                      
+                    </div>
 
                   </div>
                 </div>
