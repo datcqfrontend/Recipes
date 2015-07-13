@@ -1,38 +1,103 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsPopover" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Popover Plugin</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Popover Plugin</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>The Popover Plugin</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    <p>The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content. Plugins can be included individually (using Bootstrap's individual "popover.js" file), or all at once (using "bootstrap.js" or "bootstrap.min.js").<br>
+                      To create a popover, add the <span class="code-span">data-toggle="popover"</span> attribute to an element. Use the <span class="code-span">title</span> attribute to specify the header text of the popover, and use the <span class="code-span">data-content</span> attribute to specify the text that should be displayed inside the popover's body:
+                      <br>
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                      <button style="margin:7px 15px 17px 0;" type="button" data-placement="bottom" class="btn btn-md btn-success" data-toggle="popover" title="" data-content="Some content inside the popover" data-original-title="Popover Header">Click To Toggle Popover</button>
+                      <a href="javascript:void(0);" data-toggle="popover" data-placement="right" title="" data-content="Some content inside the popover" data-original-title="Popover Header">Click To Toggle Popover</a>
+
+                      <div class="code-body" style="">
+                        &lt;button style=&quot;margin:7px 15px 17px 0;&quot; type=&quot;button&quot; class=&quot;btn btn-success&quot; <span class="yellow">data-toggle=&quot;popover&quot; title=&quot;&quot; data-content="Some content inside the popover" data-original-title=&quot;Popover Header&quot; data-placement=&quot;bottom&quot;</span>&gt;Click To Toggle popover&lt;/button&gt; 
+
+                        <br>&lt;a href=&quot;javascript:void(0);&quot; <span class="yellow">data-toggle=&quot;popover&quot; title=&quot;&quot; data-content="Some content inside the popover" data-original-title=&quot;Popover Header&quot; data-placement=&quot;right&quot;</span>&gt;Click To Toggle Popover&lt;/a&gt;
+                      </div> 
+                    </p>
                       
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
+                     <p>Popovers must be initialized with jQuery: <span class="code-span">select the specified element and call the popover() method</span>. The following code will enable all popovers in the document:
+                      <div class="code-body" style="">
+                        &lt;script&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp$(document).ready(function(){
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$('[data-toggle="popover"]').popover(); </span>
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp});
+                        <br>&lt;/script&gt;
+                      </div>
+                    </p>                       
 
                   </div>
                 </div>
             </div>    
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Positioning Popover</h3> </div>
+                  <div class="panel-body">  
+                    <p>By default, the popover  will appear on <span class="code-span">right side of the element</span>. Use the <span class="code-span">data-placement</span> attribute to set the position of the popover on <span class="code-span">top, bottom, left</span> or the <span class="code-span">right</span> side of the element:
+
+                      <button style="margin:7px 15px 17px 0;" type="button" class="btn btn-success" data-toggle="popover" data-placement="top" title="" data-original-title="Popover Header" data-content="Content">Click</button> 
+                      <button style="margin:7px 15px 17px 0;" type="button" class="btn btn-success" data-toggle="popover" data-placement="bottom" title="" data-original-title="Popover Header" data-content="Content">Click</button> 
+                      <button style="margin:7px 15px 17px 0;" type="button" class="btn btn-success" data-toggle="popover" data-placement="left" title="" data-original-title="Popover Header" data-content="Content">Click</button> 
+                      <button style="margin:7px 15px 17px 0;" type="button" class="btn btn-success" data-toggle="popover" data-placement="right" title="" data-original-title="Popover Header" data-content="Content">Click</button>                      
+                      <div class="code-body" style="">
+                        &lt;button style=&quot;margin:7px 15px 17px 0;&quot; type=&quot;button&quot; class=&quot;btn btn-success&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/button&gt;
+                        <br>&lt;button style=&quot;margin:7px 15px 17px 0;&quot; type=&quot;button&quot; class=&quot;btn btn-success&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;bottom&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/button&gt;
+                        <br>&lt;button style=&quot;margin:7px 15px 17px 0;&quot; type=&quot;button&quot; class=&quot;btn btn-success&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;left&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/button&gt;
+                        <br>&lt;button style=&quot;margin:7px 15px 17px 0;&quot; type=&quot;button&quot; class=&quot;btn btn-success&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;right&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/button&gt;
+                      </div>
+
+                      <br>
+                      <a href="javascript:void(0);" data-toggle="popover" data-placement="top" title="" data-original-title="Popover Header" data-content="Content">Click</a> ||
+                      <a href="javascript:void(0);" data-toggle="popover" data-placement="bottom" title="" data-original-title="Popover Header" data-content="Content">Click</a> ||
+                      <a href="javascript:void(0);" data-toggle="popover" data-placement="left" title="" data-original-title="Popover Header" data-content="Content">Click</a> ||
+                      <a href="javascript:void(0);" data-toggle="popover" data-placement="right" title="" data-original-title="Popover Header" data-content="Content">Click</a>
+                      <br>
+                      <div class="code-body" style="">                        
+                        &lt;a href=&quot;javascript:void(0);&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/a&gt;
+                        <br>&lt;a href=&quot;javascript:void(0);&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;bottom&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/a&gt;
+                        <br>&lt;a href=&quot;javascript:void(0);&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;left&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/a&gt;
+                        <br>&lt;a href=&quot;javascript:void(0);&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-placement=&quot;right&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click&lt;/a&gt;
+                      </div>
+                      <br>
+                      You can also use the data-placement attribute with a value of <span class="code-span">"auto"</span>, which will let the browser decide the position of the popover. For example, if the value is <span class="code-span">"auto left"</span>, the popover will display on the left side when possible, otherwise on the right.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Closing Popovers</h3> </div>
+                  <div class="panel-body">  
+                    <p>By default, the popover is closed when you click on the element again. However, you can use the <span class="code-span">data-trigger="focus"</span> attribute which will close the popover when clicking outside the element. If you want the popover to be displayed when you move the mouse pointer over the element, use the <span class="code-span">data-trigger="hover"</span>:
+                      <br>                      
+                      <a href="javascript:void(0);" data-toggle="popover" data-trigger="focus" data-placement="top" title="" data-original-title="Popover Header" data-content="Content">Click focus</a> ||
+                      <a href="javascript:void(0);" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-original-title="Popover Header" data-content="Content">Click hover</a>
+                      <br>
+                      <div class="code-body" style="">                        
+                        &lt;a href=&quot;javascript:void(0);&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-trigger="focus" data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click focus&lt;/a&gt;
+                        <br>&lt;a href=&quot;javascript:void(0);&quot; <span class="yellow">data-toggle=&quot;popover&quot; data-trigger="hover" data-placement=&quot;top&quot; title=&quot;&quot; data-original-title=&quot;Popover Header&quot; data-content="Content"</span>&gt;Click hover&lt;/a&gt;
+                      </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>

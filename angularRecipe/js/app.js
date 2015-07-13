@@ -46,8 +46,14 @@ app.config(['$routeProvider', function ($routeProvider) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
+	
+	//Active tooltip
+ 	$('[data-toggle="tooltip"]').tooltip(); 
+ 	
 	//Active popup modal
  	$('[data-toggle="popover"]').popover(); 
+
+
 
  	console.log($location.$$path);
 
