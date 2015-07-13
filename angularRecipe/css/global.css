@@ -243,3 +243,9 @@ div.code-body {
 .dropup {
   position: relative;
 }
+
+/* Carousel */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}

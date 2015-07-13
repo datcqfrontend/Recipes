@@ -1,38 +1,241 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsInputs2" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Form Inputs</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Form Inputs 2</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Static Control</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
+                    <p>If you need to insert plain text next to a form label within a horizontal form, use the <span class="code-span">.form-control-static</span> class on a <span class="code-span">&lt;p&gt;</span> element:
+                      <div class="code-body" style="">
+                        &lt;form <span class="yellow">class=&quot;form-horizontal&quot; role=&quot;form&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;form-group&quot;</span>&gt; 
+                        <span class="yellow">
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class=&quot;control-label col-sm-2&quot; for=&quot;email&quot;&gt;Email:&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p class=&quot;form-control-static&quot;&gt;someone@example.com&lt;/p&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        </span>
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/form&gt;                                
+                      </div>     
+                    </p>                                             
 
                   </div>
                 </div>
             </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Form Control States</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      <ul>
+                        <li><span class="code-span">INPUT FOCUS</span> - The outline of the input is removed and a box-shadow is applied on focus</li>
+                        <li><span class="code-span">DISABLED INPUTS</span> - Add a <span class="code-span">disabled</span> attribute to disable an input field</li>
+                        <li><span class="code-span">DISABLED FIELDSETS</span> -  Add a <span class="code-span">disabled</span> attribute to a fieldset to disable all controls within</li>
+                        <li><span class="code-span">READONLY INPUTS</span> - Add a <span class="code-span">READONLY INPUTS</span>readonly</span> attribute to an input to prevent user input</li>
+                        <li><span class="code-span">VALIDATION STATES</span> - Bootstrap includes validation styles for error, warning, and success messages. To use, add <span class="code-span">.has-warning, .has-error, or .has-success</span> to the parent element</li>
+                        <li><span class="code-span">ICONS</span> - You can add feedback icons with the <span class="code-span">.has-feedback</span> class and an icon</li>
+                        <li><span class="code-span">HIDDEN LABELS</span> - Add a <span class="code-span">.sr-only</span> class on non-visible labels</li>
+                      </ul>
+
+                      The following example demonstrates some of the form control states above in a <span class="code-span">Horizontal form</span>:
+                      
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Focused</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" id="focusedInput" type="text" value="Click to focus">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPassword" class="col-sm-2 control-label">Disabled</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" id="disabledInput" type="text" disabled>
+                          </div>
+                        </div>
+                        <fieldset disabled>
+                          <div class="form-group">
+                            <label for="disabledTextInput" class="col-sm-2 control-label">Fieldset disabled</label>
+                            <div class="col-sm-10">
+                              <input type="text" id="disabledTextInput" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="disabledSelect" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-10">
+                              <select id="disabledSelect" class="form-control">
+                                <option>Disabled select</option>
+                              </select>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                      <div class="code-body" style="">
+                        &lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class=&quot;col-sm-2 control-label&quot;&gt;Focused&lt;/label&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class=&quot;form-control&quot; id=&quot;focusedInput&quot; type=&quot;text&quot; value=&quot;Click to focus&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;inputPassword&quot; class=&quot;col-sm-2 control-label&quot;&gt;Disabled&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class=&quot;form-control&quot; id=&quot;disabledInput&quot; type=&quot;text&quot; disabled&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;fieldset disabled&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;disabledTextInput&quot; class=&quot;col-sm-2 control-label&quot;&gt;Fieldset disabled&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; id=&quot;disabledTextInput&quot; class=&quot;form-control&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;disabledSelect&quot; class=&quot;col-sm-2 control-label&quot;&gt;&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;select id=&quot;disabledSelect&quot; class=&quot;form-control&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;option&gt;Disabled select&lt;/option&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/select&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/fieldset&gt; 
+                        <br>&lt;/form&gt;  
+                      </div>
+
+                      <br>
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group has-success has-feedback">
+                          <label class="col-sm-2 control-label" for="inputSuccess">
+                          Input with success and icon</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputSuccess">
+                            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                          </div>
+                        </div>
+                        <div class="form-group has-warning has-feedback">
+                          <label class="col-sm-2 control-label" for="inputWarning">
+                          Input with warning and icon</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputWarning">
+                            <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                          </div>
+                        </div>
+                        <div class="form-group has-error has-feedback">
+                          <label class="col-sm-2 control-label" for="inputError">
+                          Input with error and icon</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputError">
+                            <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                          </div>
+                        </div>
+                      </form>     
+                      <div class="code-body" style="">
+                        &lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group has-success has-feedback&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;inputSuccess&quot;&gt; Input with success and icon&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputSuccess&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-ok form-control-feedback&quot;&gt;&lt;/span&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group has-warning has-feedback&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;inputWarning&quot;&gt; Input with warning and icon&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputWarning&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-warning-sign form-control-feedback&quot;&gt;&lt;/span&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group has-error has-feedback&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;inputError&quot;&gt; Input with error and icon&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputError&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-remove form-control-feedback&quot;&gt;&lt;/span&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/form&gt;                              
+                      </div>                 
+
+                      <br>
+                      <form class="form-inline" role="form">
+                        <div class="form-group">
+                          <label for="focusedInput">Focused</label>
+                          <input class="form-control" id="focusedInput" type="text">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPassword">Disabled</label>
+                          <input class="form-control" id="disabledInput" type="text" disabled>
+                        </div>
+                        <div class="form-group has-success has-feedback">
+                          <label for="inputSuccess2">Input with success</label>
+                          <input type="text" class="form-control" id="inputSuccess2">
+                          <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-warning has-feedback">
+                          <label for="inputWarning2">Input with warning</label>
+                          <input type="text" class="form-control" id="inputWarning2">
+                          <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-error has-feedback">
+                          <label for="inputError2">Input with error</label>
+                          <input type="text" class="form-control" id="inputError2">
+                          <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                        </div>
+                      </form>
+                      <br>
+                      <div class="code-body" style="">
+                        &lt;form class=&quot;form-inline&quot; role=&quot;form&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for="focusedInput"&gt;Focused&lt;/label&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class="form-control" id="focusedInput" type="text"&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for="inputPassword"&gt;Disabled&lt;/label&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input class="form-control" id="disabledInput" type="text" disabled&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group has-success has-feedback&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;inputSuccess2&quot;&gt; Input with success&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputSuccess2&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-ok form-control-feedback&quot;&gt;&lt;/span&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group has-warning has-feedback&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;inputWarning2&quot;&gt; Input with warning&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputWarning2&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-warning-sign form-control-feedback&quot;&gt;&lt;/span&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group has-error has-feedback&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;inputError2&quot;&gt; Input with success&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputError2&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-remove form-control-feedback&quot;&gt;&lt;/span&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&lt;/form&gt; 
+                      </div>
+                           
+                    </p>                                             
+
+                  </div>
+                </div>
+            </div> 
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>

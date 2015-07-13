@@ -1,34 +1,224 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsInputs" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Form Inputs</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Inputs</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>Supported Form Controls</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    <p>Bootstrap supports the following form controls:
+                      <ul>
+                        <li>input</li>
+                        <li>textarea</li>
+                        <li>checkbox</li>
+                        <li>radio</li>
+                        <li>select</li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+            </div>  
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Input</h3> </div>
+                  <div class="panel-body">  
+                    <p>Bootstrap supports all the HTML5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color. Inputs will NOT be fully styled if their type is not properly declared!
+                      <br>The following example contains two input elements; one of type text and one of type password:
+
+                      <div class="form-group">
+                        <label for="usr">Name:</label>
+                        <input type="text" class="form-control" id="usr">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                      </div>
+
+                      <div class="code-body" style="">
+                        &lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;usr&quot;&gt;Name:&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input <span class="yellow">type=&quot;text&quot; class=&quot;form-control&quot;</span> id=&quot;usr&quot;&gt; 
+                        <br>&lt;/div&gt; 
+                        <br>&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;pwd&quot;&gt;Password:&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input <span class="yellow">type=&quot;password&quot; class=&quot;form-control&quot;</span> id=&quot;pwd&quot;&gt; 
+                        <br>&lt;/div&gt;
+                      </div> 
+
+                    </p>
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Textarea</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+
+                      <div class="code-body" style="">
+                        &lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;comment&quot;&gt;Comment:&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">&lt;textarea class=&quot;form-control&quot; rows=&quot;5&quot; id=&quot;comment&quot;&gt;&lt;/textarea&gt;</span> 
+                        <br>&lt;/div&gt;
+                      </div> 
+
+                    </p>
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Checkboxes</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">Option 1</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">Option 2</label>
+                        </div>
+                        <div class="checkbox disabled">
+                          <label><input type="checkbox" value="" disabled>Option 3</label>
+                        </div>
+                      </div>
+
+                      <div class="code-body" style="">
+                        &lt;div class=&quot;form-group&quot;&gt; 
+                        <br><span class="yellow">&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;checkbox&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;Option 1&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;checkbox&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;Option 2&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;checkbox disabled&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot; disabled&gt;Option 3&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;</span>
+                        <br>&lt;/div&gt;
+                      </div>                     
+                    </p>
+
+                    <p>Use the <span class="code-span">.checkbox-inline</span> class if you want the checkboxes to appear on the same line:
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+                        <br>
+                        <div class="code-body" style="">
+                          &lt;div class=&quot;form-group&quot;&gt; 
+                          <span class="yellow">
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class="checkbox-inline"&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;Option 1&lt;/label&gt;                           
+                          
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class="checkbox-inline"&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;Option 2&lt;/label&gt; 
+                          
+                          ; 
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class="checkbox-inline"&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot; disabled&gt;Option 3&lt;/label&gt; 
+                          </span>
+                          <br>&lt;/div&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Radio Buttons</h3> </div>
+                  <div class="panel-body">  
+                    <p>Radio buttons are used if you want to limit the user to just one selection from a list of preset options.
+                      <div class="form-group">
+                        <div class="radio">
+                          <label><input type="radio" name="optradio">Option 1</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="optradio">Option 2</label>
+                        </div>
+                        <div class="radio disabled">
+                          <label><input type="radio" name="optradio" disabled>Option 3</label>
+                        </div>
+                      </div>
+
+                      <div class="code-body" style="">
+                        &lt;div class=&quot;form-group&quot;&gt; 
+                        <br><span class="yellow">&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;checkbox&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label&gt;&lt;input type=&quot;radio&quot; name="optradio" value=&quot;&quot;&gt;Option 1&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;checkbox&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label&gt;&lt;input type=&quot;radio&quot; name="optradio" value=&quot;&quot;&gt;Option 2&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;checkbox disabled&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label&gt;&lt;input type=&quot;radio&quot; name="optradio" value=&quot;&quot; disabled&gt;Option 3&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;</span>
+                        <br>&lt;/div&gt;
+                      </div> 
+
+                    </p>
+
+                    <p>Use the <span class="code-span">.radio-inline</span> class if you want the radio buttons to appear on the same line:
+                        <label class="radio-inline"><input type="radio" value="">Option 1</label>
+                        <label class="radio-inline"><input type="radio" value="">Option 2</label>
+                        <label class="radio-inline"><input type="radio" value="">Option 3</label>
+                        <br>
+                        <div class="code-body" style="">
+                          &lt;div class=&quot;form-group&quot;&gt; 
+                          <span class="yellow">
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class="radio-inline"&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot;&gt;Option 1&lt;/label&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class="radio-inline"&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot;&gt;Option 2&lt;/label&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label class="radio-inline"&gt;&lt;input type=&quot;radio&quot; value=&quot;&quot; disabled&gt;Option 3&lt;/label&gt; 
+                          </span>
+                          <br>&lt;/div&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap Select List</h3> </div>
+                  <div class="panel-body">  
+                    <p>Select lists are used if you want to allow the user to pick from multiple options.
+                      <div class="form-group">
+                        <label for="sel1">Select list:</label>
+                        <select class="form-control" id="sel1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
+                      </div>
+
+                      <div class="code-body" style="">
+                        &lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;sel1&quot;&gt;Select list:&lt;/label&gt; 
+                        <span class="yellow">
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;select class=&quot;form-control&quot; id=&quot;sel1&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;option&gt;1&lt;/option&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;option&gt;2&lt;/option&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;option&gt;3&lt;/option&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;option&gt;4&lt;/option&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/select&gt; 
+                        </span>
+                        <br>&lt;/div&gt;
+                      </div>  
+                    </p>
                       
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
+                                                 
 
                   </div>
                 </div>

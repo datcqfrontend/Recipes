@@ -1,38 +1,195 @@
-<div  id="bsImages" class="bs section">
+<div  id="bsModal" class="bs section">
 
     <div class="container">
 
          <div class="row">
             <div class="col-lg-12">
-                <h1>Bootstrap Images</h2>                
+                <h1>Bootstrap Modal Plugin</h2>                
                 <ol class="breadcrumb">
                     <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Images</li>
+                    <li class="active">Modal Plugin</li>
                 </ol>
             </div>
         
              <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Bootstrap Image Shapes</h3> </div>
+                  <div class="panel-heading"><h3>The Modal Plugin</h3> </div>
                   <div class="panel-body">  
-                    
-                      
-                    <div class="code-body" style="">
-                      &lt;!-- Rounded Corners --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-rounded&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
+                    <p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page. Plugins can be included individually (using Bootstrap's individual "modal.js" file), or all at once (using "bootstrap.js" or "bootstrap.min.js").
+                      <br>
+                      <!-- Trigger the modal with a button -->
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-                      <br>
-                      <br>&lt;!-- Circle --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-circle&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                      
-                      <br>
-                      <br>&lt;!-- Thumbnail --&gt;
-                      <br>&lt;img src=&quot;images/bs.png&quot; <span class="yellow">class=&quot;img-responsive img-thumbnail&quot;</span> alt=&quot;Bootstrap&quot; style=&quot;width:204px;height:auto;&quot;&gt;
-                    </div>                               
+                      <!-- Modal -->
+                      <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                              <p>Some text in the modal.</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="code-body" style="">
+                        &lt;!-- Trigger the modal with a button --&gt; 
+                        <br>&lt;button type=&quot;button&quot; class=&quot;btn btn-info btn-lg&quot; <span class="yellow">data-toggle=&quot;modal&quot; data-target=&quot;#myModal&quot;</span>&gt;Open Modal&lt;/button&gt; 
+
+                        <br>
+                        <br>&lt;!-- Modal --&gt; 
+                        <br>&lt;div <span class="yellow">id=&quot;myModal&quot; class=&quot;modal fade&quot; role=&quot;dialog&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-dialog&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;!-- Modal content--&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-content&quot;</span>&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-header&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button <span class="yellow">type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot;</span>&gt;&amp;times;&lt;/button&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 <span class="yellow">class=&quot;modal-title&quot;</span>&gt;Modal Header&lt;/h4&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-body&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Some text in the modal.&lt;/p&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-footer&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; <span class="yellow">data-dismiss=&quot;modal&quot;</span>&gt;Close&lt;/button&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/div&gt;
+                      </div>                      
+                    </p>  
+
+                    <p>
+                      <div class="example-body" style="">
+                        <h3>Example Explained:</h3>
+                        <h4>+ The <span class="code-span">"Trigger"</span> part:</h4>
+                        To trigger the modal window, you need to use a button or a link.
+
+                        <h4>+ Then include the two <span class="code-span">"data-*"</span> attributes:</h4>
+                        <ul>
+                          <li><span class="code-span">data-toggle="modal"</span> opens the modal window</li>
+                          <li><span class="code-span">data-target="#myModal"</span> points to the id of the modal</li>
+                        </ul>
+
+                        <h4>+ The <span class="code-span">"Modal"</span> part:</h4>
+                        The parent <span class="code-span">&lt;div&gt;</span> of the modal must have an ID that is the same as the value of the <span class="code-span">data-target</span> attribute used to trigger the modal ("myModal").<br>
+                        The <span class="code-span">.modal</span> class identifies the content of <span class="code-span">&lt;div&gt;</span> as a modal and brings focus to it.<br>
+                        The <span class="code-span">.fade</span> class adds a transition effect which fades the modal in and out. Remove this class if you do not want this effect.<br>
+                        The attribute <span class="code-span">role="dialog"</span> improves accessibility for people using screen readers.<br>
+                        The <span class="code-span">.modal-dialog</span> class sets the proper width and margin of the modal.
+
+                        <h4>+ The <span class="code-span">"Modal content"</span> part:</h4>
+                        The <span class="code-span">&lt;div&gt;</span> with <span class="code-span">class="modal-content"</span> styles the modal (border, background-color, etc.). Inside this <span class="code-span">&lt;div&gt;</span>, add the modal's header, body, and footer.<br>
+                        The <span class="code-span">.modal-header</span> class is used to define the style for the header of the modal. The <span class="code-span">&lt;button&gt;</span> inside the header has a <span class="code-span">data-dismiss="modal"</span> attribute which closes the modal if you click on it. The <span class="code-span">.close</span> class styles the close button, and the <span class="code-span">.modal-title</span> class styles the header with a proper line-height.<br>
+                        The <span class="code-span">.modal-body</span> class is used to define the style for the body of the modal. Add any HTML markup here; paragraphs, images, videos, etc.<br>
+                        The <span class="code-span">.modal-footer</span> class is used to define the style for the footer of the modal. Note that this area is right aligned by default.
+                      </div>
+                    </p>                                                   
 
                   </div>
                 </div>
             </div>    
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Modal Size</h3> </div>
+                  <div class="panel-body">  
+                    <p>Change the size of the modal by adding the <span class="code-span">.modal-sm</span> class for small modals or <span class="code-span">.modal-lg</span> class for large modals.<br>
+                      Add the size class to the <span class="code-span">&lt;div&gt;</span> element with class <span class="code-span">.modal-dialog</span>:
+                      <br>
+                      <!-- Trigger the modal with a button -->
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myLargeModal">Open Large Modal</button>
+                      <br>                      
+                      <div class="code-body" style="">
+                        &lt;!-- Modal --&gt; 
+                        <br>&lt;div <span class="yellow">id=&quot;myModal&quot; class=&quot;modal fade&quot; role=&quot;dialog&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-dialog modal-lg&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;!-- Modal content--&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-content&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp.............................................................
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/div&gt;
+                      </div> 
+
+                      <br>
+                      <!-- Trigger the modal with a button -->
+                      <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#mySmallModal">Open Small Modal</button>
+                      <br>
+                      <br>
+                      <div class="code-body" style="">
+                        &lt;!-- Modal --&gt; 
+                        <br>&lt;div <span class="yellow">id=&quot;myModal&quot; class=&quot;modal fade&quot; role=&quot;dialog&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-dialog modal-sm&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;!-- Modal content--&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;modal-content&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp.............................................................
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/div&gt;
+                      </div> 
+
+                    </p>
+                    
+
+
+                  </div>
+                </div>
+
+                <!-- Modal Large-->
+                <div id="myLargeModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Some text in the large modal.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Modal Small-->
+                <div id="mySmallModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog modal-sm">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Some text in the small modal.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>
