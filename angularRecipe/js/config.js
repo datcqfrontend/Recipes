@@ -32,7 +32,7 @@ var fw = {
 
 					{"page":"pager"  },
 					{"page":"listGroups"  },
-					{"page":"dropDowns"  },
+					{"page":"dropdowns"  },
 
 					{"page":"tabsPills"  },
 					{"page":"navbar"  },
@@ -47,7 +47,8 @@ var fw = {
 					{"page":"modal"  },
 
 					{"page":"tooltip"  },
-					{"page":"popover"  }
+					{"page":"popover"  },
+					{"page":"collapse"  }
 				]
 			}
 

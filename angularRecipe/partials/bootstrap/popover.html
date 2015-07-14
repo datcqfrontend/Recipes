@@ -99,6 +99,306 @@
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Via JavaScript</h3> </div>
+                  <div class="panel-body">  
+                    <div class="example-body">                      
+                      // Select all elements with data-toggle="popover" in the document
+                      <br>$('[data-toggle="popover"]').<span class="yellow">popover();</span> 
+                      <br>
+                      <br>// Select a specified element
+                      <br>$('#myPopover').<span class="yellow">popover();</span> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Popover Options</h3> </div>
+                  <div class="panel-body">  
+                      
+                    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <span class="span-code">data-</span>, as in <span class="span-code">data-placement=""</span>.
+                        <table class="reference notranslate">
+                          <tbody><tr>
+                            <th style="width:15%;">Name</th>
+                            <th style="width:15%;">Type</th>
+                            <th style="width:10%;">Default</th>
+                            <th style="width:60%;">Description</th>
+                            
+                          </tr>
+                          <tr>
+                            <td>animation</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>
+                          <p>Specifies whether to add a CSS fade transition effect when opening and 
+                          closing the popover</p>
+                          <ul>
+                            <li>true - Add a fading effect</li>
+                            <li>false - Do not add a fading effect</li>
+                          </ul>
+                            </td>
+                            
+                          </tr>
+                          <tr>
+                            <td>container</td>
+                            <td>string, or the boolean false</td>
+                            <td>false</td>
+                            <td>Appends the popover to a specific element. <br>Example: container: 
+                          'body'</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>content</td>
+                            <td>string</td>
+                            <td>""</td>
+                            <td>Specifies the text inside the popover's body</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>delay</td>
+                            <td>number, or object</td>
+                            <td>0</td>
+                            <td>Specifies the number of milliseconds it will take to open and close the 
+                          popover.<br><br>To 
+                          specify a delay for opening and another one for closing, use the object structure:<br><br>delay: {show: 
+                          500, hide: 100} - which will take 500 ms to open the popover, but only 100 ms 
+                          to close it</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>html</td>
+                            <td>boolean&nbsp;</td>
+                            <td>false</td>
+                            <td>Specifies whether to accept HTML tags in the popover:<br>&nbsp;<ul>
+                            <li>true - Accept HTML tags</li>
+                            <li>false - Do not accept HTML tags</li>
+                          </ul>
+                          <strong>Note:</strong>
+                          The HTML must be inserted in the title attribute (or using the title 
+                          option). <br><br>When set to false (default), jQuery's <a href="/jquery/html_text.asp">text()</a> 
+                          method will be used. Use this if you are worried about XSS attacks</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>placement</td>
+                            <td>string</td>
+                            <td>"right"</td>
+                            <td>Specifies the popover position. Possible values:<br><br><ul>
+                            <li>"top" - Popover on top</li>
+                            <li>"bottom" - Popover on bottom</li>
+                            <li>"left" - Popover on left</li>
+                            <li>"right" - Popover on right</li>
+                            <li>"auto" - Lets the browser decide the position of the 
+                            popover. For 
+                            example, if the value is "auto left", the popover will display on the 
+                            left side when possible, otherwise on the right. If the value is "auto 
+                            bottom", the popover will display at the bottom when possible, otherwise 
+                            on the top</li>
+                          </ul>
+                            </td>
+                            
+                          </tr>
+                          <tr>
+                            <td>selector</td>
+                            <td>string, or the boolean false</td>
+                            <td>false</td>
+                            <td>Adds the popover to a specified selector</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>template</td>
+                            <td>string</td>
+                            <td>&nbsp;</td>
+                            <td>Base HTML to use when creating the popover.<br><br>The popover's title 
+                          will be injected into the .popover-title.<br><br>The popover's content will 
+                          be injected into the .popover-content.<br><br>.arrow will become the 
+                          popover's arrow.<br><br>The outermost wrapper element should have the 
+                          .popover class.</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>title</td>
+                            <td>string</td>
+                            <td>""</td>
+                            <td>Specifies the header text of the popover</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>trigger</td>
+                            <td>string</td>
+                            <td>"click"</td>
+                            <td>Specifies how the popover is triggered. Possible values:<br><br><ul>
+                            <li>"click" - Trigger the popover with a click</li>
+                            <li>"hover" - Trigger the popover on hover</li>
+                            <li>"focus" - Trigger the popover when it gets focus (by tabbing or 
+                            clicking .e.g)</li>
+                            <li>"manual" - Trigger the popover manually</li>
+                          </ul>
+                          <strong>Tip:</strong> To pass multiple values, separate them with a space</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>viewport</td>
+                            <td>string, or object</td>
+                            <td>{selector: "body", padding: 0}</td>
+                            <td>Keeps the popover within the bounds of this element. <br><br>Example: viewport: 
+                          '#viewport' or {selector: '#viewport', padding: 0}</td>
+                            
+                          </tr>
+                        </tbody></table>
+                    </p>                                        
+                    
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Popover Methods</h3> </div>
+                  <div class="panel-body">  
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th>Method</th>
+                        <th style="width:60%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>.popover(<em>options</em>)</td>
+                        <td>Activates the popover with an option. See options above for valid values</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.popover("show")</td>
+                        <td>Shows the popover</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.popover("hide")</td>
+                        <td>Hides the popover</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.popover("toggle")</td>
+                        <td>Toggles the popover</td>
+                        
+                        </tr>
+                      <tr>
+                        <td>.popover("destroy")</td>
+                        <td>Hides and destroys the popover</td>
+                        
+                      </tr>
+                    </tbody></table>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Popover Events</h3> </div>
+                  <div class="panel-body">  
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th>Event</th>
+                        <th style="width:60%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>show.bs.popover </td>
+                        <td>Occurs when the popover is about to be shown</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>shown.bs.popover </td>
+                        <td>Occurs when the popover is fully shown (after CSS transitions have 
+                      completed)</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>hide.bs.popover </td>
+                        <td>Occurs when the popover is about to be hidden</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>hidden.bs.popover </td>
+                        <td>Occurs when the popover is fully hidden (after CSS transitions have 
+                      completed)</td>
+                        
+                        </tr>
+                    </tbody></table>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Custom Popover Design</h3> </div>
+                  <div class="panel-body">  
+                    <p id="popoverDesign">Use CSS to customize the look of the popover:
+                      <style>
+                      /* Popover */ 
+                        #popoverDesign .popover { 
+                              border: 2px dotted red; 
+                        } 
+
+                        /* Popover Header */ 
+                        #popoverDesign .popover-title { 
+                              background-color: #8AC007; 
+                              color: #FFFFFF; 
+                              font-size: 28px; 
+                              text-align:center; 
+                        } 
+
+                        /* Popover Body */ 
+                        #popoverDesign .popover-content { 
+                              background-color: coral; 
+                              color: #FFFFFF; 
+                              padding: 25px; 
+                        } 
+
+                        /* Popover Arrow */ 
+                        #popoverDesign .arrow { 
+                              border-right-color: red !important; 
+                        }
+                      </style>
+                      <a href="" target="_self" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+                      <br>
+
+                      <div class="example-body">                      
+                        /* Popover */
+                        <br>.popover {
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    border: 2px dotted red;
+                        <br>}
+                        <br>
+                        <br>/* Popover Header */
+                        <br>.popover-title {
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    background-color: #8AC007; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    color: #FFFFFF; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    font-size: 28px;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    text-align:center;
+                        <br>}
+                        <br>
+                        <br>/* Popover Body */
+                        <br>.popover-content {
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    background-color: coral;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    color: #FFFFFF;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    padding: 25px;
+                        <br>}
+                        <br>
+                        <br>/* Popover Arrow */
+                        <br>.arrow {
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp    border-right-color: red !important;
+                        <br>}
+                      </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
             <ul class="pager">
               <li><a href="#">Previous</a></li>
               <li><a href="#">Next</a></li>

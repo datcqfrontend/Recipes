@@ -137,7 +137,7 @@
                     </div>  
 
                     <p>
-                      <div class="example-body" style="">
+                      
                         <h3>Example Explained:</h3>
                         <h4>+ The outermost <span class="code-span">&lt;div&gt;</span>:</h4>
                         Carousels require the use of an id (in this case <span class="code-span">id="myCarousel"</span>) for carousel controls to function properly.<br>
@@ -161,12 +161,164 @@
 
                         <h4>+ Add <span class="code-span">Captions to Slides</span>:</h4>
                         Add <span class="code-span">&lt;div class="carousel-caption"&gt;</span> within each <span class="code-span">&lt;div class="item"&gt;</span> to create a caption for each slide.
-                      </div>
+                      
                     </p>                             
 
                   </div>
                 </div>
             </div>    
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Via JavaScript</h3> </div>
+                  <div class="panel-body"> 
+                    <div class="example-body">
+                      // Activate Carousel
+                      <br><span class="yellow">$("#myCarousel").carousel();</span>
+                      <br>
+                      <br>// Enable Carousel Indicators
+                      <br>$(".item").click(function(){
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$("#myCarousel").carousel(1);</span>
+                      <br>});
+                      <br>
+                      <br>// Enable Carousel Controls
+                      <br>$(".left").click(function(){
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$("#myCarousel").carousel("prev");</span>
+                      <br>});
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Carousel Options</h3> </div>
+                  <div class="panel-body"> 
+                    <p>Options can be passed via data attributes or JavaScript. For <span class="code-span">data</span> attributes, append the option name to <span class="code-span">data-</span>, as in <span class="code-span">data-interval=""</span></p>
+                    
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th style="width:15%;">Name</th>
+                        <th style="width:15%;">Type</th>
+                        <th style="width:10%;">Default</th>
+                        <th style="width:52%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>interval</td>
+                        <td>number, or the boolean false</td>
+                        <td>5000</td>
+                        <td>
+                      Specifies the delay (in milliseconds) between each slide.<br><br><strong>
+                      Note:</strong> Set interval 
+                      to <strong>false</strong> to stop the items from automatically 
+                      sliding</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>pause</td>
+                        <td>string, or the boolean false</td>
+                        <td>"hover"</td>
+                        <td>Pauses the carousel from going through the next slide when the mouse 
+                      pointer enters the carousel, and resumes the sliding when the mouse pointer 
+                      leaves the carousel<br><br><strong>Note:</strong> Set pause to <strong>false</strong> to 
+                      stop the ability to pause on hover</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>wrap</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Specifies whether the carousel should go through all slides continuously, 
+                      or stop at the last slide<br><br>
+                        <ul>
+                      <li>true - cycle continuously</li> 
+                      <li>false - stop at the last item</li>
+                      </ul>
+                        </td>
+                        
+                      </tr>
+                    </tbody></table>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Carousel Methods</h3> </div>
+                  <div class="panel-body"> 
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th>Method</th>
+                        <th style="width:60%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>.carousel(<em>options</em>)</td>
+                        <td>Activates the carousel with an option. See options above for valid values</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.carousel("cycle")</td>
+                        <td>Goes through the carousel items from left to right</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.carousel("pause")</td>
+                        <td>Stops the carousel from going through items</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.carousel(number)</td>
+                        <td>Goes to a specified item (zero-based: first item is 0, second item is 1, 
+                      etc..)</td>
+                        
+                        </tr>
+                      <tr>
+                        <td>.carousel("prev")</td>
+                        <td>Goes to the previous item</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.carousel("next")</td>
+                        <td>Goes to the next item</td>
+                        
+                      </tr>
+                    </tbody></table>
+                    
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Carousel Events</h3> </div>
+                  <div class="panel-body"> 
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th>Event</th>
+                        <th style="width:60%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>slide.bs.modal</td>
+                        <td>Occurs when the carousel is about to slide from one item to another</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>slid.bs.modal</td>
+                        <td>Occurs when the carousel has finished sliding from one item to another</td>
+                        
+                      </tr>
+                    </tbody></table>
+                    
+
+                  </div>
+                </div>
+            </div>
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>

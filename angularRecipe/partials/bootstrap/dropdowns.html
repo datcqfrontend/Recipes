@@ -281,6 +281,87 @@
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Via JavaScript</h3> </div>
+                  <div class="panel-body">  
+                    <div class="example-body">
+                      $('.dropdown-toggle').<span class="yellow">dropdown();</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dropdown Accessibility</h3> </div>
+                  <div class="panel-body">  
+                    <div class="table-responsive">
+                      <table class="reference notranslate">
+                        <tbody><tr>
+                          <th>Method</th>
+                          <th style="width:60%;">Description</th>
+                          
+                        </tr>
+                        <tr>
+                          <td>.dropdown("toggle")</td>
+                          <td>Toggles the dropdown</td>
+                          
+                        </tr>
+                      </tbody></table>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Dropdown Events</h3> </div>
+                  <div class="panel-body">  
+                    <div class="table-responsive">
+                      <table class="reference notranslate">
+                        <tbody><tr>
+                          <th>Event</th>
+                          <th style="width:60%;">Description</th>
+                          
+                        </tr>
+                        <tr>
+                          <td>show.bs.dropdown</td>
+                          <td>Occurs when the dropdown is about to be shown.</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>shown.bs.dropdown</td>
+                          <td>Occurs when the dropdown is fully shown (after CSS transitions have 
+                        completed)</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>hide.bs.dropdown</td>
+                          <td>Occurs when the dropdown is about to be hidden</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>hidden.bs.dropdown</td>
+                          <td>Occurs when the dropdown is fully hidden (after CSS transitions have 
+                        completed)</td>
+                          
+                          </tr>
+                      </tbody></table>
+
+                      <div class="example-body">
+                        <span class="yellow">$(".dropdown").on("show.bs.dropdown",</span> function(event){
+                            <br>&nbsp&nbsp&nbsp&nbsp&nbsp var x = <span class="yellow">$(event.relatedTarget).text();</span> // Get the text of the element
+                            <br>&nbsp&nbsp&nbsp&nbsp&nbsp alert(x);
+                        <br>});
+                      </div>
+
+                      
+                      </div>
+                  </div>
+                </div>
+            </div>
+
             <ul class="pager">
               <li><a href="#">Previous</a></li>
               <li><a href="#">Next</a></li>

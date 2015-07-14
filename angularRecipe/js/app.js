@@ -17,7 +17,9 @@ app.config(['$routeProvider', function ($routeProvider) {
 	.when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
 
 		// jQuery
-		//.when("/jquery/home", {templateUrl: "partials/jquery/home.html", controller: "PageCtrl"})
+		.when("/jquery/home", {templateUrl: "partials/jquery/home.html", controller: "PageCtrl"})
+		// Angular
+		.when("/angular/home", {templateUrl: "partials/angular/home.html", controller: "PageCtrl"})
 
 		// Bootstrap
 		.when("/:groupName/:pageName", {
@@ -29,8 +31,6 @@ app.config(['$routeProvider', function ($routeProvider) {
 		})
 
 		
-		// Angular
-		//.when("/angular/home", {templateUrl: "partials/angular/home.html", controller: "PageCtrl"})
 
 	
 	// Blog
@@ -46,15 +46,17 @@ app.config(['$routeProvider', function ($routeProvider) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
-	
+	//Active navbar header
+	//$('.navbar li').removeClass('active');
+	//$('.navbar li#'+fw.currentGroupName).addClass('active');
+
 	//Active tooltip
  	$('[data-toggle="tooltip"]').tooltip(); 
- 	
+
 	//Active popup modal
  	$('[data-toggle="popover"]').popover(); 
 
-
-
+ 	 	
  	console.log($location.$$path);
 
  	if(!fw.canNext)	$('.pager li:nth-child(2):not(.deactive)').hide();
@@ -63,7 +65,7 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
  	$('.pager').on('click','li',function(e){
  		e.preventDefault();
 
- 		console.log($('a',this)[0].innerHTML);
+ 		//console.log($('a',this)[0].innerHTML);
 
  		if($(this).hasClass('deactive')) return;
 

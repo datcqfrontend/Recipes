@@ -72,7 +72,7 @@
                     </p>  
 
                     <p>
-                      <div class="example-body" style="">
+                      
                         <h3>Example Explained:</h3>
                         <h4>+ The <span class="code-span">"Trigger"</span> part:</h4>
                         To trigger the modal window, you need to use a button or a link.
@@ -95,7 +95,7 @@
                         The <span class="code-span">.modal-header</span> class is used to define the style for the header of the modal. The <span class="code-span">&lt;button&gt;</span> inside the header has a <span class="code-span">data-dismiss="modal"</span> attribute which closes the modal if you click on it. The <span class="code-span">.close</span> class styles the close button, and the <span class="code-span">.modal-title</span> class styles the header with a proper line-height.<br>
                         The <span class="code-span">.modal-body</span> class is used to define the style for the body of the modal. Add any HTML markup here; paragraphs, images, videos, etc.<br>
                         The <span class="code-span">.modal-footer</span> class is used to define the style for the footer of the modal. Note that this area is right aligned by default.
-                      </div>
+                      
                     </p>                                                   
 
                   </div>
@@ -190,6 +190,263 @@
                   </div>
                 </div>
             </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Via JavaScript</h3> </div>
+                  <div class="panel-body">  
+                    <div class="example-body">
+                      $("#myModal").<span class="yellow">modal();</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Modal Options</h3> </div>
+                  <div class="panel-body">  
+                    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <span class="code-span">data-</span>, as in <span class="code-span">data-backdrop=""</span>.</p>
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th style="width:14%;">Name</th>
+                        <th style="width:16%;">Type</th>
+                        <th style="width:10%;">Default</th>
+                        <th style="width:52%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>backdrop</td>
+                        <td>boolean or the string "static"</td>
+                        <td>true</td>
+                        <td>
+                      Specifies whether the modal should have a dark overlay:<br><br>
+                      <ul>
+                      <li>true - dark overlay</li> 
+                      <li>false - no overlay (transparent)</li>
+                      </ul>
+                      <p>If you specify the value "static", it is not possible to close the modal 
+                      when clicking outside of it</p>
+                      </td>
+                        
+                      </tr>
+                      <tr>
+                        <td>keyboard</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Specifies whether the modal can be closed with the escape key (Esc):<br><br>
+                        <ul>
+                      <li>true - the modal can be closed with Esc</li> 
+                      <li>false - the modal cannot be closed with Esc</li>
+                      </ul>
+                      </td>
+                       
+                      </tr>
+                      <tr>
+                        <td>show</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Specifies whether to show the modal when initialized</td>
+                        
+                    </tbody></table>
+
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Modal Methods</h3> </div>
+                  <div class="panel-body">  
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th>Method</th>
+                        <th style="width:60%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>.modal(<em>options</em>)</td>
+                        <td>Activates the content as a modal. See options above for valid values</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.modal("toggle")</td>
+                        <td>Toggles the modal</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.modal("show")</td>
+                        <td>Opens the modal</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>.modal("hide")</td>
+                        <td>Hides the modal</td>
+                        
+                        </tr>
+                    </tbody></table>
+
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Modal Events</h3> </div>
+                  <div class="panel-body">  
+                    <table class="reference notranslate">
+                      <tbody><tr>
+                        <th>Event</th>
+                        <th style="width:60%;">Description</th>
+                        
+                      </tr>
+                      <tr>
+                        <td>show.bs.modal</td>
+                        <td>Occurs when the modal is about to be shown</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>shown.bs.modal</td>
+                        <td>Occurs when the modal is fully shown (after CSS transitions have 
+                      completed)</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>hide.bs.modal</td>
+                        <td>Occurs when the modal is about to be hidden</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>hidden.bs.modal</td>
+                        <td>Occurs when the modal is fully hidden (after CSS transitions have 
+                      completed)</td>
+                        
+                        </tr>
+                    </tbody></table>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Modal Login Example</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
+
+                      <script>
+                      $(document).ready(function(){
+                          $("#myBtn").click(function(){
+                              $("#myModalLogin").modal();
+                          });
+                      });
+                      </script>
+                    </p>
+
+                    <p>
+                      <div class="code-body">
+                        &lt;!-- Trigger the modal with a button --&gt; 
+                        <br>&lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg&quot; id=&quot;myBtn&quot;&gt;Login&lt;/button&gt; 
+                        <br>
+                        <br>&lt;!-- Modal --&gt; 
+                        <br>&lt;div class=&quot;modal fade&quot; id=&quot;myModal&quot; role=&quot;dialog&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;modal-dialog&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;!-- Modal content--&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;modal-content&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;modal-header&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot;&gt;&amp;times;&lt;/button&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 style=&quot;color:red;&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-lock&quot;&gt;&lt;/span&gt; Login&lt;/h4&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;modal-body&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;form role=&quot;form&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;usrname&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt; Username&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;usrname&quot; placeholder=&quot;Enter email&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label for=&quot;psw&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-eye-open&quot;&gt;&lt;/span&gt; Password&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;psw&quot; placeholder=&quot;Enter password&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;checkbox&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot; checked&gt;Remember me&lt;/label&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button type=&quot;submit&quot; class=&quot;btn btn-default btn-success btn-block&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-off&quot;&gt;&lt;/span&gt; Login
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/form&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;modal-footer&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;button type=&quot;submit&quot; class=&quot;btn btn-default btn-default pull-left&quot; data-dismiss=&quot;modal&quot;&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;span class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/span&gt; Cancel
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/button&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Not a member? &lt;a href=&quot;#&quot;&gt;Sign Up&lt;/a&gt; &lt;/p&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Forgot &lt;a href=&quot;#&quot;&gt;Password?&lt;/a&gt;&lt;/p&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&lt;/div&gt;
+                      </div>
+                    </p>
+
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                    <style>
+                    #myModalLogin .modal-header, #myModalLogin h4, #myModalLogin .close {
+                        background-color: #5cb85c;
+                        color:white !important;
+                        text-align: center;
+                        font-size: 30px;
+                    }
+                    #myModalLogin .modal-footer {
+                        background-color: #f9f9f9;
+                    }
+                    </style>
+
+                    <div class="modal fade" id="myModalLogin" role="dialog">
+                      <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                          </div>
+                          <div class="modal-body">
+                            <form role="form">
+                              <div class="form-group">
+                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                                <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                              </div>
+                              <div class="form-group">
+                                <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                                <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                              </div>
+                              <div class="checkbox">
+                                <label><input type="checkbox" value="" checked>Remember me</label>
+                              </div>
+                              <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                            <p>Not a member? <a href="#">Sign Up</a></p>
+                            <p>Forgot <a href="#">Password?</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+            </div>
+
 
             <ul class="pager">
               <li><a href="#">Previous</a></li>
