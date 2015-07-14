@@ -6,7 +6,7 @@ var app = angular.module('webApp',['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
 	// Home
-	.when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
+	.when("/", {templateUrl: "partials/home.html", controller: "HomeCtrl"})
 
 	
 	// Pages
@@ -61,11 +61,14 @@ app.controller('ContactCtrl', function ( $scope, $location, $http ) {
 	$('.navbar li').removeClass('active');
 });*/
 
+app.controller('HomeCtrl', function ( $scope, $location, $http ) {
+	//Remove navbar header
+	$('.navbar li').removeClass('active');	
+});
+
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
 	//Active navbar header
-	$('.navbar li').removeClass('active');
-
-	console.log(fw.currentGroupName,fw.currentPageName);
+	$('.navbar li').removeClass('active');	
 	$('.navbar li#'+fw.currentGroupName).addClass('active');
 
 	//Active tooltip
