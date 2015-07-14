@@ -57,7 +57,10 @@ var fw = {
 
 				"angular":[
 					{"page":"home"  }
-				]
+				],
+
+				"about":[],
+				"contact":[]
 			}
 
 };

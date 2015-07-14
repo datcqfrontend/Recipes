@@ -249,3 +249,7 @@ div.code-body {
   width: 70%;
   margin: auto;
 }
+
+#bsTutorial a.btn-link {
+  margin-left: 85%;
+}

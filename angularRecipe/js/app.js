@@ -10,18 +10,21 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 	
 	// Pages
-	.when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
+	//.when("/about", {templateUrl: "partials/about.html", controller: "AboutCtrl"})
 	/*.when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
 	.when("/pricing", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
 	.when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})*/
-	.when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
+	//.when("/contact", {templateUrl: "partials/contact.html", controller: "ContactCtrl"})
 
-		// jQuery
-		//.when("/jquery/home", {templateUrl: "partials/jquery/home.html", controller: "PageCtrl"})
-		// Angular
-		//.when("/angular/home", {templateUrl: "partials/angular/home.html", controller: "PageCtrl"})
+		.when("/:pageName", {
+			templateUrl: function(params){				
+				initPage(params.pageName,params.pageName);
+				return "partials/"+params.pageName+".html";
+			}, 
+			controller: "PageCtrl"
+		})
 
-		// Bootstrap
+		// jQuery, Angular, Bootstrap
 		.when("/:groupName/:pageName", {
 			templateUrl: function(params){
 				initPage(params.groupName,params.pageName);
@@ -45,9 +48,24 @@ app.config(['$routeProvider', function ($routeProvider) {
 /**
  * Controls all other Pages
  */
+/*app.controller('AboutCtrl', function ( $scope, $location, $http ) {
+	console.log($location.$$path);
+
+	$('.navbar li').removeClass('active');
+	$('.navbar li#'+fw.currentGroupName).addClass('active');
+});
+
+app.controller('ContactCtrl', function ( $scope, $location, $http ) {
+	console.log($location.$$path);
+
+	$('.navbar li').removeClass('active');
+});*/
+
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
 	//Active navbar header
 	$('.navbar li').removeClass('active');
+
+	console.log(fw.currentGroupName,fw.currentPageName);
 	$('.navbar li#'+fw.currentGroupName).addClass('active');
 
 	//Active tooltip

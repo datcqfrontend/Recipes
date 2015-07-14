@@ -1,9 +1,12 @@
 function initPage(group,page){
-	var i=0; length=fw.pages[group].length;
+	var i=0, length=fw.pages[group].length;
 
 	fw.currentGroupName = group;
 	fw.currentPageName = page;
 	fw.currentTotalPage = length;
+	fw.currentPageIndex = 0;
+	fw.canNext = false;		
+	fw.canBack = false;		
 
  	for(i;i<length;i++){
  		if(fw.pages[group][i].page==page){ 			
