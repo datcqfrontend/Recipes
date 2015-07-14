@@ -18,17 +18,15 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 		.when("/:pageName", {
 			templateUrl: function(params){				
-				initPage(params.pageName,params.pageName);
-				return "partials/"+params.pageName+".html";
+				return "partials/"+initPage(params.pageName,params.pageName)+".html";
 			}, 
 			controller: "PageCtrl"
 		})
 
 		// jQuery, Angular, Bootstrap
 		.when("/:groupName/:pageName", {
-			templateUrl: function(params){
-				initPage(params.groupName,params.pageName);
-				return "partials/"+params.groupName+"/"+params.pageName+".html";
+			templateUrl: function(params){				
+				return "partials/"+initPage(params.groupName,params.pageName)+".html";
 			}, 
 			controller: "PageCtrl"
 		})
@@ -42,7 +40,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 	
 
 	// else 404
-	//.otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+	//.otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
 
 /**
@@ -77,7 +75,8 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
 	//Active popup modal
  	$('[data-toggle="popover"]').popover(); 
 
- 	console.log($location.$$path);
+ 	//console.log($location.$$path);
+ 	console.log(fw);
 
  	if(!fw.canNext)	$('.pager li:nth-child(2):not(.deactive)').hide();
  	if(!fw.canBack)	$('.pager li:nth-child(1):not(.deactive)').hide();
