@@ -7,6 +7,10 @@ var fw = {
 	canBack: false,
 
 	pages : {
+				"jquery":[
+					{"page":"home"  }
+				],
+
 				"bootstrap":[
 					{"page":"tutorial"  },
 
@@ -49,6 +53,10 @@ var fw = {
 					{"page":"tooltip"  },
 					{"page":"popover"  },
 					{"page":"collapse"  }
+				],
+
+				"angular":[
+					{"page":"home"  }
 				]
 			}
 
