@@ -413,6 +413,220 @@
                 </div>
             </div>
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Nesting columns</h3> </div>
+                  <div class="panel-body">  
+                    <p>To nest your content with the default grid, add a new <span class="code-span">.row</span> and set of <span class="code-span">.col-sm-*</span> columns within an existing <span class="code-span">.col-sm-*</span> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+
+                    <div class="row show-grid">
+                      <div class="col-sm-9">
+                        Level 1: .col-sm-9
+                        <div class="row show-grid">
+                          <div class="col-xs-8 col-sm-6">
+                            Level 2: .col-xs-8 .col-sm-6
+                          </div>
+                          <div class="col-xs-4 col-sm-6">
+                            Level 2: .col-xs-4 .col-sm-6
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <br>
+                    <div class="code-body">
+                      &lt;div <span class="yellow">class=&quot;row show-grid&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-sm-9&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLevel 1: .col-sm-9 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;row show-grid&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-xs-8 col-sm-6&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLevel 2: .col-xs-8 .col-sm-6 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;col-xs-4 col-sm-6&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLevel 2: .col-xs-4 .col-sm-6 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&lt;/div&gt;                                          
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Column ordering</h3> </div>
+                  <div class="panel-body">  
+                    <p>Easily change the order of our built-in grid columns with <span class="code-span">.col-md-push-*</span> and <span class="code-span">.col-md-pull-*</span> modifier classes.</p>
+
+                    <div class="row show-grid">
+                      <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+                      <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+                    </div>
+
+                    <br>
+                    <div class="code-body">
+                      &lt;div class=&quot;row&quot;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;col-md-9 col-md-push-3&quot;</span>&gt;.col-md-9 .col-md-push-3&lt;/div&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;col-md-3 col-md-pull-9&quot;</span>&gt;.col-md-3 .col-md-pull-9&lt;/div&gt; 
+                      <br>&lt;/div&gt;                                                               
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Responsive utilities</h3> </div>
+                  <div class="panel-body">  
+                    <p>For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.</p>
+
+                    <h3>Available classes</h3>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped responsive-utilities">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>
+                              Extra small devices
+                              <small>Phones (&lt;768px)</small>
+                            </th>
+                            <th>
+                              Small devices
+                              <small>Tablets (≥768px)</small>
+                            </th>
+                            <th>
+                              Medium devices
+                              <small>Desktops (≥992px)</small>
+                            </th>
+                            <th>
+                              Large devices
+                              <small>Desktops (≥1200px)</small>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><code>.visible-xs-*</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.visible-sm-*</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.visible-md-*</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.visible-lg-*</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                          </tr>
+                        </tbody>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><code>.hidden-xs</code></th>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.hidden-sm</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.hidden-md</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                            <td class="is-visible">Visible</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.hidden-lg</code></th>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-visible">Visible</td>
+                            <td class="is-hidden">Hidden</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p>As of v3.2.0, the <span class="code-span">.visible-*-*</span> classes for each breakpoint come in three variations, one for each CSS display property value listed below.</p>
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Group of classes</th>
+                            <th>CSS <code>display</code></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><code>.visible-*-block</code></th>
+                            <td><code>display: block;</code></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.visible-*-inline</code></th>
+                            <td><code>display: inline;</code></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><code>.visible-*-inline-block</code></th>
+                            <td><code>display: inline-block;</code></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <p>So, for extra small (xs) screens for example, the available <span class="code-span">.visible-*-*</span> classes are: <span class="code-span">.visible-xs-block, .visible-xs-inline, and .visible-xs-inline-block</span>. The classes <span class="code-span">.visible-xs, .visible-sm, .visible-md, and .visible-lg</span> also exist, but are deprecated as of v3.2.0. They are approximately equivalent to <span class="code-span">.visible-*-block</span>, except with additional special cases for toggling <span class="code-span">&lt;table&gt;</span> -related elements.</p>
+                    </div>
+                    
+                    <h3>Print classes</h3>
+                    <p>Similar to the regular responsive classes, use these for toggling content for print.</p>
+                    <table class="table table-bordered table-striped responsive-utilities">
+                      <thead>
+                        <tr>
+                          <th>Classes</th>
+                          <th>Browser</th>
+                          <th>Print</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <code>.visible-print-block</code><br>
+                            <code>.visible-print-inline</code><br>
+                            <code>.visible-print-inline-block</code>
+                          </th>
+                          <td class="is-hidden">Hidden</td>
+                          <td class="is-visible">Visible</td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><code>.hidden-print</code></th>
+                          <td class="is-visible">Visible</td>
+                          <td class="is-hidden">Hidden</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>The class .visible-print also exists but is deprecated as of v3.2.0. It is approximately equivalent to <span class="code-span">.visible-print-block</span>, except with additional special cases for <span class="code-span">&lt;table&gt;</span> -related elements.</p>
+                  </div>
+                </div>
+            </div>
+
             <ul class="pager">
               <li><a href="#">Previous</a></li>
               <li><a href="#">Next</a></li>
@@ -430,5 +644,15 @@
     padding-bottom: 10px;
     background-color: rgba(86, 61, 124, 0.15);
     border: 1px solid rgba(86, 61, 124, 0.2);
+  }
+
+  #bsGridBasic .responsive-utilities td.is-visible {
+    color: #468847;
+    background-color: #dff0d8!important;
+  }
+
+  #bsGridBasic .responsive-utilities td.is-hidden {
+    color: #ccc;
+    background-color: #f9f9f9!important;
   }
 </style>
