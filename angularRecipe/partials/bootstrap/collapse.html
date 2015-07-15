@@ -1,0 +1,395 @@
+<div  id="bsJSCollapse" class="bs section">
+
+    <div class="container">
+
+         <div class="row">
+            <div class="col-lg-12">
+                <h1>Bootstrap Collapse</h2>                
+                <ol class="breadcrumb">
+                    <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
+                    <li class="active">Collapse</li>
+                </ol>
+            </div>
+        
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Collapse</h3> </div>
+                  <div class="panel-body">  
+                    <p><h4>Collapse Show:</h4>
+                      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+                      <div id="demo" class="collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </div>
+                    </p>
+                      
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot; <span class="yellow">data-toggle=&quot;collapse&quot; data-target=&quot;#demo&quot;</span>&gt;Simple collapsible&lt;/button&gt; 
+                        <br>&lt;div <span class="yellow">id=&quot;demo&quot; class=&quot;collapse&quot;</span>&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. &lt;/div&gt;                       
+                      </div> 
+                    </p>
+                    <hr>
+                    <p><h4>Collapse Hide:</h4>
+                      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Simple collapsible</button>
+                      <div id="demo2" class="collapse in">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </div>
+                    </p>
+                    <p>
+                      <div class="code-body" style="">
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot; <span class="yellow">data-toggle=&quot;collapse&quot; data-target=&quot;#demo2&quot;</span>&gt;Simple collapsible&lt;/button&gt; 
+                        <br>&lt;div <span class="yellow">id=&quot;demo2&quot; class=&quot;collapse in&quot;</span>&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. &lt;/div&gt;                       
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div>   
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Collapse Plugin Classes</h3> </div>
+                  <div class="panel-body">  
+                    <p><div class="table-responsive">
+                          <table class="reference notranslate">
+                            <tbody><tr>
+                              <th style="width:20%;">Class</th>
+                              <th style="width:68%;">Description</th>
+                              
+                            </tr>
+                            <tr>
+                              <td>.collapse</td>
+                              <td>Hides the content</td>
+                              
+                            </tr>
+                            <tr>
+                              <td>.collapse in</td>
+                              <td>Shows the content</td>
+                              
+                            </tr>
+                            <tr>
+                              <td>.collapsing</td>
+                              <td>Added when the transition starts, and removed when it finishes</td>
+                              
+                            </tr>
+                          </tbody></table>
+                        </div>
+
+                        
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Via JavaScript</h3> </div>
+                  <div class="panel-body">  
+                    <div class="example-body">
+                      $('.collapse')<span class="yellow">.collapse();</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Collapse Options</h3> </div>
+                  <div class="panel-body">  
+                    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <span class="code-span">data-</span>, as in <span class="code-span">data-parent=""</span>.
+                      <div class="table-responsive">
+                        <table class="reference notranslate">
+                          <tbody><tr>
+                            <th style="width:15%;">Name</th>
+                            <th style="width:15%;">Type</th>
+                            <th style="width:15%;">Default</th>
+                            <th style="width:55%;">Description</th>
+                          </tr>
+                          <tr>
+                            <td>parent</td>
+                            <td>selector</td>
+                            <td>false</td>
+                            <td>If selector then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this dependent on the panel class)</td>
+                          </tr>
+                          <tr>
+                            <td>toggle</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Toggles the collapsible element on invocation</td>
+                          </tr>
+                        </tbody></table>
+                        </div>
+                    </p>
+                  </div>
+                </div>               
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Collapse Methods</h3> </div>
+                  <div class="panel-body">  
+                    <div class="table-responsive">
+                      <table class="reference notranslate">
+                        <tbody><tr>
+                          <th>Method</th>
+                          <th style="width:60%;">Description</th>
+                          
+                        </tr>
+                        <tr>
+                          <td>.collapse(<em>options</em>)</td>
+                          <td>Activates the collapsible element with an option. See options above for valid values</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>.collapse("toggle")</td>
+                          <td>Toggles the collapsible element</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>.collapse("show")</td>
+                          <td>Shows the collapsible element</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>.collapse("hide")</td>
+                          <td>Hides the collapsible element</td>
+                          
+                        </tr>
+                      </tbody></table>
+                      </div>
+
+                      <div class="example-body">
+                        &lt;script&gt;
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp$(document).ready(function(){
+                              <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$(".btn-primary").click(function(){
+                                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".collapse").collapse('toggle');</span>
+                              <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});
+                              <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$(".btn-success").click(function(){
+                                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".collapse").collapse('show');</span>
+                              <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});
+                              <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$(".btn-warning").click(function(){
+                                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".collapse").collapse('hide');</span>
+                              <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp});
+                        <br>&lt;/script&gt;
+                      </div>
+                  </div>
+                </div>               
+            </div>
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Collapse Events</h3> </div>
+                  <div class="panel-body">  
+                    <div class="table-responsive">
+                      <table class="reference notranslate">
+                        <tbody><tr>
+                          <th>Event</th>
+                          <th style="width:60%;">Description</th>
+                          
+                        </tr>
+                        <tr>
+                          <td>show.bs.collapse</td>
+                          <td>Occurs when the collapsible element is about to be shown</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>shown.bs.collapse</td>
+                          <td>Occurs when the collapsible element is fully shown (after CSS transitions have 
+                        completed)</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>hide.bs.collapse</td>
+                          <td>Occurs when the collapsible element is about to be hidden</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>hidden.bs.collapse</td>
+                          <td>Occurs when the collapsible element is fully hidden (after CSS transitions have 
+                        completed)</td>
+                          
+                          </tr>
+                      </tbody></table>
+                      </div>
+                    <br>
+                    <div class="example-body">
+                      &lt;script&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp$(document).ready(function(){
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".collapse").on('show.bs.collapse', function(){</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp alert('The collapsible content is about to be shown.');
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});
+
+                      
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".collapse").on('shown.bs.collapse', function(){</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  alert('The collapsible content is now fully shown.');
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});
+
+                      
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".collapse").on('hide.bs.collapse', function(){</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp alert('The collapsible content is about to be hidden.');
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});
+
+                      
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".collapse").on('hidden.bs.collapse', function(){</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp alert('The collapsible content is now hidden.');                      
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp});
+                      <br>&lt;/script&gt;
+                    </div>
+                    
+                    <h3>Expand and Collapse with different icons</h3>
+                    <p>
+                        <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo4">
+                          <span class="glyphicon glyphicon-collapse-down"></span> Open
+                        </button>
+                      <div id="demo4" class="collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </div>                 
+                      <script>
+                      $(document).ready(function(){
+                        $("#demo4").on("hide.bs.collapse", function(){
+                          $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Open');
+                        });
+                        $("#demo4").on("show.bs.collapse", function(){
+                          $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Close');
+                        });
+                      });
+                      </script>
+                    </p>
+                    <p>
+                      <div class="example-body">
+                      &lt;script&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp$(document).ready(function(){
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$("#demo4").on("hide.bs.collapse"</span>, function(){
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".btn").html('&lt;span class="glyphicon glyphicon-collapse-down"&gt;&lt;/span&gt; Open');</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}); 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$("#demo4").on("show.bs.collapse"</span>, function(){
+                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">$(".btn").html('&lt;span class="glyphicon glyphicon-collapse-up"&gt;&lt;/span&gt; Close');</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp});                      
+
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp});
+                      <br>&lt;/script&gt;
+                    </div>
+
+                    </p>
+
+
+                  </div>
+                </div>               
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Accordion</h3> </div>
+                  <div class="panel-body">  
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" target="_self">
+                              Collapsible Group 1</a>
+                            </h4>
+                          </div>
+                          <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"  target="_self">
+                              Collapsible Group 2</a>
+                            </h4>
+                          </div>
+                          <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"  target="_self">
+                              Collapsible Group 3</a>
+                            </h4>
+                          </div>
+                          <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="code-body">
+                        &lt;div <span class="yellow">class=&quot;panel-group&quot; id=&quot;accordion&quot;</span>&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;panel-heading&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 class=&quot;panel-title&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapse1&quot; target=&quot;_self&quot;</span>&gt; Collapsible Group 1&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/h4&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">id=&quot;collapse1&quot; class=&quot;panel-collapse collapse in&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;panel-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;panel-heading&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 class=&quot;panel-title&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapse2&quot; target=&quot;_self&quot;</span>&gt; Collapsible Group 2&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/h4&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">id=&quot;collapse2&quot; class=&quot;panel-collapse collapse&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;panel-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">class=&quot;panel panel-default&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;panel-heading&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;h4 class=&quot;panel-title&quot;&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;a <span class="yellow">data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapse3&quot; target=&quot;_self&quot;</span>&gt; Collapsible Group 3&lt;/a&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/h4&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="yellow">id=&quot;collapse3&quot; class=&quot;panel-collapse collapse&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div class=&quot;panel-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+
+                        <br>&lt;/div&gt;                          
+                                  
+                      </div>
+                  </div>
+                </div>               
+            </div>
+
+
+
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
