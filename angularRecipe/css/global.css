@@ -156,11 +156,6 @@ div.code-body {
      font-weight: bold;
 }
 
-.code-span {
-    font-weight: bold;
-    color: red;
-}
-
 .red {
     color: red;
 }
@@ -189,8 +184,15 @@ div.code-body {
   border: 1px solid #D8D8D8;
 }
 
+.jumbotron-page.min {
+    padding: 15px;
+}
 
 /* BOOTSTRAP */
+.bs .code-span {
+    font-weight: bold;
+    color: red;
+}
 .bs .jumbotron-page {
     background-color: #892cca;
     color: #fff;
@@ -253,3 +255,20 @@ div.code-body {
 #bsTutorial a.btn-link {
   margin-left: 85%;
 }
+/* END BOOTSTRAP*/
+
+/* ANGULAR */
+.ang .code-span {
+    font-weight: bold;
+    color: yellow;
+}
+
+.ang .jumbotron-page {
+    background-color: #B92933;
+    color: #fff;
+}
+
+#angTutorial a.btn-link {
+  margin-left: 85%;
+}
+/* END ANGULAR */

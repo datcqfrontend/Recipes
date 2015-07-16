@@ -1,16 +1,9 @@
 <div  id="bsCarousel" class="bs section">
 
     <div class="container">
+       <div ng-include='"templates/jumbotron-topic.html"'></div>
 
          <div class="row">
-            <div class="col-lg-12">
-                <h1>Bootstrap Carousel Plugin</h2>                
-                <ol class="breadcrumb">
-                    <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Carousel Plugin</li>
-                </ol>
-            </div>
-        
              <div class="col-lg-12">                
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>The Carousel Plugin</h3> </div>
@@ -320,10 +313,7 @@
                 </div>
             </div>
 
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
+            <div ng-include='"templates/pager.html"'></div>
 
         </div>
     </div>

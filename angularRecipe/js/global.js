@@ -55,3 +55,10 @@ function prevPage(){
 function goToPage(group,page){
 	window.location.href = "index.html#/"+group+"/"+page;
 }
+
+function hideMenu(){
+	if($('.navbar-toggle').css('display')!='none'){
+		$('#menu-collapse').collapse('hide');
+	}
+	
+}

@@ -2,15 +2,9 @@
 
     <div class="container">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Bootstrap Get Started</h2>                
-                <ol class="breadcrumb">
-                    <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                    <li class="active">Get Started</li>
-                </ol>
-            </div>
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
 
+        <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>What is Bootstrap? <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modalHistoryBS">History</button></h3> </div>
@@ -223,10 +217,7 @@
 
             </div>
             
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
+            <div ng-include='"templates/pager.html"'></div>
         </div>
         <!-- /.row -->
 

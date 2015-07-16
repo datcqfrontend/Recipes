@@ -1,0 +1,16 @@
+<div class="jumbotron jumbotron-page min">                
+  <div class="row">
+    <div class="col-xs-8"><h3>{{topic}}</h3></div>
+    <div class="col-xs-4" >
+      <ul class="pager" style="text-align:right;">
+        <li><a data-pager="prev" ng-show="canPrev" href="#" ng-click="pagerFunction($event)">&lt;</a></li>
+        <li><a data-pager="next" ng-show="canNext" href="#" ng-click="pagerFunction($event)">&gt;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <ol class="breadcrumb">
+      <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
+      <li class="active">{{breadcrumb}}</li>
+  </ol>              
+</div>
