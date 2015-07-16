@@ -188,87 +188,94 @@ div.code-body {
     padding: 15px;
 }
 
+/* NAVBAR */
+
+  .navbar-nav > #bootstrap.active>a {    background-color: #892cca; background-image: none;}
+  .navbar-nav > #angular.active>a {    background-color: #B92933;  background-image: none;}
+/* END NAVBAR*/
+ 
+
 /* BOOTSTRAP */
-.bs .code-span {
-    font-weight: bold;
-    color: red;
-}
-.bs .jumbotron-page {
-    background-color: #892cca;
-    color: #fff;
-}
+  .bs .code-span {
+      font-weight: bold;
+      color: red;
+  }
+  .bs .jumbotron-page {
+      background-color: #892cca;
+      color: #fff;
+  }
 
-.bs table.reference {
-    width: 100%; max-width: 100%;
+  .bs table.reference {
+      width: 100%; max-width: 100%;
 
-    border-spacing: 0;
-    border-collapse: collapse;
-    background-color: grey;
-    margin-bottom: 12px;
-}
+      border-spacing: 0;
+      border-collapse: collapse;
+      background-color: grey;
+      margin-bottom: 12px;
+  }
 
-.bs table.reference tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
-}
+  .bs table.reference tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
 
-.bs table.reference tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-.bs table.reference tr:nth-child(even) {
-  color: #ffffff;
-}
+  .bs table.reference tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .bs table.reference tr:nth-child(even) {
+    color: #ffffff;
+  }
 
-.bs table.reference>thead>tr>th,.bs table.reference>tbody>tr>th,.bs table.reference>tfoot>tr>th,.bs table.reference>thead>tr>td, table.reference>tbody>tr>td, table.reference>tfoot>tr>td {
-  padding: 8px;
-  line-height: 1.42857143;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
-}
+  .bs table.reference>thead>tr>th,.bs table.reference>tbody>tr>th,.bs table.reference>tfoot>tr>th,.bs table.reference>thead>tr>td, table.reference>tbody>tr>td, table.reference>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
 
-/*For progress bar striped*/
-.progress.active .progress-bar, .progress-bar.active {
-  -webkit-animation: progress-bar-stripes 2s linear infinite;
-  -o-animation: progress-bar-stripes 2s linear infinite;
-  animation: progress-bar-stripes 2s linear infinite;
-}
+  /*For progress bar striped*/
+  .progress.active .progress-bar, .progress-bar.active {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+  }
 
-.progress-striped .progress-bar, .progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-  background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-  -webkit-background-size: 40px 40px;
-  background-size: 40px 40px;
-}
+  .progress-striped .progress-bar, .progress-bar-striped {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+  }
 
-.dropup {
-  position: relative;
-}
+  .dropup {
+    position: relative;
+  }
 
-/* Carousel */
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-  width: 70%;
-  margin: auto;
-}
+  /* Carousel */
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
 
-#bsTutorial a.btn-link {
-  margin-left: 85%;
-}
+  #bsTutorial a.btn-link {
+    margin-left: 85%;
+  }
 /* END BOOTSTRAP*/
 
 /* ANGULAR */
-.ang .code-span {
-    font-weight: bold;
-    color: yellow;
-}
+  .ang .code-span {
+      font-weight: bold;
+      color: yellow;
+  }
 
-.ang .jumbotron-page {
-    background-color: #B92933;
-    color: #fff;
-}
+  .ang .jumbotron-page {
+      background-color: #B92933;
+      color: #fff;
+  }
 
-#angTutorial a.btn-link {
-  margin-left: 85%;
-}
+  #angTutorial a.btn-link {
+    margin-left: 85%;
+  }
 /* END ANGULAR */
