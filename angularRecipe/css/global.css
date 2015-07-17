@@ -265,9 +265,14 @@ div.code-body {
 /* END BOOTSTRAP*/
 
 /* ANGULAR */
-  .ang .code-span {
+  .ang .spanYellow {
       font-weight: bold;
       color: yellow;
+  }
+
+  .ang .spanRed {
+      font-weight: bold;
+      color: red;
   }
 
   .ang .jumbotron-page {

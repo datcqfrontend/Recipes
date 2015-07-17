@@ -1,0 +1,152 @@
+<div  id="angExpressions" class="ang section">
+
+    <div class="container">
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Expressions</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      AngularJS expressions are written inside double braces: <span class="spanRed">{{ expression }}</span>.<br>
+                      AngularJS expressions binds data to HTML the same way as the <span class="spanRed">ng-bind</span> directive.<br>
+                      AngularJS will "output" data exactly where the expression is written.<br>
+                      AngularJS expressions are much like JavaScript expressions: They can contain literals, operators, and variables.<br>
+                      Example { { 5 + 5 } } or { { firstName + " " + lastName } }
+
+                    </p>
+                      
+                    <div class="example-body" style="">
+                      <p>My first expression: {{ 5 + 5 }}</p>
+                    </div> 
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;p&gt;My first expression: { { 5 + 5 } }&lt;/p&gt;
+                    </div>                               
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Numbers</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS numbers are like JavaScript numbers:</p>
+                    
+                    <div class="example-body" >
+                      <p ng-init="quantity=2;cost=5">Total in dollar (expresion): {{ quantity * cost }}</p>
+                      <p ng-init="quantity=2;cost=5">Total in dollar (ng-bind): <span ng-bind="quantity * cost"></span></p>
+                    </div> 
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;p ng-init="quantity=2;cost=5"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspTotal in dollar (expresion): <span class="spanYellow">{ { quantity * cost } }</span>
+                      <br>&lt;/p&gt;
+                      <br>&lt;p ng-init="quantity=2;cost=5"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspTotal in dollar (ng-bind): <span class="spanYellow">&lt;span ng-bind="quantity * cost"&gt;&lt;/span&gt;</span>
+                      <br>&lt;/p&gt;
+                    </div>                               
+
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Strings</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS strings are like JavaScript strings:</p>
+                    
+                    <div class="example-body" >
+                      <p ng-init="firstName='John';lastName='Doe'">The name is (expression:) {{ firstName + " " + lastName }}</p>
+                      <p ng-init="firstName='John';lastName='Doe'">The name is (ng-bind): <span ng-bind="firstName + ' ' + lastName "></span></p>
+                    </div> 
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;p ng-init="firstName='John';lastName='Doe'"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspThe name is (expresion): <span class="spanYellow">{ { firstName + " " + lastName } }</span>
+                      <br>&lt;/p&gt;
+                      <br>&lt;p ng-init="firstName='John';lastName='Doe'"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspThe name is (ng-bind): <span class="spanYellow">&lt;span ng-bind="firstName + ' ' + lastName"&gt;&lt;/span&gt;</span>
+                      <br>&lt;/p&gt;
+                    </div>                               
+
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Objects</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS objects are like JavaScript objects:</p>
+                    
+                    <div class="example-body" >
+                      <p ng-init="person={firstName:'John',lastName:'Doe'}">The name is (expression:) {{ person.firstName + " " + person.lastName }}</p>
+                      <p ng-init="person={firstName:'John',lastName:'Doe'}">The name is (ng-bind): <span ng-bind="person.firstName + ' ' + person.lastName "></span></p>
+                    </div> 
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;p ng-init="person={firstName:'John',lastName:'Doe'}"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspThe name is (expresion): <span class="spanYellow">{ { person.firstName + " " + person.lastName } }</span>
+                      <br>&lt;/p&gt;
+                      <br>&lt;p ng-init="person={firstName:'John',lastName:'Doe'}"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspThe name is (ng-bind): <span class="spanYellow">&lt;span ng-bind="person.firstName + ' ' + person.lastName"&gt;&lt;/span&gt;</span>
+                      <br>&lt;/p&gt;
+                    </div>                               
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Arrays</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS arrays are like JavaScript arrays:</p>
+                    
+                    <div class="example-body" >
+                      <p ng-init="points=[1,15,19,2,40]">The third result is (expression): {{ points[2] }}</p>
+                      <p ng-init="points=[1,15,19,2,40]">The third result is (ng-bind): <span ng-bind="points[2]"></span></p>
+                    </div> 
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;p ng-init="points=[1,15,19,2,40]"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspThe third result is (expresion): <span class="spanYellow">{ { points[2] } }</span>
+                      <br>&lt;/p&gt;
+                      <br>&lt;p ng-init="points=[1,15,19,2,40]"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspThe third result is (ng-bind): <span class="spanYellow">&lt;span ng-bind="points[2]"&gt;&lt;/span&gt;</span>
+                      <br>&lt;/p&gt;
+                    </div>                               
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Expressions vs. JavaScript Expressions</h3> </div>
+                  <div class="panel-body">  
+                    <p>Like JavaScript expressions, AngularJS expressions can contain literals, operators, and variables.<br>
+                      Unlike JavaScript expressions, AngularJS expressions can be written inside HTML.<br>
+                      Unlike JavaScript expressions, AngularJS expressions do not support conditionals, loops, or exceptions.<br>
+                      Unlike JavaScript expressions, AngularJS expressions support filters.</p>
+                  </div>
+                </div>
+            </div>
+
+
+        </div>       
+        <!-- /.row -->
+
+        <div ng-include='"templates/pager.html"'></div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+

@@ -79,6 +79,7 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
  	//Init jumbotron-topic
  	$scope.topic = fw.pages[fw.currentGroupName][fw.currentPageIndex].topic;
  	$scope.breadcrumb = fw.pages[fw.currentGroupName][fw.currentPageIndex].breadcrumb;
+ 	$scope.groupName = fw.currentGroupName;
 
  	$scope.canPrev = fw.canBack;
  	$scope.canNext = fw.canNext;
@@ -96,35 +97,7 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
  				break;
  		}
  	};
- 	//End init jumbotron-topic
-
- 	//if(!fw.canNext)	$('.pager li:nth-child(2):not(.deactive)').hide();
- 	//if(!fw.canBack)	$('.pager li:nth-child(1):not(.deactive)').hide();
-
-
- 	/*$('.pager').on('click','li',function(e){
- 		e.preventDefault();
- 		console.log("Click pager");
-
- 		//console.log($('a',this)[0].innerHTML);
-
- 		if($(this).hasClass('deactive')) return;
-
- 		switch($('a',this).data('pager')){
- 			case "prev":
- 				prevPage();
- 				break;
-
- 			case "next":
- 				nextPage();
- 				break;
- 		}
- 		//console.log(this.innerHTML);
- 	});*/
-
- 	/*console.log(fw.pages);
-
- 	*/
+ 	//End init jumbotron-topic 	
 
  	/*console.log("Page Controller reporting for duty.");
 	  // Activates the Carousel
@@ -158,3 +131,11 @@ app.directive('a', function() {
         }
    };
 });
+
+//SCRIPT FOR SHOW DEMO
+	//Intro.html
+	app.controller('demoIntroCtrl', function($scope) {
+	    $scope.firstName= "John";
+	    $scope.lastName= "Doe";
+	});
+//END SCRIPT FOR SHOW DEMO

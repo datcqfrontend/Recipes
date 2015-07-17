@@ -57,7 +57,30 @@ var fw = {
 
 				"angular":[
 					{"page":"tutorial"  },
-					{"page":"intro", "topic":"Angular Intro", "breadcrumb":"Intro"  }
+
+					{"page":"intro", "topic":"Angular Introduction", "breadcrumb":"Introduction"  },
+					{"page":"expressions", "topic":"Angular Expressions", "breadcrumb":"Expressions"  },
+					{"page":"directives", "topic":"Angular Directives", "breadcrumb":"Directives"  },
+
+					{"page":"controllers", "topic":"Angular Controllers", "breadcrumb":"Controllers"  },
+					{"page":"filters", "topic":"Angular Filters", "breadcrumb":"Filters"  },
+					{"page":"http", "topic":"Angular HTTP", "breadcrumb":"HTTP"  },
+
+					{"page":"tables", "topic":"Angular Tables", "breadcrumb":"Tables"  },
+					{"page":"sql", "topic":"Angular SQL", "breadcrumb":"SQL"  },
+					{"page":"dom", "topic":"Angular DOM", "breadcrumb":"DOM"  },
+
+					{"page":"events", "topic":"Angular Events", "breadcrumb":"Events"  },
+					{"page":"modules", "topic":"Angular Modules", "breadcrumb":"Modules"  },
+					{"page":"forms", "topic":"Angular Forms", "breadcrumb":"Forms"  },
+
+					{"page":"validation", "topic":"Angular Validation", "breadcrumb":"Validation"  },
+					{"page":"api", "topic":"Angular API", "breadcrumb":"API"  },
+					{"page":"bootstrap", "topic":"Angular Bootstrap", "breadcrumb":"Bootstrap"  },
+
+					{"page":"includes", "topic":"Angular Includes", "breadcrumb":"Includes"  },
+					{"page":"application", "topic":"Angular Application", "breadcrumb":"Aplication"  }
+					
 				],
 
 				"about":[],

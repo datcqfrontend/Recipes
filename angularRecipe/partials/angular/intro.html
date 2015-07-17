@@ -1,117 +1,191 @@
 <div  id="angIntro" class="ang section">
 
     <div class="container">
-        <div class="jumbotron jumbotron-page min">
-            <h3>AngularJS Introduction</h3>                
-            <ol class="breadcrumb">
-                <li><a href="#bootstrap/tutorial">Tutorial</a></li>                    
-                <li class="active">Introduction</li>
-            </ol>            
-        </div>
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
 
         <div class="row">
-            <div class="col-sm-4">
-                <h3>Introduction</h3>
-                <p>AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.</p> 
-                <a href="#angular/intro" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
-            </div>
-            <div class="col-sm-4">
-                <h3>Expressions</h3>
-                <p>Bootstrap's grid system allows up to 12 columns across the page.</p> 
-                <a href="#angular/gridBasic" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-4">
-                <h3>Directives</h3>
-                <p>In this chapter, we will look at some HTML elements that will be styled a little bit different by Bootstrap than browser defaults.</p> 
-                <a href="#angular/typography" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-12 hidden-xs"></div>
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Introduction</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS is a JavaScript framework. It can be added to an HTML page with a <span class="spanRed">&lt;script&gt;</span> tag.<br>AngularJS extends HTML attributes with <span class="spanRed">Directives</span>, and binds data to HTML with <span class="spanRed">Expressions</span>.                        
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
-            <div class="col-sm-4">
-                <h3>Controllers</h3>
-                <p>What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?</p> 
-                <a href="#angular/getStarted" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
-            </div>
-            <div class="col-sm-4">
-                <h3>Filters</h3>
-                <p>Bootstrap's grid system allows up to 12 columns across the page.</p> 
-                <a href="#angular/gridBasic" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-4">
-                <h3>Http</h3>
-                <p>In this chapter, we will look at some HTML elements that will be styled a little bit different by Bootstrap than browser defaults.</p> 
-                <a href="#angular/typography" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-12 hidden-xs"></div>
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS is a JavaScript Framework</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:                        
+                    </p>
+                      
+                    <div class="code-body" style="">
+                      &lt;script <span class="yellow">src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"</span>&gt;&lt;/script&gt;
+                    </div>                               
 
-            <div class="col-sm-4">
-                <h3>Tables</h3>
-                <p>What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?</p> 
-                <a href="#angular/getStarted" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
-            </div>
-            <div class="col-sm-4">
-                <h3>SQL</h3>
-                <p>Bootstrap's grid system allows up to 12 columns across the page.</p> 
-                <a href="#angular/gridBasic" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-4">
-                <h3>DOM</h3>
-                <p>In this chapter, we will look at some HTML elements that will be styled a little bit different by Bootstrap than browser defaults.</p> 
-                <a href="#angular/typography" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-12 hidden-xs"></div>
+                  </div>
+                </div>
+            </div> 
 
-            <div class="col-sm-4">
-                <h3>Events</h3>
-                <p>What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?</p> 
-                <a href="#angular/getStarted" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
-            </div>
-            <div class="col-sm-4">
-                <h3>Modules</h3>
-                <p>Bootstrap's grid system allows up to 12 columns across the page.</p> 
-                <a href="#angular/gridBasic" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-4">
-                <h3>Forms</h3>
-                <p>In this chapter, we will look at some HTML elements that will be styled a little bit different by Bootstrap than browser defaults.</p> 
-                <a href="#angular/typography" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-12 hidden-xs"></div>
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Extends HTML</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS extends HTML with <span class="spanRed">ng-directives</span>.<br>
+                        The <span class="spanRed">ng-app</span> directive defines an AngularJS application.<br>
+                        The <span class="spanRed">ng-model</span> directive binds the value of HTML controls (input, select, textarea) to application data.<br>
+                        The <span class="spanRed">ng-bind</span> directive binds application data to the HTML view.
+                    </p>
+                    
+                    <div class="example-body">
+                        <p>Name: <input type="text" ng-model="name"></p>
+                        <p ng-bind="name"></p>
+                    </div>
+                    <br>
+                    
+                    <div class="code-body" style="">
+                      &lt;!DOCTYPE html&gt; 
+                      <br>&lt;html&gt; 
+                      <br>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js&quot;&gt;&lt;/script&gt; 
+                      <br>&lt;body&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;div <span class="spanYellow">ng-app=&quot;&quot</span>;&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Name: &lt;input type=&quot;text&quot; <span class="spanYellow">ng-model=&quot;name&quot;</span>&gt;&lt;/p&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p <span class="spanYellow">ng-bind=&quot;name&quot;</span>&gt;&lt;/p&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/div&gt; 
+                      <br>&lt;/body&gt; 
+                      <br>&lt;/html&gt;
+                    </div>                               
+                    <br>
+                    <p>
+                        Example explained:<br>
+                        AngularJS starts automatically when the web page has loaded.<br>
+                        The ng-app directive tells AngularJS that the &lt;div&gt; element is the "owner" of an AngularJS application.<br>
+                        The ng-model directive binds the value of the input field to the application variable name.<br>
+                        The ng-bind directive binds the innerHTML of the &lt;p&gt; element to the application variable name.
+                    </p>
 
-            <div class="col-sm-4">
-                <h3>Validation</h3>
-                <p>What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?</p> 
-                <a href="#angular/getStarted" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
-            </div>
-            <div class="col-sm-4">
-                <h3>API</h3>
-                <p>Bootstrap's grid system allows up to 12 columns across the page.</p> 
-                <a href="#angular/gridBasic" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-4">
-                <h3>Bootstrap</h3>
-                <p>In this chapter, we will look at some HTML elements that will be styled a little bit different by Bootstrap than browser defaults.</p> 
-                <a href="#angular/typography" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            <div class="col-sm-12 hidden-xs"></div>
+                  </div>
+                </div>
+            </div> 
 
-            <div class="col-sm-4">
-                <h3>Includes</h3>
-                <p>What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?</p> 
-                <a href="#angular/getStarted" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Directives</h3> </div>
+                  <div class="panel-body">  
+                    <p>As you have already seen, AngularJS directives are HTML attributes with an ng prefix. The <span class="spanRed">ng-init</span> directive initialize AngularJS application variables.                        
+                    </p>
+                      
+                    <div class="example-body">
+                        <div ng-app="" ng-init="firstName='John'">
+                            <p>The name is <span ng-bind="firstName"></span></p>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="code-body" style="">
+                      &lt;div <span class="spanYellow">ng-app=&quot;&quot; ng-init=&quot;firstName='John'&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;The name is &lt;span <span class="spanYellow">ng-bind=&quot;firstName&quot;</span>&gt;&lt;/span&gt;&lt;/p&gt;
+                      <br>&lt;/div&gt;
+                    </div>                               
+                    <br>
+
+                    <p>You can use <span class="spanRed">data-ng-</span>, instead of <span class="spanRed">ng-</span>, if you want to make your page HTML valid.</p>
+
+                  </div>
+                </div>
+            </div>             
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Expressions</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS expressions are written inside double braces: <span class="spanRed">{{ expression }}</span>.<br>
+                        AngularJS will "output" data exactly where the expression is written:                       
+                    </p>
+                    
+                    <div class="example-body">
+                        <p>My first expression: {{ 5 + 5 }}</p>                    
+                    </div>
+                    <br>
+
+                    <div class="code-body" style="">
+                      &lt;div <span class="spanYellow">ng-app=&quot;&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;My first expression: { { 5 + 5 } }&lt;/p&gt;
+                      <br>&lt;/div&gt;
+                    </div>                               
+                    <br>
+
+                    <p>AngularJS <span class="spanRed">expressions</span> bind AngularJS data to HTML the same way as the <span class="spanRed">ng-bind</span> directive.</p>
+
+                    <div class="example-body">
+                        <p>Name: <input type="text" ng-model="name"></p>
+                        <p>{{name}}</p>
+                    </div>
+                    <br>
+
+                    <div class="code-body" style="">
+                      &lt;div <span class="spanYellow">ng-app=&quot;&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;Name: &lt;input type="text" ng-model="name"&gt;&lt;/p&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;{ {name} }&lt;/p&gt;
+                      <br>&lt;/div&gt;
+                    </div>
+
+                  </div>
+                </div>
+            </div>   
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Applications</h3> </div>
+                  <div class="panel-body">  
+                    <p>AngularJS <span class="spanRed">modules</span> define AngularJS <span class="spanRed">applications</span>.<br>
+                        AngularJS <span class="spanRed">controllers</span> control AngularJS <span class="spanRed">applications</span>.<br>
+                        The <span class="spanRed">ng-app</span> directive defines the application, the <span class="spanRed">ng-controller</span> directive defines the controller.                
+                    </p>
+                      
+                    <div class="example-body" ng-controller="demoIntroCtrl">
+                        First Name: <input type="text" ng-model="firstName"><br>
+                        Last Name: <input type="text" ng-model="lastName"><br>
+                        <br>
+                        Full Name: {{firstName + " " + lastName}}
+                    </div>                                                       
+                    <br>
+
+                    <div class="code-body" style="">
+                        &lt;div ng-app=&quot;myApp&quot; <span class="spanYellow">ng-controller=&quot;myCtrl&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspFirst Name: &lt;input type=&quot;text&quot; <span class="spanYellow">ng-model=&quot;firstName&quot;</span>&gt;&lt;br&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspLast Name: &lt;input type=&quot;text&quot; <span class="spanYellow">ng-model=&quot;lastName&quot;</span>&gt;&lt;br&gt;&lt;br&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspFull Name: { { firstName + &quot; &quot; + lastName } } 
+                        <br>&lt;/div&gt; 
+                        <br>
+                        <br>&lt;script&gt; 
+                        
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp //AngularJS Module
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp var app = angular.module('myApp', []); 
+                        <br>
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp //AngularJS Controller
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp <span class="spanYellow">app.controller('myCtrl', function($scope) { 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp $scope.firstName= &quot;John&quot;; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp $scope.lastName= &quot;Doe&quot;; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp }); </span>
+                        <br>&lt;/script&gt;
+                    </div>                               
+                    <br>
+
+                  </div>
+                </div>
             </div>
-            <div class="col-sm-4">
-                <h3>Application</h3>
-                <p>Bootstrap's grid system allows up to 12 columns across the page.</p> 
-                <a href="#angular/gridBasic" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a>  
-            </div>
-            
+
+
+
         </div>       
         <!-- /.row -->
 
+        <div ng-include='"templates/pager.html"'></div>
     </div>
     <!-- /.container -->
-
 </div>
 <!-- /.section -->
 
