@@ -1,4 +1,4 @@
-<div  id="angIntro" class="ang section">
+<div  id="angDirectives" class="ang section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,19 +6,151 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS Directives</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    <p>
+                      AngularJS <span class="spanRed">directives</span> are extended HTML attributes with the prefix <span class="spanRed">ng-</span>.<br>
+                      The <span class="spanRed">ng-app</span> directive initializes an AngularJS application.<br>
+                      The <span class="spanRed">ng-init</span> directive initializes application data.<br>
+                      The <span class="spanRed">ng-model</span> directive binds the value of HTML controls (input, select, textarea) to application data.
+                    </p>  
+                                                   
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Data Binding</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      The <span class="spanRed">{ { firstName } }</span> expression, in the example above, is an AngularJS data binding expression.<br>
+                      Data binding in AngularJS, synchronizes AngularJS expressions with AngularJS data.<br>
+                      <span class="spanRed">{ { firstName } }</span> is synchronized with <span class="spanRed">ng-model="firstName"</span>.<br>
+                      In the next example two text fields are synchronized with two <span class="spanRed">ng-model</span> directives:                     
                     </p>
                       
+                    <div class="example-body" style="">
+                      <div ng-init="quantity=1;price=5">
+
+                        Quantity: <input type="number"  ng-model="quantity">
+                        Costs:    <input type="number" ng-model="price">
+
+                        Total in dollar: {{ quantity * price }}
+
+                      </div>
+                    </div> 
+                    <br>
                     <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
+                      &lt;div <span class="spanYellow">ng-init=&quot;quantity=1;price=5&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp Quantity: &lt;input type=&quot;number&quot; <span class="spanYellow">ng-model=&quot;quantity&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp Costs: &lt;input type=&quot;number&quot; <span class="spanYellow">ng-model=&quot;price&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp Total in dollar: <span class="spanYellow">{ { quantity * price } } </span>
+                      <br>&lt;/div&gt;
                     </div>                               
 
                   </div>
                 </div>
             </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Repeating HTML Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>The <span class="spanRed">ng-repeat</span> directive repeats an HTML element:</p>
+                      
+                    <div class="example-body" style="">
+                      <div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+                        <ul>
+                          <li ng-repeat="x in names">
+                            {{ x }}
+                          </li>
+                        </ul>
+                      </div>
+                    </div> 
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;div ng-app="" <span class="spanYellow">ng-init="names=['Jani','Hege','Kai']"</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;ul&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    &lt;li <span class="spanYellow">ng-repeat="x in names"</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      <span class="spanYellow">{ { x } }</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    &lt;/li&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;/ul&gt;
+                      <br>&lt;/div&gt;                     
+                    </div> 
+                    <br>
+
+                    <p>The <span class="spanRed">ng-repeat</span> directive used on an array of objects:</p>                              
+                    <div class="example-body" style="">
+                      <div ng-app="" ng-init="names=[
+                      {name:'Jani',country:'Norway'},
+                      {name:'Hege',country:'Sweden'},
+                      {name:'Kai',country:'Denmark'}]">
+
+                      <ul>
+                        <li ng-repeat="x  in names">
+                          {{ x.name + ', ' + x.country }}
+                        </li>
+                      </ul>
+
+                      </div>
+                    </div> 
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;div ng-app="" <span class="spanYellow">ng-init="names=[
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp {name:'Jani',country:'Norway'},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp {name:'Hege',country:'Sweden'},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp {name:'Kai',country:'Denmark'}]"</span>&gt;
+                      <br>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp &lt;ul&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  <span class="spanYellow">&lt;li ng-repeat="x  in names"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    { { x.name + ', ' + x.country } }
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;/li&gt;</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp &lt;/ul&gt;                      
+                      <br>&lt;/div&gt;                                          
+                    </div> 
+                    <br>
+                    <p>AngularJS is perfect for database CRUD (Create Read Update Delete) applications. Just imagine if these objects were records from a database.</p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The ng-* Directive</h3> </div>
+                  <div class="panel-body">  
+                    <h3>The ng-app Directive</h3>
+                    <p>The <span class="spanRed">ng-app</span> directive defines the root element of an AngularJS application.<br>
+                      The <span class="spanRed">ng-app</span> directive will auto-bootstrap (automatically initialize) the application when a web page is loaded.<br>
+                      Later you will learn how ng-app can have a value (like <span class="spanRed">ng-app="myModule"</span>), to connect code modules.
+                    </p>
+                    
+                    <h3>The ng-init Directive</h3>
+                    <p>The <span class="spanRed">ng-init</span> directive defines initial values for an AngularJS application.<br>
+                      Normally, you will not use <span class="spanRed">ng-init</span>. You will use a controller or module instead.<br>
+                      You will learn more about controllers and modules later.
+                    </p>
+                    
+                    <h3>The ng-model Directive</h3>
+                    <p>The <span class="spanRed">ng-model</span> directive binds the value of HTML controls (input, select, textarea) to application data.<br>
+                      The <span class="spanRed">ng-model</span> directive can also:
+                      <ul>
+                        <li>Provide type validation for application data (number, email, required).</li>
+                        <li>Provide status for application data (invalid, dirty, touched, error).</li>
+                        <li>Provide CSS classes for HTML elements.</li>
+                        <li>Bind HTML elements to HTML forms.</li>
+                      </ul>
+                    </p>
+                    
+                    <h3>The ng-repeat Directive</h3>
+                     <p>The <span class="spanRed">ng-repeat</span> directive clones HTML elements once for each item in a collection (in an array).
+                    </p>
+                  </div>
+                </div>
+            </div>           
 
         </div>       
         <!-- /.row -->
