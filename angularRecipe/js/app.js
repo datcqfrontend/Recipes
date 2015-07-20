@@ -1,4 +1,4 @@
-var app = angular.module('webApp',['ngRoute','ngTouch']);
+var app = angular.module('webApp',['ngRoute','ngTouch','ngSanitize']);
 
 /**
 * Configure the Routes
@@ -65,6 +65,8 @@ app.controller('HomeCtrl', function ( $scope, $location, $http ) {
 });
 
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
+	window.scrollTo(0,0);
+
 	//Active navbar header
 	$('.navbar li').removeClass('active');	
 	$('.navbar li#'+fw.currentGroupName).addClass('active');
@@ -109,6 +111,13 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
 	  $('.tooltip-social').tooltip({
 	    selector: "a[data-toggle=tooltip]"
 	  })*/
+});
+
+
+app.controller('TutorialCtrl', function ( $scope, $location, $http ) {
+	window.scrollTo(0,0);
+
+	$scope.tutorials = fw.pages[fw.currentGroupName][fw.currentPageIndex].content;	
 });
 
 /**
