@@ -6,16 +6,141 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS SQL</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    <p>With the code from the chapter $http, it can used to read from databases.<br>
+                      The following section is a listing of the server code used to fetch SQL data.
+                      <ol>
+                        <li>Using PHP and MySQL. Returning JSON.</li>
+                        <li>Using PHP and MS Access. Returning JSON.</li>
+                        <li>Using ASP.NET, VB, and MS Access. Returning JSON.</li>
+                        <li>Using ASP.NET, Razor, and SQL Lite. Returning JSON.</li>
+                      </ol>
                     </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
+                  </div>
+                </div>
+            </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Cross-Site HTTP Requests</h3> </div>
+                  <div class="panel-body">  
+                    <p>Requests for data from a different server (than the requesting page), are called <span class="spanRed">cross-site</span> HTTP requests.<br>
+                      Cross-site requests are common on the web. Many pages load CSS, images, and scripts from different servers.<br>
+                      In modern browsers, cross-site HTTP requests <span class="spanRed">from scripts</span> are restricted to same site for security reasons.<br>
+                      The following line, in our PHP examples, has been added to allow cross-site access.
+
+                      <div class="example-body">header("Access-Control-Allow-Origin: *");</div>
+
+                      <h3>1. Server Code PHP and MySQL</h3>
+                      <div class="code-body">
+                        &lt;?php
+                        <br>header("Access-Control-Allow-Origin: *");
+                        <br>header("Content-Type: application/json; charset=UTF-8");
+                        <br>
+                        <br>$conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
+                        <br>
+                        <br>$result = $conn-&gt;query("SELECT CompanyName, City, Country FROM Customers");
+                        <br>
+                        <br>$outp = "";
+                        <br>while($rs = $result-&gt;fetch_array(MYSQLI_ASSOC)) {
+                        <br>&nbsp;&nbsp;&nbsp; if ($outp != "") {$outp .= ",";}
+                        <br>&nbsp;&nbsp;&nbsp; $outp .= '{"Name":"'&nbsp; . $rs["CompanyName"] . '",';<br>&nbsp;&nbsp;&nbsp; $outp .= '"City":"'&nbsp;&nbsp; . $rs["City"]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . '",';
+                        <br>&nbsp;&nbsp;&nbsp; $outp .= '"Country":"'. $rs["Country"]&nbsp;&nbsp;&nbsp;&nbsp; . '"}';
+                        <br>}
+                        <br>$outp ='{"records":['.$outp.']}';
+                        <br>$conn-&gt;close();
+                        <br>
+                        <br>echo($outp);
+                        <br>?&gt;
+                      </div>
+
+                      <h3>2. Server Code PHP and MS Access</h3>
+                      <div class="code-body">
+                        &lt;?php
+                        <br>header("Access-Control-Allow-Origin: *");
+                        <br>header("Content-Type: application/json; charset=ISO-8859-1");
+                        <br>
+                        <br>$conn = new COM("ADODB.Connection");
+                        <br>$conn-&gt;open("PROVIDER=Microsoft.Jet.OLEDB.4.0;Data Source=Northwind.mdb");
+                        <br>
+                        <br>$rs = $conn-&gt;execute("SELECT CompanyName, City, Country FROM Customers");
+                        <br>
+                        <br>$outp = "";
+                        <br>while (!$rs-&gt;EOF) {
+                        <br>&nbsp;&nbsp;&nbsp; if ($outp != "") {$outp .= ",";}
+                        <br>&nbsp;&nbsp;&nbsp; $outp .= '{"Name":"'&nbsp; . $rs["CompanyName"] . '",';
+                        <br>&nbsp;&nbsp;&nbsp; $outp .= '"City":"'&nbsp;&nbsp; . $rs["City"]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . '",';
+                        <br>&nbsp;&nbsp;&nbsp; $outp .= '"Country":"'. $rs["Country"]&nbsp;&nbsp;&nbsp;&nbsp; . '"}';
+                        <br>&nbsp;&nbsp;&nbsp; $rs-&gt;MoveNext();
+                        <br>}
+                        <br>$outp ='{"records":['.$outp.']}';
+                        <br>
+                        <br>$conn-&gt;close();
+                        <br>
+                        <br>echo ($outp);
+                        <br>?&gt;
+                      </div>
+
+                      <h3>3. Server Code ASP.NET, VB and MS Access</h3>
+                      <div class="code-body">
+                        &lt;%@ Import Namespace="System.IO"%&gt;
+                        <br>&lt;%@ Import Namespace="System.Data"%&gt;
+                        <br>&lt;%@ Import Namespace="System.Data.OleDb"%&gt;
+                        <br>&lt;%
+                        <br>Response.AppendHeader("Access-Control-Allow-Origin", "*")
+                        <br>Response.AppendHeader("Content-type", "application/json")
+                        <br>Dim conn As OleDbConnection
+                        <br>Dim objAdapter As OleDbDataAdapter
+                        <br>Dim objTable As DataTable
+                        <br>Dim objRow As DataRow
+                        <br>Dim objDataSet As New DataSet()
+                        <br>Dim outp
+                        <br>Dim c
+                        <br>conn = New OledbConnection("Provider=Microsoft.Jet.OLEDB.4.0;data 
+                        source=Northwind.mdb")
+                        <br>objAdapter = New OledbDataAdapter("SELECT CompanyName, City, Country FROM Customers", conn)
+                        <br>objAdapter.Fill(objDataSet, "myTable")
+                        <br>objTable=objDataSet.Tables("myTable")
+                        <br>
+                        <br>outp = ""
+                        <br>c = chr(34)
+                        <br>for each x in objTable.Rows
+                        <br>if outp &lt;&gt; "" then outp = outp &amp; ","
+                        <br>outp = outp &amp; "{" &amp; c &amp; "Name"&nbsp;&nbsp;&nbsp; &amp; c &amp; ":" &amp; c &amp; x("CompanyName") &amp; c &amp; ","
+                        <br>outp = outp &amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c &amp; "City"&nbsp;&nbsp;&nbsp; &amp; c &amp; ":" &amp; c &amp; x("City")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; c &amp; ","
+                        <br>outp = outp &amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c &amp; "Country" &amp; c &amp; ":" &amp; c &amp; x("Country")&nbsp;&nbsp;&nbsp;&nbsp; &amp; c &amp; "}"
+                        <br>next
+                        <br>
+                        <br>outp="{" &amp; c &amp; "records" &amp; c &amp; ":[" &amp; outp &amp; "]}"
+                        <br>response.write(outp)
+                        <br>conn.close
+                        <br>%&gt;
+                      </div>
+
+                      <h3>4. Server Code ASP.NET, VB Razor and SQL Lite</h3>
+                      <div class="code-body">
+                        @{
+                        <br>Response.AppendHeader("Access-Control-Allow-Origin", "*")
+                        <br>Response.AppendHeader("Content-type", "application/json")
+                        <br>var db = Database.Open("Northwind");
+                        <br>var query = db.Query("SELECT CompanyName, City, Country FROM Customers");
+                        <br>var outp =""
+                        <br>var c = chr(34)
+                        <br>}
+                        <br>@foreach(var row in query)
+                        <br>{
+                        <br>if outp &lt;&gt; "" then outp = outp + ","
+                        <br>outp = outp + "{" + c + "Name"&nbsp;&nbsp;&nbsp; + c + ":" + c 
+                        + @row.CompanyName + c + ","
+                        <br>outp = outp +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c + "City"&nbsp;&nbsp;&nbsp; + c + ":" + c + @row.City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + c + ","
+                        <br>outp = outp +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c + "Country" + c 
+                        + ":" + c + @row.Country&nbsp;&nbsp;&nbsp;&nbsp; + c + "}"
+                        <br>}
+                        <br>outp ="{" + c + "records" + c + ":[" + outp + "]}"
+                        <br>@outp
+                      </div>
+                    </p>
                   </div>
                 </div>
             </div> 

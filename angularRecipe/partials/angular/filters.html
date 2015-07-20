@@ -4,21 +4,205 @@
         <div ng-include='"templates/jumbotron-topic.html"'></div>
 
         <div class="row">
+
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS Filters</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    <p>Filters can be added to expressions and directives using a pipe character ( '<span class="code-span">|</span>' ).<br>AngularJS filters can be used to <span class="code-span">transform data</span>:
+                      <table class="reference notranslate">
+                      <tbody><tr>
+                        <th style="width:20%">Filter</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td class="spanYellow">currency</td>
+                        <td>Format a number to a currency format.</td>
+                      </tr>
+                      <tr>
+                        <td class="spanRed">filter</td>
+                        <td>Select a subset of items from an array.</td>
+                      </tr>
+                      <tr>
+                        <td class="spanYellow">lowercase</td>
+                        <td>Format a string to lower case.</td>
+                      </tr>
+                      <tr>
+                        <td class="spanRed">orderBy</td>
+                        <td>Orders an array by an expression.</td>
+                      </tr>
+                      <tr>
+                        <td class="spanYellow">uppercase</td>
+                        <td>Format a string to upper case.</td>
+                      </tr>
+                      </tbody></table>
                     </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
-
                   </div>
                 </div>
             </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Adding Filters to Expressions</h3> </div>
+                  <div class="panel-body">  
+                    <p>A filter can be added to an expression with a pipe character (|) and a filter. (For the next two examples we will use the person controller from the previous chapter) 
+                      <br>The <span class="spanRed">uppercase</span> filter format strings to upper case:
+
+                      <div class="example-body" style="">
+                        <div ng-app="myApp" ng-controller="demoIntroCtrl">
+                          <p>The name is {{ lastName | uppercase }}</p>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="code-body" style="">
+                        &lt;div ng-app="myApp" ng-controller="personCtrl"&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;p&gt;The name is <span class="yellow">{ { lastName | uppercase } }</span>&lt;/p&gt;
+                        <br>&lt;/div&gt;
+                      </div>
+
+                      <br>The <span class="spanRed">lowercase</span> filter format strings to lower case:
+
+                      <div class="example-body" style="">
+                        <div ng-app="myApp" ng-controller="demoIntroCtrl">
+                          <p>The name is {{ lastName | lowercase }}</p>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="code-body" style="">
+                        &lt;div ng-app="myApp" ng-controller="personCtrl"&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;p&gt;The name is <span class="yellow">{ { lastName | lowercase } }</span>&lt;/p&gt;
+                        <br>&lt;/div&gt;
+                      </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The currency Filter</h3> </div>
+                  <div class="panel-body"> 
+                    <p>The currency filter formats a number as currency:</p>
+
+                    <div class="example-body" style="">
+                      <div ng-app="myApp" ng-controller="demoCostCtrl">
+
+                        <input type="number" ng-model="quantity">
+                        <input type="number" ng-model="price">
+
+                        <p>Total = {{ (quantity * price) | currency }}</p>
+
+                      </div>
+                    </div>
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;div ng-app="myApp" <span class="yellow">ng-controller="demoCostCtrl"</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;input type="number" ng-model="quantity"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;input type="number" ng-model="price"&gt;
+                      <br>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;p&gt;Total = <span class="yellow">{ {(quantity * price) | currency} }</span>&lt;/p&gt;
+                      <br>&lt;/div&gt;
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Adding Filters to Directives</h3> </div>
+                  <div class="panel-body"> 
+                    <p>A filter can be added to a directive with a pipe character (|) and a filter.
+                      <br>The <span class="spanRed">orderBy</span> filter orders an array by an expression:</p>
+
+                    <div class="example-body" style="">
+                      <div ng-app="myApp" ng-controller="demoNameCtrl">
+
+                        <ul>
+                          <li ng-repeat="x in names | orderBy:'country'">
+                            {{ x.name + ', ' + x.country }}
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;div ng-app="myApp" <span class="yellow">ng-controller="demoNameCtrl"</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp &lt;ul&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &lt;li ng-repeat="x in names | <span class="yellow">orderBy:'country'</span>"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      { { x.name + ', ' + x.country } }
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/li&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt;
+
+                      <br>&lt;/div&gt;
+
+                      <br>&lt;script&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp app.controller(<span class="yellow">'demoNameCtrl'</span>, function($scope) {
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    <span class="yellow">$scope.names = [
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Kai", country:"Denmark"},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Jani", country:"Norway"},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Hege", country:"Sweden"}
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Helen", country:"Austria"}
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    ]</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp });
+                      <br>&lt;/script&gt;
+
+
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Filtering Input</h3> </div>
+                  <div class="panel-body"> 
+                    <p>An input filter can be added to a directive with a pipe character (|) and filter followed by a colon and a model name.
+                      <br>The <span class="spanRed">filter</span> filter selects a subset of an array:</p>
+
+                    <div class="example-body" style="">
+                      <div ng-app="myApp" ng-controller="demoNameCtrl">
+                        <p><input type="text" ng-model="test"></p>
+                        <ul>
+                          <li ng-repeat="x in names | filter:test | orderBy:'country'">
+                            {{ (x.name | uppercase) + ', ' + x.country }}
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                    <br>
+                    <div class="code-body" style="">
+                      &lt;div ng-app="myApp" <span class="yellow">ng-controller="demoNameCtrl"</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;&lt;input type="text" <span class="yellow">ng-model="test"</span>&gt;&lt;/p&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp &lt;ul&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &lt;li ng-repeat="x in names | <span class="yellow">filter:test</span> | orderBy:'country'"&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      { { (x.name | uppercase) + ', ' + x.country } }
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/li&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt;
+
+                      <br>&lt;/div&gt;
+
+                      <br>&lt;script&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp app.controller(<span class="yellow">'demoNameCtrl'</span>, function($scope) {
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    <span class="yellow">$scope.names = [
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Kai", country:"Denmark"},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Jani", country:"Norway"},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Hege", country:"Sweden"}
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      {name:"Helen", country:"Austria"}
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    ]</span>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp });
+                      <br>&lt;/script&gt;
+
+
+                    </div>
+
+
+                  </div>
+                </div>
+            </div>
 
         </div>       
         <!-- /.row -->

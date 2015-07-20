@@ -283,4 +283,33 @@ div.code-body {
   #angTutorial a.btn-link {
     margin-left: 85%;
   }
+
+  .ang table.reference {
+      width: 100%; max-width: 100%;
+
+      border-spacing: 0;
+      border-collapse: collapse;
+      background-color: grey;
+      margin-bottom: 12px;
+  }
+
+  .ang table.reference tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  .ang table.reference tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .ang table.reference tr:nth-child(even) {
+    color: #ffffff;
+  }
+
+  .ang table.reference>thead>tr>th,.ang table.reference>tbody>tr>th,.ang table.reference>tfoot>tr>th,.ang table.reference>thead>tr>td, table.reference>tbody>tr>td, table.reference>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
 /* END ANGULAR */

@@ -4,18 +4,102 @@
         <div ng-include='"templates/jumbotron-topic.html"'></div>
 
         <div class="row">
+            
+
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS HTML DOM</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    AngularJS has directives for binding application data to the attributes of HTML DOM elements.
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The ng-disabled Directive</h3> </div>
+                  <div class="panel-body">  
+                    <p>The <span class="spanRed">ng-disabled</span> directive binds AngularJS application data to the disabled attribute of HTML elements.
+                      <div ng-app="">
+                        <p><button ng-disabled="mySwitch">Click Me!</button></p>
+                        <p><input type="checkbox" ng-model="mySwitch">Button</p>
+                      </div>
                     </p>
                       
                     <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
+                      &lt;div ng-app=""&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p&gt;&lt;button <span class="spanYellow">ng-disabled="mySwitch"</span>&gt;Click Me!&lt;/button&gt;&lt;/p&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p&gt;&lt;input type="checkbox" <span class="spanYellow">ng-model="mySwitch"</span>&gt;Button&lt;/p&gt;
+                      <br>&lt;/div&gt;
                     </div>                               
+                    <br>
+                    <p>Application explained:<br>
+                      The <span class="spanRed">ng-disabled</span> directive binds the application data mySwitch to the HTML button's disabled attribute.<br>
+                      The <span class="spanRed">ng-model</span> directive binds the value of the HTML checkbox element to the value of mySwitch.<br>
+                      If the value of mySwitch evaluates to <span class="spanRed">true</span>, the button will be disabled.<br>
+                      If the value of mySwitch evaluates to <span class="spanRed">false</span>, the button will not be disabled.
 
+                    </p>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The ng-show Directive</h3> </div>
+                  <div class="panel-body">  
+                    <p>The <span class="spanRed">ng-show</span> directive shows or hides an HTML element.
+                      <div ng-app="">
+                        <p ng-show="true">I am visible.</p>
+                        <p ng-show="false">I am not visible.</p>
+                      </div>
+                    </p>
+
+                    <div class="code-body" style="">
+                       &lt;div ng-app=""&gt;
+                       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p <span class="spanYellow">ng-show="true"</span>&gt;I am visible.&lt;/p&gt;
+
+                       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p <span class="spanYellow">ng-show="false"</span>&gt;I am not visible.&lt;/p&gt;
+                       <br>&lt;/div&gt;
+                    </div>
+                    <br>
+
+                    <p>The ng-show directive shows (or hides) an HTML element based on the value of <span class="spanRed">ng-show</span>. 
+                      <br>You can use any expression that evaluates to true or false:
+                      <div ng-app="" ng-init="hour=13">
+                        <p ng-show="hour > 12">I am visible because hour greater than 12.</p>
+                        
+                      </div>
+
+                    </p>
+
+                     <div class="code-body" style="">
+                       &lt;div ng-app="" <span class="spanYellow">ng-init="hour=13"</span>&gt;
+                       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p <span class="spanYellow">ng-show="hour > 12"</span>&gt;I am visible because hour greater than 12.&lt;/p&gt;                       
+                       <br>&lt;/div&gt;
+                    </div>
+                  </div>
+                </div>
+            </div>  
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The ng-show Directive</h3> </div>
+                  <div class="panel-body">  
+                    <p>The <span class="spanRed">ng-hide</span> directive hides or shows an HTML element.
+                      <div ng-app="">
+                        <p ng-hide="true">I am not visible.</p>
+                        <p ng-hide="false">I am visible.</p>
+                      </div>
+                    </p>
+                    <div class="code-body" style="">
+                       &lt;div ng-app=""&gt;
+                       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p <span class="spanYellow">ng-hide="true"</span>&gt;I am not visible.&lt;/p&gt;
+
+                       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p <span class="spanYellow">ng-hide="false"</span>&gt;I am visible.&lt;/p&gt;
+                       <br>&lt;/div&gt;
+                    </div>
                   </div>
                 </div>
             </div> 

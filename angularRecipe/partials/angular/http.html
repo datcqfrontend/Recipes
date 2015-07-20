@@ -6,15 +6,185 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS AJAX - $http</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
-                    </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
+                    <p><span class="spanRed">$http</span> is an AngularJS service for reading data from remote servers.  </p>
+
+                    <div class="panel panel-default"> 
+                       <div class="panel-heading"><h3>Providing Data</h3></div> 
+                       <div class="panel-body">
+                          The following data can be provided by a web server <span class="spanRed">http://www.w3schools.com/angular/customers.php </span>:
+                          <div class="example-body">
+                            {
+                            <br>"records": [
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Alfreds Futterkiste",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Berlin",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Germany"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Berglunds snabbköp",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Luleå",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Sweden"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Centro comercial Moctezuma",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "México D.F.",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Mexico"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Ernst Handel",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Graz",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Austria"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "FISSA Fabrica Inter. Salchichas S.A.",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Madrid",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Spain"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Galería del gastrónomo",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Barcelona",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Spain"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Island Trading",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Cowes",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "UK"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Königlich Essen",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Brandenburg",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Germany"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Laughing Bacchus Wine Cellars",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Vancouver",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Canada"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Magazzini Alimentari Riuniti",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Bergamo",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Italy"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "North/South",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "London",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "UK"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Paris spécialités",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Paris",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "France"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Rattlesnake Canyon Grocery",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Albuquerque",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "USA"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Simons bistro",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "København",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Denmark"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "The Big Cheese",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Portland",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "USA"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Vaffeljernet",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Århus",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Denmark"
+                            <br>&nbsp; },
+                            <br>&nbsp; {
+                            <br>&nbsp;&nbsp;&nbsp; "Name" : "Wolski Zajazd",
+                            <br>&nbsp;&nbsp;&nbsp; "City" : "Warszawa",
+                            <br>&nbsp;&nbsp;&nbsp; "Country" : "Poland"
+                            <br>&nbsp; }
+                            <br>]
+                            <br>}     
+                          </div>                     
+                       </div> 
+                    </div>
+
+                    <div class="panel panel-default"> 
+                       <div class="panel-heading"><h3>AngularJS $http</h3></div> 
+                       <div class="panel-body">
+                          <p>AngularJS <span class="spanRed">$http</span> is a core service for reading data from web servers.</p>
+                          <p><span class="spanRed">$http.get(url)</span> is the function to use for reading server data.</p>
+
+                          <div class="code-body">
+                            &lt;div ng-app="myApp" <span class="spanYellow">ng-controller="customersCtrl"</span>&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li ng-repeat="x in names"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      { { x.Name + ', ' + x.Country } }
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;/ul&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;script&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var app = angular.module('myApp', []);
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  app.controller(<span class="spanYellow">'customersCtrl'</span>, function($scope, <span class="spanYellow">$http</span>) {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <span class="spanYellow">$http.get("http://www.w3schools.com/angular/customers.php")</span>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      .success(function(response) {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanYellow">$scope.names = response.records;</span>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  });
+                            <br>&lt;/script&gt;
+                          </div>
+                       </div>
+                    </div>
+                                                              
+
+                    <div class="panel panel-default"> 
+                       <div class="panel-heading"><h3>AngularJS $http & json</h3></div> 
+                       <div class="panel-body">
+                          <p>Use $http to load local json data like below: </p>
+                          <div class="example-body">
+                            <div ng-app="myApp" ng-controller="demoCustomerCtrl"> 
+                              <ul> 
+                                <li ng-repeat="x in names"> 
+                                  {{ x.Name + ', ' + x.Country }} 
+                                </li> 
+                              </ul> 
+                            </div> 
+                          </div>
+                          <br>
+
+                          <div class="code-body">
+                            &lt;div ng-app="myApp" <span class="spanYellow">ng-controller="demoCustomerCtrl"</span>&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li ng-repeat="x in names"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      { { x.Name + ', ' + x.Country } }
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;/ul&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;script&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var app = angular.module('myApp', []);
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  app.controller(<span class="spanYellow">'demoCustomerCtrl'</span>, function($scope, <span class="spanYellow">$http</span>) {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <span class="spanYellow">$http.get("partials/angular/customer.json")</span>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      .success(function(response) {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanYellow">$scope.names = response.records;</span>
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  });
+                            <br>&lt;/script&gt;
+                          </div>
+
+                          <p>
+                            <h3>Application explained:</h3>
+                            <br>The AngularJS application is defined by <span class="spanRed">ng-app</span>. The application runs inside a <span class="spanRed">&lt;div&gt;</span>.
+                            <br>The <span class="spanRed">ng-controller</span> directive names the controller object.
+                            <br>The <span class="spanRed">demoCustomerCtrl</span> function is a standard JavaScript object constructor.
+                            <br>AngularJS will invoke <span class="spanRed">demoCustomerCtrl</span> with a <span class="spanRed">$scope</span> and <span class="spanRed">$http</span> object.
+                            <br><span class="spanRed">$scope</span> is the application object (the owner of application variables and functions).
+                            <br><span class="spanRed">$http</span> is an <span class="spanRed">XMLHttpRequest</span> object for requesting external data.
+                            <br><span class="spanRed">$http.get()</span> reads JSON data from <span class="spanRed">"partials/angular/customer.json"</span>.
+                            <br>If success, the controller creates a property (names) in the scope, with JSON data from the server.
+                          </p>
+                       </div>
+                    </div>
 
                   </div>
                 </div>

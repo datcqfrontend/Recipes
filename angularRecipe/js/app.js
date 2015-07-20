@@ -147,4 +147,52 @@ app.directive('a', function() {
 	    $scope.firstName= "John";
 	    $scope.lastName= "Doe";
 	});
+
+	app.controller('demoCostCtrl', function($scope) {
+	    $scope.quantity= 10;
+	    $scope.price= 5;
+	});
+
+	app.controller('demoNameCtrl', function($scope) {
+	    $scope.names = [
+	    	{name:"Kai", country:"Denmark"},
+	    	{name:"Jani", country:"Norway"},
+	    	{name:"Hege", country:"Sweden"},
+	    	{name:"Helen", country:"Austria"}
+	    ]
+	});
+
+	app.controller('demoCustomerCtrl', function($scope,$http) {
+	    $http.get("partials/angular/customer.json") 
+           .success(function(response) { 
+               $scope.names = response.records; 
+        }); 
+	});
+
+	app.controller('demoPersonCtrl', function($scope,$http) {
+	    $scope.firstName = "John",
+      	$scope.lastName = "Doe"
+      	$scope.myVar = false;
+     	 $scope.toggle = function() {
+          $scope.myVar = !$scope.myVar;
+      	};
+	});
+
+	app.controller('demoPerson2Ctrl', function($scope,$http) {
+	    $scope.firstName = "John",
+      	$scope.lastName = "Doe"
+      	$scope.myVar = true;
+     	 $scope.toggle = function() {
+          $scope.myVar = !$scope.myVar;
+      	};
+	});
+
+	app.controller('demoFormCtrl', function($scope,$http) {
+	    $scope.master = {firstName: "John", lastName: "Doe"};
+	    $scope.reset = function() {
+	        $scope.user = angular.copy($scope.master);
+	    };
+	    $scope.reset();
+	});
+	
 //END SCRIPT FOR SHOW DEMO

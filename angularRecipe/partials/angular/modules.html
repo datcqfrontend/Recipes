@@ -6,15 +6,94 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS Modules</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    <p>An AngularJS module defines an application.<br>
+                      A module is a container for the different parts of an application.<br>
+                      All application controllers should belong to a module.                      
+                    </p>                    
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>A Module With One Controller</h3> </div>
+                  <div class="panel-body">  
+                    <p>This application (<span class="spanRed">"myApp"</span>), has one controller (<span class="spanRed">"myCtrl"</span>):</p>   
+
+                    <div class="code-body">
+                      &lt;div <span class="spanYellow">ng-app="myApp" ng-controller="myCtrl"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ { firstName + " " + lastName } }
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var app = angular.module(<span class="spanYellow">"myApp"</span>, []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(<span class="spanYellow">"myCtrl"</span>, function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.firstName = "John";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.lastName = "Doe";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                      <br>&lt;/script&gt;
+
+                    </div>
+                    <br>
+
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Modules and Controllers in Files</h3> </div>
+                  <div class="panel-body">  
+                    <p>It is common in AngularJS applications to put the module and the controllers in JavaScript files.<br>
+                      In this example, <span class="spanRed">"myApp.js"</span> contains an application module definition, while <span class="spanRed">"myCtrl.js"</span> contains the controller:
                     </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
+
+                    <div class="code-body">
+                      &lt;div <span class="spanYellow">ng-app="myApp" ng-controller="myCtrl"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ { firstName + " " + lastName } }
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script <span class="spanYellow">src="myApp.js"</span>&gt;&lt;/script&gt;
+                      <br>&lt;script <span class="spanYellow">src="myCtrl.js"</span>&gt;&lt;/script&gt;
+
+                    </div>
+                    <br>
+                    <div class="code-body">
+                      //myApp.js
+                      <br>var app = angular.module("myApp", []);
+                    </div>
+                    <br>
+                    <div class="code-body">
+                      //myCtrl.js
+                      <br>app.controller("myCtrl", function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.firstName  = "John";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.lastName= "Doe";
+                      <br>});
+                    </div>                    
+
+                  </div>
+                </div>
+            </div> 
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Functions can Pollute the Global Namespace</h3> </div>
+                  <div class="panel-body">  
+                    <p>Global functions should be avoided in JavaScript. They can easily be overwritten or destroyed by other scripts.<br>
+                      AngularJS modules reduces this problem, by keeping all functions local to the module.
+                    </p>
+
+                    <hr>
+                    <h3>When to Load the Library?</h3>
+                    <p>A common advise for HTML applications, is to place scripts at the very bottom of the <span class="spanRed">&lt;body&gt;</span> element.<br>
+                      But, in many AngularJS examples, you will see the library in the head of the document.<br>
+                      This is because calls to angular.module can only be compiled after the library has been loaded.<br>
+                      Another solution is to load the AngularJS library in the <span class="spanRed">&lt;body&gt;</span> element, before your own AngularJS scripts.
+                    </p>
 
                   </div>
                 </div>

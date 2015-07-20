@@ -13,9 +13,14 @@
             </div>
         </div>
 
+         <div class="row" >
+            <div class="col-sm-12">
+                 <p class="pull-right"><label for="search">Search: &nbsp; </label><input id="search" type="text" ng-model="$filterTutorial"></p>
+            </div>
+        </div>
 
         <div class="row" ng-controller="TutorialCtrl">
-			<div ng-class="tut.title!='Clearfix' ? 'col-sm-4' : 'col-sm-12 hidden-xs'" ng-repeat="tut in tutorials">
+			<div ng-class="tut.title!='Clearfix' ? 'col-sm-4' : 'col-sm-12 hidden-xs'" ng-repeat="tut in tutorials | filter:$filterTutorial">
 				<div ng-if="tut.title!='Clearfix'">                    
 					<h3>{{tut.title}}</h3>
 					<p ng-bind-html="tut.sortContent"></p> 

@@ -237,12 +237,12 @@ var fw = {
 							},
 							{ 
 								title: "Expressions",
-								sortContent: "Bootstrap's grid system allows up to 12 columns across the page.",
+								sortContent: "AngularJS expressions are written inside double braces. AngularJS expressions binds data to HTML the same way as the <span class='spanRed'>ng-bind</span> directive.",
 								link: "#angular/expressions"
 							},
 							{ 
 								title: "Directives",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "AngularJS <span class='spanRed'>directives</span> are extended HTML attributes with the prefix <span class='spanRed'>ng-</span>.<br>The <span class='spanRed'>ng-app</span> directive initializes an AngularJS application.<br>The <span class='spanRed'>ng-init</span> directive initializes application data.<br>The <span class='spanRed'>ng-model</span> directive binds the value of HTML controls (input, select, textarea) to application data.",
 								link: "#angular/directives"
 							},
 							{ 	title: "Clearfix"	},

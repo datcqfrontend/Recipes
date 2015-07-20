@@ -6,15 +6,130 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS Controllers</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    <p>
+                      AngularJS applications are controlled by controllers.
+                      <br>The <span class="spanRed">ng-controller</span> directive defines the application controller.
+                      <br>A controller is a JavaScript Object, created by a standard JavaScript object constructor.                      
                     </p>
                       
+                    <div class="example-body" style="">
+                      <div ng-controller="demoIntroCtrl">
+                        First Name: <input type="text" ng-model="firstName"><br>
+                        Last Name: <input type="text" ng-model="lastName"><br>
+                        <br>
+                        Full Name: {{firstName + " " + lastName}}
+                      </div>
+                    </div> 
+                    <br>
                     <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
+                      &lt;div ng-app=&quot;myApp&quot; <span class="yellow">ng-controller=&quot;myCtrl&quot;</span>&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspFirst Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspLast Name: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;br&gt; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbspFull Name: { {firstName + &quot; &quot; + lastName} } 
+                      <br>&lt;/div&gt; 
+                      <br>
+                      <br>&lt;script&gt; var app = angular.module('myApp', []); 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">app.controller('myCtrl', function($scope) {</span> 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$scope.firstName = &quot;John&quot;; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$scope.lastName = &quot;Doe&quot;; 
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp}); 
+                      <br>&lt;/script&gt;
+                    </div>   
+                    <br>
+                    <p> Application explained:<br>
+                      The AngularJS application is defined by <span class="spanRed">ng-app="myApp"</span>. The application runs inside the <span class="spanRed">&lt;div&gt;</span>.<br>
+                      The <span class="spanRed">ng-controller="myCtrl"</span> attribute is an <span class="spanRed">AngularJS directive</span>. It defines a controller.<br>
+                      The <span class="spanRed">myCtrl</span> function is a JavaScript function.<br>
+                      AngularJS will invoke the controller with a <span class="spanRed">$scope</span> object.<br>
+                      In AngularJS, <span class="spanRed">$scope</span> is the application object (the owner of application variables and functions).<br>
+                      The controller creates two properties (variables) in the scope (firstName and lastName).<br> 
+                      The <span class="spanRed">ng-model</span> directives bind the input fields to the controller properties (firstName and lastName).
+                    </p>                            
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Controller Methods</h3> </div>
+                  <div class="panel-body"> 
+                    <p>The example above demonstrated a controller object with two properties: lastName and firstName.<br>A controller can also have methods (variables as functions):
+                      <div class="code-body" style="">
+                        &lt;div ng-app=&quot;myApp&quot; <span class="yellow">ng-controller=&quot;myCtrl&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspFirst Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspLast Name: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;br&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspFull Name: <span class="yellow">{ {fullName()} }</span> 
+                        <br>&lt;/div&gt; 
+                        <br>
+                        <br>&lt;script&gt; var app = angular.module('myApp', []); 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp<span class="yellow">app.controller('myCtrl', function($scope) {</span> 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp $scope.firstName = &quot;John&quot;; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp $scope.lastName = &quot;Doe&quot;; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span class="yellow">$scope.fullName = function(){
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp return $scope.firstName + " " + $scope.lastName;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</span>
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp}); 
+                        <br>&lt;/script&gt;
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Controller In External Files</h3> </div>
+                  <div class="panel-body"> 
+                    <p>In larger applications, it is common to store controllers in external files. Just copy the code between the <span class="spanRed">&lt;script&gt;</span> tags into an external file named <span class="spanRed">personController.js</span>:
+                      <div class="code-body" style="">
+                        &lt;div ng-app=&quot;myApp&quot; <span class="yellow">ng-controller=&quot;myCtrl&quot;</span>&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspFirst Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspLast Name: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;br&gt; 
+                        <br>&nbsp&nbsp&nbsp&nbsp&nbspFull Name: <span class="yellow">{ {fullName()} }</span> 
+                        <br>&lt;/div&gt; 
+                        <br><span class="yellow">&lt;script src="personController.js"&gt; &lt;/script&gt;</span>
+                      </div> 
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Another Example</h3> </div>
+                  <div class="panel-body">
+                    <p>For the next example we will create a new controller file:</p>
+                                        
+                    <div class="example-body" style="">
+                      //namesController.js
+                      <br>angular.module('myApp', []).<span class="yellow">controller('namesCtrl', function($scope) {
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp    $scope.names = [
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        {name:'Jani',country:'Norway'},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        {name:'Hege',country:'Sweden'},
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        {name:'Kai',country:'Denmark'}
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp   ];
+                      <br>});</span>
+                    </div>
+                    <p>Save the file as  namesController.js and then use the controller file in an application.</p>
+                    <div class="code-body" style="">
+                      &lt;div ng-app="myApp" <span class="yellow">ng-controller="namesCtrl"</span>&gt;
+                      <br>
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;li <span class="yellow">ng-repeat="x in names"</span>&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    { { x.name + ', ' + x.country } }
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;/li&gt;
+                      <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/ul&gt;
+                      <br>
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script <span class="yellow">src="namesController.js"</span>&gt;&lt;/script&gt;
+                    </div>
 
                   </div>
                 </div>

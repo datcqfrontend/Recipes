@@ -6,19 +6,131 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS Events</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
-                    </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
+                    <p>AngularJS has its own HTML events directives.</p>                    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The ng-click Directive</h3> </div>
+                  <div class="panel-body">  
+                    <p>The ng-click directive defines an AngularJS click event.</p>
+
+                    <div ng-app="" ng-init="count=0">
+                      <button ng-click="count = count + 1">Click me!</button>
+                      <p>{{ count }}</p>
+                    </div>
+
+                    <div class="code-body">
+                      &lt;div ng-app="" ng-init="count=0"&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;button <span class="spanYellow">ng-click="count = count + 1"</span>&gt;Click me!&lt;/button&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p&gt;<span class="spanYellow">{ { count } }</span>&lt;/p&gt;
+                      <br>&lt;/div&gt;
+                    </div>
 
                   </div>
                 </div>
             </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Hiding HTML Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>The ng-hide directive can be used to set the visibility of a part of an application.<br>
+                      The value <span class="spanRed">ng-hide="true"</span> makes an HTML element invisible.<br>
+                      The value <span class="spanRed">ng-hide="false"</span> makes the element visible.</p>      
+
+                    <div ng-app="myApp" ng-controller="demoPersonCtrl">
+                      <button ng-click="toggle()">Toggle</button>
+                      <p ng-hide="myVar">
+                      First Name: <input type="text" ng-model="firstName"><br>
+                      Last Name: <input type="text" ng-model="lastName"><br>
+                      <br>
+                      Full Name: {{firstName + " " + lastName}}
+                      </p>
+                      <p ng-if="myVar"></p>
+                    </div>
+                    
+                    <div class="code-body">
+                      &lt;div ng-app="myApp" <span class="spanYellow">controller="demoPersonCtrl"</span>ng-&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;button <span class="spanYellow">ng-click="toggle()"</span>&gt;Toggle&lt;/button&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p <span class="spanYellow">ng-hide="myVar"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  First Name: &lt;input type="text" ng-model="firstName"&gt;&lt;br&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Last Name: &lt;input type="text" ng-model="lastName"&gt;&lt;br&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;br&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Full Name: {{firstName + " " + lastName}}
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;/p&gt;
+                      <br>&lt;/div&gt;
+
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var app = angular.module('myApp', []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(<span class="spanYellow">'demoPersonCtrl'</span>, function($scope){
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.firstName = "John";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.lastName = "Doe";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.myVar = false;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="spanYellow">$scope.toggle = function() {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.myVar = !$scope.myVar;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</span>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                      <br>&lt;/script&gt;
+                    </div>
+                                   
+                  </div>
+                </div>
+            </div> 
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Showing HTML Elements</h3> </div>
+                  <div class="panel-body">
+                    <p>The <span class="spanRed">ng-show</span> directive can also be used to set the visibility of a part of an application.<br>
+                      The value <span class="spanRed">ng-show="false"</span> makes an HTML element invisible.<br>
+                      The value <span class="spanRed">ng-show="true"</span> makes the element visible.<br>
+                      Here is the same example as above, using <span class="spanRed">ng-show</span> instead of <span class="spanRed">ng-hide</span>:
+                    </p>
+
+                    <div ng-app="myApp" ng-controller="demoPerson2Ctrl">
+                      <button ng-click="toggle()">Toggle</button>
+                      <p ng-show="myVar">
+                      First Name: <input type="text" ng-model="firstName"><br>
+                      Last Name: <input type="text" ng-model="lastName"><br>
+                      <br>
+                      Full Name: {{firstName + " " + lastName}}
+                      </p>
+                      <p ng-if="!myVar"></p>
+                    </div>
+                    
+                    <div class="code-body">
+                      &lt;div ng-app="myApp" <span class="spanYellow">controller="demoPerson2Ctrl"</span>ng-&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;button <span class="spanYellow">ng-click="toggle()"</span>&gt;Toggle&lt;/button&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p <span class="spanYellow">ng-hide="myVar"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  First Name: &lt;input type="text" ng-model="firstName"&gt;&lt;br&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Last Name: &lt;input type="text" ng-model="lastName"&gt;&lt;br&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;br&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Full Name: {{firstName + " " + lastName}}
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;/p&gt;
+                      <br>&lt;/div&gt;
+
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var app = angular.module('myApp', []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(<span class="spanYellow">'demoPerson2Ctrl'</span>, function($scope){
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.firstName = "John";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.lastName = "Doe";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.myVar = true;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="spanYellow">$scope.toggle = function() {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $scope.myVar = !$scope.myVar;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</span>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                      <br>&lt;/script&gt;
+                    </div>
+                   </div>
+                </div>
+            </div>   
+
 
         </div>       
         <!-- /.row -->
