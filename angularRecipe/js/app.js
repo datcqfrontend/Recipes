@@ -194,5 +194,10 @@ app.directive('a', function() {
 	    };
 	    $scope.reset();
 	});
+
+	app.controller('demoValidateCtrl', function($scope,$http) {
+		$scope.user = 'John Doe';
+    	$scope.email = 'john.doe@gmail.com';
+	});
 	
 //END SCRIPT FOR SHOW DEMO

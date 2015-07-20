@@ -6,15 +6,119 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS Input Validation</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    <p>AngularJS forms and controls can validate input data.</p>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Input Validation</h3> </div>
+                  <div class="panel-body">  
+                    <p>n the previous chapter, you learned about AngularJS forms and controls. AngularJS forms and controls can provide validation services, and notify users of invalid input. Client-side validation cannot alone secure user input. Server side validation is also necessary.</p>
+                  </div>
+                </div>
+            </div> 
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Application Code</h3> </div>
+                  <div class="panel-body">  
+
+                    <h2>Validation Example</h2>
+                    <form ng-controller="demoValidateCtrl" name="myForm" novalidate>
+
+                      <p>Username:<br>
+                        <input type="text" name="user" ng-model="user" required>
+                        <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                        <span ng-show="myForm.user.$error.required">Username is required.</span>
+                        </span>
+                      </p>
+
+                      <p>Email:<br>
+                        <input type="email" name="email" ng-model="email" required>
+                        <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <span ng-show="myForm.email.$error.required">Email is required.</span>
+                        <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                        </span>
+                      </p>
+
+                      <p>
+                        <input type="submit"
+                        ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+                        myForm.email.$dirty && myForm.email.$invalid">
+                      </p>
+
+                    </form>
+
+                    <div class="code-body">
+                      &lt;h2&gt;Validation Example&lt;/h2&gt;
+                      <br>&lt;form <span class="spanYellow">ng-controller=&quot;demoValidateCtrl&quot; name=&quot;myForm&quot; novalidate</span>&gt; 
+              
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Username:&lt;br&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; <span class="spanYellow">name=&quot;user&quot; ng-model=&quot;user&quot; required</span>&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span style=&quot;color:red&quot; <span class="spanYellow">ng-show=&quot;myForm.user.$dirty &amp;&amp; myForm.user.$invalid&quot;</span>&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="spanYellow">ng-show=&quot;myForm.user.$error.required&quot;</span>&gt;Username is required.&lt;/span&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt; 
+                      <br>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Email:&lt;br&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;email&quot; <span class="spanYellow">name=&quot;email&quot; ng-model=&quot;email&quot; required</span>&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span style=&quot;color:red&quot; <span class="spanYellow">ng-show=&quot;myForm.email.$dirty &amp;&amp; myForm.email.$invalid&quot;</span>&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="spanYellow">ng-show=&quot;myForm.email.$error.required&quot;</span>&gt;Email is required.&lt;/span&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="spanYellow">ng-show=&quot;myForm.email.$error.email&quot;</span>&gt;Invalid email address.&lt;/span&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt; 
+                      <br>
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;submit&quot; <span class="spanYellow">ng-disabled=&quot;myForm.user.$dirty &amp;&amp; myForm.user.$invalid 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|| myForm.email.$dirty &amp;&amp; myForm.email.$invalid&quot;</span>&gt; 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt; 
+                   
+                      <br>&lt;/form&gt;
+                    </div>
+                    <br>
+
+                    <div class="code-body">
+                      &lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var app = angular.module('myApp', []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(<span class="spanYellow">'demoValidateCtrl'</span>, function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.user = 'John Doe';
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.email = 'john.doe@gmail.com';
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                      <br>&lt;/script&gt;
+                    </div>
+
+                    <h3>Example Explained: </h3>
+                    <p>The AngularJS directive <span class="spanRed">ng-model</span> binds the input elements to the model.<br>
+                      The model object has two properties: user and email.<br>
+                      Because of <span class="spanRed">ng-show</span>, the spans with color:red are displayed only when user or email is <span class="spanRed">$dirty and $invalid</span>.
+                      <table class="reference">
+                       <tbody><tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                       </tr>
+                       <tr>
+                        <td>$dirty</td>
+                        <td>The user has interacted with the field.</td>
+                       </tr>
+                       <tr>
+                        <td>$valid</td>
+                        <td>The field content is valid.</td>
+                       </tr>
+                       <tr>
+                        <td>$invalid</td>
+                        <td>The field content is invalid.</td>
+                       </tr>
+                       <tr>
+                        <td>$pristine</td>
+                        <td>User has not interacted with the field yet.</td>
+                       </tr>
+                      </tbody></table>
                     </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
 
                   </div>
                 </div>
