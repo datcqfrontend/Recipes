@@ -6,19 +6,319 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS and Twitter Bootstrap</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
+                    <p>Bootstrap is a popular style sheet. This chapter demonstrates how to use it with AngularJS.
                     </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
-
                   </div>
                 </div>
             </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Bootstrap</h3> </div>
+                  <div class="panel-body">  
+                    <p>To include Bootstrap in your AngularJS application, add the following line to the head of your document (CDN link):
+                      <div class="code-body">
+                        &lt;link rel="stylesheet" <span class="spanYellow">href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"</span>&gt;
+                      </div>
+                  </div>
+                </div>
+            </div>     
+
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Example with AngularJS and Bootstrap</h3> </div>
+                  <div class="panel-body" ng-controller="demoUserCtrl">
+                      <h3>Users</h3>
+                      <table class="table table-striped">
+                        <thead><tr>
+                          <th>Edit</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Password</th>
+                        </tr></thead>
+                        <tbody><tr ng-repeat="user in users">
+                          <td>
+                            <button class="btn" ng-click="editUser(user.id)">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
+                            </button>
+                          </td>
+                          <td>{{ user.fName }}</td>
+                          <td>{{ user.lName }}</td>
+                          <td>{{ user.passW }}</td>
+                        </tr></tbody>
+                      </table>
+
+                      <hr>
+                      <button class="btn btn-success" ng-click="editUser('new')">
+                        <span class="glyphicon glyphicon-user"></span> Create New User
+                      </button>
+                      <hr>
+
+                      <h3 ng-show="edit">Create New User:</h3>
+                      <h3 ng-hide="edit">Edit User:</h3>
+
+                      <form class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">First Name:</label>
+                        <div class="col-sm-10">
+                          <input type="text" ng-model="fName" ng-disabled="!edit" placeholder="First Name">
+                        </div>
+                      </div> 
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Last Name:</label>
+                        <div class="col-sm-10">
+                          <input type="text" ng-model="lName" ng-disabled="!edit" placeholder="Last Name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Password:</label>
+                        <div class="col-sm-10">
+                          <input type="password" ng-model="passw1" placeholder="Password">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Repeat:</label>
+                        <div class="col-sm-10">
+                          <input type="password" ng-model="passw2" placeholder="Repeat Password">
+                        </div>
+                      </div>
+                      </form>
+
+                      <hr>
+                      <button class="btn btn-success" ng-disabled="error || incomplete" ng-click="save()">
+                        <span class="glyphicon glyphicon-save"></span> Save Changes
+                      </button>
+                      
+                  </div>
+                </div>
+            </div>     
+
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Code</h3> </div>
+                  <div class="panel-body">
+                      <div class="code-body">
+                        &lt;!DOCTYPE html&gt; 
+                        <br>&lt;html&gt; 
+                        <br><span class="spanYellow">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;&gt; 
+                        <br>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js&quot;&gt;&lt;/script&gt;</span>
+                        <br>
+                        <br>&lt;body <span class="spanYellow">ng-app=&quot;myApp&quot; ng-controller=&quot;userCtrl&quot;</span>&gt; 
+                        <br>&lt;div class=&quot;container&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Users&lt;/h3&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;table <span class="spanYellow">class=&quot;table table-striped&quot;</span>&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="spanYellow">&lt;thead&gt;&lt;tr&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Edit&lt;/th&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;First Name&lt;/th&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Last Name&lt;/th&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Password&lt;/th&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/thead&gt;</span> 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tbody&gt;&lt;tr ng-repeat=&quot;user in users&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="spanYellow">&lt;button class=&quot;btn&quot; ng-click=&quot;editUser(user.id)&quot;&gt;</span>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class=&quot;glyphicon glyphicon-pencil&quot;&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;Edit 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/button&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/td&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;<span class="spanYellow">{ { user.fName } }</span>&lt;/td&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;<span class="spanYellow">{ { user.lName } }</span>&lt;/td&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;<span class="spanYellow">{ { user.passW } }</span>&lt;/td&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/tbody&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/table&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;hr&gt; 
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="spanYellow">&lt;button class=&quot;btn btn-success&quot; ng-click=&quot;editUser('new')&quot;&gt; </span>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class=&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt; Create New User 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/button&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;hr&gt; 
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3 <span class="spanYellow">ng-show=&quot;edit&quot;</span>&gt;Create New User:&lt;/h3&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3 <span class="spanYellow">ng-hide=&quot;edit&quot;</span>&gt;Edit User:&lt;/h3&gt; 
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;form class=&quot;form-horizontal&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label class=&quot;col-sm-2 control-label&quot;&gt;First Name:&lt;/label&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=&quot;text&quot; <span class="spanYellow">ng-model=&quot;fName&quot; ng-disabled=&quot;!edit&quot;</span> placeholder=&quot;First Name&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Last Name:&lt;/label&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-10&quot;&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=&quot;text&quot; <span class="spanYellow">ng-model=&quot;lName&quot; ng-disabled=&quot;!edit&quot;</span> placeholder=&quot;Last Name&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;form-group&quot;&gt; &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Password:&lt;/label&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=&quot;password&quot; <span class="spanYellow">ng-model=&quot;passw1&quot;</span> placeholder=&quot;Password&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;form-group&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Repeat:&lt;/label&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-10&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=&quot;password&quot; <span class="spanYellow">ng-model=&quot;passw2&quot;</span> placeholder=&quot;Repeat Password&quot;&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/form&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;hr&gt; 
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button class=&quot;btn btn-success&quot; <span class="spanYellow">ng-disabled=&quot;error || incomplete&quot;</span>&gt; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class=&quot;glyphicon glyphicon-save&quot;&gt;&lt;/span&gt; Save Changes 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/button&gt; 
+                        <br>&lt;/div&gt; 
+                        <br>
+                        <br>&lt;script <span class="spanYellow">src=&quot;myUsers.js&quot;</span>&gt;&lt;/script&gt; 
+                        <br>&lt;/body&gt; 
+                        <br>&lt;/html&gt;
+                      </div>
+
+                     </div>
+                </div>
+            </div>     
+
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>JavaScript Code</h3> </div>
+                  <div class="panel-body">
+                      <div class="code-body">
+                        <span class="spanYellow">//myUser.js</span>
+                        <br>angular.module('myApp', []).controller(<span class="spanYellow">'demoUserCtrl'</span>, function($scope) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.fName = '';
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.lName = '';
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.passw1 = '';
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.passw2 = '';
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.users = [
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {id:1, fName:'Hege',  lName:"Pege", passW: '123' },
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {id:2, fName:'Kim',   lName:"Pim", passW: '123' },
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {id:3, fName:'Sal',   lName:"Smith", passW: '123' },
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {id:4, fName:'Jack',  lName:"Jones", passW: '123' },
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {id:5, fName:'John',  lName:"Doe", passW: '123' },
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {id:6, fName:'Peter', lName:"Pan", passW: '123' }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ];
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.lastId = 6;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.editId = -1;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.edit = true;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.error = false;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.incomplete = false; 
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.editUser = function(id) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    if (id == 'new') {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.editId = $scope.lastId + 1;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.edit = true;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.incomplete = true;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.fName = '';
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.lName = '';
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      } else {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.editId = id;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.edit = false;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.fName = $scope.users[id-1].fName;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.lName = $scope.users[id-1].lName; 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  };</span>
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.save = function() {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    if ($scope.edit == true) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.lastId = $scope.editId;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      var obj = {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      id: $scope.lastId,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      fName: $scope.fName,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      lName: $scope.lName,
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      passW: $scope.passw1
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.users.push(obj);
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      } else {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.users[$scope.editId-1].passW =  $scope.passw1 ; 
+                       
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  };</span>
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.$watch('passw1',function() {$scope.test();});</span>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.$watch('passw2',function() {$scope.test();});
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.$watch('fName', function() {$scope.test();});
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.$watch('lName', function() {$scope.test();});
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.test = function() {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    if ($scope.passw1 !== $scope.passw2) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.error = true;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      } else {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.error = false;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    $scope.incomplete = false;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    if ($scope.edit && (!$scope.fName.length ||
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    !$scope.lName.length ||
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    !$scope.passw1.length || !$scope.passw2.length)) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         $scope.incomplete = true;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  };</span>
+
+                        <br>});
+                      </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>JavaScript Code Explained</h3> </div>
+                  <div class="panel-body">
+                    <table class="reference notranslate">
+                    <tbody><tr>
+                      <th>Scope Properties</th>
+                      <th>Used for</th>
+                    </tr>
+                    <tr>
+                      <td>$scope.fName</td>
+                      <td>Model variable (user first name)</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.lName</td>
+                      <td>Model variable (user last name)</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.passw1</td>
+                      <td>Model variable (user password 1)</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.passw2</td>
+                      <td>Model variable (user password 2)</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.users</td>
+                      <td>Model variable (array of users)</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.edit</td>
+                      <td>Set to true when user clicks on create user.</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.error</td>
+                      <td>Set to true if passw1 not equal passw2</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.incomplete</td>
+                      <td>Set to true if any field is empty (length = 0)</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.editUser</td>
+                      <td>Sets model variables</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.watch</td>
+                      <td>Watches model variables</td>
+                    </tr>
+                    <tr>
+                      <td>$scope.test</td>
+                      <td>Tests model variables for errors and incompleteness</td>
+                    </tr>
+                    </tbody></table>
+                  </div>
+                </div>
+            </div>
 
         </div>       
         <!-- /.row -->

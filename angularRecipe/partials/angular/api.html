@@ -6,15 +6,152 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS API</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
-                    </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
+                    <p>API stands for <span class="spanRed">Application Programming Interface</span></p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Global API</h3> </div>
+                  <div class="panel-body">  
+                    <p>The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:
+                      <ul>
+                        <li>Comparing objects</li>
+                        <li>Iterating objects</li>
+                        <li>Converting data</li>
+                      </ul>
+                      The Global API functions are accessed using the angular object.<br>
+                      Below is a list of some common API functions:
+
+                      <table class="reference">
+                       <tbody><tr>
+                        <th>API</th>
+                        <th>Description</th>
+                       </tr>
+                       <tr>
+                        <td>angular.lowercase()</td>
+                        <td>Converts a string to lowercase</td>
+                       </tr>
+                       <tr>
+                        <td>angular.uppercase()</td>
+                        <td>Converts a string to uppercase</td>
+                       </tr>
+                       <tr>
+                        <td>angular.isString()</td>
+                        <td>Returns true if the reference is a string </td>
+                       </tr>
+                       <tr>
+                        <td>angular.isNumber()</td>
+                        <td>Returns true if the reference is a number</td>
+                       </tr>
+                      </tbody></table>
+
+                  </div>
+                </div>
+            </div> 
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>angular.lowercase()</h3> </div>
+                  <div class="panel-body">  
+                    <div ng-app="" ng-controller="demoLowerCaseCtrl">
+                      <p>{{ x1 }} become to {{x2}}</p>                      
+                    </div>
+
+                    <div class="code-body">
+                      &lt;div ng-app="" <span class="spanYellow">ng-controller="demoLowerCaseCtrl"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p&gt;{ { x1 } } become to { { x2 } }&lt;/p&gt;                      
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var app = angular.module('myApp', []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  app.controller(<span class="spanYellow">'demoLowerCaseCtrl'</span>, function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.x1 = "JOHN";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.x2 = angular.lowercase($scope.x1);</span>
+                        });
+                      <br>&lt;/script&gt;
+                    </div>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>angular.uppercase()</h3> </div>
+                  <div class="panel-body">  
+                    <div ng-app="" ng-controller="demoUpperCaseCtrl">
+                      <p>{{ x1 }} become to {{x2}}</p>                      
+                    </div>
+
+                    <div class="code-body">
+                      &lt;div ng-app="" <span class="spanYellow">ng-controller="demoUpperCaseCtrl"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p&gt;{ { x1 } } become to { { x2 } }&lt;/p&gt;                      
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var app = angular.module('myApp', []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  app.controller(<span class="spanYellow">'demoUpperCaseCtrl'</span>, function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.x1 = "JOHN";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.x2 = angular.uppercase($scope.x1);</span>
+                        });
+                      <br>&lt;/script&gt;
+                    </div>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>angular.isString()</h3> </div>
+                  <div class="panel-body">  
+                    <div ng-app="" ng-controller="demoIsStringCtrl">
+                      <p>{{ x1 }} is string ? {{x2}}</p>                      
+                    </div>
+
+                    <div class="code-body">
+                      &lt;div ng-app="" <span class="spanYellow">ng-controller="demoIsStringCtrl"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p&gt;{ { x1 } } is string ? { { x2 } }&lt;/p&gt;                      
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var app = angular.module('myApp', []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  app.controller(<span class="spanYellow">'demoIsStringCtrl'</span>, function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.x1 = "JOHN";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.x2 = angular.isString($scope.x1);</span>
+                        });
+                      <br>&lt;/script&gt;
+                    </div>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>angular.isNumber()</h3> </div>
+                  <div class="panel-body">  
+                    <div ng-app="" ng-controller="demoIsNumberCtrl">
+                      <p>{{ x1 }} is number ? {{x2}}</p>                      
+                    </div>
+
+                    <div class="code-body">
+                      &lt;div ng-app="" <span class="spanYellow">ng-controller="demoIsNumberCtrl"</span>&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;p&gt;{ { x1 } } is number ? { { x2 } }&lt;/p&gt;                      
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  var app = angular.module('myApp', []);
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  app.controller(<span class="spanYellow">'demoIsNumberCtrl'</span>, function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $scope.x1 = "JOHN";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="spanYellow">$scope.x2 = angular.isNumber($scope.x1);</span>
+                        });
+                      <br>&lt;/script&gt;
+                    </div>
 
                   </div>
                 </div>
