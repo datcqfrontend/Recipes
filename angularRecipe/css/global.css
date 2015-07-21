@@ -35,7 +35,7 @@ body {
 /* Page Sections */
 .section,
 .section-colored {
-    padding: 50px 0;
+    padding: 0px 0;
 }
 
 .section-colored {
@@ -188,12 +188,48 @@ div.code-body {
     padding: 15px;
 }
 
+/* ANIMATION */
+.section.slideLeft {
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
+
+  -webkit-transform: translate3d(-100%,0,0);
+}
+
+.section.slideRight {
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
+
+  -webkit-transform: translate3d(+100%,0,0);
+}
+
 /* NAVBAR */
 
   .navbar-nav > #bootstrap.active>a {    background-color: #892cca; background-image: none;}
   .navbar-nav > #angular.active>a {    background-color: #B92933;  background-image: none;}
+  .navbar-nav > #html5.active>a {    background-color: #e44d26; background-image: none;}
+  .navbar-nav > #css.active>a {    background-color: #1572b6;  background-image: none;}
 /* END NAVBAR*/
  
+/* HTML5 */
+
+  .html5 .jumbotron-page {
+      background-color: #e44d26;
+      color: #fff;
+  }
+/* END HTML5 */
+
+/* CSS3 */
+
+  .css .jumbotron-page {
+      background-color: #1572b6;
+      color: #fff;
+  }
+/* END CSS3 */
 
 /* BOOTSTRAP */
   .bs .code-span {
@@ -202,7 +238,7 @@ div.code-body {
   }
   .bs .jumbotron-page {
       background-color: #892cca;
-      color: #fff;
+      color: #ebebeb;
   }
 
   .bs table.reference {
