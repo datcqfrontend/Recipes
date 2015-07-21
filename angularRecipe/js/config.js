@@ -325,6 +325,12 @@ var fw = {
 								sortContent: "It is time to create a real AngularJS Single Page Application (SPA).",
 								link: "#angular/application"
 							}
+							,
+							{ 
+								title: "References",
+								sortContent: "AngularJS References.",
+								link: "#angular/references"
+							}
 						]
 					},
 
@@ -349,7 +355,8 @@ var fw = {
 					{"page":"bootstrap", "topic":"Angular Bootstrap", "breadcrumb":"Bootstrap"  },
 
 					{"page":"includes", "topic":"Angular Includes", "breadcrumb":"Includes"  },
-					{"page":"application", "topic":"Angular Application", "breadcrumb":"Aplication"  }
+					{"page":"application", "topic":"Angular Application", "breadcrumb":"Aplication"  },
+					{"page":"references", "topic":"Angular References", "breadcrumb":"References"  }
 					
 				],
 

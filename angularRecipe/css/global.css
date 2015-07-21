@@ -289,7 +289,7 @@ div.code-body {
 
       border-spacing: 0;
       border-collapse: collapse;
-      background-color: grey;
+      background-color: #ddd;
       margin-bottom: 12px;
   }
 
@@ -303,7 +303,7 @@ div.code-body {
     background-color: #ffffff;
   }
   .ang table.reference tr:nth-child(even) {
-    color: #ffffff;
+    /*color: #ffffff;*/
   }
 
   .ang table.reference>thead>tr>th,.ang table.reference>tbody>tr>th,.ang table.reference>tfoot>tr>th,.ang table.reference>thead>tr>td, table.reference>tbody>tr>td, table.reference>tfoot>tr>td {
