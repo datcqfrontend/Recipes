@@ -6,16 +6,63 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Wells</h3> </div>
+                  <div class="panel-heading"><h3>AngularJS Includes</h3> </div>
                   <div class="panel-body">  
-                    <p>The <span class="code-span">.well</span> class adds a rounded border around an element with a gray background color and some padding:
-                      <div class="well">Basic Well</div>
-                    </p>
-                      
-                    <div class="code-body" style="">
-                      &lt;div <span class="yellow">class=&quot;well&quot;</span>&gt;Basic Well&lt;/div&gt;
-                    </div>                               
+                    <p>With AngularJS, you can include HTML files in HTML.</p>                      
+                  </div>
+                </div>
+            </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Includes in Future HTML</h3> </div>
+                  <div class="panel-body">  
+                    <p>Including a portion of HTML in HTML is, unfortunately, not (yet) supported by HTML.<br>
+                      HTML imports is a W3C suggestion http://www.w3.org for future versions of HTML:
+                      <div class="code-body">
+                        &lt;link <span class="spanYellow">rel="import" href="/path/navigation.html"</span>&gt;
+                      </div>
+                    </p>                      
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Server Side Includes</h3> </div>
+                  <div class="panel-body">  
+                    <p>Most web servers support <span class="spanRed">Server Side Includes (SSI)</span>. With SSI, you can include HTML in HTML before the page is sent to the browser.
+                      <div class="code-body">
+                        &lt;?php require("navigation.php"); ?&gt;
+                      </div>
+                    </p>                      
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Client Side Includes</h3> </div>
+                  <div class="panel-body">  
+                    <p>There are many ways to use JavaScript to include HTML in HTML. The most common way, is to use <span class="spanRed">an http request (AJAX)</span> to fetch data from a server, and then write the data to the <span class="spanRed">innerHTML</span> of an HTML element.
+                    </p>                      
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>AngularJS Side Includes</h3> </div>
+                  <div class="panel-body">  
+                    <p>With AngularJS, you can include HTML content, using the <span class="spanRed">ng-include</span> directive:
+                      <div class="code-body">
+                        &lt;div class="container"&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;div <span class="spanYellow">ng-include="'myUsers_List.htm'"</span>&gt;&lt;/div&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &lt;div <span class="spanYellow">ng-include="'myUsers_Form.htm'"</span>&gt;&lt;/div&gt;
+                        <br>&lt;/div&gt;
+                      </div>
+                     
+                    </p>                      
                   </div>
                 </div>
             </div> 

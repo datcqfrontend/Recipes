@@ -248,81 +248,81 @@ var fw = {
 							{ 	title: "Clearfix"	},
 
 							{ 
-								title: "Controllers",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								title: "Controllers",								
+								sortContent: "AngularJS applications are controlled by controllers. <br>The <span class='spanRed'>ng-controller</span> directive defines the application controller. <br>A controller is a JavaScript Object, created by a standard JavaScript object constructor.",
 								link: "#angular/controllers"
 							},
 							{ 
 								title: "Filters",
-								sortContent: "Bootstrap's grid system allows up to 12 columns across the page.",
+								sortContent: "Filters can be added to expressions and directives using a pipe character ( '|' ). <br>AngularJS filters can be used to transform data: <span class='spanRed'>currency, filter, lowercase, orderBy, uppercase</span>.",
 								link: "#angular/filters"
 							},
 							{ 
-								title: "Http",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								title: "Http",								
+								sortContent: "<span class='spanRed'>$http</span> is an AngularJS service for reading data from remote servers.",
 								link: "#angular/http"
 							},
 							{ 	title: "Clearfix"	},
 
 							{ 
 								title: "Tables",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "The <span class='spanRed'>ng-repeat</span> directive is perfect for displaying tables.",
 								link: "#angular/tables"
 							},
 							{ 
 								title: "SQL",
-								sortContent: "Bootstrap's grid system allows up to 12 columns across the page.",
+								sortContent: "With the code from the chapter <span class='spanRed'>$http</span>, it can used to read from databases.",
 								link: "#angular/sql"
 							},
 							{ 
 								title: "DOM",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "AngularJS has directives for binding application data to the attributes of HTML DOM elements.",
 								link: "#angular/dom"
 							},
 							{ 	title: "Clearfix"	},
 
 							{ 
 								title: "Events",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "AngularJS has its own HTML events directives.",
 								link: "#angular/events"
 							},
 							{ 
 								title: "Modules",
-								sortContent: "Bootstrap's grid system allows up to 12 columns across the page.",
+								sortContent: "An AngularJS module defines an application.<br>A module is a container for the different parts of an application.<br>All application controllers should belong to a module.",
 								link: "#angular/modules"
 							},
 							{ 
 								title: "Forms",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "An AngularJS form is a collection of input controls.",
 								link: "#angular/forms"
 							},
 							{ 	title: "Clearfix"	},
 
 							{ 
 								title: "Validation",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "AngularJS forms and controls can validate input data.",
 								link: "#angular/validation"
 							},
 							{ 
 								title: "API",
-								sortContent: "Bootstrap's grid system allows up to 12 columns across the page.",
+								sortContent: "The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:<ul><li>Comparing objects</li><li>Iterating objects</li><li>Converting data</li></ul> The Global API functions are accessed using the angular object.",
 								link: "#angular/api"
 							},
 							{ 
 								title: "Bootstrap",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "Bootstrap is a popular style sheet. This chapter demonstrates how to use it with AngularJS.",
 								link: "#angular/bootstrap"
 							},
 							{ 	title: "Clearfix"	},
 
 							{ 
 								title: "Includes",
-								sortContent: "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+								sortContent: "With AngularJS, you can include HTML content, using the <span class='spanRed'>ng-include</span> directive",
 								link: "#angular/includes"
 							},
 							{ 
 								title: "Application",
-								sortContent: "Bootstrap's grid system allows up to 12 columns across the page.",
+								sortContent: "It is time to create a real AngularJS Single Page Application (SPA).",
 								link: "#angular/application"
 							}
 						]
