@@ -1,0 +1,1 @@
+console.log('Asset 3 ready');
