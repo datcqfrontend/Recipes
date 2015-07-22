@@ -46,14 +46,14 @@ function nextPage(){
 
 	window.location.href = "index.html#/"+fw.currentGroupName+"/"+(fw.pages[fw.currentGroupName][fw.currentPageIndex+1].page);
 
-	$('.section').addClass('slideLeft');
+	//$('.section').addClass('slideLeft');
 }
 function prevPage(){
 	if(!fw.canBack) return;
 
 	window.location.href = "index.html#/"+fw.currentGroupName+"/"+(fw.pages[fw.currentGroupName][fw.currentPageIndex-1].page);
 
-	$('.section').addClass('slideRight');
+	//$('.section').addClass('slideRight');
 }
 
 function goToPage(group,page){

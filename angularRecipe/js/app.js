@@ -23,11 +23,11 @@ app.config(['$routeProvider', function ($routeProvider) {
 			controller: "PageCtrl",
 			resolve: {
 		      // I will cause a 1 second delay
-		      delay: function($q, $timeout) {
+		      /*delay: function($q, $timeout) {
 		        var delay = $q.defer();
 		        $timeout(delay.resolve, 500);
 		        return delay.promise;
-		      }
+		      }*/
 		    }
 
 		})
@@ -40,11 +40,11 @@ app.config(['$routeProvider', function ($routeProvider) {
 			controller: "PageCtrl",
 			resolve: {
 		      // I will cause a 1 second delay
-		      delay: function($q, $timeout) {
+		      /*delay: function($q, $timeout) {
 		        var delay = $q.defer();
 		        $timeout(delay.resolve, 500);
 		        return delay.promise;
-		      }
+		      }*/
 		    }
 		})
 
@@ -81,7 +81,7 @@ app.controller('HomeCtrl', function ( $scope, $location, $http ) {
 	$('.navbar li').removeClass('active');	
 });
 
-app.controller('PageCtrl', function ( $scope, $route, $location, $http ) {
+app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $http ) {
 	window.scrollTo(0,0);
 
 	//console.log($route);
@@ -136,7 +136,12 @@ app.controller('PageCtrl', function ( $scope, $route, $location, $http ) {
 app.controller('TutorialCtrl', function ( $scope, $location, $http ) {
 	window.scrollTo(0,0);
 
-	$scope.tutorials = fw.pages[fw.currentGroupName][fw.currentPageIndex].content;	
+	$http.get("partials/"+fw.currentGroupName+"/json/cntTutorial.json") 
+       .success(function(response) { 
+           $scope.tutorials = response.content; 
+    }); 
+
+	//$scope.tutorials = fw.pages[fw.currentGroupName][fw.currentPageIndex].content;	
 });
 
 /**

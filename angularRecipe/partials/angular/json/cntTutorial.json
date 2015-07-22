@@ -1,0 +1,105 @@
+{ 
+	"content":[
+		{ 
+			"title": "Introduction",
+			"sortContent": "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+			"link": "#angular/intro"
+		},
+		{ 
+			"title": "Expressions",
+			"sortContent": "AngularJS expressions are written inside double braces. AngularJS expressions binds data to HTML the same way as the <span class='spanRed'>ng-bind</span> directive.",
+			"link": "#angular/expressions"
+		},
+		{ 
+			"title": "Directives",
+			"sortContent": "AngularJS <span class='spanRed'>directives</span> are extended HTML attributes with the prefix <span class='spanRed'>ng-</span>.<br>The <span class='spanRed'>ng-app</span> directive initializes an AngularJS application.<br>The <span class='spanRed'>ng-init</span> directive initializes application data.<br>The <span class='spanRed'>ng-model</span> directive binds the value of HTML controls (input, select, textarea) to application data.",
+			"link": "#angular/directives"
+		},
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Controllers",								
+			"sortContent": "AngularJS applications are controlled by controllers. <br>The <span class='spanRed'>ng-controller</span> directive defines the application controller. <br>A controller is a JavaScript Object, created by a standard JavaScript object constructor.",
+			"link": "#angular/controllers"
+		},
+		{ 
+			"title": "Filters",
+			"sortContent": "Filters can be added to expressions and directives using a pipe character ( '|' ). <br>AngularJS filters can be used to transform data: <span class='spanRed'>currency, filter, lowercase, orderBy, uppercase</span>.",
+			"link": "#angular/filters"
+		},
+		{ 
+			"title": "Http",								
+			"sortContent": "<span class='spanRed'>$http</span> is an AngularJS service for reading data from remote servers.",
+			"link": "#angular/http"
+		},
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Tables",
+			"sortContent": "The <span class='spanRed'>ng-repeat</span> directive is perfect for displaying tables.",
+			"link": "#angular/tables"
+		},
+		{ 
+			"title": "SQL",
+			"sortContent": "With the code from the chapter <span class='spanRed'>$http</span>, it can used to read from databases.",
+			"link": "#angular/sql"
+		},
+		{ 
+			"title": "DOM",
+			"sortContent": "AngularJS has directives for binding application data to the attributes of HTML DOM elements.",
+			"link": "#angular/dom"
+		},
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Events",
+			"sortContent": "AngularJS has its own HTML events directives.",
+			"link": "#angular/events"
+		},
+		{ 
+			"title": "Modules",
+			"sortContent": "An AngularJS module defines an application.<br>A module is a container for the different parts of an application.<br>All application controllers should belong to a module.",
+			"link": "#angular/modules"
+		},
+		{ 
+			"title": "Forms",
+			"sortContent": "An AngularJS form is a collection of input controls.",
+			"link": "#angular/forms"
+		},
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Validation",
+			"sortContent": "AngularJS forms and controls can validate input data.",
+			"link": "#angular/validation"
+		},
+		{ 
+			"title": "API",
+			"sortContent": "The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:<ul><li>Comparing objects</li><li>Iterating objects</li><li>Converting data</li></ul> The Global API functions are accessed using the angular object.",
+			"link": "#angular/api"
+		},
+		{ 
+			"title": "Bootstrap",
+			"sortContent": "Bootstrap is a popular style sheet. This chapter demonstrates how to use it with AngularJS.",
+			"link": "#angular/bootstrap"
+		},
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Includes",
+			"sortContent": "With AngularJS, you can include HTML content, using the <span class='spanRed'>ng-include</span> directive",
+			"link": "#angular/includes"
+		},
+		{ 
+			"title": "Application",
+			"sortContent": "It is time to create a real AngularJS Single Page Application (SPA).",
+			"link": "#angular/application"
+		}
+		,
+		{ 
+			"title": "References",
+			"sortContent": "AngularJS References.",
+			"link": "#angular/references"
+		}
+	]
+}
