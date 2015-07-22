@@ -15,9 +15,9 @@
 		
 	<link rel="stylesheet" href="css/global.css">
 </head>
-<body ng-app="webApp">
+<body ng-app="webApp" >
 	<div ng-include='"templates/header.html"'></div>
-	<div ng-view></div>
+	<div ng-view="" ng-swipe-left="nextPage()" ng-swipe-right="prevPage()"></div>
 	<div ng-include='"templates/footer.html"'></div>
 	
 	

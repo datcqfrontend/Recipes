@@ -17,11 +17,11 @@
 
                     </p>
                       
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <p>My first expression: {{ 5 + 5 }}</p>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;p&gt;My first expression: { { 5 + 5 } }&lt;/p&gt;
                     </div>                               
 
@@ -35,12 +35,12 @@
                   <div class="panel-body">  
                     <p>AngularJS numbers are like JavaScript numbers:</p>
                     
-                    <div class="example-body" >
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();">
                       <p ng-init="quantity=2;cost=5">Total in dollar (expresion): {{ quantity * cost }}</p>
                       <p ng-init="quantity=2;cost=5">Total in dollar (ng-bind): <span ng-bind="quantity * cost"></span></p>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;p ng-init="quantity=2;cost=5"&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbspTotal in dollar (expresion): <span class="spanYellow">{ { quantity * cost } }</span>
                       <br>&lt;/p&gt;
@@ -60,12 +60,12 @@
                   <div class="panel-body">  
                     <p>AngularJS strings are like JavaScript strings:</p>
                     
-                    <div class="example-body" >
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();">
                       <p ng-init="firstName='John';lastName='Doe'">The name is (expression:) {{ firstName + " " + lastName }}</p>
                       <p ng-init="firstName='John';lastName='Doe'">The name is (ng-bind): <span ng-bind="firstName + ' ' + lastName "></span></p>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;p ng-init="firstName='John';lastName='Doe'"&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbspThe name is (expresion): <span class="spanYellow">{ { firstName + " " + lastName } }</span>
                       <br>&lt;/p&gt;
@@ -85,12 +85,12 @@
                   <div class="panel-body">  
                     <p>AngularJS objects are like JavaScript objects:</p>
                     
-                    <div class="example-body" >
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();">
                       <p ng-init="person={firstName:'John',lastName:'Doe'}">The name is (expression:) {{ person.firstName + " " + person.lastName }}</p>
                       <p ng-init="person={firstName:'John',lastName:'Doe'}">The name is (ng-bind): <span ng-bind="person.firstName + ' ' + person.lastName "></span></p>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;p ng-init="person={firstName:'John',lastName:'Doe'}"&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbspThe name is (expresion): <span class="spanYellow">{ { person.firstName + " " + person.lastName } }</span>
                       <br>&lt;/p&gt;
@@ -109,12 +109,12 @@
                   <div class="panel-body">  
                     <p>AngularJS arrays are like JavaScript arrays:</p>
                     
-                    <div class="example-body" >
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();">
                       <p ng-init="points=[1,15,19,2,40]">The third result is (expression): {{ points[2] }}</p>
                       <p ng-init="points=[1,15,19,2,40]">The third result is (ng-bind): <span ng-bind="points[2]"></span></p>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;p ng-init="points=[1,15,19,2,40]"&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbspThe third result is (expresion): <span class="spanYellow">{ { points[2] } }</span>
                       <br>&lt;/p&gt;

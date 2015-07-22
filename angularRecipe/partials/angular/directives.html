@@ -31,7 +31,7 @@
                       In the next example two text fields are synchronized with two <span class="spanRed">ng-model</span> directives:                     
                     </p>
                       
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <div ng-init="quantity=1;price=5">
 
                         Quantity: <input type="number"  ng-model="quantity">
@@ -42,7 +42,7 @@
                       </div>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div <span class="spanYellow">ng-init=&quot;quantity=1;price=5&quot;</span>&gt; 
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp Quantity: &lt;input type=&quot;number&quot; <span class="spanYellow">ng-model=&quot;quantity&quot;</span>&gt; 
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp Costs: &lt;input type=&quot;number&quot; <span class="spanYellow">ng-model=&quot;price&quot;</span>&gt; 
@@ -61,7 +61,7 @@
                   <div class="panel-body">  
                     <p>The <span class="spanRed">ng-repeat</span> directive repeats an HTML element:</p>
                       
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <div ng-app="" ng-init="names=['Jani','Hege','Kai']">
                         <ul>
                           <li ng-repeat="x in names">
@@ -71,7 +71,7 @@
                       </div>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div ng-app="" <span class="spanYellow">ng-init="names=['Jani','Hege','Kai']"</span>&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;ul&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    &lt;li <span class="spanYellow">ng-repeat="x in names"</span>&gt;
@@ -83,7 +83,7 @@
                     <br>
 
                     <p>The <span class="spanRed">ng-repeat</span> directive used on an array of objects:</p>                              
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <div ng-app="" ng-init="names=[
                       {name:'Jani',country:'Norway'},
                       {name:'Hege',country:'Sweden'},
@@ -98,7 +98,7 @@
                       </div>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div ng-app="" <span class="spanYellow">ng-init="names=[
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp {name:'Jani',country:'Norway'},
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp {name:'Hege',country:'Sweden'},

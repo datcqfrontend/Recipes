@@ -14,7 +14,7 @@
                       <br>A controller is a JavaScript Object, created by a standard JavaScript object constructor.                      
                     </p>
                       
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <div ng-controller="demoIntroCtrl">
                         First Name: <input type="text" ng-model="firstName"><br>
                         Last Name: <input type="text" ng-model="lastName"><br>
@@ -23,7 +23,7 @@
                       </div>
                     </div> 
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div ng-app=&quot;myApp&quot; <span class="yellow">ng-controller=&quot;myCtrl&quot;</span>&gt; 
                       <br>&nbsp&nbsp&nbsp&nbsp&nbspFirst Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt; 
                       <br>&nbsp&nbsp&nbsp&nbsp&nbspLast Name: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;
@@ -58,7 +58,7 @@
                   <div class="panel-heading"><h3>Controller Methods</h3> </div>
                   <div class="panel-body"> 
                     <p>The example above demonstrated a controller object with two properties: lastName and firstName.<br>A controller can also have methods (variables as functions):
-                      <div class="code-body" style="">
+                      <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                         &lt;div ng-app=&quot;myApp&quot; <span class="yellow">ng-controller=&quot;myCtrl&quot;</span>&gt; 
                         <br>&nbsp&nbsp&nbsp&nbsp&nbspFirst Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt; 
                         <br>&nbsp&nbsp&nbsp&nbsp&nbspLast Name: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;
@@ -86,7 +86,7 @@
                   <div class="panel-heading"><h3>Controller In External Files</h3> </div>
                   <div class="panel-body"> 
                     <p>In larger applications, it is common to store controllers in external files. Just copy the code between the <span class="spanRed">&lt;script&gt;</span> tags into an external file named <span class="spanRed">personController.js</span>:
-                      <div class="code-body" style="">
+                      <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                         &lt;div ng-app=&quot;myApp&quot; <span class="yellow">ng-controller=&quot;myCtrl&quot;</span>&gt; 
                         <br>&nbsp&nbsp&nbsp&nbsp&nbspFirst Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt; 
                         <br>&nbsp&nbsp&nbsp&nbsp&nbspLast Name: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;
@@ -106,7 +106,7 @@
                   <div class="panel-body">
                     <p>For the next example we will create a new controller file:</p>
                                         
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       //namesController.js
                       <br>angular.module('myApp', []).<span class="yellow">controller('namesCtrl', function($scope) {
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp    $scope.names = [
@@ -117,7 +117,7 @@
                       <br>});</span>
                     </div>
                     <p>Save the file as  namesController.js and then use the controller file in an application.</p>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div ng-app="myApp" <span class="yellow">ng-controller="namesCtrl"</span>&gt;
                       <br>
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;ul&gt;

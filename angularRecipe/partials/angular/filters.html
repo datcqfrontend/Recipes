@@ -48,13 +48,13 @@
                     <p>A filter can be added to an expression with a pipe character (|) and a filter. (For the next two examples we will use the person controller from the previous chapter) 
                       <br>The <span class="spanRed">uppercase</span> filter format strings to upper case:
 
-                      <div class="example-body" style="">
+                      <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                         <div ng-app="myApp" ng-controller="demoIntroCtrl">
                           <p>The name is {{ lastName | uppercase }}</p>
                         </div>
                       </div>
                       <br>
-                      <div class="code-body" style="">
+                      <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                         &lt;div ng-app="myApp" ng-controller="personCtrl"&gt;
                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;p&gt;The name is <span class="yellow">{ { lastName | uppercase } }</span>&lt;/p&gt;
                         <br>&lt;/div&gt;
@@ -62,13 +62,13 @@
 
                       <br>The <span class="spanRed">lowercase</span> filter format strings to lower case:
 
-                      <div class="example-body" style="">
+                      <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                         <div ng-app="myApp" ng-controller="demoIntroCtrl">
                           <p>The name is {{ lastName | lowercase }}</p>
                         </div>
                       </div>
                       <br>
-                      <div class="code-body" style="">
+                      <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                         &lt;div ng-app="myApp" ng-controller="personCtrl"&gt;
                         <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;p&gt;The name is <span class="yellow">{ { lastName | lowercase } }</span>&lt;/p&gt;
                         <br>&lt;/div&gt;
@@ -84,7 +84,7 @@
                   <div class="panel-body"> 
                     <p>The currency filter formats a number as currency:</p>
 
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <div ng-app="myApp" ng-controller="demoCostCtrl">
 
                         <input type="number" ng-model="quantity">
@@ -95,7 +95,7 @@
                       </div>
                     </div>
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div ng-app="myApp" <span class="yellow">ng-controller="demoCostCtrl"</span>&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;input type="number" ng-model="quantity"&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp  &lt;input type="number" ng-model="price"&gt;
@@ -115,7 +115,7 @@
                     <p>A filter can be added to a directive with a pipe character (|) and a filter.
                       <br>The <span class="spanRed">orderBy</span> filter orders an array by an expression:</p>
 
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <div ng-app="myApp" ng-controller="demoNameCtrl">
 
                         <ul>
@@ -127,7 +127,7 @@
                       </div>
                     </div>
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div ng-app="myApp" <span class="yellow">ng-controller="demoNameCtrl"</span>&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp &lt;ul&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &lt;li ng-repeat="x in names | <span class="yellow">orderBy:'country'</span>"&gt;
@@ -162,7 +162,7 @@
                     <p>An input filter can be added to a directive with a pipe character (|) and filter followed by a colon and a model name.
                       <br>The <span class="spanRed">filter</span> filter selects a subset of an array:</p>
 
-                    <div class="example-body" style="">
+                    <div class="example-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       <div ng-app="myApp" ng-controller="demoNameCtrl">
                         <p><input type="text" ng-model="test"></p>
                         <ul>
@@ -174,7 +174,7 @@
                       </div>
                     </div>
                     <br>
-                    <div class="code-body" style="">
+                    <div class="code-body" ng-swipe-left="$event.stopPropagation();" ng-swipe-right="$event.stopPropagation();"style="">
                       &lt;div ng-app="myApp" <span class="yellow">ng-controller="demoNameCtrl"</span>&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;&lt;input type="text" <span class="yellow">ng-model="test"</span>&gt;&lt;/p&gt;
                       <br>&nbsp&nbsp&nbsp&nbsp&nbsp &lt;ul&gt;

@@ -84,6 +84,14 @@ app.controller('HomeCtrl', function ( $scope, $location, $http ) {
 app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $http ) {
 	window.scrollTo(0,0);
 
+	$('body').on('swipe',function(){
+		console.log('Swipe');
+
+	});
+
+	$scope.nextPage = function(){ nextPage();	};
+	$scope.prevPage = function(){ prevPage();	};
+
 	//console.log($route);
 
 	//Active navbar header
@@ -95,7 +103,7 @@ app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $
  	$('[data-toggle="popover"]').popover(); 
 
  	//console.log($location.$$path);
- 	console.log(fw);
+ 	//console.log(fw);
 
  	//Init jumbotron-topic
  	$scope.topic = fw.pages[fw.currentGroupName][fw.currentPageIndex].topic;
