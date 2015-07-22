@@ -21,7 +21,7 @@ app.controller('demoNameCtrl', function($scope) {
 });
 
 app.controller('demoCustomerCtrl', function($scope,$http) {
-    $http.get("partials/angular/customer.json") 
+    $http.get("partials/angular/json/customer.json") 
        .success(function(response) { 
            $scope.names = response.records; 
     }); 
