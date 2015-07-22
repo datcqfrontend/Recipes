@@ -74,9 +74,48 @@ app.controller('ContactCtrl', function ( $scope, $location, $http ) {
 	$('.navbar li').removeClass('active');
 });*/
 
-app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $http ) {
-	/*
+app.controller('AppController',function($rootScope){
+	$rootScope.$on('$locationChangeStart', function(){
+		console.log("Location Change Start!");
+	});
 
+	$rootScope.$on('$locationChangeSuccess', function(){
+		console.log("Location Change Success!");
+	});
+
+	$rootScope.$on('$routeChangeStart', function(){
+		console.log("Route Change Start!");
+	});
+
+	$rootScope.$on('$routeChangeSuccess', function(){
+		console.log("Route Change Success!");
+	});
+
+});
+
+app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $http ) {
+	$scope.assetlUrl = "global/assets/";
+	$scope.assetName = fw.menu[fw.curFlow][fw.curAssetIndex].name;
+
+	$scope.$on('$viewContentLoaded', function(){
+		console.log("Content loaded: "+$scope.assetName);
+
+		setTimeout(function(){
+			$('.'+$scope.assetName).after("<script src='global/assets/"+$scope.assetName+"/js/main.js'></script>");
+			$('.'+$scope.assetName).after("<link rel='stylesheet' href='global/assets/"+$scope.assetName+"/css/main.css'>");
+			
+		},10);
+	    //Here your view content is fully loaded !!	    
+	 });
+
+	/*$scope.$on( "$stateChangeSuccess", function(event, next, current) {
+	   	$('.'+$scope.assetName).after("<link rel='stylesheet' href='global/assets/"+$scope.assetName+"/css/main.css'>");
+		$('.'+$scope.assetName).after("<script src='global/assets/"+$scope.assetName+"/js/main.js'></script>");
+	});*/
+	
+	//console.log($route);
+
+	/*
 	$scope.nextPage = function(){ nextPage();	};
 	$scope.prevPage = function(){ prevPage();	};
 

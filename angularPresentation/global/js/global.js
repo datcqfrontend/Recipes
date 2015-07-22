@@ -1,3 +1,13 @@
+(function(){
+	var key;
+	fw.curListFlow = [];
+	for (key in fw.menu) {
+
+		fw.curListFlow.push(key);
+    
+	}
+})();
+
 function getAssetTemplate(asset,flow){
 	var i=0, length=0;
 
