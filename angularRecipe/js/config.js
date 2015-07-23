@@ -148,7 +148,6 @@ var fw = {
 
 				"requirejs":[
 					{"page":"tutorial"  },
-					{"page":"home", "topic":"Home", "breadcrumb":"Home"  },
 					{"page":"start", "topic":"Start", "breadcrumb":"Start"  },
 					{"page":"api", "topic":"API", "breadcrumb":"API"  },
 					{"page":"optimazation", "topic":"Optimization", "breadcrumb":"Optimization"  },
