@@ -1,0 +1,125 @@
+<div  id="reqjsApi" class="reqjs section">
+
+    <div class="container">
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>USAGE</h3> </div>
+                  <div class="panel-body">  
+
+                    <h3>Load JavaScript Files</h3>
+                    <hr>
+
+                    <p>RequireJS takes a different approach to script loading than traditional <span class="spanRed">&lt;script&gt;</span> tags. While it can <span class="spanRed">also run fast and optimize well</span>, the primary goal is to encourage modular code. As part of that, it encourages using <span class="spanRed">module IDs instead of URLs</span> for script tags.
+                      <br>
+                      <br>RequireJS loads all code relative to a <span class="spanRed">baseUrl</span>. The <span class="spanRed">baseUrl</span> is normally set to the same directory as the script used in a <span class="spanRed">data-main</span> attribute for the top level script to load for a page. The <span class="spanRed">data-main</span> attribute is a special attribute that require.js will check to start script loading. This example will end up with a baseUrl of scripts:
+
+                      <br>
+                      <div class="code-body">
+                        &lt;!--This sets the <span class="spanYellow">baseUrl to the "scripts" directory</span>, and loads a script that will have a module ID of 'main'--&gt;
+                        <br>&lt;script <span class="spanYellow">data-main="scripts/main.js"</span> src="scripts/require.js"&gt;&lt;/script&gt;
+                      </div>
+
+                      <br>BaseUrl can be set manually via the <span class="spanRed">RequireJS config</span>. If there is no explicit config and data-main is not used, then the <span class="spanRed">default baseUrl is the directory that contains the HTML page</span> running RequireJS.
+                      <br>
+                      <br>RequireJS also assumes by default that all dependencies are scripts, so  <span class="spanRed">it does not expect to see a trailing ".js" suffix on module IDs</span>. RequireJS will automatically add it when translating the module ID to a path. With the paths config, you can set up locations of a group of scripts. All of these capabilities allow you to use smaller strings for scripts as compared to traditional <span class="spanRed">&lt;script&gt;</span> tags.
+                      <br>
+                      <br>There may be times when you do want to reference a script directly and not conform to the "baseUrl + paths" rules for finding it. If a module ID has one of the following characteristics, the ID will not be passed through the "baseUrl + paths" configuration, and just be treated like a regular URL that is relative to the document:
+                      <ul>
+                        <li>Ends in ".js".</li>
+                        <li>Starts with a "/".</li>
+                        <li>Contains an URL protocol, like "http:" or "https:".</li>
+                      </ul>
+                      <br>In general though, it is best to use the baseUrl and "paths" config to set paths for module IDs. By doing so, it gives you more flexibility in renaming and configuring the paths to different locations for optimization builds.
+                      <br>
+                      <br>Similarly, to avoid a bunch of configuration, it is best to avoid deep folder hierarchies for scripts, and instead either keep all the scripts in baseUrl, or if you want to separate your library/vendor-supplied code from your app code, use a directory layout like this:
+                      <ul>
+                        <li>www/
+                          <ul>
+                              <li>index.html</li>
+                              <li>js/
+                              <ul>
+                                  <li>app/
+                                  <ul>
+                                      <li>sub.js</li>
+                                  </ul>
+                                  </li>
+                                  <li>lib/
+                                  <ul>
+                                      <li>jquery.js</li>
+                                      <li>canvas.js</li>
+                                  </ul></li>
+                                  <li><span class="spanRed">app.js</span></li>
+                                  <li>require.js</li>
+                              </ul></li>
+                          </ul></li>
+                      </ul>
+                      in index.html:
+                      <div class="code-body">
+                          &lt;script <span class="spanYellow">data-main="js/app.js" src="js/require.js"</span>&gt;&lt;/script&gt;
+                      </div>
+                      <br>
+                      and in app.js:
+                      <div class="code-body">
+                        requirejs.config({
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span class="spanYellow">baseUrl: 'js/lib',
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    paths: {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        app: '../app'
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }</span>
+                        <br>});
+                        <br>
+                        <br>//Start the main app logic.
+                        <br>requirejs(<span class="spanYellow">['jquery', 'canvas', 'app/sub']</span>, function   ($, canvas,   sub) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //jQuery, canvas and the app/sub module are all
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //loaded and can be used here now.
+                        <br>});
+                      </div>
+                      <br>Notice as part of that example, vendor libraries like jQuery did not have their version numbers in their file names. It is recommended to store that version info in a separate text file if you want to track it, or if you use a tool like volo, it will stamp the package.json with the version information but keep the file on disk as "jquery.js". This allows you to have the very minimal configuration instead of having to put an entry in the "paths" config for each library. For instance, configure "jquery" to be "jquery-1.7.2".
+                      <br>
+                      <br>Ideally the scripts you load will be modules that are defined by calling define(). However, you may need to use some traditional/legacy "browser globals" scripts that do not express their dependencies via define(). For those, you can use the shim config. To properly express their dependencies.
+                      <br>
+                      <br>If you do not express the dependencies, you will likely get loading errors since RequireJS loads scripts asynchronously and out of order for speed.
+                    </p>
+
+                    <br>
+                    <h3>data-main Entry Point</h3>
+                    <hr>
+                    <p>
+
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+                    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>USAGE</h3> </div>
+                  <div class="panel-body">  
+                    
+                  </div>
+                </div>
+            </div> 
+
+            
+        </div>       
+        <!-- /.row -->
+
+        <div ng-include='"templates/pager.html"'></div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+

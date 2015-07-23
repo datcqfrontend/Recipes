@@ -65,6 +65,14 @@ var fw = {
 					
 				],
 
+				"javascript":[
+					{"page":"tutorial"  }
+				],
+
+				"jquery":[
+					{"page":"tutorial"  }
+				],
+
 				"bootstrap":[
 					{"page":"tutorial"},
 
@@ -138,8 +146,13 @@ var fw = {
 					
 				],
 
-				"jquery":[
-					{"page":"home"  }
+				"requirejs":[
+					{"page":"tutorial"  },
+					{"page":"home", "topic":"Home", "breadcrumb":"Home"  },
+					{"page":"start", "topic":"Start", "breadcrumb":"Start"  },
+					{"page":"api", "topic":"API", "breadcrumb":"API"  },
+					{"page":"optimazation", "topic":"Optimization", "breadcrumb":"Optimization"  },
+					{"page":"usewithjquery", "topic":"Use with jQuery", "breadcrumb":"Use with jQuery"  }
 				],
 
 				"about":[],

@@ -1,0 +1,41 @@
+<div  id="reqjsTutorial" class="reqjs section">
+
+    <div class="container">
+        <div class="jumbotron jumbotron-page">
+            <h1 class="hidden-xs">RequireJS Tutorial</h1>
+            <div class="row">
+                <div class="col-xs-12 col-md-3" style="text-align:center"><img src="images/requirejs.png" class="img-responsive" alt="HTML5" style="max-width:100%;height:auto; margin-left: auto; margin-right: auto;"></div>
+                <div class="col-xs-12 visible-xs" style="height: 15px;"></div>
+                <div class="col-xs-12 col-md-9">
+                    <p><span class="spanRed">RequireJS</span> is <span class="spanRed">a JavaScript file and module loader></span>.<br>
+                        It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node.<br>
+                        Using a modular script loader like RequireJS will improve the speed and quality of your code.
+                    </p>
+                </div>
+            </div>            
+        </div>
+
+        <div class="row" >
+            <div class="col-sm-12">
+                 <p class="pull-right"><label for="search">Search: &nbsp; </label><input id="search" type="text" ng-model="$filterTutorial"></p>
+            </div>
+        </div>
+
+        <div class="row" ng-controller="TutorialCtrl">
+            <div ng-class="tut.title!='Clearfix' ? 'col-sm-4' : 'col-sm-12 hidden-xs'" ng-repeat="tut in tutorials | filter: $filterTutorial">
+                <div ng-if="tut.title!='Clearfix'">                    
+                    <h3>{{tut.title}}</h3>
+                    <p ng-bind-html="tut.sortContent"></p> 
+                    <a href="{{tut.link}}" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
+                </div>
+            </div>
+        </div>       
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+
+

@@ -90,13 +90,10 @@ app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $
 	});
 
 	$scope.nextPage = function(){ nextPage();	};
-	$scope.prevPage = function(){ prevPage();	};
-
-	//console.log($route);
-
-	//Active navbar header
-	$('.navbar li').removeClass('active');	
-	$('.navbar li#'+fw.currentGroupName).addClass('active');
+	$scope.prevPage = function(){ prevPage();	};	
+	//Active NavBar
+	activeNavBar();
+	
 	//Active tooltip
  	$('[data-toggle="tooltip"]').tooltip(); 
 	//Active popup modal

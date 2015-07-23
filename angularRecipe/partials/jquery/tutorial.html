@@ -1,0 +1,39 @@
+<div  id="jQTutorial" class="jQ section">
+
+    <div class="container">
+        <div class="jumbotron jumbotron-page">
+            <h1 class="hidden-xs">jQuery Tutorial</h1> 
+            <div class="row">                
+                <div class="col-xs-12 col-md-3" style="text-align:center"><img src="images/jquery.png" class="img-responsive" alt="Bootstrap" style="max-width:100%;height:auto; margin-left: auto; margin-right: auto;"></div>
+                <div class="col-xs-12 visible-xs" style="height: 15px;"></div>
+                <div class="col-xs-12 col-md-9">
+                    <p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.
+                    <br>Bootstrap is completely free to download and use!</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="row" >
+            <div class="col-sm-12">
+                 <p class="pull-right"><label for="search">Search: &nbsp; </label><input id="search" type="text" ng-model="$filterTutorial"></p>
+            </div>
+        </div>
+
+        <div class="row" ng-controller="TutorialCtrl">
+			<div ng-class="tut.title!='Clearfix' ? 'col-sm-4' : 'col-sm-12 hidden-xs'" ng-repeat="tut in tutorials | filter:$filterTutorial">
+				<div ng-if="tut.title!='Clearfix'">                    
+					<h3>{{tut.title}}</h3>
+					<p ng-bind-html="tut.sortContent"></p> 
+					<a href="{{tut.link}}" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
+				</div>
+			</div>
+		</div>			
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+
+

@@ -1,0 +1,143 @@
+<div  id="reqjsHome" class="reqjs section">
+
+    <div class="container">
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Get RequireJS 2.1.19</h3> </div>
+                  <div class="panel-body">  
+                    <p>Minified: <span class="spanRed">http://requirejs.org/docs/release/2.1.19/minified/require.js"</span><br>
+                      Comment: <span class="spanRed">http://requirejs.org/docs/release/2.1.19/minified/require.js"</span><br><br>
+                      Plugins :
+                        <ul>
+                          <li>
+                            <a href="javascript:void(0);" data-toggle="popover" data-trigger="focus" title="" data-content="Load text files and treat them as dependencies. Great for loading templates. The text strings can be inlined in an optimized build when the optimizer is used." data-original-title="text plugin" data-placement="auto top">text</a>
+                             - <span class="spanRed">https://raw.githubusercontent.com/requirejs/text/latest/text.js</span><br>
+                            
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);" data-toggle="popover" data-trigger="focus" title="" data-content="Wait for the DOM is ready. Useful for pausing execution of top level application logic until the DOM is ready for querying/modification." data-original-title="domReady plugin" data-placement="auto top">domReady</a>
+                             - <span class="spanRed">https://raw.githubusercontent.com/requirejs/domReady/latest/domReady.js</span><br>
+                            
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);" data-toggle="popover" data-trigger="focus" title="" data-content="Load files written in CoffeeScript. With this plugin, it is easy to code in CoffeeScript in the browser, it can participate in the optimizer optimizations, and it works in Node and Rhino/Nashorn via the RequireJS adapter. This is the best way to do cross-environment, modular CoffeeScript. The project home has more information on how to install and use it." data-original-title="CoffeeScript plugin" data-placement="auto top">cs (CoffeeScript) </a>
+                            - <span class="spanRed">https://raw.githubusercontent.com/requirejs/require-cs/latest/cs.js</span><br>
+                            
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);" data-toggle="popover" data-trigger="focus" title="" data-content="Load string bundles used in internationalization (i18n) that are made up of separate country/language/locale-specific bundles." data-original-title="i18n plugin" data-placement="auto top">i18n</a>
+                             - <span class="spanRed">https://raw.githubusercontent.com/requirejs/i18n/latest/i18n.js</span><br>
+                            
+                          </li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Add RequireJS</h3> </div>
+                  <div class="panel-body">  
+                    <p>Keep all your JavaScript files in a "scripts" directory in your project. For example:
+                      <ul>
+                          <li>project-directory/
+                          <ul>
+                              <li>project.html</li>
+                              <li>scripts/
+                              <ul>
+                                  <li>main.js</li>
+                                  <li>helper/
+                                  <ul>
+                                      <li>util.js</li>
+                                  </ul></li>
+                              </ul></li>
+                          </ul></li>
+                      </ul>  
+                      Add require.js to the scripts directory:
+                      <ul>
+                          <li>project-directory/
+                          <ul>
+                              <li>project.html</li>
+                              <li>scripts/
+                              <ul>
+                                  <li>main.js</li>
+                                  <li><span class="spanRed">require.js</span></li>
+                                  <li>helper/
+                                  <ul>
+                                      <li>util.js</li>
+                                  </ul></li>
+                              </ul></li>
+                          </ul></li>
+                      </ul>  
+                      To take full advantage of the optimization tool, it is suggested that you <span class="spanRed">keep all inline script out of the HTML</span>, and <span class="spanRed">only reference require.js</span> with a requirejs call like so to load your script:
+                      <div class="code-body">
+                        &lt;!DOCTYPE html&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;html&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;head&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;title>My Sample Project&lt;/title&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;!-- data-main attribute tells require.js to load
+                                     scripts/main.js after require.js loads. --&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <span class="spanYellow">&lt;script data-main="scripts/main" src="scripts/require.js">&lt;/script&gt;</span>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/head&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;body&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;h1&gt;My Sample Project&lt;/h1&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/body&gt;
+                        <br>&lt;/html&gt;
+                      </div>
+                      <br>
+                      You could also place the script tag end of the <span class="spanRed">&lt;body&gt;</span> section if you do not want the loading of the require.js script to block rendering. For browsers that support it, you could also add an async attribute to the script tag.
+                      <br><br>
+                      Inside of <span class="spanRed">main.js</span>, you can use <span class="spanRed">requirejs()</span> to load any other scripts you need to run. This ensures a single entry point, since the data-main script you specify is loaded asynchronously. Code below will load the helper/util.js script:                      
+                      <br>
+                      <div class="code-body">
+                        requirejs(<span class="spanYellow">["helper/util"]</span>, function(util) {
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //This function is called when scripts/helper/util.js is loaded.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //If util.js calls define(), then this function is not fired until
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //util's dependencies have loaded, and the util argument will hold
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //the module value for "helper/util".
+                        <br>}); 
+                      </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Optimize</h3> </div>
+                  <div class="panel-body">  
+                    <p>Once you are finished doing development and want to deploy your code for your end users, <span class="spanRed">you can use the optimizer to combine the JavaScript files together and minify it</span>. In the example above, it can combine main.js and helper/util.js into one file and minify the result.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Examples</h3> </div>
+                  <div class="panel-body">  
+                    <p>           
+                      If you want a starting project to use to try out RequireJS, here are some options:
+                      <ul>
+                        <li>Simple one page app: <span class="spanRed">https://github.com/volojs/create-template</span></li>
+                        <li>Multipage app: <span class="spanRed">https://github.com/requirejs/example-multipage</span></li>
+                        <li>Multipage app with shim config: <span class="spanRed">https://github.com/requirejs/example-multipage-shim</span></li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+        </div>       
+        <!-- /.row -->
+
+        <div ng-include='"templates/pager.html"'></div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+
