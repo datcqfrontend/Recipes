@@ -7,7 +7,7 @@
             <div class="col-lg-12">                
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>USAGE</h3> </div>
-                  <div class="panel-body">  
+                  <div class="panel-body" style="padding:5px;">  
 
                     <div class="panel-group" id="CUsage">
                       <div class="panel panel-default">
@@ -143,191 +143,335 @@
                               <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_3" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                             </div>
                           </div>
-                          <div id="panel_3" class="panel-body collapse">   
-                            <p>
+                          <div id="panel_3" class="panel-body collapse" style="padding:5px;">   
+
+                            <p style="margin:10px;">
                               A module is different from a traditional script file in that it defines a well-scoped object that avoids polluting the global namespace. It can explicitly list its dependencies and get a handle on those dependencies without needing to refer to global objects, but instead receive the dependencies as arguments to the function that defines the module. Modules in RequireJS are an extension of the Module Pattern, with the benefit of not needing globals to refer to other modules.                      
                               <br>The RequireJS syntax for modules allows them to be loaded as fast as possible, even out of order, but evaluated in the correct dependency order, and since global variables are not created, it makes it possible to load multiple versions of a module in a page.
                               <br>(If you are familiar with or are using CommonJS modules, then please also see CommonJS Notes for information on how the RequireJS module format maps to CommonJS modules).
                               <br>There should only be one module definition per file on disk. The modules can be grouped into optimized bundles by the optimization tool.  
                             </p>
-                          </div>
-                        </div> 
 
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Simple Name/Value Pairs</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_4" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_4" class="panel-body collapse">  
-                            If the module does not have any dependencies, and it is just a collection of name/value pairs, then just pass an object literal to define():
-                            <div class="code-body">
-                              //Inside file <span class="spanYellow">my/shirt.js</span>:
-                              <br><span class="spanYellow">define({</span>
-                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: "black",
-                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    size: "unisize"
-                              <br><span class="spanYellow">});</span>
-                            </div>
-                          </div>
-                        </div> 
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Definition Functions</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_5" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_5" class="panel-body collapse">  
-                            If the module does not have dependencies, but needs to use a function to do some setup work, then define itself, pass a function to define():
-                            <div class="code-body">
-                              //my/shirt.js now does setup work before returning its module definition.
-                              <br><span class="spanYellow">define(function(){</span>
-                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //Do setup work here
-                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    return{
-                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: "black",
-                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    size: "unisize"
-                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
-                              <br><span class="spanYellow">});</span>
-                            </div>
-                          </div>
-                        </div>                       
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Definition Functions with Dependencies</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_6" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_6" class="panel-body collapse">  
-                            If the module has dependencies, the first argument should be an array of dependency names, and the second argument should be a definition function. The function will be called to define the module once all dependencies have loaded. The function should return an object that defines the module. The dependencies will be passed to the definition function as function arguments, listed in the same order as the order in the dependency array:
-                              <div class="code-body">
-                                //my/shirt.js now has some dependencies, a cart and inventory module in the same directory as shirt.js
-                                <br><span class="spanYellow">define(["./cart", "./inventory"], function(cart, inventory) {</span>
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //return an object to define the "my/shirt" module.
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return {
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            color: "blue",
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             size: "large",
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              addToCart: function() {
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  inventory.decrement(this);
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  cart.add(this);
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       }
-                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }                          
-                                <br>});
+                            <div class="panel-group" id="CDefineModule">
+                              <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Simple Name/Value Pairs</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_4" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
                               </div>
+                              <div id="panel_4" class="panel-body collapse">  
+                                If the module does not have any dependencies, and it is just a collection of name/value pairs, then just pass an object literal to define():
+                                <div class="code-body">
+                                  //Inside file <span class="spanYellow">my/shirt.js</span>:
+                                  <br><span class="spanYellow">define({</span>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: "black",
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    size: "unisize"
+                                  <br><span class="spanYellow">});</span>
+                                </div>
+                              </div>
+                            </div> 
 
-                            <br>In this example, a my/shirt module is created. It depends on my/cart and my/inventory. On disk, the files are structured like this:
-                            <ul>
-                              <li>my/cart.js</li>
-                              <li>my/inventory.js</li>
-                              <li>my/shirt.js</li>
-                            </ul>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Definition Functions</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_5" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_5" class="panel-body collapse">  
+                                If the module does not have dependencies, but needs to use a function to do some setup work, then define itself, pass a function to define():
+                                <div class="code-body">
+                                  //my/shirt.js now does setup work before returning its module definition.
+                                  <br><span class="spanYellow">define(function(){</span>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //Do setup work here
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    return{
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: "black",
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    size: "unisize"
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                                  <br><span class="spanYellow">});</span>
+                                </div>
+                              </div>
+                            </div>                       
 
-                            The function call above specifies two arguments, "cart" and "inventory". These are the modules represented by the "./cart" and "./inventory" module names.
-                            <br>The function is not called until the my/cart and my/inventory modules have been loaded, and the function receives the modules as the "cart" and "inventory" arguments.
-                            <br>Modules that define globals are explicitly discouraged, so that multiple versions of a module can exist in a page at a time (see Advanced Usage). Also, the order of the function arguments should match the order of the dependencies.
-                            <br>The return object from the function call defines the "my/shirt" module. By defining modules in this way, "my/shirt" does not exist as a global object.
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Definition Functions with Dependencies</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_6" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_6" class="panel-body collapse">  
+                                If the module has dependencies, the first argument should be an array of dependency names, and the second argument should be a definition function. The function will be called to define the module once all dependencies have loaded. The function should return an object that defines the module. The dependencies will be passed to the definition function as function arguments, listed in the same order as the order in the dependency array:
+                                  <div class="code-body">
+                                    //my/shirt.js now has some dependencies, a cart and inventory module in the same directory as shirt.js
+                                    <br><span class="spanYellow">define(["./cart", "./inventory"], function(cart, inventory) {</span>
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //return an object to define the "my/shirt" module.
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return {
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            color: "blue",
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             size: "large",
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              addToCart: function() {
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  inventory.decrement(this);
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  cart.add(this);
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       }
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }                          
+                                    <br>});
+                                  </div>
+
+                                <br>In this example, a my/shirt module is created. It depends on my/cart and my/inventory. On disk, the files are structured like this:
+                                <ul>
+                                  <li>my/cart.js</li>
+                                  <li>my/inventory.js</li>
+                                  <li>my/shirt.js</li>
+                                </ul>
+
+                                The function call above specifies two arguments, "cart" and "inventory". These are the modules represented by the "./cart" and "./inventory" module names.
+                                <br>The function is not called until the my/cart and my/inventory modules have been loaded, and the function receives the modules as the "cart" and "inventory" arguments.
+                                <br>Modules that define globals are explicitly discouraged, so that multiple versions of a module can exist in a page at a time (see Advanced Usage). Also, the order of the function arguments should match the order of the dependencies.
+                                <br>The return object from the function call defines the "my/shirt" module. By defining modules in this way, "my/shirt" does not exist as a global object.
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Define a Module as a Function</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_7" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_7" class="panel-body collapse">  
+                                Modules do not have to return objects. Any valid return value from a function is allowed. Here is a module that returns a function as its module definition:
+                                <div class="code-body">
+                                  <span class="spanYellow">//A module definition inside foo/title.js.</span>
+                                  <br>//It uses <span class="spanYellow">my/cart and my/inventory modules</span> from before, but <span class="spanYellow">since foo/title.js is in a different directory</span> than the "my" modules, it <span class="spanYellow">uses the "my" in the module dependency name to find them</span>. The <span class="spanYellow">"my" part of the name can be mapped to any directory</span>, but by default, it is assumed to be a sibling to the "foo" directory.
+                                  <br>
+                                  <br>define([<span class="spanYellow">"my/cart", "my/inventory"</span>],
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    function(cart, inventory) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //return a function to define "foo/title". It gets or sets the window title.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return function(title) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            return title ? (window.title = title) : <span class="spanYellow">inventory.storeName + ' ' + cart.name</span>;
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   }
+                                  <br>);
+                                </div>  
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Define a Module with Simplified CommonJS Wrapper</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_8" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_8" class="panel-body collapse"> 
+                                If you wish to reuse some code that was written in the traditional CommonJS module format it may be difficult to re-work to the array of dependencies used above, and you may prefer to have direct alignment of dependency name to the local variable used for that dependency. You can use the simplified CommonJS wrapper for those cases:
+                                <div class="code-body">
+                                  <span class="spanYellow">define(function(require, exports, module) {</span>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        var a = require('a'),
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            b = require('b');
+                                  <br>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //Return the module value
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return function () {};
+                                  <br><span class="spanYellow">});</span>
+                                </div>
+                                <br>
+                                This wrapper relies on Function.prototype.toString() to give a useful string value of the function contents. This does not work on some devices like the PS3 and some older Opera mobile browsers. Use the optimizer to pull out the dependencies in the array format for use on those devices. More information is available on the CommonJS page, and in the "Sugar" section in the Why AMD page.
+                              </div>
+                            </div>                        
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Define a Module with a Name</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_9" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_9" class="panel-body collapse"> 
+                                You may encounter some define() calls that include a name for the module as the first argument to define():
+                                <div class="code-body">
+                                  //Explicitly defines the "foo/title" module:
+                                  <br>define(<span class="spanYellow">"foo/title"</span>,
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    [<span class="spanYellow">"my/cart", "my/inventory"</span>],
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    function(<span class="spanYellow">cart, inventory</span>) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //Define foo/title object in here.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   }
+                                  <br>);
+                                </div>
+                                <br>These are normally generated by the optimization tool. You can explicitly name modules yourself, but it makes <span class="spanRed">the modules less portable -- if you move the file to another directory you will need to change the name</span>. It is normally best to avoid coding in a name for the module and just let the optimization tool burn in the module names. The optimization tool needs to add the names so that more than one module can be bundled in a file, to allow for faster loading in the browser.
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Other Module Notes</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_10" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_10" class="panel-body collapse"> 
+                                <b>One module per file: </b>Only one module should be defined per JavaScript file, given the nature of the module name-to-file-path lookup algorithm. You shoud only use the optimization tool to group multiple modules into optimized files.
+                                <br><br>
+                                <b>Relative module names inside define(): </b>For require("./relative/name") calls that can happen inside a define() function call, be sure to ask for "require" as a dependency, so that the relative name is resolved correctly:
+                                  <div class="code-body">
+                                    define([<span class="spanYellow">"require", "./relative/name"</span>], function(require) {
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    var mod = require("./relative/name");
+                                    <br>});
+                                  </div>
+                                  <br>
+                                  Or better yet, use the shortened syntax that is available for use with translating CommonJS modules:
+                                  <div class="code-body">
+                                    define(function(require) {
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    var mod = require("./relative/name");
+                                    <br>});
+                                  </div>
+                                  This form will use Function.prototype.toString() to find the require() calls, and add them to the dependency array, along with "require", so the code will work correctly with relative paths.<br>
+                                  Relative paths are really useful if you are creating a few modules inside a directory, so that you can share the directory with other people or other projects, and you want to be able to get a handle on the sibling modules in that directory without having to know the directory's name.
+                                  <br><br>
+                                  <b>Relative module names are relative to other names, not paths:</b> The loader stores modules by their name and not by their path internally. So for relative name references, those are resolved relative to the module name making the reference, then that module name, or ID, is converted to a path if needs to be loaded. Example code for a 'compute' package that has a 'main' and 'extras' modules in it:
+
+                                  <div class="example-body">
+                                    * lib/
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* compute/
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* main.js
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* extras.js
+                                  </div>
+                                  <br>where the main.js module looks like this:
+                                  <div class="code-body">
+                                    define(["./extras"], function(extras) {
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //Uses extras in here.
+                                    <br>});
+                                  </div>
+                                  <br>If this was the paths config:
+                                  <div class="code-body">
+                                    require.config({
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <span class="spanYellow">baseUrl: 'lib',</span>
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <span class="spanYellow">paths</span>: {
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       <span class="spanYellow">'compute': 'compute/main'</span>
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     }
+                                    <br>});                                
+                                  </div>
+                                  <br>And a require(['compute']) is done, then <span class="spanRed">lib/compute/main.js</span> will have the <span class="spanRed">module name of 'compute'</span>. When it asks for <span class="spanRed">'./extras'</span>, that is resolved relative to 'compute', so <span class="spanRed">'compute/./extras'</span>, which normalizes to just 'extras'. Since there is no paths config for that module name, the path generated will be for 'lib/extras.js', which is incorrect.
+                                  <br>For this case, packages config is a better option, since it allows setting the main module up as 'compute', but internally the loader will store the module with the ID of 'compute/main' so that the relative reference for './extras' works.
+                                  <br>Another option is to construct a module at lib/compute.js that is just define(['./compute/main'], function(m) { return m; });, then there is no need for paths or packages config.
+                                  <br>Or, do not set that paths or packages config and do the top level require call as require(['compute/main']).
+                                  <br><br>
+                                  <b>Generate URLs relative to module: </b> You may need to generate an URL that is relative to a module. To do so, ask for "require" as a dependency and then use require.toUrl() to generate the URL:
+                                  <div class="code-body">
+                                    define(["require"], function(require) {
+                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span class="spanYellow">var cssUrl = require.toUrl("./style.css");</span>
+                                    <br>});                               
+                                  </div>
+                                  <br>
+                                  <b>Console debugging: </b>If you need to work with a module you already loaded via a require(["module/name"], function(){}) call in the JavaScript console, then you can use the require() form that just uses the string name of the module to fetch it:
+                                  <div class="code-body">
+                                    require("module/name").callSomeFunction()                              
+                                  </div>
+                                  Note this only works if "module/name" was previously loaded via the async version of require: require(["module/name"]). If using a relative path, like './module/name', those only work inside define.
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Circular Dependencies</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_11" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_11" class="panel-body collapse"> 
+                                If you define a circular dependency (<span class="spanRed">"a" needs "b" and "b" needs "a"</span>), then in this case when "b"'s module function is called, it will get an undefined value for "a". "b" can fetch "a" later after modules have been defined by using the require() method (be sure to specify require as a dependency so the right context is used to look up "a"):
+                                <div class="code-body">
+                                  //Inside b.js:
+                                  <br>define([<span class="spanYellow">"require", "a"</span>],
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    function(<span class="spanYellow">require, a</span>) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //<span class="spanYellow">"a" in this case will be null if "a" also asked for "b"</span>,
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //a circular dependency.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return function(title) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            return <span class="spanYellow">require("a").doSomething()</span>;
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                                  <br>);                          
+                                </div>
+                                <br>Normally you should not need to use require() to fetch a module, but instead rely on the module being passed in to the function as an argument. Circular dependencies are rare, and usually a sign that you might want to rethink the design. However, sometimes they are needed, and in that case, use require() as specified above.
+
+                                <br>If you are familiar with CommonJS modules, you could instead use exports to create an empty object for the module that is available immediately for reference by other modules. By doing this on both sides of a circular dependency, you can then safely hold on to the the other module. This only works if each module is exporting an object for the module value, not a function:
+                                <div class="code-body">
+                                  //Inside b.js:
+                                  <br>define(function(require, exports, module) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //If "a" has used exports, then we have a real
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //object reference here. However, we cannot use
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //any of "a"'s properties until after "b" returns a value.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    var a = require("a");
+                                  <br>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    exports.foo = function () {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return a.bar();
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    };
+                                  <br>});                                                       
+                                </div>
+
+                                <br>Or, if you are using the dependency array approach, ask for the special 'exports' dependency:
+                                <div class="code-body">
+                                  //Inside b.js:
+                                  <br>define(['a', 'exports'], function(a, exports) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //If "a" has used exports, then we have a real
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //object reference here. However, we cannot use
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //any of "a"'s properties until after "b" returns a value.
+                                  <br>    
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    exports.foo = function () {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return a.bar();
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    };
+                                  <br>});
+                                </div>
+
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Specify a JSONP Service Dependency</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_12" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_12" class="panel-body collapse"> 
+                                JSONP is a way of calling some services in JavaScript. It works across domains and it is an established approach to calling services that just require an HTTP GET via a script tag.<br>
+                                To use a JSONP service in RequireJS, specify "define" as the callback parameter's value. This means you can get the value of a JSONP URL as if it was a module definition.<br>
+                                Here is an example that calls a JSONP API endpoint. In this example, the JSONP callback parameter is called "callback", so "callback=define" tells the API to wrap the JSON response in a "define()" wrapper:
+                                <div class="code-body">
+                                  require(["http://example.com/api/data.json?callback=define"],
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    function (data) {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //The data object will be the API response for the
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //JSONP data call.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        console.log(data);
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                                  <br>);
+                                </div>
+                                This use of JSONP should be limited to JSONP services for initial application setup. If the JSONP service times out, it means other modules you define via define() may not get executed, so the error handling is not robust.<br>
+                                Only JSONP return values that are JSON objects are supported. A JSONP response that is an array, a string or a number will not work.<br>
+                                This functionality should not be used for long-polling JSONP connections -- APIs that deal with real time streaming. Those kinds of APIs should do more script cleanup after receiving each response, and RequireJS will only fetch a JSONP URL once -- subsequent uses of the same URL as a dependency in a require() or define() call will get a cached value.<br>
+                                Errors in loading a JSONP service are normally surfaced via timeouts for the service, since script tag loading does not give much detail into network problems. To detect errors, you can override requirejs.onError() to get errors. There is more information in the Handling Errors section.
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Undefining a Module</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_13" data-parent="#CDefineModule"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_13" class="panel-body collapse"> 
+                                There is a global function, requirejs.undef(), that allows undefining a module. It will reset the loader's internal state to forget about the previous definition of the module.<br>
+                                However, it will not remove the module from other modules that are already defined and got a handle on that module as a dependency when they executed. So it is really only useful to use in error situations when no other modules have gotten a handle on a module value, or as part of any future module loading that may use that module. See the errback section for an example.<br>
+                                If you want to do more sophisticated dependency graph analysis for undefining work, the semi-private onResourceLoad API may be helpful.
+                              </div>
+                            </div>  
+                            </div>
+
                           </div>
                         </div> 
 
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Define a Module as a Function</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_7" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_7" class="panel-body collapse">  
-                            
-                          </div>
-                        </div> 
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Define a Module with Simplified CommonJS Wrapper</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_8" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_8" class="panel-body collapse"> 
-                            
-                          </div>
-                        </div>                        
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Define a Module with a Name</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_9" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_9" class="panel-body collapse"> 
-                            
-                          </div>
-                        </div> 
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Other Module Notes</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_10" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_10" class="panel-body collapse"> 
-                            
-                          </div>
-                        </div> 
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Circular Dependencies</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_11" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_11" class="panel-body collapse"> 
-                            
-                          </div>
-                        </div> 
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Specify a JSONP Service Dependency</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_12" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_12" class="panel-body collapse"> 
-                            
-                          </div>
-                        </div> 
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Undefining a Module</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13" data-parent="#CUsage"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_13" class="panel-body collapse"> 
-                            
-                          </div>
-                        </div> 
-
-
-                        <!--div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="row">
-                              <div class="col-sm-10"><h4>Undefining a Module</h4></div>
-                              <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
-                            </div>
-                          </div>
-                          <div id="panel_13" class="panel-body collapse"> 
-                            
-                          </div>
-                        </div--> 
+                                               
 
                     </div>
                   </div>
@@ -336,7 +480,19 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>MECHANICS</h3></div>
+                  <div class="panel-body">  
+                    RequireJS loads each dependency as a script tag, using head.appendChild().<br>
+                    RequireJS waits for all dependencies to load, figures out the right order in which to call the functions that define the modules, then calls the module definition functions once the dependencies for those functions have been called. Note that the dependencies for a given module definition function could be called in any order, due to their sub-dependency relationships and network load order.<br>
+                    Using RequireJS in a server-side JavaScript environment that has synchronous loading should be as easy as redefining require.load(). The build system does this, the require.load method for that environment can be found in build/jslib/requirePatch.js.<br>
+                    In the future, this code may be pulled into the require/ directory as an optional module that you can load in your env to get the right load behavior based on the host environment.  
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CONFIGURATION OPTIONS</h3> </div>
                   <div class="panel-body">  
                     
                   </div>
@@ -345,9 +501,95 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>USAGE</h3> </div>
+                  <div class="panel-heading"><h3>ADVANCED USAGE</h3> </div>
                   <div class="panel-body">  
                     
+                    <div class="panel-group" id="accordion"> 
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-10"><h4>Loading Modules from Packages</h4></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                          </div>
+                        </div>
+                        <div id="panel_13" class="panel-body collapse"> 
+                          
+                        </div>
+                      </div> 
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-10"><h4>Multiversion Support</h4></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                          </div>
+                        </div>
+                        <div id="panel_13" class="panel-body collapse"> 
+                          
+                        </div>
+                      </div> 
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-10"><h4>Loading Code After Page Load</h4></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                          </div>
+                        </div>
+                        <div id="panel_13" class="panel-body collapse"> 
+                          
+                        </div>
+                      </div> 
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-10"><h4>Web Worker Support</h4></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                          </div>
+                        </div>
+                        <div id="panel_13" class="panel-body collapse"> 
+                          
+                        </div>
+                      </div> 
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-10"><h4>Rhino Support</h4></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                          </div>
+                        </div>
+                        <div id="panel_13" class="panel-body collapse"> 
+                          
+                        </div>
+                      </div> 
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-10"><h4>Nashorn Support</h4></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                          </div>
+                        </div>
+                        <div id="panel_13" class="panel-body collapse"> 
+                          
+                        </div>
+                      </div> 
+
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-10"><h4>Handling Errors</h4></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                          </div>
+                        </div>
+                        <div id="panel_13" class="panel-body collapse"> 
+                          
+                        </div>
+                      </div> 
+
+                    </div>   
                   </div>
                 </div>
             </div> 
