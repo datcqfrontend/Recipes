@@ -855,19 +855,138 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>ADVANCED USAGE</h3> </div>
+                  <div class="panel-heading"><h3>ADVANCED USAGE</h3></div>
                   <div class="panel-body">  
                     
-                    <div class="panel-group" id="accordion"> 
+                    <div class="panel-group" id="CAdvancedUsage"> 
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <div class="row">
                             <div class="col-sm-10"><h4>Loading Modules from Packages</h4></div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CAdvancedUsage" data-target="#panel_14"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                           </div>
                         </div>
-                        <div id="panel_13" class="panel-body collapse"> 
-                          
+                        <div id="panel_14" class="panel-body collapse"> 
+                          RequireJS supports loading modules that are in a CommonJS Packages directory structure, but some additional configuration needs to be specified for it to work. Specifically, there is support for the following CommonJS Packages features:
+                          <ul>
+                            <li>A package can be associated with a module name/prefix.</li>
+                            <li>The package config can specify the following properties for a specific package:<br>
+                              <ul>
+                                <li><b>name:</b> The name of the package (used for the module name/prefix mapping)</li>
+                                <li><b>location:</b> The name of the package (used for the module name/prefix mapping)</li>
+                                <li><b>main:</b> The name of the module inside the package that should be used when someone does a require for "packageName". The default value is "main", so only specify it if it differs from the default. The value is relative to the package folder.</li>
+                              </ul>
+
+                            </li>
+                          </ul>
+                          <br>
+                          <b>IMPORTANT NOTES</b>
+                          <ul>
+                            <li>While the packages can have the CommonJS directory layout, the modules themselves should be in a module format that RequireJS can understand. Exception to the rule: if you are using the r.js Node adapter, the modules can be in the traditional CommonJS module format. You can use the CommonJS converter tool if you need to convert traditional CommonJS modules into the async module format that RequireJS uses.</li>
+                            <li>Only one version of a package can be used in a project context at a time. You can use RequireJS multiversion support to load two different module contexts, but if you want to use Package A and B in one context and they depend on different versions of Package C, then that will be a problem. This may change in the future.</li>
+                          </ul>
+                          If you use a similar project layout as specified in the Start Guide, the start of your web project would look something like this (Node/Rhino-based projects are similar, just use the contents of the scripts directory as the top-level project directory): 
+                          <ul>
+                            <li>project-directory/
+                              <ul>
+                                <li>project.html</li>
+                                <li>scripts/
+                                  <ul>
+                                    <li>require.js</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                          Here is how the example directory layout looks with two packages, cart and store:
+                          <ul>
+                            <li>project-directory/
+                            <ul>
+                              <li>project.html</li>
+                              <li>scripts/
+                                <ul>
+                                  <li>cart/
+                                    <ul>
+                                      <li>main.js</li>
+                                    </ul>
+                                  </li>
+                                  <li>store/
+                                    <ul>
+                                      <li>main.js</li>
+                                      <li>util.js</li>
+                                    </ul>
+                                  </li>
+                                  <li>main.js</li>
+                                  <li>require.js</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            </li>
+                          </ul>
+                          <b>project.html</b> will have a script tag like this:
+                          <div class="code-body">
+                            &lt;script data-main="scripts/main" src="scripts/require.js"&gt;&lt;/script&gt;
+                          </div>
+
+                          <br>This will instruct require.js to load scripts/main.js. <b>main.js</b> uses the "packages" config to set up packages that are relative to require.js, which in this case are the source packages "cart" and "store":
+
+                          <div class="code-body">
+                            //main.js contents
+                            //Pass a config object to require
+                            require.config({
+                                "packages": ["cart", "store"]
+                            });
+
+                            require(["cart", "store", "store/util"],
+                            function (cart,   store,   util) {
+                                //use the modules as usual.
+                            });
+                          </div>
+
+                          A require of "cart" means that it will be loaded from scripts/cart/main.js, since "main" is the default main module setting supported by RequireJS. A require of "store/util" will be loaded from scripts/store/util.js.
+                          <br>
+                          <br>If the "store" package did not follow the "main.js" convention, and looked more like this:
+                          <ul>
+                            <li>project-directory/
+                              <ul>
+                                <li>project.html</li>
+                                <li>scripts/
+                                  <ul>
+                                    <li>cart/
+                                      <ul>
+                                        <li>main.js</li>
+                                      </ul>
+                                    </li>
+                                    <li>store/
+                                      <ul>
+                                        <li>store.js</li>
+                                        <li>util.js</li>
+                                      </ul>
+                                    </li>
+                                    <li>main.js</li>
+                                    <li>package.json</li>
+                                    <li>require.js</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                          Then the RequireJS configuration would look like so:
+                          <div class="code-body">
+                            require.config({
+                            <br>    packages: [
+                            <br>        "cart",
+                            <br>        {
+                            <br>            name: "store",
+                            <br>            main: "store"
+                            <br>        }
+                            <br>    ]
+                            <br>});
+
+                          </div>
+                          To avoid verbosity, it is strongly suggested to always use packages that use "main" convention in their structure.
+
+
                         </div>
                       </div> 
 
@@ -875,10 +994,10 @@
                         <div class="panel-heading">
                           <div class="row">
                             <div class="col-sm-10"><h4>Multiversion Support</h4></div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CAdvancedUsage" data-target="#panel_15"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                           </div>
                         </div>
-                        <div id="panel_13" class="panel-body collapse"> 
+                        <div id="panel_15" class="panel-body collapse"> 
                           
                         </div>
                       </div> 
@@ -887,10 +1006,10 @@
                         <div class="panel-heading">
                           <div class="row">
                             <div class="col-sm-10"><h4>Loading Code After Page Load</h4></div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CAdvancedUsage" data-target="#panel_16"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                           </div>
                         </div>
-                        <div id="panel_13" class="panel-body collapse"> 
+                        <div id="panel_16" class="panel-body collapse"> 
                           
                         </div>
                       </div> 
@@ -899,10 +1018,10 @@
                         <div class="panel-heading">
                           <div class="row">
                             <div class="col-sm-10"><h4>Web Worker Support</h4></div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CAdvancedUsage" data-target="#panel_17"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                           </div>
                         </div>
-                        <div id="panel_13" class="panel-body collapse"> 
+                        <div id="panel_17" class="panel-body collapse"> 
                           
                         </div>
                       </div> 
@@ -911,10 +1030,10 @@
                         <div class="panel-heading">
                           <div class="row">
                             <div class="col-sm-10"><h4>Rhino Support</h4></div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CAdvancedUsage" data-target="#panel_18"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                           </div>
                         </div>
-                        <div id="panel_13" class="panel-body collapse"> 
+                        <div id="panel_18" class="panel-body collapse"> 
                           
                         </div>
                       </div> 
@@ -923,10 +1042,10 @@
                         <div class="panel-heading">
                           <div class="row">
                             <div class="col-sm-10"><h4>Nashorn Support</h4></div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CAdvancedUsage" data-target="#panel_19"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                           </div>
                         </div>
-                        <div id="panel_13" class="panel-body collapse"> 
+                        <div id="panel_19" class="panel-body collapse"> 
                           
                         </div>
                       </div> 
@@ -935,10 +1054,10 @@
                         <div class="panel-heading">
                           <div class="row">
                             <div class="col-sm-10"><h4>Handling Errors</h4></div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_13"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                            <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CAdvancedUsage" data-target="#panel_20"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                           </div>
                         </div>
-                        <div id="panel_13" class="panel-body collapse"> 
+                        <div id="panel_20" class="panel-body collapse"> 
                           
                         </div>
                       </div> 
@@ -954,17 +1073,17 @@
                     <div class="panel-body">  
                       <p>
                         RequireJS supports loader plugins. This is a way to support dependencies that are not plain JS files, but are still important for a script to have loaded before it can do its work. The RequireJS wiki has a list of plugins. This section talks about some specific plugins that are maintained alongside RequireJS:
-                        <br>
+                      </p>       
 
-                        <div class="panel-group" id="cLoaderPlugins"> 
+                      <div class="panel-group" id="CLoaderPlugins"> 
                           <div class="panel panel-default">
                             <div class="panel-heading">
                               <div class="row">
                                 <div class="col-sm-10"><h4>Specify a Text File Dependency</h4></div>
-                                <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_14"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CLoaderPlugins" data-target="#panel_21"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                               </div>
                             </div>
-                            <div id="panel_14" class="panel-body collapse"> 
+                            <div id="panel_21" class="panel-body collapse"> 
                               It is nice to build HTML using regular HTML tags, instead of building up DOM structures in script. However, there is no good way to embed HTML in a JavaScript file. The best that can be done is using a string of HTML, but that can be hard to manage, particularly for multi-line HTML.
                               <br>
                               <br>RequireJS has a plugin, text.js, that can help with this issue. It will automatically be loaded if the text! prefix is used for a dependency. See the text.js README for more information.
@@ -975,25 +1094,25 @@
                             <div class="panel-heading">
                               <div class="row">
                                 <div class="col-sm-10"><h4>Page Load Event Support/DOM Ready</h4></div>
-                                <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_15"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CLoaderPlugins" data-target="#panel_22"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                               </div>
                             </div>
-                            <div id="panel_15" class="panel-body collapse"> 
+                            <div id="panel_22" class="panel-body collapse"> 
                               It is possible when using RequireJS to load scripts quickly enough that they complete before the DOM is ready. Any work that tries to interact with the DOM should wait for the DOM to be ready. For modern browsers, this is done by waiting for the DOMContentLoaded event.
                               <br>
                               <br>However, not all browsers in use support DOMContentLoaded. The domReady module implements a cross-browser method to determine when the DOM is ready. Download the module and use it in your project like so:
                               <div class="code-body">
-                                require(['domReady'], function (domReady) {
-                                <br>&nbsp;&nbsp;&nbsp;  domReady(function () {
+                                require([<span class="spanYellow">'domReady'</span>], function (domReady) {
+                                <br>&nbsp;&nbsp;&nbsp;  <span class="spanYellow">domReady(function () {</span>
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //This function is called once the DOM is ready.
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //It will be safe to query the DOM and manipulate
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    //DOM nodes in this function.
-                                <br>&nbsp;&nbsp;&nbsp;  });
+                                <br>&nbsp;&nbsp;&nbsp;  <span class="spanYellow">});</span>
                                 <br>});
                               </div>
                               <br>Since DOM ready is a common application need, ideally the nested functions in the API above could be avoided. The domReady module also implements the Loader Plugin API, so you can use the loader plugin syntax (notice the ! in the domReady dependency) to force the require() callback function to wait for the DOM to be ready before executing. domReady will return the current document when used as a loader plugin:
                               <div class="code-body">
-                                require(['domReady!'], function (doc) {
+                                require([<span class="spanYellow">'domReady!'</span>], function (doc) {
                                 <br>&nbsp;&nbsp;&nbsp;    //This function is called once the DOM is ready,
                                 <br>&nbsp;&nbsp;&nbsp;    //notice the value for 'domReady!' is the current
                                 <br>&nbsp;&nbsp;&nbsp;    //document.
@@ -1001,17 +1120,16 @@
                               </div>
                               <br><b>Note:</b> If the document takes a while to load (maybe it is a very large document, or has HTML script tags loading large JS files that block DOM completion until they are done), using domReady as a loader plugin may result in a RequireJS "timeout" error. If this a problem either increase the waitSeconds configuration, or just use domReady as a module and call domReady() inside the require() callback.
                             </div>
-                          </div> 
-                        
+                          </div>                         
 
                           <div class="panel panel-default">
                             <div class="panel-heading">
                               <div class="row">
                                 <div class="col-sm-10"><h4>Define an I18N Bundle</h4></div>
-                                <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#panel_16"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                <div class="col-sm-2"><button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-parent="#CLoaderPlugins" data-target="#panel_23"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
                               </div>
                             </div>
-                            <div id="panel_16" class="panel-body collapse"> 
+                            <div id="panel_23" class="panel-body collapse"> 
                               Once your web app gets to a certain size and popularity, localizing the strings in the interface and providing other locale-specific information becomes more useful. However, it can be cumbersome to work out a scheme that scales well for supporting multiple locales.
                               <br>
                               <br>RequireJS allows you to set up a basic module that has localized information without forcing you to provide all locale-specific information up front. It can be added over time, and only strings/values that change between locales can be defined in the locale-specific file.
@@ -1023,11 +1141,11 @@
                               <div class="code-body">
                                 //my/nls/colors.js contents:
                                 <br>define({
-                                <br>&nbsp;&nbsp;&nbsp;    "root": {
+                                <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">"root": {
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        "red": "red",
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        "blue": "blue",
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        "green": "green"
-                                <br>&nbsp;&nbsp;&nbsp;    }
+                                <br>&nbsp;&nbsp;&nbsp;    }</span>
                                 <br>});
                               </div>
 
@@ -1035,7 +1153,7 @@
                               You can then use the above module in another module, say, in a my/lamps.js file:
                               <div class="code-body">
                                 //Contents of my/lamps.js
-                                <br>define(["i18n!my/nls/colors"], function(colors) {
+                                <br>define([<span class="spanYellow">"i18n!my/nls/colors"</span>], function(colors) {
                                 <br>&nbsp;&nbsp;&nbsp;    return {
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        testMessage: "The name for red in this locale is: " + colors.red
                                 <br>&nbsp;&nbsp;&nbsp;    }
@@ -1047,12 +1165,12 @@
                               <div class="code-body">
                                 //Contents of my/nls/colors.js
                                 <br>define({
-                                <br>&nbsp;&nbsp;&nbsp;    "root": {
+                                <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">"root": {
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        "red": "red",
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        "blue": "blue",
                                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        "green": "green"
                                 <br>&nbsp;&nbsp;&nbsp;    },
-                                <br>&nbsp;&nbsp;&nbsp;    "fr-fr": true
+                                <br>&nbsp;&nbsp;&nbsp;    "fr-fr": true</span>
                                 <br>});
                               </div>
 
@@ -1118,13 +1236,9 @@
                               </div>
                             </div>
                           </div> 
-                        
-                      </p>
-
-
-                    </div>   
+                        </div>
                   </div>
-                </div>
+                
             </div> 
             
         </div>       
