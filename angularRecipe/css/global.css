@@ -235,6 +235,10 @@ div.code-body {
       background-color: #e44d26;
       color: #fff;
   }
+
+  .html5 a.btn-link {
+    margin-left: 85%;
+  }
 /* END HTML5 */
 
 /* CSS3 */

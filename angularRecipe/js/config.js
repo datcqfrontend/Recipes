@@ -10,29 +10,49 @@ var fw = {
 				"html5":[
 					{"page":"tutorial"},
 
-					{"page":"intro", "topic":"Angular Introduction", "breadcrumb":"Introduction"  },
-					{"page":"expressions", "topic":"Angular Expressions", "breadcrumb":"Expressions"  },
-					{"page":"directives", "topic":"Angular Directives", "breadcrumb":"Directives"  },
+					{"page":"intro", "topic":"HTML Introduction", "breadcrumb":"Introduction"  },
+					{"page":"editors", "topic":"HTML Editors", "breadcrumb":"Editors"  },
+					{"page":"basic", "topic":"HTML Basic", "breadcrumb":"Basic"  },
 
-					{"page":"controllers", "topic":"Angular Controllers", "breadcrumb":"Controllers"  },
-					{"page":"filters", "topic":"Angular Filters", "breadcrumb":"Filters"  },
-					{"page":"http", "topic":"Angular HTTP", "breadcrumb":"HTTP"  },
+					{"page":"elements", "topic":"HTML Elements", "breadcrumb":"Elements"  },
+					{"page":"attributes", "topic":"HTML Attributes", "breadcrumb":"Attributes"  },
+					{"page":"headings", "topic":"HTML Headings", "breadcrumb":"Headings"  },
 
-					{"page":"tables", "topic":"Angular Tables", "breadcrumb":"Tables"  },
-					{"page":"sql", "topic":"Angular SQL", "breadcrumb":"SQL"  },
-					{"page":"dom", "topic":"Angular DOM", "breadcrumb":"DOM"  },
+					{"page":"paragraphs", "topic":"HTML Paragraphs", "breadcrumb":"Paragraphs"  },
+					{"page":"styles", "topic":"HTML Styles", "breadcrumb":"Styles"  },
+					{"page":"formatting", "topic":"HTML Formatting", "breadcrumb":"Formatting"  },
 
-					{"page":"events", "topic":"Angular Events", "breadcrumb":"Events"  },
-					{"page":"modules", "topic":"Angular Modules", "breadcrumb":"Modules"  },
-					{"page":"forms", "topic":"Angular Forms", "breadcrumb":"Forms"  },
+					{"page":"quotations", "topic":"HTML Quotations", "breadcrumb":"Quotations"  },
+					{"page":"computerCode", "topic":"HTML Computer Code", "breadcrumb":"Computer Code"  },
+					{"page":"comments", "topic":"HTML Comments", "breadcrumb":"Comments"  },					
 
-					{"page":"validation", "topic":"Angular Validation", "breadcrumb":"Validation"  },
-					{"page":"api", "topic":"Angular API", "breadcrumb":"API"  },
-					{"page":"bootstrap", "topic":"Angular Bootstrap", "breadcrumb":"Bootstrap"  },
+					{"page":"css", "topic":"HTML CSS", "breadcrumb":"CSS"  },
+					{"page":"links", "topic":"HTML Links", "breadcrumb":"Links"  },
+					{"page":"images", "topic":"HTML Images", "breadcrumb":"Images"  },					
 
-					{"page":"includes", "topic":"Angular Includes", "breadcrumb":"Includes"  },
-					{"page":"application", "topic":"Angular Application", "breadcrumb":"Aplication"  },
-					{"page":"references", "topic":"Angular References", "breadcrumb":"References"  }
+					{"page":"tables", "topic":"HTML Tables", "breadcrumb":"Tables"  },
+					{"page":"lists", "topic":"HTML Lists", "breadcrumb":"Lists"  },
+					{"page":"blocks", "topic":"HTML Blocks", "breadcrumb":"Blocks"  },	
+
+					{"page":"classes", "topic":"HTML Classes", "breadcrumb":"Classes"  },
+					{"page":"layout", "topic":"HTML Layout", "breadcrumb":"Layout"  },
+					{"page":"responsive", "topic":"HTML Responsive", "breadcrumb":"Responsive"  },					
+
+					{"page":"iframes", "topic":"HTML Iframes", "breadcrumb":"Iframes"  },
+					{"page":"colorNames", "topic":"HTML Color Names", "breadcrumb":"Color Names"  },
+					{"page":"colorValues", "topic":"HTML Color Values", "breadcrumb":"Color Values"  },					
+
+					{"page":"colorShades", "topic":"HTML Color Shades", "breadcrumb":"Color Shades"  },
+					{"page":"javascript", "topic":"HTML Javascript", "breadcrumb":"Javascript"  },
+					{"page":"head", "topic":"HTML Head", "breadcrumb":"Head"  },	
+
+					{"page":"entities", "topic":"HTML Entities", "breadcrumb":"Entities"  },
+					{"page":"symbols", "topic":"HTML Symbols", "breadcrumb":"Symbols"  },
+					{"page":"charset", "topic":"HTML Charset", "breadcrumb":"Charset"  },
+
+					{"page":"urlEncode", "topic":"HTML Url Encode", "breadcrumb":"Url Encode"  },
+					{"page":"xhtml", "topic":"XHTML", "breadcrumb":"XHTML"  }
+					
 					
 				],
 
