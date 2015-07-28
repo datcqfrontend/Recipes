@@ -369,3 +369,11 @@ div.code-body {
     border-top: 1px solid #ddd;
   }
 /* END ANGULAR */
+
+/* REQUIREJS */
+  .reqjs a.btn-link {
+    margin-left: 85%;
+  }
+
+
+/* END REQUIREJS */

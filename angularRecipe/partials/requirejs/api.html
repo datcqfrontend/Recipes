@@ -879,7 +879,7 @@
 
                             </li>
                           </ul>
-                          <br>
+                          
                           <b>IMPORTANT NOTES</b>
                           <ul>
                             <li>While the packages can have the CommonJS directory layout, the modules themselves should be in a module format that RequireJS can understand. Exception to the rule: if you are using the r.js Node adapter, the modules can be in the traditional CommonJS module format. You can use the CommonJS converter tool if you need to convert traditional CommonJS modules into the async module format that RequireJS uses.</li>
@@ -932,17 +932,17 @@
 
                           <div class="code-body">
                             //main.js contents
-                            //Pass a config object to require
-                            require.config({
-                                "packages": ["cart", "store"]
-                            });
-
-                            require(["cart", "store", "store/util"],
-                            function (cart,   store,   util) {
-                                //use the modules as usual.
-                            });
+                            <br>//Pass a config object to require
+                            <br>require.config({
+                            <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">packages": ["cart", "store"]</span>
+                            <br>});
+                            <br>
+                            <br>require([<span class="spanYellow">"cart", "store", "store/util"</span>],
+                            <br>function (cart,   store,   util) {
+                            <br>&nbsp;&nbsp;&nbsp;    //use the modules as usual.
+                            <br>});
                           </div>
-
+                          <br>
                           A require of "cart" means that it will be loaded from scripts/cart/main.js, since "main" is the default main module setting supported by RequireJS. A require of "store/util" will be loaded from scripts/store/util.js.
                           <br>
                           <br>If the "store" package did not follow the "main.js" convention, and looked more like this:
@@ -974,16 +974,17 @@
                           Then the RequireJS configuration would look like so:
                           <div class="code-body">
                             require.config({
-                            <br>    packages: [
-                            <br>        "cart",
-                            <br>        {
-                            <br>            name: "store",
-                            <br>            main: "store"
-                            <br>        }
-                            <br>    ]
+                            <br>&nbsp;&nbsp;&nbsp;    packages: [
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        "cart",
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <span class="spanYellow">{
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            name: "store",
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            main: "store"
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }</span>
+                            <br>&nbsp;&nbsp;&nbsp;    ]
                             <br>});
-
                           </div>
+                          
+                          <br>
                           To avoid verbosity, it is strongly suggested to always use packages that use "main" convention in their structure.
 
 
@@ -998,7 +999,54 @@
                           </div>
                         </div>
                         <div id="panel_15" class="panel-body collapse"> 
-                          
+                          <p>As mentioned in Configuration Options, multiple versions of a module can be loaded in a page by using different "context" configuration options. require.config() returns a require function that will use the context configuration. Here is an example that loads two different versions of the alpha and beta modules (this example is taken from one of the test files):
+                            <div class="code-body">
+                              &lt;script src="../require.js"&gt;&lt;/script&gt;
+                              <br>&lt;script&gt;
+                              <br><span class="spanYellow">var reqOne = require.config({
+                              <br>&nbsp;&nbsp;&nbsp;  context: "version1",
+                              <br>&nbsp;&nbsp;&nbsp;  baseUrl: "version1"
+                              <br>});</span>
+                              <br>
+                              <br><span class="spanYellow">reqOne(["require", "alpha", "beta",],
+                              <br>function(require,   alpha,   beta) {</span>
+                              <br>&nbsp;&nbsp;&nbsp;  log("alpha version is: " + alpha.version); //prints 1
+                              <br>&nbsp;&nbsp;&nbsp;  log("beta version is: " + beta.version); //prints 1
+                              <br>
+                              <br>&nbsp;&nbsp;&nbsp;  setTimeout(function() {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    require(["omega"],
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      function(omega) {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        log("version1 omega loaded with version: " +
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             omega.version); //prints 1
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      }
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    );
+                              <br>&nbsp;&nbsp;&nbsp;  }, 100);
+                              <br><span class="spanYellow">});</span>
+                              <br>
+                              <br><span class="spanYellow">var reqTwo = require.config({
+                              <br>&nbsp;&nbsp;&nbsp;  context: "version2",
+                              <br>&nbsp;&nbsp;&nbsp;  baseUrl: "version2"
+                              <br>});</span>
+                              <br>
+                              <br><span class="spanYellow">reqTwo(["require", "alpha", "beta"],
+                              <br>function(require,   alpha,   beta) {</span>
+                              <br>&nbsp;&nbsp;&nbsp;  log("alpha version is: " + alpha.version); //prints 2
+                              <br>&nbsp;&nbsp;&nbsp;  log("beta version is: " + beta.version); //prints 2
+                              <br>
+                              <br>&nbsp;&nbsp;&nbsp;  setTimeout(function() {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    require(["omega"],
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      function(omega) {
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        log("version2 omega loaded with version: " +
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            omega.version); //prints 2
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      }
+                              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    );
+                              <br>&nbsp;&nbsp;&nbsp;  }, 100);
+                              <br><span class="spanYellow">});</span>
+                              <br>&lt;/script&gt;
+                            </div>
+                            <br>Note that "require" is specified as a dependency for the module. This allows the require() function that is passed to the function callback to use the right context to load the modules correctly for multiversion support. If "require" is not specified as a dependency, then there will likely be an error.
+
+                          </p>
                         </div>
                       </div> 
 
@@ -1010,7 +1058,7 @@
                           </div>
                         </div>
                         <div id="panel_16" class="panel-body collapse"> 
-                          
+                          The example above in the Multiversion Support section shows how code can later be loaded by nested require() calls.
                         </div>
                       </div> 
 
@@ -1022,7 +1070,9 @@
                           </div>
                         </div>
                         <div id="panel_17" class="panel-body collapse"> 
-                          
+                          As of release 0.12, RequireJS can be run inside a Web Worker. Just use importScripts() inside a web worker to load require.js (or the JS file that contains the require() definition), then call require.<br>
+                          <br>You will likely need to set the baseUrl configuration option to make sure require() can find the scripts to load.<br>
+                          <br>You can see an example of its use by looking at one of the files used in the unit test.
                         </div>
                       </div> 
 
@@ -1034,7 +1084,7 @@
                           </div>
                         </div>
                         <div id="panel_18" class="panel-body collapse"> 
-                          
+                          RequireJS can be used in Rhino via the r.js adapter. See the r.js README for more information.
                         </div>
                       </div> 
 
@@ -1046,7 +1096,7 @@
                           </div>
                         </div>
                         <div id="panel_19" class="panel-body collapse"> 
-                          
+                          As of RequireJS 2.1.16, RequireJS can be used in Nashorn, Java 8+'s JavaScript engine, via the r.js adapter. See the r.js README for more information.
                         </div>
                       </div> 
 
@@ -1058,7 +1108,158 @@
                           </div>
                         </div>
                         <div id="panel_20" class="panel-body collapse"> 
-                          
+                          The general class of errors are 404s for scripts (not found), network timeouts or errors in the scripts that are loaded. RequireJS has a few tools to deal with them: require-specific errbacks, a "paths" array config, and a global requirejs.onError.<br>
+                          <br>The error object passed to errbacks and the global requirejs.onError function will usually contain two custom properties:
+                          <ul>
+                            <li><b>requireType:</b> A string value with a general classification, like "timeout", "nodefine", "scripterror".</li>
+                            <li><b>requireModules:</b> an array of module names/URLs that timed out.</li>
+                          </ul>
+                                                    
+                          If you get an error with a requireModules, it probably means other modules that depend on the modules in that requireModules array are not defined.
+
+                          <div class="panel-group" id="CErrors">
+                              <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Catching load failures in IE</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_error_1" data-parent="#CErrors"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_error_1" class="panel-body collapse">  
+                                Internet Explorer has a set of problems that make it difficult to detect load failures for errbacks/paths fallbacks:
+                                <ul>
+                                  <li>script.onerror does not work in IE 6-8. There is no way to know if loading a script generates a 404, worse, it triggers the onreadystatechange with a complete state even in a 404 case.</li>
+                                  <li>script.onerror does work in IE 9+, but it has a bug where it does not fire script.onload event handlers right after execution of script, so it cannot support the standard method of allowing anonymous AMD modules. So script.onreadystatechange is still used. However, onreadystatechange fires with a complete state before the script.onerror function fires.</li>
+                                </ul>
+                                                                
+                                So it is very difficult with IE to allow both anonymous AMD modules, which are a core benefit of AMD modules, and reliable detect errors.
+                                <br>
+                                <br>However, if you are in a project that you know uses define() to declare all of its modules, or it uses the shim config to specify string exports for anything that does not use define(), then if you set the enforceDefine config value to true, the loader can confirm if a script load by checking for the define() call or the existence of the shim's exports global value.
+                                <br>
+                                <br>So if you want to support Internet Explorer, catch load errors, and have modular code either through direct define() calls or shim config, always set enforceDefine to be true. See the next section for an example.
+                                <br>
+                                <br><b>NOTE:</b> If you do set enforceDefine: true, and you use data-main="" to load your main JS module, then that main JS module must call define() instead of require() to load the code it needs. The main JS module can still call require/requirejs to set config values, but for loading modules it should use define().
+                                <br>
+                                <br>If you then also use almond to build your code without require.js, be sure to use the insertRequire build setting to insert a require call for the main module -- that serves the same purpose of the initial require() call that data-main does.
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>require([]) errbacks</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_error_2" data-parent="#CErrors"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_error_2" class="panel-body collapse">  
+                                Errbacks, when used with requirejs.undef(), will allow you to detect if a module fails to load, undefine that module, reset the config to a another location, then try again.
+                                <br>
+                                <br>A common use case for this is to use a CDN-hosted version of a library, but if that fails, switch to loading the file locally:
+
+                                <div class="code-body">
+                                  <span class="spanYellow">requirejs.config({
+                                  <br>&nbsp;&nbsp;&nbsp;    enforceDefine: true,
+                                  <br>&nbsp;&nbsp;&nbsp;    paths: {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min'
+                                  <br>&nbsp;&nbsp;&nbsp;    }
+                                  <br>});</span>
+                                  <br>
+                                  <br>//Later
+                                  <br>require(['jquery'], function ($) {
+                                  <br>&nbsp;&nbsp;&nbsp;    //Do something with $ here
+                                  <br>}, function (err) {
+                                  <br>&nbsp;&nbsp;&nbsp;    //The errback, error callback
+                                  <br>&nbsp;&nbsp;&nbsp;    //The error has a list of modules that failed
+                                  <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">var failedId = err.requireModules && err.requireModules[0];
+                                  <br>&nbsp;&nbsp;&nbsp;    if (failedId === 'jquery') {</span>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //undef is function only on the global requirejs object.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //Use it to clear internal knowledge of jQuery. Any modules
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //that were dependent on jQuery and in the middle of loading
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //will not be loaded yet, they will wait until a valid jQuery
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //does load.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <span class="spanYellow">requirejs.undef(failedId);
+
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //Set the path to jQuery to local path
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        requirejs.config({
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            paths: {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                jquery: 'local/jquery'
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            }
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        });</span>
+                                  <br>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //Try again. Note that the above require callback
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //with the "Do something with $ here" comment will
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //be called if this new attempt to load jQuery succeeds.
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        require(['jquery'], function () {});
+                                  <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">} else {</span>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //Some other error. Maybe show message to the user.
+                                  <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">}</span>
+                                  <br>});
+                                </div>
+                                <br>
+                                With 'requirejs.undef()', if you later set up a different config and try to load the same module, the loader will still remember which modules needed that dependency and finish loading them when the newly configured module loads.
+                                <br>
+                                <br><b>Note:</b> errbacks only work with callback-style require calls, not define() calls. define() is only for declaring modules.
+
+
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>paths config fallbacks</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_error_3" data-parent="#CErrors"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_error_3" class="panel-body collapse">  
+                                The above pattern for detecting a load failure, undef()ing a module, modifying paths and reloading is a common enough request that there is also a shorthand for it. The paths config allows array values:
+                                <div class="code-body">
+                                  requirejs.config({
+                                  <br>&nbsp;&nbsp;&nbsp;    //To get timely, correct error triggers in IE, force a define/shim exports check.
+                                  <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">enforceDefine: true,
+                                  <br>&nbsp;&nbsp;&nbsp;    paths: {
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        jquery: [
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            //If the CDN location fails, load from this location 
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'lib/jquery'                                 
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       ]
+                                  <br>&nbsp;&nbsp;&nbsp;    }</span>
+                                  <br>});
+                                  <br>
+                                  <br>//Later
+                                  <br>require([<span class="spanYellow">'jquery'</span>], function ($) {
+                                  <br>});                                
+                                </div>
+                                <br>This above code will try the CDN location, but if that fails, fall back to the local lib/jquery.js location.<br>
+                                <br><b>Note:</b> paths fallbacks only work for exact module ID matches. This is different from normal paths config which can apply to any part of a module ID prefix segment. Fallbacks are targeted more for unusual error recovery, not a generic path search path solution, since those are inefficient in the browser.
+
+                              </div>
+                            </div> 
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <div class="row">
+                                  <div class="col-sm-10"><h4>Global requirejs.onError function</h4></div>
+                                  <div class="col-sm-2"><button type="button" class="btn btn-warning pull-right" data-toggle="collapse" data-target="#panel_error_4" data-parent="#CErrors"><span class="glyphicon glyphicon-chevron-down"></span></button></div>
+                                </div>
+                              </div>
+                              <div id="panel_error_4" class="panel-body collapse">  
+                                To detect errors that are not caught by local errbacks, you can override requirejs.onError():
+                                <div class="code-body">
+                                  <span class="spanYellow">requirejs.onError = function (err) {</span>
+                                  <br>&nbsp;&nbsp;&nbsp;    console.log(err.requireType);
+                                  <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">if (err.requireType === 'timeout') {</span>
+                                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        console.log('modules: ' + err.requireModules);
+                                  <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">}</span>
+
+                                  <br>&nbsp;&nbsp;&nbsp;    throw err;
+                                  <br><span class="spanYellow">};</span>                                  
+                                </div>
+                              </div>
+                            </div>
+
+                          </div> <!-- End panel group -->
+
                         </div>
                       </div> 
 
