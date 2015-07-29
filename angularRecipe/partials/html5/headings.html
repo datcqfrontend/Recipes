@@ -1,22 +1,183 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Headings" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
 
         <div class="row">
+            
+
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Headings</h3> </div>
                   <div class="panel-body">  
-                    <p>
+                    <p>Headings are important in HTML documents.
+                        <br>Headings are defined with the <span class="spanRed">&lt;h1&gt;</span> to <span class="spanRed">&lt;h6&gt;</span> tags.
+                        <br><span class="spanRed">&lt;h1&gt;</span> defines the most important heading. <span class="spanRed">&lt;h6&gt;</span> defines the least important heading.
 
+                        <div class="example-body">
+                            <h1>This is a heading</h1>
+                            <h2>This is a heading</h2>
+                            <h3>This is a heading</h3>
+                            <h4>This is a heading</h4>
+                            <h5>This is a heading</h5>
+                            <h6>This is a heading</h6>
+                        </div>
+                        <br>
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;h1&gt;</span>This is a heading<span class="spanYellow">&lt;/h1&gt;</span>
+                            <br><span class="spanYellow">&lt;h2&gt;</span>This is a heading<span class="spanYellow">&lt;/h2&gt;</span>
+                            <br><span class="spanYellow">&lt;h3&gt;</span>This is a heading<span class="spanYellow">&lt;/h3&gt;</span>
+                            <br><span class="spanYellow">&lt;h4&gt;</span>This is a heading<span class="spanYellow">&lt;/h4&gt;</span>
+                            <br><span class="spanYellow">&lt;h5&gt;</span>This is a heading<span class="spanYellow">&lt;/h5&gt;</span>
+                            <br><span class="spanYellow">&lt;h6&gt;</span>This is a heading<span class="spanYellow">&lt;/h6&gt;</span>
+                        </div>
+                        <br><b>Note:</b> Browsers automatically add some empty space (a margin) before and after each heading.
 
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Headings Are Important</h3> </div>
+                  <div class="panel-body">  
+                    <p>Use HTML headings for headings only. Don't use headings to make text <span class="spanRed">BIG</span> or <span class="spanRed">bold</span>.
+                        <br>Search engines use your headings to index the structure and content of your web pages.
+                        <br>Users skim your pages by its headings. It is important to use headings to show the document structure.
+                        <br>h1 headings should be main headings, followed by h2 headings, then the less important h3, and so on.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Horizontal Rules</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;hr&gt;</span> tag creates a horizontal line in an HTML page.
+                        <br>The hr element can be used to separate content:
+
+                        <div class="example-body">
+                            <p>This is a paragraph</p>
+                            <hr>
+                            <p>This is a paragraph</p>
+                            <hr>
+                            <p>This is a paragraph</p>                            
+                        </div>
+                        <br>
+                        <div class="code-body">
+                            &lt;p&gt;This is a paragraph&lt;/p&gt;
+                            <br><span class="spanYellow">&lt;hr&gt;</span>
+                            <br>&lt;p&gt;This is a paragraph&lt;/p&gt;
+                            <br><span class="spanYellow">&lt;hr&gt;</span>
+                            <br>&lt;p&gt;This is a paragraph&lt;/p&gt;                            
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML &lt;head&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;head&gt;</span> element has nothing to do with HTML headings.
+                        <br>The HTML <span class="spanRed">&lt;head&gt;</span> element contains meta data. Meta data are not displayed.
+                        <br>The HTML <span class="spanRed">&lt;head&gt;</span> element is placed between the <span class="spanRed">&lt;html&gt;</span> tag and the <span class="spanRed">&lt;body&gt;</span> tag:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>
+                            <br><span class="spanYellow">&lt;head&gt;
+                            <br>&lt;title&gt;My First HTML&lt;/title&gt;
+                            <br>&lt;meta charset="UTF-8"&gt;
+                            <br>&lt;/head&gt;</span>
+                            <br>
+                            <br>&lt;body&gt;
+                            <br>.................                            
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                        <br>Meta data means data about data. HTML meta data is data about the HTML document.
+
+                        <h4>The HTML <span class="spanRed">&lt;title&gt;</span> Element</h4>
+                        The HTML <span class="spanRed">&lt;title&gt;</span> element is meta data. It defines the HTML document's title.
+                        <br>The title will not be displayed in the document, but might be displayed in the browser tab.
+
+                        <br>
+                        <h4>The HTML <span class="spanRed">&lt;meta&gt;</span> Element</h4>
+                        The HTML <span class="spanRed">&lt;meta&gt;</span> element is also meta data.
+                        <br>It can be used to define the character set, and other information about the HTML document.
+
+                        <br>
+                        <h4>More Meta Elements</h4>
+                        In the chapter about HTML styles you discover more meta elements:
+                        <br>The HTML <span class="spanRed">&lt;style&gt;</span> element is used to define internal CSS style sheets.
+                        <br>The HTML <span class="spanRed">&lt;link&gt;</span> element is used to define external CSS style sheets.
+
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>How to View HTML Source</h3> </div>
+                  <div class="panel-body">
+                    <p>
+                        Have you ever seen a Web page and wondered "Hey! How did they do that?"
+                        <br>To find out, right-click in the page and select "View Page Source" (in Chrome) or "View Source" (in IE), or similar in another browser. This will open a window containing the HTML code of the page.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Tag Reference</h3> </div>
+                  <div class="panel-body">
+                    <p>
+                        W3Schools' tag reference contains additional information about these tags and their attributes.
+                        <br>You will learn more about HTML tags and attributes in the next chapters of this tutorial.
+
+                        <table class="table table-striped">
+                        <tbody><tr>
+                          <th>Tag</th>
+                          <th>Description</th>
+                        </tr>
+                        <tr>
+                          <td>&lt;html&gt;</td>
+                          <td>Defines an HTML document</td>
+                        </tr>
+                        <tr>
+                          <td>&lt;body&gt;</td>
+                          <td> Defines the document's body</td>
+                        </tr>
+                        <tr>
+                          <td>&lt;head&gt;</td>
+                          <td> Defines the document's head element</td>
+                        </tr>
+                        <tr>
+                          <td>&lt;h1&gt; to &lt;h6&gt;</td>
+                          <td> Defines HTML headings</td>
+                        </tr>
+                        <tr>
+                          <td>&lt;hr&gt;</td>
+                          <td> Defines a horizontal line</td>
+                        </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
         </div>       
         <!-- /.row -->
 

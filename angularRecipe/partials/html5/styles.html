@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Style" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,10 +6,152 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Styling</h3> </div>
+                  <div class="panel-body">  
+                    <p>Every HTML element has a default style (background color is white and text color is black).
+                        <br>Changing the default style of an HTML element, can be done with the style attribute.
+                        <br>This example changes the default background color from white to lightgrey:
+
+                       
+                            <div style="background-color:lightgrey">
+                                <h1>This is a heading</h1>
+                                <p>This is a paragraph.</p>
+                            </div>
+                       
+                        <br>
+                        <div class="code-body">
+                            &lt;div <span class="spanYellow">style="background-color:lightgrey"</span>&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;h1&gt;This is a heading&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+                        <br>The bgcolor attribute, supported in older versions of HTML, is not valid in HTML5.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Style Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>The HTML style attribute has the following syntax:
+                        <div class="code-body">
+                            style=<span class="spanYellow">"property:value"</span>
+                        </div>
+                        <br>The property is a CSS property. The value is a CSS value.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Text Color</h3> </div>
+                  <div class="panel-body">  
+                    <p>The color property defines the text color to be used for an HTML element:
+                        <div>
+                            <h1 style="color:blue">This is a heading</h1>
+                            <p style="color:red">This is a paragraph.</p>
+                        </div>
+                       
+                        <br>
+                        <div class="code-body">
+                            &lt;div&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;h1 <span class="spanYellow">style="color:blue"</span>&gt;This is a heading&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p <span class="spanYellow">style="color:red"</span>&gt;This is a paragraph.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Fonts</h3> </div>
+                  <div class="panel-body">  
+                    <p>The font-family property defines the font to be used for an HTML element:
+                        <div>
+                            <h1 style="font-family:verdana">This is a heading</h1>
+                            <p style="font-family:courier">This is a paragraph.</p>
+                        </div>
+                       
+                        <br>
+                        <div class="code-body">
+                            &lt;div&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;h1 <span class="spanYellow">style="font-family:verdana"</span>&gt;This is a heading&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p <span class="spanYellow">style="font-family:courier"</span>&gt;This is a paragraph.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+                        <br>The <span class="spanRed">&lt;font&gt;</span> tag, supported in older versions of HTML, is not valid in HTML5.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Text Size</h3> </div>
+                  <div class="panel-body">  
+                    <p>The font-size property defines the text size to be used for an HTML element:
+                        
+                        <div>
+                            <h1 style="font-size:300%">This is a heading</h1>
+                            <p style="font-size:160%">This is a paragraph.</p>
+                        </div>
+                       
+                        <br>
+                        <div class="code-body">
+                            &lt;div&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;h1 <span class="spanYellow">style="font-size:300%"</span>&gt;This is a heading&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p <span class="spanYellow">style="font-size:160%"</span>&gt;This is a paragraph.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Text Alignment</h3> </div>
+                  <div class="panel-body">  
+                    <p>The text-align property defines the horizontal text alignment for an HTML element:
+                        <div>
+                            <h1 style="text-align:center">This is a heading</h1>
+                            <p>This is a paragraph.</p>
+                        </div>
+                       
+                        <br>
+                        <div class="code-body">
+                            &lt;div&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;h1 <span class="spanYellow">style="text-align:center"</span>&gt;This is a heading&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+                        <br>The &lt;center&gt; tag, supported in older versions of HTML, is not valid in HTML5.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Chapter Summary</h3> </div>
                   <div class="panel-body">  
                     <p>
-
+                        <ul>
+                            <li>Use the <span class="spanRed">style</span> attribute for styling HTML elements</li>
+                            <li>Use <span class="spanRed">background-color</span> for background color</li>
+                            <li>Use <span class="spanRed">color</span> for text colors</li>
+                            <li>Use <span class="spanRed">font-family</span> for text fonts</li>
+                            <li>Use <span class="spanRed">font-size</span> for text sizes</li>
+                            <li>Use <span class="spanRed">text-align</span> for text alignment</li>
+                        </ul>
 
                     </p>
                   </div>

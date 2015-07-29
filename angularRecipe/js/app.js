@@ -141,7 +141,7 @@ app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $
 app.controller('TutorialCtrl', function ( $scope, $location, $http ) {
 	window.scrollTo(0,0);
 
-	$http.get("partials/"+fw.currentGroupName+"/json/cntTutorial.json") 
+	$http.get("partials/"+fw.currentGroupName+"/json/cntTutorial.json?"+Date.now()) 
        .success(function(response) { 
            $scope.tutorials = response.content; 
     }); 

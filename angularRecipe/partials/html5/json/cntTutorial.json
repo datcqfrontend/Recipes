@@ -12,36 +12,36 @@
 		},
 		{ 
 			"title": "Basic",
-			"sortContent":  "",
+			"sortContent":  "All HTML documents must start with a type declaration: <span class='spanRed'>&lt;!DOCTYPE html&gt;</span>.<br>The HTML document itself begins with <span class='spanRed'>&lt;html&gt;</span> and ends with <span class='spanRed'>&lt;/html&gt;</span>.<br>The visible part of the HTML document is between <span class='spanRed'>&lt;body&gt; and <span class='spanRed'>&lt;/body&gt;</span>.",
 			"link": "#html5/basic"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Elements",
-			"sortContent":  "",
+			"sortContent":  "HTML documents are made up by HTML elements.<br>HTML elements are written with a start tag, with an end tag, with the content in between:<br><span class='spanRed'>&lt;tagname&gt;</span> content <span class='spanRed'>&lt;/tagname&gt;</span>",
 			"link": "#html5/elements"
 		},	
 		{ 
 			"title": "Attributes",
-			"sortContent":  "",
+			"sortContent":  "<ul>  <li>HTML elements can have <span class='spanRed'>attributes</span></li>  <li>Attributes provide <span class='spanRed'>additional information</span> about an element</li>  <li>Attributes are always specified in <span class='spanRed'>the start tag</span></li>  <li>Attributes come in name/value pairs like: <span class='spanRed'>name='value'</span></li></ul>",
 			"link": "#html5/attributes"
 		},	
 		{ 
 			"title": "Headings",
-			"sortContent":  "",
+			"sortContent":  "Headings are important in HTML documents.<br>Headings are defined with the <span class='spanRed'>&lt;h1&gt;</span> to <span class='spanRed'>&lt;h6&gt;</span> tags.<br><span class='spanRed'>&lt;h1&gt;</span> defines the most important heading. <span class='spanRed'>&lt;h6&gt;</span> defines the least important heading.",
 			"link": "#html5/headings"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Paragraphs",
-			"sortContent":  "",
+			"sortContent":  "<p>The HTML <span class='spanRed'>&lt;p&gt;</span> element defines a paragraph.</p><p>This is a paragraph</p><p>This is another paragraph</p>",
 			"link": "#html5/paragraphs"
 		},	
 		{ 
 			"title": "Styles",
-			"sortContent":  "",
+			"sortContent":  "Every HTML element has a default style (background color is white and text color is black).<br>Changing the default style of an HTML element, can be done with the style attribute.",
 			"link": "#html5/styles"
 		},	
 		{ 

@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Paragraphs" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,16 +6,217 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Paragraphs</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        The HTML <span class="spanRed">&lt;p&gt;</span> element defines a paragraph.
 
-
+                        <div class="example-body">
+                            <p>This is a paragraph</p>                            
+                            <p>This is another paragraph</p>
+                            
+                        </div>
+                        <br>
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;p&gt;</span>This is a paragraph<span class="spanYellow">&lt;/p&gt;</span>
+                            <br><span class="spanYellow">&lt;p&gt;</span>This is another paragraph<span class="spanYellow">&lt;/p&gt;</span>                                                     
+                        </div>
+                        <br>Browsers automatically add an empty line before and after a paragraph.
                     </p>
                   </div>
                 </div>
             </div> 
 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Display</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        You cannot be sure how HTML will be displayed.
+                        <br>Large or small screens, and resized windows will create different results.
+                        <br>With HTML, you cannot change the output by adding extra spaces or extra lines in your HTML code.
+                        <br>The browser will remove extra spaces and extra lines when the page is displayed.
+                        <br>Any number of spaces, and any number of new lines, count as <span class="spanRed">only one space</span>.
+
+                         <div class="example-body">
+                            <p>
+                            This paragraph
+                            contains a lot of lines
+                            in the source code,
+                            but the browser 
+                            ignores it.
+                            </p>
+
+                            <p>
+                            This paragraph
+                            contains         a lot of spaces
+                            in the source         code,
+                            but the        browser 
+                            ignores it.
+                            </p>
+                            
+                        </div>
+                        <br>
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;p&gt;</span>
+                            <br>This paragraph
+                            <br>contains a lot of lines
+                            <br>in the source code,
+                            <br>but the browser 
+                            <br>ignores it.
+                            </pre>
+                            <br><span class="spanYellow">&lt;/p&gt;</span> 
+                            <br>                                    
+                            <span class="spanYellow">&lt;p&gt;</span>
+                            <br>This paragraph
+                            <br>contains&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a lot of spaces
+                            <br>in the source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,
+                            <br>but the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;browser 
+                            <br>ignores it.
+                            <br><span class="spanYellow">&lt;/p&gt;</span>       
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Don't Forget the End Tag</h3> </div>
+                  <div class="panel-body">  
+                    <p>Most browsers will display HTML correctly even if you forget the end tag:
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;p&gt;</span>This is a paragraph
+                            <br><span class="spanYellow">&lt;p&gt;</span>This is another paragraph                                                 
+                        </div>
+                        <br>The example above will work in most browsers, but do not rely on it.
+                        <br>Forgetting the end tag can produce unexpected results or errors.
+                        <br>Stricter versions of HTML, like XHTML, do not allow you to skip the end tag.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Line Breaks</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;br&gt;</span> element defines a line break.
+                        <br>Use <span class="spanRed">&lt;br&gt;</span> if you want a line break (a new line) without starting a new paragraph:
+
+                        <div class="example-body">
+                            <p>This is<br>a para<br>graph with line breaks</p>
+                            
+                        </div>
+                        <br>
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;p&gt;</span>This is<span class="spanYellow">&lt;br&gt;</span>a para<span class="spanYellow">&lt;br&gt;</span>graph with line breaks<span class="spanYellow">&lt;/p&gt;</span>       
+                        </div>
+                        <br>The <span class="spanRed">&lt;br&gt;</span> element is an empty HTML element. It has no end tag.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Poem Problem</h3> </div>
+                  <div class="panel-body">  
+                    <div class="example-body">
+                        <p>This poem will display as one line:</p>
+                        <p>
+                          My Bonnie lies over the ocean.
+
+                          My Bonnie lies over the sea.
+
+                          My Bonnie lies over the ocean.
+
+                          Oh, bring back my Bonnie to me.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="code-body">
+                        <span class="spanYellow">&lt;p&gt;</span>This poem will display as one line:<span class="spanYellow">&lt;/p&gt;</span>
+                        <br><span class="spanYellow">&lt;p&gt;</span>
+                        <br>&nbsp;&nbsp;&nbsp;My Bonnie lies over the ocean.
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;My Bonnie lies over the sea.
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;My Bonnie lies over the ocean.
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;Oh, bring back my Bonnie to me.
+                        <br><span class="spanYellow">&lt;/p&gt;</span>
+                    </div>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML <span class="spanRed">&lt;pre&gt;</span> Element</h3> </div>
+                  <div class="panel-body">  
+
+                    <div class="example-body">
+                        <pre>
+                            My Bonnie lies over the ocean.
+
+                            My Bonnie lies over the sea.
+
+                            My Bonnie lies over the ocean.
+
+                            Oh, bring back my Bonnie to me.
+                        </pre>
+                    </div>
+                    <br>
+                    <div class="code-body">
+                        <span class="spanYellow">&lt;pre&gt;</span>
+                        <br>&nbsp;&nbsp;&nbsp;My Bonnie lies over the ocean.
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;My Bonnie lies over the sea.
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;My Bonnie lies over the ocean.
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;Oh, bring back my Bonnie to me.
+                        <br><span class="spanYellow">&lt;/pre&gt;</span>
+                    </div>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Tag Reference</h3> </div>
+                  <div class="panel-body">  
+                    <p>W3Schools' tag reference contains additional information about HTML elements and their attributes.
+                        <table class="table table-striped">
+                        <tbody><tr>
+                         <th>Tag</th>
+                         <th>Description</th>
+                        </tr>
+                        <tr>
+                          <td>&lt;p&gt;</td>
+                          <td>Defines a paragraph</td>
+                        </tr>
+                        <tr>
+                          <td>&lt;br&gt;</td>
+                          <td>Inserts a single line break</td>
+                        </tr>
+                        <tr>
+                          <td>&lt;pre&gt;</td>
+                          <td>Defines pre-formatted text</td>
+                        </tr>
+                        </tbody></table>
+                        
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
         </div>       
         <!-- /.row -->

@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Attributes" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,241 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Attributes</h3> </div>
+                  <div class="panel-body">  
+                    <ul>
+                      <li>HTML elements can have <span class="spanRed">attributes</span></li>
+                      <li>Attributes provide <span class="spanRed">additional information</span> about an element</li>
+                      <li>Attributes are always specified in <span class="spanRed">the start tag</span></li>
+                      <li>Attributes come in name/value pairs like: <span class="spanRed">name="value"</span></li>
+                    </ul>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The lang Attribute</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        The document language can be declared in the <span class="spanRed">&lt;html&gt;?</span> tag.
+                        <br>The language is declared in the lang attribute.
+                        <br>Declaring a language is important for accessibility applications (screen readers) and search engines:
 
-
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html <span class="spanYellow">lang="en-US"</span>&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;h1&gt;My First Heading&lt;/h1&gt;
+                            <br>&lt;p&gt;My first paragraph.&lt;/p&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                        <br>he first two letters specify the language (en). If there is a dialect, use two more letters (US).
                     </p>
                   </div>
                 </div>
             </div> 
 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The title Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML paragraphs are defined with the <span class="spanRed">&lt;p&gt;</span> tag.
+                        <br>In this example, the <span class="spanRed">&lt;p&gt;</span> element has a title attribute. The value of the attribute is "About W3Schools":
+
+                        <div class="code-body">
+                            &lt;p <span class="spanYellow">title="About W3Schools"</span>&gt;
+                            <br>W3Schools is a web developer's site.
+                            <br>It provides tutorials and references covering
+                            <br>many aspects of web programming,
+                            <br>including HTML, CSS, JavaScript, XML, SQL, PHP, ASP, etc.
+                            <br>&lt;/p&gt;
+                        </div>
+                        <br>When you move the mouse over the element, the title will be displayed as a tooltip.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The href Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>HTML links are defined with the <span class="spanRed">&lt;a&gt;</span> tag. The link address is specified in the href attribute:
+                        <div class="code-body">
+                            &lt;a <span class="spanYellow">href="http://www.w3schools.com"</span>&gt;This is a link&lt;/a&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Size Attributes</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML images are defined with the <span class="spanRed">&lt;img&gt;</span> tag.
+                        <br>The filename of the source (<span class="spanRed">src</span>), and the size of the image (<span class="spanRed">width</span> and <span class="spanRed">height</span>) are all provided as <span class="spanRed">attributes</span>:
+                        <div class="code-body">
+                            &lt;img src="w3schools.jpg" <span class="spanYellow">width="104" height="142"</span>&gt;
+                        </div>
+                        <br>The image size is specified in pixels: width="104" means 104 screen pixels wide.
+                        <br>You will learn more about images and the <span class="spanRed">&lt;img&gt;</span> tag later in this tutorial.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The alt Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The alt attribute specifies an alternative text to be used, when an HTML element cannot be displayed.
+                        <br>The value of the attribute can be read by "screen readers". This way, someone "listening" to the webpage, i.e. a blind person, can "hear" the element.
+
+                        <div class="code-body">
+                            &lt;img src="w3schools.jpg" <span class="spanYellow">alt="W3Schools.com"</span> width="104" height="142"&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Always Use Lowercase Attributes</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML5 standard does not require lower case attribute names.
+                        <br>The title attribute can be written with upper or lower case like <span class="spanRed">Title</span> and/or <span class="spanRed">TITLE</span>.
+                        <br>W3C recommends lowercase in HTML4, and demands lowercase for stricter document types like XHTML.
+                        <br>Lower case is the most common. Lower case is easier to type.
+                    </p>    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Always Quote Attribute Values</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML5 standard does not require quotes around attribute values.
+                        <br>The href attribute, demonstrated above, can be written as:
+                        <div class="code-body">
+                            &lt;a href=http://www.w3schools.com&gt;
+                            <br>
+                            <br>//Should:
+                            <br>&lt;a href=<span class="spanYellow">"</span>http://www.w3schools.com<span class="spanYellow">"</span>&gt;
+                        </div>
+                        <br>W3C recommends quotes in HTML4, and demands quotes for stricter document types like XHTML.
+                        <br>Sometimes it is necessary to use quotes. This will not display correctly, because it contains a space:
+                        <div class="code-body">
+                            &lt;p title=About W3Schools&gt;
+                            <br>
+                            <br>//Should:
+                            <br>&lt;p title=<span class="spanYellow">"</span>About W3Schools<span class="spanYellow">"</span>&gt;
+                        </div>
+                        <br>Using quotes are the most common. Omitting quotes can produce errors. 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Single or Double Quotes?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Double style quotes are the most common in HTML, but single style can also be used.
+                        <br>In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:
+                        <div class="code-body">
+                            &lt;p title=<span class="spanRed">'</span>John "ShotGun" Nelson<span class="spanRed">'</span>>&gt;
+                        </div>
+                        <br>Or vice versa:
+                        <div class="code-body">
+                            &lt;p title=<span class="spanRed">"</span>John 'ShotGun' Nelson<span class="spanRed">"</span>&gt;
+                        </div>
+                    </p>    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Chapter Summary</h3> </div>
+                  <div class="panel-body">  
+                    <ul>
+                        <li>All HTML elements can have <span class="spanRed">attributes</span></li>
+                        <li>The HTML <span class="spanRed">title</span> attribute provides additional "tool-tip"    information</li>
+                        <li>The HTML <span class="spanRed">href</span> attribute provides address information for links</li>
+                        <li>The HTML <span class="spanRed">width</span> and <span class="spanRed">height</span> attributes provide size information for images</li>
+                        <li>The HTML <span class="spanRed">alt</span> attribute provides text for screen readers</li>
+                        <li>At W3Schools we always use <span class="spanRed">lowercase</span> HTML attribute names</li>
+                        <li>At W3Schools we always <span class="spanRed">quote</span> attributes with double quotes</li>
+                    </ul>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Attributes</h3> </div>
+                  <div class="panel-body">  
+                    <p>Below is an alphabetical list of some attributes often used in HTML:
+                        <table class="table table-striped ">
+                        <tbody><tr>
+                        <th style="width:15%">Attribute</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td>alt</td>
+                        <td>Specifies an alternative text for an image</td>
+                        </tr>
+                        <tr>
+                        <td>disabled</td>
+                        <td>Specifies that an input element should be disabled</td>
+                        </tr>
+                        <tr>
+                        <td>href</td>
+                        <td>Specifies the URL (web address) for a link</td>
+                        </tr>
+                        <tr>
+                        <td>id</td>
+                        <td>Specifies a unique id for an element</td>
+                        </tr>
+                        <tr>
+                        <td>src</td>
+                        <td>Specifies the URL (web address) for an image</td>
+                        </tr>
+                        <tr>
+                        <td>style</td>
+                        <td>Specifies an inline CSS style for an element</td>
+                        </tr>
+                        <tr>
+                        <td>title</td>
+                        <td>Specifies extra information about an element (displayed as a tool tip)</td>
+                        </tr>
+                        <tr>
+                        <td>value</td>
+                        <td>Specifies the value (text content) for an input element.</td>
+                        </tr>
+                        </tbody></table>
+                    </p>
+                    
+                  </div>
+                </div>
+            </div> 
             
+
         </div>       
         <!-- /.row -->
 

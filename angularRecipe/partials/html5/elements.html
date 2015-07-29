@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Elements" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,16 +6,101 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Elements</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        HTML elements are written with a start tag, with an end tag, with the content in between:
+                        <br><span class="spanRed">&lt;tagname&gt;</span> content <span class="spanRed">&lt;/tagname&gt;</span><br>
+                        The HTML element is everything from the start tag to the end tag:
+                        <span class="spanRed">&lt;p&gt;</span>My first HTML paragraph.<span class="spanRed">&lt;/p&gt;</span>
+                        <br>Some HTML elements do not have an end tag: <span class="spanRed">&lt;br&gt;</span>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Nested HTML Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p> HTML elements can be nested (elements can contain elements).
+                        <br>All HTML documents consist of nested HTML elements.
+                        <br>This example contains 4 HTML elements:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;head&gt;
+                            <br>&lt;title&gt;Page Title&lt;/title&gt;
+                            <br>&lt;/head&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;h1&gt;My First Heading&lt;/h1&gt;
+                            <br>&lt;p&gt;My first paragraph.&lt;/p&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                        <br><b>Explained: </b>
+                        <br>The <span class="spanRed">&lt;html&gt;</span> element defines the whole document. It has a start tag <span class="spanRed">&lt;html&gt;</span> and an end tag <span class="spanRed">&lt;/html&gt;</span>. The element content is another HTML element (the <span class="spanRed">&lt;body&gt;</span> element)
+                        
+                        <br>The <span class="spanRed">&lt;body&gt;</span> element defines the document body. It has a start tag <span class="spanRed">&lt;body&gt;</span> and an end tag <span class="spanRed">&lt;/body&gt;</span>. The element content is two other HTML elements (<span class="spanRed">&lt;h1&gt;</span> and <span class="spanRed">&lt;p&gt;</span>).
+                        
+                        <br>The <span class="spanRed">&lt;h1&gt;</span> element defines a heading. It has a start tag <span class="spanRed">&lt;h1&gt;</span> and an end tag <span class="spanRed">&lt;/h1&gt;</span>. The element content is: My First Heading.
+                        
+                        <br>The <span class="spanRed">&lt;p&gt;</span> element defines a paragraph. It has a start tag <span class="spanRed">&lt;p&gt;</span> and an end tag <span class="spanRed">&lt;/p&gt;</span>. The element content is: My first paragraph.
 
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Don't Forget the End Tag</h3> </div>
+                  <div class="panel-body">  
+                    <p>Some HTML elements will display correctly, even if you forget the end tag:
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;p&gt;This is a paragraph.
+                            <br>&lt;p&gt;This is a paragraph.
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                        <br>The example above works in all browsers, because the closing tag is considered optional.
+                        <br>Never rely on this. It might produce unexpected results and/or errors if you forget the end tag.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Empty HTML Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>HTML elements with no content are called empty elements.
+                        <br><span class="spanRed">&lt;br&gt;</span> is an empty element without a closing tag (the <span class="spanRed">&lt;br&gt;</span> tag defines a line break).
+                        <br>Empty elements can be "closed" in the opening tag like this: <span class="spanRed">&lt;br /&gt;</span>.
+                        <br>HTML5 does not require empty elements to be closed. But if you want stricter validation, or you need to make your document readable by XML parsers, you should close all HTML elements.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Tip: Use Lowercase Tags</h3> </div>
+                  <div class="panel-body">  
+                    <p>HTML tags are not case sensitive: <span class="spanRed">&lt;P&gt;</span> means the same as <span class="spanRed">&lt;p&gt;</span>.
+                        <br>The HTML5 standard does not require lowercase tags, but W3C recommends lowercase in HTML4, and demands lowercase for stricter document types like XHTML.
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
         </div>       
         <!-- /.row -->

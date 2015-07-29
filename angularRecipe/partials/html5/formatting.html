@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Formatting" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,7 +6,87 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Formatting Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In the previous chapter, you learned about HTML styling, using the HTML style attribute.
+                        <br>HTML also defines special elements, for defining text with a special meaning.
+                        <br>HTML uses elements like <span class="spanRed">&lt;b&gt;</span> and <span class="spanRed">&lt;i&gt;</span> for formatting output, like bold or italic text.
+                        <br>Formatting elements were designed to display special types of text:
+                        <ul>
+                         <li>Bold text</li>
+                         <li>Important text</li>
+                         <li>Italic text</li>
+                         <li>Emphasized text</li>
+                         <li>Marked text</li>
+                         <li>Small text</li>
+                         <li>Deleted text</li>
+                         <li>Inserted text</li>
+                         <li>Subscripts</li>
+                         <li>Superscripts</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Bold and Strong Formatting</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;b&gt;</span> element defines bold text, without any extra importance.
+                        <br>The HTML <span class="spanRed">&lt;strong&gt;</span> element defines strong text, with added semantic "strong" importance.
+
+                        <div>
+                            <p>This text is normal.</p>
+                            <p><b>This text is bold</b></p>
+                            <p><strong>This text is strong</strong></p>
+                        </div>
+                       
+                        <div class="code-body">
+                            &lt;div&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;This text is normal&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;<span class="spanYellow">&lt;b&gt;</span>This text is bold<span class="spanYellow">&lt;/b&gt;</span>&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;<span class="spanYellow">&lt;strong&gt;</span>This text is strong<span class="spanYellow">&lt;/strong&gt;</span>&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Italic and Emphasized Formatting</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;i&gt;</span> element defines italic text, without any extra importance.
+                        <br>The HTML <span class="spanRed">&lt;em&gt;</span> element defines emphasized text, with added semantic importance.
+
+                        <div>
+                            <p>This text is normal.</p>
+                            <p><i>This text is bold</i></p>
+                            <p><em>This text is strong</em></p>
+                        </div>
+                       
+                        <div class="code-body">
+                            &lt;div&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;This text is normal&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;<span class="spanYellow">&lt;i&gt;</span>This text is italic<span class="spanYellow">&lt;/i&gt;</span>&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;p&gt;<span class="spanYellow">&lt;em&gt;</span>This text is emphasized<span class="spanYellow">&lt;/em&gt;</span>&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+                        <br>Browsers display <span class="spanRed">&lt;strong&gt;</span> as <span class="spanRed">&lt;b&gt;</span>, and <span class="spanRed">&lt;em&gt;</span> as <span class="spanRed">&lt;i&gt;</span>.
+                        <br>However, there is a difference in the meaning of these tags: <span class="spanRed">&lt;b&gt;</span> and <span class="spanRed">&lt;i&gt;</span> defines bold and italic text, but <span class="spanRed">&lt;strong&gt;</span> and <span class="spanRed">&lt;em&gt;</span> means that the text is "important".
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Formatting Elements</h3> </div>
                   <div class="panel-body">  
                     <p>
 
@@ -16,7 +96,6 @@
                 </div>
             </div> 
 
-            
         </div>       
         <!-- /.row -->
 
