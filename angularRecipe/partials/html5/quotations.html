@@ -21,7 +21,7 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>HTML <span class="spanRed">&lt;q&gt;</span> for Short Quotations</h3> </div>
                   <div class="panel-body">  
-                    <p>The HTML <span class="spanRed">&lt;q&gt;</span> element defines a short quotation. Browsers usually insert quotation marks around the <q> element.
+                    <p>The HTML <span class="spanRed">&lt;q&gt;</span> element defines a short quotation. Browsers usually insert quotation marks around the <span class="spanRed">&lt;q&gt;</span> element.
                         <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
 
                         <div class="code-body">
@@ -32,6 +32,174 @@
                   </div>
                 </div>
             </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <span class="spanRed">&lt;blockquote&gt;</span> for Long Quotations</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;blockquote&gt;</span> element defines a quoted section. Browsers usually indent <span class="spanRed">&lt;blockquote&gt;</span> elements.
+
+                        <p>Here is a quote from WWF's website:</p>
+                        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                        For 50 years, WWF has been protecting the future of nature.
+                        The world's leading conservation organization,
+                        WWF works in 100 countries and is supported by
+                        1.2 million members in the United States and
+                        close to 5 million globally.
+                        </blockquote>
+
+                       
+
+                        <div class="code-body">
+                            &lt;p&gt;Here is a quote from WWF's website:&lt;/p&gt;
+                            <br><span class="spanYellow">&lt;blockquote</span> cite="http://www.worldwildlife.org/who/index.html">
+                            <br>For 50 years, WWF has been protecting the future of nature.
+                            <br>The world's leading conservation organization,
+                            <br>WWF works in 100 countries and is supported by
+                            <br>1.2 million members in the United States and
+                            <br>close to 5 million globally.
+                            <br><span class="spanYellow">&lt;/blockquote&gt;/span>
+                           
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <span class="spanRed">&lt;abbr&gt;</span> for Abbreviations</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;abbr&gt;</span> element defines an abbreviation or an acronym.
+                        <br>Marking abbreviations can give useful information to browsers, translation systems and search-engines.
+
+                        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+                        <div class="code-body">
+                            &lt;p&gt;The <span class="spanYellow">&lt;abbr</span> title="World Health Organization"<span class="spanYellow">&gt;</span>WHO<span class="spanYellow">&lt;/abbr&gt;</span>> was founded in 1948.&lt;/p&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <span class="spanRed">&lt;address&gt;</span> for Contact Information</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;address&gt;</span> element defines contact information (author/owner) of a document or article.
+                        <br>The <span class="spanRed">&lt;address&gt;</span> element is usually displayed in italic. Most browsers will add a line break before and after the element.
+
+                        <address style="font-style: italic;">
+                        Written by Jon Doe.<br> 
+                        Visit us at:<br>
+                        Example.com<br>
+                        Box 564, Disneyland<br>
+                        USA
+                        </address>                        
+
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;address&gt;</span>
+                            <br>Written by Jon Doe.&lt;br&gt;
+                            <br>Visit us at:&lt;br&gt;
+                            <br>Example.com&lt;br&gt;
+                            <br>Box 564, Disneyland&lt;br&gt;
+                            <br>USA
+                            <br><span class="spanYellow">&lt;/address&gt;</span>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <span class="spanRed">&lt;cite&gt;</span> for Work Title</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;cite&gt;</span> element defines the title of a work.
+                        <br>Browsers usually display <span class="spanRed">&lt;cite&gt;</span> elements in italic.
+
+                        <p><cite style="font-style: italic;">The Scream</cite> by Edward Munch. Painted in 1893.</p>                       
+
+                        <div class="code-body">
+                            &lt;p&gt;<span class="spanYellow">&lt;cite&gt;</span>The Scream<span class="spanYellow">&lt;/cite&gt;</span> by Edward Munch. Painted in 1893.&lt;/p&gt; 
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <span class="spanRed">&lt;bdo&gt;</span> for Bi-Directional Override</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;bdo&gt;</span> element defines bi-directional override.
+                        <br>The <span class="spanRed">&lt;bdo&gt;</span> element is used to override the current text direction.
+
+                        <br>
+                        <bdo dir="rtl">This text will be written from right to left</bdo>                   
+
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;bdo dir="rtl"&gt;</span>This text will be written from right to left<span class="spanYellow">&lt;/bdo&gt;</span>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Quotation and Citation Elements</h3> </div>
+                  <div class="panel-body">  
+                    
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th style="width:20%">Tag</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td><a href="/tags/tag_abbr.asp">&lt;abbr&gt;</a></td>
+                        <td>Defines an abbreviation or acronym</td>
+                        </tr>
+                        <tr>
+                        <td><a href="/tags/tag_address.asp">&lt;address&gt;</a></td>
+                        <td>Defines contact information for the author/owner of a document</td>
+                        </tr>
+                        <tr>
+                        <td><a href="/tags/tag_bdo.asp">&lt;bdo&gt;</a></td>
+                        <td>Defines the text direction</td>
+                        </tr>
+                        <tr>
+                        <td><a href="/tags/tag_blockquote.asp">&lt;blockquote&gt;</a></td>
+                        <td> Defines a section that is quoted from another source</td>
+                        </tr>
+                            <tr>
+                        <td><a href="/tags/tag_cite.asp">&lt;cite&gt;</a></td>
+                        <td>Defines the title of a work</td>
+                            </tr>
+                        <tr>
+                        <td><a href="/tags/tag_q.asp">&lt;q&gt;</a></td>
+                        <td>Defines a short inline quotation</td>
+                        </tr>
+                        </tbody></table>
+                  
+                  </div>
+                </div>
+            </div>
+
+
+
 
             
         </div>       

@@ -46,14 +46,14 @@
 		},	
 		{ 
 			"title": "Formatting",
-			"sortContent":  "",
+			"sortContent":  "HTML also defines special elements, for defining text with a special meaning.<br>HTML uses elements like <span class='spanRed'>&lt;b&gt;</span> and <span class='spanRed'>&lt;i&gt;</span> for formatting output, like <b>bold</b> or <i>italic</i> text.",
 			"link": "#html5/formatting"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Quotations",
-			"sortContent":  "",
+			"sortContent":  "The HTML <span class='spanRed'>&lt;q&gt;</span> element defines a short quotation. Browsers usually insert quotation marks around the <span class='spanRed'>&lt;q&gt;</span> element.<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>",
 			"link": "#html5/quotations"
 		},	
 		{ 
