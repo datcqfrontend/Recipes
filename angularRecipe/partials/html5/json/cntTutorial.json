@@ -58,12 +58,12 @@
 		},	
 		{ 
 			"title": "Computer Code",
-			"sortContent":  "",
+			"sortContent":  "Normally, HTML uses variable letter size, and variable letter spacing.<br>This is not wanted when displaying examples of computer code.<br>The <span class='spanRed'>&lt;kbd&gt;</span>, <span class='spanRed'>&lt;samp&gt;</span>, and <span class='spanRed'>&lt;code&gt;</span> elements all support fixed letter size and spacing.",
 			"link": "#html5/computerCode"
 		},	
 		{ 
 			"title": "Comments",
-			"sortContent":  "",
+			"sortContent":  "You can add comments to your HTML source by using the following syntax:<div class='code-body'><span class='spanYellow'>&lt;!--</span> Write your comments here <span class='spanYellow'>--&gt;</span></div>",
 			"link": "#html5/comments"
 		},	
 		{ 	"title": "Clearfix"	},

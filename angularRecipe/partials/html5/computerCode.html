@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5ComputerCode" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,166 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Computer Code Formatting</h3> </div>
                   <div class="panel-body">  
                     <p>
-
+                        Normally, HTML uses variable letter size, and variable letter spacing.
+                        <br>This is not wanted when displaying examples of computer code.
+                        <br>The <span class="spanRed">&lt;kbd&gt;</span>, <span class="spanRed">&lt;samp&gt;</span>, and <span class="spanRed">&lt;code&gt;</span> elements all support fixed letter size and spacing.
 
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <kbd>Keyboard</kbd> Formatting</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;kbd&gt;</span> element defines keyboard input.
+                            <p>To open a file, select:</p>
+                            <p><kbd>File | Open...</kbd></p>
+
+                        <div class="code-body">
+                            &lt;p&gt;To open a file, select:&lt;/p&gt;
+                            <br>&lt;p&gt;<span class="spanYellow">&lt;kbd&gt;</span>File | Open...<span class="spanYellow">&lt;/kbd&gt;</span>&lt;/p&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <samp>Sample</samp> Formatting</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;samp&gt;</span> element defines a computer output.
+                        <br>
+                        <samp>
+                        demo.example.com login: Apr 12 09:10:17
+                        <br>Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189
+                        </samp>
+
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;samp&gt;</span>
+                            <br>demo.example.com login: Apr 12 09:10:17
+                            <br>Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189
+                            <br><span class="spanYellow">&lt;/samp&gt;</span>
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <code>Code</code> Formatting</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;code&gt;</span> element defines programming code:
+                        <br>
+                        <code>
+                            var person = { firstName:"John", lastName:"Doe", age:50, eyeColor:"blue" }
+                        </code>
+
+                         <div class="code-body">
+                            <span class="spanYellow">&lt;code&gt;</span>
+                            <br>var person = { firstName:"John", lastName:"Doe", age:50, eyeColor:"blue" }
+                            <br><span class="spanYellow">&lt;/code&gt;</span>
+                        </div>
+                        <br>The <span class="spanRed">&lt;code&gt;</span> element does not preserve extra <b>whitespace</b>whitespace and <b>line-breaks</b>line-breaks. To fix this, you must wrap the code in a  <span class="spanRed">&lt;pre&gt;</span> element:
+
+                        <p>Coding Example:</p>
+                        <code>
+                        <pre>
+                        var person = {
+                            firstName:"John",
+                            lastName:"Doe",
+                            age:50,
+                            eyeColor:"blue"
+                        }
+                        </pre>
+                        </code>
+
+                        <div class="code-body">
+                            &lt;p&gt;Coding Example:&lt;/p&gt;
+                            <br><span class="spanYellow">&lt;code&gt;</span>
+                            <br><span class="spanYellow">&lt;pre&gt;</span>
+                            <br>var person = {
+                            <br>&nbsp;&nbsp;&nbsp;firstName:"John",
+                            <br>&nbsp;&nbsp;&nbsp;lastName:"Doe",
+                            <br>&nbsp;&nbsp;&nbsp;age:50,
+                            <br>&nbsp;&nbsp;&nbsp;eyeColor:"blue"
+                            <br>}
+                            <br><span class="spanYellow">&lt;/pre&gt;</span>
+                            <br><span class="spanYellow">&lt;/code&gt;</span>
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML <var>Variable</var> Formatting</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML <span class="spanRed">&lt;var&gt;</span> element defines a mathematical variable:
+
+                            <p>Einstein wrote:</p>
+                            <p><var>E = m c<sup>2</sup></var></p>
+
+                            <div class="code-body">
+                                &lt;p&gt;Einstein wrote:&lt;/p&gt;
+                                <br>&lt;p&gt;<span class="spanYellow">&lt;var&gt;</span>E = m c&lt;sup&gt;2&lt;/sup&gt;<span class="spanYellow">&lt;/var&gt;</span>&lt;/p&gt;
+                            </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Computer Code Elements</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <table class="table table-striped">
+                    <tbody><tr>
+                    <th style="width:20%">Tag</th>
+                    <th>Description</th>
+                    </tr>
+                    <tr>
+                    <td><a href="/tags/tag_code.asp">&lt;code&gt;</a></td>
+                    <td>Defines programming code</td>
+                    </tr>
+                    <tr>
+                    <td><a href="/tags/tag_kbd.asp">&lt;kbd&gt;</a></td>
+                    <td>Defines keyboard input&nbsp;</td>
+                    </tr>
+                    <tr>
+                    <td><a href="/tags/tag_samp.asp">&lt;samp&gt;</a></td>
+                    <td>Defines computer output</td>
+                    </tr>
+                    <tr>
+                    <td><a href="/tags/tag_var.asp">&lt;var&gt;</a></td>
+                    <td>Defines a mathematical variable</td>
+                    </tr>
+                    <tr>
+                    <td><a href="/tags/tag_pre.asp">&lt;pre&gt;</a></td>
+                    <td>Defines preformatted text</td>
+                    </tr>
+                    </tbody></table>
+
+                    
+                  </div>
+                </div>
+            </div> 
         </div>       
         <!-- /.row -->
 
