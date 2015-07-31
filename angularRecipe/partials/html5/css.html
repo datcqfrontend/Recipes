@@ -6,10 +6,281 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>Styling HTML with CSS</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        CSS stands for Cascading Style Sheets
+                        <br>Styling can be added to HTML elements in 3 ways:
+                        <ul>
+                            <li>Inline - using a style attribute in HTML elements</li>
+                            <li>Internal - using a <span class="spanRed">&lt;style&gt;</span> element in the HTML <span class="spanRed">&lt;head&gt;</span> section</li>
+                            <li>External - using one or more external CSS files</li>
+                        </ul>
+                        The most common way to add styling, is to keep the styles in separate CSS files. But, in this tutorial, we use internal styling, because it is easier to demonstrate, and easier for you to try it yourself.
 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS Syntax</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        CSS styling has the following syntax:
+                        <div class="code-body">
+                            element { property:value; property:value }
+                        </div>
+                        <br>The element is an HTML element name. The property is a CSS property. The value is a CSS value.
+                        <br>Multiple styles are separated with semicolon.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Inline Styling (Inline CSS)</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Inline styling is useful for applying a unique style to a single HTML element:
+                        <br>Inline styling uses the style attribute.
+                        <br>This inline styling changes the text color of a single heading:
+                        <div class="code-body">
+                            &lt;h1 style="color:blue"&gt;This is a Blue Heading&lt;/h1&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Internal Styling (Internal CSS)</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An internal style sheet can be used to define a common style for all HTML elements on a page.
+                        <br>Internal styling is defined in the <span class="spanRed">&lt;head&gt;</span> section of an HTML page, using a <span class="spanRed">&lt;style&gt;</span> element:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;head&gt;
+                            <br><span class="spanYellow">&lt;style&gt;</span>
+                            <br>body {background-color:lightgrey}
+                            <br>h1   {color:blue}
+                            <br>p    {color:green}
+                            <br><span class="spanYellow">&lt;/style&gt;</span>
+                            <br>&lt;/head&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;h1&gt;This is a heading&lt;/h1&gt;
+                            <br>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>External Styling (External CSS)</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        External style sheet are ideal when the style is applied to many pages.
+                        <br>With external style sheets, you can change the look of an entire web site by changing one file.
+                        <br>External styles are defined in an external CSS file, and then linked to in the <span class="spanRed">&lt;head&gt;</span> section of an HTML page:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;head&gt;
+                            <br>&nbsp;&nbsp;&nbsp; &lt;link rel="stylesheet" href="styles.css"&gt;                          
+                            <br>&lt;/head&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;h1&gt;This is a heading&lt;/h1&gt;
+                            <br>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS Fonts</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS <span class="spanRed">color</span> property defines the text color to be used for the HTML element.
+                        <br>The CSS <span class="spanRed">font-family</span> property defines the font to be used for the HTML element.
+                        <br>The CSS <span class="spanRed">font-size</span> property defines the text size to be used for the HTML element.
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;head&gt;
+                            <br>&lt;style&gt;
+                            <br>body {background-color:lightgrey}
+                            <br><span class="spanYellow">h1   {color:blue; font-family:verdana; font-size:300%;}
+                            <br>p    {color:red; font-family:courier; font-size:160%;}</span>
+                            <br>&lt;/style&gt;
+                            <br>&lt;/head&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;h1&gt;This is a heading&lt;/h1&gt;
+                            <br>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The CSS Box Model</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Every HTML element has a box around it, even if you cannot see it.
+                        <br>The CSS border property defines a visible border around an HTML element:
+                        <div class="code-body">
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">border:1px solid black;</span>
+                            <br>}    
+                        </div>
+                        
+                        <br>The CSS padding property defines a padding (space) inside the border:
+                        <div class="code-body">
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp;    border:1px solid black;
+                            <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">padding:10px;</span>
+                            <br>}
+                        </div>
+
+                        <br>The CSS margin property defines a margin (space) outside the border:
+                        <div class="code-body">
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp;     border:1px solid black;
+                            <br>&nbsp;&nbsp;&nbsp;     padding:10px;
+                            <br>&nbsp;&nbsp;&nbsp;    <span class="spanYellow">margin:30px;</span>
+                            <br>}
+                        </div>
+                        <br><b>Note: </b> The CSS examples above use px to define sizes in pixels.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The id Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        All the examples above use CSS to style HTML elements in a general way.
+                        <br>To define a special style for one special element, first add an id attribute to the element:
+                        <div class="code-body">
+                            &lt;p <span class="spanYellow">id="p01"</span>&gt;I am different&lt;/p&gt;
+                        </div>
+                        <br>then define a different style for the (identified) element:
+                        <div class="code-body">
+                            p<span class="spanYellow">#p01</span> { color:blue; }
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The class Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To define a style for a special type (class) of elements, add a class attribute to the element:
+                        <div class="code-body">
+                            &lt;p <span class="spanYellow">class="error"</span>&gt;I am different&lt;/p&gt;
+                        </div>
+                        <br>Now you can define a different style for all elements with the specified class:
+                        <div class="code-body">
+                            p<span class="spanYellow">.error</span> { color:red; }
+                        </div>
+                        <br>Use id to address single elements. Use class to address groups of elements.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Deprecated Tags and Attributes in HTML5</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In older HTML versions, several tags and attributes were used to style documents.
+                        <br>These tags and attributes are not supported in HTML5!
+                        <br>Avoid using the <span class="spanRed">&lt;font&gt;, &lt;center&gt;, and &lt;strike&gt;</span> elements.
+                        <br>Avoid using the color and bgcolor attributes.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Chapter Summary</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <ul>
+                            <li>Use the HTML <span class="spanRed">style</span> attribute for inline styling</li>
+                            <li>Use the HTML <span class="spanRed">&lt;style&gt;</span> element to define internal CSS</li>
+                            <li>Use the HTML <span class="spanRed">&lt;link&gt;</span> element to refer to an external CSS 
+                            file</li>
+                            <li>Use the HTML <span class="spanRed">&lt;head&gt;</span> element to store &lt;style&gt; and &lt;link&gt; elements</li>
+                            <li>Use the CSS <span class="spanRed">color</span> property for text colors</li>
+                            <li>Use the CSS <span class="spanRed">font-family</span> property for text fonts</li>
+                            <li>Use the CSS <span class="spanRed">font-size</span> property for text sizes</li>
+                            <li>Use the CSS <span class="spanRed">border</span> property for visible element borders</li>
+                            <li>Use the CSS <span class="spanRed">padding</span> property for space inside the border</li>
+                            <li>Use the CSS <span class="spanRed">margin</span> property for space outside the border</li>
+                        </ul>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Style Tags</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th>Tag</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td><a href="/tags/tag_style.asp">&lt;style&gt;</a></td>
+                        <td>Defines style information for a document</td>
+                        </tr>
+                        <tr>
+                        <td><a href="/tags/tag_link.asp">&lt;link&gt;</a></td>
+                        <td>Defines a link between a document and an external resource </td>
+                        </tr>
+                        </tbody></table>
 
                     </p>
                   </div>

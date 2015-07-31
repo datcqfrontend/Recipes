@@ -70,17 +70,17 @@
 
 		{ 
 			"title": "CSS",
-			"sortContent":  "",
+			"sortContent":  "CSS stands for Cascading Style Sheets<br>Styling can be added to HTML elements in 3 ways:<ul><li>Inline - using a style attribute in HTML elements</li><li>Internal - using a <span class='spanRed'>&lt;style&gt;</span> element in the HTML <span class='spanRed'>&lt;head&gt;</span> section</li><li>External - using one or more external CSS files</li></ul>",
 			"link": "#html5/css"
 		},	
 		{ 
 			"title": "Links",
-			"sortContent":  "",
+			"sortContent":  "HTML links are hyperlinks.<br>A hyperlink is a text or an image you can click on, and jump to another document.<div class='code-body'>&lt;a <span class='spanYellow'>href='<i>url</i> '</span>&gt;<i>link text</i>&lt;/a&gt;</div>",
 			"link": "#html5/links"
 		},	
 		{ 
 			"title": "Images",
-			"sortContent":  "",
+			"sortContent":  "In HTML, images are defined with the <span class='spanRed'>&lt;img&gt;</span> tag.<br>The <span class='spanRed'>&lt;img&gt;</span> tag is empty, it contains attributes only, and does not have a closing tag.<br>The src attribute specifies the URL (web address) of the image:<div class='code-body'>&lt;img <span class='spanYellow'>src='<i>url</i>' alt='<i>some_text</i>'</span> style='width:128px;height:128px;'&gt;</div>",
 			"link": "#html5/images"
 		},	
 		{ 	"title": "Clearfix"	},

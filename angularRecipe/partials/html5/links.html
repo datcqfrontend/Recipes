@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Link" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,10 +6,218 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Links</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Links are found in nearly all web pages. Links allow users to click their way from page to page.
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Links - Hyperlinks</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML links are hyperlinks.
+                        <br>A hyperlink is a text or an image you can click on, and jump to another document.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Links - Syntax</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In HTML, links are defined with the &lt;a&gt; tag:
+                        <div class="code-body">
+                            &lt;a <span class="spanYellow">href="<i>url</i>"</span>&gt;<i>link text</i>&lt;/a&gt;
+                        </div>
+                        <br>The href attribute specifies the destination address (http://www.w3schools.com/html/)
+                        <br>The link text is the visible part (Visit our HTML tutorial).
+                        <br>Clicking on the link text, will send you to the specified address.
+                        <br>The link text does not have to be text. It can be an HTML image or any other HTML element.
+                        <br>Without a trailing slash on subfolder addresses, you might generate two requests to the server. Many servers will automatically add a trailing slash to the address, and then create a new request.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Local Links</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The example above used an absolute URL (A full web address).
+                        <br>A local link (link to the same web site) is specified with a relative URL (without http://www....).
+
+                        <div class="code-body">
+                            &lt;a <span class="spanYellow">href="html_images.asp"</span>&gt;HTML Images&lt;/a&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Links - Colors</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        When you move the mouse over a link, two things will normally happen:
+                        <ul>
+                            <li>The mouse arrow will turn into a little hand</li>
+                            <li>The color of the link element will change</li>
+                        </ul>
+                        By default, a link will appear like this (in all browsers):
+                        <ul>
+                            <li>An unvisited link is underlined and blue</li>
+                            <li>A visited link is underlined and purple</li>
+                            <li>An active link is underlined and red</li>
+                        </ul>
+                        You can change the default colors, by using styles:
+                         <div class="code-body">
+                            &lt;style&gt;
+                            <br>a:link    {color:green; background-color:transparent; text-decoration:none}
+                            <br>a:visited {color:pink; background-color:transparent; text-decoration:none}
+                            <br>a:hover   {color:red; background-color:transparent; text-decoration:underline}
+                            <br>a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+                            <br>&lt;/style&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Links - The target Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The target attribute specifies where to open the linked document.
+                        <br>This example will open the linked document in a new browser window or in a new tab:
+                         <div class="code-body">
+                            &lt;a <span class="spanYellow">href="http://www.w3schools.com/" target="_blank"</span>&gt;Visit W3Schools!&lt;/a&gt;
+                        </div>
+                        
+                        <br>
+                        <table class="table table-striped"> 
+                          <tbody><tr>
+                            <th style="width:20%">Target Value</th>
+                            <th>Description</th>
+                          </tr>  
+                          <tr>
+                            <td>_blank</td>
+                            <td>Opens the linked document in a new window or tab</td>
+                          </tr>
+                          <tr>
+                            <td>_self</td>
+                            <td>Opens the linked document in the same frame as it was clicked (this is default)</td>
+                          </tr>
+                            <tr>
+                            <td>_parent</td>
+                            <td>Opens the linked document in the parent frame</td>
+                          </tr>
+                            <tr>
+                            <td>_top</td>
+                            <td>Opens the linked document in the full body of the window</td>
+                          </tr>
+                          <tr>
+                            <td><i>framename</i></td>
+                            <td>Opens the linked document in a named frame</td>
+                          </tr>
+                          </tbody></table>
+                         <br>If your webpage is locked in a frame, you can use target="_top" to break out of the frame:
+
+                         <div class="code-body">
+                            &lt;a <span class="spanYellow">href="http://www.w3schools.com/" target="_top"</span>&gt;HTML5 tutorial!&lt;/a&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Links - Image as Link</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        It is common to use images as links:
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;a href="default.asp"&gt;</span>
+                            <br>    &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0"&gt;
+                            <br><span class="spanYellow">&lt;/a&gt;</span>
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Links - Create a Bookmark</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML bookmarks are used to <span class="spanRed">allow readers to jump to specific parts of a Web page</span>.
+                        <br>Bookmarks are practical if your website has long pages.
+                        <br>To make a bookmark, you must first create the bookmark, and then add a link to it.
+                        <br>When the link is clicked, the page will scroll to the location with the bookmark.
+                        <br>
+                        
+                        <br>First, create a bookmark with the id attribute:
+                        <div class="code-body">
+                            &lt;h2 <span class="spanYellow">id="tips"</span>&gt;Useful Tips Section&lt;/h2&gt;
+                        </div>
+
+                        <br>Then, add a link to the bookmark ("Useful Tips Section"), from within the same page:
+                        <div class="code-body">
+                           &lt;a <span class="spanYellow">href="#tips"</span>&gt;Visit the Useful Tips Section&lt;/a&gt;
+                        </div>
+
+                        <br>Or, add a link to the bookmark ("Useful Tips Section"), from another page:
+                        <div class="code-body">
+                           &lt;a <span class="spanYellow">href="html_tips.htm#tips"</span>&gt;Visit the Useful Tips Section&lt;/a&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Chapter Summary</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <ul>
+                            <li>Use the HTML <span class="spanRed">&lt;a&gt;</span> element to define a link</li>
+                            <li>Use the HTML <span class="spanRed">href</span> attribute to define the link address</li>
+                            <li>Use the HTML <span class="spanRed">target</span> attribute to define where to open the linked document</li>
+                            <li>Use the HTML <span class="spanRed">&lt;img&gt;</span> element (inside &lt;a&gt;) to use an image as a link</li>
+                            <li>Use the HTML <span class="spanRed">id</span> attribute (id="<em>value</em>") to define bookmarks in a page</li>
+                            <li>Use the HTML <span class="spanRed">href </span>attribute (href="#<em>value</em>") to 
+                            link to the bookmark</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Link Tags</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th style="width:30%">Tag</th>
+                        <th>Description</th></tr><tr>
+                        <td><a href="/tags/tag_a.asp">&lt;a&gt;</a></td><td>Defines a hyperlink</td></tr></tbody></table>
 
                     </p>
                   </div>
