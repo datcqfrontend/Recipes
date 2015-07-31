@@ -80,7 +80,7 @@
 		},	
 		{ 
 			"title": "Images",
-			"sortContent":  "In HTML, images are defined with the <span class='spanRed'>&lt;img&gt;</span> tag.<br>The <span class='spanRed'>&lt;img&gt;</span> tag is empty, it contains attributes only, and does not have a closing tag.<br>The src attribute specifies the URL (web address) of the image:<div class='code-body'>&lt;img <span class='spanYellow'>src='<i>url</i>' alt='<i>some_text</i>'</span> style='width:128px;height:128px;'&gt;</div>",
+			"sortContent":  "In HTML, images are defined with the <span class='spanRed'>&lt;img&gt;</span> tag.<br>The <span class='spanRed'>&lt;img&gt;</span> tag is empty, it contains attributes only, and does not have a closing tag.<br>The src attribute specifies the URL (web address) of the image:<div class='code-body'>&lt;img <span class='spanYellow'>src='<i>url</i> ' alt='<i>some_text</i> '</span> &gt;</div>",
 			"link": "#html5/images"
 		},	
 		{ 	"title": "Clearfix"	},
