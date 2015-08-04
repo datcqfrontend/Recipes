@@ -87,24 +87,24 @@
 
 		{ 
 			"title": "Tables",
-			"sortContent":  "",
+			"sortContent":  "<table class='table table-striped' style='width:100%'><tbody><tr><th>Number</th><th>First Name</th><th>Last Name</th><th>Points</th></tr><tr><td>1</td><td>Eve</td><td>Jackson</td><td>94</td></tr></tbody></table>",
 			"link": "#html5/tables"
 		},	
 		{ 
 			"title": "Lists",
-			"sortContent":  "",
+			"sortContent":  "Unordered lists and ordered lists are commonly used in HTML:<br><div class='row'><div class='col-md-6'><h3>Unordered List</h3><ul><li>The first item</li><li>The second item</li><li>The third item</li><li>The fourth item</li></ul></div><div class='col-md-6'><h3>Ordered List</h3><ol><li>The first item</li><li>The second item</li><li>The third item</li><li>The fourth item</li></ol></div></div>",
 			"link": "#html5/lists"
 		},	
 		{ 
 			"title": "Blocks",
-			"sortContent":  "",
+			"sortContent":  "Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.",
 			"link": "#html5/blocks"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Classes",
-			"sortContent":  "",
+			"sortContent":  "The HTML class attribute makes it possible to define equal styles for 'equal' <span class='spanRed'>&lt;div&gt;</span> elements.<br> The HTML class attribute also makes it possible to define equal styles for 'equal' <span class='spanRed'>&lt;span&gt;</span> elements",
 			"link": "#html5/classes"
 		},	
 		{ 

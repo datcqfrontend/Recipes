@@ -6,18 +6,31 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Styling HTML with CSS</h3> </div>
+                  <div class="panel-heading"><h3>Classing Block Elements</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        CSS stands for Cascading Style Sheets
-                        <br>Styling can be added to HTML elements in 3 ways:
-                        <ul>
-                            <li>Inline - using a style attribute in HTML elements</li>
-                            <li>Internal - using a <span class="spanRed">&lt;style&gt;</span> element in the HTML <span class="spanRed">&lt;head&gt;</span> section</li>
-                            <li>External - using one or more external CSS files</li>
-                        </ul>
-                        The most common way to add styling, is to keep the styles in separate CSS files. But, in this tutorial, we use internal styling, because it is easier to demonstrate, and easier for you to try it yourself.
+                        The HTML class attribute makes it possible to define equal styles for "equal" <span class="spanRed">&lt;div&gt;</span> elements:
 
+                        <div class="cities" style="background-color:black;color:white;margin:20px;padding:20px;">
+                        <h2>London</h2>
+                        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                        </div>
+
+                        <div class="code-body">
+                          &lt;style&gt;
+                          <br><span class="spanYellow">div.cities</span>  {
+                          <br>&nbsp;&nbsp;&nbsp;      background-color:black;
+                          <br>&nbsp;&nbsp;&nbsp;      color:white;
+                          <br>&nbsp;&nbsp;&nbsp;      margin:20px;
+                          <br>&nbsp;&nbsp;&nbsp;      padding:20px;
+                          <br>}
+                          <br>&lt;/style&gt;
+                          <br>
+                          <br>&lt;div <span class="spanYellow">class="cities"</span>&gt;
+                          <br>&lt;h2&gt;London&lt;/h2&gt;
+                          <br>&lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                          <br>&lt;/div&gt;
+                        </div>
                     </p>
                   </div>
                 </div>
@@ -25,136 +38,29 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>Classing Inline Elements</h3> </div>
                   <div class="panel-body">  
                     <p>
+                      The HTML class attribute also makes it possible to define equal styles for "equal" <span class="spanRed">&lt;span&gt;</span> elements:
 
+                      <h1>My <span class="note" style="font-size:120%;color:red;">Important</span> Heading</h1>
+                      <p>This is some <span class="note" style="font-size:120%;color:red;">important</span> text.</p>
 
+                      <div class="code-body">
+                        &lt;style&gt;
+                          <br><span class="spanYellow">span.note</span>  { font-size:120%;color:red;}                          
+                          <br>&lt;/style&gt;
+                          <br>                          
+                          <br>&lt;h1&gt;My &lt;span <span class="spanYellow">class="note"</span>&gt;Important&lt;/span&gt; Heading&lt;/h1&gt;
+                          <br>&lt;p&gt;This is some &lt;span <span class="spanYellow">class="note"</span>&gt;important&lt;/span&gt; text.&lt;/p&gt;
+                          
+                      </div>
                     </p>
                   </div>
                 </div>
             </div> 
 
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
-                  <div class="panel-body">  
-                    <p>
-
-
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
+            
             
         </div>       
         <!-- /.row -->
