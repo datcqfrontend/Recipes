@@ -109,29 +109,29 @@
 		},	
 		{ 
 			"title": "Layout",
-			"sortContent":  "",
+			"sortContent":  "Websites often display content in multiple columns (like a magazine or newspaper). The <span class='spanRed'>&lt;div&gt;</span> element is often used as a layout tool, because it can easily be positioned with CSS.",
 			"link": "#html5/layout"
 		},	
 		{ 
 			"title": "Responsive",
-			"sortContent":  "",
+			"sortContent":  "What is Responsive Web Design? <ul><li>RWD stands for Responsive Web Design</li><li>RWD can deliver web pages in variable sizes</li><li>RWD is a must for tablets and mobile devices</li></ul>",
 			"link": "#html5/responsive"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Iframes",
-			"sortContent":  "",
+			"sortContent":  "An iframe is used to display a web page within a web page.<br>The syntax for adding an iframe is:<div class='code-body'>&lt;iframe src='<i>URL</i>'&gt;&lt;/iframe&gt;</div><br>The src attribute specifies the URL (web address) of the iframe page. ",
 			"link": "#html5/iframes"
 		},	
 		{ 
 			"title": "Color Names",
-			"sortContent":  "",
+			"sortContent":  "All modern browsers support the following 140 color names (click on a color name, or a hex value, to view the color as the background-color along with different text colors)",
 			"link": "#html5/colorNames"
 		},	
 		{ 
 			"title": "Color Values",
-			"sortContent":  "",
+			"sortContent":  "Colors in HTML can be specified by the following methods:<ul><li>Hexadecimal colors</li><li>RGB colors</li><li>Color names</li></ul>",
 			"link": "#html5/colorValues"
 		},	
 		{ 	"title": "Clearfix"	},

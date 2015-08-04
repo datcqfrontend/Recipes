@@ -6,11 +6,199 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Layouts</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Websites often display content in multiple columns (like a magazine or newspaper).
 
+                        <div class="row" style="padding:15px;">
+                            <div class="col-md-12" style="background-color:black;color:white;padding:15px;">
+                                <h1 style="background-color:black;color:white;text-align:center">City Gallery</h1>
+                            </div>
 
+                            <div class="col-md-3" style="background-color:#eeeeee;">
+                            London<br>
+                            Paris<br>
+                             Tokyo
+                            </div>
+                            <div class="col-md-9" style="">
+                            <h1>London</h1>
+                            <p>
+                            London is the capital city of England. It is the most populous city in the United Kingdom,
+                            with a metropolitan area of over 13 million inhabitants.
+                            </p>
+                            <p>
+                            Standing on the River Thames, London has been a major settlement for two millennia,
+                            its history going back to its founding by the Romans, who named it Londinium.
+                            </p>
+                            </div>
+
+                            <div class="col-md-12" style="background-color:black;color:white;clear:both;text-align:center;padding:5px;">
+                            Copyright © W3Schools.com
+                            </div>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Layout Using &lt;div&gt; Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;div&gt;</span> element is often used as a layout tool, because it can easily be positioned with CSS.
+                        This example uses 4 <span class="spanRed">&lt;div&gt;</span> elements to create a multiple column layout:
+                        <div class="code-body">
+                            &lt;div id="header"&gt;
+                            <br>&lt;h1&gt;City Gallery&lt;/h1&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;div id="nav"&gt;
+                            <br>London&lt;br&gt;
+                            <br>Paris&lt;br&gt;
+                            <br>Tokyo&lt;br&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;div id="section"&gt;
+                            <br>&lt;h1&gt;London&lt;/h1&gt;
+                            <br>&lt;p&gt;
+                            <br>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.
+                            <br>&lt;/p&gt;
+                            <br>&lt;p&gt;
+                            <br>Standing on the River Thames, London has been a major settlement for two millennia,
+                            its history going back to its founding by the Romans, who named it Londinium.
+                            <br>&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;div id="footer"&gt;
+                            <br>Copyright © W3Schools.com
+                            <br>&lt;/div&gt;
+                        </div>
+                        <br>With CSS style:
+                        <div class="code-body">
+                            &lt;style&gt;
+                            <br>#header {
+                            <br>&nbsp;&nbsp;&nbsp;    background-color:black;
+                            <br>&nbsp;&nbsp;&nbsp;    color:white;
+                            <br>&nbsp;&nbsp;&nbsp;    text-align:center;
+                            <br>&nbsp;&nbsp;&nbsp;    padding:5px;
+                            <br>}
+                            <br>#nav {
+                            <br>&nbsp;&nbsp;&nbsp;    line-height:30px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color:#eeeeee;
+                            <br>&nbsp;&nbsp;&nbsp;    height:300px;
+                            <br>&nbsp;&nbsp;&nbsp;    width:100px;
+                            <br>&nbsp;&nbsp;&nbsp;    float:left;
+                            <br>&nbsp;&nbsp;&nbsp;    padding:5px; 
+                            <br>}
+                            <br>#section {
+                            <br>&nbsp;&nbsp;&nbsp;    width:350px;
+                            <br>&nbsp;&nbsp;&nbsp;    float:left;
+                            <br>&nbsp;&nbsp;&nbsp;    padding:10px; 
+                            <br>}
+                            <br>#footer {
+                            <br>&nbsp;&nbsp;&nbsp;    background-color:black;
+                            <br>&nbsp;&nbsp;&nbsp;   color:white;
+                            <br>&nbsp;&nbsp;&nbsp;    clear:both;
+                            <br>&nbsp;&nbsp;&nbsp;    text-align:center;
+                            <br>&nbsp;&nbsp;&nbsp;    padding:5px; 
+                            <br>}
+                            <br>&lt;/style&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Website Layout Using HTML5</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 offers new semantic elements that define different parts of a web page:
+                        <table class="table table-bordered">
+                        <tbody><tr>
+                        <td style="vertical-align:top">
+                        <img alt="HTML5 Semantic Elements" src="images/img_sem_elements.gif">
+                        </td>
+                        <td>
+                            <table class="table table-bordered">
+                            <tbody><tr>
+                              <td>header</td>
+                              <td>Defines a header for a document or a section</td>
+                            </tr>
+                            <tr>
+                              <td>nav</td>
+                              <td>Defines a container for navigation links</td>
+                            </tr>
+                            <tr>
+                              <td>section</td>
+                              <td>Defines a section in a document</td>
+                            </tr>
+                            <tr>
+                              <td>article</td>
+                              <td>Defines an independent self-contained article </td>
+                            </tr>
+                            <tr>
+                              <td>aside</td>
+                              <td>Defines content aside from the content (like a sidebar)</td>
+                            </tr>
+                            <tr>
+                              <td>footer</td>
+                              <td>Defines a footer for a document or a section</td>
+                            </tr>
+                            <tr>
+                              <td>details</td>
+                              <td>Defines additional details</td>
+                            </tr>
+                            <tr>
+                              <td>summary</td>
+                              <td>Defines a heading for the details element</td>
+                            </tr>
+                            </tbody></table>
+                        </td>
+                        </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Layout Using Tables</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;table&gt;</span> element was not designed to be a layout tool.
+                        <br>The purpose of the <span class="spanRed">&lt;table&gt;</span> element is to display tabular data.
+                        <br>Layout can be achieved using the <span class="spanRed">&lt;table&gt;</span> element, because table elements can be styled with CSS:
+
+                        <div class="code-body">
+                            &lt;table class="lamp"&gt;
+                            <br>&lt;tr&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;th&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/th&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;td&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    The table element was not designed to be a layout tool.
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/td&gt;
+                            <br>&lt;/tr&gt;
+                            <br>&lt;/table&gt;
+                        </div>
+                        <br>With CSS:
+                        <div class="code-body">
+                            table.lamp {
+                            <br>&nbsp;&nbsp;&nbsp;    width:100%;
+                            <br>&nbsp;&nbsp;&nbsp;    border:1px solid #d4d4d4;
+                            <br>}
+                            <br>table.lamp th, td {
+                            <br>&nbsp;&nbsp;&nbsp;    padding:10px;
+                            <br>}
+                            <br>table.lamp th {
+                            <br>&nbsp;&nbsp;&nbsp;    width:40px;
+                            <br>}
+                        </div>
                     </p>
                   </div>
                 </div>
