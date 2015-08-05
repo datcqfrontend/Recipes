@@ -13,7 +13,7 @@
 		{ 
 			"title": "Optimization",
 			"sortContent":  "The optimizer is part of the r.js adapter for Node and Nashorn, and it is designed to be run as part of a build or packaging step after you are done with development and are ready to deploy the code for your users.",
-			"link": "#requirejs/Optimization"
+			"link": "#requirejs/optimization"
 		},						
 		{ 	"title": "Clearfix"	}
 

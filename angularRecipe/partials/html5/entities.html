@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Entities" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,192 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Entities</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Some characters are reserved in HTML.
+                        <br>If you use the less than (&lt;) or greater than (&gt;) signs in your text, the browser might mix them with tags.
+                        <br>Character entities are used to display reserved characters in HTML.
+                        <br>A character entity looks like this:
+                        <div class="code-body">
+                            &<i>entity_name</i>;
+                            <br>OR
+                            <br>&<i>#entity_number</i>;
+                        </div>
+                        <br>To display a less than sign we must write: &amp;lt; or &amp;#60;
+                        <br>The advantage of using an entity name, instead of a number, is that the name is easier to remember.
+                        <br>The disadvantage is that browsers may not support all entity names, but the support for numbers is good.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Non-breaking Space</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        A common character entity used in HTML is the non-breaking space (&amp;nbsp;).
+                        <br>Remember that browsers will always truncate spaces in HTML pages. If you write 10 spaces in your text, the browser will remove 9 of them. To add real spaces to your text, you can use the &amp;nbsp; character entity.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Some Other Useful HTML Character Entities</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                        <tbody><tr>
+                          <th>Result</th>
+                          <th>Description</th>
+                          <th>Entity Name</th>
+                          <th>Entity Number</th>
+                        </tr>
+                        <tr>
+                          <td style="height: 29px"></td>
+                          <td style="height: 29px">non-breaking space</td>
+                          <td style="height: 29px">&amp;nbsp;</td>
+                          <td style="height: 29px">&amp;#160;</td>
+                        </tr>
+                        <tr>
+                          <td>&lt;</td>
+                          <td>less than</td>
+                          <td>&amp;lt;</td>
+                          <td>&amp;#60;</td>
+                        </tr>
+                        <tr>
+                          <td>&gt;</td>
+                          <td>greater than</td>
+                          <td>&amp;gt;</td>
+                          <td>&amp;#62;</td>
+                        </tr>
+                        <tr>
+                          <td>&amp;</td>
+                          <td>ampersand</td>
+                          <td>&amp;amp;</td>
+                          <td>&amp;#38;</td>
+                        </tr>
+                        <tr>
+                          <td>¢</td>
+                          <td>cent</td>
+                          <td>&amp;cent;</td>
+                          <td>&amp;#162;</td>
+                        </tr>
+                        <tr>
+                          <td>£</td>
+                          <td>pound</td>
+                          <td>&amp;pound;</td>
+                          <td>&amp;#163;</td>
+                        </tr>
+                        <tr>
+                          <td>¥</td>
+                          <td>yen</td>
+                          <td>&amp;yen;</td>
+                          <td>&amp;#165;</td>
+                        </tr>
+                        <tr>
+                          <td>€</td>
+                          <td>euro</td>
+                          <td>&amp;euro;</td>
+                          <td>&amp;#8364;</td>
+                        </tr>
+                        <tr>
+                          <td>©</td>
+                          <td>copyright</td>
+                          <td>&amp;copy;</td>
+                          <td>&amp;#169;</td>
+                        </tr>
+                        <tr>
+                          <td>®</td>
+                          <td>registered trademark</td>
+                          <td>&amp;reg;</td>
+                          <td>&amp;#174;</td>
+                        </tr>
+                        </tbody></table>
+
+                        Entity names are case sensitive.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Combining Diacritical Marks</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        A diacritical mark is a "glyph" added to a letter.
+                        <br>Some diacritical marks, like grave (  ̀) and acute (  ́) are called accents.
+                        <br>Diacritical marks can appear both above and below a letter, inside a letter, and between two letters.
+                        <br>Diacritical marks can be used in combination with alphanumeric characters, to produce a character that is not present in the character set (encoding) used in the page.
+                        <br>Here are some examples:
+
+                        <table class="table table-striped" style="font-size:14px">
+                        <tbody><tr>
+                        <th style="width:15%">Mark</th>
+                        <th style="width:15%">Character</th>
+                        <th>Construct</th>
+                        <th style="width:15%">Result </th>
+                        </tr>
+                        <tr>
+                              <td> &nbsp;&nbsp;̀</td>
+                              <td>a</td>
+                              <td>a&amp;#768;</td>
+                              <td>à</td>
+                        </tr>
+                        <tr>
+                              <td> &nbsp;&nbsp;́</td>
+                              <td>a</td>
+                              <td>a&amp;#769;</td>
+                              <td>á</td>
+                        </tr>
+                        <tr>
+                              <td> ̂</td>
+                              <td>a</td>
+                              <td>a&amp;#770;</td>
+                              <td>â</td>
+                        </tr>
+                        <tr>
+                              <td> &nbsp;&nbsp;̃</td>
+                              <td>a</td>
+                              <td>a&amp;#771;</td>
+                              <td>ã</td>
+                        </tr>
+                        <tr>
+                              <td> &nbsp;&nbsp;̀</td>
+                              <td>O</td>
+                              <td>O&amp;#768;</td>
+                              <td>Ò</td>
+                        </tr>
+                        <tr>
+                              <td> &nbsp;&nbsp;́</td>
+                              <td>O</td>
+                              <td>O&amp;#769;</td>
+                              <td>Ó</td>
+                        </tr>
+                        <tr>
+                              <td> ̂</td>
+                              <td>O</td>
+                              <td>O&amp;#770;</td>
+                              <td>Ô</td>
+                        </tr>
+                        <tr>
+                              <td> &nbsp;&nbsp;̃</td>
+                              <td>O</td>
+                              <td>O&amp;#771;</td>
+                              <td>Õ</td>
+                        </tr>
+
+                        </tbody></table>
 
 
                     </p>
                   </div>
                 </div>
             </div> 
-
-            
         </div>       
         <!-- /.row -->
 

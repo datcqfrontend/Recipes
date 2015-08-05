@@ -138,46 +138,46 @@
 
 		{ 
 			"title": "Color Shades",
-			"sortContent":  "",
+			"sortContent":  "Gray colors are displayed using an equal amount of power to all of the light sources.<br>To make it easy for you to select a gray color we have compiled a table of gray shades for you",
 			"link": "#html5/colorShades"
 		},	
 		{ 
 			"title": "Javascript",
-			"sortContent":  "",
+			"sortContent":  "JavaScripts make HTML pages more dynamic and interactive.",
 			"link": "#html5/javascript"
 		},	
 		{ 
 			"title": "Head",
-			"sortContent":  "",
+			"sortContent":  "The <span class='spanRed'>&lt;head&gt;</span> element is a container for meta data (data about data).<br>HTML meta data is data about the HTML document. Metadata is not displayed.<br>Meta data typically define document title, styles, links, scripts, and other meta information.<br>The following tags describes meta data: <span class='spanRed'>&lt;title&gt;</span>, <span class='spanRed'>&lt;style&gt;</span>, <span class='spanRed'>&lt;meta&gt;</span>, <span class='spanRed'>&lt;link&gt;</span>, <span class='spanRed'>&lt;script&gt;</span>, and <span class='spanRed'>&lt;base&gt;</span>.",
 			"link": "#html5/head"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Entities",
-			"sortContent":  "",
+			"sortContent":  "Reserved characters in HTML must be replaced with character entities. <br>Characters, not present on your keyboard, can also be replaced by entities.",
 			"link": "#html5/entitites"
 		},	
 		{ 
 			"title": "Symbols",
-			"sortContent":  "",
+			"sortContent":  "HTML entities were described in the previous chapter.<br>Many mathematical, technical, and currency symbols, are not present on a normal keyboard.<br>To add these symbols to an HTML page, you can use an HTML entity name.<br>If no entity name exists, you can use an entity number; a decimal (or hexadecimal) reference.",
 			"link": "#html5/symbols"
 		},	
 		{ 
 			"title": "Charset",
-			"sortContent":  "",
+			"sortContent":  "To display an HTML page correctly, a web browser must know the character set (character encoding) to use.",
 			"link": "#html5/charset"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "URL Encode",
-			"sortContent":  "",
+			"sortContent":  "A URL is another word for a web address.<br>A URL can be composed of words (w3schools.com), or an Internet Protocol (IP) address (192.68.20.50).<br>Most people enter the name when surfing, because names are easier to remember than numbers.",
 			"link": "#html5/urlEncode"
 		},	
 		{ 
 			"title": "XHTML",
-			"sortContent":  "",
+			"sortContent":  "XHTML is HTML written as XML.<ul><li>XHTML stands for E<strong>X</strong>tensible <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li><li>XHTML is almost identical to HTML</li><li>XHTML is stricter than HTML</li><li>XHTML is HTML defined as an XML application</li><li>XHTML is supported by all major browsers</li></ul>",
 			"link": "#html5/xhtml"
 		}
 		

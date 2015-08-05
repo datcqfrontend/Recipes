@@ -170,8 +170,7 @@ var fw = {
 					{"page":"tutorial"  },
 					{"page":"start", "topic":"Start", "breadcrumb":"Start"  },
 					{"page":"api", "topic":"API", "breadcrumb":"API"  },
-					{"page":"optimazation", "topic":"Optimization", "breadcrumb":"Optimization"  },
-					{"page":"usewithjquery", "topic":"Use with jQuery", "breadcrumb":"Use with jQuery"  }
+					{"page":"optimization", "topic":"Optimization", "breadcrumb":"Optimization"  }
 				],
 
 				"about":[],

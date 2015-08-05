@@ -6,15 +6,287 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>What Is XHTML?</h3> </div>
                   <div class="panel-body">  
                     <p>
-
+                        XHTML is HTML written as XML.
+                        <ul>
+                            <li>XHTML stands for E<strong>X</strong>tensible <strong>H</strong>yper<strong>T</strong>ext 
+                            <strong>M</strong>arkup <strong>L</strong>anguage</li>
+                            <li>XHTML is almost identical to HTML</li>
+                            <li>XHTML is stricter than HTML</li>
+                            <li>XHTML is HTML defined as an XML application</li>
+                            <li>XHTML is supported by all major browsers</li>
+                        </ul>
 
                     </p>
                   </div>
                 </div>
             </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Why XHTML?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Many pages on the internet contain "bad" HTML.
+                        <br>This HTML code works fine in most browsers (even if it does not follow the HTML rules):
+                        <div class="code-body">
+                            &lt;html&gt;
+                            <br>&lt;head&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;title&gt;This is bad HTML&lt;/title&gt;
+                            <br>  
+                            <br>&lt;body&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h1&gt;Bad HTML
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;This is a paragraph
+                            <br>&lt;/body&gt;
+                        </div>
+
+                        <br>Today's market consists of different browser technologies. Some browsers run on computers, and some browsers run on mobile phones or other small devices. Smaller devices often lack the resources or power to interpret "bad" markup.
+                        <br>XML is a markup language where documents must be marked up correctly (be "well-formed").
+                        <br>If you want to study XML, please read our XML tutorial.
+                        <br>By combining the strengths of HTML and XML, XHTML was developed.
+                        <br>XHTML is HTML redesigned as XML.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Most Important Differences from HTML:</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <h4>Document Structure</h4>
+                        <ul>
+                            <li>XHTML DOCTYPE is <strong>mandatory</strong></li>
+                            <li>The xmlns attribute in &lt;html&gt; is <strong>mandatory</strong></li>
+                            <li>&lt;html&gt;, &lt;head&gt;, &lt;title&gt;, and &lt;body&gt; are <strong>mandatory</strong></li>
+                        </ul>
+
+                        <h4>XHTML Elements</h4>
+                        <ul>
+                            <li>XHTML elements must be <b> properly nested</b></li>
+                            <li>XHTML elements must always be <b>closed</b></li>
+                            <li>XHTML elements must be in <b>lowercase</b></li>
+                            <li>XHTML documents must have <b>one root element</b></li>
+                        </ul>
+
+                        <h4>XHTML Attributes</h4>
+                        <ul>
+                            <li>Attribute names must be in <b>lower case</b></li>
+                            <li>Attribute values must be <b>quoted</b></li>
+                            <li>Attribute minimization is <b>forbidden</b></li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>&lt;!DOCTYPE ....&gt; Is Mandatory</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An XHTML document must have an XHTML DOCTYPE declaration.
+                        <br>A complete list of all the XHTML Doctypes is found in our HTML Tags Reference.
+                        <br>The &lt;html&gt;, &lt;head&gt;, &lt;title&gt;, and &lt;body&gt; elements must also be present, and the xmlns attribute in &lt;html&gt; must specify the xml namespace for the document.
+                        <br>This example shows an XHTML document with a minimum of required tags:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+                            <br>
+                            <br>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+                            <br>
+                            <br>&lt;head&gt;
+                            <br>  &lt;title&gt;Title of document&lt;/title&gt;
+                            <br>&lt;/head&gt;
+                            <br>
+                            <br>&lt;body&gt;
+                            <br>  some content 
+                            <br>&lt;/body&gt;
+                            <br>
+                            <br>&lt;/html&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>XHTML Elements Must Be Properly Nested</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In HTML, some elements can be improperly nested within each other, like this:
+                        <div class="code-body">
+                            &lt;b&gt;&lt;i&gt;This text is bold and italic&lt;/b&gt;&lt;/i&gt;
+                        </div>
+                        <br>In XHTML, all elements must be properly nested within each other, like this:
+                        <div class="code-body">
+                            &lt;b&gt;&lt;i&gt;This text is bold and italic&lt;/i&gt;&lt;/b&gt;
+                        </div>
+
+
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>XHTML Elements Must Always Be Closed</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        This is wrong:
+                        <div class="code-body">
+                            &lt;p&gt;This is a paragraph
+                            <br>&lt;p&gt;This is another paragraph
+                        </div>
+
+                        <br>This is correct:
+                        <div class="code-body">
+                            &lt;p&gt;This is a paragraph&lt;/p&gt;
+                            <br>&lt;p&gt;This is another paragraph&lt;/p&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Empty Elements Must Also Be Closed</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        This is wrong:
+                        <div class="code-body">
+                            A break: &lt;br&gt;
+                            <br>A horizontal rule: &lt;hr&gt;
+                            <br>An image: &lt;img src="happy.gif" alt="Happy face"&gt;
+                        </div>
+                        <br>This is correct:
+                        <div class="code-body">
+                            A break: &lt;br /&gt;
+                            <br>A horizontal rule: &lt;hr /&gt;
+                            <br>An image: &lt;img src="happy.gif" alt="Happy face" /&gt;
+                        </div>
+                        
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>XHTML Elements Must Be In Lower Case</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        This is wrong:
+                        <div class="code-body">
+                            &lt;BODY&gt;
+                            &lt;P&gt;This is a paragraph&lt;/P&gt;
+                            &lt;/BODY&gt;
+                        </div>
+                        <br>This is correct:
+                        <div class="code-body">
+                            &lt;body&gt;
+                            &lt;p&gt;This is a paragraph&lt;/p&gt;
+                            &lt;/body&gt;
+                        </div>
+
+
+                        
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>XHTML Attribute Names Must Be In Lower Case</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        This is wrong:
+                        <div class="code-body">
+                            &lt;table WIDTH="100%"&gt;
+                        </div>
+                        <br>This is correct:
+                        <div class="code-body">
+                            &lt;table width="100%"&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Attribute Values Must Be Quoted</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        
+                        This is wrong:
+                        <div class="code-body">
+                            &lt;table width=100%&gt;
+                        </div>
+                        <br>This is correct:
+                        <div class="code-body">
+                            &lt;table width="100%"&gt;
+                        </div>
+                    </p>
+                    
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Attribute Minimization Is Forbidden</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Wrong:                        
+                        <div class="code-body">
+                            &lt;input type="checkbox" name="vehicle" value="car" checked /&gt;
+                        </div>
+                        <br>Correct:                        
+                        <div class="code-body">
+                            &lt;input type="checkbox" name="vehicle" value="car" checked="checked" /&gt;
+                        </div>
+                        <br>
+                        <br>Wrong:
+                        <div class="code-body">
+                            &lt;input type="text" name="lastname" disabled /&gt;
+                        </div>
+                        <br>Correct:
+                        <div class="code-body">
+                            &lt;input type="text" name="lastname" disabled="disabled" /&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>How to Convert from HTML to XHTML</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <ol>
+                            <li>Add an XHTML &lt;!DOCTYPE&gt; to the first line of every page</li>
+                            <li>Add an xmlns attribute to the html element of every page</li>
+                            <li>Change all element names to lowercase</li>
+                            <li>Close all empty elements</li>
+                            <li>Change all attribute names to lowercase</li>
+                            <li>Quote all attribute values</li>
+                        </ol>
+                    </p>
+                  </div>
+                </div>
+            </div>
 
             
         </div>       

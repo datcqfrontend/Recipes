@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Head" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,16 +6,257 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>The HTML &lt;head&gt; Element</h3> </div>
                   <div class="panel-body">  
                     <p>
-
+                        The <span class="spanRed">&lt;head&gt;</span> element is a container for meta data (data about data).
+                        <br>HTML meta data is data about the HTML document. Metadata is not displayed.
+                        <br>Meta data typically define document title, styles, links, scripts, and other meta information.
+                        <br>The following tags describes meta data: <span class="spanRed">&lt;title&gt;</span>, <span class="spanRed">&lt;style&gt;</span>, <span class="spanRed">&lt;meta&gt;</span>, <span class="spanRed">&lt;link&gt;</span>, <span class="spanRed">&lt;script&gt;</span>, and <span class="spanRed">&lt;base&gt;</span>.
 
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Omitting &lt;html&gt; and &lt;body&gt;?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In the HTML5 standard, the <span class="spanRed">&lt;html&gt;</span> tag, the <span class="spanRed">&lt;body&gt;</span> tag, and the <span class="spanRed">&lt;head&gt;</span> tag can be omitted.
+                        <br>The following code will validate as HTML5:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;title&gt;Page Title&lt;/title&gt;
+                            <br>
+                            <br>The content of the document......                            
+                        </div>
+
+                        <br>The <span class="spanRed">&lt;html&gt;</span> element is the document root. It is the recommended place for specifying the page language:
+                        <div class="code-body">
+                             &lt;!DOCTYPE html&gt;
+                            <br>&lt;html lang="en-US"&gt;
+                        </div>
+
+                        <br>Declaring a language is important for accessibility applications (screen readers) and search engines.
+                        <br>Omitting <span class="spanRed">&lt;html&gt;</span> and <span class="spanRed">&lt;body&gt;</span> can crash badly written DOM and XML software.
+                        <br>Finally, omitting <span class="spanRed">&lt;body&gt;</span> can produce errors in older browsers (IE9).
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Omitting &lt;head&gt;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In the HTML5 standard, the <span class="spanRed">&lt;head&gt;</span> tag can also be omitted.
+                        <br>By default, browsers will add all elements before <span class="spanRed">&lt;body&gt;</span>, to a default <span class="spanRed">&lt;head&gt;</span> element.
+                        <br>You can reduce the complexity of HTML, by omitting the <span class="spanRed">&lt;head&gt;</span> tag:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;title&gt;Page Title&lt;/title&gt;
+                            <br>
+                            <br>&lt;body&gt;
+                            <br>The content of the document......
+                            <br>&lt;/body&gt;
+                            <br>
+                            <br>&lt;/html&gt;
+                        </div>
+
+                        <br>Omitting tags is unfamiliar to web developers. It needs time to be established as a guideline.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML &lt;title&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;title&gt;</span> element defines the title of the document.
+                        <br>The <span class="spanRed">&lt;title&gt;</span> element is required in all HTML/XHTML documents.
+                        <br>The <span class="spanRed">&lt;title&gt;</span> element:
+                        <ul>
+                            <li>defines a title in the browser toolbar</li>
+                            <li>provides a title for the page when it is added to favorites</li>
+                            <li>displays a title for the page in search engine results</li>
+                        </ul>
+                        A simplified HTML document:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;title&gt;Page Title&lt;/title&gt;
+                            <br>
+                            <br>&lt;body&gt;
+                            <br>The content of the document......
+                            <br>&lt;/body&gt;
+                            <br>
+                            <br>&lt;/html&gt;
+
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML &lt;style&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;style&gt;</span> element is used to define style information for an HTML document.
+                        <br>Inside the <span class="spanRed">&lt;style&gt;</span> element you specify how HTML elements should render in a browser:
+                        <div class="code-body">
+                            &lt;style&gt;
+                            <br>body {background-color:yellow;}
+                            <br>p {color:blue;}
+                            <br>&lt;/style&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML &lt;link&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;link&gt;</span> element defines the page relationship to an external resource.
+                        <br>The <span class="spanRed">&lt;link&gt;</span> element is most often used to link to style sheets:
+
+                        <div class="code-body">
+                            &lt;link rel="stylesheet" href="mystyle.css"&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML &lt;meta&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;meta&gt;</span> element is used to specify page description, keywords, author, and other metadata.
+                        <br>Meta data is used by browsers (how to display content), by search engines (keywords), and other web services.
+                        
+                        <br>Define keywords for search engines:
+                        <div class="code-body">
+                            &lt;meta <span class="spanYellow">name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"</span>&gt;
+                        </div>
+
+                        <br>Define a description of your web page:
+                        <div class="code-body">
+                            &lt;meta <span class="spanYellow">name="description" content="Free Web tutorials on HTML and CSS"</span>&gt;
+                        </div>
+
+                        <br>Define the character set used:
+                        <div class="code-body">
+                            &lt;meta <span class="spanYellow">charset="UTF-8"</span>&gt;
+                        </div>
+
+                        <br>Define the author of a page:
+                        <div class="code-body">
+                            &lt;meta <span class="spanYellow">name="author" content="Hege Refsnes"</span>&gt;
+                        </div>
+
+                        <br>Refresh document every 30 seconds:
+                        <div class="code-body">
+                            &lt;meta <span class="spanYellow">http-equiv="refresh" content="30"</span>&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML &lt;script&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;script&gt;</span> element is used to define client-side JavaScripts.
+                        <br>The script below writes Hello JavaScript! into an HTML element with id="demo":
+
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;script&gt;</span>
+                            <br>document.getElementById("demo").innerHTML = "Hello JavaScript!";
+
+                            <br><span class="spanYellow">&lt;/script&gt;</span>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML &lt;base&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;base&gt;</span> element specifies the base URL and base target for all relative URLs in a page:
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;base href="http://www.w3schools.com/images/" target="_blank"&gt;</span>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML head Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th style="width:20%">Tag</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td><div href="/tags/tag_head.asp">&lt;head&gt;</div></td>
+                        <td> Defines information about the document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="/tags/tag_title.asp">&lt;title&gt;</div></td>
+                        <td>Defines the title of a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="/tags/tag_base.asp">&lt;base&gt;</div></td>
+                        <td>Defines a default address or a default target for all links on a page</td>
+                        </tr>
+                        <tr>
+                        <td><div href="/tags/tag_link.asp">&lt;link&gt;</div></td>
+                        <td>Defines the relationship between a document and an external resource</td>
+                        </tr>
+                        <tr>
+                        <td><div href="/tags/tag_meta.asp">&lt;meta&gt;</div></td>
+                        <td>Defines metadata about an HTML document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="/tags/tag_script.asp">&lt;script&gt;</div></td>
+                        <td>Defines a client-side script</td>
+                        </tr>
+                        <tr>
+                        <td><div href="/tags/tag_style.asp">&lt;style&gt;</div></td>
+                        <td>Defines style information for a document</td>
+                        </tr>
+                        </tbody></table>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
         </div>       
         <!-- /.row -->
