@@ -73,7 +73,9 @@ function activeNavBar(){
 
 	$('.navbar li#'+fw.currentGroupName).addClass('active');
 	
-	if(fw.currentGroupName=='javascript' || fw.currentGroupName=='jquery'){
+	if(fw.currentGroupName=='html' || fw.currentGroupName=='html5'){
+		$('.navbar li#group-html').addClass(fw.currentGroupName+' active');
+	}else if(fw.currentGroupName=='javascript' || fw.currentGroupName=='jquery'){
 		$('.navbar li#group-js').addClass(fw.currentGroupName+' active');
 	}else if(fw.currentGroupName=='requirejs' || fw.currentGroupName=='gruntjs'){
 		$('.navbar li#group-more').addClass(fw.currentGroupName+' active');

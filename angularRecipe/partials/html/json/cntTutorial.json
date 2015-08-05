@@ -1,0 +1,209 @@
+{ 
+	"content":[
+		{ 
+			"title": "Introduction",
+			"sortContent":  "What is HTML? <br>HTML is a markup language for describing web documents (web pages).",
+			"link": "#html/intro"
+		},
+		{ 
+			"title": "Editors",
+			"sortContent":  "HTML can be edited by using professional HTML editors like:<ul><li>Microsoft WebMatrix</li><li>Sublime Text</li></ul>",
+			"link": "#html/editors"
+		},
+		{ 
+			"title": "Basic",
+			"sortContent":  "All HTML documents must start with a type declaration: <span class='spanRed'>&lt;!DOCTYPE html&gt;</span>.<br>The HTML document itself begins with <span class='spanRed'>&lt;html&gt;</span> and ends with <span class='spanRed'>&lt;/html&gt;</span>.<br>The visible part of the HTML document is between <span class='spanRed'>&lt;body&gt; and <span class='spanRed'>&lt;/body&gt;</span>.",
+			"link": "#html/basic"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Elements",
+			"sortContent":  "HTML documents are made up by HTML elements.<br>HTML elements are written with a start tag, with an end tag, with the content in between:<br><span class='spanRed'>&lt;tagname&gt;</span> content <span class='spanRed'>&lt;/tagname&gt;</span>",
+			"link": "#html/elements"
+		},	
+		{ 
+			"title": "Attributes",
+			"sortContent":  "<ul>  <li>HTML elements can have <span class='spanRed'>attributes</span></li>  <li>Attributes provide <span class='spanRed'>additional information</span> about an element</li>  <li>Attributes are always specified in <span class='spanRed'>the start tag</span></li>  <li>Attributes come in name/value pairs like: <span class='spanRed'>name='value'</span></li></ul>",
+			"link": "#html/attributes"
+		},	
+		{ 
+			"title": "Headings",
+			"sortContent":  "Headings are important in HTML documents.<br>Headings are defined with the <span class='spanRed'>&lt;h1&gt;</span> to <span class='spanRed'>&lt;h6&gt;</span> tags.<br><span class='spanRed'>&lt;h1&gt;</span> defines the most important heading. <span class='spanRed'>&lt;h6&gt;</span> defines the least important heading.",
+			"link": "#html/headings"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Paragraphs",
+			"sortContent":  "<p>The HTML <span class='spanRed'>&lt;p&gt;</span> element defines a paragraph.</p><p>This is a paragraph</p><p>This is another paragraph</p>",
+			"link": "#html/paragraphs"
+		},	
+		{ 
+			"title": "Styles",
+			"sortContent":  "Every HTML element has a default style (background color is white and text color is black).<br>Changing the default style of an HTML element, can be done with the style attribute.",
+			"link": "#html/styles"
+		},	
+		{ 
+			"title": "Formatting",
+			"sortContent":  "HTML also defines special elements, for defining text with a special meaning.<br>HTML uses elements like <span class='spanRed'>&lt;b&gt;</span> and <span class='spanRed'>&lt;i&gt;</span> for formatting output, like <b>bold</b> or <i>italic</i> text.",
+			"link": "#html/formatting"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Quotations",
+			"sortContent":  "The HTML <span class='spanRed'>&lt;q&gt;</span> element defines a short quotation. Browsers usually insert quotation marks around the <span class='spanRed'>&lt;q&gt;</span> element.<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>",
+			"link": "#html/quotations"
+		},	
+		{ 
+			"title": "Computer Code",
+			"sortContent":  "Normally, HTML uses variable letter size, and variable letter spacing.<br>This is not wanted when displaying examples of computer code.<br>The <span class='spanRed'>&lt;kbd&gt;</span>, <span class='spanRed'>&lt;samp&gt;</span>, and <span class='spanRed'>&lt;code&gt;</span> elements all support fixed letter size and spacing.",
+			"link": "#html/computerCode"
+		},	
+		{ 
+			"title": "Comments",
+			"sortContent":  "You can add comments to your HTML source by using the following syntax:<div class='code-body'><span class='spanYellow'>&lt;!--</span> Write your comments here <span class='spanYellow'>--&gt;</span></div>",
+			"link": "#html/comments"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "CSS",
+			"sortContent":  "CSS stands for Cascading Style Sheets<br>Styling can be added to HTML elements in 3 ways:<ul><li>Inline - using a style attribute in HTML elements</li><li>Internal - using a <span class='spanRed'>&lt;style&gt;</span> element in the HTML <span class='spanRed'>&lt;head&gt;</span> section</li><li>External - using one or more external CSS files</li></ul>",
+			"link": "#html/css"
+		},	
+		{ 
+			"title": "Links",
+			"sortContent":  "HTML links are hyperlinks.<br>A hyperlink is a text or an image you can click on, and jump to another document.<div class='code-body'>&lt;a <span class='spanYellow'>href='<i>url</i> '</span>&gt;<i>link text</i>&lt;/a&gt;</div>",
+			"link": "#html/links"
+		},	
+		{ 
+			"title": "Images",
+			"sortContent":  "In HTML, images are defined with the <span class='spanRed'>&lt;img&gt;</span> tag.<br>The <span class='spanRed'>&lt;img&gt;</span> tag is empty, it contains attributes only, and does not have a closing tag.<br>The src attribute specifies the URL (web address) of the image:<div class='code-body'>&lt;img <span class='spanYellow'>src='<i>url</i> ' alt='<i>some_text</i> '</span> &gt;</div>",
+			"link": "#html/images"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Tables",
+			"sortContent":  "<table class='table table-striped' style='width:100%'><tbody><tr><th>Number</th><th>First Name</th><th>Last Name</th><th>Points</th></tr><tr><td>1</td><td>Eve</td><td>Jackson</td><td>94</td></tr></tbody></table>",
+			"link": "#html/tables"
+		},	
+		{ 
+			"title": "Lists",
+			"sortContent":  "Unordered lists and ordered lists are commonly used in HTML:<br><div class='row'><div class='col-md-6'><h3>Unordered List</h3><ul><li>The first item</li><li>The second item</li><li>The third item</li><li>The fourth item</li></ul></div><div class='col-md-6'><h3>Ordered List</h3><ol><li>The first item</li><li>The second item</li><li>The third item</li><li>The fourth item</li></ol></div></div>",
+			"link": "#html/lists"
+		},	
+		{ 
+			"title": "Blocks",
+			"sortContent":  "Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.",
+			"link": "#html/blocks"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Classes",
+			"sortContent":  "The HTML class attribute makes it possible to define equal styles for 'equal' <span class='spanRed'>&lt;div&gt;</span> elements.<br> The HTML class attribute also makes it possible to define equal styles for 'equal' <span class='spanRed'>&lt;span&gt;</span> elements",
+			"link": "#html/classes"
+		},	
+		{ 
+			"title": "Layout",
+			"sortContent":  "Websites often display content in multiple columns (like a magazine or newspaper). The <span class='spanRed'>&lt;div&gt;</span> element is often used as a layout tool, because it can easily be positioned with CSS.",
+			"link": "#html/layout"
+		},	
+		{ 
+			"title": "Responsive",
+			"sortContent":  "What is Responsive Web Design? <ul><li>RWD stands for Responsive Web Design</li><li>RWD can deliver web pages in variable sizes</li><li>RWD is a must for tablets and mobile devices</li></ul>",
+			"link": "#html/responsive"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Iframes",
+			"sortContent":  "An iframe is used to display a web page within a web page.<br>The syntax for adding an iframe is:<div class='code-body'>&lt;iframe src='<i>URL</i>'&gt;&lt;/iframe&gt;</div><br>The src attribute specifies the URL (web address) of the iframe page. ",
+			"link": "#html/iframes"
+		},	
+		{ 
+			"title": "Color Names",
+			"sortContent":  "All modern browsers support the following 140 color names (click on a color name, or a hex value, to view the color as the background-color along with different text colors)",
+			"link": "#html/colorNames"
+		},	
+		{ 
+			"title": "Color Values",
+			"sortContent":  "Colors in HTML can be specified by the following methods:<ul><li>Hexadecimal colors</li><li>RGB colors</li><li>Color names</li></ul>",
+			"link": "#html/colorValues"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Color Shades",
+			"sortContent":  "Gray colors are displayed using an equal amount of power to all of the light sources.<br>To make it easy for you to select a gray color we have compiled a table of gray shades for you",
+			"link": "#html/colorShades"
+		},	
+		{ 
+			"title": "Javascript",
+			"sortContent":  "JavaScripts make HTML pages more dynamic and interactive.",
+			"link": "#html/javascript"
+		},	
+		{ 
+			"title": "Head",
+			"sortContent":  "The <span class='spanRed'>&lt;head&gt;</span> element is a container for meta data (data about data).<br>HTML meta data is data about the HTML document. Metadata is not displayed.<br>Meta data typically define document title, styles, links, scripts, and other meta information.<br>The following tags describes meta data: <span class='spanRed'>&lt;title&gt;</span>, <span class='spanRed'>&lt;style&gt;</span>, <span class='spanRed'>&lt;meta&gt;</span>, <span class='spanRed'>&lt;link&gt;</span>, <span class='spanRed'>&lt;script&gt;</span>, and <span class='spanRed'>&lt;base&gt;</span>.",
+			"link": "#html/head"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Entities",
+			"sortContent":  "Reserved characters in HTML must be replaced with character entities. <br>Characters, not present on your keyboard, can also be replaced by entities.",
+			"link": "#html/entitites"
+		},	
+		{ 
+			"title": "Symbols",
+			"sortContent":  "HTML entities were described in the previous chapter.<br>Many mathematical, technical, and currency symbols, are not present on a normal keyboard.<br>To add these symbols to an HTML page, you can use an HTML entity name.<br>If no entity name exists, you can use an entity number; a decimal (or hexadecimal) reference.",
+			"link": "#html/symbols"
+		},	
+		{ 
+			"title": "Charset",
+			"sortContent":  "To display an HTML page correctly, a web browser must know the character set (character encoding) to use.",
+			"link": "#html/charset"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "URL Encode",
+			"sortContent":  "A URL is another word for a web address.<br>A URL can be composed of words (w3schools.com), or an Internet Protocol (IP) address (192.68.20.50).<br>Most people enter the name when surfing, because names are easier to remember than numbers.",
+			"link": "#html/urlEncode"
+		},	
+		{ 
+			"title": "XHTML",
+			"sortContent":  "XHTML is HTML written as XML.<ul><li>XHTML stands for E<strong>X</strong>tensible <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li><li>XHTML is almost identical to HTML</li><li>XHTML is stricter than HTML</li><li>XHTML is HTML defined as an XML application</li><li>XHTML is supported by all major browsers</li></ul>",
+			"link": "#html/xhtml"
+		},
+		{ 
+			"title": "Forms",
+			"sortContent":  "",
+			"link": "#html/forms"
+		},	
+		{ 	"title": "Clearfix"	},
+
+		{ 
+			"title": "Form Elements",
+			"sortContent":  "",
+			"link": "#html/formElements"
+		},	
+		{ 
+			"title": "Input Types",
+			"sortContent":  "",
+			"link": "#html/inputTypes"
+		},
+		{ 
+			"title": "Input Attributes",
+			"sortContent":  "",
+			"link": "#html/inputAttributes"
+		},	
+		{ 	"title": "Clearfix"	}
+
+		
+	]
+}

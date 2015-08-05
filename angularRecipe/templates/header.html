@@ -16,7 +16,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div id="menu-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li id="html5"><a href="#/html5/tutorial" onclick="hideMenu();">HTML5</a>
+                
+                <li id="group-html" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">HTMLs<b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu">
+                        <li id="html"><a href="#/html/tutorial">HTML Tutorial</a>
+                        </li>   
+                        <li id="html5"><a href="#/html5/tutorial">HTML5 Tutorial</a>
+                        </li>                      
+                    </ul>
                 </li>
 
                 <li id="css"><a href="#/css/tutorial" onclick="hideMenu();">CSS</a>
