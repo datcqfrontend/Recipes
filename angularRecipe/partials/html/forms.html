@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Forms" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,11 +6,363 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>The &lt;form&gt; Element</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        HTML forms are used to collect user input.
+                        <br>The <span class="spanRed">&lt;form&gt;</span> element defines an HTML form:
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>...
+                            <br>form elements
+                            <br>...
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br>HTML forms contain form elements.
+                        <br>Form elements are different types of input elements, checkboxes, radio buttons, submit buttons, and more.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The &lt;input&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;input&gt;</span> element is the most important form element.
+                        <br>The <span class="spanRed">&lt;input&gt;</span> element has many variations, depending on the type attribute.
+                        <br>Here are the types used in this chapter:
+
+                        <table class="table table-striped">
+                         <tbody><tr>
+                          <th>Type</th>
+                          <th>Description</th>
+                         </tr>
+                         <tr>
+                          <td>text</td>
+                          <td>Defines normal text input</td>
+                         </tr>
+                         <tr>
+                          <td>radio</td>
+                          <td>Defines radio button input (for selecting one of many choices)</td>
+                         </tr>
+                         <tr>
+                          <td>submit</td>
+                          <td>Defines a submit button (for submitting the form)</td>
+                         </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Text Input</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="text"&gt;</span> defines a one-line input field for text input:
+
+                        <form>
+                        First name:<br>
+                        <input type="text" name="firstname">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="lastname">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>First name:&lt;br&gt;
+                            <br><span class="spanYellow">&lt;input type="text" name="firstname"&gt;</span>
+                            <br>&lt;br&gt;
+                            <br>Last name:&lt;br&gt;
+                            <br><span class="spanYellow">&lt;input type="text" name="lastname"&gt;</span>
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br><b>Note:</b> The form itself is not visible. Also note that the default width of a text field is 20 characters.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Radio Button Input</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="radio"&gt;</span> defines a radio button.
+                        <br>Radio buttons let a user select ONE of a limited number of choices:
+
+                        <form>
+                        <input type="radio" name="sex" value="male" checked>Male
+                        <br>
+                        <input type="radio" name="sex" value="female">Female
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br><span class="spanYellow">&lt;input type="radio" name="sex" value="male" checked&gt;Male</span>
+                            <br>&lt;br&gt;
+                            <br><span class="spanYellow">&lt;input type="radio" name="sex" value="female"&gt;Female</span>
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Submit Button</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="submit"&gt;</span> defines a button for submitting a form to a form-handler.
+                        <br>The form-handler is typically a server page with a script for processing input data.
+                        <br>The form-handler is specified in the form's action attribute:
+
+                        <form action="action_page.php">
+                        First name:<br>
+                        <input type="text" name="firstname" value="Mickey">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="lastname" value="Mouse">
+                        <br><br>
+                        <input type="submit" value="Submit" disabled="disabled">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form action="action_page.php"&gt;
+                            <br>First name:&lt;br&gt;
+                            <br>&lt;input type="text" name="firstname" value="Mickey"&gt;
+                            <br>&lt;br&gt;
+                            <br>Last name:&lt;br&gt;
+                            <br>&lt;input type="text" name="lastname" value="Mouse"&gt;
+                            <br>&lt;br&gt;&lt;br&gt;
+                            <br><span class="spanYellow">&lt;input type="submit" value="Submit"&gt;</span>
+                            <br>&lt;/form&gt;
+                        </div>
+
+                        <br>The address after submit: action_page.php?firstname=Mickey&lastname=Mouse
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Action Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The action attribute defines the action to be performed when the form is submitted.
+                        <br>The common way to submit a form to a server, is by using a submit button.
+                        <br>Normally, the form is submitted to a web page on a web server.
+                        <br>In the example above, a server-side script is specified to handle the submitted form:
+
+                        <div class="code-body">
+                            &lt;form <span class="spanYellow">action="action_page.php"</span>&gt;
+                        </div>
+                        <br>If the action attribute is omitted, the action is set to the current page.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Method Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The method attribute specifies the HTTP method (GET or POST) to be used when submitting the forms:
+                        <div class="code-body">
+                            &lt;form action="action_page.php" <span class="spanYellow">method="GET"</span>&gt;
+                        </div>
+                        <br>or:
+                        <div class="code-body">
+                            &lt;form action="action_page.php" <span class="spanYellow">method="POST"</span>&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>When to Use GET?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        You can use GET (the default method):
+                        <br>If the form submission is passive (like a search engine query), and without sensitive information.
+                        <br>When you use GET, the form data will be visible in the page address:
+                        <div class="code-body">
+                            <span class="spanYellow">action_page.php?firstname=Mickey&lastname=Mouse</span>
+                        </div>
+                        <br>GET is best suited to short amounts of data. Size limitations are set in your browser.
 
 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>When to Use POST?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        You should use POST:
+                        <br>If the form is updating data, or includes sensitive information (password).
+                        <br><span class="spanRed">POST offers better security because the submitted data is not visible in the page address.</span>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Name Attribute</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To be submitted correctly, each input field must have a name attribute.
+                        <br>This example will only submit the "Last name" input field:
+
+                        <form action="action_page.php">
+                        First name:<br>
+                        <input type="text" value="Mickey">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="lastname" value="Mouse">
+                        <br><br>
+                        <input type="submit" value="Submit" disabled="disabled">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form action="action_page.php"&gt;
+                            <br>First name:&lt;br&gt;
+                            <br>&lt;input type="text" value="Mickey"&gt;
+                            <br>&lt;br&gt;
+                            <br>Last name:&lt;br&gt;
+                            <br><span class="spanYellow">&lt;input type="text" name="lastname" value="Mouse"&gt;</span>
+                            <br>&lt;br&gt;&lt;br&gt;
+                            <br>&lt;input type="submit" value="Submit"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+                        <br>The address after submit: action_page.php?lastname=Mouse
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Grouping Form Data with &lt;fieldset&gt;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <span class="spanRed">&lt;fieldset&gt;</span> element groups related data in a form.
+                        <br>The <span class="spanRed">&lt;legend&gt;</span> element defines a caption for the <span class="spanRed">&lt;fieldset&gt;</span> element.
+
+                        <form action="action_page.php">
+                        <fieldset>
+                        <legend>Personal information:</legend>
+                        First name:<br>
+                        <input type="text" name="firstname" value="Mickey">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="lastname" value="Mouse">
+                        <br><br>
+                        <input type="submit" value="Submit" disabled="disabled"></fieldset>
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form action="action_page.php"&gt;
+                            <br><span class="spanYellow">&lt;fieldset&gt;</span>
+                            <br><span class="spanYellow">&lt;legend&gt;Personal information:&lt;/legend&gt;</span>
+                            <br>First name:&lt;br&gt;
+                            <br>&lt;input type="text" name="lastname" value="Mickey"&gt;
+                            <br>&lt;br&gt;
+                            <br>Last name:&lt;br&gt;
+                            <br>&lt;input type="text" name="lastname" value="Mouse"&gt;</span>
+                            <br>&lt;br&gt;&lt;br&gt;
+                            <br>&lt;input type="submit" value="Submit"&gt; 
+                            <br><span class="spanYellow">&lt;/fieldset&gt;</span>
+                            <br>&lt;/form&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Form Attributes</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An HTML <span class="spanRed">&lt;form&gt;</span> element, with all possible attributes set, will look like this:
+
+                        <div class="code-body">
+                            &lt;form action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
+enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate&gt;
+                            <br>.
+                            <br>form elements
+                            <br>.
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br>Here is the list of <span class="spanRed">&lt;form&gt;</span> attributes:
+                        <table class="table table-striped">
+                         <tbody><tr>
+                          <th>Attribute</th>
+                          <th>Description</th>
+                         </tr>
+                         <tr>
+                          <td>accept-charset</td>
+                          <td>Specifies the charset used in the submitted form (default: the page 
+                          charset).</td>
+                         </tr>
+                         <tr>
+                          <td>action</td>
+                          <td>Specifies an address (url) where to submit the form (default: the 
+                          submitting page).</td>
+                         </tr>
+                         <tr>
+                          <td>autocomplete</td>
+                          <td>Specifies if the browser should autocomplete the form (default: on).</td>
+                         </tr>
+                         <tr>
+                          <td>enctype</td>
+                          <td>Specifies the encoding of the submitted data (default: is url-encoded).</td>
+                         </tr>
+                         <tr>
+                          <td>method</td>
+                          <td>Specifies the HTTP method used when submitting the form (default: GET).</td>
+                         </tr>
+                         <tr>
+                          <td>name</td>
+                          <td>Specifies a name used to identify the form (for DOM usage: 
+                          document.forms.name).</td>
+                         </tr>
+                         <tr>
+                          <td>novalidate</td>
+                          <td>Specifies that the browser should not validate the form.</td>
+                         </tr>
+                         <tr>
+                          <td>target</td>
+                          <td>Specifies the target of the address in the action attribute (default: 
+                          _self).</td>
+                         </tr>
+                        </tbody></table>
                     </p>
                   </div>
                 </div>

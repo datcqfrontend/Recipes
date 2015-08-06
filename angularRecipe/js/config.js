@@ -51,7 +51,12 @@ var fw = {
 					{"page":"charset", "topic":"HTML Charset", "breadcrumb":"Charset"  },
 
 					{"page":"urlEncode", "topic":"HTML Url Encode", "breadcrumb":"Url Encode"  },
-					{"page":"xhtml", "topic":"XHTML", "breadcrumb":"XHTML"  }
+					{"page":"xhtml", "topic":"XHTML", "breadcrumb":"XHTML"  },
+					{"page":"forms", "topic":"Forms", "breadcrumb":"Forms"  },
+
+					{"page":"formElements", "topic":"Form Elements", "breadcrumb":"Form Elements"  },
+					{"page":"inputTypes", "topic":"Input Types", "breadcrumb":"Input Types"  },
+					{"page":"inputAttributes", "topic":"Input Attributes", "breadcrumb":"Input Attributes"  }
 					
 					
 				],
@@ -59,49 +64,31 @@ var fw = {
 				"html5":[
 					{"page":"tutorial"},
 
-					{"page":"intro", "topic":"HTML Introduction", "breadcrumb":"Introduction"  },
-					{"page":"editors", "topic":"HTML Editors", "breadcrumb":"Editors"  },
-					{"page":"basic", "topic":"HTML Basic", "breadcrumb":"Basic"  },
+					{"page":"h5Intro", "topic":"HTML5 Introduction", "breadcrumb":"Introduction"  },
+					{"page":"h5Support", "topic":"HTML5 Support", "breadcrumb":"Support"  },
+					{"page":"h5Elements", "topic":"HTML5 Elements", "breadcrumb":"Elements"  },
 
-					{"page":"elements", "topic":"HTML Elements", "breadcrumb":"Elements"  },
-					{"page":"attributes", "topic":"HTML Attributes", "breadcrumb":"Attributes"  },
-					{"page":"headings", "topic":"HTML Headings", "breadcrumb":"Headings"  },
+					{"page":"h5Semantics", "topic":"HTML5 Semantics", "breadcrumb":"Semantics"  },
+					{"page":"h5Migration", "topic":"HTML5 Migration", "breadcrumb":"Migration"  },
+					{"page":"h5StyleGuide", "topic":"HTML5 Style Guide", "breadcrumb":"Style Guide"  },
 
-					{"page":"paragraphs", "topic":"HTML Paragraphs", "breadcrumb":"Paragraphs"  },
-					{"page":"styles", "topic":"HTML Styles", "breadcrumb":"Styles"  },
-					{"page":"formatting", "topic":"HTML Formatting", "breadcrumb":"Formatting"  },
+					{"page":"h5Canvas", "topic":"HTML5 Canvas", "breadcrumb":"Canvas"  },
+					{"page":"h5SVG", "topic":"HTML5 SVG", "breadcrumb":"SVG"  },
+					{"page":"h5Media", "topic":"HTML5 Media", "breadcrumb":"Media"  },
 
-					{"page":"quotations", "topic":"HTML Quotations", "breadcrumb":"Quotations"  },
-					{"page":"computerCode", "topic":"HTML Computer Code", "breadcrumb":"Computer Code"  },
-					{"page":"comments", "topic":"HTML Comments", "breadcrumb":"Comments"  },					
+					{"page":"h5Video", "topic":"HTML5 Video", "breadcrumb":"Video"  },
+					{"page":"h5Audio", "topic":"HTML5 Audio", "breadcrumb":"Audio"  },
+					{"page":"h5Plugins", "topic":"HTML5 Plugins", "breadcrumb":"Plugins"  },					
 
-					{"page":"css", "topic":"HTML CSS", "breadcrumb":"CSS"  },
-					{"page":"links", "topic":"HTML Links", "breadcrumb":"Links"  },
-					{"page":"images", "topic":"HTML Images", "breadcrumb":"Images"  },					
+					{"page":"h5Youtube", "topic":"HTML5 Youtube", "breadcrumb":"Youtube"  },
+					{"page":"h5Geolocation", "topic":"HTML5 Geolocation", "breadcrumb":"Geolocation"  },
+					{"page":"h5DragDrop", "topic":"HTML5 Drag Drop", "breadcrumb":"Drag Drop"  },					
 
-					{"page":"tables", "topic":"HTML Tables", "breadcrumb":"Tables"  },
-					{"page":"lists", "topic":"HTML Lists", "breadcrumb":"Lists"  },
-					{"page":"blocks", "topic":"HTML Blocks", "breadcrumb":"Blocks"  },	
+					{"page":"h5LocalStorage", "topic":"HTML5 Local Storage", "breadcrumb":"Local Storage"  },
+					{"page":"h5AppCache", "topic":"HTML5 App Cache", "breadcrumb":"App Cache"  },
+					{"page":"h5WebWorkers", "topic":"HTML5 Web Workers", "breadcrumb":"Web Workers"  },	
 
-					{"page":"classes", "topic":"HTML Classes", "breadcrumb":"Classes"  },
-					{"page":"layout", "topic":"HTML Layout", "breadcrumb":"Layout"  },
-					{"page":"responsive", "topic":"HTML Responsive", "breadcrumb":"Responsive"  },					
-
-					{"page":"iframes", "topic":"HTML Iframes", "breadcrumb":"Iframes"  },
-					{"page":"colorNames", "topic":"HTML Color Names", "breadcrumb":"Color Names"  },
-					{"page":"colorValues", "topic":"HTML Color Values", "breadcrumb":"Color Values"  },					
-
-					{"page":"colorShades", "topic":"HTML Color Shades", "breadcrumb":"Color Shades"  },
-					{"page":"javascript", "topic":"HTML Javascript", "breadcrumb":"Javascript"  },
-					{"page":"head", "topic":"HTML Head", "breadcrumb":"Head"  },	
-
-					{"page":"entities", "topic":"HTML Entities", "breadcrumb":"Entities"  },
-					{"page":"symbols", "topic":"HTML Symbols", "breadcrumb":"Symbols"  },
-					{"page":"charset", "topic":"HTML Charset", "breadcrumb":"Charset"  },
-
-					{"page":"urlEncode", "topic":"HTML Url Encode", "breadcrumb":"Url Encode"  },
-					{"page":"xhtml", "topic":"XHTML", "breadcrumb":"XHTML"  }
-					
+					{"page":"h5SSE", "topic":"HTML5 SSE", "breadcrumb":"SSE"  }					
 					
 				],
 

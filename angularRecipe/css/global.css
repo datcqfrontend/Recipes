@@ -222,15 +222,21 @@ div.code-body {
 
   .navbar-nav > #bootstrap.active>a {    background-color: #892cca; background-image: none;}
   .navbar-nav > #angular.active>a {    background-color: #B92933;  background-image: none;}
-  .navbar-nav > #group-html.html.active>a {    background-color: #e44d26; background-image: none;}
-  .navbar-nav > #group-html.html5.active>a {    background-color: #e44d26; background-image: none;}
+  .navbar-nav > #group-html.html.active>a, .navbar-nav > #group-html #html.active>a {    background-color: #e44d26; background-image: none;}
+  .navbar-nav > #group-html.html5.active>a, .navbar-nav > #group-html #html5.active>a {    background-color: #e44d26; background-image: none;}
   .navbar-nav > #css.active>a {    background-color: #1572b6;  background-image: none;}
 
-  .navbar-nav > #group-js.javascript.active>a {    background-color: #efc825;  background-image: none;}
-  .navbar-nav > #group-js.jquery.active>a {    background-color: #00529c;  background-image: none;}
+  .navbar-nav > #group-js.javascript.active>a, .navbar-nav > #group-js #javascript.active>a {    background-color: #efc825;  background-image: none;}
+  .navbar-nav > #group-js.jquery.active>a, .navbar-nav > #group-js #jquery.active>a {    background-color: #00529c;  background-image: none;}
 /* END NAVBAR*/
  
 /* HTML5 */
+
+  .html5 .html5badge {
+      background-image: url('../images/html5_badge20.png');
+      background-repeat: no-repeat;
+      background-position: right;
+  }
 
   .html5 .jumbotron-page {
       background-color: #e44d26;

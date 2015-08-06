@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5InputTypes" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,9 +6,744 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>Input Type: text</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        <span class="spanRed">&lt;input type="text"&gt;</span> defines a one-line input field for text input:
+                        
+                        <form>
+                        First name:<br>
+                        <input type="text" name="firstname">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="lastname">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>First name:&lt;br&gt;
+                            <br>&lt;input type="text" name="firstname"&gt;
+                            <br>&lt;br&gt;
+                            <br>Last name:&lt;br&gt;
+                            <br>&lt;input type="text" name="lastname"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>TInput Type: password</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="password"&gt;</span> defines a password field:
+
+                        <form>
+                        User name:<br>
+                        <input type="text" name="username">
+                        <br>
+                        User password:<br>
+                        <input type="password" name="psw">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>User name:&lt;br&gt;
+                            <br>&lt;input type="text" name="username"&gt;
+                            <br>&lt;br&gt;
+                            <br>User password:&lt;br&gt;
+                            <br>&lt;input type="password" name="psw"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br>The characters in a password field are masked (shown as asterisks or circles).
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Input Type: submit</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="submit"&gt;</span> defines a button for submitting form input to a form-handler.
+                        <br>The form-handler is typically a server page with a script for processing input data.
+                        <br>The form-handler is specified in the form's action attribute:
+
+                        <form action="action_page.php">
+                        First name:<br>
+                        <input type="text" name="firstname" value="Mickey">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="lastname" value="Mouse">
+                        <br><br>
+                        <input type="submit" disabled="disabled">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form action="action_page.php"&gt;
+                            <br>First name:&lt;br&gt;
+                            <br>&lt;input type="text" name="firstname" value="Mickey"&gt;
+                            <br>&lt;br&gt;
+                            <br>Last name:&lt;br&gt;
+                            <br>&lt;input type="text" name="lastname" value="Mouse"&gt;
+                            <br>&lt;br&gt;&lt;br&gt;
+                            <br>&lt;input type="submit" value="Submit"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br>If you omit the submit button's value attribute, the button will get a default text: "Submit"
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Input Type: radio</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="radio"&gt;</span> defines a radio button.
+                        <br>Radio buttons let a user select ONLY ONE of a limited number of choices:
+
+                        <form>
+                        <input type="radio" name="sex" value="male" checked> Male
+                        <br>
+                        <input type="radio" name="sex" value="female"> Female
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&lt;input type="radio" name="sex" value="male" checked&gt; Male
+                            <br>&lt;br&gt;
+                            <br>&lt;input type="radio" name="sex" value="female"&gt; Female
+                            <br>&lt;/form&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Input Type: checkbox</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="checkbox"&gt;</span> defines a checkbox.
+                        <br>Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+
+                        <form>
+                        <input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+                        <br>
+                        <input type="checkbox" name="vehicle2" value="Car"> I have a car 
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&lt;input type="checkbox" name="vehicle1" value="Bike"&gt; I have a bike
+                            <br>&lt;br&gt;
+                            <br>&lt;input type="checkbox" name="vehicle2" value="Car"&gt; I have a car 
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Input Type: button</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="button"&gt;</span> defines a button:
+                        <br>
+                        <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+                        <br>
+                        <div class="code-body">
+                            &lt;input type="button" onclick="alert('Hello World!')" value="Click Me!"&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 Input Types</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 added several new input types:                        
+                        <ul>
+                            <li>color</li>
+                            <li>date</li>
+                            <li>datetime</li>
+                            <li>datetime-local</li>
+                            <li>email</li>
+                            <li>month</li>
+                            <li>number</li>
+                            <li>range</li>
+                            <li>search</li>
+                            <li>tel</li>
+                            <li>time</li>
+                            <li>url</li>
+                            <li>week</li>
+                        </ul>
+                        Input types, not supported by old web browsers, will behave as input type text.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: number</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="number"&gt;</span> is used for input fields that should contain a numeric value.
+                        <br>You can set restrictions on the numbers.
+                        <br>Depending on browser support, the restrictions can apply to the input field
+
+                        <form>
+                          Quantity (between 1 and 5):
+                          <input type="number" name="quantity" min="1" max="5">
+                        </form>
+                        <br>
+                        <div class="code-body">
+                            &lt;form>
+                            <br>&nbsp;&nbsp;&nbsp;  Quantity (between 1 and 5):
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="number" name="quantity" min="1" max="5">
+                            <br>&lt;/form>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Restrictions</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                    </div>
+                  <div class="panel-body">  
+                    <p>
+                        Here is a list of some common input restrictions (some are new in HTML5):
+                        <table class="reference notranslate">
+                        <tbody><tr>
+                        <th style="width:20%">Attribute</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td>disabled</td>
+                        <td>Specifies that an input field should be disabled</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge">max</td>
+                        <td>Specifies the maximum value for an input field</td>
+                        </tr>
+                        <tr>
+                        <td>maxlength</td>
+                        <td>Specifies the maximum number of character for an input field</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge">min</td>
+                        <td>Specifies the minimum value for an input field</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge">pattern</td>
+                        <td>Specifies a regular expression to check the input value against</td>
+                        </tr>
+                        <tr>
+                        <td>readonly</td>
+                        <td>Specifies that an input field is read only (cannot be changed)</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge">required</td>
+                        <td>Specifies that an input field is required (must be filled out)</td>
+                        </tr>
+                        <tr>
+                        <td>size</td>
+                        <td>Specifies the width (in characters) of an input field</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge">step</td>
+                        <td>Specifies the legal number intervals for an input field</td>
+                        </tr>
+                        <tr>
+                        <td>value</td>
+                        <td>Specifies the default value for an input field</td>
+                        </tr>
+                        </tbody></table>
+
+                        <form>
+                          Quantity:
+                          <input type="number" name="points" min="0" max="100" step="10" value="30">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Quantity:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="number" name="points" min="0" max="100" step="10" value="30"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: date</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="date"&gt;</span> is used for input fields that should contain a date.
+                        <br>Depending on browser support, a date picker can show up in the input field.
+
+                        <form>
+                          Birthday:
+                          <input type="date" name="bday">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Birthday:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="date" name="bday"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br>You can add restrictions to the input:
+
+                        <form>
+                          Enter a date before 1980-01-01:
+                          <input type="date" name="bday" max="1979-12-31"><br>
+                          Enter a date after 2000-01-01:
+                          <input type="date" name="bday" min="2000-01-02"><br>
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Enter a date before 1980-01-01:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="date" name="bday" max="1979-12-31"&gt;&lt;br&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Enter a date after 2000-01-01:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="date" name="bday" min="2000-01-02"&gt;&lt;br&gt;
+                            &lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: color</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="color"&gt;</span> is used for input fields that should contain a color.
+                        <br>Depending on browser support, a color picker can show up in the input field.
+                        <form>
+                          Select your favorite color:
+                          <input type="color" name="favcolor">
+                        </form>                        
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Select your favorite color:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="color" name="favcolor"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: range</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="range"&gt;</span> is used for input fields that should contain a value within a range.
+                        <br>Depending on browser support, the input field can be displayed as a slider control.
+                        <form>
+                          <input type="range" name="points" min="0" max="10">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="range" name="points" min="0" max="10"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br>You can use the following attributes to specify restrictions: min, max, step, value.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: month</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="month"&gt;</span> allows the user to select a month and year.
+                        <br>Depending on browser support, a date picker can show up in the input field.
+
+                        <form>
+                          Birthday (month and year):
+                          <input type="month" name="bdaymonth">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Birthday (month and year):
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="month" name="bdaymonth"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: week</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="week"&gt;</span> allows the user to select a week and year.
+                        <br>Depending on browser support, a date picker can show up in the input field.
+
+                        <form>
+                          Select a week:
+                          <input type="week" name="week_year">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Select a week:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="week" name="week_year"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: time</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="time"&gt;</span> allows the user to select a time (no time zone).
+                        <br>Depending on browser support, a time picker can show up in the input field.
+
+                        <form>
+                          Select a time:
+                          <input type="time" name="usr_time">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Select a time:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="time" name="usr_time"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: datetime</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/incompatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="datetime"&gt;</span> allows the user to select a date and time (with time zone).
+
+                        <form>
+                          Birthday (date and time):
+                          <input type="datetime" name="bdaytime">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Birthday (date and time):
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="datetime" name="bdaytime"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                        <br>The input type datetime is removed from the HTML standard. Use datetime-local instead.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: datetime-local</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="datetime-local"&gt;</span> allows the user to select a date and time (no time zone).
+                        <br>Depending on browser support, a date picker can show up in the input field.
+
+                        <form>
+                          Birthday (date and time):
+                          <input type="datetime-local" name="bdaytime">
+                        </form>
+                        <br>
+
+                         <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Birthday (date and time):
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="datetime-local" name="bdaytime"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: email</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="email"&gt;</span> is used for input fields that should contain an e-mail address.
+                        <br>Depending on browser support, the e-mail address can be automatically validated when submitted.
+                        <br>Some smartphones recognize the email type, and adds ".com" to the keyboard to match email input.
+
+                        <form>
+                          E-mail:
+                          <input type="email" name="email">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  E-mail:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="email" name="email"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: search</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/incompatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="search"&gt;</span> is used for search fields (a search field behaves like a regular text field).
+
+                        <form>
+                          Search Google:
+                          <input type="search" name="googlesearch">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Search Google:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="search" name="googlesearch"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: tel</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/incompatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="tel"&gt;</span> is used for input fields that should contain a telephone number.
+                        <br>The tel type is currently supported only in Safari 8.
+
+                        <form>
+                          Telephone:
+                          <input type="tel" name="usrtel">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Telephone:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="tel" name="usrtel"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
 
 
                     </p>
@@ -16,6 +751,47 @@
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Input Type: url</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="images/incompatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        <span class="spanRed">&lt;input type="url"&gt;</span> is used for input fields that should contain a URL address.
+                        <br>Depending on browser support, the url field can be automatically validated when submitted
+                        <br>Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input.
+
+                        <form>
+                          Add your homepage:
+                          <input type="url" name="homepage">
+                        </form>
+                        <br>
+
+                        <div class="code-body">
+                            &lt;form&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  Add your homepage:
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;input type="url" name="homepage"&gt;
+                            <br>&lt;/form&gt;
+                        </div>
+
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            
             
         </div>       
         <!-- /.row -->

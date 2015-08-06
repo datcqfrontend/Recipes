@@ -182,19 +182,19 @@
 		},
 		{ 
 			"title": "Forms",
-			"sortContent":  "",
+			"sortContent":  "HTML forms are used to collect user input.<br>The <span class='spanRed'>&lt;form&gt;</span> element defines an HTML form.<br>HTML forms contain form elements.<br>Form elements are different types of input elements, checkboxes, radio buttons, submit buttons, and more.",
 			"link": "#html/forms"
 		},	
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Form Elements",
-			"sortContent":  "",
+			"sortContent":  "This chapter describes all HTML form elements.",
 			"link": "#html/formElements"
 		},	
 		{ 
 			"title": "Input Types",
-			"sortContent":  "",
+			"sortContent":  "This chapter describes the input types of the &lt;input&gt; element.",
 			"link": "#html/inputTypes"
 		},
 		{ 
