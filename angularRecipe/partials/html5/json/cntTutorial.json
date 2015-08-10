@@ -2,7 +2,7 @@
 	"content":[
 		{ 
 			"title": "H5 Intro",
-			"sortContent":  "",
+			"sortContent":  "The DOCTYPE declaration for HTML5 is very simple:<div class='code-body'>&lt;!DOCTYPE html&gt;</div><br>The character encoding (charset) declaration is also very simple:<div class='code-body'>&lt;meta charset='UTF-8'&gt;</div><br>The default character encoding in HTML5 is UTF-8.",
 			"link": "#html5/h5Intro"
 		},	
 		{ 
