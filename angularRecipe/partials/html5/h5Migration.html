@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Migration" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,549 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>Migration from HTML4 to HTML5</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        This chapter is entirely about how to migrate from a typical HTML4 page to a typical HTML5 page.
+                        <br>This chapter demonstrates how to convert an HTML4 page into an HTML5 page, without destroying anything of the original content or structure.
+                        <br>You can migrate to HTML5 from HTML4 or XHTML, using the same recipe..
 
+                        <table class="table table-bordered">
+                        <tbody><tr>
+                        <th>Typical HTML4</th>
+                        <th>Typical HTML5</th>
+                        </tr>
+                        <tr>
+                        <td>&lt;div id="header"&gt;</td>
+                        <td>&lt;header&gt;</td>
+                        </tr>
+                        <tr>
+                        <td>&lt;div id="menu"&gt;</td>
+                        <td>&lt;nav&gt;</td>
+                        </tr>
+                        <tr>
+                        <td>&lt;div id="content"&gt;</td>
+                        <td>&lt;section&gt;</td>
+                        </tr>
+                        <tr>
+                        <td>&lt;div id="post"&gt;</td>
+                        <td>&lt;article&gt;</td>
+                        </tr>
+                        <tr>
+                        <td>&lt;div id="footer"&gt;</td>
+                        <td>&lt;footer&gt;</td>
+                        </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>A Typical HTML4 Page</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <div class="code-body">
+                            &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+                            <br>&lt;html lang="en"&gt;
+                            <br>&lt;head&gt;
+                            <br>&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt;
+                            <br>&lt;title&gt;HTML4&lt;/title&gt;
+                            <br>&lt;style&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  body {font-family:Verdana,sans-serif;font-size:0.8em;}
+                            <br>&nbsp;&nbsp;&nbsp;  div#header,div#footer,div#content,div#post 
+                            <br>&nbsp;&nbsp;&nbsp;  {border:1px solid grey;margin:5px;margin-bottom:15px;padding:8px;background-color:white;}
+                            <br>&nbsp;&nbsp;&nbsp;  div#header,div#footer {color:white;background-color:#444;margin-bottom:5px;}
+                            <br>&nbsp;&nbsp;&nbsp;  div#content {background-color:#ddd;}
+                            <br>&nbsp;&nbsp;&nbsp;  div#menu ul {margin:0;padding:0;}
+                            <br>&nbsp;&nbsp;&nbsp;  div#menu ul li {display:inline; margin:5px;}
+                            <br>&lt;/style&gt;
+                            <br>&lt;/head&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;div id="header"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h1&gt;Monday Times&lt;/h1&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;div id="menu"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;News&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Sports&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Weather&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/ul&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;div id="content"&gt;
+                            <br>&lt;h2&gt;News Section&lt;/h2&gt;
+                            <br>
+                            <br>&lt;div id="post"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h2&gt;News Article&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;div id="post"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h2&gt;News Article&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;div id="footer"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;&amp;copy; 2014 Monday Times. All rights reserved.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
 
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Change to HTML5 Doctype</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Change the doctype, from the HTML4 doctype:
+                        <div class="code-body">
+                            &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+                        </div>
+
+                        <br>to the HTML5 doctype:
+                        <div class="code-body">
+                            &lt;!DOCTYPE HTML html&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Change to HTML5 Encoding</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Change the encoding information, from HTML4:
+                        <div class="code-body">
+                            &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt;
+                        </div>
+
+                        <br>to HTML5:
+                        <div class="code-body">
+                            &lt;meta charset="utf-8"&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Add The Shiv</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 semantic elements are supported in all modern browsers.
+                        <br>In addition, you can "teach" older browsers how to handle "unknown elements".
+                        <br>Add the shiv for Internet Explorer support:
+
+                        <div class="code-body">
+                            &lt;!--[if lt IE 9]&gt;
+                              &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+                            &lt;![endif]--&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Add CSS for HTML5 Semantic Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Look at your existing CSS styles:
+                        <div class="code-body">
+                            div#header,div#footer,div#content,div#post {
+                            <br>&nbsp;&nbsp;&nbsp;    border:1px solid grey;margin:5px;margin-bottom:15px;padding:8px;background-color:white;
+                            <br>}
+                            <br>div#header,div#footer {
+                            <br>&nbsp;&nbsp;&nbsp;    color:white;background-color:#444;margin-bottom:5px;
+                            <br>}
+                            <br>div#content {
+                            <br>&nbsp;&nbsp;&nbsp;    background-color:#ddd;
+                            <br>}
+                            <br>div#menu ul {
+                            <br>&nbsp;&nbsp;&nbsp;    margin:0;padding:0;
+                            <br>}
+                            <br>div#menu ul li {
+                            <br>&nbsp;&nbsp;&nbsp;    display:inline; margin:5px;
+                            <br>}
+                        </div>
+
+                        <br>Duplicate with equal CSS styles for HTML5 semantic elements:
+                        <div class="code-body">
+                            header,footer,section,article {
+                            <br>&nbsp;&nbsp;&nbsp;     border:1px solid grey;margin:5px;margin-bottom:15px;padding:8px;background-color:white;
+                            <br>}
+                            <br>header,footer {
+                            <br>&nbsp;&nbsp;&nbsp;     color:white;background-color:#444;margin-bottom:5px;
+                            <br>}
+                            <br>section {
+                            <br>&nbsp;&nbsp;&nbsp;     background-color:#ddd;
+                            <br>}
+                            <br>nav ul  {
+                            <br>&nbsp;&nbsp;&nbsp;     margin:0;padding:0;
+                            <br>}
+                            <br>nav ul li {
+                            <br>&nbsp;&nbsp;&nbsp;     display:inline; margin:5px;
+                            <br>}
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Change to HTML5 &lt;header&gt; and &lt;footer&gt;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Change the &lt;div&gt; elements with id="header" and id="footer":
+                        <div class="code-body">
+                            &lt;div id="header"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;   &lt;h1&gt;Monday Times&lt;/h1&gt;
+                            <br>&lt;/div&gt;
+                            <br>.
+                            <br>.
+                            <br>.
+                            <br>&lt;div id="footer"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;   &lt;p&gt;&amp;copy; 2014 W3Schools. All rights reserved.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+
+                        <br>to HTML5 semantic &lt;header&gt; and &lt;footer&gt; elements:
+                        <div class="code-body">
+                            &lt;header&gt;
+                            <br>&nbsp;&nbsp;&nbsp;   &lt;h1&gt;Monday Times&lt;/h1&gt;
+                            <br>&lt;/header&gt;
+                            <br>.
+                            <br>.
+                            <br>.
+                            <br>&lt;footer&gt;
+                            <br>&nbsp;&nbsp;&nbsp;   &lt;p&gt;&amp;copy; 2014 W3Schools. All rights reserved.&lt;/p&gt;
+                            <br>&lt;/footer&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Change to HTML5 &lt;nav&gt;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Change the &lt;div&gt; element with id="menu":
+                        <div class="code-body">
+                            &lt;div id="menu"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;News&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Sports&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Weather&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/ul&gt;
+                            <br>&lt;/div&gt;
+
+                        </div>
+
+                        <br>to an HTML5 semantic &lt;nav&gt; element:
+                        <div class="code-body">
+                            &lt;nav&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;News&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Sports&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Weather&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/ul&gt;
+                            <br>&lt;/nav&gt;
+                        </div>
+                    </p>    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Change to HTML5 &lt;section&gt;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Change the &lt;div&gt; element with id="content":
+                        <div class="code-body">
+                            &lt;div id="content"&gt;
+                            <br>.
+                            <br>.
+                            <br>.
+                            <br>&lt;/div&gt;
+                        </div>
+
+                        <br>to an HTML5 semantic &lt;section&gt; element:
+                        <div class="code-body">
+                            &lt;section&gt;
+                            <br>.
+                            <br>.
+                            <br>.
+                            <br>&lt;/section&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Change to HTML5 &lt;article&gt;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Change all &lt;div&gt; element with class="post":
+                        <div class="code-body">
+                            &lt;div class="post"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h2&gt;News Article&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&lt;/div&gt;
+                        </div>
+
+                        <br>to HTML5 semantic &lt;article&gt; elements:
+                        <div class="code-body">
+                            &lt;article&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h2&gt;News Article&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Remove these "no longer needed" &lt;style&gt; elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Remove style elements:
+                        <div class="code-body">
+                            div#header,div#footer,div#content,div#post {
+                            <br>&nbsp;&nbsp;&nbsp;    border:1px solid grey;margin:5px;margin-bottom:15px;padding:8px;background-color:white;
+                            <br>}
+                            <br>div#header,div#footer {
+                            <br>&nbsp;&nbsp;&nbsp;    color:white;background-color:#444;margin-bottom:5px;
+                            <br>}
+                            <br>div#content {
+                            <br>&nbsp;&nbsp;&nbsp;    background-color:#ddd;
+                            <br>}
+                            <br>div#menu ul {
+                            <br>&nbsp;&nbsp;&nbsp;    margin:0;padding:0;
+                            <br>}
+                            <br>div#menu ul li {
+                            <br>&nbsp;&nbsp;&nbsp;    display:inline; margin:5px;
+                            <br>}
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>A Typical HTML5 Page</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Finally you can remove the &lt;head&gt; tags. They are not needed in HTML5:
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html lang="en"&gt;
+                            <br>&lt;title&gt;HTML5&lt;/title&gt;
+                            <br>&lt;meta charset="utf-8"&gt;
+                            <br>
+                            <br>&lt;!--[if lt IE 9]&gt;
+                            <br>&lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;
+                            <br>&lt;/script&gt;
+                            <br>&lt;![endif]--&gt;
+                            <br>
+                            <br>&lt;style&gt;
+                            <br>body {font-family:Verdana,sans-serif;font-size:0.8em;}
+                            <br>header,footer,section,article {
+                            <br>&nbsp;&nbsp;&nbsp;    border:1px solid grey;
+                            <br>&nbsp;&nbsp;&nbsp;    margin:5px;margin-bottom:15px;padding:8px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color:white;
+                            <br>}
+                            <br>header,footer {color:white;background-color:#444;margin-bottom:5px;
+                            }
+                            <br>section {background-color:#ddd;}
+                            <br>nav ul {margin:0;padding:0;}
+                            <br>nav ul li {display:inline; margin:5px;}
+                            <br>&lt;/style&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;header&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h1&gt;Monday Times&lt;/h1&gt;
+                            <br>&lt;/header&gt;
+                            <br>
+                            <br>&lt;nav&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;News&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Sports&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;li&gt;Weather&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/ul&gt;
+                            <br>&lt;/nav&gt;
+                            <br>
+                            <br>&lt;section&gt;
+                            <br>&lt;h2&gt;News Section&lt;/h2&gt;
+                            <br>
+                            <br>&lt;article&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h2&gt;News Article&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                            <br>
+                            <br>&lt;article&gt;
+                            <br>&lt;h2&gt;News Article&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum ipsum lurum hurum turum.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                            <br>
+                            <br>&lt;/section&gt;
+                            <br>
+                            <br>&lt;footer&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;&amp;copy; 2014 Monday Times. All rights reserved.&lt;/p&gt;
+                            <br>&lt;/footer&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
             
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Difference Between &lt;article&gt; &lt;section&gt; and &lt;div&gt;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        There is a confusing (lack of) difference in the HTML5 standard, between &lt;article&gt; &lt;section&gt; and &lt;div&gt;.
+                        <br>In the HTML5 standard, the &lt;section&gt; element is defined as a block of related elements.
+                        <br>The &lt;article&gt; element is defined as a complete, self-contained block of related elements.
+                        <br>The &lt;div&gt; element is defined as a block of children elements.
+                        <br>How to interpret that?
+                        <br>In the example above, we have used &lt;section&gt; as a container for related &lt;articles&gt;.
+                        <br>But, we could have used &lt;article&gt; as a container for articles as well.
+                        <br>Here are some different examples:
+
+                        <h3>&lt;article&gt; in &lt;article&gt;</h3>
+                        <div class="code-body">
+                            &lt;article&gt;
+                            <br>&lt;h2&gt;Famous Cities&lt;/h2&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;article&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;London&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/article&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;article&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Paris&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/article&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;article&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Tokyo&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/article&gt;
+                            <br>&lt;/article&gt;
+                        </div>
+
+                        <hr>
+                        <h3>&lt;div&gt; in &lt;article&gt;</h3>                        
+                        <div class="code-body">
+                            &lt;article&gt;
+                            <br>&lt;h2&gt;Famous Cities&lt;/h2&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="city"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;London&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="city"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Paris&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="city"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Tokyo&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>&lt;/article&gt;
+                        </div>
+
+                        <hr>
+                        <h3>&lt;div&gt; in &lt;section&gt; in &lt;article&gt;</h3>                        
+                        <div class="code-body">
+                            &lt;article&gt;
+                            <br>
+                            <br>&lt;section&gt;
+                            <br>&lt;h2&gt;Famous Cities&lt;/h2&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="city"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;London&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="city"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Paris&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="city"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Tokyo&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>&lt;/section&gt;
+                            <br>
+                            <br>&lt;section&gt;
+                            <br>&lt;h2&gt;Famous Countries&lt;/h2&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="country"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;England&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="country"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;France&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;div class="country"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h2&gt;Japan&lt;/h2&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;/div&gt;
+                            <br>&lt;/section&gt;
+
+                            <br>&lt;/article&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
         </div>       
         <!-- /.row -->
 

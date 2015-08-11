@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Youtube" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,11 +6,105 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>Struggling with Video Formats?</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Different versions of different browsers support different video formats.
+                        <br>Earlier in this tutorial, you have seen that you might have to convert your videos to different video formats to make them play in all browsers.
+                        <br>Converting videos to different format can be difficult and time consuming.
+                        <br>An easier solution might be to let YouTube play the videos in your web page.
 
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>YouTube Video Id</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        YouTube will display an id (like XGSy3_Czz8k), when you save (or play) a video.
+                        <br>You can use this id, and refer to your video in HTML.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Playing a YouTube Video in HTML</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To play your video on a web page, do the following:
+                        <ul>
+                         <li>Upload the video to YouTube</li>
+                         <li>Take a note of the video id</li>
+                         <li>Define an &lt;iframe&gt; element in your web page</li>
+                         <li>Let the src attribute point to the video URL</li>
+                         <li>Use the width and height attributes to specify the dimension of the player</li>
+                         <li>Add any other parameters to the URL</li>
+                        </ul>
+
+                        <codeBody>
+                            &lt;iframe width="420" height="315" 
+                            <br>src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1"&gt;
+                            <br>&lt;/iframe&gt;
+                        </codeBody
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>YouTube Parameters</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <b>autohide</b>
+                        <br>Value 0: The player controls are always visible.
+                        <br>Value 1: The player controls hides automatically when the video plays.
+                        <br>Value 2 (default): If the player has 16:9 or 4:3 ratio, same as 1, otherwise same as 0.
+                        <br>
+                        <br><b>autoplay</b>
+                        <br>Value 0 (default): The video will not play automatically when the player loads.
+                        <br>Value 1: The video will play automatically when the player loads.
+                        <br>
+                        <br><b>controls</b>
+                        <br>Value 0: Player controls does not display. The video loads immediately.
+                        <br>Value 1 (default): Player controls display. The video loads immediately.
+                        <br>Value 2: Player controls display, but the video does not load before the user initiates playback. 
+                        <br>
+                        <br><b>loop</b>
+                        <br>Value 0 (default): The video will play only once.
+                        <br>Value 1: The video will loop (forever).
+                        <br>
+                        <br><b>playlist</b>
+                        <br>A comma separated list of videos to play (in addition to the original URL).
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>YouTube &lt;object&gt; Embeds</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        YouTube &lt;object&gt; embeds were deprecated from January 2015.
+                        <br>You should migrate your applications to use &lt;iframe&gt; embeds.
+
+                        <codeBody>
+                            //USING OBJECT
+                            <br>&lt;object width="420" height="315"
+                            <br>data="http://www.youtube.com/embed/XGSy3_Czz8k"&gt;
+                            <br>&lt;/object&gt;
+                            <br>
+                            <br>//USING EMBED
+                            <br>&lt;embed width="420" height="315" src="http://www.youtube.com/embed/XGSy3_Czz8k"&gt;
+                        </codeBody>
                     </p>
                   </div>
                 </div>

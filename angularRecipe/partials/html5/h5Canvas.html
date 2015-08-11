@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Canvas" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,15 +6,267 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML5 Canvas</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        The HTML &lt;canvas&gt; element is used to draw graphics on a web page.
+                        <br>The graphic to the left is created with &lt;canvas&gt;. It shows four elements: a red rectangle, a gradient rectangle, a multicolor rectangle, and a multicolor text.
+
 
 
                     </p>
                   </div>
                 </div>
             </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>What is HTML Canvas?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The HTML &lt;canvas&gt; element is used to draw graphics, on the fly, via scripting (usually JavaScript).
+                        <br>The &lt;canvas&gt; element is only a container for graphics. You must use a script to actually draw the graphics.
+                        <br>Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the &lt;canvas&gt; element.                            
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">&lt;canvas&gt;</td>
+                            <td>4.0</td>
+                            <td>9.0</td>
+                            <td>2.0</td>
+                            <td>3.1</td>
+                            <td>9.0</td>
+                          </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Canvas Examples</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+                        <br>The markup looks like this:
+                        <div class="code-body">
+                            &lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+                        </div>
+
+                        <br>Note: Always specify an id attribute (to be referred to in a script), and a width and height attribute to define the size of the canvas.
+                        <br>To add a border, use the style attribute:
+                        <div class="code-body">
+                            &lt;canvas id="myCanvas" width="200" height="100" <span class="spanYellow">style="border:1px solid #000000;"</span>&gt;&lt;/canvas&gt;
+                        </div>
+
+                        <hr>
+                        <h4>Drawing with JavaScript</h4>
+
+                        <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas1");
+                            var ctx = c.getContext("2d");
+                            ctx.fillStyle = "#FF0000";
+                            ctx.fillRect(0,0,150,75);
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>ctx.fillStyle = "#FF0000";
+                            <br>ctx.fillRect(0,0,150,75);
+                        </div>
+
+                        <br>
+                        <hr>
+                        <h4>Drawing Draw a Line</h4>
+
+                        <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas2");
+                            var ctx = c.getContext("2d");
+                            ctx.moveTo(0,0);
+                            ctx.lineTo(200,100);
+                            ctx.stroke();
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>ctx.moveTo(0,0);
+                            <br>ctx.lineTo(200,100);
+                            <br>ctx.stroke();
+                        </div>
+
+                        <br>
+                        <hr>
+                        <h4>Drawing Draw a Circle</h4>
+
+                        <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas3");
+                            var ctx = c.getContext("2d");
+                            ctx.beginPath();
+                            ctx.arc(95,50,40,0,2*Math.PI);
+                            ctx.stroke();   
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>ctx.beginPath();
+                            <br>ctx.arc(95,50,40,0,2*Math.PI);
+                            <br>ctx.stroke();                            
+                        </div>
+
+                        <br>
+                        <hr>
+                        <h4>Drawing Draw a Text</h4>
+
+                        <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas4");
+                            var ctx = c.getContext("2d");
+                            ctx.font = "30px Arial";
+                            ctx.fillText("Hello World",10,50);
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>ctx.font = "30px Arial";
+                            <br>ctx.fillText("Hello World",10,50);                                            
+                        </div>
+
+                        <br>
+                        <hr>
+                        <h4>Stroke Text</h4>
+
+                        <canvas id="myCanvas5" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas5");
+                            var ctx = c.getContext("2d");
+                            ctx.font = "30px Arial";
+                            ctx.strokeText("Hello World",10,50);  
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>ctx.font = "30px Arial";
+                            <br>ctx.strokeText("Hello World",10,50);                                        
+                        </div>
+
+                        <br>
+                        <hr>
+                        <h4>Draw Linear Gradient</h4>
+
+                        <canvas id="myCanvas6" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas6");
+                            var ctx = c.getContext("2d");
+                            
+                            var grd = ctx.createLinearGradient(0,0,200,0);
+                            grd.addColorStop(0,"red");
+                            grd.addColorStop(1,"white");
+
+                            ctx.fillStyle = grd;
+                            ctx.fillRect(10,10,150,80);
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>
+                            <br>// Create gradient
+                            <br>var grd = ctx.createLinearGradient(0,0,200,0);
+                            <br>grd.addColorStop(0,"red");
+                            <br>grd.addColorStop(1,"white");
+                            <br>
+                            <br>// Fill with gradient
+                            <br>ctx.fillStyle = grd;
+                            <br>ctx.fillRect(10,10,150,80);                                      
+                        </div>
+
+                        <br>
+                        <hr>
+                        <h4>Draw Circular Gradient</h4>
+
+                        <canvas id="myCanvas7" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas7");
+                            var ctx = c.getContext("2d");
+                            
+                            var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+                            grd.addColorStop(0,"red");
+                            grd.addColorStop(1,"white");
+
+                            ctx.fillStyle = grd;
+                            ctx.fillRect(10,10,150,80);
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>// Create gradient
+                            <br>var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+                            <br>grd.addColorStop(0,"red");
+                            <br>grd.addColorStop(1,"white");
+                            <br>
+                            <br>// Fill with gradient
+                            <br>ctx.fillStyle = grd;
+                            <br>ctx.fillRect(10,10,150,80);                                       
+                        </div>
+
+                        <br>
+                        <hr>
+                        <h4>Draw Image</h4>
+
+                        <canvas id="myCanvas8" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                        <script type="text/javascript">
+                            var c = document.getElementById("myCanvas8");
+                            var ctx = c.getContext("2d");
+                            
+                            var img = document.getElementById("myCanvas7");
+                            ctx.drawImage(img,10,10);     
+
+                        </script>
+
+                        <div class="code-body">
+                            var c = document.getElementById("myCanvas");
+                            <br>var ctx = c.getContext("2d");
+                            <br>var img = document.getElementById("scream");
+                            <br>ctx.drawImage(img,10,10);                                     
+                        </div>
+
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            
 
             
         </div>       

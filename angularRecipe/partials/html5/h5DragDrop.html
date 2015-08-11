@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5DragDrop" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,9 +6,12 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>Drag and Drop</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Drag and drop is a very common feature. It is when you "grab" an object and drag it to a different location.
+                        <br>In HTML5, drag and drop is part of the standard, and any element can be draggable.
+
 
 
                     </p>
@@ -16,6 +19,176 @@
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports Drag and Drop.
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                             <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                  
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">Drag and Drop</td>
+                            <td>4.0</td>
+                            <td>9.0</td>
+                            <td>3.5</td>
+                            <td>6.0</td>
+                            <td>12.0</td>
+                          </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Drag and Drop Example</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The example below is a simple drag and drop example:
+                        <div class="row">
+                            <div id="div1" class="col-md-6" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:200px;height:200px;border:solid 1px #000;">
+                                <img id="drag1" src="media/images/html5.png" draggable="true"
+                                ondragstart="drag(event)" width="144" height="144">
+                            </div>
+                            <div id="div2" class="col-md-6" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:200px;height:200px;border:solid 1px #000;"></div>
+                            
+                        </div>
+                        
+                        <script>
+                        function allowDrop(ev) {
+                            ev.preventDefault();
+                        }
+
+                        function drag(ev) {
+                            ev.dataTransfer.setData("text", ev.target.id);
+                        }
+
+                        function drop(ev) {
+                            ev.preventDefault();
+                            var data = ev.dataTransfer.getData("text");
+                            ev.target.appendChild(document.getElementById(data));
+                        }
+                        </script>
+                        <br>                        
+                        <codeBody>
+                            &lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
+                            <br>&nbsp;&nbsp;&nbsp; &lt;img id="drag1" src="media/images/html5.png" draggable="true"
+                            ondragstart="drag(event)" width="114" height="114"&gt;
+                            <br>&lt;/div&gt;
+                            <br>&lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
+
+                            <br>
+                            <br>&lt;script&gt;
+                            <br>function allowDrop(ev) {
+                            <br>&nbsp;&nbsp;&nbsp;    ev.preventDefault();
+                            <br>}
+                            <br>
+                            <br>function drag(ev) {
+                            <br>&nbsp;&nbsp;&nbsp;    ev.dataTransfer.setData("text", ev.target.id);
+                            <br>}
+                            <br>
+                            <br>function drop(ev) {
+                            <br>&nbsp;&nbsp;&nbsp;    ev.preventDefault();
+                            <br>&nbsp;&nbsp;&nbsp;    var data = ev.dataTransfer.getData("text");
+                            <br>&nbsp;&nbsp;&nbsp;    ev.target.appendChild(document.getElementById(data));
+                            <br>}
+                            <br>&lt;/script&gt;
+                        </codeBody>
+                        <br>It might seem complicated, but lets go through all the different parts of a drag and drop event.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Make an Element Draggable</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        First of all: To make an element draggable, set the draggable attribute to true:
+                        <codeBody>
+                            &lt;img <spanYellow>draggable="true"</spanYellow>&gt;
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>What to Drag - ondragstart and setData()</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Then, specify what should happen when the element is dragged.
+                        <br>In the example above, the ondragstart attribute calls a function, drag(event), that specifies what data to be dragged.
+                        <br>The dataTransfer.setData() method sets the data type and the value of the dragged data:
+
+                        <codeBody>
+                            function drag(ev) {
+                            <br>&nbsp;&nbsp;&nbsp;    ev.dataTransfer.setData("text", ev.target.id);
+                            <br>}
+                        </codeBody>
+                        <br>In this case, the data type is "text" and the value is the id of the draggable element ("drag1").
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Where to Drop - ondragover</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The ondragover event specifies where the dragged data can be dropped.
+                        <br>By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element.
+                        <br>This is done by calling the event.preventDefault() method for the ondragover event:
+                        <codeBody>
+                            event.preventDefault()
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Do the Drop - ondrop</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        When the dragged data is dropped, a drop event occurs.
+                        <br>In the example above, the ondrop attribute calls a function, drop(event):
+                        <codeBody>
+                            function drop(ev) {
+                            <br>&nbsp;&nbsp;&nbsp;    ev.preventDefault();
+                            <br>&nbsp;&nbsp;&nbsp;    var data = ev.dataTransfer.getData("text");
+                            <br>&nbsp;&nbsp;&nbsp;    ev.target.appendChild(document.getElementById(data));
+                            <br>}
+                        </codeBody>
+                        <br>Code explained:
+                        <ul>
+                            <li>Call preventDefault() to prevent the browser default handling of the 
+                            data (default is open as link on drop)</li>
+                            <li>Get the dragged data with the dataTransfer.getData() method. This 
+                            method will return any data that was set to the same type in the setData() 
+                            method</li>
+                            <li>The dragged data is the id of the dragged element ("drag1")</li>
+                            <li>Append the dragged element into the drop element</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
         </div>       
         <!-- /.row -->

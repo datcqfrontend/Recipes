@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Video" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,10 +6,305 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>Playing Videos in HTML</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Before HTML5, there was no standard for showing videos on a web page.
+                        <br>Before HTML5, videos could only be played with a plug-in (like flash).
+                        <br>The HTML5 &lt;video&gt; element specifies a standard way to embed a video in a web page.
 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the &lt;video&gt; element.
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>               
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">&lt;video&gt;</td>
+                            <td>4.0</td>
+                            <td>9.0</td>
+                            <td>3.5</td>
+                            <td>4.0</td>
+                            <td>10.5</td>
+                          </tr>
+                          </tbody></table>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The HTML &lt;video&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To show a video in HTML, use the &lt;video&gt; element:
+                        <br>
+                        <video width="320" height="240" controls>
+                          <source src="media/videos/movie.mp4" type="video/mp4">
+                          <source src="media/videos/movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                        </video>
+
+                        <codeBody>
+                            &lt;video width="320" height="240" <spanYellow>controls</spanYellow>&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;source src="media/videos/movie.mp4" type="video/mp4"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;source src="media/videos/movie.ogg" type="video/ogg"&gt;
+                            Your browser does not support the video tag.
+                            <br>&lt;/video&gt;
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>How it Works</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The controls attribute adds video controls, like play, pause, and volume.
+                        <br>It is a good idea to always include width and height attributes.
+                        <br>If height and width are not set, the browser does not know the size of the video. The effect will be that the page will change (or flicker) while the video loads.
+                        <br>Text between the &lt;video&gt; and &lt;/video&gt; tags will only display in browsers that do not support the &lt;video&gt; element.
+                        <br>Multiple &lt;source&gt; elements can link to different video files. The browser will use the first recognized format.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML &lt;video&gt; Autoplay</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To start a video automatically use the autoplay attribute:
+                        <br>
+                        <video width="320" height="240" autoplay>
+                          <source src="media/videos/movie.mp4" type="video/mp4">
+                          <source src="media/videos/movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                        </video>
+
+                        <codeBody>
+                            &lt;video width="320" height="240" <spanYellow>autoplay</spanYellow>&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;source src="media/videos/movie.mp4" type="video/mp4"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;source src="media/videos/movie.ogg" type="video/ogg"&gt;
+                            Your browser does not support the video tag.
+                            <br>&lt;/video&gt;
+                        </codeBody>
+
+                        <br>The autoplay attribute does not work in Safari and Opera, or in mobile devices like iPad and iPhone.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Video - Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Currently, there are 3 supported video formats for the &lt;video&gt; element: MP4, WebM, and Ogg:
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th style="width:25%">Browser</th>
+                        <th style="width:25%">MP4</th>
+                        <th style="width:25%">WebM</th>
+                        <th style="width:25%">Ogg</th>
+                        </tr>
+                        <tr>
+                        <td>Internet Explorer</td>
+                        <td>YES</td>
+                        <td>NO</td>
+                        <td>NO</td>
+                        </tr>
+                        <tr>
+                        <td>Chrome</td>
+                        <td>YES</td>
+                        <td>YES</td>
+                        <td>YES</td>
+                        </tr>
+                        <tr>
+                        <td>Firefox</td>
+                        <td>YES</td>
+                        <td>YES</td>
+                        <td>YES</td>
+                        </tr>
+                        <tr>
+                        <td>Safari</td>
+                        <td>YES</td>
+                        <td>NO</td>
+                        <td>NO</td>
+                        </tr>
+                        <tr>
+                        <td>Opera</td>
+                        <td>YES (from Opera 25)</td>
+                        <td>YES</td>
+                        <td>YES</td>
+                        </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Video - Media Types</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped" id="table1">
+                        <tbody><tr>
+                        <th style="width:50%">File Format</th>
+                        <th style="width:50%">Media Type</th>
+                        </tr>
+                        <tr>
+                        <td>MP4</td>
+                        <td>video/mp4</td>
+                        </tr>
+                        <tr>
+                        <td>WebM</td>
+                        <td>video/webm</td>
+                        </tr>
+                        <tr>
+                        <td>Ogg</td>
+                        <td>video/ogg</td>
+                        </tr>
+                        </tbody></table>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Video - Methods, Properties, and Events</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 defines DOM methods, properties, and events for the &lt;video&gt; element.
+                        <br>This allows you to load, play, and pause videos, as well as setting duration and volume.
+                        <br>There are also DOM events that can notify you when a video begins to play, is paused, etc.
+
+                        <div style="text-align:center"> 
+                          <button onclick="playPause()">Play/Pause</button> 
+                          <button onclick="makeBig()">Big</button>
+                          <button onclick="makeSmall()">Small</button>
+                          <button onclick="makeNormal()">Normal</button>
+                          <br> 
+                          <video id="video1" width="420">
+                            <source src="media/videos/movie.mp4" type="video/mp4">
+                            <source src="media/videos/movie.ogg" type="video/ogg">
+                            Your browser does not support HTML5 video.
+                          </video>                          
+                        </div>
+                        <script> 
+                            var myVideo = document.getElementById("video1"); 
+
+                            function playPause() { 
+                                if (myVideo.paused) 
+                                    myVideo.play(); 
+                                else 
+                                    myVideo.pause(); 
+                            } 
+
+                            function makeBig() { 
+                                myVideo.width = 560; 
+                            } 
+
+                            function makeSmall() { 
+                                myVideo.width = 320; 
+                            } 
+
+                            function makeNormal() { 
+                                myVideo.width = 420; 
+                            } 
+                        </script>
+
+                        <codeBody>
+                            &lt;div style="text-align:center"&gt; 
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;button onclick="playPause()"&gt;Play/Pause&lt;/button&gt; 
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;button onclick="makeBig()"&gt;Big&lt;/button&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;button onclick="makeSmall()"&gt;Small&lt;/button&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;button onclick="makeNormal()"&gt;Normal&lt;/button&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;br&gt; 
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;video id="video1" width="420"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;source src="media/videos/movie.mp4" type="video/mp4"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;source src="media/videos/movie.ogg" type="video/ogg"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Your browser does not support HTML5 video.
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/video&gt;
+                            <br>&lt;/div&gt;
+                            <br>
+
+                            <br>&lt;script&gt; 
+                            <br>&nbsp;&nbsp;&nbsp;    var myVideo = document.getElementById("video1"); 
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    function playPause() { 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        if (myVideo.paused) 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            myVideo.play(); 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        else 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            myVideo.pause(); 
+                            <br>&nbsp;&nbsp;&nbsp;    } 
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    function makeBig() { 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        myVideo.width = 560; 
+                            <br>&nbsp;&nbsp;&nbsp;    } 
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    function makeSmall() { 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       myVideo.width = 320; 
+                            <br>&nbsp;&nbsp;&nbsp;    } 
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;    function makeNormal() { 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        myVideo.width = 420; 
+                            <br>&nbsp;&nbsp;&nbsp;    } 
+                            <br>&lt;/script&gt;
+                            
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 Video Tags</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th style="width:20%">Tag</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td>&lt;video&gt;</td>
+                        <td>Defines a video or movie</td>
+                        </tr>
+                        <tr>
+                        <td>&lt;source&gt;</td>
+                        <td>Defines multiple media resources for media elements, such as &lt;video&gt; and &lt;audio&gt;</td>
+                        </tr>
+                        <tr>
+                        <td>&lt;track&gt;</td>
+                        <td>Defines text tracks in media players</td>
+                        </tr>
+                        </tbody></table>
 
                     </p>
                   </div>

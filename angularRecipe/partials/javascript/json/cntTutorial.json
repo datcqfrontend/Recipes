@@ -36,7 +36,7 @@
 
 		{ 
 			"title": "Images",
-			"sortContent":  "<img src='images/bs.png' class='img-rounded' alt='Bootstrap' width='60' height='60'> <img src='images/bs.png' class='img-circle' alt='Bootstrap' width='60' height='60'> <img src='images/bs.png' class='img-thumbnail' alt='Bootstrap' width='60' height='60'>",
+			"sortContent":  "<img src='media/images/bs.png' class='img-rounded' alt='Bootstrap' width='60' height='60'> <img src='media/images/bs.png' class='img-circle' alt='Bootstrap' width='60' height='60'> <img src='media/images/bs.png' class='img-thumbnail' alt='Bootstrap' width='60' height='60'>",
 			"link": "#bootstrap/images"
 		},
 		{ 

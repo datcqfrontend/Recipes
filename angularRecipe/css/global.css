@@ -144,7 +144,24 @@ div.example-body{
     border-left: 4px solid #8AC007;
     padding: 10px;
 }
+exampleBody{
+    display: block;
+    background-color: #555;
+    color: #8AC007;
+    overflow: scroll;
+    border-left: 4px solid #8AC007;
+    padding: 10px;
+}
+
 div.code-body {
+    background-color: #555;
+    color: orange;
+    overflow: scroll;
+    border-left: 4px solid orange;
+    padding: 10px;
+}
+codeBody{
+    display: block;
     background-color: #555;
     color: orange;
     overflow: scroll;
@@ -208,12 +225,12 @@ div.code-body {
 }
 
 
-.spanYellow {
+spanYellow, .spanYellow {
     font-weight: bold;
     color: yellow;
 }
 
-.spanRed {
+spanRed, .spanRed {
     font-weight: bold;
     color: red;
 }
@@ -233,7 +250,7 @@ div.code-body {
 /* HTML5 */
 
   .html5 .html5badge {
-      background-image: url('../images/html5_badge20.png');
+      background-image: url('../media/images/html5_badge20.png');
       background-repeat: no-repeat;
       background-position: right;
   }

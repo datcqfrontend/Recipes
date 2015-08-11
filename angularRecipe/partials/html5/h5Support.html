@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Support" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,10 +6,195 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML5 Browser Support</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        HTML5 is supported in all modern browsers.
+                        <br>In addition, all browsers, old and new, automatically handle unrecognized elements as inline elements.
+                        <br>Because of this, you can "teach" older browsers to handle "unknown" HTML elements.
 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Define HTML5 Elements as Block Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 defines eight new <span class="spanRed">semantic</span> HTML elements. All these are <span class="spanRed">block-level</span> elements.
+                        <br>To secure correct behavior in older browsers, you can set the CSS <span class="spanRed">display</span> property to <span class="spanRed">block</span>:
+
+                        <div class="code-body">
+                            <span class="spanYellow">header, section, footer, aside, nav, main, article, figure</span> {
+                            <br>&nbsp;&nbsp;&nbsp;    display: block; 
+                            <br>}
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Adding New Elements to HTML</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        You can also add any new element to HTML with a browser trick.
+                        <br>This example adds a new element called &lt;myHero&gt; to HTML, and defines a display style for it:
+
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br>&lt;head&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;title&gt;Creating an HTML Element&lt;/title&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  <span class="spanYellow">&lt;script&gt;document.createElement("myHero")&lt;/script&gt;</span>
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;style&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  <span class="spanYellow">myHero {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      display: block;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      background-color: #ddd;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      padding: 50px;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      font-size: 30px;
+                            <br>&nbsp;&nbsp;&nbsp;  }</span> 
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/style&gt; 
+                            <br>&lt;/head&gt;
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;h1&gt;My First Heading&lt;/h1&gt;
+                            <br>
+                            <br>&lt;p&gt;My first paragraph.&lt;/p&gt;
+                            <br>
+                            <br><span class="spanYellow">&lt;myHero&gt;My First Hero&lt;/myHero&gt;</span>
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                        <br>The JavaScript statement document.createElement("myHero") is added, only to satisfy IE.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Problem With Internet Explorer</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        You could use the solution described above, for all new HTML5 elements, but:
+                        <br>Internet Explorer 8 and earlier, does not allow styling of unknown elements.
+                        <br>Thankfully, Sjoerd Visscher created the "HTML5 Enabling JavaScript", "the shiv":
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;!--[if lt IE 9]&gt;</span>
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+                            <br><span class="spanYellow">&lt;![endif]--&gt;</span>
+                        </div>
+                        <br>The code above is a comment, but versions previous to IE9 will read it (and understand it).
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Complete Shiv Solution</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <div class="code-body">
+                            &lt;!DOCTYPE html&gt;
+                            <br>&lt;html&gt;
+                            <br><span class="spanYellow">&lt;head&gt;</span>
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;title&gt;Styling HTML5&lt;/title&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  <span class="spanYellow">&lt;!--[if lt IE 9]&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;![endif]--&gt;</span>
+                            <br><span class="spanYellow">&lt;/head&gt;</span>
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;h1&gt;My First Article&lt;/h1&gt;
+                            <br>
+                            <br>&lt;article&gt;
+                            <br>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.
+                            <br>&lt;/article&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
+                        <br>The link to the shiv code must be placed in the &lt;head&gt; element, <span class="spanRed">because Internet Explorer needs to know about all new elements before reading them</span>.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>An HTML5 Skeleton</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <div class="code-body">
+                            <span class="spanYellow">&lt;!DOCTYPE html&gt;</span>
+                            <br>&lt;html lang="en"&gt;
+                            <br><span class="spanYellow">&lt;head&gt;</span>
+                            <br>&lt;title&gt;HTML5 Skeleton&lt;/title&gt;
+                            <br><span class="spanYellow">&lt;meta charset="utf-8"&gt;</span>
+                            <br>
+                            <br><span class="spanYellow">&lt;!--[if lt IE 9]&gt;
+                            <br>&nbsp;&nbsp;&nbsp; &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt; &lt;/script&gt;
+                            <br>&lt;![endif]--&gt;</span>
+                            <br>
+                            <br>&lt;style&gt;
+                            <br>&nbsp;&nbsp;&nbsp; body {font-family: Verdana, sans-serif; font-size:0.8em;}
+                            <br>&nbsp;&nbsp;&nbsp; header,nav, section,article,footer
+                            <br>&nbsp;&nbsp;&nbsp; {border:1px solid grey; margin:5px; padding:8px;}
+                            <br>&nbsp;&nbsp;&nbsp; nav ul {margin:0; padding:0;}
+                            <br>&nbsp;&nbsp;&nbsp; nav ul li {display:inline; margin:5px;}
+                            <br>&lt;/style&gt;
+                            <br><span class="spanYellow">&lt;/head&gt;</span>
+                            <br>&lt;body&gt;
+                            <br>
+                            <br>&lt;header&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h1&gt;HTML5 SKeleton&lt;/h1&gt;
+                            <br>&lt;/header&gt;
+                            <br>
+                            <br>&lt;nav&gt;
+                            <br>&lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;li&gt;&lt;a href="html5_semantic_elements.asp"&gt;HTML5 Semantic&lt;/a&gt;&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;li&gt;&lt;a href="html5_geolocation.asp"&gt;HTML5 Geolocation&lt;/a&gt;&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;li&gt;&lt;a href="html5_canvas.asp"&gt;HTML5 Graphics&lt;/a&gt;&lt;/li&gt;
+                            <br>&lt;/ul&gt;
+                            <br>&lt;/nav&gt;
+                            <br>
+                            <br>&lt;section&gt;
+                            <br>
+                            <br>&lt;h1&gt;Famous Cities&lt;/h1&gt;
+                            <br>
+                            <br>&lt;article&gt;
+                            <br>&lt;h2&gt;London&lt;/h2&gt;
+                            <br>&lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom,
+                            <br>with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                            <br>
+                            <br>&lt;article&gt;
+                            <br>&lt;h2&gt;Paris&lt;/h2&gt;
+                            <br>&lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                            <br>
+                            <br>&lt;article&gt;
+                            <br>&lt;h2&gt;Tokyo&lt;/h2&gt;
+                            <br>&lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+                            and the most populous metropolitan area in the world.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                            <br>
+                            <br>&lt;/section&gt;
+                            <br>
+                            <br>&lt;footer&gt;
+                            <br>&lt;p&gt;&copy; 2014 W3Schools. All rights reserved.&lt;/p&gt;
+                            <br>&lt;/footer&gt;
+                            <br>
+                            <br>&lt;/body&gt;
+                            <br>&lt;/html&gt;
+                        </div>
 
                     </p>
                   </div>

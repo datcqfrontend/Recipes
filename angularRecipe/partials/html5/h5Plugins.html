@@ -1,4 +1,4 @@
-<div  id="html5Temp" class="html5 section">
+<div  id="html5Plugins" class="html5 section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,11 +6,71 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>HTML Helpers (Plug-ins)</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Helper applications are computer programs that extend the standard functionality of a web browser.
+                        <br>Helper applications are also called plug-ins.
+                        <br>Examples of well-known plug-ins are Java applets.
+                        <br>Plug-ins can be added to web pages with the &lt;object&gt; tag or the &lt;embed&gt; tag.
+                        <br>Plug-ins can be used for many purposes: display maps, scan for viruses, verify your bank id, etc.
 
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The &lt;object&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p> 
+                        The &lt;object&gt; element is supported by all browsers.
+                        <br>The &lt;object&gt; element defines an embedded object within an HTML document.
+                        <br>It is used to embed plug-ins (like Java applets, PDF readers, Flash Players) in web pages.
+
+                        <codeBody>
+                            &lt;object width="400" height="50" data="bookmark.swf"&gt; &lt;/object&gt;
+                        </codeBody>
+
+                        <br>The &lt;object&gt; element can also be used to <spanRed>include HTML in HTML</spanRed>:
+                        <codeBody>
+                            &lt;object width="100%" height="500px" data="snippet.html"&gt; &lt;/object&gt;
+                        </codeBody>
+
+                        <br>Or images if you like:
+                        <codeBody>
+                            &lt;object data="audi.jpeg"&gt; &lt;/object&gt;
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The &lt;embed&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The &lt;embed&gt; element is supported in all major browsers.
+                        <br>The &lt;embed&gt; element also defines an embedded object within an HTML document.
+                        <br>Web browsers have supported the &lt;embed&gt; element for a long time. However, it has not been a part of the HTML specification before HTML5. The element will validate in an HTML5 page, but not in an HTML 4 page.
+
+                        <codeBody>
+                            &lt;embed width="400" height="50" data="bookmark.swf"&gt;
+                        </codeBody>
+                        <br>Note that the &lt;embed&gt;  element does not have a closing tag. It can not contain alternative text.
+
+                        <br>The &lt;embed&gt; element can also be used to <spanRed>include HTML in HTML</spanRed>:
+                        <codeBody>
+                            &lt;embed width="100%" height="500px" src="snippet.html"&gt;
+                        </codeBody>
+
+                        <br>Or images if you like:
+                        <codeBody>
+                            &lt;embed data="audi.jpeg"&gt;
+                        </codeBody>
                     </p>
                   </div>
                 </div>

@@ -6,16 +6,806 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>What are Semantic Elements?</h3> </div>
                   <div class="panel-body">  
                     <p>
-
+                        A semantic element clearly describes its meaning to both the browser and the developer.
+                        <br>Examples of non-semantic elements: <span class="spanRed">&lt;div&gt; and &lt;span&gt;</span> - Tells nothing about its content.
+                        <br>Examples of semantic elements: <span class="spanRed">&lt;form&gt;, &lt;table&gt;, and &lt;img&gt;</span> - Clearly defines its content.
 
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8"><h3>Browser Support</h3> </div>
+                        <div class="col-md-4">
+                            <img style="float:right;" src="media/images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20">
+                            <img style="float:right;" src="media/images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20">
+                            <img style="float:right;" src="media/images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20">
+                            <img style="float:right;" src="media/images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20">
+                            <img style="float:right;" src="media/images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20">
+
+                        </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 semantic elements are supported in all modern browsers.
+                        <br>In addition, you can "teach" older browsers how to handle "unknown elements".
+                        <br>Read about it in <a href="#html5/h5Support">HTML5 Support</a>.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>New Semantic Elements in HTML5</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Many web sites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer.
+                        <br>HTML5 offers new semantic elements to define different parts of a web page:  
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>&lt;article&gt;</li>
+                                    <li>&lt;aside&gt;</li>
+                                    <li>&lt;details&gt;</li>
+                                    <li>&lt;figcaption&gt;</li>
+                                    <li>&lt;figure&gt;</li>
+                                    <li>&lt;footer&gt;</li>
+                                    <li>&lt;header&gt;</li>
+                                    <li>&lt;main&gt;</li>
+                                    <li>&lt;mark&gt;</li>
+                                    <li>&lt;nav&gt;</li>
+                                    <li>&lt;section&gt;</li>
+                                    <li>&lt;summary&gt;</li>
+                                    <li>&lt;time&gt;</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <img alt="HTML5 Semantic Elements" src="media/images/img_sem_elements.gif" >
+                            </div>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;section&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The &lt;section&gt; element defines a section in a document.
+                        <br>According to W3C's HTML5 documentation: "A section is a thematic grouping of content, typically with a heading."
+                        <br>A Web site's home page could be split into sections for introduction, content, and contact information.
+
+                        <section>
+                          <h1>WWF</h1>
+                          <p>The World Wide Fund for Nature (WWF) is....</p>
+                        </section>
+
+                        <div class="code-body">
+                            &lt;section&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h1&gt;WWF&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;The World Wide Fund for Nature (WWF) is....&lt;/p&gt;
+                            <br>&lt;/section&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;article&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The &lt;article&gt; element specifies independent, self-contained content.
+                        <br>An article should make sense on its own, and it should be possible to read it independently from the rest of the web site.
+                        <br>Examples of where an &lt;article&gt; element can be used:
+                        <ul>
+                            <li>Forum post</li>
+                            <li>Blog post</li>
+                            <li>Newspaper article</li>
+                        </ul>
+                        
+                        <article>
+                          <h1>What Does WWF Do?</h1>
+                          <p>WWF's mission is to stop the degradation of our planet's natural environment,
+                          and build a future in which humans live in harmony with nature.</p>
+                        </article>
+
+                        <div class="code-body">
+                            &lt;article&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h1&gt;What Does WWF Do?&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;WWF's mission is to stop the degradation of our planet's natural environment,
+                            <br>&nbsp;&nbsp;&nbsp;  and build a future in which humans live in harmony with nature.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Nesting Semantic Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In the HTML5 standard, the &lt;article&gt; element defines a complete, self-contained block of related elements.
+                        <br>The &lt;section&gt; element is defined as a block of related elements.
+                        <br>Can we use the definitions to decide how to nest elements? No, we cannot!
+                        <br>On the Internet, you will find HTML pages with &lt;section&gt; elements containing &lt;article&gt; elements, and &lt;article&gt; elements containing &lt;sections&gt; elements.
+                        <br>You will also find pages with &lt;section&gt; elements containing &lt;section&gt; elements, and &lt;article&gt; elements containing &lt;article&gt; elements.
+                        <br>
+                        <br>Newspaper: The sports articles in the sports section, have a technical section in each article.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;header&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The &lt;header&gt; element specifies a header for a document or section.
+                        <br>The &lt;header&gt; element should be used as a container for introductory content.
+                        <br>You can have several &lt;header&gt; elements in one document.
+                        <br>The following example defines a header for an article:
+
+                        <article>
+                          <header>
+                            <h1>What Does WWF Do?</h1>
+                            <p>WWF's mission:</p>
+                          </header>
+                          <p>WWF's mission is to stop the degradation of our planet's natural environment,
+                          and build a future in which humans live in harmony with nature.</p>
+                        </article>
+
+                        <div class="code-body">
+                            &lt;article&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;header&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;h1&gt;What Does WWF Do?&lt;/h1&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;p&gt;WWF's mission:&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/header&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;WWF's mission is to stop the degradation of our planet's natural environment,
+                            <br>&nbsp;&nbsp;&nbsp;  and build a future in which humans live in harmony with nature.&lt;/p&gt;
+                            <br>&lt;/article&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;footer&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The &lt;footer&gt; element specifies a footer for a document or section.
+                        <br>A &lt;footer&gt; element should contain information about its containing element.
+                        <br>A footer typically contains the author of the document, copyright information, links to terms of use, contact information, etc.
+                        <br>You can have several &lt;footer&gt; elements in one document.
+
+                        <footer>
+                          <p>Posted by: Hege Refsnes</p>
+                          <p>Contact information: <a href="mailto:someone@example.com">
+                          someone@example.com</a>.</p>
+                        </footer>
+
+                        <div class="code-body">
+                            &lt;footer&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  someone@example.com&lt;/a&gt;.&lt;/p&gt;
+                            <br>&lt;/footer&gt;
+                        </div>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;nav&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The &lt;nav&gt; element defines a set of navigation links.
+                        <br>The &lt;nav&gt; element is intended for large blocks of navigation links. However, not all links in a document should be inside a &lt;nav&gt; element!
+
+                        <nav>
+                          <a href="#html/tutorial">HTML</a> |
+                          <a href="#css/tutorial">CSS</a> |
+                          <a href="#javascript/tutorial">JavaScript</a> |
+                          <a href="#jquery/tutorial">jQuery</a>
+                        </nav>
+
+                        <div class="code-body">
+                            &lt;nav&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;
+                            <br>&lt;/nav&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;aside&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The &lt;aside&gt; element defines some content aside from the content it is placed in (like a sidebar).
+                        <br>The aside content should be related to the surrounding content.
+
+                        <p>My family and I visited The Epcot center this summer.</p>
+                        <aside>
+                          <h4>Epcot Center</h4>
+                          <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+                        </aside>
+
+                        <div class="code-body">
+                            &lt;p&gt;My family and I visited The Epcot center this summer.&lt;/p&gt;
+                            <br>&lt;aside&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;h4&gt;Epcot Center&lt;/h4&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;p&gt;The Epcot Center is a theme park in Disney World, Florida.&lt;/p&gt;
+                            <br>&lt;/aside&gt;
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;figure&gt; and &lt;figcaption&gt; Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In books and newspapers, it is common to have captions with images.
+                        <br>The purpose of a caption is to add a visual explanation to an image.
+                        <br>With HTML5, images and captions can be grouped together in &lt;figure&gt; elements:
+
+                        <figure>
+                          <img src="media/images/planets.gif" alt="Planets" width="304" height="228">
+                          <figcaption>Fig1. - Planets.</figcaption>
+                        </figure>
+
+                        <div class="code-body">
+                            &lt;figure&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;img src="planets.gif" alt="Planets" width="304" height="228"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;figcaption&gt;Fig1. - Planets.&lt;/figcaption&gt;
+                            <br>&lt;/figure&gt;
+                        </div>
+                        <br>The &lt;img&gt; element defines the image, the &lt;figcaption&gt; element defines the caption.
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Why Semantic HTML5 Elements?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        With HTML4, developers used their own favorite attribute names to style page elements:
+                        <br>header, top, bottom, footer, menu, navigation, main, container, content, article, sidebar, topnav, ...
+                        <br>This made it impossible for search engines to identify the correct web page content.
+                        <br>
+                        <br>With HTML5 elements like: &lt;header&gt; &lt;footer&gt; &lt;nav&gt; &lt;section&gt; &lt;article&gt;, this will become easier.
+                        <br>According to the W3C, a Semantic Web: <strong>"Allows data to be shared and reused across applications, enterprises, and communities."</strong>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Semantic Elements in HTML5</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Below is an alphabetical list of the new semantic elements in HTML5.
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th style="width:25%">Tag</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_comment.asp">&lt;!--...--&gt;</div></td>
+                        <td>Defines a comment</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_doctype.asp">&lt;!DOCTYPE&gt;</div>&nbsp;</td>
+                        <td>Defines the document type</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_a.asp">&lt;a&gt;</div></td>
+                        <td>Defines a hyperlink</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_abbr.asp">&lt;abbr&gt;</div></td>
+                        <td>Defines an abbreviation or an acronym</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_acronym.asp" class="notsupported">&lt;acronym&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use &lt;abbr&gt; instead.<br></span>Defines an acronym</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_address.asp">&lt;address&gt;</div></td>
+                        <td>Defines contact information for the author/owner of a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_applet.asp" class="notsupported">&lt;applet&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use &lt;embed&gt; or &lt;object&gt; instead.<br></span>Defines an embedded applet</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_area.asp">&lt;area&gt;</div></td>
+                        <td>Defines an area inside an image-map</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_article.asp">&lt;article&gt;</div></td>
+                        <td>Defines an article</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_aside.asp">&lt;aside&gt;</div></td>
+                        <td>Defines content aside from the page content</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_audio.asp">&lt;audio&gt;</div></td>
+                        <td>Defines sound content</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_b.asp">&lt;b&gt;</div></td>
+                        <td>Defines bold text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_base.asp">&lt;base&gt;</div></td>
+                        <td>Specifies the base URL/target for all relative URLs in a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_basefont.asp" class="notsupported">&lt;basefont&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Specifies a default color, size, and font for all text in a document</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_bdi.asp">&lt;bdi&gt;</div></td>
+                        <td>Isolates a part of text that might be formatted in a different direction 
+                        from other text outside it</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_bdo.asp">&lt;bdo&gt;</div></td>
+                        <td>Overrides the current text direction</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_big.asp" class="notsupported">&lt;big&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines big text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_blockquote.asp">&lt;blockquote&gt;</div></td>
+                        <td>Defines a section that is quoted from another source</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_body.asp">&lt;body&gt;</div></td>
+                        <td>Defines the document's body</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_br.asp">&lt;br&gt;</div></td>
+                        <td>Defines a single line break</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_button.asp">&lt;button&gt;</div></td>
+                        <td>Defines a clickable button</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_canvas.asp">&lt;canvas&gt;</div></td>
+                        <td>Used to draw graphics, on the fly, via scripting (usually JavaScript)</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_caption.asp">&lt;caption&gt;</div></td>
+                        <td>Defines a table caption</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_center.asp" class="notsupported">&lt;center&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines centered text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_cite.asp">&lt;cite&gt;</div></td>
+                        <td>Defines the title of a work</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_code.asp">&lt;code&gt;</div></td>
+                        <td>Defines a piece of computer code</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_col.asp">&lt;col&gt;</div></td>
+                        <td>Specifies column properties for each column within a &lt;colgroup&gt; element&nbsp;</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_colgroup.asp">&lt;colgroup&gt;</div></td>
+                        <td>Specifies a group of one or more columns in a table for formatting</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_datalist.asp">&lt;datalist&gt;</div></td>
+                        <td>Specifies a list of pre-defined options for input controls</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_dd.asp">&lt;dd&gt;</div></td>
+                        <td>Defines a description/value of a term in a description list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_del.asp">&lt;del&gt;</div></td>
+                        <td>Defines text that has been deleted from a document</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_details.asp">&lt;details&gt;</div></td>
+                        <td>Defines additional details that the user can view or hide</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_dfn.asp">&lt;dfn&gt;</div></td>
+                        <td>Represents the defining instance of a term</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_dialog.asp">&lt;dialog&gt;</div></td>
+                        <td>Defines a dialog box or window</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_dir.asp" class="notsupported">&lt;dir&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use &lt;ul&gt; instead.<br></span>Defines a directory list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_div.asp">&lt;div&gt;</div></td>
+                        <td>Defines a section in a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_dl.asp">&lt;dl&gt;</div></td>
+                        <td>Defines a description list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_dt.asp">&lt;dt&gt;</div></td>
+                        <td>Defines a term/name in a description list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_em.asp">&lt;em&gt;</div></td>
+                        <td>Defines emphasized text&nbsp;</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_embed.asp">&lt;embed&gt;</div></td>
+                        <td>Defines a container for an external (non-HTML) application</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_fieldset.asp">&lt;fieldset&gt;</div></td>
+                        <td>Groups related elements in a form</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_figcaption.asp">&lt;figcaption&gt;</div></td>
+                        <td>Defines a caption for a &lt;figure&gt; element</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_figure.asp">&lt;figure&gt;</div></td>
+                        <td>Specifies self-contained content</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_font.asp" class="notsupported">&lt;font&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines font, color, and size for text</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_footer.asp">&lt;footer&gt;</div></td>
+                        <td>Defines a footer for a document or section</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_form.asp">&lt;form&gt;</div></td>
+                        <td>Defines an HTML form for user input</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_frame.asp" class="notsupported">&lt;frame&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5.<br></span>Defines a window (a frame) in a frameset</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_frameset.asp" class="notsupported">&lt;frameset&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5.<br></span>Defines a set of frames</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_hn.asp">&lt;h1&gt; to &lt;h6&gt;</div></td>
+                        <td> Defines HTML headings</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_head.asp">&lt;head&gt;</div></td>
+                        <td>Defines information about the document</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_header.asp">&lt;header&gt;</div></td>
+                        <td>Defines a header for a document or section</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_hr.asp">&lt;hr&gt;</div></td>
+                        <td> Defines a thematic change in the content</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_html.asp">&lt;html&gt;</div></td>
+                        <td>Defines the root of an HTML document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_i.asp">&lt;i&gt;</div></td>
+                        <td>Defines a part of text in an alternate voice or mood</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_iframe.asp">&lt;iframe&gt;</div></td>
+                        <td>Defines an inline frame</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_img.asp">&lt;img&gt;</div></td>
+                        <td>Defines an image</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_input.asp">&lt;input&gt;</div></td>
+                        <td>Defines an input control</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_ins.asp">&lt;ins&gt;</div></td>
+                        <td>Defines a text that has been inserted into a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_kbd.asp">&lt;kbd&gt;</div></td>
+                        <td>Defines keyboard input</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_keygen.asp">&lt;keygen&gt;</div></td>
+                        <td>Defines a key-pair generator field (for forms)</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_label.asp">&lt;label&gt;</div></td>
+                        <td>Defines a label&nbsp;for an &lt;input&gt; element</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_legend.asp">&lt;legend&gt;</div></td>
+                        <td>Defines a caption for a &lt;fieldset&gt; element</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_li.asp">&lt;li&gt;</div></td>
+                        <td>Defines a list item</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_link.asp">&lt;link&gt;</div></td>
+                        <td>Defines the relationship between a document and an external resource (most 
+                        used to link to style sheets)</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_main.asp">&lt;main&gt;</div></td>
+                        <td>Specifies the main content of a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_map.asp">&lt;map&gt;</div></td>
+                        <td>Defines a client-side image-map</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_mark.asp">&lt;mark&gt;</div></td>
+                        <td>Defines marked/highlighted text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_menu.asp">&lt;menu&gt;</div></td>
+                        <td>Defines a list/menu of commands</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_menuitem.asp">&lt;menuitem&gt;</div></td>
+                        <td>Defines a command/menu item that the user can invoke from a popup menu</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_meta.asp">&lt;meta&gt;</div></td>
+                        <td>Defines metadata about an HTML document</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_meter.asp">&lt;meter&gt;</div></td>
+                        <td>Defines a scalar measurement within a known range (a gauge)</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_nav.asp">&lt;nav&gt;</div></td>
+                        <td>Defines navigation links</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_noframes.asp" class="notsupported">&lt;noframes&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5.<br></span>Defines an alternate content for users that do not support frames</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_noscript.asp">&lt;noscript&gt;</div></td>
+                        <td>Defines an alternate content for users that do not support 
+                        client-side scripts</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_object.asp">&lt;object&gt;</div></td>
+                        <td>Defines an embedded object</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_ol.asp">&lt;ol&gt;</div></td>
+                        <td>Defines an ordered list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_optgroup.asp">&lt;optgroup&gt;</div></td>
+                        <td>Defines a group of related options in a drop-down list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_option.asp">&lt;option&gt;</div></td>
+                        <td>Defines an option in a drop-down list</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_output.asp">&lt;output&gt;</div></td>
+                        <td>Defines the result of a calculation</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_p.asp">&lt;p&gt;</div></td>
+                        <td>Defines a paragraph</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_param.asp">&lt;param&gt;</div></td>
+                        <td>Defines a parameter for an object</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_pre.asp">&lt;pre&gt;</div></td>
+                        <td>Defines preformatted text</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_progress.asp">&lt;progress&gt;</div></td>
+                        <td>Represents the progress of a task</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_q.asp">&lt;q&gt;</div></td>
+                        <td>Defines a short quotation</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_rp.asp">&lt;rp&gt;</div></td>
+                        <td>Defines what to show in browsers that do not support ruby annotations</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_rt.asp">&lt;rt&gt;</div></td>
+                        <td>Defines an explanation/pronunciation of characters (for East Asian 
+                        typography)</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_ruby.asp">&lt;ruby&gt;</div></td>
+                        <td>Defines a ruby annotation (for East Asian typography)</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_s.asp">&lt;s&gt;</div></td>
+                        <td>Defines text that is no longer correct</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_samp.asp">&lt;samp&gt;</div></td>
+                        <td>Defines sample output from a computer program</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_script.asp">&lt;script&gt;</div></td>
+                        <td>Defines a client-side script</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_section.asp">&lt;section&gt;</div></td>
+                        <td>Defines a section in a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_select.asp">&lt;select&gt;</div></td>
+                        <td>Defines a drop-down list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_small.asp">&lt;small&gt;</div></td>
+                        <td>Defines smaller text</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_source.asp">&lt;source&gt;</div></td>
+                        <td>Defines multiple media resources for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_span.asp">&lt;span&gt;</div></td>
+                        <td>Defines a section in a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_strike.asp" class="notsupported">&lt;strike&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use &lt;del&gt; or &lt;s&gt; instead.<br></span>Defines strikethrough text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_strong.asp">&lt;strong&gt;</div></td>
+                        <td>Defines important text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_style.asp">&lt;style&gt;</div></td>
+                        <td>Defines style information for a document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_sub.asp">&lt;sub&gt;</div></td>
+                        <td>Defines subscripted text</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_summary.asp">&lt;summary&gt;</div></td>
+                        <td>Defines a visible heading for a &lt;details&gt; element</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_sup.asp">&lt;sup&gt;</div></td>
+                        <td>Defines superscripted text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_table.asp">&lt;table&gt;</div></td>
+                        <td>Defines a table</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_tbody.asp">&lt;tbody&gt;</div></td>
+                        <td>Groups the body content in a table</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_td.asp">&lt;td&gt;</div></td>
+                        <td>Defines a cell in a table</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_textarea.asp">&lt;textarea&gt;</div></td>
+                        <td>Defines a multiline input control (text area)</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_tfoot.asp">&lt;tfoot&gt;</div></td>
+                        <td>Groups the footer content in a table</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_th.asp">&lt;th&gt;</div></td>
+                        <td>Defines a header cell in a table</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_thead.asp">&lt;thead&gt;</div></td>
+                        <td>Groups the header content in a table</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_time.asp">&lt;time&gt;</div></td>
+                        <td>Defines a date/time</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_title.asp">&lt;title&gt;</div></td>
+                        <td>Defines a title for the document</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_tr.asp">&lt;tr&gt;</div></td>
+                        <td>Defines a row in a table</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_track.asp">&lt;track&gt;</div></td>
+                        <td>Defines text tracks for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+                        </tr>
+                        <tr>
+                        <td><div class="notsupported" href="tag_tt.asp">&lt;tt&gt;</div></td>
+                        <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines teletype text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_u.asp">&lt;u&gt;</div></td>
+                        <td>Defines text that should be stylistically different from normal text</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_ul.asp">&lt;ul&gt;</div></td>
+                        <td>Defines an unordered list</td>
+                        </tr>
+                        <tr>
+                        <td><div href="tag_var.asp">&lt;var&gt;</div></td>
+                        <td>Defines a variable</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_video.asp">&lt;video&gt;</div></td>
+                        <td>Defines a video or movie</td>
+                        </tr>
+                        <tr>
+                        <td class="html5badge"><div href="tag_wbr.asp">&lt;wbr&gt;</div></td>
+                        <td>Defines a possible line-break</td>
+                        </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
         </div>       
         <!-- /.row -->
