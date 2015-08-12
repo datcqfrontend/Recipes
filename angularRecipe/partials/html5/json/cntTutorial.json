@@ -93,7 +93,7 @@
 		},	
 		{ 
 			"title": "H5 App Cache",
-			"sortContent":  "",
+			"sortContent":  "With application cache it is easy to make an offline version of a web application, by creating a cache manifest file.",
 			"link": "#html5/h5AppCache"
 		},
 		{ 

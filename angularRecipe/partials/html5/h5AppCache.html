@@ -6,10 +6,207 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Template</h3> </div>
+                  <div class="panel-heading"><h3>What is Application Cache?</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        HTML5 introduces application cache, which means that a web application is cached, and accessible without an internet connection.
+                        <br>Application cache gives an application three advantages:
+                        <ol>
+                            <li>Offline browsing - users can use the application when they're offline</li>
+                            <li>Speed - cached resources load faster</li>
+                            <li>Reduced server load - the browser will only download updated/changed resources 
+                            from the server</li>
+                        </ol>
 
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports Application Cache.
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>               
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">Application Cache</td>
+                            <td>4.0</td>
+                            <td>10.0</td>
+                            <td>3.5</td>
+                            <td>4.0</td>
+                            <td>11.5</td>
+                          </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML Cache Manifest Example</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The example below shows an HTML document with a cache manifest (for offline browsing):
+
+                        <codeBody>
+                            &lt;!DOCTYPE HTML&gt;
+                            <br>&lt;html <spanYellow>manifest="demo.appcache"</spanYellow>&gt;
+                            <br>
+                            <br>&lt;body&gt;
+                            <br>The content of the document......
+                            <br>&lt;/body&gt;
+                            <br>
+                            <br>&lt;/html&gt;
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Cache Manifest Basics</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To enable application cache, include the manifest attribute in the document's &lt;html&gt; tag:
+
+                        <codeBody>
+                            &lt;!DOCTYPE HTML&gt;
+                            <br>&lt;html manifest="demo.appcache"&gt;
+                            <br>...
+                            <br>&lt;/html&gt;
+                        </codeBody>
+
+                        <br>Every page with the manifest attribute specified will be cached when the user visits it. If the manifest attribute is not specified, the page will not be cached (unless the page is specified directly in the manifest file).
+                        <br>The recommended file extension for manifest files is: ".appcache"
+                        <br>A manifest file needs to be served with the correct media type, which is "text/cache-manifest". Must be configured on the web server.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+             <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The Manifest File</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The manifest file is a simple text file, which tells the browser what to cache (and what to never cache).
+                        <br>The manifest file has three sections:
+
+                        <ul>
+                            <li><b>CACHE MANIFEST</b> - Files listed under this header will be cached 
+                            after they are downloaded for the first time</li>
+                            <li><b>NETWORK</b> - Files listed under this header require a connection to the server, 
+                            and will never be cached</li>
+                            <li><b>FALLBACK</b> - Files listed under this header specifies fallback 
+                            pages if a page is inaccessible</li>
+                        </ul>
+
+                        <hr>
+                        <h4>CACHE MANIFEST</h4>
+                        The first line, CACHE MANIFEST, is required:
+                        <codeBody>
+                            CACHE MANIFEST
+                            <br>/theme.css
+                            <br>/logo.gif
+                            <br>/main.js
+                        </codeBody>
+                        <br>The manifest file above lists three resources: a CSS file, a GIF image, and a JavaScript file. When the manifest file is loaded, the browser will download the three files from the root directory of the web site. Then, whenever the user is not connected to the internet, the resources will still be available.
+
+                        <hr>
+                        <h4>NETWORK</h4>
+                        The NETWORK section below specifies that the file "login.asp" should never be cached, and will not be available offline:
+                        <codeBody>
+                            NETWORK:
+                            <br>login.asp
+                        </codeBody>
+
+                        <br>An asterisk can be used to indicate that all other resources/files require an internet connection:
+                        <codeBody>
+                            NETWORK:
+                            <br>*
+                        </codeBody>
+
+                        <hr>
+                        <h4>FALLBACK</h4>
+                        The FALLBACK section below specifies that "offline.html" will be served in place of all files in the /html/ catalog, in case an internet connection cannot be established:
+                        <codeBody>
+                            FALLBACK:
+                            <br>/html/ /offline.html
+                        </codeBody>
+
+                        <br><b>Note:</b> The first URI is the resource, the second is the fallback.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Updating the Cache</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Once an application is cached, it remains cached until one of the following happens:
+
+                        <ul>
+                            <li>The user clears the browser's cache</li>
+                            <li>The manifest file is modified (see tip below)</li>
+                            <li>The application cache is programmatically updated</li>
+                        </ul>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Example - Complete Cache Manifest File</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        demo.appcache
+                        <codeBody>
+                            CACHE MANIFEST
+                            <br># 2012-02-21 v1.0.0
+                            <br>/theme.css
+                            <br>/logo.gif
+                            <br>/main.js
+                            <br>
+                            <br>NETWORK:
+                            <br>login.asp
+                            <br>
+                            <br>FALLBACK:
+                            <br>/html/ /offline.html
+                        </codeBody>
+
+                        <br><b>Tip:</b> Lines starting with a "#" are comment lines, but can also serve another purpose. An application's cache is only updated when its manifest file changes. If you edit an image or change a JavaScript function, those changes will not be re-cached. Updating the date and version in a comment line is one way to make the browser re-cache your files.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Notes on Application Cache</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Be careful with what you cache.
+                        <br>Once a file is cached, the browser will continue to show the cached version, even if you change the file on the server. To ensure the browser updates the cache, you need to change the manifest file.
+                        <br><b>Note:</b> Browsers may have different size limits for cached data (some browsers have a 5MB limit per site).
 
                     </p>
                   </div>
