@@ -75,6 +75,8 @@ function activeNavBar(){
 	
 	if(fw.currentGroupName=='html' || fw.currentGroupName=='html5'){
 		$('.navbar li#group-html').addClass(fw.currentGroupName+' active');
+	}else if(fw.currentGroupName=='css' || fw.currentGroupName=='css3' || fw.currentGroupName=='cssRWD'){
+		$('.navbar li#group-css').addClass(fw.currentGroupName+' active');
 	}else if(fw.currentGroupName=='javascript' || fw.currentGroupName=='jquery'){
 		$('.navbar li#group-js').addClass(fw.currentGroupName+' active');
 	}else if(fw.currentGroupName=='requirejs' || fw.currentGroupName=='gruntjs'){

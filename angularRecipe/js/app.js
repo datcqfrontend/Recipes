@@ -84,10 +84,9 @@ app.controller('HomeCtrl', function ( $scope, $location, $http ) {
 app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $http ) {
 	window.scrollTo(0,0);
 
-	$('body').on('swipe',function(){
+	/*$('body').on('swipe',function(){
 		console.log('Swipe');
-
-	});
+	});*/
 
 	$scope.nextPage = function(){ nextPage();	};
 	$scope.prevPage = function(){ prevPage();	};	

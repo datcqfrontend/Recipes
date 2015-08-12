@@ -241,7 +241,10 @@ spanRed, .spanRed {
   .navbar-nav > #angular.active>a {    background-color: #B92933;  background-image: none;}
   .navbar-nav > #group-html.html.active>a, .navbar-nav > #group-html #html.active>a {    background-color: #e44d26; background-image: none;}
   .navbar-nav > #group-html.html5.active>a, .navbar-nav > #group-html #html5.active>a {    background-color: #e44d26; background-image: none;}
-  .navbar-nav > #css.active>a {    background-color: #1572b6;  background-image: none;}
+  
+  .navbar-nav > #group-css.css.active>a, .navbar-nav > #group-css #css.active>a {    background-color: #1572b6; background-image: none;}
+  .navbar-nav > #group-css.css3.active>a, .navbar-nav > #group-css #css3.active>a {    background-color: #1572b6; background-image: none;}
+  .navbar-nav > #group-css.cssRWD.active>a, .navbar-nav > #group-css #cssRWD.active>a {    background-color: #1572b6; background-image: none;}
 
   .navbar-nav > #group-js.javascript.active>a, .navbar-nav > #group-js #javascript.active>a {    background-color: #efc825;  background-image: none;}
   .navbar-nav > #group-js.jquery.active>a, .navbar-nav > #group-js #jquery.active>a {    background-color: #00529c;  background-image: none;}
