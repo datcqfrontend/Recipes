@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssSelectors" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,16 +6,126 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS Selectors</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        CSS selectors allow you to select and manipulate HTML elements.
+                        <br>CSS selectors are used to "find" (or select) HTML elements based on their id, class, type, attribute, and more.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The element Selector</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The element selector selects elements based on the element name.
+                        <br>You can select all &lt;p&gt; elements on a page like this: (all &lt;p&gt; elements will be center-aligned, with a red text color)
+
+                        <codeBody>
+                            <spanYellow>p</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The id Selector</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The id selector uses the id attribute of an HTML element to select a specific element.
+                        <br>An id should be unique within a page, so the id selector is used if you want to select a single, unique element.
+                        <br>To select an element with a specific id, write a hash character, followed by the id of the element.
+                        <br>The style rule below will be applied to the HTML element with <spanRed>id="para1"</spanRed>:
+
+                        <codeBody>
+                            <spanYellow>#para1</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                        </codeBody>
+                        <br>Do NOT start an ID name with a number!
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The class Selector</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The class selector selects elements with a specific class attribute.
+                        <br>To select elements with a specific class, write a period character, followed by the name of the class:
+                        <br>In the example below, all HTML elements with <spanRed>class="center"</spanRed> will be center-aligned:
+                        
+                        <codeBody>
+                            <spanYellow>.center</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                        </codeBody>
+
+                        <br>You can also specify that only specific HTML elements should be affected by a class.
+                        <br>In the example below, <spanRed>all &lt;p&gt; elements with class="center"</spanRed> will be center-aligned:
+
+                        <codeBody>
+                            <spanYellow>p.center</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                        </codeBody>
+                        <br>Do NOT start a class name with a number!
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Grouping Selectors</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        If you have elements with the same style definitions, like this:
+
+                         <codeBody>
+                            <spanYellow>h1</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                            <br>
+                            <br><spanYellow>h2</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                            <br>
+                            <br><spanYellow>p</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                        </codeBody>
+                        <br>you can group the selectors, to minimize the code.
+                        <br>To group selectors, separate each selector with a comma.
+                        <br>In the example below we have grouped the selectors from the code above:
+                        <codeBody>
+                            <spanYellow>h1, h2, p</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>}
+                        </codeBody>
+                    </p>    
+                  </div>
+                </div>
+            </div> 
             
 
         </div>       

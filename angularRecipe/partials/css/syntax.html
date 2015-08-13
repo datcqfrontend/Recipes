@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssSyntax" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,66 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS Syntax</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        A CSS rule set consists of a selector and a declaration block:
+                        
+                        <img src="media/images/selector.gif" alt="CSS selector" style="width:569px;height:auto;" class="img-responsive">
+
+                        <br>The <spanRed>selector</spanRed> points to the HTML element you want to style.
+                        <br>The <spanRed>declaration</spanRed> block contains one or more declarations separated by semicolons.
+                        <br>Each declaration includes a <spanRed>property</spanRed> name and a <spanRed>value</spanRed>, separated by a colon.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS Example</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        A CSS declaration always ends with a semicolon, and declaration groups are surrounded by curly braces:
+                        <codeBody>
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp; <spanYellow>color:red;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp; <spanYellow>text-align:center;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br>To make the CSS code more readable, you can put one declaration on each line.
+                        <br>In the example above all &lt;p&gt; elements will be center-aligned, with a red text color.
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS Comments</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Comments are used to explain your code, and may help you when you edit the source code at a later date. Comments are ignored by browsers.
+                        <br>A CSS comment starts with /* and ends with */. Comments can also span multiple lines:
+                        
+                        <codeBody>
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp;    color: red;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>/* This is a single-line comment */</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>}
+                            <br>
+                            <br><spanYellow>/* This is
+                            <br>a multi-line
+                            <br>comment */</spanYellow>
+
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

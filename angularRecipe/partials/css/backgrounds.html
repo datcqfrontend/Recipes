@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssBackgrounds" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,229 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS Background</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        CSS background properties are used to define the background effects of an element.
+                        <br>CSS properties used for background effects:
+                        <ul>
+                            <li>background-color</li>
+                            <li>background-image</li>
+                            <li>background-repeat</li>
+                            <li>background-attachment</li>
+                            <li>background-position</li>
+                        </ul>
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Background Color</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The background-color property specifies the background color of an element.
+                        <br>The background color of a page is set like this:
+                        
+                        <div id="bgColor" style="width:100%;height:50px; background-color: #b0c4de;">background-color: #b0c4de;</div>
+                        <br>
+                        <codeBody>
+                            div#bgColor {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-color: #b0c4de;</spanYellow>
+                            <br>}
+                        </codeBody>
+
+                        <br>With CSS, a color is most often specified by:
+                        <ul>
+                            <li>a HEX value - like "#ff0000"</li>
+                            <li>an RGB value - like "rgb(255,0,0)"</li>
+                            <li>a color name - like "red"</li>
+                        </ul>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Background Image</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The background-image property specifies an image to use as the background of an element.
+                        <br>By default, the image is repeated so it covers the entire element.
+                        <br>The background image for a page can be set like this:
+
+                        <div id="bgImage" style="width:100%;height:50px;background-image: url('media/images/paper.gif');">background-image: url("paper.gif")</div>
+                        <br>
+                        <codeBody>
+                            div#bgImage {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-image: url("paper.gif");</spanYellow>
+                            <br>}
+                        </codeBody>
+                      
+                        <br>Below is an example of a bad combination of text and background image. The text is almost not readable:
+                        <codeBody>
+                            div#bgImage {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-image: url("bgpaper.gif");</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Background Image - Repeat Horizontally or Vertically</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        By default, the background-image property repeats an image both horizontally and vertically.
+                        <br>Some images should be repeated only horizontally or vertically, or they will look strange, like this:
+
+                        <div id="bgImage2" style="width:100%;height:300px;background-image: url('media/images/gradient_bg.png');">background-image: url("gradient_bg.png")</div>
+                        <br>
+                        <codeBody>
+                            div#bgImage2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-image: url("gradient_bg.png");</spanYellow>
+                            <br>}
+                        </codeBody>
+                        
+                        <br>If the image is repeated only horizontally (repeat-x), the background will look better:
+                        <div id="bgImage2" style="width:100%;height:300px;background-image: url('media/images/gradient_bg.png');background-repeat: repeat-x;">
+                            background-image: url("gradient_bg.png")
+                            <br>background-repeat: repeat-x;
+                        </div>
+                        <br>
+                        <codeBody>
+                            div#bgImage2 {
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url("gradient_bg.png");
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-repeat: repeat-x;</spanYellow>
+                            <br>}
+                        </codeBody>
+
+                        <br><b>Note:</b> To repeat an image vertically set background-repeat: repeat-y;
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Background Image - Set position and no-repeat</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <b>Note: </b>When using a background image, use an image that does not disturb the text.
+                        <br>Showing the image only once is specified by the background-repeat property:
+
+                        <div id="bgImagePosition" style="width:100%;height:100px;background-image: url('media/images/img_tree.png');background-repeat: no-repeat; background-size:auto 100%;">
+                            background-image: url("img_tree.png");
+                            <br>background-repeat: no-repeat;
+                        </div>
+                        <br>
+                        <codeBody>
+                            div#bgImagePosition {
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url("img_tree.png");
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-repeat: no-repeat;</spanYellow>
+                            <br>}
+                        </codeBody>
+
+                        <br>In the example above, the background image is shown in the same place as the text. We want to change the position of the image, so that it does not disturb the text too much.
+                        <br>The position of the image is specified by the background-position property:
+
+                        <div id="bgImagePosition" style="width:100%;height:100px;background-image: url('media/images/img_tree.png');background-repeat: no-repeat;background-position: right top; background-size:auto 100%;">
+                            background-image: url("img_tree.png");
+                            <br>background-repeat: no-repeat;
+                            <br>background-position: right top;
+                        </div>
+                        <br>
+                        <codeBody>
+                            div#bgImagePosition {
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url("img_tree.png");
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: no-repeat;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-position: right top;</spanYellow>
+                            <br>}
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Background - Shorthand property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        As you can see from the examples above, there are many properties to consider when dealing with backgrounds.
+                        <br>To shorten the code, it is also possible to specify all the properties in one single property. This is called a shorthand property.
+                        <br>The shorthand property for background is simply "background":
+                      
+                        <div id="bgImageShorthand" style="width:100%;height:100px;background: #fff url('media/images/img_tree.png') no-repeat right top; background-size:auto 100%; ">
+                            background: #fff url('img_tree.png') no-repeat right top;                            
+                        </div>
+                        <br>
+                        <codeBody>
+                            div#bgImageShorthand {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background: #fff url("img_tree.png") no-repeat right top;</spanYellow>                            
+                            <br>}
+                        </codeBody>
+                        <br>When using the shorthand property the order of the property values is:
+                        <ul>
+                            <li><code>background-color</code></li>
+                            <li><code>background-image</code></li>
+                            <li><code>background-repeat</code></li>
+                            <li><code>background-attachment</code></li>
+                            <li><code>background-position</code></li>
+                        </ul>
+                        It does not matter if one of the property values is missing, as long as the ones that are present are in this order.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Background Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:30%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_background.asp">background</div></td>
+                            <td>Sets all the background 
+                            properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_background-attachment.asp">background-attachment</div></td>
+                            <td>Sets whether a background image is fixed or scrolls with the rest of the page</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_background-color.asp">background-color</div></td>
+                            <td>Sets the background color of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_background-image.asp">background-image</div></td>
+                            <td>Sets the background image for an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_background-position.asp">background-position</div></td>
+                            <td>Sets the starting position of a background image</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_background-repeat.asp">background-repeat</div></td>
+                            <td>Sets how a background image will be repeated</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

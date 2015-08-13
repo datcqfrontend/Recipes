@@ -274,6 +274,10 @@ spanRed, .spanRed {
       background-color: #1572b6;
       color: #fff;
   }
+
+  .css a.btn-link {
+    margin-left: 85%;
+  }
 /* END CSS3 */
 
 /* JS */

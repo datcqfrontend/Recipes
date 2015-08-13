@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssHowTo" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,16 +6,155 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Three Ways to Insert CSS</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        There are three ways of inserting a style sheet:
+                        <ul>
+                            <li>External style sheet</li>
+                            <li>Internal style sheet</li>
+                            <li>Inline style</li>
+                        </ul>
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>External Style Sheet</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        With an external style sheet, you can change the look of an entire website by changing just one file!
+                        <br>Each page must include a reference to the external style sheet file inside the &lt;link&gt; element. The &lt;link&gt; element goes inside the head section:
+                      
+                        <codeBody>
+                            &lt;head&gt;
+                            <br><spanYellow>&nbsp;&nbsp;&nbsp; &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;</spanYellow>
+                            <br>&lt;/head&gt;
+                        </codeBody>
+                        <br>An external style sheet can be written in any text editor. The file should not contain any html tags. The style sheet file must be saved with a .css extension. An example of a style sheet file called "myStyle.css", is shown below:
+
+                        <codeBody>
+                            body {
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: lightblue;
+                            <br>}
+                            <br>
+                            <br>h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    color: navy;
+                            <br>&nbsp;&nbsp;&nbsp;    margin-left: 20px;
+                            <br>}
+                        </codeBody>
+                        <br>Do not add a space between the property value and the unit (such as margin-left: <spanRed>20 px;</spanRed>). The correct way is: margin-left: <spanRed>20px</spanRed>;
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Internal Style Sheet</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An internal style sheet may be used if one single page has a unique style.
+                        <br>Internal styles are defined within the <spanRed>&lt;style&gt;</spanRed> element, inside the head section of an HTML page:
+                      
+                        <codeBody>
+                            &lt;head&gt;
+                            <br><spanYellow>&lt;style&gt;
+                            <br>body {
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: linen;
+                            <br>}
+                            <br>
+                            <br>h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    color: maroon;
+                            <br>&nbsp;&nbsp;&nbsp;    margin-left: 40px;
+                            <br>} 
+                            <br>&lt;/style&gt;</spanYellow>
+                            <br>&lt;/head&gt;
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Inline Styles</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An inline style may be used to apply a unique style for a single element.
+                        <br>An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly!
+                        <br>To use inline styles, add the style attribute to the relevant tag. The style attribute can contain any CSS property. The example shows how to change the color and the left margin of a &lt;h1&gt; element:  
+                      
+                        <codeBody>
+                            &lt;h1 <spanYellow>style="color:blue;margin-left:30px;"</spanYellow>&gt;This is a heading.&lt;/h1&gt;
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Multiple Style Sheets</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        If some properties have been defined for the same selector in different style sheets, the value will be inherited from the more specific style sheet. 
+                        <br>For example, assume that <spanRed>an external style sheet</spanRed> has the following properties for the &lt;h1&gt; element:
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    color: navy;
+                            <br>&nbsp;&nbsp;&nbsp;    margin-left: 20px;
+                            <br>}
+                        </codeBody>
+
+                        <br>then, assume that <spanRed>an internal style sheet</spanRed> also has the following property for the &lt;h1&gt; element:
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    color: orange;    
+                            <br>}
+                        </codeBody>
+
+                        <br>If the page with the internal style sheet also links to the external style sheet the properties for the &lt;h1&gt; element will be:
+                        <codeBody>
+                            color: orange;
+                            <br>margin-left: 20px;                            
+                        </codeBody>
+
+                        <br>The left margin is inherited from the external style sheet and the color is replaced by the internal style sheet.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Multiple Styles Will Cascade into One</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Styles can be specified:
+                        <ul>
+                            <li>in an external CSS file</li>
+                            <li>inside the &lt;head&gt; section of an HTML page</li>
+                            <li>inside an HTML element</li>
+                        </ul>
+
+                        <h3>Cascading order</h3>
+                        What style will be used when there is more than one style specified for an HTML element?
+                        <br>Generally speaking we can say that all the styles will "cascade" into a new "virtual" style sheet by the following rules, <spanRed>where number three has the highest priority</spanRed>:
+                        <ol>
+                          <li>Browser default</li>
+                          <li>External and internal style sheets (in the head section)</li>
+                          <li>Inline style (inside an HTML element)</li>
+                        </ol>
+
+                        So, an inline style (inside an HTML element) has the highest priority, which means that it will override a style defined inside the &lt;head&gt; tag, or in an external style sheet, or in a browser (a default value).
+                        <br><b>Note:</b> If the link to the external style sheet is placed below the internal style sheet in HTML &lt;head&gt;, the external style sheet will override the internal style sheet!
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
 
         </div>       

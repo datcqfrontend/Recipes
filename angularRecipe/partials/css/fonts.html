@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssFont" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,268 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Difference Between Serif and Sans-serif Fonts</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        <img alt="Serif vs. Sans-serif" src="media/images/serif.gif" width="398" height="auto" class="img-responsive">  
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS Font Families</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In CSS, there are two types of font family names:
+                        <ul>
+                            <li><b>generic family</b> - a group of font families with a 
+                            similar look (like "Serif" or "Monospace")</li>
+                            <li><b>font family</b> - a specific font family (like "Times New Roman" 
+                            or "Arial")</li>
+                        </ul>
+
+                        <table class="table table-striped">
+                        <tbody><tr>
+                        <th style="width:20%">Generic family</th>
+                        <th style="width:30%">Font family</th>
+                        <th>Description</th>
+                        </tr>
+                        <tr>
+                        <td>Serif</td>
+                        <td><span style="font-size:150%;font-family:Times New Roman">Times New Roman</span><br>
+                        <span style="font-size:150%;font-family:Georgia">Georgia</span></td>
+                        <td>Serif fonts have small lines at the ends on some characters</td>
+                        </tr>
+                        <tr>
+                        <td>Sans-serif</td>
+                        <td><span style="font-size:150%;font-family:Arial">Arial</span><br>
+                        <span style="font-size:150%;font-family:Verdana">Verdana</span></td>
+                        <td>"Sans" means without - these fonts do not have the 
+                        lines at the ends of characters</td>
+                        </tr>
+                        <tr>
+                        <td>Monospace</td>
+                        <td><span style="font-size:150%;font-family:Courier New">Courier New</span><br>
+                        <span style="font-size:150%;font-family:Lucida Console">Lucida Console</span></td>
+                        <td>All monospace characters have the same width</td>
+                        </tr>
+                        </tbody></table>
+
+                        <br><b>Note:</b> On computer screens, sans-serif fonts are considered easier to read than serif fonts.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Font Family</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The font family of a text is set with the font-family property.
+                        <br>The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font.
+                        <br>Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+                        <br><b>Note: </b>If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman".
+                        <br>More than one font family is specified in a comma-separated list:
+
+                        <codeBody>
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-family: "Times New Roman", Times, serif;</spanYellow>
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Font Style</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The font-style property is mostly used to specify italic text.
+                        <br>This property has three values:
+                        <ul>
+                            <li style="font-style: normal">normal - The text is shown normally</li>
+                            <li style="font-style: italic">italic - The text is shown in italics</li>
+                            <li style="font-style: oblique">oblique - The text is "leaning"
+                            (oblique is very similar to italic, but less supported)</li>
+                        </ul>
+
+                        <codeBody>
+                            p.normal {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-style: normal;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.italic {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-style: italic;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.oblique {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-style: oblique;</spanYellow>
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Font Size</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The font-size property sets the size of the text.
+                        <br>Being able to manage the text size is important in web design. However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.
+                        <br>Always use the proper HTML tags, like &lt;h1&gt; - &lt;h6&gt; for headings and &lt;p&gt; for paragraphs.
+                        <br>The font-size value can be an absolute, or relative size.
+                        <br>Absolute size:
+                        <ul>
+                            <li>Sets the text to a specified size</li>
+                            <li>Does not allow a user to change the text size in all browsers (bad for accessibility reasons)</li>
+                            <li>Absolute size is useful when the physical size of the output is known</li>
+                        </ul>
+
+                        <br>Relative size:
+                        <ul>
+                            <li>Sets the size relative to surrounding elements</li>
+                            <li>Allows a user to change the text size in browsers</li>
+                        </ul>
+                        <b>Note:</b> If you do not specify a font size, the default size for normal text, like paragraphs, is <spanRed>16px (16px=1em)</spanRed>.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Set Font Size With Pixels</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Setting the text size with pixels gives you full control over the text size:
+                        
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 40px;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 30px;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 14px;</spanYellow>
+                        </codeBody>
+                        <br><b>Tip: </b>If you use pixels, you can still use the zoom tool to resize the entire page.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Set Font Size With Em</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To allow users to resize the text (in the browser menu), many developers use em instead of pixels.
+                        <br>The em size unit is recommended by the W3C.
+                        <br>1em is equal to the current font size. The default text size in browsers is 16px. So, the <spanRed>default size of 1em is 16px</spanRed>.
+                        <br>The size can be calculated from pixels to em using this <spanRed>formula: pixels/16=em</spanRed>
+                      
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 2.5em; /* 40px/16=2.5em */</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 1.875em; /* 30px/16=1.875em */</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 0.875em; /* 14px/16=0.875em */</spanYellow>
+                        </codeBody>
+                        <br>In the example above, the text size in em is the same as the previous example in pixels. However, with the em size, it is possible to adjust the text size in all browsers.
+                        <br>Unfortunately, there is still a problem with older versions of IE. The text becomes larger than it should when made larger, and smaller than it should when made smaller.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Use a Combination of Percent and Em</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The solution that works in all browsers, is to set a default font-size in percent for the &lt;body&gt; element:
+
+                        <codeBody>
+                            body {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 100%;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 2.5em;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h2 {
+                            <br>&nbsp;&nbsp;&nbsp;   <spanYellow>font-size: 1.875em;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-size: 0.875em;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br>Our code now works great! It shows the same text size in all browsers, and allows all browsers to zoom or resize the text!
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Font Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:25%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_font_font.asp">font</div></td>
+                            <td>Sets all the font properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_font_font-family.asp">font-family</div></td>
+                            <td>Specifies the font family for text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_font_font-size.asp">font-size</div></td>
+                            <td>Specifies the font size of text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_font_font-style.asp">font-style</div></td>
+                            <td>Specifies the font style for text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_font_font-variant.asp">font-variant</div></td>
+                            <td>Specifies whether or not a text should be displayed in a small-caps font</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_font_weight.asp">font-weight</div></td>
+                            <td>Specifies the weight of a font</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

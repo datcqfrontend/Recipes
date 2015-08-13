@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssText" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,225 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Text Color</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        The color property is used to set the color of the text.
+                        <br>With CSS, a color is most often specified by:
+                        <ul>
+                            <li>a HEX value - like "#ff0000"</li>
+                            <li>an RGB value - like "rgb(255,0,0)"</li>
+                            <li>a color name - like "red"</li>
+                        </ul>
+                        The default color for a page is defined in the body selector.
+                        
+                        <codeBody>
+                            body {                            
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>color: blue;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>color: #00ff00;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>color: rgb(255,0,0);</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br><b>Note: </b>For W3C compliant CSS: If you define the color property, you must also define the background-color property.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Text Alignment</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The text-align property is used to set the horizontal alignment of a text.
+                        <br>Text can be centered, or aligned to the left or right, or justified.
+                        <br>When text-align is set to "justify", each line is stretched so that every line has equal width, and the left and right margins are straight (like in magazines and newspapers).
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-align: center;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.date {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-align: right;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.main {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-align: justify;</spanYellow>
+                            <br>}
+                        </codeBody>
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Text Decoration</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The text-decoration property is used to set or remove decorations from text.
+                        <br>The text-decoration property is mostly used to remove underlines from links for design purposes:
+                        <br><a href="" style="text-decoration:underline;">Normal anchor</a>
+                        <br><a href="" style="text-decoration:none;">Anchor with text-decoration: none</a>
+                        <br>
+
+                        <codeBody>
+                            a {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-decoration: none;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br>It can also be used to decorate text:
+                        <p style="text-decoration:overline;">text-decoration: overline</p>
+                        <p style="text-decoration:line-through;">text-decoration: line-through</p>
+                        <p style="text-decoration:underline;">text-decoration: underline</p>
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-decoration: overline;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-decoration: line-through;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>h3 {
+                            <br>&nbsp;&nbsp;&nbsp;   <spanYellow>text-decoration: underline;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br><b>Note:</b> It is not recommended to underline text that is not a link, as this often confuses users.
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Text Transformation</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The text-transform property is used to specify uppercase and lowercase letters in a text.
+                        <br>It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word.
+
+                        <p style="text-transform:uppercase;">text-transform: uppercase</p>
+                        <p style="text-transform:lowercase;">text-transform: lowercase</p>
+                        <p style="text-transform:capitalize;">text-transform: capitalize</p>
+
+                        <codeBody>
+                            p.uppercase {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-transform: uppercase;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.lowercase {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-transform: lowercase;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.capitalize {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-transform: capitalize;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Text Indentation</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The text-indent property is used to specify the indentation of the first line of a text.
+
+                        <p style="text-indent:50px;">text-indent: 50px asdasdas asdas dasda das dasd asd asda sdasda sad asd adas asda das asd asd. Asdasd asdas dasda asda asda dasdasd as dasd asd asd asd asd.
+                            <br>Asadasd asda sasd as asd as dasd asd ad.
+                        </p>
+
+                        <codeBody>
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-indent: 50px;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Text Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_color.asp">color</div></td>
+                            <td>Sets the color of text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_direction.asp">direction</div></td>
+                            <td>Specifies the text direction/writing direction</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_letter-spacing.asp">letter-spacing</div></td>
+                            <td>Increases or decreases the space between characters in a text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_dim_line-height.asp">line-height</div></td>
+                            <td>Sets the line height</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_text-align.asp">text-align</div></td>
+                            <td>Specifies the horizontal alignment of text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_text-decoration.asp">text-decoration</div></td>
+                            <td>Specifies the decoration added to text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_text-indent.asp">text-indent</div></td>
+                            <td>Specifies the indentation of the first line in a text-block</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_text-shadow.asp">text-shadow</div></td>
+                            <td>Specifies the shadow effect added to text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_text-transform.asp">text-transform</div></td>
+                            <td>Controls the capitalization of text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_unicode-bidi.asp">unicode-bidi</div></td>
+                            <td>Used together with the <div href="/cssref/pr_text_direction.asp">direction</div> 
+                            property to set or return whether the text should be overridden to support 
+                            multiple languages in the same document</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_vertical-align.asp">vertical-align</div></td>
+                            <td>Sets the vertical alignment of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_white-space.asp">white-space</div></td>
+                            <td>Specifies how white-space inside an element is handled</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_text_word-spacing.asp">word-spacing</div></td>
+                            <td>Increases or decreases the space between words in a text</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div>             
 
         </div>       
         <!-- /.row -->
