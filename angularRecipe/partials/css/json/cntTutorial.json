@@ -3,16 +3,19 @@
 		{ 
 			"title": "Introduction",
 			"sortContent":  "What is CSS?<br> Why Use CSS?",
+            "keyword": "",
 			"link": "#css/intro"
 		},
 		{ 
 			"title": "Syntax",
 			"sortContent":  "A CSS rule set consists of a selector and a declaration block: <img src='media/images/selector.gif' alt='CSS selector' style='width:569px;height:auto;' class='img-responsive'>",
+			"keyword": "",
 			"link": "#css/syntax"
 		},
 		{ 
 			"title": "Selectors",
 			"sortContent":  "CSS selectors allow you to select and manipulate HTML elements.<br> CSS selectors are used to 'find' (or select) HTML elements based on their id, class, type, attribute, and more.",
+			"keyword": "",
 			"link": "#css/selectors"
 		},							
 		{ 	"title": "Clearfix"	},
@@ -20,33 +23,39 @@
 		{ 
 			"title": "How To",
 			"sortContent":  "When a browser reads a style sheet, it will format the document according to the information in the style sheet.",
+			"keyword": "",
 			"link": "#css/howTo"
 		},
 		{ 
 			"title": "Backgrounds",
 			"sortContent":  "CSS background properties are used to define the background effects of an element.<br>CSS properties used for background effects:<ul><li>background-color</li><li>background-image</li><li>background-repeat</li><li>background-attachment</li><li>background-position</li></ul>",
+			"keyword": "",
 			"link": "#css/backgrounds"
 		},							
 		{ 
 			"title": "Text",
 			"sortContent":  "Text can style with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from the 'Try it yourself' link.",
+			"keyword": "",
 			"link": "#css/text"
 		},
 		{ 	"title": "Clearfix"	},
 
 		{ 
 			"title": "Fonts",
-			"sortContent":  "",
+			"sortContent":  "CSS font properties define the font family, boldness, size, and the style of a text.",
+			"keyword": "",
 			"link": "#css/fonts"
 		},
 		{ 
 			"title": "Links",
-			"sortContent":  "",
+			"sortContent":  "Links can be styled in different ways.",
+			"keyword": "",
 			"link": "#css/links"
 		},							
 		{ 
 			"title": "Lists",
-			"sortContent":  "",
+			"sortContent":  "The CSS list properties allow you to:<ul style='list-style-type:none;padding:0px;margin:0px;'><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set different list item markers for ordered lists</li><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set different list item markers for unordered lists</li><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set an image as the list item marker</li></ul>",
+			"keyword": "",
 			"link": "#css/lists"
 		},
 		{ 	"title": "Clearfix"	},
@@ -54,17 +63,20 @@
 
 		{ 
 			"title": "Tables",
-			"sortContent":  "",
+			"sortContent":  "The look of an HTML table can be greatly improved with CSS.",
+			"keyword": "",
 			"link": "#css/tables"
 		},
 		{ 
 			"title": "Box Model",
-			"sortContent":  "",
+			"sortContent":  "<img src='media/images/box-model.gif' alt='CSS box-model' width='436' height='auto' class='img-responsive'>",
+			"keyword": "box model",
 			"link": "#css/boxModel"
 		},							
 		{ 
 			"title": "Border",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/border"
 		},
 		{ 	"title": "Clearfix"	},
@@ -72,16 +84,19 @@
 		{ 
 			"title": "Outline",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/outline"
 		},
 		{ 
 			"title": "Margin",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/margin"
 		},							
 		{ 
 			"title": "Padding",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/padding"
 		},
 		{ 	"title": "Clearfix"	},
@@ -89,16 +104,19 @@
 		{ 
 			"title": "Dimension",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/dimension"
 		},
 		{ 
 			"title": "Display",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/display"
 		},							
 		{ 
 			"title": "Max-width",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/maxWidth"
 		},
 		{ 	"title": "Clearfix"	},
@@ -106,16 +124,19 @@
 		{ 
 			"title": "Position",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/position"
 		},
 		{ 
 			"title": "Float",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/float"
 		},							
 		{ 
 			"title": "Inline-block",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/inlineBlock"
 		},
 		{ 	"title": "Clearfix"	},
@@ -123,16 +144,19 @@
 		{ 
 			"title": "Align",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/align"
 		},
 		{ 
 			"title": "Combinators",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/combinators"
 		},							
 		{ 
 			"title": "Pseudo-class",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/pseudoClass"
 		},
 		{ 	"title": "Clearfix"	},
@@ -140,16 +164,19 @@
 		{ 
 			"title": "Pseudo-element",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/pseudoElement"
 		},
 		{ 
 			"title": "Navigation Bar",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/navigationBar"
 		},							
 		{ 
 			"title": "Image Gallery",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/imageGallery"
 		},
 		{ 	"title": "Clearfix"	},
@@ -157,16 +184,19 @@
 		{ 
 			"title": "Image Opacity",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/imageOpacity"
 		},
 		{ 
 			"title": "Image Sprites",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/imageSprites"
 		},
 		{ 
 			"title": "Media Types",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/mediaTypes"
 		},
 		{ 	"title": "Clearfix"	},
@@ -174,6 +204,7 @@
 		{ 
 			"title": "Attr Selectors",
 			"sortContent":  "",
+			"keyword": "",
 			"link": "#css/attrSelectors"
 		}
 	]

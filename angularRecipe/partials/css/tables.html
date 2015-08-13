@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssTables" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,319 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Table Borders</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        To specify table borders in CSS, use the border property.
+                        <br>The example below specifies a black border for &lt;table&gt;, &lt;th&gt;, and &lt;td&gt; elements:
+                        
+                        <style type="text/css">
+                            #table_1,  #table_1 th,  #table_1 td{
+                                border: 1px solid black;
+                                border-collapse: initial;
+                                border-spacing: 2px;
+                            }
+                        </style>
+                        <table id="table_1">
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                          </tr>
+                          <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <codeBody>
+                            table, th, td {
+                            <br>&nbsp;&nbsp;&nbsp;   <spanYellow>border: 1px solid black;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br>Notice that the table in the example above has double borders. This is because both the table and the &lt;th&gt;/&lt;td&gt; elements have separate borders.
+                        <br>To display a single border for the table, use the border-collapse property.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Collapse Borders</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The border-collapse property sets whether the table borders are collapsed into a single border or separated:
+                        <style type="text/css">
+                            #table_2{
+                                border: 1px solid black;                                
+                            }
+                            #table_2,  #table_2 th,  #table_2 td{
+                                border: 1px solid black;
+                            }
+                        </style>
+                        <table id="table_2">
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                          </tr>
+                          <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <codeBody>
+                            table {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>border-collapse: collapse;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>table, th, td {
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid black;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Table Width and Height</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Width and height of a table is defined by the width and height properties.
+                        <br>The example below sets the width of the table to 100%, and the height of the <th> elements to 50px:
+                        <style type="text/css">
+                            #table_3{
+                                border: 1px solid black;  
+                                width: 100% ;                             
+                            }
+                            #table_3,  #table_3 th,  #table_3 td{
+                                border: 1px solid black;
+                            }
+                            #table_3 th{
+                                height: 50px;
+                            }
+                        </style>
+                        <table id="table_3">
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                          </tr>
+                          <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <codeBody>
+                            table {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>width: 100%;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>th {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>height: 50px;</spanYellow>
+                            <br>}
+                        </codeBody>    
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Horizontal Text Alignment</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The text-align property sets the horizontal alignment, like <spanRed>left, right, or center</spanRed>.
+                        <br>By default, the text in &lt;th&gt; elements are center-aligned and the text in &lt;td&gt; elements are left-aligned.
+                        <br>The following example left-aligns the text in &lt;th&gt; elements:
+                        <style type="text/css">
+                            #table_4{
+                                border: 1px solid black;  
+                                width: 100% ;                             
+                            }
+                            #table_4,  #table_4 th,  #table_4 td{
+                                border: 1px solid black;
+                            }
+                            #table_4 th{
+                                text-align: left;
+                                height: 50px;
+                            }
+                        </style>
+                        <table id="table_4">
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                          </tr>
+                          <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <codeBody>
+                            th {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-align: left;</spanYellow>
+                            <br>}
+                        </codeBody> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Vertical Text Alignment</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The vertical-align property sets the vertical alignment, like <spanRed>top, bottom, or middle</spanRed>.
+                        <br>By default, the vertical alignment of text in a table is middle (for both &lt;th&gt; and &lt;td&gt; elements).
+                        <br>The following example sets the vertical text alignment to bottom for &lt;td&gt; elements:
+                      
+                        <style type="text/css">
+                            #table_5{
+                                border: 1px solid black;  
+                                width: 100% ;                             
+                            }
+                            #table_5,  #table_5 th,  #table_5 td{
+                                border: 1px solid black;
+                            }
+                            #table_5 th{
+                                text-align: center;
+                                vertical-align: middle;
+                                height: 50px;
+                            }
+                        </style>
+                        <table id="table_5">
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                          </tr>
+                          <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <codeBody>
+                            th {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>vertical-align: middle;</spanYellow>
+                            <br>}
+                        </codeBody> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Table Padding</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To control the space between the border and content in a table, use the padding property on &lt;td&gt; and &lt;th&gt; elements:
+                        <style type="text/css">
+                            #table_6{
+                                border: 1px solid black;  
+                                width: 100% ;                             
+                            }
+                            #table_6,  #table_6 th,  #table_6 td{
+                                border: 1px solid black;
+                            }
+                            #table_6 td{
+                                padding: 15px;
+                            }
+                        </style>
+                        <table id="table_6">
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                          </tr>
+                          <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <codeBody>
+                            td {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>padding: 15px;</spanYellow>
+                            <br>}
+                        </codeBody> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Table Color</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The example below specifies the color of the borders, and the text and background color of &lt;th&gt; elements:
+                        <style type="text/css">
+                            #table_7{
+                                border: 1px solid green;  
+                                width: 100% ;                             
+                            }
+                            #table_7,  #table_7 th,  #table_7 td{
+                                border: 1px solid black;
+                            }
+                            #table_7 th{
+                                background-color: green;
+                                color: white;
+                            }
+                        </style>
+                        <table id="table_7">
+                          <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                          </tr>
+                          <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                          </tr>
+                        </table>
+                        <br>
+                        <codeBody>
+                            th {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-color: green;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>color: white;</spanYellow>
+                            <br>}
+                        </codeBody> 
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

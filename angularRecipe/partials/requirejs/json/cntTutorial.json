@@ -3,16 +3,19 @@
 		{ 
 			"title": "Start",
 			"sortContent":  "What's RequireJS ?<br>How to download RequireJS ?<br>How to add RequireJS ?<br>Optimize ?",
+			"keyword": "",
 			"link": "#requirejs/start"
 		},
 		{ 
 			"title": "API",
 			"sortContent":  "How to load JavaScript Files ?<br>What is 'baseUrl' ?<br>What is 'data-main' ? ",
+			"keyword": "",
 			"link": "#requirejs/api"
 		},	
 		{ 
 			"title": "Optimization",
 			"sortContent":  "The optimizer is part of the r.js adapter for Node and Nashorn, and it is designed to be run as part of a build or packaging step after you are done with development and are ready to deploy the code for your users.",
+			"keyword": "",
 			"link": "#requirejs/optimization"
 		},						
 		{ 	"title": "Clearfix"	}

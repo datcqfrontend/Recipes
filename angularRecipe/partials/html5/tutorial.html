@@ -29,7 +29,7 @@
             <div ng-class="tut.title!='Clearfix' ? 'col-sm-4' : 'col-sm-12 hidden-xs'" ng-repeat="tut in tutorials | filter: $filterTutorial">
                 <div ng-if="tut.title!='Clearfix'">                    
                     <h3>{{tut.title}}</h3>
-                    <p ng-bind-html="tut.sortContent"></p> 
+                    <p ng-bind-html="decodeText(tut.sortContent)"></p> 
                     <a href="{{tut.link}}" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
                 </div>
             </div>
