@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssPadding" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,138 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Padding</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        The padding clears an area around the content (inside the border) of an element. The padding is affected by the background color of the element.
+                        <br>The top, right, bottom, and left padding can be changed independently using separate properties. A shorthand padding property can also be used, to change all paddings at once.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Possible Values</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                            <tbody><tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td><i>length</i></td>
+                                <td>Defines a fixed padding (in pixels, pt, em, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td><i>%</i></td>
+                                <td>Defines a padding in % of the containing element</td>
+                            </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Padding - Individual sides</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In CSS, it is possible to specify different padding for different sides:
+                        <codeBody>
+                            p {
+                            <br>&nbsp;    padding-top: 100px;
+                            <br>&nbsp;    padding-bottom: 100px;
+                            <br>&nbsp;    padding-right: 150px;
+                            <br>&nbsp;    padding-left: 50px;
+                            <br>}
+                        </codeBody>
+                      
+                      
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Padding - Shorthand property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To shorten the code, it is possible to specify all the padding properties in one property. This is called a shorthand property.
+                        <br>The shorthand property for all the padding properties is "padding":
+                        <codeBody>
+                            p {
+                            <br>&nbsp;    padding: 100px 100px;                            
+                            <br>}
+                        </codeBody>
+                        <br>The padding property can have from one to four values.
+                        <ul>
+                            <li><b>padding: 25px 50px 75px 100px; </b>
+                            <ul><li>top padding is 25px</li>
+                            <li>right padding is 50px</li>
+                            <li>bottom padding is 75px</li>
+                            <li>left padding is 100px</li></ul>
+                            <br>
+                            </li>
+                            <li><b>padding: 25px 50px 75px;</b><ul>
+                                <li>top padding is 25px</li>
+                            <li>right and left paddings are 50px</li>
+                            <li>bottom padding is 75px</li></ul>
+                            <br>
+                            </li>
+                            <li><b>padding: 25px 50px;</b><ul><li>top and bottom paddings are 25px</li>
+                            <li>right and left paddings are 50px</li></ul>
+                            <br>
+                            </li>
+                            <li><b>padding: 25px;</b><ul><li>all four paddings are 25px</li></ul>
+                            </li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Padding Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_padding.asp">padding</div></td>
+                            <td>A shorthand property for setting all the padding properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_padding-bottom.asp">padding-bottom</div></td>
+                            <td>Sets the bottom padding of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_padding-left.asp">padding-left</div></td>
+                            <td>Sets the left padding of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_padding-right.asp">padding-right</div></td>
+                            <td>Sets the right padding of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_padding-top.asp">padding-top</div></td>
+                            <td>Sets the top padding of an element</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div>
 
         </div>       
         <!-- /.row -->

@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssMargin" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,149 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Margin</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        The margin clears an area around an element (outside the border). The margin does not have a background color, and is completely transparent.
+                        <br>The top, right, bottom, and left margin can be changed independently using separate properties. A shorthand margin property can also be used, to change all margins at once.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Possible Values</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                            <tbody><tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>auto</td>
+                                <td>The browser calculates a margin</td>
+                            </tr>
+                            <tr>
+                                <td><i>length</i></td>
+                                <td>Specifies a margin in px, pt, cm, etc. Default value is 0px</td>
+                            </tr>
+                            <tr>
+                                <td><i>%</i></td>
+                                <td>Specifies a margin in percent of the width of the 
+                            containing element</td>
+                            </tr>
+                            <tr>
+                                <td>inherit</td>
+                                <td>Specifies that the margin should be inherited 
+                            from the parent element</td>
+                            </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Margin - Individual sides</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In CSS, it is possible to specify different margins for different sides of an element:
+                        <codeBody>
+                            p {
+                            <br>&nbsp;    margin-top: 100px;
+                            <br>&nbsp;    margin-bottom: 100px;
+                            <br>&nbsp;    margin-right: 150px;
+                            <br>&nbsp;    margin-left: 50px;
+                            <br>}
+                        </codeBody>
+
+                        <br>The margin property can have from one to four values.
+                        <ul>
+                            <li><b>margin: 25px 50px 75px 100px; </b>
+                            <ul><li>top margin is 25px</li>
+                            <li>right margin is 50px</li>
+                            <li>bottom margin is 75px</li>
+                            <li>left margin is 100px</li></ul>
+                            <br>
+                            </li>
+                            <li><b>margin: 25px 50px 75px;</b><ul>
+                                <li>top margin is 25px</li>
+                            <li>right and left margins are 50px</li>
+                            <li>bottom margin is 75px</li></ul>
+                            <br>
+                            </li>
+                            <li><b>margin: 25px 50px;</b><ul><li>top and bottom margins are 25px</li>
+                            <li>right and left margins are 50px</li></ul>
+                            <br>
+                            </li>
+                            <li><b>margin: 25px;</b><ul><li>all four margins are 25px</li></ul>
+                            </li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Margin - Shorthand property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To shorten the code, it is possible to specify all the margin properties in one property. This is called a shorthand property.
+                        <br>The shorthand property for all the margin properties is "margin":
+                        <codeBody>
+                            p {
+                            <br>&nbsp;    margin: 100px 50px;
+                            
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Margin Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_margin.asp">margin</div></td>
+                            <td>A shorthand property for setting the margin properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_margin-bottom.asp">margin-bottom</div></td>
+                            <td>Sets the bottom margin of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_margin-left.asp">margin-left</div></td>
+                            <td>Sets the left margin of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_margin-right.asp">margin-right</div></td>
+                            <td>Sets the right margin of an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_margin-top.asp">margin-top</div></td>
+                            <td>Sets the top margin of an element</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

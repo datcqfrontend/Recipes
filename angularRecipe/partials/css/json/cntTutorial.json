@@ -75,7 +75,7 @@
 		},							
 		{ 
 			"title": "Border",
-			"sortContent":  "",
+			"sortContent":  "<div style='width:100%;border:10px groove #98bf21;padding:8px;'><h2>CSS Border Properties</h2><p>The CSS border properties allow you to specify the style, size, and color of an element's border.</p></div>",
 			"keyword": "",
 			"link": "#css/border"
 		},
@@ -83,19 +83,19 @@
 
 		{ 
 			"title": "Outline",
-			"sortContent":  "",
-			"keyword": "",
+			"sortContent":  "<img src='media/images/box_outline.gif' alt='Outline' width='536' height='auto' class='img-responsive'>",
+			"keyword": "outline",
 			"link": "#css/outline"
 		},
 		{ 
 			"title": "Margin",
-			"sortContent":  "",
+			"sortContent":  "The CSS margin properties define the space around elements.",
 			"keyword": "",
 			"link": "#css/margin"
 		},							
 		{ 
 			"title": "Padding",
-			"sortContent":  "",
+			"sortContent":  "The CSS padding properties define the space between the element border and the element content.",
 			"keyword": "",
 			"link": "#css/padding"
 		},
@@ -103,19 +103,19 @@
 
 		{ 
 			"title": "Dimension",
-			"sortContent":  "",
+			"sortContent":  "The CSS dimension properties allow you to control the height and width of an element.",
 			"keyword": "",
 			"link": "#css/dimension"
 		},
 		{ 
 			"title": "Display",
-			"sortContent":  "",
+			"sortContent":  "The display property is the most important CSS property for controlling layout.",
 			"keyword": "",
 			"link": "#css/display"
 		},							
 		{ 
 			"title": "Max-width",
-			"sortContent":  "",
+			"sortContent":  "Max-width will improve the browser's handling of small windows. This is important when making a site usable on small devices",
 			"keyword": "",
 			"link": "#css/maxWidth"
 		},
@@ -123,19 +123,19 @@
 
 		{ 
 			"title": "Position",
-			"sortContent":  "",
+			"sortContent":  "The position property specifies the type of positioning method used for an element (static, relative, fixed or absolute).",
 			"keyword": "",
 			"link": "#css/position"
 		},
 		{ 
 			"title": "Float",
-			"sortContent":  "",
+			"sortContent":  "The float property specifies whether or not an element should float.<br>The clear property is used to control the behavior of floating elements.",
 			"keyword": "",
 			"link": "#css/float"
 		},							
 		{ 
 			"title": "Inline-block",
-			"sortContent":  "",
+			"sortContent":  "inline-block elements are like inline elements but they can have a width and height.",
 			"keyword": "",
 			"link": "#css/inlineBlock"
 		},

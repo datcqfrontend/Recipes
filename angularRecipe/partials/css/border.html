@@ -6,10 +6,165 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Border Style</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        The border-style property specifies what kind of border to display.
+                        <br><b>Note:</b> None of the border properties will have ANY effect unless the border-style property is set!
                       
+                        <h3>border-style values:</h3>
+                        <p style="border: 1px none #000000;padding:3px;">none: Defines no border</p>
+                        <p style="border: 1px dotted #000000;padding:3px;">dotted: Defines a dotted border</p>
+                        <p style="border: 1px dashed #000000;padding:3px;">dashed: Defines a dashed border</p>
+                        <p style="border: 1px solid #000000;padding:3px;">solid: Defines a solid border</p>
+                        <p style="border: 3px double #000000;padding:3px;">double: Defines two borders. The width of the two borders are the same as the border-width value</p>
+                        <p style="border: 5px groove #98bf21;padding:3px;">groove: Defines a 3D grooved border. The effect depends on the border-color value</p>
+                        <p style="border: 5px ridge #98bf21;padding:3px;">ridge: Defines a 3D ridged border. The effect depends on the border-color value</p>
+                        <p style="border: 5px inset #98bf21;padding:3px;">inset: Defines a 3D inset border. The effect depends on the border-color value</p>
+                        <p style="border: 5px outset #98bf21;padding:3px;">outset: Defines a 3D outset border. The effect depends on the border-color value</p>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Border Width</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      The border-width property is used to set the width of the border.
+                      <br>The width is set in <spanRed>pixels</spanRed>, or by using one of the three pre-defined values: <spanRed>thin, medium, or thick</spanRed>.
+                      <br><b>Note:</b> The "border-width" property does not work if it is used alone. Use the "border-style" property to set the borders first.
+                      
+                      <codeBody>
+                        p.one {
+                        <br>&nbsp;&nbsp;&nbsp;    border-style: solid;
+                        <br>&nbsp;&nbsp;&nbsp;    <spanYellow>border-width: 5px;</spanYellow>
+                        <br>}
+                        <br>
+                        <br>p.two {
+                        <br>&nbsp;&nbsp;&nbsp;    border-style: solid;
+                        <br>&nbsp;&nbsp;&nbsp;    <spanYellow>border-width: medium;</spanYellow>
+                        <br>}
+                      </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Border Color</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The border-color property is used to set the color of the border. The color can be set by:
+                        <ul>
+                            <li>name - specify a color name, like "red"</li>
+                            <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+                            <li>Hex - specify a hex value, like "#ff0000"</li>
+                        </ul>
+                        You can also set the border color to "transparent".
+
+                        <br>If the border color is not set it is inherited from the color property of the element.
+                        <br><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" property to set the borders first.
+
+                        <codeBody>
+                            p.one {
+                            <br>&nbsp;&nbsp;&nbsp;    border-style: solid;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>border-color: red;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.two {
+                            <br>&nbsp;&nbsp;&nbsp;    border-style: solid;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>border-color: #98bf21;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Border - Individual sides</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In CSS it is possible to specify different borders for different sides:
+                        <codeBody>
+                            p {
+                            <br>&nbsp;&nbsp;&nbsp;     border-top-style: dotted;
+                            <br>&nbsp;&nbsp;&nbsp;     border-right-style: solid;
+                            <br>&nbsp;&nbsp;&nbsp;     border-bottom-style: dotted;
+                            <br>&nbsp;&nbsp;&nbsp;     border-left-style: solid;
+                            <br>}
+                            <br>
+                            <br>/* Can also be set with a single property: */
+                            <br>p{
+                            <br>&nbsp;&nbsp;&nbsp;     <spanYellow>border-style: dotted solid;<spanYellow>
+                            <br>}
+                        </codeBody>
+
+                        <br>The border-style property can have from one to four values.
+                        <ul>
+                            <li><p style="border-style: dotted solid double dashed;">
+                                <b>border-style: dotted solid double dashed; </b>
+                            </p>
+                            <ul><li>top border is dotted</li>
+                            <li>right border is solid</li>
+                            <li>bottom border is double</li>
+                            <li>left border is dashed</li></ul>
+                            <br>
+                            </li>
+                            <li><p style="border-style: dotted solid double;">
+                                <b>border-style: dotted solid double;</b>
+                            </p>
+                            <ul><li>top border is dotted</li>
+                            <li>right and left borders are solid</li>
+                            <li>bottom border is double</li></ul>
+                            <br>
+                            </li>
+                            <li><p style="border-style: dotted solid;">
+                                <b>border-style: dotted solid;</b>
+                            </p>
+                            <ul><li>top and bottom borders are dotted</li>
+                            <li>right and left borders are solid</li></ul>
+                            <br>
+                            </li>
+                            <li><p style="border-style: dotted;">
+                                <b>border-style: dotted;</b>
+                            </p>
+                            <ul><li>all four borders are dotted</li></ul>
+                            </li>
+                        </ul>
+                        The border-style property is used in the example above. However, it also works with border-width and border-color.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Border - Shorthand property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        As you can see from the examples above, there are many properties to consider when dealing with borders.
+                        <br>To shorten the code, it is also possible to specify all the individual border properties in one property. This is called a shorthand property.
+                        <br>The border property is a shorthand for the following individual border properties:
+                        <ul>
+                            <li>border-width</li>
+                            <li>border-style (required)</li>
+                            <li>border-color</li>
+                        </ul>
+
+                        <p style="border: 5px solid red;">
+                            border: 5px solid red;
+                        </p>
+
+                        <codeBody>
+                            p{
+                            <br>&nbsp;&nbsp;&nbsp;     <spanYellow>border: 5px solid red;<spanYellow>
+                            <br>}
+                        </codeBody>
                       
                     </p>
                   </div>
@@ -18,75 +173,102 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>All CSS Border Properties</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:25%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border.asp">border</div></td>
+                            <td>Sets all the border properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-bottom.asp">border-bottom</div></td>
+                            <td>Sets all the bottom border properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-bottom_color.asp">border-bottom-color</div></td>
+                            <td>Sets the color of the bottom border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-bottom_style.asp">border-bottom-style</div></td>
+                            <td>Sets the style of the bottom border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-bottom_width.asp">border-bottom-width</div></td>
+                            <td>Sets the width of the bottom border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-color.asp">border-color</div></td>
+                            <td>Sets the color of the four borders</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-left.asp">border-left</div></td>
+                            <td>Sets all the left border properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-left_color.asp">border-left-color</div></td>
+                            <td>Sets the color of the left border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-left_style.asp">border-left-style</div></td>
+                            <td>Sets the style of the left border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-left_width.asp">border-left-width</div></td>
+                            <td>Sets the width of the left border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-right.asp">border-right</div></td>
+                            <td>Sets all the right border properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-right_color.asp">border-right-color</div></td>
+                            <td>Sets the color of the right border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-right_style.asp">border-right-style</div></td>
+                            <td>Sets the style of the right border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-right_width.asp">border-right-width</div></td>
+                            <td>Sets the width of the right border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-style.asp">border-style</div></td>
+                            <td>Sets the style of the four borders</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-top.asp">border-top</div></td>
+                            <td>Sets all the top border properties in one declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-top_color.asp">border-top-color</div></td>
+                            <td>Sets the color of the top border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-top_style.asp">border-top-style</div></td>
+                            <td>Sets the style of the top border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-top_width.asp">border-top-width</div></td>
+                            <td>Sets the width of the top border</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_border-width.asp">border-width</div></td>
+                            <td>Sets the width of the four borders</td>
+                          </tr>
+                        </tbody></table>
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
+            
 
         </div>       
         <!-- /.row -->

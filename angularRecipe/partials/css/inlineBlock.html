@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssInlineBlock" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,11 +6,39 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>The inline-block Value</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        It has been possible for a long time to create a grid of boxes that fills the browser width and wraps nicely (when the browser is resized), by using the float property.
+                        <br>However, the inline-block value of the display property makes it is even easier.
+                        <br>inline-block elements are like inline elements but they can have a width and height.
+                        <h3>Examples</h3>
+                        The old way - using float (notice that we also need to specify a clear property for the element after the floating boxes):
+
+                        <codeBody>
+                            .floating-box {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>float: left;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    width: 150px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 75px;
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 10px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007; 
+                            <br>}
+                            <br>
+                            <br>.after-box {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>clear: left;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br>The same effect can be achieved by using the inline-block value of the display property (notice that no clear property is needed):
+
+                        <codeBody>
+                            .floating-box {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>display: inline-block;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    width: 150px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 75px;
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 10px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007; 
+                            <br>}                            
+                        </codeBody>
                     </p>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssFloat" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,126 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>The float Property</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        In its simplest use, the float property can be used to wrap text around images.
+                        <br>The following example specifies that an image should float to the right in a text:
+                        <codeBody>
+                            img {
+                            <br>&nbsp;&nbsp;&nbsp;     <spanYellow>float: right;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;     margin: 0 0 10px 10px;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The clear Property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The clear property is used to control the behavior of floating elements.
+                        <br>Elements after a floating element will flow around it. To avoid this, use the clear property.
+                        <br>The clear property specifies on which sides of an element floating elements are not allowed to float:
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>clear: left;</spanYellow>
+                            <br>}
+                        </codeBody>
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The clearfix Hack - overflow: auto;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.
+                        <br>Then we can add overflow: auto; to the containing element to fix this problem:
+                        <codeBody>
+                            .clearfix {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>overflow: auto;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Web Layout Example</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        It is common to do entire web layouts using the float property:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid blue;
+                            <br>}
+                            <br>
+                            <br>.clearfix {
+                            <br>&nbsp;&nbsp;&nbsp;    overflow: auto;
+                            <br>}
+                            <br>
+                            <br>nav {
+                            <br>&nbsp;&nbsp;&nbsp;    float: left;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                            <br>
+                            <br>section {
+                            <br>&nbsp;&nbsp;&nbsp;    margin-left: 206px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid red;
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Float Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%">Property</th>
+                            <th style="width:65%">Description</th>
+                            <th>Values</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_class_clear.asp">clear</div></td>
+                            <td>Specifies on which sides of an element where floating elements are not allowed 
+                            to float</td>
+                            <td>left<br>
+                            right<br>
+                            both<br>
+                            none<br>
+                            inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_class_float.asp">float</div></td>
+                            <td>Specifies whether or not an element should float</td>
+                            <td>left<br>
+                            right<br>
+                            none<br>
+                            inherit</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

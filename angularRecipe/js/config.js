@@ -119,7 +119,7 @@ var fw = {
 					{"page":"display", "topic":"CSS Display", "breadcrumb":"Display"  },
 					{"page":"maxWidth", "topic":"CSS Max-width", "breadcrumb":"Max-width"  },
 
-					{"page":"postion", "topic":"CSS Position", "breadcrumb":"Position"  },
+					{"page":"position", "topic":"CSS Position", "breadcrumb":"Position"  },
 					{"page":"float", "topic":"CSS Float", "breadcrumb":"Float"  },
 					{"page":"inlineBlock", "topic":"CSS Inline-block", "breadcrumb":"Inline-block"  },
 

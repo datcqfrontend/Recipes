@@ -6,11 +6,33 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Using width, max-width and margin: auto;</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+                        <br>Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:
+                        <div style="border:3px solid #8AC007; width:500px; margin: auto;">This &lt;div&gt; element has a width of 500px, and margin set to auto.</div>
+                        
+                        <br><b>Note:</b> The problem with the &lt;div&gt; above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
+                        <br>Using max-width instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:
+                        <div style="border:3px solid #8AC007; max-width:500px; margin: auto;">This &lt;div&gt; element has a max-width of 500px, and margin set to auto.</div>
+
+                        <br><b>Tip:</b> Drag the browser window to smaller than 500px wide, to see the difference between the two divs!
+                        <br>Here is an example of the two divs above:
+
+                        <codeBody>
+                            div.ex1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>width: 500px;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    margin: auto;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                            <br>
+                            <br>div.ex2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>max-width: 500px;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    margin: auto;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                        </codeBody>
                     </p>
                   </div>
                 </div>

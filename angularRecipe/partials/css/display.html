@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssDisplay" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,122 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>The display Property</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        The display property specifies if/how an element is displayed.
+                        <br>Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Block-level Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+                      
+                        <div style="border:3px solid #8AC007;">The &lt;div&gt; element is a block-level element.</div>
+                        <br>Examples of block-level elements:
+                        <ul>
+                            <li>&lt;div&gt;</li>
+                            <li>&lt;h1&gt; - &lt;h6&gt;</li>
+                            <li>&lt;p&gt;</li>
+                            <li>&lt;form&gt;</li>
+                            <li>&lt;header&gt;</li>
+                            <li>&lt;footer&gt;</li>
+                            <li>&lt;section&gt;</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Inline Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An inline element does not start on a new line and only takes up as much width as necessary.
+                        <br><span style="border:3px solid #8AC007;">This is an inline &lt;span&gt; element inside a paragraph.</span>
+                        <br>Examples of inline elements:
+                        <ul>
+                            <li>&lt;span&gt;</li>
+                            <li>&lt;a&gt;</li>
+                            <li>&lt;img&gt;</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Display: none;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        display: none; is commonly used with JavaScript to <spanRed>hide and show elements without deleting and recreating them</spanRed>.
+                        <br>The &lt;script&gt; element use display: none; as its default. 
+
+
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Override The Default Display Value</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        As mentioned, every element has a default display value. However, you can override this.
+                        <br>Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.
+                        <br>A common example is making inline &lt;li&gt; elements for horizontal menus:
+                        <codeBody>
+                            li {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>display: inline;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br><b>Note:</b> Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
+                        <br>The following example displays &lt;span&gt; elements as block elements:
+                        <codeBody>
+                            span {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>display: block;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Hide an Element - display:none or visibility:hidden?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
+                      
+                        <codeBody>
+                            h1.hidden {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>display: none;</spanYellow>
+                            <br>}
+                        </codeBody>
+                        <br><spanRed>visibility:hidden;</spanRed> also hides an element.
+                        <br>However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
+
+                        <codeBody>
+                            h1.hidden {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>visibility: hidden;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

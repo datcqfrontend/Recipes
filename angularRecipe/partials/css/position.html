@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssPosition" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,258 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>The position Property</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        The position property specifies the type of positioning method used for an element.
+                        <br>There are four different position values:
+                        <ul>
+                            <li>static</li>
+                            <li>relative</li>
+                            <li>fixed</li>
+                            <li>absolute</li>
+                        </ul>
+                        Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>position: static;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML elements are positioned static by default.
+                        <br>Static positioned elements are not affected by the top, bottom, left, and right properties.
+                        <br>An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+                      
+                        <div style="position: static; border: 3px solid #8AC007;">This &lt;div&gt; element has position: static;</div>
+
+                        <br>Here is the CSS that is used:
+                        <codeBody>
+                            div.static {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>position: static;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>position: relative;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An element with position: relative; is positioned relative to its normal position.
+                        <br>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+                      
+                        <div style="position: relative; left:30px; border: 3px solid #8AC007;">This &lt;div&gt; element has position: static;</div>
+
+                        <br>Here is the CSS that is used:
+                        <codeBody>
+                            div.relative {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>position: relative;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    left: 30px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>position: fixed;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+                        <br>A fixed element does not leave a gap in the page where it would normally have been located.
+                        <br>Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
+
+                        <codeBody>
+                            div.fixed {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>position: fixed;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    bottom: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;    right: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>position: absolute;</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+                        <br>However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+                        <br><b>Note:</b> A "positioned" element is one whose position is anything except static.
+                        <br>Here is a simple example:
+                      
+                        <div style="border:3px solid #8AC007;position: relative;width: 400px;height: 200px;">
+                        This &lt;div&gt; element has position: relative;
+                            <div style="border:3px solid #8AC007;position: absolute;top: 80px;right: 0;width: 200px;height: 100px;">
+                            This &lt;div&gt; element has position: absolute;
+                            </div>
+                        </div>
+                        <br>
+                        <codeBody>
+                            div.relative {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>position: relative;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    width: 4000px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                            <br>div.absolute {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>position: absolute;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    top: 80px;
+                            <br>&nbsp;&nbsp;&nbsp;    right: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 3px solid #8AC007;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Overlapping Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        When elements are positioned, they can overlap other elements.
+                        <br>The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+                        <br>An element can have a positive or negative stack order:
+                        <codeBody>
+                            img {
+                            <br>&nbsp;&nbsp;&nbsp;     position: absolute;
+                            <br>&nbsp;&nbsp;&nbsp;     left: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;     top: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;     z-index: -1;
+                            <br>}
+                        </codeBody>
+                        <br>An element with greater stack order is always in front of an element with a lower stack order.
+                        <br><b>Note:</b> If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Positioning Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%">Property</th>
+                            <th style="width:55%">Description</th>
+                            <th>Values</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_bottom.asp">bottom</div></td>
+                            <td>Sets the bottom margin edge for a positioned box</td>
+                            <td>auto<br>
+                              <i>length<br>
+                            %<br>
+                            </i>inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_clip.asp">clip</div></td>
+                            <td>Clips an absolutely positioned element</td>
+                            <td><i>shape<br>
+                              </i>auto<br>
+                            inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_class_cursor.asp">cursor</div></td>
+                            <td>Specifies the type of cursor to be displayed</td>
+                            <td><span class="value-inst-uri noxref"><i>url</i><br>
+                              </span>auto<br>
+                              crosshair<br>
+                              default<br>
+                              pointer<br>
+                              move<br>
+                              e-resize<br>
+                              ne-resize<br>
+                              nw-resize<br>
+                              n-resize<br>
+                              se-resize<br>
+                              sw-resize<br>
+                              s-resize<br>
+                              w-resize<br>
+                              text<br>
+                              wait<br>
+                              help</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_left.asp">left</div></td>
+                            <td>Sets the left margin edge for a positioned box</td>
+                            <td>auto<br>
+                              <i>length<br>
+                            %<br>
+                            </i>inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_overflow.asp">overflow</div><br>
+                            </td>
+                            <td>Specifies what happens if content overflows an element's 
+                            box</td>
+                            <td>auto<br>
+                              hidden<br>
+                              scroll<br>
+                            visible<br>
+                              inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_class_position.asp">position</div></td>
+                            <td>Specifies the type of positioning for an element</td>
+                            <td>absolute<br>
+                              fixed<br>
+                              relative<br>
+                              static<br>
+                              inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_right.asp">right</div></td>
+                            <td>Sets the right margin edge for a positioned box</td>
+                            <td>auto<br>
+                              <i>length<br>
+                            %<br>
+                            </i>inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_top.asp">top</div></td>
+                            <td>Sets the top margin edge for a positioned box</td>
+                            <td>auto<br>
+                              <i>length<br>
+                            %<br>
+                            </i>inherit</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_pos_z-index.asp">z-index</div></td>
+                            <td>Sets the stack order of an element</td>
+                            <td>
+                              <i>number<br>
+                            </i>auto<br>
+                            inherit</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->
