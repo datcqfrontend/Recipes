@@ -14,7 +14,7 @@
 		},
 		{ 
 			"title": "Border Images",
-			"sortContent":  "",
+			"sortContent":  "<div id='border_image_top' style='border: 10px solid transparent; padding: 15px;-webkit-border-image: url(media/images/border.png) 30 round; border-image: url(media/images/border.png) 30 round;'><h2>CSS3 Border Images</h2><p>With the CSS3 <code>border-image</code> property, you can set an image to be used as the border around an element.</p></div>",
 			"keyword": "",
 			"link": "#css3/borderImages"
 		},						
