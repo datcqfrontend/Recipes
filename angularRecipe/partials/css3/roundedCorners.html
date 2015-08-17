@@ -6,17 +6,227 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Rounded Corners</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        <div style="border:3px solid #8AC007;margin-top:20px;font-size:15px;padding:25px;border-radius:25px;">
+                            With the CSS3 border-radius property, you can give any element "rounded corners".
+                        </div>
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -webkit- or -moz- specify the first version that worked with a prefix.
+                      
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:20%;font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>               
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">border-radius</td>
+                            <td>9.0</td>
+                            <td>5.0<br>4.0 -webkit-</td>
+                            <td>4.0<br>3.0 -moz-</td>
+                            <td>5.0<br>3.1 -webkit-</td>
+                            <td>10.5</td>
+                          </tr>
+                          </tbody></table>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 border-radius Property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        With CSS3, you can give any element "rounded corners", by using the border-radius property.
+                        <br>Here are three examples:
+                        <br>1. Rounded corners for an element with a specified background color:
+                        <p id="rcorners1" style="border-radius: 25px;background: #8AC007;padding: 20px;width: 400px; height: 170px;">
+                            #rcorners1 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 25px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 400px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 170px;
+                            <br>}
+                        </p>
+
+                        <br>2. Rounded corners for an element with a border:
+                        <p id="rcorners2" style="border-radius: 25px; border:2px solid #8AC007; padding: 20px;width: 400px; height: 170px;">
+                            #rcorners2 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 25px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 2px solid #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 400px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 170px;
+                            <br>}
+
+                        </p>
+
+                        <br>3. Rounded corners for an element with a background image:
+                        <p id="rcorners3" style="border-radius: 25px; background: url(media/images/paper.gif);background-position: left top;background-repeat: repeat; padding: 20px;width: 400px; height: 210px;">
+                            #rcorners3 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 25px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: url(paper.gif);
+                            <br>&nbsp;&nbsp;&nbsp;    background-position: left top;
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: repeat;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 400px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 210px;
+                            <br>}
+
+                        </p>
+                        <br><b>Tip:</b> The border-radius property is actually a shorthand property for the border-top-left-radius, border-top-right-radius, border-bottom-right-radius and border-bottom-left-radius properties.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 border-radius - Specify Each Corner</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        If you specify only one value for the border-radius property, this radius will be applied to all 4 corners.
+                        <br>However, you can specify each corner separately if you wish. Here are the rules:
+
+                        <ul>
+                            <li><strong>Four values:</strong> first value applies to top-left, second value applies to top-right, 
+                            third value applies to bottom-right, and fourth value applies to bottom-left 
+                            corner</li>
+                            <li><strong>Three values:</strong> first value applies to top-left, second value applies to top-right and bottom-left, 
+                            and third value applies to bottom-right</li>
+                            <li><strong>Two values:</strong> first value applies to top-left and bottom-right 
+                            corner, and the second value applies to top-right and bottom-left corner</li>
+                            <li><strong>One value:</strong> all four corners are rounded equally</li>
+                        </ul>
+                        Here are three examples:
+                        <br>1. Four values - border-radius: 15px 50px 30px 5px:
+                        <p id="rcorners4" style="border-radius: 15px 50px 30px 5px;background: #8AC007;padding: 20px;width: 400px; height: 170px;">
+                            #rcorners4 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 15px 50px 30px 5px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 150px;
+                            <br>}
+                        </p>
+
+                        <br>2. Three values - border-radius: 15px 50px 30px:
+                        <p id="rcorners5" style="border-radius: 15px 50px 30px;background: #8AC007;padding: 20px;width: 400px; height: 170px;">
+                            #rcorners5 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 15px 50px 30px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 150px;
+                            <br>}
+                        </p>
+
+                        <br>3. Two values - border-radius: 15px 50px:
+                        <p id="rcorners6" style="border-radius: 15px 50px;background: #8AC007;padding: 20px;width: 400px; height: 170px;">
+                            #rcorners6 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 15px 50px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 150px;
+                            <br>}
+                        </p>
+
+                        <br>You could also create elliptical corners:
+                        <p id="rcorners7" style="border-radius: 50px/15px; background: #8AC007;padding: 20px;width: 400px; height: 170px;">
+                            #rcorners7 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 50px/15px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 150px;
+                            <br>}
+                        </p>
+
+                        <p id="rcorners8" style="border-radius: 15px/50px;background: #8AC007;padding: 20px;width: 400px; height: 170px;">
+                            #rcorners8 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 15px/50px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 150px;
+                            <br>}
+                        </p>
+
+                        <p id="rcorners9" style="border-radius: 50%;background: #8AC007;padding: 20px;width: 400px; height: 170px;">
+                            #rcorners4 {
+                            <br>&nbsp;&nbsp;&nbsp;    border-radius: 50%;
+                            <br>&nbsp;&nbsp;&nbsp;    background: #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 20px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 150px;
+                            <br>}
+                        </p>
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Rounded Corners Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:30%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_border-radius.asp">border-radius</div></td>
+                            <td>A shorthand property for setting all the four border-*-*-radius properties</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_border-top-left-radius.asp">
+                            border-top-left-radius</div></td>
+                            <td>Defines the shape of the border of the top-left corner</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_border-top-right-radius.asp">
+                            border-top-right-radius</div></td>
+                            <td>Defines the shape of the border of the top-right corner</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_border-bottom-right-radius.asp">
+                            border-bottom-right-radius</div></td>
+                            <td>Defines the shape of the border of the bottom-right corner</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_border-bottom-left-radius.asp">
+                            border-bottom-left-radius</div></td>
+                            <td>Defines the shape of the border of the bottom-left corner</td>
+                          </tr>
+                          </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
 
         </div>       
         <!-- /.row -->
