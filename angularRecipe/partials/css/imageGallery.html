@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssImageGallery" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,11 +6,127 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
+                  <div class="panel-heading"><h3>Image Gallery</h3> </div>
+                  <div class="panel-body">
+                    
+                    <p class="gallery">
+                        <style type="text/css">
+                            .gallery div.img {
+                                margin: 5px;
+                                padding: 5px;
+                                border: 1px solid #0000ff;
+                                height: auto;
+                                width: auto;
+                                float: left;
+                                text-align: center;
+                            }
+
+                            .gallery div.img img {
+                                display: inline;
+                                margin: 5px;
+                                border: 1px solid #ffffff;
+                            }
+
+                            .gallery div.img a:hover img {
+                                border:1px solid #0000ff;
+                            }
+
+                            .gallery div.desc {
+                                text-align: center;
+                                font-weight: normal;
+                                width: 120px;
+                                margin: 5px;
+                            }
+                        </style>
+
+                        <div class="gallery">
+                            <div class="img">
+                              <a target="_blank" href="">
+                                <img src="media/images/html5.png" alt="HTML5" width="110" height="90">
+                              </a>
+                              <div class="desc">Add a description of the image here</div>
+                            </div>
+                            <div class="img">
+                              <a target="_blank" href="">
+                                <img src="media/images/css3.png" alt="CSS3" width="110" height="90">
+                              </a>
+                              <div class="desc">Add a description of the image here</div>
+                            </div>
+                            <div class="img">
+                              <a target="_blank" href="">
+                                <img src="media/images/javascript.png" alt="Javascript" width="110" height="90">
+                              </a>
+                              <div class="desc">Add a description of the image here</div>
+                            </div>
+                            <div class="img">
+                              <a target="_blank" href="">
+                                <img src="media/images/angular.png" alt="Angular" width="110" height="90">
+                              </a>
+                              <div class="desc">Add a description of the image here</div>
+                            </div>
+                        </div>
+                        <br>
+                        <br style="clear:both;">
+                        <codeBody >
+                            &lt;div class="img"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a target="_blank" href=""&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;img src="media/images/html5.png" alt="HTML5" width="110" height="90"&gt;
+                            <br>&nbsp;&nbsp;&nbsp; &lt;/a&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;div class="desc"&gt;Add a description of the image here&lt;/div&gt;
+                            <br>&lt;/div&gt;
+
+                            <br>&lt;div class="img"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a target="_blank" href=""&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;img src="media/images/css3.png" alt="CSS3" width="110" height="90"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/a&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;div class="desc"&gt;Add a description of the image here&lt;/div&gt;
+                            <br>&lt;/div&gt;
+
+                            <br>&lt;div class="img"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a target="_blank" href=""&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;img src="media/images/javascript.png" alt="Javascript" width="110" height="90"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/a&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;div class="desc"&gt;Add a description of the image here&lt;/div&gt;
+                            <br>&lt;/div&gt;
+
+                            <br>&lt;div class="img"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;a target="_blank" href=""&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;img src="media/images/angular.png" alt="Angular" width="110" height="90"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;/a&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;div class="desc"&gt;Add a description of the image here&lt;/div&gt;
+                            <br>&lt;/div&gt;
+                        </codeBody>
+                        <br>
+
+                        <codeBody >
+                            <spanYellow>.gallery div.img</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 5px;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 5px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid #0000ff;
+                            <br>&nbsp;&nbsp;&nbsp;    height: auto;
+                            <br>&nbsp;&nbsp;&nbsp;    width: auto;
+                            <br>&nbsp;&nbsp;&nbsp;    float: left;
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>}
+                            <br>
+                            <br><spanYellow>.gallery div.img img</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    display: inline;
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 5px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid #ffffff;
+                            <br>}
+                            <br>
+                            <br><spanYellow>.gallery div.img a:hover img</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    border:1px solid #0000ff;
+                            <br>}
+                            <br>
+                            <br><spanYellow>.gallery div.desc</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    text-align: center;
+                            <br>&nbsp;&nbsp;&nbsp;    font-weight: normal;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 120px;
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 5px;
+                            <br>}
+                        </codeBody >
+
                     </p>
                   </div>
                 </div>

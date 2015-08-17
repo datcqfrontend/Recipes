@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssNavigationBars" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,201 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Navigation Bars</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        Having easy-to-use navigation is important for any web site.
+                        <br>With CSS you can transform boring HTML menus into good-looking navigation bars.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Navigation Bar = List of Links</h3> </div>
+                  <div class="panel-body">  
+                    <p> 
+                        A navigation bar needs standard HTML as a base.
+                        <br>In our examples we will build the navigation bar from a standard HTML list.
+                        <br>A navigation bar is basically a list of links, so using the &lt;ul&gt; and &lt;li&gt; elements makes perfect sense:
+                        
+                        <codeBody>
+                            &lt;ul&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;li&gt;&lt;a href="default.asp"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;li&gt;&lt;a href="news.asp"&gt;News&lt;/a&gt;&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;li&gt;&lt;a href="contact.asp"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;    &lt;li&gt;&lt;a href="about.asp"&gt;About&lt;/a&gt;&lt;/li&gt;
+                            <br>&lt;ul&gt;
+                        </codeBody>
+
+                        <br>Now let's remove the bullets and the margins and padding from the list:
+
+                        <codeBody>
+                            ul {
+                            <br>&nbsp;&nbsp;&nbsp;    list-style-type: none;
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 0;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 0;
+                            <br>}
+                        </codeBody>
+                        <br>Example explained:
+                        <ul>
+                            <li>list-style-type: none; - Removes the bullets. A navigation bar 
+                            does not need list markers</li>
+                            <li>Setting margins and padding to 0 
+                            to remove browser default settings</li>
+                        </ul>
+                        The code in the example above is the standard code used in both vertical, and horizontal navigation bars.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Vertical Navigation Bar</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <style type="text/css">
+                            ul.menu-vertical {
+                                list-style-type: none;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            ul.menu-vertical a {
+                                display: block;
+                                width: 60px;
+                                background-color: #dddddd;
+                            }
+                        </style>
+                        <ul class="menu-vertical">
+                          <li><a href="">Home</a></li>
+                          <li><a href="">News</a></li>
+                          <li><a href="">Contact</a></li>
+                          <li><a href="">About</a></li>
+                        </ul>
+                        <br>
+
+                        To build a vertical navigation bar we only need to style the &lt;a&gt; elements, in addition to the code above:
+                        <codeBody>
+                            a {
+                            <br>&nbsp;&nbsp;&nbsp;    display: block;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 60px;
+                            <br>}
+                        </codeBody>
+                        <br>Example explained:
+                        <ul>
+                            <li>display: block; - Displaying the links as block elements makes the whole 
+                            link area clickable (not just the text), and it allows us to specify the width</li>
+                            <li>width: 60px; - Block elements take up the full width available by default. We want to specify a 60 pixels width</li>
+                        </ul>
+
+                        <b>Tip:</b> Also take a look at our fully styled vertical navigation bar example.
+                        <br><b>Note:</b> Always specify the width for &lt;a&gt; elements in a vertical navigation bar. If you omit the width, IE6 can produce unexpected results.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Horizontal Navigation Bar</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        There are two ways to create a horizontal navigation bar. Using inline or floating list items.
+                        <br>Both methods work fine, but if you want the links to be the same size, you have to use the floating method.
+
+                        <h3>Inline List Items</h3>
+                        <style type="text/css">
+                            ul.menu-horizontal {
+                                list-style-type: none;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            ul.menu-horizontal li{
+                                display: inline;
+                            }
+
+                            ul.menu-horizontal a {
+                                width: 60px;
+                                background-color: #dddddd;
+                            }
+
+                            
+                        </style>
+                        <ul class="menu-horizontal">
+                          <li><a href="">Home</a></li>
+                          <li><a href="">News</a></li>
+                          <li><a href="">Contact</a></li>
+                          <li><a href="">About</a></li>
+                        </ul>
+                        One way to build a horizontal navigation bar is to specify the &lt;li&gt; elements as inline, in addition to the "standard" code above:
+                        <codeBody>
+                            li {
+                            <br>&nbsp;&nbsp;&nbsp;    display: inline;
+                            <br>}
+                        </codeBody>
+                        <br>Example explained: 
+                        <br>display: inline; - By default, &lt;li&gt; elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line
+
+                        <h3>Floating List Items</h3>
+                        In the example above the links have different widths.
+                        <br>For all the links to have an equal width, float the &lt;li&gt; elements and specify a width for the &lt;a&gt; elements:
+
+                        <style type="text/css">
+                            ul.menu-horizontal-2 {
+                                list-style-type: none;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            ul.menu-horizontal-2 li{
+                                float: left;
+                            }
+
+                            ul.menu-horizontal-2 a {
+                                display: block
+                                width: 60px;
+                                background-color: #dddddd;
+                            }
+
+                            
+                        </style>
+                        <ul class="menu-horizontal-2">
+                          <li><a href="">Home</a></li>
+                          <li><a href="">News</a></li>
+                          <li><a href="">Contact</a></li>
+                          <li><a href="">About</a></li>
+                        </ul>
+                        <br>
+                        <codeBody>
+                            li {
+                            <br>&nbsp;&nbsp;&nbsp;     float: left;
+                            <br>}
+                            <br>
+                            <br>a {
+                            <br>&nbsp;&nbsp;&nbsp;     display: block;
+                            <br>&nbsp;&nbsp;&nbsp;     width: 60px;
+                            <br>}
+                        </codeBody>   
+                        <br>Example explained:
+                        <ul>
+                            <li>float: left; - use float to get block elements to slide next to each other</li>
+                            <li>display: block; -  
+                            Displaying the links as block elements makes the whole link area clickable 
+                            (not just the text), and it allows us to specify the width</li>
+                            <li>width: 60px; - Since block elements take up the full width available, they 
+                            cannot float next to each other. We specify the 
+                            width of the links to 60 pixels</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div>
+          
 
         </div>       
         <!-- /.row -->

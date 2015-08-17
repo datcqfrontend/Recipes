@@ -143,19 +143,19 @@
 
 		{ 
 			"title": "Align",
-			"sortContent":  "",
+			"sortContent":  "In CSS, several properties can be used to align elements horizontally.",
 			"keyword": "",
 			"link": "#css/align"
 		},
 		{ 
 			"title": "Combinators",
-			"sortContent":  "",
+			"sortContent":  "A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.<br>There are four different combinators in CSS3:<ul><li>descendant selector</li><li>child selector</li><li>adjacent sibling selector</li><li>general sibling selector</li></ul>",
 			"keyword": "",
 			"link": "#css/combinators"
 		},							
 		{ 
 			"title": "Pseudo-class",
-			"sortContent":  "",
+			"sortContent":  "A pseudo-class is used to define a special state of an element.<br>For example, it can be used to:<ul><li>Style an element when a user mouses over it</li><li>Style visited and unvisited links differently</li></ul>",
 			"keyword": "",
 			"link": "#css/pseudoClass"
 		},
@@ -163,19 +163,19 @@
 
 		{ 
 			"title": "Pseudo-element",
-			"sortContent":  "",
+			"sortContent":  "A CSS pseudo-element is used to style specified parts of an element.<brFor example, it can be used to:<ul>li>Style the first letter, or line, of an element</li>li>Insert content before, or after, the content of an element</li><ul>",
 			"keyword": "",
 			"link": "#css/pseudoElement"
 		},
 		{ 
 			"title": "Navigation Bar",
-			"sortContent":  "",
+			"sortContent":  "Having easy-to-use navigation is important for any web site.<br>With CSS you can transform boring HTML menus into good-looking navigation bars.",
 			"keyword": "",
 			"link": "#css/navigationBar"
 		},							
 		{ 
 			"title": "Image Gallery",
-			"sortContent":  "",
+			"sortContent":  "CSS can be used to create an image gallery.",
 			"keyword": "",
 			"link": "#css/imageGallery"
 		},
@@ -183,19 +183,19 @@
 
 		{ 
 			"title": "Image Opacity",
-			"sortContent":  "",
+			"sortContent":  "Creating transparent images with CSS is easy.<br>The CSS opacity property is a part of the CSS3 recommendation.",
 			"keyword": "",
 			"link": "#css/imageOpacity"
 		},
 		{ 
 			"title": "Image Sprites",
-			"sortContent":  "",
+			"sortContent":  "An image sprite is a collection of images put into a single image.<br>A web page with many images can take a long time to load and generates multiple server requests.<br>Using image sprites will reduce the number of server requests and save bandwidth.",
 			"keyword": "",
 			"link": "#css/imageSprites"
 		},
 		{ 
 			"title": "Media Types",
-			"sortContent":  "",
+			"sortContent":  "Some CSS properties are designed for a specific type of media. For example the voice-family property is designed for aural user agents.<br>Some other CSS properties can be used for different media types. For example, the font-size property can be used for both screen and print media, but perhaps with different values. A document usually needs a larger font-size on a screen than on paper, and sans-serif fonts are easier to read on the screen, while serif fonts are easier to read on paper.",
 			"keyword": "",
 			"link": "#css/mediaTypes"
 		},
@@ -203,7 +203,7 @@
 
 		{ 
 			"title": "Attr Selectors",
-			"sortContent":  "",
+			"sortContent":  "The [attribute] selector is used to select elements with a specified attribute.",
 			"keyword": "",
 			"link": "#css/attrSelectors"
 		}

@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssAlign" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,120 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Center Align - Using margin</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Use margin: auto;, to horizontally center an element within its container.
+                        <br>The element will then take up the specified width, and the remaining space will be split equally between the two margins:
+
+                        <div class="center" style="margin: auto;width: 60%;border:3px solid #8AC007;padding: 10px;">
+                          <p><b>Note: </b>Using margin:auto will not work in IE8, unless a !DOCTYPE is declared.</p>
+                        </div>
+                        <br>
+
+                        <codeBody>
+                            .center {
+                            <br>&nbsp;&nbsp;&nbsp;    margin: auto;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 60%;
+                            <br>&nbsp;&nbsp;&nbsp;    border:3px solid #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 10px;
+                            <br>}
+                        </codeBody>
+                        <br>Center aligning has no effect if the width property is not set (or set to 100%).
+
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Left and Right Align - Using position</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        One method of aligning elements is to use position: absolute;:
+
+                        <div class="right" style="float: right; width: 300px;border:3px solid #8AC007; padding: 10px;">
+                          <p style="right:0px;">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+                        </div>
+                         <br>
+
+                        <codeBody style="margin-top:90px;">
+                            .right {
+                            <br>&nbsp;&nbsp;&nbsp;    position: absolute;
+                            <br>&nbsp;&nbsp;&nbsp;    right: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    border:3px solid #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 10px;
+                            <br>}
+                        </codeBody>
+
+
+                        <br><b>Note:</b> Absolute positioned elements are removed from the normal flow, and can overlap elements.
+                        <br><b>Tip:</b> When aligning elements with position, always define margin and padding for the &lt;body&gt; element. This is to avoid visual differences in different browsers.
+                        <br>There is also a problem with IE8 and earlier, when using position. If a container element (in our case &lt;div class="container"&gt;) has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:
+
+                        <codeBody>
+                            body {
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 0;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 0;
+                            <br>}
+                            <br>
+                            <br>.container {
+                            <br>&nbsp;&nbsp;&nbsp;    position: relative;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100%;
+                            <br>}
+                            <br>
+                            <br>.right {
+                            <br>&nbsp;&nbsp;&nbsp;    position: absolute;
+                            <br>&nbsp;&nbsp;&nbsp;    right: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: #b0e0e6;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Left and Right Align - Using float</h3> </div>
+                  <div class="panel-body">  
+                    <p> 
+                        Another method of aligning elements is to use the float property:
+
+                        <div class="right" style="float: right;width: 300px;border:3px solid #8AC007;padding: 10px;">
+                          <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+                        </div>
+                      
+                        <codeBody style="margin-top:115px;">
+                            .right {
+                            <br>&nbsp;&nbsp;&nbsp;    float: right;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    border:3px solid #8AC007;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 10px;
+                            <br>}
+                        </codeBody>
+                        <br><b>Tip:</b> When aligning elements with float, always define margin and padding for the &lt;body&gt; element. This is to avoid visual differences in different browsers.
+                        <br>There is also a problem with IE8 and earlier, when using float. If the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using float:
+
+                        <codeBody>
+                            body {
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 0;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 0;
+                            <br>}
+                            <br>                            
+                            <br>.right {
+                            <br>&nbsp;&nbsp;&nbsp;    float: right;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: #b0e0e6;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

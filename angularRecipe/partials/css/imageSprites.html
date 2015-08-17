@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssImageSprites" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,275 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Image Sprites</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        An image sprite is a collection of images put into a single image.
+                        <br>A web page with many images can take a long time to load and generates multiple server requests.
+                        <br>Using image sprites will reduce the number of server requests and save bandwidth.
                       
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Image Sprites - Simple Example</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Instead of using three separate images, we use this single image ("img_navsprites.gif"):
+                        <br><img src="media/images/img_navsprites.gif" alt="navigation images" class="image-responsive">
+                        <br>
+                        <br>With CSS, we can show just the part of the image we need.
+                        <br>In the following example the CSS specifies which part of the "img_navsprites.gif" image to show:
+
+                        <style type="text/css">
+                            #home{
+                                width: 46px;
+                                height: 44px;
+                                background: url(media/images/img_navsprites.gif) 0 0;
+                            }
+                        </style>
+
+                        <div id="home"></div>
+                        <br>                                                
+                        <codeBody>
+                            #home{
+                            <br>&nbsp;&nbsp;&nbsp;    width: 46px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 44px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: url(media/images/img_navsprites.gif) 0 0;
+                            <br>}
+                        </codeBody>
+                        <br>Example explained:
+                        <ul>
+                            <li>&lt;img id="home" src="img_trans.gif"&gt; - Only defines a small transparent image 
+                            because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS</li>
+                            <li>width: 46px; height: 44px; - Defines the portion of the image we want to use</li>
+                            <li>background: url(img_navsprites.gif) 0 0; - Defines the background image and its position (left 0px, top 0px)</li>
+                        </ul>
+                        This is the easiest way to use image sprites, now we want to expand it by using links and hover effects.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Image Sprites - Create a Navigation List</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        We want to use the sprite image ("img_navsprites.gif") to create a navigation list.
+                        <br>We will use an HTML list, because it can be a link and also supports a background image:
                       
+                        <style type="text/css">
+                            #navlist {
+                                position: relative;
+                            }
+
+                            #navlist li {
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
+                                position: absolute;
+                                top: 0;
+                            }
+
+                            #navlist li, #navlist a {
+                                height: 44px;
+                                display: block;
+                            }
+
+                            #home {
+                                left: 0px;
+                                width: 46px;
+                                background: url('media/images/img_navsprites.gif') 0 0;
+                            }
+
+                            #prev {
+                                left: 63px;
+                                width: 43px;
+                                background: url('media/images/img_navsprites.gif') -47px 0;
+                            }
+
+                            #next {
+                                left: 129px;
+                                width: 43px;
+                                background: url('media/images/img_navsprites.gif') -91px 0;
+                            }
+                        </style>
+
+                        <ul id="navlist">
+                          <li id="home"><a href=""></a></li>
+                          <li id="prev"><a href=""></a></li>
+                          <li id="next"><a href=""></a></li>
+                        </ul>
+                        <br><br><br>
+
+                        <codeBody>
+                            #navlist {
+                            <br>&nbsp;&nbsp;&nbsp;    position: relative;
+                            <br>}
+                            <br>
+                            <br>#navlist li {
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 0;
+                            <br>&nbsp;&nbsp;&nbsp;    padding: 0;
+                            <br>&nbsp;&nbsp;&nbsp;    list-style: none;
+                            <br>&nbsp;&nbsp;&nbsp;    position: absolute;
+                            <br>&nbsp;&nbsp;&nbsp;    top: 0;
+                            <br>}
+                            <br>
+                            <br>#navlist li, #navlist a {
+                            <br>&nbsp;&nbsp;&nbsp;    height: 44px;
+                            <br>&nbsp;&nbsp;&nbsp;    display: block;
+                            <br>}
+                            <br>
+                            <br>#home {
+                            <br>&nbsp;&nbsp;&nbsp;    left: 0px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 46px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: url('img_navsprites.gif') 0 0;
+                            <br>}
+                            <br>
+                            <br>#prev {
+                            <br>&nbsp;&nbsp;&nbsp;    left: 63px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 43px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: url('img_navsprites.gif') -47px 0;
+                            <br>}
+                            <br>
+                            <br>#next {
+                            <br>&nbsp;&nbsp;&nbsp;    left: 129px;
+                            <br>&nbsp;&nbsp;&nbsp;    width: 43px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: url('img_navsprites.gif') -91px 0;
+                            <br>}
+                        </codeBody>
+                        <br>Example explained:
+                        <ul>
+                            <li>#navlist {position:relative;} - position is set to relative to allow 
+                            absolute positioning inside it</li>
+                            <li>#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} 
+                            - margin and padding is set to 0, list-style is removed, and all list items 
+                            are absolute positioned</li>
+                            <li>#navlist li, #navlist a {height:44px;display:block;} - the height of all 
+                            the images are 44px</li>
+                        </ul>
+                        Now start to position and style for each specific part:
+                        <ul>
+                            <li>#home {left:0px;width:46px;} - Positioned all the way to the left, and 
+                            the width of the image is 46px</li>
+                            <li>#home {background:url(img_navsprites.gif) 0 0;} - 
+                            Defines the background 
+                            image and its position (left 0px, top 0px)</li>
+                            <li>#prev {left:63px;width:43px;} - Positioned 63px to the 
+                            right (#home width 46px + some extra space between items), and 
+                            the width is 43px.</li>
+                            <li>#prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background 
+                            image 47px to the right (#home width 46px + 1px line 
+                            divider)</li>
+                            <li>#next {left:129px;width:43px;}- Positioned 129px to 
+                            the right (start of #prev is 63px + #prev width 43px + 
+                            extra space), and the width is 43px.</li>
+                            <li>#next {background:url('img_navsprites.gif') -91px 0;} - 
+                            Defines the background 
+                            image 91px to the right (#home width 46px + 1px 
+                            line divider + #prev width 43px + 1px line divider )</li>
+                        </ul>
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Image Sprites - Hover Effect</h3> </div>
+                  <div class="panel-body">  
+                    <p> 
+                        Now we want to add a hover effect to our navigation list.
+                        <br><b>Tip: </b>The :hover selector can be used on all elements, not only on links.
+                        <br>Our new image ("img_navsprites_hover.gif") contains three navigation images and three images to use for hover effects:
+                        <br><img src="media/images/img_navsprites_hover.gif" alt="navigation images" class="image-responsive">
+                        <br>Because this is one single image, and not six separate files, there will be no loading delay when a user hovers over the image.
+
+                        <style type="text/css">
+                            #navlist2 {
+                                position: relative;
+                            }
+
+                            #navlist2 li {
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
+                                position: absolute;
+                                top: 0;
+                            }
+
+                            #navlist2 li, #navlist2 a {
+                                height: 44px;
+                                display: block;
+                            }
+
+                            #home {
+                                left: 0px;
+                                width: 46px;
+                                background: url('media/images/img_navsprites_hover.gif') 0 0;
+                            }
+                                #home a:hover {
+                                    left: 0px;
+                                    width: 46px;
+                                    background: url('media/images/img_navsprites_hover.gif') 0 -45px;
+                                }
+
+                            #prev {
+                                left: 63px;
+                                width: 43px;
+                                background: url('media/images/img_navsprites_hover.gif') -47px 0;
+                            }
+                                #prev a:hover {
+                                    left: 63px;
+                                    width: 43px;
+                                    background: url('media/images/img_navsprites_hover.gif') -47px -45px;
+                                }
+
+                            #next {
+                                left: 129px;
+                                width: 43px;
+                                background: url('media/images/img_navsprites_hover.gif') -91px 0;
+                            }
+                                #next a:hover {
+                                    left: 129px;
+                                    width: 43px;
+                                    background: url('media/images/img_navsprites_hover.gif') -91px -45px;
+                                }
+                        </style>
+
+                        <ul id="navlist2">
+                          <li id="home"><a href=""></a></li>
+                          <li id="prev"><a href=""></a></li>
+                          <li id="next"><a href=""></a></li>
+                        </ul>
+                        <br><br>
+                        <br>We only add three lines of code to add the hover effect:
+
+                        <codeBody>
+                            #home a:hover {
+                            <br>    background: url('img_navsprites_hover.gif') 0 -45px;
+                            <br>}
+                            <br>
+                            <br>#prev a:hover {
+                            <br>    background: url('img_navsprites_hover.gif') -47px -45px;
+                            <br>}
+                            <br>
+                            <br>#next a:hover {
+                            <br>    background: url('img_navsprites_hover.gif') -91px -45px;
+                            <br>}
+                        </codeBody>
+                        <br>Example explained:
+                        <br>#home a:hover {background: transparent url('img_navsprites_hover.gif') 0 -45px;} - For all three hover images we specify the same background position,  only 45px further down
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+
 
         </div>       
         <!-- /.row -->

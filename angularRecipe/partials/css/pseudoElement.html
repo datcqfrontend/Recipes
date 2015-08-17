@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssPseudoElement" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,10 +6,437 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>What are Pseudo-Elements?</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        A CSS pseudo-element is used to style specified parts of an element.
+                        <br>For example, it can be used to:
+                        <ul>
+                            <li>Style the first letter, or line, of an element</li>
+                            <li>Insert content before, or after, the content of an element</li>
+                        <ul>
                       
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Syntax</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The syntax of pseudo-elements:
+                        <codeBody>
+                            <spanYellow>selector::pseudo-element</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    property:value;
+                            <br>}
+                        </codeBody>
+                        <br>Notice the double colon notation - ::first-line versus :first-line
+                        <br>The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.
+                        <br>The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.
+                        <br>For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The ::first-line Pseudo-element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The ::first-line pseudo-element is used to add a special style to the first line of a text.
+                        <br>The following example formats the first line of the text in all &lt;p&gt; elements:
+
+                        <style type="text/css">
+                            p.pseudo_ele_1::first-line {
+                                color: #ff0000;
+                                font-variant: small-caps;
+                            }
+                        </style>
+                        <p class="pseudo_ele_1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+                        <br>
+
+                        <codeBody>
+                            <spanYellow>p::first-line</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    color: #ff0000;
+                            <br>&nbsp;&nbsp;&nbsp;    font-variant: small-caps;
+                            <br>}
+                        </codeBody>
+                        <br><b>Note: </b>The ::first-line pseudo-element can <spanRed>only be applied to block-level elements</spanRed>.
+                        <br>The following properties apply to the ::first-line pseudo-element:
+                        <ul>
+                          <li>font properties</li>
+                          <li>color properties</li>
+                          <li>background properties</li>
+                          <li>word-spacing</li>
+                          <li>letter-spacing</li>
+                          <li>text-decoration</li>
+                          <li>vertical-align</li>
+                          <li>text-transform</li>
+                          <li>line-height</li>
+                          <li>clear</li>
+                        </ul>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The ::first-letter Pseudo-element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The ::first-letter pseudo-element is used to add a special style to the first letter of a text.
+                        <br>The following example formats the first letter of the text in all &lt;p&gt; elements: 
+                      
+                        <style type="text/css">
+                            p.pseudo_ele_2::first-letter {
+                                color: #ff0000;
+                                font-size: xx-large;
+                            }
+                        </style>
+                        <p class="pseudo_ele_2">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+
+                        <codeBody>
+                            <spanYellow>p::first-letter</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    color: #ff0000;
+                            <br>&nbsp;&nbsp;&nbsp;    font-size: xx-large;
+                            <br>}
+                        </codeBody>
+
+                        <b>Note:</b> The ::first-letter pseudo-element can only be applied to block-level elements.
+                        <br>The following properties apply to the ::first-letter pseudo- element: 
+                        <ul>
+                          <li> font properties</li>
+                          <li> color properties&nbsp;</li>
+                          <li> background properties</li>
+                          <li>margin properties</li>
+                          <li>padding properties</li>
+                          <li>border properties</li>
+                          <li>text-decoration</li>
+                          <li>vertical-align (only if "float" is "none")</li>
+                          <li>text-transform</li>
+                          <li>line-height</li>
+                          <li>float</li>
+                          <li>clear</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Pseudo-elements and CSS Classes</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Pseudo-elements can be combined with CSS classes: 
+                        <codeBody>
+                            <spanYellow>p.intro::first-letter</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    color: #ff0000;
+                            <br>&nbsp;&nbsp;&nbsp;    font-size:200%;
+                            <br>}
+                        </codeBody>
+                        <br>The example above will display the first letter of paragraphs with class="intro", in red and in a larger size.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Multiple Pseudo-elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Several pseudo-elements can also be combined. 
+                        <br>In the following example, the first letter of a paragraph will be red, in an xx-large font size. The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be the default font size and color: 
+                      
+                        <codeBody>
+                            <spanYellow>p::first-letter</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    color: #ff0000;
+                            <br>&nbsp;&nbsp;&nbsp;    font-size: xx-large;
+                            <br>}
+                            <br>
+                            <br><spanYellow>p::first-letter</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    color: #0000ff;
+                            <br>&nbsp;&nbsp;&nbsp;    font-variant: small-caps;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS - The ::before Pseudo-element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The ::before pseudo-element can be used to insert some content before the content of an element.
+                        <br>The following example inserts an image before each &lt;h1&gt; element:
+                        <codeBody>
+                            <spanYellow>h1::before</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    content: url(smiley.gif);
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS - The ::after Pseudo-element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The ::after pseudo-element can be used to insert some content after the content of an element.
+                        <br>The following example inserts an image after each &lt;h1&gt; element:
+                        <codeBody>
+                            <spanYellow>h1::after</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    content: url(smiley.gif);
+                            <br>}
+                        </codeBody>
+                    </p>    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS - The ::selection Pseudo-element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The ::selection pseudo-element matches the portion of an element that is selected by a user.
+                        <br>The following CSS properties can be applied to ::selection: color, background, cursor, and outline.
+                        <br>The following example makes the selected text red on a yellow background:
+
+                        <codeBody>
+                            <spanYellow>::selection</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    color: red; 
+                            <br>&nbsp;&nbsp;&nbsp;    background: yellow;
+                            <br>}
+                        </codeBody>    
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Pseudo Elements</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%">Selector</th>
+                            <th style="width:20%">Example</th>
+                            <th>Example description</th>
+                          </tr>
+                            <tr>
+                            <td><div href="/cssref/sel_after.asp">::after</div></td>
+                            <td class="notranslate">p::after</td>
+                            <td>Insert content after every &lt;p&gt; element</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/sel_before.asp">::before</div></td>
+                            <td class="notranslate">p::before</td>
+                            <td>Insert content before every &lt;p&gt; element</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/sel_firstletter.asp">::first-letter</div></td>
+                            <td class="notranslate">p::first-letter</td>
+                            <td>Selects the first letter of every &lt;p&gt; element</td>
+                          </tr>
+                            <tr>
+                            <td><div href="/cssref/sel_firstline.asp">::first-line</div></td>
+                            <td class="notranslate">p::first-line</td>
+                            <td>Selects the first line of every &lt;p&gt; element</td>
+                          </tr>
+                            <tr>
+                            <td><div href="/cssref/sel_selection.asp">::selection</div></td>
+                            <td class="notranslate">p::selection</td>
+                            <td>Selects the portion of an element that is selected by a user</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>All CSS Pseudo Classes</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%">Selector</th>
+                            <th style="width:20%">Example</th>
+                            <th>Example description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_active.asp">:active</div></td>
+                            <td class="notranslate">a:active</td>
+                            <td>Selects the active link</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_checked.asp">:checked</div></td>
+                            <td class="notranslate">input:checked</td>
+                            <td>Selects every checked &lt;input&gt; element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_disabled.asp">:disabled</div></td>
+                            <td class="notranslate">input:disabled</td>
+                            <td>Selects every disabled &lt;input&gt; element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_empty.asp">:empty</div></td>
+                            <td class="notranslate">p:empty</td>
+                            <td>Selects every &lt;p&gt; element that has no children</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_enabled.asp">:enabled</div></td>
+                            <td class="notranslate">input:enabled</td>
+                            <td>Selects every enabled &lt;input&gt; element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_firstchild.asp">:first-child</div></td>
+                            <td class="notranslate">p:first-child</td>
+                            <td>Selects every &lt;p&gt; elements that is the first child of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_first-of-type.asp">:first-of-type</div></td>
+                            <td class="notranslate">p:first-of-type</td>
+                            <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_focus.asp">:focus</div></td>
+                            <td class="notranslate">input:focus</td>
+                            <td>Selects the &lt;input&gt; element that has focus</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_hover.asp">:hover</div></td>
+                            <td class="notranslate">a:hover</td>
+                            <td>Selects links on mouse over</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_in-range.asp">:in-range</div></td>
+                            <td class="notranslate">input:in-range</td>
+                            <td>Selects &lt;input&gt; elements with a value within a specified range</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_invalid.asp">:invalid</div></td>
+                            <td class="notranslate">input:invalid</td>
+                            <td>Selects all &lt;input&gt; elements with an invalid value</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_lang.asp">:lang(<i>language</i>)</div></td>
+                            <td class="notranslate">p:lang(it)</td>
+                            <td>Selects every &lt;p&gt; element with a lang attribute value starting 
+                            with "it"</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_lastchild.asp">:last-child</div></td>
+                            <td class="notranslate">p:last-child</td>
+                            <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_last-of-type.asp">:last-of-type</div></td>
+                            <td class="notranslate">p:last-of-type</td>
+                            <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_link.asp">:link</div></td>
+                            <td class="notranslate">a:link</td>
+                            <td>Selects all unvisited links</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_not.asp">:not(selector)</div></td>
+                            <td class="notranslate">:not(p)</td>
+                            <td>Selects every element that is not a &lt;p&gt; element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_nth-child.asp">:nth-child(n)</div></td>
+                            <td class="notranslate">p:nth-child(2)</td>
+                            <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_nth-last-child.asp">:nth-last-child(n)</div></td>
+                            <td class="notranslate">p:nth-last-child(2)</td>
+                            <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_nth-last-of-type.asp">:nth-last-of-type(n)</div></td>
+                            <td class="notranslate">p:nth-last-of-type(2)</td>
+                            <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_nth-of-type.asp">:nth-of-type(n)</div></td>
+                            <td class="notranslate">p:nth-of-type(2)</td>
+                            <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_only-of-type.asp">:only-of-type</div></td>
+                            <td class="notranslate">p:only-of-type</td>
+                            <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_only-child.asp">:only-child</div></td>
+                            <td class="notranslate">p:only-child</td>
+                            <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_optional.asp">:optional</div></td>
+                            <td class="notranslate">input:optional</td>
+                            <td>Selects &lt;input&gt; elements with no "required" attribute</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_out-of-range.asp">:out-of-range</div></td>
+                            <td class="notranslate">input:out-of-range</td>
+                            <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_read-only.asp">:read-only</div></td>
+                            <td class="notranslate">input:read-only</td>
+                            <td>Selects &lt;input&gt; elements with a "readonly" attribute specified</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_read-write.asp">:read-write</div></td>
+                            <td class="notranslate">input:read-write</td>
+                            <td>Selects &lt;input&gt; elements with no "readonly" attribute</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_required.asp">:required</div></td>
+                            <td class="notranslate">input:required</td>
+                            <td>Selects &lt;input&gt; elements with a "required" attribute specified</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_root.asp">:root</div></td>
+                            <td class="notranslate">root</td>
+                            <td>Selects the document's root element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_target.asp">:target</div></td>
+                            <td class="notranslate">#news:target</td>
+                            <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_valid.asp">:valid</div></td>
+                            <td class="notranslate">input:valid</td>
+                            <td>Selects all &lt;input&gt; elements with a valid value</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/sel_visited.asp">:visited</div></td>
+                            <td class="notranslate">a:visited</td>
+                            <td>Selects all visited links</td>
+                          </tr>
+                        </tbody></table>
                       
                     </p>
                   </div>

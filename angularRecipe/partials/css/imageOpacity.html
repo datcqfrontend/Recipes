@@ -1,4 +1,4 @@
-<div  id="cssIntro" class="css section">
+<div  id="cssImageOpacity" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,145 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS Image Opacity / Transparency</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        Creating transparent images with CSS is easy.
+                        <br>The CSS opacity property is a part of the CSS3 recommendation.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Example 1 - Creating a Transparent Image</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 property for transparency is opacity.
+                        <br>First we will show you how to create a transparent image with CSS.
+                        <br>Regular image:
+                        <br><img src="media/images/css3.png" alt="CSS3" width="150" height="auto" class="image-responsive">
+                        
+                        <br>The same image with transparency:
+                        <br><img src="media/images/css3.png" alt="CSS3" width="150" height="auto" class="image-responsive" style="opacity:0.5;">
+
+                        <codeBody>
+                            img {
+                            <br>&nbsp;&nbsp;&nbsp;    opacity: 0.4;
+                            <br>&nbsp;&nbsp;&nbsp;    filter: alpha(opacity=40); /* For IE8 and earlier */
+                            <br>}
+                        </codeBody>
+
+                        <br>The opacity property can take a value from 0.0 - 1.0. The lower value, the more transparent.
+                        <br>IE8 and earlier use filter:alpha(opacity=x). The x can take a value from 0 - 100. A lower value makes the element more transparent.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Example 2 - Image Transparency - Hover Effect</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Mouse over the images:
+                        <style type="text/css">
+                            .demo-opacity-1 img{
+                                opacity: 0.4;
+                                filter: alpha(opacity=40); /* For IE8 and earlier */ 
+                            }
+
+                            .demo-opacity-1 img:hover{
+                                opacity: 1;
+                                filter: alpha(opacity=100); /* For IE8 and earlier */ 
+                            }
+                        </style>
+                        <div class="demo-opacity-1">
+                            <img src="media/images/html5.png" alt="HTML5" width="150" height="auto" class="image-responsive">
+                            <img src="media/images/css3.png" alt="CSS3" width="150" height="auto" class="image-responsive">
+                        </div>
+                      
+                        <codeBody>
+                            img{
+                            <br>&nbsp;&nbsp;&nbsp;    opacity: 0.4;
+                            <br>&nbsp;&nbsp;&nbsp;    filter: alpha(opacity=40); /* For IE8 and earlier */ 
+                            <br>}
+                            <br>
+                            <br>img:hover{
+                            <br>&nbsp;&nbsp;&nbsp;    opacity: 1;
+                            <br>&nbsp;&nbsp;&nbsp;    filter: alpha(opacity=100); /* For IE8 and earlier */ 
+                            <br>}
+                        </codeBody>
+
+                        <br>The first CSS block is similar to the code in Example 1. In addition, we have added what should happen when a user hovers over one of the images. In this case we want the image to NOT be transparent when the user hovers over it. The CSS for this is opacity=1;.
+                        <br>When the mouse pointer moves away from the image, the image will be transparent again.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Example 3 - Text in Transparent Box</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <style>
+                            div.background {
+                                background: url(media/images/css3.png) repeat;
+                                border: 2px solid black;
+                            }
+
+                            div.transbox {
+                                margin: 30px;
+                                background-color: #ffffff;
+                                border: 1px solid black;
+                                opacity: 0.6;
+                                filter: alpha(opacity=60); /* For IE8 and earlier */
+                            }
+
+                            div.transbox p {
+                                margin: 5%;
+                                font-weight: bold;
+                                color: #000000;
+                            }
+                        </style>
+
+                        <div class="background">
+                          <div class="transbox">
+                            <p>This is some text that is placed in the transparent box.</p>
+                          </div>
+                        </div>
+                        <br>
+                        <codeBody>
+                            div.background {
+                            <br>&nbsp;&nbsp;&nbsp;    background: url(media/images/css3.png) repeat;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 2px solid black;
+                            <br>}
+                            <br>
+                            <br>div.transbox {
+                            <br>&nbsp;&nbsp;&nbsp;    margin: 30px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: #ffffff;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid black;
+                            <br>&nbsp;&nbsp;&nbsp;    opacity: 0.6;
+                            <br>&nbsp;&nbsp;&nbsp;    filter: alpha(opacity=60); /* For IE8 and earlier */
+                            <br>}
+                            <br>
+                            <br>div.transbox p {
+                            <br>&nbsp;&nbsp;&nbsp;   margin: 5%;
+                            <br>&nbsp;&nbsp;&nbsp;    font-weight: bold;
+                            <br>&nbsp;&nbsp;&nbsp;    color: #000000;
+                            <br>}
+                        </codeBody>
+                        <br>First, we create a &lt;div&gt; element (class="background") with a background image, and a border. 
+                        <br>Then we create another &lt;div&gt; (class="transbox") inside the first &lt;div&gt;.
+                        <br>The &lt;div class="transbox"&gt; have a background color, and a border - the div is transparent. 
+                        <br>Inside the transparent &lt;div&gt;, we add some text inside a &lt;p&gt; element.
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->
