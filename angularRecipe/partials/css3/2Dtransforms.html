@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css32Dtransforms" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,609 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Transforms</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        CSS3 transforms allow you to translate, rotate, scale, and skew elements.
+                        <br>A transformation is an effect that lets an element change shape, size and position.
+                        <br>CSS3 supports 2D and 3D transformations.
+                        <br>Mouse over the elements below to see the difference between a 2D and a 3D transformation:
+
+                        <style type="text/css">
+                            #rotate2D, #rotate3D {
+                                width: 80px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                float: left;
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function rotateDIV(_bool){
+                                if(_bool){
+                                    $('#rotate2D').css('transform','rotate(180deg)');
+                                }else{
+                                    $('#rotate2D').css('transform','rotate(360deg)');
+                                }                                
+                            }
+
+                            function rotateYDIV(_bool){
+                                if(_bool){
+                                    $('#rotate3D').css('transform','rotateY(180deg)');
+                                }else{
+                                    $('#rotate3D').css('transform','rotateY(360deg)');
+                                } 
+                            }
+                        </script>
+
+                        <div onmouseover="rotateDIV(true)" onmouseout="rotateDIV(false)" id="rotate2D" style="transform: rotate(360deg);">2D rotate</div>
+                        <div onmouseover="rotateYDIV(true)" onmouseout="rotateYDIV(false)" id="rotate3D" style="transform: rotateY(360deg);">3D rotate</div>
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support for 2D Transforms</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -ms-, -webkit-, -moz-, or -o- specify the first version that worked with a prefix.
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:17%;font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>               
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transform</td>
+                            <td>10.0<br>9.0 -ms-</td>
+                            <td>36.0<br>4.0 -webkit-</td>
+                            <td>16.0<br>3.5 -moz-</td>
+                            <td>3.2 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-<br>12.1<br>10.5 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transform-origin<br>(two-value syntax)</td>
+                            <td>10.0<br>9.0 -ms-</td>
+                            <td>36.0<br>4.0 -webkit-</td>
+                            <td>16.0<br>3.5 -moz-</td>
+                            <td>3.2 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-<br>12.1<br>10.5 -o-</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 2D Transforms</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In this chapter you will learn about the following 2D transformation methods:
+                        <ul>
+                            <li><code>translate()</code></li>
+                            <li><code>rotate()</code></li>
+                            <li><code>scale()</code></li>
+                            <li><code>skewX()</code></li>
+                            <li><code>skewY()</code></li>
+                            <li><code>matrix()</code></li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The translate() Method</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+                        <br>The following example moves the &lt;div&gt; element 100 pixels to the right from its current position:
+                      
+                        <style type="text/css">
+                            #translate2D {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function translateDIV(){
+                                console.log($('#translate2D').data('value'));
+
+                                if($('#translate2D').data('value')==='false'){
+                                    $('#translate2D').data('value','true');
+                                    $('#translate2D').css('transform','translate(100px,0px)');
+                                    $('#translate2D')[0].innerHTML = "TRANSFORMED";
+                                }else{
+                                    $('#translate2D').data('value','false');
+                                    $('#translate2D').css('transform','translate(0,0)');
+                                    $('#translate2D')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="translateDIV()" data-value="false" id="translate2D" style="transform: translate(0,0);">ORIGINAL</div>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: translate(100px,0px); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: translate(100px,0px); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: translate(100px,0px);
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The rotate() Method</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The rotate() method rotates an element clockwise or counter-clockwise according to a given degree.
+                        <br>The following example rotates the &lt;div&gt; element clockwise with 20 degrees:  
+                      
+                        <style type="text/css">
+                            #rotate {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function rotate(){
+                                
+                                if($('#rotate').data('value')==='false'){
+                                    $('#rotate').data('value','true');
+                                    $('#rotate').css('transform','rotate(20deg)');
+                                    $('#rotate')[0].innerHTML = "ROTATED";
+                                }else{
+                                    $('#rotate').data('value','false');
+                                    $('#rotate').css('transform','rotate(0deg)');
+                                    $('#rotate')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="rotate()" data-value="false" id="rotate" style="transform: rotate(0deg);">ORIGINAL</div>
+
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: rotate(20deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: rotate(20deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: rotate(20deg);
+                            <br>}
+                        </codeBody>
+                        <br>Using negative values will rotate the element counter-clockwise.
+                        <br>The following example rotates the &lt;div&gt; element counter-clockwise with 20 degrees:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: rotate(-20deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: rotate(-20deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: rotate(-20deg);
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The scale() Method</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        he scale() method increases or decreases the size of an element (according to the parameters given for the width and height).
+                        <br>The following example increases the &lt;div&gt; element to be two times of its original width, and three times of its original height: 
+                      
+                        <style type="text/css">
+                            #scale {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function scale(){
+                                
+                                if($('#scale').data('value')==='false'){
+                                    $('#scale').data('value','true');
+                                    $('#scale').css('transform','scale(0.5,0.5)');
+                                    $('#scale')[0].innerHTML = "SCALED";
+                                }else{
+                                    $('#scale').data('value','false');
+                                    $('#scale').css('transform','scale(1,1)');
+                                    $('#scale')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="scale()" data-value="false" id="scale" style="transform: scale(1,1);">ORIGINAL</div>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: scale(2,3); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: scale(2,3); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: scale(2,3);
+                            <br>}
+                        </codeBody>
+
+                        <br>The following example decreases the &lt;div&gt; element to be half of its original width and height: 
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: scale(0.5,0.5); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: scale(0.5,0.5); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: scale(0.5,0.5);
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The skewX() Method</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The skewX() method skews an element along the X-axis by the given angle.
+                        <br>The following example skews the &lt;div&gt; element 20 degrees along the X-axis:
+                      
+                        <style type="text/css">
+                            #skewX {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function skewX(){
+                                
+                                if($('#skewX').data('value')==='false'){
+                                    $('#skewX').data('value','true');
+                                    $('#skewX').css('transform','skewX(20deg)');
+                                    $('#skewX')[0].innerHTML = "SKEWED X";
+                                }else{
+                                    $('#skewX').data('value','false');
+                                    $('#skewX').css('transform','skewX(0deg)');
+                                    $('#skewX')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="skewX()" data-value="false" id="skewX" style="transform: skewX(0deg);">ORIGINAL</div>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: skewX(20deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: skewX(20deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: skewX(20deg);
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The skewY() Method</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The skewY() method skews an element along the Y-axis by the given angle.
+                        <br>The following example skews the &lt;div&gt; element 20 degrees along the Y-axis:
+
+                        <style type="text/css">
+                            #skewY {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function skewY(){
+                                
+                                if($('#skewY').data('value')==='false'){
+                                    $('#skewY').data('value','true');
+                                    $('#skewY').css('transform','skewY(20deg)');
+                                    $('#skewY')[0].innerHTML = "SKEWED Y";
+                                }else{
+                                    $('#skewY').data('value','false');
+                                    $('#skewY').css('transform','skewY(0deg)');
+                                    $('#skewY')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="skewY()" data-value="false" id="skewY" style="transform: skewY(0deg);">ORIGINAL</div>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: skewY(20deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: skewY(20deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: skewY(20deg);
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The skew() Method</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The skew() method skews an element along the X and Y-axis by the given angles.
+                        <br>The following example skews the &lt;div&gt; element 20 degrees along the X-axis, and 10 degrees along the Y-axis:
+                      
+                        <style type="text/css">
+                            #skew {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function skew(){
+                                
+                                if($('#skew').data('value')==='false'){
+                                    $('#skew').data('value','true');
+                                    $('#skew').css('transform','skew(20deg, 10deg)');
+                                    $('#skew')[0].innerHTML = "SKEWED";
+                                }else{
+                                    $('#skew').data('value','false');
+                                    $('#skew').css('transform','skew(0deg, 0deg)');
+                                    $('#skew')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="skew()" data-value="false" id="skew" style="transform: skew(0deg, 0deg);">ORIGINAL</div>
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: skew(20deg, 10deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: skew(20deg, 10deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: skew(20deg, 10deg);
+                            <br>}
+                        </codeBody>
+
+                        <br>If the second parameter is not specified, it has a zero value. So, the following example skews the &lt;div&gt; element 20 degrees along the X-axis (skewX)
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: skew(20deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: skew(20deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: skew(20deg);
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The matrix() Method</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The matrix() method combines all the 2D transform methods into one.
+                        <br>The matrix() method take six parameters, containing mathematic functions, which allows you to <spanRed>rotate, scale, move (translate), and skew</spanRed> elements:
+                      
+                        <h3>Syntax</h3>
+                        <codeBody>
+                            <spanYellow>matrix( scaleX, skewY, skewX, scaleY, translateX, translateY)</spanYellow>
+                        </codeBody>
+
+                        <br>
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: matrix(1, -0.3, 0, 1, 0, 0);
+                            <br>}
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Transform Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following table lists all the 2D transform properties:
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:23%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_transform.asp">transform</div></td>
+                            <td>Applies a 2D or 3D transformation to an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_transform-origin.asp">transform-origin</div></td>
+                            <td>Allows you to change the position on transformed elements</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>2D Transform Methods</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:23%">Function</th>
+                            <th>Description</th>
+                          </tr>  
+                          <tr>
+                            <td>matrix(<i>n,n,n,n,n,n</i>)</td>
+                            <td>Defines a 2D transformation, using a matrix of six values</td>
+                          </tr>
+                          <tr>
+                            <td>translate(<i>x,y</i>)</td>
+                            <td>Defines a 2D translation, moving the element along the X- and the Y-axis</td>
+                          </tr>
+                            <tr>
+                            <td>translateX(<i>n</i>)</td>
+                            <td>Defines a 2D translation, moving the element along the X-axis</td>
+                          </tr>
+                          <tr>
+                            <td>translateY(<i>n</i>)</td>
+                            <td>Defines a 2D translation, moving the element along the Y-axis</td>
+                          </tr>
+                          <tr>
+                            <td>scale(<i>x,y</i>)</td>
+                            <td>Defines a 2D scale transformation, changing the elements width and 
+                            height</td>
+                          </tr>
+                            <tr>
+                            <td>scaleX(<i>n</i>)</td>
+                            <td>Defines a 2D scale transformation, changing the element's width</td>
+                          </tr>
+                          <tr>
+                            <td>scaleY(<i>n</i>)</td>
+                            <td>Defines a 2D scale transformation, changing the element's height</td>
+                          </tr>
+                          <tr>
+                            <td>rotate(<i>angle</i>)</td>
+                            <td>Defines a 2D rotation, the angle is specified in the 
+                                parameter</td>
+                          </tr>
+                          <tr>
+                            <td>skew(<i>x-angle,y-angle</i>)</td>
+                            <td>Defines a 2D skew transformation along the X- and the Y-axis</td>
+                          </tr>
+                          <tr>
+                            <td>skewX(<i>angle</i>)</td>
+                            <td>Defines a 2D skew transformation along the X-axis</td>
+                          </tr>
+                          <tr>
+                            <td>skewY(<i>angle</i>)</td>
+                            <td>Defines a 2D skew transformation along the Y-axis</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

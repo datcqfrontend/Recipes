@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css3Backgrounds" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,10 +6,77 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Backgrounds</h3> </div>
+                  <div class="panel-body">  
+                    
+                    <div style="padding:15px; background:url(media/images/img_flwr.gif), url(media/images/paper.gif);background-position:right bottom, left top;background-repeat:no-repeat,repeat;">
+                        <p>CSS3 contains a few new background properties, which allow greater control of the background element.</p>
+                        <p>In this chapter you will learn how to add multiple background images to one 
+                        element.</p>
+                        <p>You will also learn about the following new CSS3 properties:</p>
+                        <ul>
+                            <li><code>background-size</code></li>
+                            <li><code>background-origin</code></li>
+                            <li><code>background-clip</code></li>
+                        </ul>
+                    </div>
+                      
+                    
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                 
+                          </tr>
+                            <tr>
+                            <td style="text-align:left;">background-image<br>(with multiple backgrounds)</td>
+                            <td>9.0</td>
+                            <td>4.0</td>
+                            <td>3.6</td>
+                            <td>3.1</td>
+                            <td>11.5</td>
+                            </tr>
+                          <tr>
+                            <td style="text-align:left;">background-size</td>
+                            <td>9.0</td>
+                            <td>4.0<br>1.0 -webkit-</td>
+                            <td>4.0<br>3.6 -moz-</td>
+                            <td>4.1<br>3.0 -webkit-</td>
+                            <td>10.5<br>10.0 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">background-origin</td>
+                            <td>9.0</td>
+                            <td>1.0</td>
+                            <td>4.0</td>
+                            <td>3.0</td>
+                            <td>10.5</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">background-clip</td>
+                            <td>9.0</td>
+                            <td>4.0</td>
+                            <td>4.0</td>
+                            <td>3.0</td>
+                            <td>10.5</td>
+                          </tr>
+                        </tbody></table>
+
                       
                     </p>
                   </div>
@@ -18,10 +85,116 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Multiple Backgrounds</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        CSS3 allows you to add multiple background images for an element, through the background-image property.
+                        <br>The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.
+                        <br>The following example has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner):
                       
+                        <codeBody>
+                            #example1 {
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url(img_flwr.gif), url(paper.gif);
+                            <br>&nbsp;&nbsp;&nbsp;    background-position: right bottom, left top;
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: no-repeat, repeat;
+                            <br>}
+                        </codeBody>
+                        <br>Multiple background images can be specified using either the individual background properties (as above) or the background shorthand property.
+                        <br>The following example uses the background shorthand property (same result as example above):
+
+                        <codeBody>
+                            #example1 {
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;                            
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Background Size</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 background-size property allows you to specify the size of background images.
+                        <br>Before CSS3, the size of a background image was the actual size of the image. CSS3 allows us to re-use background images in different contexts.
+                        <br>The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.
+                        <br>The following example resizes a background image to much smaller than the original image (using pixels):
+                        
+                        <br>Original background image:                        
+                        <div style="padding:15px; background:url(media/images/img_flwr.gif) left top no-repeat; border: 1px solid #000;">
+                            <h2>Lorem Ipsum Dolor</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <br>Resized background image:
+                        <div style="padding:15px; background:url(media/images/img_flwr.gif) left top no-repeat; background-size:12% auto; border: 1px solid #000;">
+                            <h2>Lorem Ipsum Dolor</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <br>Here is the code:
+                        <codeBody>
+                            #div1 {
+                            <br>&nbsp;&nbsp;&nbsp;    background: url(img_flower.jpg);
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-size: 100px 80px;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: no-repeat;
+                            <br>}
+                        </codeBody>
+
+                        <br>The two other possible values for <code>background-size</code> are contain and cover.
+                        <br>The <code>contain</code> keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
+                        <br>The <code>cover</code> keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area.
+                        <br>The following example illustrates the use of contain and cover:
+
+                        <div style="padding:15px; background:url(media/images/img_flwr.gif) left top no-repeat; background-size:contain; border: 1px solid #000;">
+                            <h2>Contain</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <br>
+                        <div style="padding:15px; background:url(media/images/img_flwr.gif) left top no-repeat; background-size:cover; border: 1px solid #000;">
+                            <h2>Cover</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                         <br>
+                        <codeBody>
+                            #div1 {
+                            <br>&nbsp;&nbsp;&nbsp;    background: url(img_flower.jpg);
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-size: contain;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: no-repeat;
+                            <br>}
+                            <br>#div2 {
+                            <br>&nbsp;&nbsp;&nbsp;    background: url(img_flower.jpg);
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-size: cover;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: no-repeat;
+                            <br>}
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Define Sizes of Multiple Background Images</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The background-size property also accepts multiple values for background size (using a comma-separated list), when working with multiple backgrounds.
+                        <br>The following example has three background images specified, with different background-size value for each image:
+
+                        <codeBody>
+                            #example1 {
+                            <br>&nbsp;&nbsp;&nbsp;    background: url(img_flwr.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-size: 0px, 130px, auto;</spanYellow>
+                            <br>}
+                            
+                        </codeBody>
                       
                     </p>
                   </div>
@@ -30,11 +203,26 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Full Size Background Image</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        Now we want to have a background image on a website that covers the entire browser window at all times.
+                        <br>The requirements are as follows:
+                        <ul>
+                            <li>Fill the entire page with the image (no white space)</li>
+                            <li>Scale image as needed</li>
+                            <li>Center image on page</li>
+                            <li>Do not cause scrollbars</li>
+                        </ul>
+                        <br>The following example shows how to do it; Use the html element (the html element is always at least the height of the browser window). Then set a fixed and centered background on it. Then adjust its size with the background-size property:
+                        
+                        <codeBody>
+                            html {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background: url(img_flower.jpg) no-repeat center center fixed; </spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    background-size: cover;
+                            <br>}
+                        </codeBody>
+
                     </p>
                   </div>
                 </div>
@@ -42,11 +230,45 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 background-origin Property</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        The CSS3 background-origin property specifies where the background image is positioned.
+                        <br>The property takes three different values:
+                        <ul>
+                            <li><spanRed>border-box</spanRed> - the background image starts from the upper left corner of the border</li>
+                            <li><spanRed>padding-box</spanRed> - (default) the background image starts from the upper left corner of  the padding edge</li>
+                            <li><spanRed>content-box</spanRed> - the background image starts from the upper left corner of the content</li>
+                        </ul>
+                        <br>The following example illustrates the background-origin property:
+
+                        <div style="border: 10px solid #000; padding:35px; background:url(media/images/img_flwr.gif) left top no-repeat; background-origin:border-box; ">
+                            <h2>background-origin:border-box;</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <br>
+                        <div style="border: 10px solid #000; padding:35px; background:url(media/images/img_flwr.gif) left top no-repeat; background-origin:padding-box; ">
+                            <h2>background-origin:padding-box;</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <br>
+                        <div style="border: 10px solid #000; padding:35px; background:url(media/images/img_flwr.gif) left top no-repeat; background-origin:content-box; ">
+                            <h2>background-origin:content-box;</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <br>
+                        <codeBody>
+                            #example1 {
+                            <br>&nbsp;&nbsp;&nbsp;    border: 10px solid black;
+                            <br>&nbsp;&nbsp;&nbsp;    padding:35px;
+                            <br>&nbsp;&nbsp;&nbsp;    background:url(img_flwr.gif);
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: no-repeat;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-origin: content-box;<spanYellow>
+                            <br>}
+                        </codeBody>
                     </p>
                   </div>
                 </div>
@@ -54,11 +276,46 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 background-clip Property</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        The CSS3 background-clip property specifies the painting area of the background.
+                        <br>The property takes three different values:
+                        <ul>
+                            <li><spanRed>border-box</spanRed> - (default) the background is painted to the outside edge of 
+                            the border</li>
+                            <li><spanRed>padding-box</spanRed> - the background is painted to the outside edge of the padding</li>
+                            <li><spanRed>content-box</spanRed> - the background is painted within the content box</li>
+                        </ul>
+                        The following example illustrates the background-clip property:
+
+                        <div style="border: 10px solid #000; padding:35px; background:yellow; background-clip:border-box; ">
+                            <h2>background-origin:border-box;</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <br>
+                        <div style="border: 10px solid #000; padding:35px; background:yellow; background-clip:padding-box; ">
+                            <h2>background-origin:padding-box;</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <br>
+                        <div style="border: 10px solid #000; padding:35px; background:yellow; background-clip:content-box; ">
+                            <h2>background-clip:content-box;</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <codeBody>
+                            #example1 {
+                            <br>&nbsp;&nbsp;&nbsp;    border: 10px solid black;
+                            <br>&nbsp;&nbsp;&nbsp;    padding:35px;
+                            <br>&nbsp;&nbsp;&nbsp;    background:yellow;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>background-clip: content-box;<spanYellow>
+                            <br>}
+                        </codeBody>
+
                     </p>
                   </div>
                 </div>
@@ -66,46 +323,36 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Background Properties</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
-                      
-                    </p>
-                  </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
-                  <div class="panel-body">  
-                    <p>
-                      
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:28%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_background.asp">background</a></td>
+                            <td>A shorthand property for setting all the background properties in one 
+                            declaration</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_background-clip.asp">background-clip</a></td>
+                            <td>Specifies the painting area of the background</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/pr_background-image.asp">background-image</a></td>
+                            <td>Specifies one or more background images for an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_background-origin.asp">background-origin</a></td>
+                            <td>Specifies where the background image(s) is/are positioned</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_background-size.asp">background-size</a></td>
+                            <td>Specifies the size of the background image(s)</td>
+                          </tr>
+                        </tbody></table>
                       
                     </p>
                   </div>

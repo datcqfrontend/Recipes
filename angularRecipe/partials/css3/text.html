@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css3Text" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,11 +6,255 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Text</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        CSS3 contains several new text features.
+                        <br>In this chapter you will learn about the following text properties:
+                        <ul>
+                            <li><code>text-overflow</code></li>
+                            <li><code>word-wrap</code></li>
+                            <li><code>word-break</code></li>
+                        </ul>
                       
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -o- specify the first version that worked with a prefix. 
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:15%;font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>               
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">text-overflow</td>
+                            <td>6.0</td>
+                            <td>4.0</td>
+                            <td>7.0</td>
+                            <td>3.1</td>
+                            <td>11.0<br>9.0 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">word-wrap</td>
+                            <td>5.5</td>
+                            <td>23.0</td>
+                            <td>3.5</td>
+                            <td>6.1</td>
+                            <td>12.1</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">word-break</td>
+                            <td>5.5</td>
+                            <td>4.0</td>
+                            <td>15.0</td>
+                            <td>3.1</td>
+                            <td>15.0</td>
+                          </tr>
+                        </tbody></table>
                       
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Text Overflow</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 text-overflow property specifies how overflowed content that is not displayed should be signaled to the user.
+                        <br>It can be clipped:
+
+                        <style type="text/css">
+                            .demo-p1{
+                                white-space: nowrap; 
+                                width: 200px; 
+                                border: 1px solid #000000;
+                                overflow: hidden;
+                                text-overflow: clip;
+                            }
+                            .demo-p2{
+                                white-space: nowrap; 
+                                width: 200px; 
+                                border: 1px solid #000000;
+                                overflow: hidden;
+                                text-overflow: ellipsis;                                 
+                            }
+
+                            .demo-p1:hover, .demo-p2:hover{
+                                text-overflow: inherit;
+                                overflow: visible;
+                            }
+                        </style>
+
+                        <p class="demo-p1" >This is some long text that will not fit in the box</p>
+                        or it can be rendered as an <spanRed>ellipsis (...)</spanRed>:
+                        <p class="demo-p2" >This is some long text that will not fit in the box</p>
+                        The CSS code is as follows:
+                        
+                        <codeBody>
+                            p.test1 {
+                            <br>&nbsp;&nbsp;&nbsp;    white-space: nowrap; 
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px; 
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid #000000;
+                            <br>&nbsp;&nbsp;&nbsp;    overflow: hidden;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-overflow: clip; </spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.test2 {
+                            <br>&nbsp;&nbsp;&nbsp;    white-space: nowrap; 
+                            <br>&nbsp;&nbsp;&nbsp;    width: 200px; 
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid #000000;
+                            <br>&nbsp;&nbsp;&nbsp;    overflow: hidden;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-overflow: ellipsis; </spanYellow>
+                            <br>}
+                        </codeBody>
+
+                        <br>The following example shows how you can display the overflowed content when hovering over the element:
+
+                        <codeBody>
+                            div.test:hover {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>text-overflow: inherit;
+                            <br>&nbsp;&nbsp;&nbsp;    overflow: visible;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Word Wrapping</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 word-wrap property allows long words to be able to be broken and wrap onto the next line. 
+                        <br>If a word is too long to fit within an area, it expands outside:
+                      
+                        <style type="text/css">
+                            p#normal{
+                                width: 11em;
+                                border: 1px solid #000000;
+                                word-wrap: normal;
+                            }
+                            p#wordwrap{
+                                width: 11em;
+                                border: 1px solid #000000;
+                                word-wrap: break-word;
+                            }
+                        </style>
+
+                        <p id="normal"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+
+                        The word-wrap property allows you to force the text to wrap - even if it means splitting it in the middle of a word:
+
+                        <p id="wordwrap"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+
+                        The CSS code is as follows:
+                        <codeBody>
+                            p.test1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>word-wrap: normal;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.test2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>word-wrap: break-word;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Word Breaking</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 word-break property specifies line breaking rules.
+                      
+                        <style type="text/css">
+                            p#keep-all{
+                                width: 140px;
+                                border: 1px solid #000000;
+                                word-break: keep-all;
+                            }
+                            p#break-all{
+                                width: 140px;
+                                border: 1px solid #000000;
+                                word-break: break-all;
+                            }
+                        </style>
+
+                        <p id="keep-all">This paragraph contains some text. This line will-break-at-hyphens.</p>
+                        <p id="break-all">This paragraph contains some text. The lines will break at any character.</p>
+
+                        The CSS code is as follows:
+                        <codeBody>
+                            p.test1 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>word-break: keep-all;</spanYellow>
+                            <br>}
+                            <br>
+                            <br>p.test2 {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>word-break: break-all;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Text Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following table lists the new CSS3 text properties:
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:28%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_text-align-last.asp">text-align-last</div></td>
+                            <td>Specifies how to align the last line of a text</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_text-emphasis.asp">text-emphasis</div></td>
+                            <td>A shorthand for setting text-emphasis-style and text-emphasis-color in 
+                            one declaration </td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_text-justify.asp">text-justify</div></td>
+                            <td>Specifies how justified text should be aligned and spaced</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_text-overflow.asp">text-overflow</div></td>
+                            <td>Specifies how overflowed content that is not displayed should be 
+                            signaled to the user</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_word-break.asp">word-break</div></td>
+                            <td>Specifies line breaking rules for non-CJK scripts</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_word-wrap.asp">word-wrap</div></td>
+                            <td>Allows long words to be able to be broken and wrap onto the next line</td>
+                          </tr>
+                        </tbody></table>
+                        
                     </p>
                   </div>
                 </div>

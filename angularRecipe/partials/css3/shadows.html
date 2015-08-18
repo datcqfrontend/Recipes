@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css3Shadows" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,210 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Shadow Effects</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        With CSS3 you can add shadow to text and to elements.
+                        <br>In this chapter you will learn about the following properties:
+                        <ul>
+                            <li><code>text-shadow</code></li>
+                            <li><code>box-shadow</code></li>
+                        </ul>
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -webkit- or -moz- specifies the first version that worked with a prefix. 
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:15%;font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">text-shadow</td>
+                            <td>10.0</td>
+                            <td>4.0</td>
+                            <td>3.5</td>
+                            <td>4.0</td>
+                            <td>9.5</td>
+                          </tr>
+                            <tr>
+                            <td style="text-align:left;">box-shadow</td>
+                            <td>9.0</td>
+                            <td>10.0<br>4.0 -webkit-</td>
+                            <td>4.0<br>3.5 -moz-</td>
+                            <td>5.1<br>3.1 -webkit-</td>
+                            <td>10.5</td>
+                            </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Text Shadow</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 text-shadow property applies shadow to text.
+                        <br>In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):
+
+                        <h3 style=" text-shadow: 2px 2px;">Text shadow effect!</h3>                        
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    text-shadow: 2px 2px;
+                            <br>}
+                        </codeBody>
+
+                        <br>Add a color to the shadow:
+                        <h3 style=" text-shadow: 2px 2px red;">Text shadow effect!</h3>                        
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    text-shadow: 2px 2px red;
+                            <br>}
+                        </codeBody>
+
+                        <br>Add a blur effect to a shadow:
+                        <h3 style=" text-shadow: 2px 2px 5px red;">Text shadow effect!</h3>                        
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    text-shadow: 2px 2px 5px red;
+                            <br>}
+                        </codeBody>
+
+                        <br>The following example shows a white text with black shadow:
+                        <h3 style="color:white; text-shadow: 2px 2px 4px #000;">Text shadow effect!</h3>
+                        <codeBody>
+                            h1 {
+                            <br>&nbsp;&nbsp;&nbsp;    color: white;
+                            <br>&nbsp;&nbsp;&nbsp;    text-shadow: 2px 2px 4px #000;
+                            <br>}
+                        </codeBody>
+
+                        <br>The following example shows a red neon glow shadow:
+                        <h3 style="text-shadow: 0 0 3px #FF000;">Text shadow effect!</h3>
+                        <codeBody>
+                            h1 {
+                                <br>&nbsp;&nbsp;&nbsp;    text-shadow: 0 0 3px #FF000;
+                            <br>}
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Multiple Shadows</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To add more than one shadow to the text, you can add a comma-separated list of shadows.
+                        <br>The following example shows a red and blue neon glow shadow:
+                        <h3 style="text-shadow: 0 0 3px #FF000, 0 0 5px #000FF;">Text shadow effect!</h3>
+                        <codeBody>
+                            h1 {
+                                <br>&nbsp;&nbsp;&nbsp;    text-shadow: 0 0 3px #FF000, 0 0 5px #000FF;
+                            <br>}
+                        </codeBody>
+
+                        <br>The following example shows a white text with black, blue, and darkblue shadow:
+                        <h3 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Text shadow effect!</h3>
+                        <codeBody>
+                            h1 {
+                                <br>&nbsp;&nbsp;&nbsp;    color: white;
+                                <br>&nbsp;&nbsp;&nbsp;    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 box-shadow Property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 box-shadow property applies shadow to elements.
+                        <br>In its simplest use, you only specify the horizontal shadow and the vertical shadow:
+
+                        <div style="width: 300px;height: 100px;padding: 15px;margin-bottom: 30px;background-color: yellow;box-shadow: 10px 10px;">
+                            This is a yellow &lt;div&gt; element with a black box-shadow
+                        </div>
+                        <br>
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;     box-shadow: 10px 10px;
+                            <br>}
+                        </codeBody>
+
+                        <br>Add a color to the shadow:
+                        <div style="width: 300px;height: 100px;padding: 15px;margin-bottom: 30px;background-color: yellow;box-shadow: 10px 10px grey;">
+                            This is a yellow &lt;div&gt; element with a grey box-shadow
+                        </div>
+                        <br>
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;     box-shadow: 10px 10px grey;
+                            <br>}
+                        </codeBody>
+
+                        <br>Add a blur effect to the shadow:
+                        <div style="width: 300px;height: 100px;padding: 15px;margin-bottom: 30px;background-color: yellow;box-shadow: 10px 10px 5px grey;">
+                            This is a yellow &lt;div&gt; element with a blurred, grey box-shadow
+                        </div>
+                        <br>
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;     box-shadow: 10px 10px 5px grey;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Shadow Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following table lists the CSS3 shadow properties:
+
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:28%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_box-shadow.asp">box-shadow</div></td>
+                            <td>Adds one or more shadows to an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_text-shadow.asp">text-shadow</div></td>
+                            <td>Adds one or more shadows to a text </td>
+                          </tr>
+                          </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

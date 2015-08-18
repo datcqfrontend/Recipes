@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css3Fonts" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,9 +6,253 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Web Fonts - The @font-face Rule</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Web fonts allow Web designers to use fonts that are not installed on the user's computer.
+                        <br>When you have found/bought the font you wish to use, just include the font file on your web server, and it will be automatically downloaded to the user when needed.
+                        <br>Your "own" fonts are defined within the CSS3 @font-face rule.
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:15%;font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>              
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">@font-face</td>
+                            <td>9.0</td>
+                            <td>4.0</td>
+                            <td>3.5</td>
+                            <td>3.2</td>
+                            <td>10.0</td>
+                          </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Different Font Formats</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        <h3>TrueType Fonts (TTF)</h3>
+                        TrueType is a font standard developed in the late 1980s, by Apple and Microsoft. TrueType is the most common font format for both the Mac OS and Microsoft Windows operating systems.
+
+                        <h3>OpenType Fonts (OTF)</h3>
+                        OpenType is a format for scalable computer fonts. It was built on TrueType, and is a registered trademark of Microsoft. OpenType fonts are used commonly today on the major computer platforms.
+
+                        <h3>The Web Open Font Format (WOFF)</h3>
+                        WOFF is a font format for use in web pages. It was developed in 2009, and is now a W3C Recommendation. WOFF is essentially OpenType or TrueType with compression and additional metadata. The goal is to support font distribution from a server to a client over a network with bandwidth constraints.
+
+                        <h3>The Web Open Font Format (WOFF 2.0)</h3>
+                        TrueType/OpenType font that provides better compression than WOFF 1.0.
+
+                        <h3>SVG Fonts/Shapes</h3>
+                        SVG fonts allow SVG to be used as glyphs when displaying text. The SVG 1.1 specification define a font module that allows the creation of fonts within an SVG document. You can also apply CSS to SVG documents, and the @font-face rule can be applied to text in SVG documents.
+
+                        <h3>Embedded OpenType Fonts (EOT)</h3>
+                        EOT fonts are a compact form of OpenType fonts designed by Microsoft for use as embedded fonts on web pages.
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support for Font Formats</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specifies the first browser version that fully supports the font format.
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:15%;font-size:16px;text-align:left;">Font format</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                
+                          </tr>
+                            <tr>
+                            <td>TTF/OTF</td>
+                            <td>9.0*</td>
+                            <td>4.0</td>
+                            <td>3.5</td>
+                            <td>3.1</td>
+                            <td>10.0</td>
+                            </tr>
+                          <tr>
+                            <td>WOFF</td>
+                            <td>9.0</td>
+                            <td>5.0</td>
+                            <td>3.6</td>
+                            <td>5.1</td>
+                            <td>11.1</td>
+                          </tr>
+                          <tr>
+                            <td>WOFF2</td>
+                            <td><spanRed>Not supported</spanRed></td>
+                            <td>36.0</td>
+                            <td>35.0*</td>
+                            <td><spanRed>Not supported</spanRed></td>
+                            <td>26.0</td>
+                          </tr>
+                          <tr>
+                            <td>SVG</td>
+                            <td><spanRed>Not supported</spanRed></td>
+                            <td>4.0</td>
+                            <td><spanRed>Not supported</spanRed></td>
+                            <td>3.2</td>
+                            <td>9.0</td>
+                          </tr>
+                          <tr>
+                            <td>EOT</td>
+                            <td>6.0</td>
+                            <td><spanRed>Not supported</spanRed></td>
+                            <td><spanRed>Not supported</spanRed></td>
+                            <td><spanRed>Not supported</spanRed></td>
+                            <td><spanRed>Not supported</spanRed></td>
+                          </tr>
+                        </tbody></table>
+                      
+                        *IE: The font format only works when set to be "installable".
+                        <br>*Firefox: Not supported by default, but can be enabled (need to set a flag to "true" to use WOFF2).
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Using The Font You Want</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        In the CSS3 @font-face rule you must first define a name for the font (e.g. myFirstFont), and then point to the font file.
+                        <br><b>Tip:</b> Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE.
+                        <br>To use the font for an HTML element, refer to the name of the font (myFirstFont) through the font-family property:
+
+                        <codeBody>
+                            <spanYellow>@font-face {
+                            <br>&nbsp;&nbsp;&nbsp;    font-family: myFirstFont;
+                            <br>&nbsp;&nbsp;&nbsp;    src: url(sansation_light.woff);
+                            <br>}</spanYellow>
+                            <br>
+                            <br>div {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-family: myFirstFont;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Using Bold Text</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        You must add another @font-face rule containing descriptors for bold text:
+                        <codeBody>
+                            @font-face {
+                            <br>&nbsp;&nbsp;&nbsp;    font-family: myFirstFont;
+                            <br>&nbsp;&nbsp;&nbsp;    src: url(sansation_bold.woff);
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>font-weight: bold;</spanYellow>
+                            <br>}
+                            
+                        </codeBody>
+                        <br>The file "sansation_bold.woff" is another font file, that contains the bold characters for the Sansation font.
+                        <br>Browsers will use this whenever a piece of text with the font-family "myFirstFont" should render as bold.
+                        <br>This way you can have many @font-face rules for the same font.
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Font Descriptors</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following table lists all the font descriptors that can be defined inside the @font-face rule:
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:17%">Descriptor</th>
+                            <th style="width:20%">Values</th>
+                            <th>Description</th>
+                          </tr>  
+                          <tr>
+                            <td>font-family</td>
+                            <td><i>name</i></td>
+                            <td>Required. Defines a name for the font</td>
+                          </tr>
+                          <tr>
+                            <td>src</td>
+                            <td><i>URL</i></td>
+                            <td>Required. Defines the URL of the font file</td>
+                          </tr>
+                          <tr>
+                            <td>font-stretch</td>
+                            <td>normal<br>
+                            condensed<br>
+                            ultra-condensed<br>
+                            extra-condensed<br>
+                            semi-condensed<br>
+                            expanded<br>
+                            semi-expanded<br>
+                            extra-expanded<br>
+                            ultra-expanded</td>
+                            <td>Optional. Defines how the font should be stretched. Default is 
+                            "normal"</td>
+                          </tr>
+                            <tr>
+                            <td>font-style</td>
+                            <td>normal<br>
+                            italic<br>
+                            oblique</td>
+                            <td>Optional. Defines how the font should be styled. Default is 
+                            "normal"</td>
+                          </tr>
+                            <tr>
+                            <td>font-weight</td>
+                            <td>normal<br>
+                            bold<br>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            600<br>
+                            700<br>
+                            800<br>
+                            900</td>
+                            <td>Optional. Defines the boldness of the font. Default is "normal"</td>
+                          </tr>
+                          <tr>
+                            <td>unicode-range</td>
+                            <td><i>unicode-range</i></td>
+                            <td>Optional. Defines the range of UNICODE characters the font supports. 
+                            Default is "U+0-10FFFF"</td>
+                          </tr>
+                        </tbody></table>
+
                       
                       
                     </p>
