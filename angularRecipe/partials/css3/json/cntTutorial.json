@@ -68,13 +68,13 @@
 		},
 		{ 
 			"title": "3D Transforms",
-			"sortContent":  "",
+			"sortContent":  "CSS3 allows you to format your elements using 3D transformations.",
 			"keyword": "",
 			"link": "#css3/3Dtransforms"
 		},
 		{ 
 			"title": "Transitions",
-			"sortContent":  "",
+			"sortContent":  "CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.",
 			"keyword": "",
 			"link": "#css3/transitions"
 		},						
@@ -82,7 +82,7 @@
 
 		{ 
 			"title": "Animations",
-			"sortContent":  "",
+			"sortContent":  "CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!",
 			"keyword": "",
 			"link": "#css3/animations"
 		},

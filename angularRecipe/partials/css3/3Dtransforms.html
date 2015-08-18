@@ -6,10 +6,52 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 3D Transforms</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        CSS3 allows you to format your elements using 3D transformations.
+                        <br>Mouse over the elements below to see the difference between a 2D and a 3D transformation:
+
+                        <style type="text/css">
+                            #rotate2D, #rotate3D {
+                                width: 80px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                float: left;
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function rotateDIV(_bool){
+                                if(_bool){
+                                    $('#rotate2D').css('transform','rotate(180deg)');
+                                }else{
+                                    $('#rotate2D').css('transform','rotate(360deg)');
+                                }                                
+                            }
+
+                            function rotateYDIV(_bool){
+                                if(_bool){
+                                    $('#rotate3D').css('transform','rotateY(180deg)');
+                                }else{
+                                    $('#rotate3D').css('transform','rotateY(360deg)');
+                                } 
+                            }
+                        </script>
+
+                        <div onmouseover="rotateDIV(true)" onmouseout="rotateDIV(false)" id="rotate2D" style="transform: rotate(360deg);">2D rotate</div>
+                        <div onmouseover="rotateYDIV(true)" onmouseout="rotateYDIV(false)" id="rotate3D" style="transform: rotateY(360deg);">3D rotate</div>
                     </p>
                   </div>
                 </div>
@@ -17,10 +59,70 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Browser Support for 3D Transforms</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:19%;font-size:16px;text-align:left;">Property</th>
+                             <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                  
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transform</td>
+                            <td>10.0</td>
+                            <td>36.0<br>12.0 -webkit-</td>
+                            <td>16.0<br>10.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-</td>
+                          </tr>
+                            <tr>
+                            <td style="text-align:left;">transform-origin<br>(three-value syntax)</td>
+                            <td>10.0</td>
+                            <td>36.0<br>12.0 -webkit-</td>
+                            <td>16.0<br>10.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-</td>
+                            </tr>
+                            <tr>
+                            <td style="text-align:left;">transform-style</td>
+                            <td>11.0</td>
+                            <td>36.0<br>12.0 -webkit-</td>
+                            <td>16.0<br>10.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-</td>
+                            </tr>
+                            <tr>
+                            <td style="text-align:left;">perspective</td>
+                            <td>10.0</td>
+                            <td>36.0<br>12.0 -webkit-</td>
+                            <td>16.0<br>10.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-</td>
+                            </tr>
+                            <tr>
+                            <td style="text-align:left;">perspective-origin</td>
+                            <td>10.0</td>
+                            <td>36.0<br>12.0 -webkit-</td>
+                            <td>16.0<br>10.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-</td>
+                            </tr>
+                            <tr>
+                            <td style="text-align:left;">backface-visibility</td>
+                            <td>10.0</td>
+                            <td>36.0<br>12.0 -webkit-</td>
+                            <td>16.0<br>10.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>23.0<br>15.0 -webkit-</td>
+                            </tr>
+                        </tbody></table>
                     </p>
                   </div>
                 </div>
@@ -28,10 +130,15 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 3D Transforms</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        In this chapter you will learn about the following 3D transformation methods:
+                        <ul>
+                            <li><code>rotateX()</code></li>
+                            <li><code>rotateY()</code></li>
+                            <li><code>rotateZ()</code></li>
+                        </ul>
                     </p>
                   </div>
                 </div>
@@ -39,10 +146,57 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>The rotateX() Method</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        The rotateX() method rotates an element around its X-axis at a given degree:
+
+                        <style type="text/css">
+                            #rotateX {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function rotateX(){
+                                
+                                if($('#rotateX').data('value')==='false'){
+                                    $('#rotateX').data('value','true');
+                                    $('#rotateX').css('transform','rotateX(180deg)');
+                                    $('#rotateX')[0].innerHTML = "ROTATED";
+                                }else{
+                                    $('#rotateX').data('value','false');
+                                    $('#rotateX').css('transform','rotateX(0deg)');
+                                    $('#rotateX')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="rotateX()" data-value="false" id="rotateX" style="transform: rotateX(0deg);">ORIGINAL</div>
+
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: rotateX(180deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: rotateX(180deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: rotateX(180deg);
+                            <br>}
+                        </codeBody>
                     </p>
                   </div>
                 </div>
@@ -50,10 +204,57 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>The rotateY() Method</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        The rotateY() method rotates an element around its Y-axis at a given degree:
+
+                        <style type="text/css">
+                            #rotateY {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function rotateY(){
+                                
+                                if($('#rotateY').data('value')==='false'){
+                                    $('#rotateY').data('value','true');
+                                    $('#rotateY').css('transform','rotateY(180deg)');
+                                    $('#rotateY')[0].innerHTML = "ROTATED";
+                                }else{
+                                    $('#rotateY').data('value','false');
+                                    $('#rotateY').css('transform','rotateY(0deg)');
+                                    $('#rotateY')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="rotateY()" data-value="false" id="rotateY" style="transform: rotateY(0deg);">ORIGINAL</div>
+
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: rotateY(180deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: rotateY(180deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: rotateY(180deg);
+                            <br>}
+                        </codeBody>
                     </p>
                   </div>
                 </div>
@@ -61,10 +262,57 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>The rotateZ() Method</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        The rotateZ() method rotates an element around its Z-axis at a given degree:
+
+                        <style type="text/css">
+                            #rotateZ {
+                                width: 180px;
+                                height: 70px;
+                                color: white;
+                                position: relative;
+                                font-weight: bold;
+                                font-size: 15px;
+                                padding: 10px;
+                                
+                                margin-right: 50px;
+                                border-radius: 5px;
+                                border: 1px solid #000000;
+                                background: red;
+                                margin: 10px;
+
+                                -webkit-transition: -webkit-transform 500ms;
+                                transition: transform 500ms;
+                            }
+                        </style>
+                        <script>
+                            function rotateZ(){
+                                
+                                if($('#rotateZ').data('value')==='false'){
+                                    $('#rotateZ').data('value','true');
+                                    $('#rotateZ').css('transform','rotateZ(180deg)');
+                                    $('#rotateZ')[0].innerHTML = "ROTATED";
+                                }else{
+                                    $('#rotateZ').data('value','false');
+                                    $('#rotateZ').css('transform','rotateZ(0deg)');
+                                    $('#rotateZ')[0].innerHTML = "ORIGINAL";
+                                }                                
+                            }                          
+                        </script>
+
+                        <div onclick="rotateZ()" data-value="false" id="rotateZ" style="transform: rotateZ(0deg);">ORIGINAL</div>
+
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -ms-transform: rotateZ(180deg); /* IE 9 */
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transform: rotateZ(180deg); /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transform: rotateZ(180deg);
+                            <br>}
+                        </codeBody>
                     </p>
                   </div>
                 </div>
@@ -72,10 +320,41 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Transform Properties</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        The following table lists all the 3D transform properties:
+
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:22%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_transform.asp">transform</div></td>
+                            <td>Applies a 2D or 3D transformation to an element</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_transform-origin.asp">transform-origin</div></td>
+                            <td>Allows you to change the position on transformed elements</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_transform-style.asp">transform-style</div></td>
+                            <td>Specifies how nested elements are rendered in 3D space</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_perspective.asp">perspective</div></td>
+                            <td>Specifies the perspective on how 3D elements are viewed</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_perspective-origin.asp">perspective-origin</div></td>
+                            <td>Specifies the bottom position of 3D elements</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_backface-visibility.asp">backface-visibility</div></td>
+                            <td>Defines whether or not an element should be visible when not facing the screen</td>
+                          </tr>
+                        </tbody></table>
                     </p>
                   </div>
                 </div>
@@ -83,10 +362,72 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>3D Transform Methods</h3> </div>
                   <div class="panel-body">  
                     <p>
-                        
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:22%">Function</th>
+                            <th>Description</th>
+                          </tr>  
+                          <tr>
+                            <td>matrix3d<br>
+                            (<i>n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n</i>)</td>
+                            <td>Defines a 3D transformation, using a 4x4 matrix of 16 values</td>
+                          </tr>
+                          <tr>
+                            <td>translate3d(<i>x,y,z</i>)</td>
+                            <td>Defines a 3D translation</td>
+                          </tr>
+                          <tr>
+                            <td>translateX(<i>x</i>)</td>
+                            <td>Defines a 3D translation, using only the value for the X-axis</td>
+                          </tr>
+                          <tr>
+                            <td>translateY(<i>y</i>)</td>
+                            <td>Defines a 3D translation, using only the value for the Y-axis</td>
+                          </tr>
+                          <tr>
+                            <td>translateZ(<i>z</i>)</td>
+                            <td>Defines a 3D translation, using only the value for the Z-axis</td>
+                          </tr>
+                          <tr>
+                            <td>scale3d(<i>x,y,z</i>)</td>
+                            <td>Defines a 3D scale transformation</td>
+                          </tr>
+                          <tr>
+                            <td>scaleX(<i>x</i>)</td>
+                            <td>Defines a 3D scale transformation by giving a value for the X-axis</td>
+                          </tr>
+                          <tr>
+                            <td>scaleY(<i>y</i>)</td>
+                            <td>Defines a 3D scale transformation by giving a value for the Y-axis</td>
+                          </tr>
+                          <tr>
+                            <td>scaleZ(<i>z</i>)</td>
+                            <td>Defines a 3D scale transformation by giving a value for the Z-axis</td>
+                          </tr>
+                          <tr>
+                            <td>rotate3d(<i>x,y,z,angle</i>)</td>
+                            <td>Defines a 3D rotation</td>
+                          </tr>
+                          <tr>
+                            <td>rotateX(<i>angle</i>)</td>
+                            <td>Defines a 3D rotation along the X-axis</td>
+                          </tr>
+                          <tr>
+                            <td>rotateY(<i>angle</i>)</td>
+                            <td>Defines a 3D rotation along the Y-axis</td>
+                          </tr>
+                          <tr>
+                            <td>rotateZ(<i>angle</i>)</td>
+                            <td>Defines a 3D rotation along the Z-axis</td>
+                          </tr>
+                          <tr>
+                            <td>perspective(<i>n</i>)</td>
+                            <td>Defines a perspective view for a 3D transformed element</td>
+                          </tr>
+                        </tbody></table>
                     </p>
                   </div>
                 </div>

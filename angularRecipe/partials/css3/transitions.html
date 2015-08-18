@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css3Transitions" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,313 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Transitions</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
-                      
+                        CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support for Transitions</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.
+
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:25%;font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transition</td>
+                            <td>10.0</td>
+                            <td>26.0<br>4.0 -webkit-</td>
+                            <td>16.0<br>4.0 -moz-</td>
+                            <td>6.1<br>3.1 -webkit-</td>
+                            <td>12.1<br>10.5 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transition-delay</td>
+                            <td>10.0</td>
+                            <td>26.0<br>4.0 -webkit-</td>
+                            <td>16.0<br>4.0 -moz-</td>
+                            <td>6.1<br>3.1 -webkit-</td>
+                            <td>12.1<br>10.5 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transition-duration</td>
+                            <td>10.0</td>
+                            <td>26.0<br>4.0 -webkit-</td>
+                            <td>16.0<br>4.0 -moz-</td>
+                            <td>6.1<br>3.1 -webkit-</td>
+                            <td>12.1<br>10.5 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transition-property</td>
+                            <td>10.0</td>
+                            <td>26.0<br>4.0 -webkit-</td>
+                            <td>16.0<br>4.0 -moz-</td>
+                            <td>6.1<br>3.1 -webkit-</td>
+                            <td>12.1<br>10.5 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">transition-timing-function</td>
+                            <td>10.0</td>
+                            <td>26.0<br>4.0 -webkit-</td>
+                            <td>16.0<br>4.0 -moz-</td>
+                            <td>6.1<br>3.1 -webkit-</td>
+                            <td>12.1<br>10.5 -o-</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>How to Use CSS3 Transitions?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To create a transition effect, you must specify two things:
+                        <ul>
+                            <li>the CSS property you want to add an effect to</li>
+                            <li>the duration of the effect</li>
+                        </ul>
+
+                        <b>Note:</b> If the duration part is not specified, the transition will have no effect, because the default value is 0.
+                        <br>The following example shows a 100px * 100px red &lt;div&gt; element. The &lt;div&gt; element has also specified a transition effect for the width property, with a duration of 2 seconds:
+
+                        <style type="text/css">
+                            .demo1{
+                                width: 100px;
+                                height: 100px;
+                                background: red;
+                                -webkit-transition: width 2s; /* Safari */
+                                transition: width 2s;                                
+                            }
+                            .demo1:hover{
+                                width: 300px;
+                            }
+                        </style>
+                        <div class="demo1"></div>
+
+                        <br>
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: red;
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transition: width 2s; /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transition: width 2s;
+                            <br>}
+                        </codeBody>
+
+                        <br>The transition effect will start when the specified CSS property (width) changes value.
+                        <br>Now, let us specify a new value for the width property when a user mouses over the &lt;div&gt; element:
+
+                        <codeBody>
+                            div:hover {
+                            <br>&nbsp;&nbsp;&nbsp;   width: 300px;
+                            <br>}
+                        </codeBody>
+
+                        <br>Notice that when the cursor mouses out of the element, it will gradually change back to its original style.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Change Several Property Values</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following example adds a transition effect for both the width and height property, with a duration of 2 seconds for the width and 4 seconds for the height:
+                      
+                        <style type="text/css">
+                            .demo2{
+                                width: 100px;
+                                height: 100px;
+                                background: red;
+                                -webkit-transition: width 2s, height 4s; /* Safari */
+                                transition: width 2s, height 4s;                                
+                            }
+                            .demo2:hover{
+                                width: 300px;
+                                height: 200px;
+                            }
+                        </style>
+                        <div class="demo2"></div>
+
+                        <br>
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    background: red;
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transition: width 2s, height 4s; /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    transition: width 2s, height 4s;
+                            <br>}
+                        </codeBody>
+
+                        <br>The transition effect will start when the specified CSS property (width) changes value.
+                        <br>Now, let us specify a new value for the width property when a user mouses over the &lt;div&gt; element:
+
+                        <codeBody>
+                            div:hover {
+                            <br>&nbsp;&nbsp;&nbsp;   width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;   height: 200px;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Specify the Speed Curve of the Transition</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <spanRed>transition-timing-function<spanRed> property specifies the speed curve of the transition effect.
+                        <br>The transition-timing-function property can have the following values:
+
+                        <ul>
+                            <li>ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+                            <li>linear - specifies a transition effect with the same speed from start to end</li>
+                            <li>ease-in - specifies a transition effect with a slow start</li>
+                            <li>ease-out - specifies a transition effect with a slow end</li>
+                            <li>ease-in-out - specifies a transition effect with a slow start and end</li>
+                            <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</li>
+                        </ul>
+
+                        <codeBody>
+                            #div1 {transition-timing-function: linear;}
+                            <br>#div2 {transition-timing-function: ease;}
+                            <br>#div3 {transition-timing-function: ease-in;}
+                            <br>#div4 {transition-timing-function: ease-out;}
+                            <br>#div5 {transition-timing-function: ease-in-out;}
+                        </codeBody>    
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Delay the Transition Effect</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <spanRed>transition-delay<spanRed> property specifies a delay (in seconds) for the transition effect.
+                        <br>The following example has a 1 second delay before starting:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transition-delay: 1s; /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>transition-delay: 1s;</spanYellow>
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Transition + Transformation</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following example also adds a transformation to the transition effect:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>transition: width 2s, height 2s, transform 2s;</spanYellow>
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>More Transition Examples</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 transition properties can be specified one by one, like this:
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    transition-property: width;
+                            <br>&nbsp;&nbsp;&nbsp;    transition-duration: 2s;
+                            <br>&nbsp;&nbsp;&nbsp;    transition-timing-function: linear;
+                            <br>&nbsp;&nbsp;&nbsp;    transition-delay: 1s;
+                            <br>}
+                        </codeBody>
+                        <br>or by using the shorthand property transition:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>transition: width 2s linear 1s;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Transition Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following table lists all the transition properties:
+
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_transition.asp">transition</div></td>
+                            <td>A shorthand property for setting the four transition properties into a 
+                            single property</td>
+                          </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_transition-delay.asp">transition-delay</div></td>
+                            <td>Specifies a delay (in seconds) for the transition effect</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_transition-duration.asp">transition-duration</div></td>
+                            <td>Specifies how many seconds or milliseconds a transition effect takes to 
+                            complete</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_transition-property.asp">transition-property</div></td>
+                            <td>Specifies the name of the CSS property the transition effect is for</td>
+                          </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_transition-timing-function.asp">transition-timing-function</div></td>
+                            <td>Specifies the speed curve of the transition effect</td>
+                          </tr>
+                        </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div>
 
         </div>       
         <!-- /.row -->

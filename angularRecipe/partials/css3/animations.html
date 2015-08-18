@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css3Animations" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,535 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Animations</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support for Animations</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.
+
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:20%;font-size:16px;text-align:left;">Property</th>
+                             <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>             
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">@keyframes</td>
+                            <td>10.0</td>
+                            <td>4.0 -webkit-</td>
+                            <td>16.0<br>5.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>15.0 -webkit-<br>12.1<br>12.0 -o-</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">animation</td>
+                            <td>10.0</td>
+                            <td>4.0 -webkit-</td>
+                            <td>16.0<br>5.0 -moz-</td>
+                            <td>4.0 -webkit-</td>
+                            <td>15.0 -webkit-<br>12.1<br>12.0 -o-</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>What are CSS3 Animations?</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        An animation lets an element gradually change from one style to another.
+                        <br>You can change as many CSS properties you want, as many times you want.
+                        <br>To use CSS3 animation, you must first specify some keyframes for the animation.
+                        <br>Keyframes hold what styles the element will have at certain times.
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The @keyframes Rule</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+                        <br>To get an animation to work, you must bind the animation to an element.
+                        <br>The following example binds the "example" animation to the &lt;div&gt; element. When mouseover &lt;div&gt;, the animation will lasts for 4 seconds, and it will gradually change the background-color of the &lt;div&gt; element from "red" to "yellow":
+                      
+                        <style type="text/css">
+                            /* The animation code */
+                            @keyframes example {
+                                from {background-color: red;}
+                                to {background-color: yellow;}
+                            }
+
+                            /* The element to apply the animation to */
+                            div.demo1 {
+                                width: 100px;
+                                height: 100px;
+                                background-color: red;                                
+                            }
+                            div.demo1:hover {
+                                animation-name: example;
+                                animation-duration: 4s;
+                            }
+                        </style>
+                        <div class="demo1"></div>
+                        <br>
+                        <codeBody>
+                            /* The animation code */
+                            <br><spanYellow>@keyframes example {
+                            <br>&nbsp;&nbsp;&nbsp;    from {background-color: red;}
+                            <br>&nbsp;&nbsp;&nbsp;    to {background-color: yellow;}
+                            <br>}</spanYellow>
+                            <br>
+                            <br>/* The element to apply the animation to */
+                            <br>div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>}
+                            <br>
+                            <br>div:hover {
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>}
+                        </codeBody>
+
+                        <br><b>Note:</b> If the animation-duration property is not specified, the animation will have no effect, because the default value is 0. 
+                        <br>In the example above we have specified when the style will change by using the keywords "from" and "to" (which represents 0% (start) and 100% (complete)).
+                        <br>It is also possible to use percent. By using percent, you can add as many style changes as you like.
+                        <br>The following example will change the background-color of the &lt;div&gt; element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:
+
+                        <style type="text/css">
+                            /* The animation code */
+                            @keyframes example {
+                                0% {background-color: red;}
+                                25% {background-color: yellow;}
+                                50% {background-color: blue;}
+                                100% {background-color: green;}
+                            }
+
+                            /* The element to apply the animation to */
+                            div.demo2 {
+                                width: 100px;
+                                height: 100px;
+                                background-color: red;                                
+                            }
+                            div.demo2:hover {
+                                animation-name: example;
+                                animation-duration: 4s;
+                            }
+                        </style>
+                        <div class="demo2"></div>
+                        <br>
+                        <codeBody>
+                            /* The animation code */
+                            <br>@keyframes example {
+                            <br>&nbsp;&nbsp;&nbsp;    0% {background-color: red;}
+                            <br>&nbsp;&nbsp;&nbsp;    25% {background-color: yellow;}
+                            <br>&nbsp;&nbsp;&nbsp;    50% {background-color: blue;}
+                            <br>&nbsp;&nbsp;&nbsp;    100% {background-color: green;}
+                            <br>}
+                            <br>
+                            <br>/* The element to apply the animation to */
+                            <br>div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>}
+                            <br>
+                            <br>div:hover {
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>}
+                        </codeBody>
+
+                        <br>The following example will change both the background-color and the position of the &lt;div&gt; element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:
+
+                        <style type="text/css">
+                            /* The animation code */
+                            @keyframes example {
+                                0% {background-color: red;}
+                                25% {background-color: yellow;}
+                                50% {background-color: blue;}
+                                75%  {background-color: green;}
+                                100% {background-color: red;}
+                            }
+
+                            /* The element to apply the animation to */
+                            div.demo3 {
+                                width: 100px;
+                                height: 100px;
+                                background-color: red;                                
+                            }
+                            div.demo3:hover {
+                                animation-name: example;
+                                animation-duration: 4s;
+                            }
+                        </style>
+                        <div class="demo3"></div>
+                        <br>
+
+                        <codeBody>
+                            /* The animation code */
+                            <br>@keyframes example {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>0%   {background-color: red; left:0px; top:0px;}
+                            <br>&nbsp;&nbsp;&nbsp;    25%  {background-color: yellow; left:200px; top:0px;}
+                            <br>&nbsp;&nbsp;&nbsp;    50%  {background-color: blue; left:200px; top:200px;}
+                            <br>&nbsp;&nbsp;&nbsp;    75%  {background-color: green; left:0px; top:200px;}
+                            <br>&nbsp;&nbsp;&nbsp;    100% {background-color: red; left:0px; top:0px;}</spanYellow>
+                            <br>}
+                            <br>
+                            <br>/* The element to apply the animation to */
+                            <br>div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>}
+                            <br>
+                            <br>div:hover {
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Delay an Animation</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <spanRed>animation-delay</spanRed> property specifies a delay for the start of an animation.
+                        <br>The following example has a 2 seconds delay before starting the animation:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    position: relative;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>animation-delay: 2s;</spanYellow>
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Set How Many Times an Animation Should Run</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <spanRed>animation-iteration-count</spanRed> property specifies the number of times an animation should run.
+                        <br>The following example will run the animation 3 times before it stops:
+
+                        <style type="text/css">
+                            /* The animation code */
+                            @keyframes example {
+                                0% {background-color: red;}
+                                100% {background-color: yellow;}
+                            }
+
+                            /* The element to apply the animation to */
+                            div.demo4 {
+                                width: 100px;
+                                height: 100px;
+                                background-color: red;                                
+                            }
+                            div.demo4:hover {
+                                animation-name: example;
+                                animation-duration: 4s;
+                                animation-iteration-count: 3;
+                            }
+                        </style>
+                        <div class="demo4"></div>
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    position: relative;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>animation-iteration-count: 3;</spanYellow>
+                            <br>}
+                        </codeBody>
+                      
+                        <br>The following example uses the value "infinite" to make the animation continue for ever:
+
+                        <style type="text/css">
+                            /* The animation code */
+                            @keyframes example {
+                                0% {background-color: red;}
+                                100% {background-color: yellow;}
+                            }
+
+                            /* The element to apply the animation to */
+                            div.demo5 {
+                                width: 100px;
+                                height: 100px;
+                                background-color: red;                                
+                            }
+                            div.demo5:hover {
+                                animation-name: example;
+                                animation-duration: 4s;
+                                animation-iteration-count: infinite;
+                            }
+                        </style>
+                        <div class="demo5"></div>
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    position: relative;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>animation-iteration-count: infinite;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Run Animation in Reverse Direction or Alternate Cycles</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <spanRed>animation-direction</spanRed> property is used to let an animation run in reverse direction or alternate cycles.
+                        <br>The following example will run the animation in reverse direction:
+                        
+                        <style type="text/css">
+                            /* The animation code */
+                            @keyframes example {
+                                0% {background-color: red;}
+                                100% {background-color: yellow;}
+                            }
+
+                            /* The element to apply the animation to */
+                            div.demo6 {
+                                width: 100px;
+                                height: 100px;
+                                background-color: red;                                
+                            }
+                            div.demo6:hover {
+                                animation-name: example;
+                                animation-duration: 4s;
+                                animation-iteration-count: 3;
+                                animation-direction: reverse;
+                            }
+                        </style>
+                        <div class="demo6"></div>
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    position: relative;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-iteration-count: 3;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>animation-direction: reverse;</spanYellow>
+                            <br>}
+                        </codeBody>
+
+                        <br>The following example uses the value "alternate" to make the animation first run forward, then backward, then forward:
+
+                        <style type="text/css">
+                            /* The animation code */
+                            @keyframes example {
+                                0% {background-color: red;}
+                                100% {background-color: yellow;}
+                            }
+
+                            /* The element to apply the animation to */
+                            div.demo7 {
+                                width: 100px;
+                                height: 100px;
+                                background-color: red;                                
+                            }
+                            div.demo7:hover {
+                                animation-name: example;
+                                animation-duration: 4s;
+                                animation-iteration-count: 3;
+                                animation-direction: alternate;
+                            }
+                        </style>
+                        <div class="demo7"></div>
+                        <br>
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    position: relative;
+                            <br>&nbsp;&nbsp;&nbsp;    background-color: red;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 4s;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-iteration-count: 3;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>animation-direction: alternate;</spanYellow>
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Specify the Speed Curve of the Animation</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The <spanRed>animation-timing-function</spanRed> property specifies the speed curve of the animation.
+                        <br>The animation-timing-function property can have the following values:
+                        <ul>
+                            <li>ease - specifies an animation with a slow start, then fast, then end slowly (this is default)</li>
+                            <li>linear - specifies an animation with the same speed from start to end</li>
+                            <li>ease-in - specifies an animation with a slow start</li>
+                            <li>ease-out - specifies an animation with a slow end</li>
+                            <li>ease-in-out - specifies an animation with a slow start and end</li>
+                            <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</li>
+                        </ul>
+                        The following example shows the some of the different speed curves that can be used:
+
+                        <codeBody>
+                            #div1 {animation-timing-function: linear;}
+                            <br>#div2 {animation-timing-function: ease;}
+                            <br>#div3 {animation-timing-function: ease-in;}
+                            <br>#div4 {animation-timing-function: ease-out;}
+                            <br>#div5 {animation-timing-function: ease-in-out;}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Animation Shorthand Property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The example below uses six of the animation properties:
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    animation-name: example;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-duration: 5s;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-timing-function: linear;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-delay: 2s;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-iteration-count: infinite;
+                            <br>&nbsp;&nbsp;&nbsp;    animation-direction: alternate;
+                            <br>}
+                        </codeBody>
+
+                        <br>The same animation effect as above can be achieved by using the shorthand animation property:
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>animation: example 5s linear 2s infinite alternate;</spanYellow>
+                            
+                            <br>}
+                        </codeBody>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>CSS3 Animation Properties</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The following table lists the @keyframes rule and all the animation properties:
+                        <table class="table table-striped">
+                          <tbody><tr>
+                            <th style="width:28%">Property</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_animation-keyframes.asp">@keyframes</div></td>
+                            <td>Specifies the animation code</td>
+                          </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_animation.asp">animation</div></td>
+                            <td>A shorthand property for setting all the animation properties (except 
+                            animation-play-state and animation-fill-mode)</td>
+                          </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_animation-delay.asp">animation-delay</div></td>
+                            <td>Specifies a delay for the start of an animation</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_animation-direction.asp">animation-direction</div></td>
+                            <td>Specifies whether an animation should play in reverse direction or 
+                            alternate cycles</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_animation-duration.asp">animation-duration</div></td>
+                            <td>Specifies how many seconds or milliseconds an animation takes to 
+                            complete one cycle</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_animation-fill-mode.asp">animation-fill-mode</div></td>
+                            <td>Specifies a style for the element when the animation is 
+                            not playing (when it is finished, or when it has a delay)</td>
+                            </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_animation-iteration-count.asp">animation-iteration-count</div></td>
+                            <td>Specifies the number of times an animation should be played</td>
+                            </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_animation-name.asp">animation-name</div></td>
+                            <td>Specifies the name of the @keyframes animation</td>
+                          </tr>
+                            <tr>
+                            <td><div href="/cssref/css3_pr_animation-play-state.asp">animation-play-state</div></td>
+                            <td>Specifies whether the animation is running or paused</td>
+                            </tr>
+                          <tr>
+                            <td><div href="/cssref/css3_pr_animation-timing-function.asp">animation-timing-function</div></td>
+                            <td>Specifies the speed curve of the animation</td>
+                          </tr>
+                        </tbody></table>
+                      
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->
