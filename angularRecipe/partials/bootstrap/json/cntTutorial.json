@@ -9,7 +9,7 @@
 		{ 
 			"title": "Grid Basic",
 			"sortContent":  "Bootstrap's grid system allows up to 12 columns across the page.",
-			"keyword": "",
+			"keyword": "clearfix",
 			"link": "#bootstrap/gridBasic"
 		},
 		{ 

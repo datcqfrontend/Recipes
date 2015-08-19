@@ -1,4 +1,4 @@
-<div  id="css3Intro" class="css section">
+<div  id="css3BoxSizing" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,169 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>CSS3 Box Sizing</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        The CSS3 box-sizing property allows us to include the padding and border in an element's total width and height.
+
+
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Support</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The numbers in the table specify the first browser version that fully supports the property.
+                        <br>Numbers followed by -webkit- or -moz- specify the first version that worked with a prefix.
+                      
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:20%;font-size:16px;text-align:left;">Property</th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                 
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">box-sizing</td>
+                            <td>8.0</td>
+                            <td>10.0<br>4.0 -webkit-</td>
+                            <td>29.0<br>2.0 -moz-</td>
+                            <td>5.1<br>3.1 -webkit-</td>
+                            <td>9.5</td>
+                          </tr>
+                          </tbody></table>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Without the CSS3 box-sizing Property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        By default, the width and height of an element is calculated like this:
+                        <br>width + padding + border = actual width of an element
+                        <br>height + padding + border = actual height of an element
+                        <br>
+                        <br>This means: When you set the width/height of an element, the element often appear bigger than you have set (because the element's border and padding are added to the element's specified width/height).
+                        <br>The following illustration shows two &lt;div&gt; elements with the same specified width and height:
+                      
+                        <style type="text/css">
+                            #div1{
+                                width: 300px;
+                                height: 100px;
+                                border: 1px solid blue;
+                                box-sizing: content-box;
+
+                            }
+                            #div2{
+                                width: 300px;
+                                height: 100px;
+                                padding: 50px;
+                                border: 1px solid red;
+                                box-sizing: content-box;
+                                
+                            }
+                        </style>
+
+                        <div id="div1">This div is smaller (width is 300px and height is 100px).</div>
+                        <br>
+                        <div id="div2">This div is bigger (width is also 300px and height is 100px).</div>
+
+                        <br>The two &lt;div&gt; elements above end up with different sizes in the result (because div2 has a padding specified):
+
+                        <codeBody>
+                            #div1{
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid blue;
+                            <br>&nbsp;&nbsp;&nbsp;    box-sizing: content-box;
+                            <br>}
+                            <br>#div2{
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>padding: 50px;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid red;
+                            <br>&nbsp;&nbsp;&nbsp;    box-sizing: content-box;                                
+                            <br>}
+                        </codeBody>
+                        <br>So, for a long time web developers have specified a smaller width value than they wanted, because they had to subtract out the padding and borders.
+                        <br>With CSS3, the box-sizing property solves this problem.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>With the CSS3 box-sizing Property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        The CSS3 <spanRed>box-sizing</spanRed> property allows us to include the padding and border in an element's total width and height.
+                        <br>If you set <spanRed>box-sizing: border-box;</spanRed> on an element padding and border are included in the width and height:
+
+                        <style type="text/css">
+                            #div3{
+                                width: 300px;
+                                height: 100px;
+                                border: 1px solid blue;
+                                box-sizing: border-box;
+
+                            }
+                            #div4{
+                                width: 300px;
+                                height: 100px;
+                                padding: 50px;
+                                border: 1px solid red;
+                                box-sizing: border-box;
+                                
+                            }
+                        </style>
+
+                        <div id="div3">This div is smaller (width is 300px and height is 100px).</div>
+                        <br>
+                        <div id="div4">Hooray!</div>
+
+                        <br>Here is the same example as above, with box-sizing: border-box; added to both &lt;div&gt; elements:
+
+                        <codeBody>
+                            #div3{
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid blue;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>box-sizing: border-box;</spanYellow>
+                            <br>}
+                            <br>#div4{
+                            <br>&nbsp;&nbsp;&nbsp;    width: 300px;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 100px;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>padding: 50px;</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid red;
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>box-sizing: border-box;</spanYellow>                                
+                            <br>}
+                        </codeBody>
+
+                        <br>Since the result of using the box-sizing: border-box; is so much better, many developers want all elements on their pages to work this way.
+                        <br>The code below ensures that all elements are sized in this more intuitive way. Many browsers already use box-sizing: border-box; for many form elements (but not all - which is why inputs and textareas look different at width: 100%;).
+                        <br>
+                        <br><spanRed>Applying this to all elements is safe and wise:</spanRed>
+
+                        <codeBody>
+                            <spanYellow>* {
+                            <br>&nbsp;&nbsp;&nbsp;    box-sizing: border-box;
+                            <br>}</spanYellow>
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

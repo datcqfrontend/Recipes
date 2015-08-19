@@ -1,4 +1,4 @@
-<div  id="cssRWDIntro" class="css section">
+<div  id="cssRWDMediaQueries" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,215 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>What is a Media Query?</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        Media query is a CSS technique introduced in CSS3.
+                        <br>It uses the <spanRed>@media</spanRed> rule to include a block of CSS properties only if a certain condition is true.
                       
-                      
+                        <br>If the browser window is smaller than 500px, the background color will change to lightblue:
+                        <codeBody>
+                            <spanYellow>@media only screen and (max-width: 500px) {</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    body {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        background-color: lightblue;
+                            <br>&nbsp;&nbsp;&nbsp;    }
+                            <br>}
+                        </codeBody>
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Add a Breakpoint</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Earlier in this tutorial we made a web page with rows and columns, and it was responsive, but it did not look good on a small screen.
+                        <br>Media queries can help with that. We can add a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.
+
+                        <div class="row">
+                            <div class="col-sm-6" style="text-align:center;">
+                                <img src="media/images/rwd_desktop.png" style="border:2px solid #dddddd;">
+                                <br>
+                                Desktop
+                            </div>
+                            <div class="col-sm-6" style="text-align:center;">
+                                <img src="media/images/rwd_phone.png" style="border:2px solid #dddddd;">
+                                <br>
+                                Phone
+                            </div>
+                        </div>
+
+                        <br>Use a media query to add a breakpoint at 768px. When the screen (browser window) gets smaller than 768px, each column should have a width of 100%:
+
+                        <codeBody>
+                            /* For desktop: */
+                            <br>.col-1 {width: 8.33%;}
+                            <br>.col-2 {width: 16.66%;}
+                            <br>.col-3 {width: 25%;}
+                            <br>.col-4 {width: 33.33%;}
+                            <br>.col-5 {width: 41.66%;}
+                            <br>.col-6 {width: 50%;}
+                            <br>.col-7 {width: 58.33%;}
+                            <br>.col-8 {width: 66.66%;}
+                            <br>.col-9 {width: 75%;}
+                            <br>.col-10 {width: 83.33%;}
+                            <br>.col-11 {width: 91.66%;}
+                            <br>.col-12 {width: 100%;}
+                            <br>
+                            <br><spanYellow>@media only screen and (max-width: 768px) {
+                            <br>&nbsp;&nbsp;&nbsp;    /* For mobile phones: */
+                            <br>&nbsp;&nbsp;&nbsp;    [class*="col-"] {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        width: 100%;
+                            <br>&nbsp;&nbsp;&nbsp;    }
+                            <br>}</spanYellow>
+                        </codeBody>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Always Design for Mobile First</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).
+                        <br>This means that we must make some changes in our CSS.
+                        <br>Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets larger than 768px. This will make our design Mobile First:
+                      
+                        <codeBody>
+                            <spanYellow>/* For mobile phones: */
+                            <br>[class*="col-"] {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100%;
+                            <br>}</spanYellow>
+                            <br>@media only screen and (min-width: 768px) {
+                            <br>&nbsp;&nbsp;&nbsp;    /* For desktop: */
+                            <br>&nbsp;&nbsp;&nbsp;    .col-1 {width: 8.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-2 {width: 16.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-3 {width: 25%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-4 {width: 33.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-5 {width: 41.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-6 {width: 50%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-7 {width: 58.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-8 {width: 66.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-9 {width: 75%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-10 {width: 83.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-11 {width: 91.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-12 {width: 100%;}
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Another Breakpoint</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        You can add as many breakpoints as you like.
+                        <br>We will also insert a breakpoint between tablets and mobile phones.
+
+                        <div class="row">
+                            <div class="col-sm-6" style="text-align:center;">
+                                <img src="media/images/rwd_desktop.png" style="border:2px solid #dddddd;">
+                                <br>
+                                Desktop
+                            </div>
+                            <div class="col-sm-4" style="text-align:center;">
+                                <img src="media/images/rwd_tablet.png" style="border:2px solid #dddddd;">
+                                <br>
+                                Tablet
+                            </div>
+                            <div class="col-sm-2" style="text-align:center;">
+                                <img src="media/images/rwd_phone.png" style="border:2px solid #dddddd;">
+                                <br>
+                                Phone
+                            </div>
+                        </div>
+
+                        We do this by adding one more media query (at 600px), and a set of new classes for devices larger than 600px (but smaller than 768px).
+                        <br><b>Note</b> that the two sets of classes are allmost identical, the only difference is the name (col- and col-m-):
+
+                        <codeBody>
+                            <spanYellow>/* For mobile phones: */</spanYellow>
+                            <br>[class*="col-"] {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100%;
+                            <br>}
+                            <br>@media only screen and (min-width: 600px) {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>/* For tablets: */</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-1 {width: 8.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-2 {width: 16.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-3 {width: 25%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-4 {width: 33.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-5 {width: 41.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-6 {width: 50%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-7 {width: 58.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-8 {width: 66.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-9 {width: 75%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-10 {width: 83.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-11 {width: 91.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-m-12 {width: 100%;}
+                            <br>}
+                            <br>@media only screen and (min-width: 768px) {
+                            <br>&nbsp;&nbsp;&nbsp;    <spanYellow>/* For desktop: */</spanYellow>
+                            <br>&nbsp;&nbsp;&nbsp;    .col-1 {width: 8.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-2 {width: 16.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-3 {width: 25%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-4 {width: 33.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-5 {width: 41.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-6 {width: 50%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-7 {width: 58.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-8 {width: 66.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-9 {width: 75%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-10 {width: 83.33%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-11 {width: 91.66%;}
+                            <br>&nbsp;&nbsp;&nbsp;    .col-12 {width: 100%;}
+                            <br>}
+                        </codeBody>
+
+                        <br>It might seem odd that we have two sets of identical classes, but it gives us the opportunity in HTML, to decide what will happen with the columns at each breakpoint.
+
+                        <br>HTML Example:
+                        <br>For desktop: The first and the third section will both span 3 columns each. The middle section will span 6 columns.
+                        <br>For tablets: The first section will span 3 columns, the second will span 9, and the third column will span 12 columns:
+
+                        <codeBody>
+                            &lt;div class="row"&gt;
+                            <br>&nbsp;&nbsp;&nbsp; &lt;div class="col-3 col-m-3"&gt;...&lt;/div&gt;
+                            <br>&nbsp;&nbsp;&nbsp; &lt;div class="col-6 col-m-9"&gt;...&lt;/div&gt;
+                            <br>&nbsp;&nbsp;&nbsp; &lt;div class="col-3 col-m-12"&gt;...&lt;/div&gt;
+                            &lt;/div&gt;
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Orientation: Portrait / Landscape</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Media queries can also be used to change layout of a page depending on the orientation of the browser.
+                        <br>You can have a set of CSS properties that will only apply when the browser window is wider than its height, a so called "Landscape" orientation:
+                      
+                        <br>The web page will have a lighblue background if the orientation i in landscape mode:
+                        <codeBody>
+                            <spanYellow>@media only screen and (orientation: landscape)</spanYellow> {
+                            <br>&nbsp;&nbsp;&nbsp;    body {
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        background-color: lightblue;
+                            <br>&nbsp;&nbsp;&nbsp;    }
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->

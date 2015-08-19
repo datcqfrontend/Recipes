@@ -1,203 +1,54 @@
 { 
 	"content":[
 		{ 
-			"title": "Get Started",
-			"sortContent":  "What is Bootstrap? Why Use Bootstrap? Where to Get Bootstrap?",
+			"title": "Introduction",
+			"sortContent":  "Responsive web design makes your web page look good on all devices.<br>Responsive web design uses only HTML and CSS.<br>Responsive web design is not a program or a JavaScript.",
 			"keyword": "",
-			"link": "#bootstrap/getStarted"
+			"link": "#cssRWD/intro"
 		},
 		{ 
-			"title": "Grid Basic",
-			"sortContent":  "Bootstrap's grid system allows up to 12 columns across the page.",
+			"title": "Viewport",
+			"sortContent":  "The viewport is the user's visible area of a web page.<br>The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.<br>Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.<br>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.<br>This was not perfect, but a quick fix.",
 			"keyword": "",
-			"link": "#bootstrap/gridBasic"
+			"link": "#cssRWD/viewport"
+		},{ 
+			"title": "Grid View",
+			"sortContent":  "<div class='gridcontainer' style='opacity:0.1;'><div class='gridwrapper' style='height:200px;'><div class='gridcontent' style='width: 8.33%;margin: 0;border-left: 3px solid red;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div><div class='gridcontent' style='width: 8.33%;margin: 0;border-right: 3px solid red;height: 100%;float: left;background-color: #f1f1f1;'></div></div></div>",
+			"keyword": "grid view, gridview",
+			"link": "#cssRWD/gridView"
 		},
-		{ 
-			"title": "Text/Typography",
-			"sortContent":  "In this chapter, we will look at some HTML elements that will be styled a little bit different by Bootstrap than browser defaults.",
-			"keyword": "",
-			"link": "#bootstrap/typography"
-		},							
+		
 		{ 	"title": "Clearfix"	},
 
 		{ 
-			"title": "Glyphicons",
-			"sortContent":  "Bootstrap provides 200 glyphicons from the Glyphicons Halflings set. Glyphicons can be used in text, buttons, toolbars, navigation, forms, etc.",
+			"title": "Media Queries",
+			"sortContent":  "Media query is a CSS technique introduced in CSS3.<br>It uses the @media rule to include a block of CSS properties only if a certain condition is true.",
 			"keyword": "",
-			"link": "#bootstrap/glyphicons"
+			"link": "#cssRWD/mediaQueries"
 		},
-		{ 
-			"title": "Badges/Labels",
-			"sortContent":  "Badges are numerical indicators of how many items are associated with a link:<br><a href=''>News <span class='badge'>5</span></a> <a href=''>Comments <span class='badge'>10</span></a> <a href=''>Updates <span class='badge'>2</span></a>",
-			"keyword": "",
-			"link": "#bootstrap/badgesLabel"
-		},
-		{ 
-			"title": "Tables",
-			"sortContent":  "A basic Bootstrap table has a light padding and only horizontal dividers. The <span class='code-span'>.table</span> class adds basic styling to a table.",
-			"keyword": "",
-			"link": "#bootstrap/tableBasic"
-		},							
-		{ 	"title": "Clearfix"	},
-
 		{ 
 			"title": "Images",
-			"sortContent":  "<img src='media/images/bs.png' class='img-rounded' alt='Bootstrap' width='60' height='60'> <img src='media/images/bs.png' class='img-circle' alt='Bootstrap' width='60' height='60'> <img src='media/images/bs.png' class='img-thumbnail' alt='Bootstrap' width='60' height='60'>",
+			"sortContent":  "How to responsive images ?",
+			"keyword": "picture",
+			"link": "#cssRWD/images"
+		},{ 
+			"title": "Videos",
+			"sortContent":  "How to responsive videos ?",
 			"keyword": "",
-			"link": "#bootstrap/images"
+			"link": "#cssRWD/videos"
 		},
-		{ 
-			"title": "Jumbotron",
-			"sortContent":  "A jumbotron indicates a big box for calling extra attention to some special content or information. A jumbotron is displayed as a grey box with rounded corners.",
-			"keyword": "",
-			"link": "#bootstrap/jumbotron"
-		},
-		{ 
-			"title": "Wells",
-			"sortContent":  "The <span class='code-span'>.well</span> class adds a rounded border around an element with a gray background color and some padding. Change size of the well:<span class='code-span'>.well-sm</span> (small), <span class='code-span'>.well-lg</span> (large).",
-			"keyword": "",
-			"link": "#bootstrap/wells"
-		},							
+		
 		{ 	"title": "Clearfix"	},
 
 		{ 
-			"title": "Alerts",
-			"sortContent":  "Alerts are created with the .alert class, followed by one of the four contextual classes <span class='code-span'>.alert-success, .alert-info, .alert-warning or .alert-danger",
+			"title": "Frameworks",
+			"sortContent":  "There are many existing CSS Frameworks that offers Responsive Design.<br>They are free, and easy to use.<ul><li>W3.CSS</li><li>Bootstrap</li><li>Skeleton</li></ul>",
 			"keyword": "",
-			"link": "#bootstrap/alerts"
+			"link": "#cssRWD/frameworks"
 		},
-		{ 
-			"title": "Panels",
-			"sortContent":  "A panel in bootstrap is a bordered box with some padding around its content. Panels are created with the <span class='code-span'>.panel</span> class, and content inside the panel has a <span class='code-span'>.panel-body</span> class.",
-			"keyword": "",
-			"link": "#bootstrap/panels"
-		},
-		{ 
-			"title": "Buttons",
-			"sortContent":  "Bootstrap provides seven styles of buttons: <br><button type='button' class='btn btn-default'>Default</button> <button type='button' class='btn btn-primary'>Primary</button> <button type='button' class='btn btn-success'>Success</button> <button type='button' class='btn btn-info'>Info</button> <br><button type='button' class='btn btn-warning'>Warning</button> <button type='button' class='btn btn-danger'>Danger</button> <button type='button' class='btn btn-link'>Link</button>",
-			"keyword": "",
-			"link": "#bootstrap/buttons"
-		},							
-		{ 	"title": "Clearfix"	},
-
-		{ 
-			"title": "Button Groups",
-			"sortContent":  "Bootstrap allows you to group a series of buttons together (on a single line) in a button group:<br> <div class='btn-group'> <button type='button' class='btn btn-primary'>Apple</button> <button type='button' class='btn btn-primary'>Samsung</button> <button type='button' class='btn btn-primary'>Sony</button> </div>",
-			"keyword": "",
-			"link": "#bootstrap/buttonGroups"
-		},
-		{ 
-			"title": "Progress Bars",
-			"sortContent":  "A progress bar can be used to show a user how far along he/she is in a process. <div class='progress'> <div class='progress-bar' role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100' style='width:70%'> <span class='sr-only'>70% Complete</span> </div> </div>",
-			"keyword": "",
-			"link": "#bootstrap/progressBars"
-		},
-		{ 
-			"title": "Pagination",
-			"sortContent":  "If you have a web site with lots of pages, you may wish to add some sort of pagination to each page. <ul class='pagination'> <li><a href='#'>1</a></li> <li><a href='#'>2</a></li> <li><a href='#'>3</a></li> <li><a href='#'>4</a></li> <li><a href='#'>5</a></li> </ul>",
-			"keyword": "",
-			"link": "#bootstrap/pagination"
-		},							
-		{ 	"title": "Clearfix"	},
-
-		{ 
-			"title": "Pager",
-			"sortContent":  "Pager is also a form of pagination but it provides previous and next buttons (links). <ul class='pager' style='margin:10px 0;'> <li class='deactive'><a href='#'>Previous</a></li> <li class='deactive'><a href='#'>Next</a></li> </ul>",
-			"keyword": "",
-			"link": "#bootstrap/pager"
-		},
-		{ 
-			"title": "List Groups",
-			"sortContent":  "<ul class='list-group' style='margin-bottom:0;'> <li class='list-group-item' style='padding:3px 15px;'>First item</li> <li class='list-group-item' style='padding:3px 15px;'>Second item</li> <li class='list-group-item' style='padding:3px 15px;'>Third item</li> </ul>",
-			"keyword": "",
-			"link": "#bootstrap/listGroups"
-		},
-		{ 
-			"title": "Dropdowns",
-			"sortContent":  "A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list: <div class='dropdown'> <button class='btn btn-primary dropdown-toggle' type='button' data-toggle='dropdown'>Dropdown Example <span class='caret'></span></button> <ul class='dropdown-menu'> <li><a href='#'>HTML</a></li> <li><a href='#'>CSS</a></li> <li><a href='#'>JavaScript</a></li> </ul> </div>",
-			"keyword": "",
-			"link": "#bootstrap/dropdowns"
-		},							
-		{ 	"title": "Clearfix"	},
-
-		{ 
-			"title": "Tabs / Pills",
-			"sortContent":  "<ul class='nav nav-tabs'> <li class='active'><a href='#'>Home</a></li> <li class='dropdown'> <a class='dropdown-toggle' data-toggle='dropdown' href='#'>Menu 1 <span class='caret'></span></a> <ul class='dropdown-menu'> <li><a href='#'>Submenu 1-1</a></li> <li><a href='#'>Submenu 1-2</a></li> <li><a href='#'>Submenu 1-3</a></li> </ul> </li> <li><a href='#'>Menu 2</a></li> <li><a href='#'>Menu 3</a></li> </ul> <br> <ul class='nav nav-pills'> <li class='active'><a href='#'>Home</a></li> <li><a href='#'>Menu 1</a></li> <li><a href='#'>Menu 2</a></li> <li><a href='#'>Menu 3</a></li> </ul>",
-			"keyword": "",
-			"link": "#bootstrap/tabsPills"
-		},
-		{ 
-			"title": "Navbar",
-			"sortContent":  "<nav class='navbar navbar-default'> <div class='container-fluid'> <div class='navbar-header'> <a class='navbar-brand' href='#'>WebSiteName</a> </div> <div> <ul class='nav navbar-nav'> <li class='active'><a href='#'>Home</a></li> <li><a href='#'>Page 1</a></li> <li><a href='#'>Page 2</a></li> <li><a href='#'>Page 3</a></li> </ul> </div> </div> </nav>",								
-			"keyword": "",
-			"link": "#bootstrap/navbar"
-		},
-		{ 
-			"title": "Scrollspy",
-			"sortContent":  "The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.",
-			"keyword": "",
-			"link": "#bootstrap/scrollspy"
-		},							
-		{ 	"title": "Clearfix"	},
-
-		{ 
-			"title": "Forms",
-			"sortContent":  "Form controls automatically receive some global styling with Bootstrap: All textual <span class='code-span'>&lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt;</span> elements with class <span class='code-span'>.form-control</span> have a width of 100%.",
-			"keyword": "",
-			"link": "#bootstrap/forms"
-		},
-		{ 
-			"title": "Inputs",
-			"sortContent":  "Bootstrap supports all the HTML5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.",
-			"keyword": "",
-			"link": "#bootstrap/inputs"
-		},
-		{ 
-			"title": "Inputs 2",
-			"sortContent":  "If you need to insert plain text next to a form label within a horizontal form, use the <span class='code-span'>.form-control-static</span> class on a <span class='code-span'>&lt;p&gt;</span> element.",
-			"keyword": "",
-			"link": "#bootstrap/inputs2"
-		},							
-		{ 	"title": "Clearfix"	},
-
-		{ 
-			"title": "Input Sizing",
-			"sortContent":  "Set the heights of input elements using classes like <span class='code-span'>.input-lg and .input-sm</span>. Set the widths of elements using grid column classes like <span class='code-span'>.col-lg-*and .col-sm-*</span>.",
-			"keyword": "",
-			"link": "#bootstrap/inputSizing"
-		},
-		{ 
-			"title": "Carousel",
-			"sortContent":  "The Carousel plugin is a component for cycling through elements, like a carousel (slideshow).",
-			"keyword": "",
-			"link": "#bootstrap/carousel"
-		},
-		{ 
-			"title": "Modal",
-			"sortContent":  "The Modal plugin is a dialog box/popup window that is displayed on top of the current page: <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>Open Modal</button> <div id='myModal' class='modal fade' role='dialog'> <div class='modal-dialog'> <div class='modal-content'> <div class='modal-header'> <button type='button' class='close' data-dismiss='modal'>&times;</button> <h4 class='modal-title'>Modal Header</h4> </div> <div class='modal-body'> <p>Some text in the modal.</p> </div> <div class='modal-footer'> <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button> </div> </div> </div> </div>",
-			"keyword": "",
-			"link": "#bootstrap/modal"
-		},							
-		{ 	"title": "Clearfix"	},
-
-		{ 
-			"title": "Tooltip",
-			"sortContent":  "The Tooltip plugin is small pop-up box that appears when the user moves the mouse pointer over an element:<br> <button style='margin:7px 15px 17px 0;' type='button' class='btn btn-success' data-toggle='tooltip' data-placement='bottom' title='' data-original-title='Hooray!'>Hover over me</button> <a href='javascript:void(0);' data-toggle='tooltip' data-placement='right' title='' data-original-title='Hooray!'>Hover over me</a>",
-			"keyword": "",
-			"link": "#bootstrap/tooltip"
-		},
-		{ 
-			"title": "Popover",
-			"sortContent":  "The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content.<br> <button style='margin:7px 15px 17px 0;' type='button' data-placement='bottom' class='btn btn-md btn-success' data-toggle='popover' title='' data-content='Some content inside the popover' data-original-title='Popover Header'>Click To Toggle Popover</button> <a href='javascript:void(0);' data-toggle='popover' data-placement='right' title='' data-content='Some content inside the popover' data-original-title='Popover Header'>Click To Toggle Popover</a>",
-			"keyword": "",
-			"link": "#bootstrap/popover"
-		},
-		{ 
-			"title": "Collapse (collapse.js)",
-			"sortContent":  "Get base styles and flexible support for collapsible components like accordions and navigation. Plugin dependency: Collapse requires the transitions plugin to be included in your version of Bootstrap.",
-			"keyword": "",
-			"link": "#bootstrap/collapse"
-		},							
+				
 		{ 	"title": "Clearfix"	}
+
+		
 	]
 }

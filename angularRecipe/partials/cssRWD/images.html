@@ -1,4 +1,4 @@
-<div  id="cssRWDIntro" class="css section">
+<div  id="cssRWDImages" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,16 +6,175 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Using The width Property</h3> </div>
                   <div class="panel-body">  
                     <p>
+                        If the <spanRed>width</spanRed> property is set to 100%, the image will be responsive and scale up and down:
                       
-                      
+                        <codeBody>
+                            img {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100%;
+                            <br>&nbsp;&nbsp;&nbsp;    height: auto;
+                            <br>}
+                        </codeBody>
+                        <br>Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the <spanRed>max-width</spanRed> property instead.
                     </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Using The max-width Property</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        If the <spanRed>max-width</spanRed> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:
+                         <codeBody>
+                            img {
+                            <br>&nbsp;&nbsp;&nbsp;    max-width: 100%;
+                            <br>&nbsp;&nbsp;&nbsp;    height: auto;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Background Images</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Background images can also respond to resizing and scaling.
+                        <br>Here we will show three different methods:
+
+                        <br>1. If the <spanRed>background-size property is set to "contain"</spanRed>, the background image will scale, and try to fit the content area. However, the image will keep its aspect ratio (the proportional relationship between the image's width and height):
+
+                         <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100%;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 400px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url('img_flowers.jpg');
+                            <br>&nbsp;&nbsp;&nbsp;    background-repeat: no-repeat;
+                            <br>&nbsp;&nbsp;&nbsp;    background-size: contain;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid red;
+                            <br>}
+                        </codeBody>
+                      
+                        <br>2. If the <spanRed>background-size property is set to "100% 100%"</spanRed>, the background image will stretch to cover the entire content area:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100%;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 400px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url('img_flowers.jpg');
+                            <br>&nbsp;&nbsp;&nbsp;    background-size: 100% 100%;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid red;
+                            <br>}
+                        </codeBody>
+
+                        <br>3. If the <spanRed>background-size property is set to "cover"</spanRed>, the background image will scale to cover the entire content area. Notice that the "cover" value keeps the aspect ratio, and some part of the background image may be clipped:
+
+                        <codeBody>
+                            div {
+                            <br>&nbsp;&nbsp;&nbsp;    width: 100%;
+                            <br>&nbsp;&nbsp;&nbsp;    height: 400px;
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url('img_flowers.jpg');
+                            <br>&nbsp;&nbsp;&nbsp;    background-size: cover;
+                            <br>&nbsp;&nbsp;&nbsp;    border: 1px solid red;
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Different Images for Different Devices</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        A large image can be perfect on a big computer screen, but useless on a small device. Why load a large image when you have to scale it down anyway? To reduce the load, or for any other reasons, you can use media queries to display different images on different devices.
+                        <br>Here is one large image and one smaller image that will be dispalyed on different devices:
+                      
+                        <codeBody>
+                            /* For width smaller than 400px: */
+                            <br>body {
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url('img_smallflower.jpg'); 
+                            <br>}
+                            <br>
+                            <br>/* For width 400px and larger: */
+                            <br>@media only screen and (min-width: 400px) {
+                            <br>&nbsp;&nbsp;&nbsp;    body { 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        background-image: url('img_flowers.jpg'); 
+                            <br>&nbsp;&nbsp;&nbsp;    }
+                            <br>}
+                        </codeBody>
+
+                        <br>You can use the media query <spanRed>min-device-width</spanRed>, instead of <spanRed>min-width</spanRed>, which checks the device width, instead of the browser width. Then the image will not change when you resize the browser window:
+
+                        <codeBody>
+                            /* For width smaller than 400px: */
+                            <br>body {
+                            <br>&nbsp;&nbsp;&nbsp;    background-image: url('img_smallflower.jpg'); 
+                            <br>}
+                            <br>
+                            <br>/* For width 400px and larger: */
+                            <br>@media only screen and (min-device-width: 400px) {
+                            <br>&nbsp;&nbsp;&nbsp;    body { 
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        background-image: url('img_flowers.jpg'); 
+                            <br>&nbsp;&nbsp;&nbsp;    }
+                            <br>}
+                        </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>HTML5 &lt;picture&gt; Element</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 introduced the <spanRed>&lt;picture&gt;</spanRed> element, which lets you define more than one image.
+                      
+                        <br>Browser Support
+                        <table class="table table-bordered">
+                          <tbody><tr>
+                            <th style="width:15%;font-size:16px;text-align:left;">Element</th>
+                            <th style="width:16%;" class="bsChrome" title="Chrome"><img src="media/images/compatible_chrome.gif" title="Chrome" alt="Chrome" ></th>
+                            <th style="width:16%;" class="bsIE" title="Internet Explorer"><img src="media/images/compatible_ie.gif" title="Internet Explorer" alt="Internet Explorer" ></th>
+                            <th style="width:16%;" class="bsFirefox" title="Firefox"><img src="media/images/compatible_firefox.gif" title="Firefox" alt="Firefox"></th>
+                            <th style="width:16%;" class="bsSafari" title="Safari"><img src="media/images/compatible_safari.gif" title="Safari" alt="Safari"></th>
+                            <th style="width:16%;" class="bsOpera" title="Opera"><img src="media/images/compatible_opera.gif" title="Opera" alt="Opera"></th>                
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;">&lt;picture&gt;</td>
+                            <td><span class="deprecated">Not supported</span></td>
+                            <td>38.0</td>
+                            <td>38.0</td>
+                            <td><span class="deprecated">Not supported</span></td>
+                            <td>25.0</td>
+                          </tr>
+                          </tbody></table>
+
+                        The <spanRed>&lt;picture&gt;</spanRed> element works similar to the <spanRed>&lt;video&gt;</spanRed> and <spanRed>&lt;audio&gt;</spanRed> elements. You set up different sources, and the first source that fits the preferences is the one being used:
+
+                        <codeBody>  
+                            &lt;picture&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;source srcset="img_smallflower.jpg" media="(max-width: 400px)"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;source srcset="img_flowers.jpg"&gt;
+                            <br>&nbsp;&nbsp;&nbsp;  &lt;img src="img_flowers.jpg" alt="Flowers"&gt;
+                            <br>&lt;/picture&gt;
+                        </codeBody>
+
+                        <br>The <spanRed>&lt;srcset&gt;</spanRed> attribute is required, and defines the source of the image.
+                        <br>The <spanRed>&lt;media&gt;</spanRed> attribute is optional, and accepts the media queries you find in CSS @media rule.
+                        <br>You should also define an <spanRed>&lt;img&gt;</spanRed> element for browsers that do not support the <spanRed>&lt;picture&gt;</spanRed> element.
+                    </p>
+                  </div>
+                </div>
+            </div> 
             
 
         </div>       

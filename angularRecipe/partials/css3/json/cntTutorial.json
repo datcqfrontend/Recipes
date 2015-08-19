@@ -88,13 +88,13 @@
 		},
 		{ 
 			"title": "Multiple Columns",
-			"sortContent":  "",
+			"sortContent":  "The CSS3 multi-column layout allows easy definition of multiple columns of text - just like in newspapers.",
 			"keyword": "",
 			"link": "#css3/multipleColumns"
 		},
 		{ 
 			"title": "User Interface",
-			"sortContent":  "",
+			"sortContent":  "CSS3 has new user interface features such as resizing elements, outlines, and box sizing.<br>In this chapter you  learn about the following user interface properties:<ul><li><code>resize</code></li><li><code>outline-offset</code></li>a</ul>",
 			"keyword": "",
 			"link": "#css3/userInterface"
 		},						
@@ -102,7 +102,7 @@
 
 		{
 			"title": "Box Sizing",
-			"sortContent":  "",
+			"sortContent":  "The CSS3 box-sizing property allows us to include the padding and border in an element's total width and height.",
 			"keyword": "",
 			"link": "#css3/boxSizing"
 		},	

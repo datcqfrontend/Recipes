@@ -1,4 +1,4 @@
-<div  id="cssRWDIntro" class="css section">
+<div  id="cssRWDViewport" class="css section">
 
     <div class="container">
         <div ng-include='"templates/jumbotron-topic.html"'></div>
@@ -6,17 +6,55 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>What is The Viewport?</h3> </div>
                   <div class="panel-body">  
                     <p>
-                      
+                        The viewport is the user's visible area of a web page.
+                        <br>The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+                        <br>Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.
+                        <br><spanRed>Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</spanRed>
+                        <br>This was not perfect, but a quick fix.
                       
                     </p>
                   </div>
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Setting The Viewport</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        HTML5 introduced a method to let web designers take control over the viewport, through the &lt;meta&gt; tag.
+                        <br>You should include the following &lt;meta&gt; tag in all your web pages:
+
+                        <codeBody>
+                            <spanYellow>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</spanYellow>
+                        </codeBody>
+                      
+                        <br>The <spanRed>width=device-width</spanRed> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+                        <br>The <spanRed>initial-scale=1.0</spanRed> part sets the initial zoom level when the page is first loaded by the browser.
+
+                        <br>Here is an example of a web page without the viewport meta tag, and the same web page with the viewport meta tag:
+
+                        <div class="col-md-6" style="text-align:center;">
+                            <img src="media/images/img_viewport1.png" class="viewport"><br><br><b>Without the 
+                              viewport meta tag</b>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-md-6" style="text-align:center;">
+                            <img src="media/images/img_viewport2.png" class="viewport"><br><br><b>With the 
+                              viewport meta tag</b>
+                            <br>
+                            <br>
+                        </div>
+
+                    </p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->
