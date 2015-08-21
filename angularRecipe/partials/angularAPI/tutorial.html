@@ -1,0 +1,57 @@
+<div  id="angTutorial" class="ang section">
+
+    <div class="container">
+        <div class="jumbotron jumbotron-page">
+            <h1 class="hidden-xs">AngularJS API Docs</h1>
+            <div class="row">
+                <div class="col-xs-12 col-md-3" style="text-align:center"><img src="media/images/angular.png" class="img-responsive" alt="Angular" style="max-width:100%;height:auto; margin-left: auto; margin-right: auto;"></div>
+                <div class="col-xs-12 visible-xs" style="height: 15px;"></div>
+                <div class="col-xs-12 col-md-9">
+                    <p>
+                        Welcome to the AngularJS API docs page. 
+                        <br>
+                        <br>The documentation is organized into modules which contain various components of an AngularJS application. These components are <spanYellow>directives, services, filters, providers, templates, global APIs, and testing mocks</spanYellow>.
+                        <br>
+                        <br><spanYellow><strong>Angular Prefixes <code><span class="pln">$</span></code> and <code><span class="pln">$$</span></code></strong>:</spanYellow> To prevent accidental name collisions with your code, Angular prefixes names of public objects with <code><span class="pln">$</span></code> and names of private objects with <code><span class="pln">$$</span></code>. Please do not use the <code><span class="pln">$</span></code> or <code><span class="pln">$$</span></code> prefix in your code.
+                    </p>
+                </div>
+            </div>            
+        </div>
+
+        <div class="row" >
+            <div class="col-sm-12">
+                 <p class="pull-right"><label for="search">Search: &nbsp; </label><input id="search" type="text" ng-model="$filterTutorial"></p>
+            </div>
+        </div>
+
+        <div class="row" ng-controller="TutorialCtrl">
+            <div ng-class="{'col-sm-4': tut.type==undefined, 'col-sm-12 hidden-xs': tut.type=='header' || tut.type=='subheader' || tut.type=='clearfix'}" ng-repeat="tut in tutorials | filter: $filterTutorial">
+                
+                <div ng-if="tut.type=='header'">
+                    <h3 >{{tut.title}}</h3>
+                    <p ng-bind-html="decodeText(tut.sortContent)"></p>
+                    <hr>
+                </div>
+
+                <div ng-if="tut.type=='subheader'">
+                    <h3 >{{tut.title}}</h3>
+                    <p ng-bind-html="decodeText(tut.sortContent)"></p>                    
+                </div>
+                
+
+                <div ng-if="tut.type==undefined">                    
+                    <h3 style="overflow:hidden;text-overflow: ellipsis;">{{tut.title}}</h3>
+                    <p ng-bind-html="decodeText(tut.sortContent)"></p> 
+                    <a href="{{tut.link}}" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
+                </div>
+            </div>
+        </div>       
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+
+

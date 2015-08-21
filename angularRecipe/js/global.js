@@ -79,6 +79,8 @@ function activeNavBar(){
 		$('.navbar li#group-css').addClass(fw.currentGroupName+' active');
 	}else if(fw.currentGroupName=='javascript' || fw.currentGroupName=='jquery'){
 		$('.navbar li#group-js').addClass(fw.currentGroupName+' active');
+	}else if(fw.currentGroupName=='angular' || fw.currentGroupName=='angularAPI'){
+		$('.navbar li#group-angular').addClass(fw.currentGroupName+' active');
 	}else if(fw.currentGroupName=='requirejs' || fw.currentGroupName=='gruntjs'){
 		$('.navbar li#group-more').addClass(fw.currentGroupName+' active');
 	}

@@ -260,6 +260,14 @@ var fw = {
 					
 				],
 
+				"angularAPI":[
+					{"page":"tutorial"},
+
+					{"page":"lowercase", "topic":"angular.lowercase", "breadcrumb":"angular.lowercase"  },
+					{"page":"uppercase", "topic":"angular.uppercase", "breadcrumb":"angular.uppercase"  },
+					{"page":"forEach", "topic":"angular.forEach", "breadcrumb":"angular.forEach"  }
+				],
+
 				"requirejs":[
 					{"page":"tutorial"  },
 					{"page":"start", "topic":"Start", "breadcrumb":"Start"  },
