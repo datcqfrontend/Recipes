@@ -265,7 +265,11 @@ var fw = {
 
 					{"page":"lowercase", "topic":"angular.lowercase", "breadcrumb":"angular.lowercase"  },
 					{"page":"uppercase", "topic":"angular.uppercase", "breadcrumb":"angular.uppercase"  },
-					{"page":"forEach", "topic":"angular.forEach", "breadcrumb":"angular.forEach"  }
+					{"page":"forEach", "topic":"angular.forEach", "breadcrumb":"angular.forEach"  },
+
+					{"page":"extend", "topic":"angular.extend", "breadcrumb":"angular.extend"  },
+					{"page":"merge", "topic":"angular.merge", "breadcrumb":"angular.merge"  },
+					{"page":"noop", "topic":"angular.noop", "breadcrumb":"angular.noop"  }
 				],
 
 				"requirejs":[
