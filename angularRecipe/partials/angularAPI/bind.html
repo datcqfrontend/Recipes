@@ -6,9 +6,10 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>angular.bind</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>Returns a function which calls function <code><span class="pln">fn</span></code> bound to <code><span class="kwd">self</span></code> (<code><span class="kwd">self</span></code> becomes the <code><span class="kwd">this</span></code> for
+                    <code><span class="pln">fn</span></code>). You can supply optional <code><span class="pln">args</span></code> that are prebound to the function. This feature is also known as partial application, as distinguished from function currying.</p>
                   </div>
                 </div>
             </div> 
@@ -17,7 +18,11 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Usage</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <codeBody>
+                          angular.bind(self, fn, args);
+                      </codeBody>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -26,7 +31,68 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Arguments</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Param</th>
+                            <th>Type</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>
+                              self
+                              
+                              
+                            </td>
+                            <td>
+                              Object
+                            </td>
+                            <td>
+                              <p>Context which <code><span class="pln">fn</span></code> should be evaluated in.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              fn
+                              
+                              
+                            </td>
+                            <td>
+                              function()
+                            </td>
+                            <td>
+                              <p>Function to be bound.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              args
+                              
+                              
+                            </td>
+                            <td>
+                              *
+                            </td>
+                            <td>
+                              <p>Optional arguments to be prebound to the <code><span class="pln">fn</span></code> function call.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -35,7 +101,15 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Returns</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <tbody><tr>
+                          <td>function()</td>
+                          <td><p>Function that wraps the <code><span class="pln">fn</span></code> with all the specified bindings.</p>
+                      </td>
+                        </tr>
+                      </tbody></table>
+                    </p>
                   </div>
                 </div>
             </div> 

@@ -6,9 +6,25 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>angular.equals</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>Determines if two objects or two values are equivalent. Supports value types, regular expressions, arrays and objects.</p>
+
+                    <p>Two objects or values are considered equivalent if at least one of the following is true:</p>
+                    <ul>
+                      <li>Both objects or values pass <code><span class="pun">===</span></code> comparison.</li>
+                      <li>Both objects or values are of the same type and all of their properties are equal by
+                      comparing them with <code><span class="pln">angular</span><span class="pun">.</span><span class="pln">equals</span></code>.</li>
+                      <li>Both values are NaN. (In JavaScript, NaN == NaN =&gt; false. But we consider two NaN as equal)</li>
+                      <li>Both values represent the same regular expression (In JavaScript,
+                      /abc/ == /abc/ =&gt; false. But we consider two regular expressions as equal when their textual
+                      representation matches).</li>
+                    </ul>
+
+                    <p>During a property comparison, properties of <code><span class="kwd">function</span></code> type and properties with names that begin with <code><span class="pln">$</span></code> are ignored.</p>
+
+                    <p>Scope and DOMWindow objects are being compared only by identify (<code><span class="pun">===</span></code>).</p>
+
                   </div>
                 </div>
             </div> 
@@ -17,7 +33,12 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Usage</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <codeBody>
+                        angular.equals(o1, o2);
+                      </codeBody>
+
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -26,7 +47,52 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Arguments</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Param</th>
+                            <th>Type</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>
+                              o1
+                              
+                              
+                            </td>
+                            <td>
+                              *
+                            </td>
+                            <td>
+                              <p>Object or value to compare.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              o2
+                              
+                              
+                            </td>
+                            <td>
+                              *
+                            </td>
+                            <td>
+                              <p>Object or value to compare.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -35,7 +101,15 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Returns</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <tbody><tr>
+                          <td>boolean</td>
+                          <td><p>True if arguments are equal.</p>
+                      </td>
+                        </tr>
+                      </tbody></table>
+                    </p>
                   </div>
                 </div>
             </div> 

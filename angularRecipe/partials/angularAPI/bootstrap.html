@@ -6,9 +6,37 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>angular.bootstrap</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      Use this function to manually start up angular application.
+                    </p>
+
+                    <p>Note that Protractor based end-to-end tests cannot use this function to bootstrap manually.They must use ngApp.</p>
+
+                    <p>Angular will detect if it has been loaded into the browser more than once and only allow the
+                    first loaded script to be bootstrapped and will report a warning to the browser console for each of the subsequent scripts. This prevents strange results in applications, where otherwise multiple instances of Angular try to work on the DOM.</p>
+
+                    <codeBody>
+                      &lt;!doctype html&gt;
+                      <br>&lt;html&gt;
+                      <br>&lt;body&gt;
+                      <br>&lt;div ng-controller="WelcomeController"&gt;
+                      <br>&nbsp;&nbsp;&nbsp;  {{greeting}}
+                      <br>&lt;/div&gt;
+                      <br>
+                      <br>&lt;script src="angular.js"&gt;&lt;/script&gt;
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;  var app = angular.module('demo', [])
+                      <br>&nbsp;&nbsp;&nbsp;  .controller('WelcomeController', function($scope) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      $scope.greeting = 'Welcome!';
+                      <br>&nbsp;&nbsp;&nbsp;  });
+                      <br>&nbsp;&nbsp;&nbsp;  angular.bootstrap(document, ['demo']);
+                      <br>&lt;/script&gt;
+                      <br>&lt;/body&gt;
+                      <br>&lt;/html&gt;
+                    </codeBody>
+
                   </div>
                 </div>
             </div> 
@@ -17,7 +45,9 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Usage</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <codeBody>angular.bootstrap(element, [modules], [config]);</codeBody>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -26,7 +56,76 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Arguments</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="variables-matrix input-arguments">
+                        <thead>
+                          <tr>
+                            <th>Param</th>
+                            <th>Type</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>
+                              element
+                              
+                              
+                            </td>
+                            <td>
+                              DOMElement
+                            </td>
+                            <td>
+                              <p>DOM element which is the root of angular application.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              modules
+                              
+                              <div><em>(optional)</em></div>
+                            </td>
+                            <td>
+                              Array&lt;String|Function|Array&gt;=
+                            </td>
+                            <td>
+                              <p>an array of modules to load into the application.
+                          Each item in the array should be the name of a predefined module or a (DI annotated)
+                          function that will be invoked by the injector as a <code><span class="pln">config</span></code> block.
+                          See: modules</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              config
+                              
+                              <div><em>(optional)</em></div>
+                            </td>
+                            <td>
+                              Object
+                            </td>
+                            <td>
+                              <p>an object for defining configuration options for the application. The
+                          following keys are supported:</p>
+                      <ul>
+                      <li><code><span class="pln">strictDi</span></code> - disable automatic function annotation for the application. This is meant to
+                      assist in finding bugs which break minified code. Defaults to <code><span class="kwd">false</span></code>.</li>
+                      </ul>
+
+                              
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -35,7 +134,15 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Returns</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <tbody><tr>
+                          <td>auto.$injector</td>
+                          <td><p>Returns the newly created injector for this app.</p>
+                      </td>
+                        </tr>
+                      </tbody></table>
+                    </p>
                   </div>
                 </div>
             </div> 

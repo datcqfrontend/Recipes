@@ -6,9 +6,9 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>angular.injector</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>Creates an injector object that can be used for retrieving services as well as for dependency injection (see dependency injection).</p>
                   </div>
                 </div>
             </div> 
@@ -17,7 +17,12 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Usage</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <codeBody>
+                        angular.injector(modules, [strictDi]);
+                      </codeBody>
+
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -26,7 +31,54 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Arguments</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Param</th>
+                            <th>Type</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>
+                              modules
+                              
+                              
+                            </td>
+                            <td>
+                              Array.&lt;string|Function&gt;
+                            </td>
+                            <td>
+                              <p>A list of module functions or their aliases. See
+                          <code><span class="pln">angular</span><span class="pun">.</span><span class="kwd">module</span></code>. The <code><span class="pln">ng</span></code> module must be explicitly added.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              strictDi
+                              
+                              <div><em>(optional)</em></div>
+                            </td>
+                            <td>
+                              <a href="" class="label type-hint type-hint-boolean">boolean</a>
+                            </td>
+                            <td>
+                              <p>Whether the injector should be in strict mode, which
+                          disallows argument name annotation inference.</p>
+
+                              <p><em>(default: false)</em></p>
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -35,11 +87,53 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Returns</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <tbody><tr>
+                          <td>injector</td>
+                          <td><p>Injector object. See $injector.</p>
+                      </td>
+                        </tr>
+                      </tbody></table>
+                    </p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Example</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                      Typical usage
+                      <codeBody>
+                        // create an injector
+                        <br>var $injector = angular.injector(['ng']);
+                        <br>
+                        <br>// use the injector to kick off your application
+                        <br>// use the type inference to auto inject arguments, or use implicit injection
+                        <br>$injector.invoke(function($rootScope, $compile, $document) {
+                        <br>&nbsp;&nbsp;&nbsp;  $compile($document)($rootScope);
+                        <br>&nbsp;&nbsp;&nbsp;  $rootScope.$digest();
+                        <br>});
+                      </codeBody>
+                      <br>Sometimes you want to get access to the injector of a currently running Angular app from outside Angular. Perhaps, you want to inject and compile some markup after the application has been bootstrapped. You can do this using the extra injector() added to JQuery/jqLite elements. See angular.element.
+                      <br>This is fairly rare but could be the case if a third party library is injecting the markup.
+                      <br>In the following example a new block of HTML containing a ng-controller directive is added to the end of the document body by JQuery. We then compile and link it into the current AngularJS scope.
+
+                      <codeBody>
+                        var $div = $('&lt;div ng-controller="MyCtrl"&gt;{{content.label}}&lt;/div&gt;');
+                        <br>$(document.body).append($div);
+                        <br>
+                        <br>angular.element(document).injector().invoke(function($compile) {
+                        <br>&nbsp;&nbsp;&nbsp;  var scope = angular.element($div).scope();
+                        <br>&nbsp;&nbsp;&nbsp;  $compile($div)(scope);
+                        <br>});
+                      </codeBody>
+                    </p>
+                  </div>
+                </div>
+            </div> 
         </div>       
         <!-- /.row -->
 
