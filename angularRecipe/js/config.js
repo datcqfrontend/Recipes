@@ -269,7 +269,36 @@ var fw = {
 
 					{"page":"extend", "topic":"angular.extend", "breadcrumb":"angular.extend"  },
 					{"page":"merge", "topic":"angular.merge", "breadcrumb":"angular.merge"  },
-					{"page":"noop", "topic":"angular.noop", "breadcrumb":"angular.noop"  }
+					{"page":"noop", "topic":"angular.noop", "breadcrumb":"angular.noop"  },
+
+					{"page":"identity", "topic":"angular.identity", "breadcrumb":"angular.identity"  },
+					{"page":"isUndefined", "topic":"angular.isUndefined", "breadcrumb":"angular.isUndefined"  },
+					{"page":"isDefined", "topic":"angular.isDefined", "breadcrumb":"angular.isDefined"  },
+
+					{"page":"isObject", "topic":"angular.isObject", "breadcrumb":"angular.isObject"  },
+					{"page":"isString", "topic":"angular.isString", "breadcrumb":"angular.isString"  },
+					{"page":"isNumber", "topic":"angular.isNumber", "breadcrumb":"angular.isNumber"  },
+
+					{"page":"isDate", "topic":"angular.isDate", "breadcrumb":"angular.isDate"  },
+					{"page":"isArray", "topic":"angular.isArray", "breadcrumb":"angular.isArray"  },
+					{"page":"isFunction", "topic":"angular.isFunction", "breadcrumb":"angular.isFunction"  },
+
+					{"page":"isElement", "topic":"angular.isElement", "breadcrumb":"angular.isElement"  },
+					{"page":"copy", "topic":"angular.copy", "breadcrumb":"angular.copy"  },
+					{"page":"equals", "topic":"angular.equals", "breadcrumb":"angular.equals"  },
+
+					{"page":"bind", "topic":"angular.bind", "breadcrumb":"angular.bind"  },
+					{"page":"toJson", "topic":"angular.toJson", "breadcrumb":"angular.toJson"  },
+					{"page":"fromJson", "topic":"angular.fromJson", "breadcrumb":"angular.fromJson"  },
+
+					{"page":"bootstrap", "topic":"angular.bootstrap", "breadcrumb":"angular.bootstrap"  },
+					{"page":"reloadWithDebugInfo", "topic":"angular.reloadWithDebugInfo", "breadcrumb":"angular.reloadWithDebugInfo"  },
+					{"page":"injector", "topic":"angular.injector", "breadcrumb":"angular.injector"  },
+
+					{"page":"element", "topic":"angular.element", "breadcrumb":"angular.element"  },
+					{"page":"module", "topic":"angular.module", "breadcrumb":"angular.module"  }
+					
+
 				],
 
 				"requirejs":[

@@ -6,9 +6,16 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>angular.identity</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      A function that returns its first argument. This function is useful when writing code in the functional style.
+                      <codeBody>
+                        function transformer(transformationFn, value) {
+                        <br>&nbsp;&nbsp;&nbsp;  return (transformationFn || <spanYellow>angular.identity</spanYellow>)(value);
+                        <br>};
+                      </codeBody>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -17,7 +24,11 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Usage</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <codeBody>
+                        angular.identity(value);
+                      </codeBody>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -26,7 +37,36 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Arguments</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Param</th>
+                            <th>Type</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>
+                              value
+                              
+                              
+                            </td>
+                            <td>
+                              *
+                            </td>
+                            <td>
+                              <p>to be returned.</p>
+
+                              
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </p>
                   </div>
                 </div>
             </div> 
@@ -35,7 +75,15 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Returns</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>
+                      <table class="table table-striped">
+                        <tbody><tr>
+                          <td>*</td>
+                          <td><p>the value passed in.</p>
+                      </td>
+                        </tr>
+                      </tbody></table>
+                    </p>
                   </div>
                 </div>
             </div> 
