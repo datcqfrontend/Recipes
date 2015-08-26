@@ -32,21 +32,6 @@
         </div>
 
         <div class="row" ng-controller="TutorialCtrl">
-
-            <div class="col-sm-12" style="text-align:center;">
-                <div id="btn-group-tabTutorial" class="btn-group" > 
-                     <button type="button" class="btn btn-default active" ng-click="updateTabTutorial($event,'function')">Function</button> 
-                     <button type="button" class="btn btn-default" ng-click="updateTabTutorial($event,'directive')">Directive</button> 
-                     <button type="button" class="btn btn-default" ng-click="updateTabTutorial($event,'object')">Object</button> 
-                     <button type="button" class="btn btn-default" ng-click="updateTabTutorial($event,'type')">Type</button> 
-                     <button type="button" class="btn btn-default" ng-click="updateTabTutorial($event,'provider')">Provider</button> 
-                     <button type="button" class="btn btn-default" ng-click="updateTabTutorial($event,'service')">Service</button> 
-                     <button type="button" class="btn btn-default" ng-click="updateTabTutorial($event,'input')">Input</button> 
-                     <button type="button" class="btn btn-default" ng-click="updateTabTutorial($event,'filter')">Filter</button> 
-                </div>
-                 <hr>
-            </div>            
-           
             <div ng-class="{'col-sm-4': tut.type==undefined, 'col-sm-12 hidden-xs': tut.type=='header' || tut.type=='subheader' || tut.type=='clearfix'}" ng-repeat="tut in tutorials | filter: $filterTutorial">
                 
                 <div ng-if="tut.type=='header'">

@@ -1,10 +1,5 @@
 { 
 	"content":[
-		{ 	"type": "header", 
-			"title": "ng (core module)",
-			"sortContent": "The ng module is loaded by default when an AngularJS application is started. The module itself contains the essential components for an AngularJS application to function. The table below lists a high level breakdown of each of the <spanRed>services/factories, filters, directives and testing components</spanRed> available within this core module."
-		},
-
 		{ 	"type": "subheader", 
 			"title": "Function: ",
 			"sortContent": ""
@@ -14,19 +9,19 @@
 			"title": "angular.lowercase",
 			"sortContent": "Converts the specified string to lowercase.",
 			"keyword": "",
-			"link": "#angularAPI/lowercase"
+			"link": "#angularAPI/function/lowercase"
 		},
 		{ 
 			"title": "angular.uppercase",
 			"sortContent": "Converts the specified string to uppercase.",
 			"keyword": "",
-			"link": "#angularAPI/uppercase"
+			"link": "#angularAPI/function/uppercase"
 		},
 		{ 
 			"title": "angular.forEach",
 			"sortContent": "Invokes the iterator function once for each item in obj collection, which can be either an object or an array.<br>The iterator function is invoked with iterator(value, key, obj), where value is the value of an object property or an array element, key is the object property key or array element index and obj is the obj itself.<br>Specifying a context for the function is optional.",
 			"keyword": "",
-			"link": "#angularAPI/forEach"
+			"link": "#angularAPI/function/forEach"
 		},
 		{ 	"type": "clearfix"	},
 
@@ -35,19 +30,19 @@
 			"title": "angular.extend",
 			"sortContent": "Extends the destination object dst by copying own enumerable properties from the src object(s) to dst.<br>You can specify multiple src objects. If you want to preserve original objects, you can do so by passing an empty object as the target: <br><spanRed>var object = angular.extend({}, object1, object2).</spanRed>",
 			"keyword": "",
-			"link": "#angularAPI/lowercase"
+			"link": "#angularAPI/function/lowercase"
 		},
 		{ 
 			"title": "angular.merge",
 			"sortContent": "Deeply extends the destination object dst by copying own enumerable properties from the src object(s) to dst.<br>You can specify multiple src objects. If you want to preserve original objects, you can do so by passing an empty object as the target: <br><spanRed>var object = angular.merge({}, object1, object2).</spanRed>",
 			"keyword": "",
-			"link": "#angularAPI/uppercase"
+			"link": "#angularAPI/function/uppercase"
 		},
 		{ 
 			"title": "angular.noop",
 			"sortContent": "A function that performs no operations. This function can be useful when writing code in the functional style.<codeBody>function foo(callback) {<br>&nbsp;&nbsp;&nbsp;  var result = calculateResult();<br>&nbsp;&nbsp;&nbsp;  (callback || angular.noop)(result);<br>}</codeBody>",
 			"keyword": "",
-			"link": "#angularAPI/forEach"
+			"link": "#angularAPI/function/forEach"
 		},
 		{ 	"type": "clearfix"	},	
 
@@ -55,19 +50,19 @@
 			"title": "angular.identity",
 			"sortContent": "A function that returns its first argument. This function is useful when writing code in the functional style.",
 			"keyword": "",
-			"link": "#angularAPI/identity"
+			"link": "#angularAPI/function/identity"
 		},
 		{ 
 			"title": "angular.isUndefined",
 			"sortContent": "Determines if a reference is undefined.",
 			"keyword": "",
-			"link": "#angularAPI/isUndefined"
+			"link": "#angularAPI/function/isUndefined"
 		},
 		{ 
 			"title": "angular.isDefined",
 			"sortContent": "Determines if a reference is defined.",
 			"keyword": "",
-			"link": "#angularAPI/isDefined"
+			"link": "#angularAPI/function/isDefined"
 		},
 		{ 	"type": "clearfix"	},
 
@@ -75,19 +70,19 @@
 			"title": "angular.isObject",
 			"sortContent": "Determines if a reference is an Object. Unlike typeof in JavaScript, nulls are not considered to be objects. Note that JavaScript arrays are objects.",
 			"keyword": "",
-			"link": "#angularAPI/isObject"
+			"link": "#angularAPI/function/isObject"
 		},
 		{ 
 			"title": "angular.isString",
 			"sortContent": "Determines if a reference is a String.",
 			"keyword": "",
-			"link": "#angularAPI/isString"
+			"link": "#angularAPI/function/isString"
 		},
 		{ 
 			"title": "angular.isNumber",
 			"sortContent": "Determines if a reference is a Number.",
 			"keyword": "",
-			"link": "#angularAPI/isNumber"
+			"link": "#angularAPI/function/isNumber"
 		},
 		{ 	"type": "clearfix"	},
 
@@ -95,19 +90,19 @@
 			"title": "angular.isDate",
 			"sortContent": "Determines if a value is a date.",
 			"keyword": "",
-			"link": "#angularAPI/isDate"
+			"link": "#angularAPI/function/isDate"
 		},
 		{ 
 			"title": "angular.isArray",
 			"sortContent": "Determines if a reference is an Array.",
 			"keyword": "",
-			"link": "#angularAPI/isArray"
+			"link": "#angularAPI/function/isArray"
 		},
 		{ 
 			"title": "angular.isFunction",
 			"sortContent": "Determines if a reference is a Function.",
 			"keyword": "",
-			"link": "#angularAPI/isFunction"
+			"link": "#angularAPI/function/isFunction"
 		},
 		{ 	"type": "clearfix"	},
 
@@ -115,19 +110,19 @@
 			"title": "angular.isElement",
 			"sortContent": "Determines if a reference is a DOM element (or wrapped jQuery element).",
 			"keyword": "",
-			"link": "#angularAPI/isElement"
+			"link": "#angularAPI/function/isElement"
 		},
 		{ 
 			"title": "angular.copy",
 			"sortContent": "Creates a deep copy of source, which should be an object or an array.",
 			"keyword": "",
-			"link": "#angularAPI/copy"
+			"link": "#angularAPI/function/copy"
 		},
 		{ 
 			"title": "angular.equals",
 			"sortContent": "Determines if two objects or two values are equivalent. Supports value types, regular expressions, arrays and objects.",
 			"keyword": "",
-			"link": "#angularAPI/"
+			"link": "#angularAPI/function/equals"
 		},
 		{ 	"type": "clearfix"	},
 
@@ -135,19 +130,19 @@
 			"title": "angular.bind",
 			"sortContent": "Returns a function which calls function fn bound to self (self becomes the this for fn). You can supply optional args that are prebound to the function. This feature is also known as partial application, as distinguished from function currying.",
 			"keyword": "",
-			"link": "#angularAPI/bind"
+			"link": "#angularAPI/function/bind"
 		},
 		{ 
 			"title": "angular.toJson",
 			"sortContent": "Serializes input into a JSON-formatted string. Properties with leading $$ characters will be stripped since angular uses this notation internally.",
 			"keyword": "",
-			"link": "#angularAPI/toJson"
+			"link": "#angularAPI/function/toJson"
 		},
 		{ 
 			"title": "angular.fromJson",
 			"sortContent": "Deserializes a JSON string.",
 			"keyword": "",
-			"link": "#angularAPI/fromJson"
+			"link": "#angularAPI/function/fromJson"
 		},
 		{ 	"type": "clearfix"	},
 
@@ -155,19 +150,19 @@
 			"title": "angular.bootstrap",
 			"sortContent": "Use this function to manually start up angular application.",
 			"keyword": "",
-			"link": "#angularAPI/bootstrap"
+			"link": "#angularAPI/function/bootstrap"
 		},
 		{ 
 			"title": "angular.reloadWithDebugInfo",
 			"sortContent": "Use this function to reload the current application with debug information turned on. This takes precedence over a call to <spanRed>$compileProvider.debugInfoEnabled(false)</spanRed>.",
 			"keyword": "",
-			"link": "#angularAPI/reloadWithDebugInfo"
+			"link": "#angularAPI/function/reloadWithDebugInfo"
 		},
 		{ 
 			"title": "angular.injector",
 			"sortContent": "Creates an injector object that can be used for retrieving services as well as for dependency injection (see dependency injection).",
 			"keyword": "",
-			"link": "#angularAPI/injector"
+			"link": "#angularAPI/function/injector"
 		},
 		{ 	"type": "clearfix"	},
 
@@ -175,181 +170,15 @@
 			"title": "angular.element",
 			"sortContent": "Wraps a raw DOM element or HTML string as a jQuery element.",
 			"keyword": "",
-			"link": "#angularAPI/element"
+			"link": "#angularAPI/function/element"
 		},
 		{ 
 			"title": "angular.module",
 			"sortContent": "The angular.module is a global place for creating, registering and retrieving Angular modules. All modules (angular core or 3rd party) that should be available to an application must be registered using this mechanism.",
 			"keyword": "",
-			"link": "#angularAPI/module"
+			"link": "#angularAPI/function/module"
 		},
-		{ 	"type": "clearfix"	},
-
-		{ 	"type": "subheader", 
-			"title": "Directive: ",
-			"sortContent": ""
-		},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 
-			"title": "",
-			"sortContent": "",
-			"keyword": "",
-			"link": "#angularAPI/"
-		},
-		{ 	"type": "clearfix"	},
-
+				
 		{ 	"type": "clearfix"	}
 
 		

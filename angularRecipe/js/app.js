@@ -34,8 +34,25 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 		// jQuery, Angular, Bootstrap
 		.when("/:groupName/:pageName", {
-			templateUrl: function(params){				
+			templateUrl: function(params){		
+				
 				return "partials/"+initPage(params.groupName,params.pageName)+".html";
+			}, 
+			controller: "PageCtrl",
+			resolve: {
+		      // I will cause a 1 second delay
+		      /*delay: function($q, $timeout) {
+		        var delay = $q.defer();
+		        $timeout(delay.resolve, 500);
+		        return delay.promise;
+		      }*/
+		    }
+		})
+
+		// Angular API
+		.when("/:groupName/:groupFunction/:pageName", {
+			templateUrl: function(params){		
+				return "partials/"+initPage(params.groupName,params.groupFunction+"/"+params.pageName)+".html";
 			}, 
 			controller: "PageCtrl",
 			resolve: {
@@ -140,14 +157,34 @@ app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $
 app.controller('TutorialCtrl', function ( $sce, $scope, $location, $http ) {
 	window.scrollTo(0,0);
 
-	$http.get("partials/"+fw.currentGroupName+"/json/cntTutorial.json?"+Date.now()) 
-       .success(function(response) { 
-           $scope.tutorials = response.content; 
-    }); 
-
-    $scope.decodeText = function (data) {
+	$scope.decodeText = function (data) {
 	    return $sce.trustAsHtml(data);
 	}
+
+	if(fw.currentGroupName!="angularAPI"){
+		$http.get("partials/"+fw.currentGroupName+"/json/cntTutorial.json?"+Date.now()) 
+	       .success(function(response) { 
+	           $scope.tutorials = response.content; 
+	    }); 
+	}else{
+		$scope.tabTutorial = "function";
+
+		$scope.updateTabTutorial = function($event,tabValue) {
+			//console.log($event);
+			$('#btn-group-tabTutorial .btn').removeClass('active');
+			$scope.tabTutorial = tabValue;
+		}
+
+		$scope.$watch("tabTutorial", function(newValue, oldValue) {
+		    if ($scope.tabTutorial.length > 0) {
+		      	$http.get("partials/"+fw.currentGroupName+"/json/cntTutorial-"+$scope.tabTutorial+".json?"+Date.now()) 
+			       .success(function(response) { 
+			           $scope.tutorials = response.content; 
+			    }); 
+		    }
+		 });
+	}
+    
 
 	//$scope.tutorials = fw.pages[fw.currentGroupName][fw.currentPageIndex].content;	
 });

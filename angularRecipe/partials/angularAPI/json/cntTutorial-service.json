@@ -1,0 +1,30 @@
+{ 
+	"content":[
+		{ 	"type": "subheader", 
+			"title": "Service: ",
+			"sortContent": ""
+		},
+
+		{ 
+			"title": "angular.lowercase",
+			"sortContent": "Converts the specified string to lowercase.",
+			"keyword": "",
+			"link": "#angularAPI/function/lowercase"
+		},
+		{ 
+			"title": "angular.uppercase",
+			"sortContent": "Converts the specified string to uppercase.",
+			"keyword": "",
+			"link": "#angularAPI/function/uppercase"
+		},
+		{ 
+			"title": "angular.forEach",
+			"sortContent": "Invokes the iterator function once for each item in obj collection, which can be either an object or an array.<br>The iterator function is invoked with iterator(value, key, obj), where value is the value of an object property or an array element, key is the object property key or array element index and obj is the obj itself.<br>Specifying a context for the function is optional.",
+			"keyword": "",
+			"link": "#angularAPI/function/forEach"
+		},
+		{ 	"type": "clearfix"	}
+
+		
+	]
+}

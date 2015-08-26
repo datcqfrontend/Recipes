@@ -1,0 +1,394 @@
+{ 
+	"content":[
+		{ 	"type": "subheader", 
+			"title": "Directive: ",
+			"sortContent": ""
+		},
+
+		{ 
+			"title": "ngJq",
+			"sortContent": "Use this directive to force the angular.element library. This should be used to force either jqLite by leaving ng-jq blank or setting the name of the jquery variable under window (eg. jQuery).",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngJq"
+		},
+		{ 
+			"title": "ngApp",
+			"sortContent": "Use this directive to <strong>auto-bootstrap</strong> an AngularJS application. The <code><span class='pln'>ngApp</span></code> directive designates the <strong>root element</strong> of the application and is typically placed near the root element of the page - e.g. on the <code><span class='tag'>&lt;body&gt;</span></code> or <code><span class='tag'>&lt;html&gt;</span></code> tags.",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngApp"
+		},
+		{ 
+			"title": "a",
+			"sortContent": "Modifies the default behavior of the html A tag so that the default action is prevented when the href attribute is empty.",
+			"keyword": "",
+			"link": "#angularAPI/directive/a"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngHref",
+			"sortContent": "Using Angular markup like <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code> in an href attribute will make the link go to the wrong URL if the user clicks it before Angular has a chance to replace the <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code> markup with its value. Until Angular replaces the markup the link will be broken and will most likely return a 404 error. The <code><span class='pln'>ngHref</span></code> directive solves this problem.",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngHref"
+		},
+		{ 
+			"title": "ngSrc",
+			"sortContent": "Using Angular markup like <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code> in a <code><span class='pln'>src</span></code> attribute doesn't work right: The browser will fetch from the URL with the literal text <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code> until Angular replaces the expression inside <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code>. The <code><span class='pln'>ngSrc</span></code> directive solves this problem.",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngSrc"
+		},
+		{ 
+			"title": "ngSrcset",
+			"sortContent": "Using Angular markup like <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code> in a <code><span class='pln'>srcset</span></code> attribute doesn't work right: The browser will fetch from the URL with the literal text <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code> until Angular replaces the expression inside <code><span class='pun'>{{</span><span class='pln'>hash</span><span class='pun'>}}</span></code>. The <code><span class='pln'>ngSrcset</span></code> directive solves this problem.",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngSrcset"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngDisabled",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngDisabled"
+		},
+		{ 
+			"title": "ngChecked",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngChecked"
+		},
+		{ 
+			"title": "ngReadonly",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngReadonly"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngSelected",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngSelected"
+		},
+		{ 
+			"title": "ngOpen",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngOpen"
+		},
+		{ 
+			"title": "ngForm",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngForm"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "form",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/form"
+		},
+		{ 
+			"title": "textarea",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/textarea"
+		},
+		{ 
+			"title": "input",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/input"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngValue",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngValue"
+		},
+		{ 
+			"title": "ngBind",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngBind"
+		},
+		{ 
+			"title": "ngBindTemplate",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngBindTemplate"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngBindHtml",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngBindHtml"
+		},
+		{ 
+			"title": "ngChange",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngChange"
+		},
+		{ 
+			"title": "ngClass",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClass"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "ngClassOdd",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassOdd"
+		},
+		{ 
+			"title": "ngClassEven",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngClassEven"
+		},
+		{ 
+			"title": "ngCloak",
+			"sortContent": "",
+			"keyword": "",
+			"link": "#angularAPI/directive/ngCloak"
+		},
+		{ 	"type": "clearfix"	},
+
+
+
+		{ 	"type": "clearfix"	}
+
+		
+	]
+}

@@ -263,41 +263,220 @@ var fw = {
 				"angularAPI":[
 					{"page":"tutorial"},
 
-					{"page":"lowercase", "topic":"angular.lowercase", "breadcrumb":"angular.lowercase"  },
-					{"page":"uppercase", "topic":"angular.uppercase", "breadcrumb":"angular.uppercase"  },
-					{"page":"forEach", "topic":"angular.forEach", "breadcrumb":"angular.forEach"  },
+					{"page":"function/lowercase", "topic":"angular.lowercase", "breadcrumb":"function / angular.lowercase"  },
+					{"page":"function/uppercase", "topic":"angular.uppercase", "breadcrumb":"function / angular.uppercase"  },
+					{"page":"function/forEach", "topic":"angular.forEach", "breadcrumb":"function / angular.forEach"  },
 
-					{"page":"extend", "topic":"angular.extend", "breadcrumb":"angular.extend"  },
-					{"page":"merge", "topic":"angular.merge", "breadcrumb":"angular.merge"  },
-					{"page":"noop", "topic":"angular.noop", "breadcrumb":"angular.noop"  },
+					{"page":"function/extend", "topic":"angular.extend", "breadcrumb":"function / angular.extend"  },
+					{"page":"function/merge", "topic":"angular.merge", "breadcrumb":"function / angular.merge"  },
+					{"page":"function/noop", "topic":"angular.noop", "breadcrumb":"function / angular.noop"  },
 
-					{"page":"identity", "topic":"angular.identity", "breadcrumb":"angular.identity"  },
-					{"page":"isUndefined", "topic":"angular.isUndefined", "breadcrumb":"angular.isUndefined"  },
-					{"page":"isDefined", "topic":"angular.isDefined", "breadcrumb":"angular.isDefined"  },
+					{"page":"function/identity", "topic":"angular.identity", "breadcrumb":"function / angular.identity"  },
+					{"page":"function/isUndefined", "topic":"angular.isUndefined", "breadcrumb":"function / angular.isUndefined"  },
+					{"page":"function/isDefined", "topic":"angular.isDefined", "breadcrumb":"function / angular.isDefined"  },
 
-					{"page":"isObject", "topic":"angular.isObject", "breadcrumb":"angular.isObject"  },
-					{"page":"isString", "topic":"angular.isString", "breadcrumb":"angular.isString"  },
-					{"page":"isNumber", "topic":"angular.isNumber", "breadcrumb":"angular.isNumber"  },
+					{"page":"function/isObject", "topic":"angular.isObject", "breadcrumb":"function / angular.isObject"  },
+					{"page":"function/isString", "topic":"angular.isString", "breadcrumb":"function / angular.isString"  },
+					{"page":"function/isNumber", "topic":"angular.isNumber", "breadcrumb":"function / angular.isNumber"  },
 
-					{"page":"isDate", "topic":"angular.isDate", "breadcrumb":"angular.isDate"  },
-					{"page":"isArray", "topic":"angular.isArray", "breadcrumb":"angular.isArray"  },
-					{"page":"isFunction", "topic":"angular.isFunction", "breadcrumb":"angular.isFunction"  },
+					{"page":"function/isDate", "topic":"angular.isDate", "breadcrumb":"function / angular.isDate"  },
+					{"page":"function/isArray", "topic":"angular.isArray", "breadcrumb":"function / angular.isArray"  },
+					{"page":"function/isFunction", "topic":"angular.isFunction", "breadcrumb":"function / angular.isFunction"  },
 
-					{"page":"isElement", "topic":"angular.isElement", "breadcrumb":"angular.isElement"  },
-					{"page":"copy", "topic":"angular.copy", "breadcrumb":"angular.copy"  },
-					{"page":"equals", "topic":"angular.equals", "breadcrumb":"angular.equals"  },
+					{"page":"function/isElement", "topic":"angular.isElement", "breadcrumb":"function / angular.isElement"  },
+					{"page":"function/copy", "topic":"angular.copy", "breadcrumb":"function / angular.copy"  },
+					{"page":"function/equals", "topic":"angular.equals", "breadcrumb":"function / angular.equals"  },
 
-					{"page":"bind", "topic":"angular.bind", "breadcrumb":"angular.bind"  },
-					{"page":"toJson", "topic":"angular.toJson", "breadcrumb":"angular.toJson"  },
-					{"page":"fromJson", "topic":"angular.fromJson", "breadcrumb":"angular.fromJson"  },
+					{"page":"function/bind", "topic":"angular.bind", "breadcrumb":"function / angular.bind"  },
+					{"page":"function/toJson", "topic":"angular.toJson", "breadcrumb":"function / angular.toJson"  },
+					{"page":"function/fromJson", "topic":"angular.fromJson", "breadcrumb":"function / angular.fromJson"  },
 
-					{"page":"bootstrap", "topic":"angular.bootstrap", "breadcrumb":"angular.bootstrap"  },
-					{"page":"reloadWithDebugInfo", "topic":"angular.reloadWithDebugInfo", "breadcrumb":"angular.reloadWithDebugInfo"  },
-					{"page":"injector", "topic":"angular.injector", "breadcrumb":"angular.injector"  },
+					{"page":"function/bootstrap", "topic":"angular.bootstrap", "breadcrumb":"function / angular.bootstrap"  },
+					{"page":"function/reloadWithDebugInfo", "topic":"angular.reloadWithDebugInfo", "breadcrumb":"function / angular.reloadWithDebugInfo"  },
+					{"page":"function/injector", "topic":"angular.injector", "breadcrumb":"function / angular.injector"  },
 
-					{"page":"element", "topic":"angular.element", "breadcrumb":"angular.element"  },
-					{"page":"module", "topic":"angular.module", "breadcrumb":"angular.module"  }
+					{"page":"function/element", "topic":"angular.element", "breadcrumb":"function / angular.element"  },
+					{"page":"function/module", "topic":"angular.module", "breadcrumb":"function / angular.module"  },
+
+
+					{"page":"directive/ngJq", "topic":"ngJq", "breadcrumb":"directive / ngJq"  },
+					{"page":"directive/ngApp", "topic":"ngApp", "breadcrumb":"directive / ngApp"  },
+					{"page":"directive/a", "topic":"a", "breadcrumb":"directive / a"  },	
+
+					{"page":"directive/ngHref", "topic":"ngHref", "breadcrumb":"directive / ngHref"  },
+					{"page":"directive/ngSrc", "topic":"ngSrc", "breadcrumb":"directive / ngSrc"  },
+					{"page":"directive/ngSrcset", "topic":"ngSrcset", "breadcrumb":"directive / ngSrcset"  },				
+
+					{"page":"directive/ngDisabled", "topic":"ngDisabled", "breadcrumb":"directive / ngDisabled"  },
+					{"page":"directive/ngChecked", "topic":"ngChecked", "breadcrumb":"directive / ngChecked"  },
+					{"page":"directive/ngReadonly", "topic":"ngReadonly", "breadcrumb":"directive / ngReadonly"  },				
+
+					{"page":"directive/ngSelected", "topic":"ngSelected", "breadcrumb":"directive / ngSelected"  },
+					{"page":"directive/ngOpen", "topic":"ngOpen", "breadcrumb":"directive / ngOpen"  },
+					{"page":"directive/ngForm", "topic":"ngForm", "breadcrumb":"directive / ngForm"  },				
+
+					{"page":"directive/form", "topic":"form", "breadcrumb":"directive / form"  },
+					{"page":"directive/textarea", "topic":"textarea", "breadcrumb":"directive / textarea"  },
+					{"page":"directive/input", "topic":"input", "breadcrumb":"directive / input"  },				
+
+					{"page":"directive/ngValue", "topic":"ngValue", "breadcrumb":"directive / ngValue"  },
+					{"page":"directive/ngBind", "topic":"ngBind", "breadcrumb":"directive / ngBind"  },
+					{"page":"directive/ngBindTemplate", "topic":"ngBindTemplate", "breadcrumb":"directive / ngBindTemplate"  },				
+
+					{"page":"directive/ngBindHtml", "topic":"ngBindHtml", "breadcrumb":"directive / ngBindHtml"  },
+					{"page":"directive/ngChange", "topic":"ngChange", "breadcrumb":"directive / ngChange"  },
+					{"page":"directive/ngClass", "topic":"ngClass", "breadcrumb":"directive / ngClass"  },				
+
+					{"page":"directive/ngClassOdd", "topic":"ngClassOdd", "breadcrumb":"directive / ngClassOdd"  },
+					{"page":"directive/ngClassEven", "topic":"ngClassEven", "breadcrumb":"directive / ngClassEven"  },
+					{"page":"directive/ngCloak", "topic":"ngCloak", "breadcrumb":"directive / ngCloak"  },				
+
+					{"page":"directive/ngController", "topic":"ngController", "breadcrumb":"directive / ngController"  },
+					{"page":"directive/ngCsp", "topic":"ngCsp", "breadcrumb":"directive / ngCsp"  },
+					{"page":"directive/ngClick", "topic":"ngClick", "breadcrumb":"directive / ngClick"  },				
+
+					{"page":"directive/ngDblclick", "topic":"ngDblclick", "breadcrumb":"directive / ngDblclick"  },
+					{"page":"directive/ngMousedown", "topic":"ngMousedown", "breadcrumb":"directive / ngMousedown"  },
+					{"page":"directive/ngMouseup", "topic":"ngMouseup", "breadcrumb":"directive / ngMouseup"  },				
+
+					{"page":"directive/ngMouseover", "topic":"ngMouseover", "breadcrumb":"directive / ngMouseover"  },
+					{"page":"directive/ngMouseenter", "topic":"ngMouseenter", "breadcrumb":"directive / ngMouseenter"  },
+					{"page":"directive/ngMouseleave", "topic":"ngMouseleave", "breadcrumb":"directive / ngMouseleave"  },				
+
+					{"page":"directive/ngMousemove", "topic":"ngMousemove", "breadcrumb":"directive / ngMousemove"  },
+					{"page":"directive/ngKeydown", "topic":"ngKeydown", "breadcrumb":"directive / ngKeydown"  },
+					{"page":"directive/ngKeyup", "topic":"ngKeyup", "breadcrumb":"directive / ngKeyup"  },	
+
+					{"page":"directive/ngKeypress", "topic":"ngKeypress", "breadcrumb":"directive / ngKeypress"  },
+					{"page":"directive/ngSubmit", "topic":"ngSubmit", "breadcrumb":"directive / ngSubmit"  },
+					{"page":"directive/ngFocus", "topic":"ngFocus", "breadcrumb":"directive / ngFocus"  },	
+
+					{"page":"directive/ngBlur", "topic":"ngBlur", "breadcrumb":"directive / ngBlur"  },
+					{"page":"directive/ngCopy", "topic":"ngCopy", "breadcrumb":"directive / ngCopy"  },
+					{"page":"directive/ngCut", "topic":"ngCut", "breadcrumb":"directive / ngCut"  },	
+
+					{"page":"directive/ngPaste", "topic":"ngPaste", "breadcrumb":"directive / ngPaste"  },
+					{"page":"directive/ngIf", "topic":"ngIf", "breadcrumb":"directive / ngIf"  },
+					{"page":"directive/ngInclude", "topic":"ngInclude", "breadcrumb":"directive / ngInclude"  },	
+
+					{"page":"directive/ngInit", "topic":"ngInit", "breadcrumb":"directive / ngInit"  },
+					{"page":"directive/ngList", "topic":"ngList", "breadcrumb":"directive / ngList"  },
+					{"page":"directive/ngModel", "topic":"ngModel", "breadcrumb":"directive / ngModel"  },	
+
+					{"page":"directive/ngModelOptions", "topic":"ngModelOptions", "breadcrumb":"directive / ngModelOptions"  },
+					{"page":"directive/ngNonBindable", "topic":"ngNonBindable", "breadcrumb":"directive / ngNonBindable"  },
+					{"page":"directive/ngOptions", "topic":"ngOptions", "breadcrumb":"directive / ngOptions"  },	
+
+					{"page":"directive/ngPluralize", "topic":"ngPluralize", "breadcrumb":"directive / ngPluralize"  },
+					{"page":"directive/ngRepeat", "topic":"ngRepeat", "breadcrumb":"directive / ngRepeat"  },
+					{"page":"directive/ngShow", "topic":"ngShow", "breadcrumb":"directive / ngShow"  },	
+
+					{"page":"directive/ngHide", "topic":"ngHide", "breadcrumb":"directive / ngHide"  },
+					{"page":"directive/ngStyle", "topic":"ngStyle", "breadcrumb":"directive / ngStyle"  },
+					{"page":"directive/ngSwitch", "topic":"ngSwitch", "breadcrumb":"directive / ngSwitch"  },	
+
+					{"page":"directive/ngTransclude", "topic":"ngTransclude", "breadcrumb":"directive / ngTransclude"  },
+					{"page":"directive/script", "topic":"script", "breadcrumb":"directive / script"  },
+					{"page":"directive/select", "topic":"select", "breadcrumb":"directive / select"  },	
+
+
+					{"page":"object/angular-version", "topic":"angular.version", "breadcrumb":"object / angular.version"  },
+
 					
+					{"page":"type/angular-Module", "topic":"angular.Module", "breadcrumb":"type / angular.Module"  },
+					{"page":"type/cacheFactory-Cache", "topic":"$cacheFactory.Cache", "breadcrumb":"type / $cacheFactory.Cache"  },
+					{"page":"type/compile-directive-Attributes", "topic":"$compile.directive.Attributes", "breadcrumb":"type / $compile.directive.Attributes"  },
+
+					{"page":"type/form-FormController", "topic":"form.FormController", "breadcrumb":"type / form.FormController"  },
+					{"page":"type/ngModel-NgModelController", "topic":"ngModel.NgModelController", "breadcrumb":"type / ngModel.NgModelController"  },
+					{"page":"type/select-SelectController", "topic":"select.SelectController", "breadcrumb":"type / select.SelectController"  },
+
+					{"page":"type/rootScope-Scope", "topic":"$rootScope.Scope", "breadcrumb":"type / $rootScope.Scope"  },
+					
+					{"page":"provider/anchorScrollProvider", "topic":"$anchorScrollProvider", "breadcrumb":"provider / $anchorScrollProvider"  },
+					{"page":"provider/animateProvider", "topic":"$animateProvider", "breadcrumb":"provider / $animateProvider"  },
+					{"page":"provider/compileProvider", "topic":"$compileProvider", "breadcrumb":"provider / $compileProvider"  },	
+
+					{"page":"provider/controllerProvider", "topic":"$controllerProvider", "breadcrumb":"provider / $controllerProvider"  },
+					{"page":"provider/filterProvider", "topic":"$filterProvider", "breadcrumb":"provider / $filterProvider"  },
+					{"page":"provider/httpProvider", "topic":"$httpProvider", "breadcrumb":"provider / $httpProvider"  },
+
+					{"page":"provider/interpolateProvider", "topic":"$interpolateProvider", "breadcrumb":"provider / $interpolateProvider"  },
+					{"page":"provider/locationProvider", "topic":"$locationProvider", "breadcrumb":"provider / $locationProvider"  },
+					{"page":"provider/logProvider", "topic":"$logProvider", "breadcrumb":"provider / $logProvider"  },
+
+					{"page":"provider/parseProvider", "topic":"$parseProvider", "breadcrumb":"provider / $parseProvider"  },
+					{"page":"provider/rootScopeProvider", "topic":"$rootScopeProvider", "breadcrumb":"provider / $rootScopeProvider"  },
+					{"page":"provider/sceDelegateProvider", "topic":"$sceDelegateProvider", "breadcrumb":"provider / $sceDelegateProvider"  },
+
+					{"page":"provider/sceProvider", "topic":"$sceProvider", "breadcrumb":"provider / $sceProvider"  },
+
+
+					{"page":"service/anchorScroll", "topic":"$anchorScroll", "breadcrumb":"service / $anchorScroll"  },
+					{"page":"service/animate", "topic":"$animate", "breadcrumb":"service / $animate"  },
+					{"page":"service/animateCss", "topic":"$animateCss", "breadcrumb":"service / $animateCss"  },	
+
+					{"page":"service/cacheFactory", "topic":"$cacheFactory", "breadcrumb":"service / $cacheFactory"  },
+					{"page":"service/templateCache", "topic":"$templateCache", "breadcrumb":"service / $templateCache"  },
+					{"page":"service/compile", "topic":"$compile", "breadcrumb":"service / $compile"  },	
+
+					{"page":"service/controller", "topic":"$controller", "breadcrumb":"service / $controller"  },
+					{"page":"service/document", "topic":"$document", "breadcrumb":"service / $document"  },
+					{"page":"service/exceptionHandler", "topic":"$exceptionHandler", "breadcrumb":"service / $exceptionHandler"  },	
+
+					{"page":"service/filter", "topic":"$filter", "breadcrumb":"service / $filter"  },
+					{"page":"service/httpParamSerializer", "topic":"$httpParamSerializer", "breadcrumb":"service / $httpParamSerializer"  },
+					{"page":"service/httpParamSerializerJQLike", "topic":"$httpParamSerializerJQLike", "breadcrumb":"service / $httpParamSerializerJQLike"  },	
+
+					{"page":"service/http", "topic":"$http", "breadcrumb":"service / $http"  },
+					{"page":"service/httpBackend", "topic":"$httpBackend", "breadcrumb":"service / $httpBackend"  },
+					{"page":"service/interpolate", "topic":"$interpolate", "breadcrumb":"service / $interpolate"  },	
+
+					{"page":"service/interval", "topic":"$interval", "breadcrumb":"service / $interval"  },
+					{"page":"service/locale", "topic":"$locale", "breadcrumb":"service / $locale"  },
+					{"page":"service/location", "topic":"$location", "breadcrumb":"service / $location"  },	
+
+					{"page":"service/log", "topic":"$log", "breadcrumb":"service / $log"  },
+					{"page":"service/parse", "topic":"$parse", "breadcrumb":"service / $parse"  },
+					{"page":"service/q", "topic":"$q", "breadcrumb":"service / $q"  },	
+
+					{"page":"service/rootElement", "topic":"$rootElement", "breadcrumb":"service / $rootElement"  },
+					{"page":"service/rootScope", "topic":"$rootScope", "breadcrumb":"service / $rootScope"  },
+					{"page":"service/sceDelegate", "topic":"$sceDelegate", "breadcrumb":"service / $sceDelegate"  },	
+
+					{"page":"service/sce", "topic":"$sce", "breadcrumb":"service / $sce"  },
+					{"page":"service/templateRequest", "topic":"$templateRequest", "breadcrumb":"service / $templateRequest"  },
+					{"page":"service/timeout", "topic":"$timeout", "breadcrumb":"service / $timeout"  },	
+
+					{"page":"service/window", "topic":"$window", "breadcrumb":"service / $window"  },
+					
+					{"page":"input/input[text]", "topic":"input[text]", "breadcrumb":"input / input[text]"  },
+					{"page":"input/input[date]", "topic":"input[date]", "breadcrumb":"input / input[date]"  },
+					{"page":"input/input[datetime-local]", "topic":"input[datetime-local]", "breadcrumb":"input / input[datetime-local]"  },	
+
+					{"page":"input/input[time]", "topic":"input[time]", "breadcrumb":"input / input[time]"  },
+					{"page":"input/input[week]", "topic":"input[week]", "breadcrumb":"input / input[week]"  },
+					{"page":"input/input[month]", "topic":"input[month]", "breadcrumb":"input / input[month]"  },	
+
+					{"page":"input/input[number]", "topic":"input[number]", "breadcrumb":"input / input[number]"  },
+					{"page":"input/input[url]", "topic":"input[url]", "breadcrumb":"input / input[url]"  },
+					{"page":"input/input[email]", "topic":"input[email]", "breadcrumb":"input / input[email]"  },	
+
+					{"page":"input/input[radio]", "topic":"input[radio]", "breadcrumb":"input / input[radio]"  },
+					{"page":"input/input[checkbox]", "topic":"input[checkbox]", "breadcrumb":"input / input[checkbox]"  },
+					
+
+					{"page":"filter/filter", "topic":"filter", "breadcrumb":"filter / filter"  },
+					{"page":"filter/currency", "topic":"currency", "breadcrumb":"filter / currency"  },
+					{"page":"filter/number", "topic":"number", "breadcrumb":"filter / number"  },					
+
+					{"page":"filter/date", "topic":"date", "breadcrumb":"filter / date"  },
+					{"page":"filter/json", "topic":"json", "breadcrumb":"filter / json"  },
+					{"page":"filter/lowercase", "topic":"lowercase", "breadcrumb":"filter / lowercase"  },		
+
+					{"page":"filter/uppercase", "topic":"uppercase", "breadcrumb":"filter / uppercase"  },
+					{"page":"filter/limitTo", "topic":"limitTo", "breadcrumb":"filter / limitTo"  },
+					{"page":"filter/orderBy", "topic":"orderBy", "breadcrumb":"filter / orderBy"  }
 
 				],
 
