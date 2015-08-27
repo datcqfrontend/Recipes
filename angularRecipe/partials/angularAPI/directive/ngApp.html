@@ -6,9 +6,93 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>ngApp</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                      <p>Use this directive to <code>auto-bootstrap</code> an AngularJS application. The <code>ngApp</code> directive designates the root element of the application and is typically placed near the root element of the page - e.g. on the <code>&lt;body&gt;</code> or <code>&lt;html&gt;</code> tags.</p>
+
+                      <p>Only one AngularJS application can be auto-bootstrapped per HTML document. The first <code>ngApp</code> found in the document will be used to define the root element to auto-bootstrap as an application. To run multiple applications in an HTML document you must manually bootstrap them using <code>angular.bootstrap</code> instead. AngularJS applications cannot be nested within each other.
+                      </p>
+
+                      <p>In the example below if the <code>ngApp</code> directive were not placed on the html element then the document would not be compiled, the AppController would not be instantiated and the {{ a+b }} would not be resolved to 3.</p>
+
+                      <p><code>ngApp</code> is the easiest, and most common way to bootstrap an application.</p>
+
+                      <codeBody>
+                          &lt;div ng-controller="ngAppDemoController"&gt;
+                          <br>&nbsp;&nbsp;&nbsp;  I can add: { {a} } + { {b} } =  { { a+b } }
+                          <br>&lt;/div&gt;
+                      </codeBody>
+                      <br>
+                      <codeBody>
+                        angular.module('ngAppDemo', []).controller(<spanYellow>'ngAppDemoController'</spanYellow>, function($scope) {
+                        <br>&nbsp;&nbsp;&nbsp;  $scope.a = 1;
+                        <br>&nbsp;&nbsp;&nbsp;  $scope.b = 2;
+                        <br>});
+                      </codeBody>
+                      
+                      <br>Using ngStrictDi, you would see something like this:
+                      <codeBody>
+                        &lt;div <spanYellow>ng-app="ngAppStrictDemo" ng-strict-di</spanYellow>&gt;
+                        <br>&nbsp;&nbsp;&nbsp;  &lt;div <spanYellow>ng-controller="GoodController1"</spanYellow>&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      I can add: { {a} } + { {b} } =  { { a+b } }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;p&gt;This renders because the controller does not fail to
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         instantiate, by using explicit annotation style (see
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         script.js for details)
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/p&gt;
+                        <br>&nbsp;&nbsp;&nbsp;  &lt;/div&gt;
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;  &lt;div <spanYellow>ng-controller="GoodController2"</spanYellow>&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Name: &lt;input ng-model="name"&gt;&lt;br /&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Hello, { {name} }!
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;p&gt;This renders because the controller does not fail to
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         instantiate, by using explicit annotation style
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         (see script.js for details)
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;/p&gt;
+                        <br>&nbsp;&nbsp;&nbsp;  &lt;/div&gt;
+                        <br>
+                        <br>&nbsp;&nbsp;&nbsp;  &lt;div <spanYellow>ng-controller="BadController"</spanYellow>&gt;
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      I can add: { {a} } + { {b} } =  { { a+b } }
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &lt;p&gt;The controller could not be instantiated, due to relying
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         on automatic function annotations (which are disabled in
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         strict mode). As such, the content of this section is not
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         interpolated, and there should be an error in your web console.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/p&gt;
+                        <br>&nbsp;&nbsp;&nbsp;  &lt;/div&gt;
+                        <br>&lt;/div&gt;
+                      </codeBody>
+
+                      <br>Javascript:
+                      <codeBody>
+                        angular.module(<spanYellow>'ngAppStrictDemo'</spanYellow>, [])
+                        <br>// BadController will fail to instantiate, due to relying on automatic function annotation,
+                        <br>// rather than an explicit annotation
+                        <br><spanYellow>.controller('BadController', function($scope) {</spanYellow>
+                        <br>&nbsp;&nbsp;&nbsp;  $scope.a = 1;
+                        <br>&nbsp;&nbsp;&nbsp;  $scope.b = 2;
+                        <br><spanYellow>})</spanYellow>
+                        <br>
+                        <br>// Unlike BadController, GoodController1 and GoodController2 will not fail to be instantiated,
+                        <br>// due to using explicit annotations using the array style and $inject property, respectively.
+                        <br><spanYellow>.controller('GoodController1', ['$scope', function($scope) {</spanYellow>
+                        <br>&nbsp;&nbsp;&nbsp;  $scope.a = 1;
+                        <br>&nbsp;&nbsp;&nbsp;  $scope.b = 2;
+                        <br><spanYellow>}])</spanYellow>
+                        <br>
+                        <br><spanYellow>.controller('GoodController2', GoodController2);</spanYellow>
+                        <br><spanYellow>function GoodController2($scope) {</spanYellow>
+                        <br>&nbsp;&nbsp;&nbsp;  $scope.name = "World";
+                        <br><spanYellow>}</spanYellow>
+                        <br><spanYellow>GoodController2.$inject = ['$scope'];</spanYellow>
+                      </codeBody>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Directive Info</h3> </div>
+                  <div class="panel-body">  
+                    <p>This directive executes at priority level 0.</p>
                   </div>
                 </div>
             </div> 
@@ -18,10 +102,15 @@
                   <div class="panel-heading"><h3>Usage</h3> </div>
                   <div class="panel-body">  
                     <p>
-						<codeBody>
-						
-						</codeBody>
-					</p>
+                        as attribute:
+          						<codeBody>
+          						    &lt;ANY
+                          <br>&nbsp;&nbsp;&nbsp;  <spanYellow>ng-app="angular.Module"
+                          <br>&nbsp;&nbsp;&nbsp;  [ng-strict-di="boolean"]</spanYellow>&gt;
+                          <br>...
+                          <br>&lt;/ANY&gt;
+          						</codeBody>
+          					</p>
                   </div>
                 </div>
             </div> 
@@ -30,19 +119,47 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h3>Arguments</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
-                  </div>
-                </div>
-            </div> 
+                    <p>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Param</th>
+                            <th>Type</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td>ngApp</td>
+                            <td>angular.Module</td>
+                            <td>
+                              <p>an optional application module name to load.</p>                              
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>ngStrictDi                              
+                              <div><em>(optional)</em></div>
+                            </td>
+                            <td>boolean</td>
+                            <td>
+                              <p>if this attribute is present on the app element, the injector will be
+                        created in "strict-di" mode. This means that the application will fail to invoke functions which
+                        do not use explicit function annotation (and are thus unsuitable for minification), as described
+                        in the Dependency Injection guide, and useful debugging info will assist in
+                        tracking down the root of these bugs.</p>
 
-            <div class="col-lg-12">                
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Returns</h3> </div>
-                  <div class="panel-body">  
-                    <p></p>
+                              
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </p>
                   </div>
                 </div>
-            </div> 
+            </div>           
 
         </div>       
         <!-- /.row -->
