@@ -52,6 +52,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 		// Angular API
 		.when("/:groupName/:groupFunction/:pageName", {
 			templateUrl: function(params){		
+				sessionStorage.setItem('groupTab',params.groupFunction);
 				return "partials/"+initPage(params.groupName,params.groupFunction+"/"+params.pageName)+".html";
 			}, 
 			controller: "PageCtrl",
@@ -167,7 +168,15 @@ app.controller('TutorialCtrl', function ( $sce, $scope, $location, $http ) {
 	           $scope.tutorials = response.content; 
 	    }); 
 	}else{
-		$scope.tabTutorial = "function";
+		if(sessionStorage.getItem('groupTab')){
+			$scope.tabTutorial = sessionStorage.getItem('groupTab');
+
+			sessionStorage.removeItem('groupTab');
+		}else{
+			$scope.tabTutorial = "function";	
+		}		
+
+		$('#btn-group-tabTutorial .btn[data-value="'+$scope.tabTutorial+'"]').addClass('active');
 
 		$scope.updateTabTutorial = function($event,tabValue) {
 			//console.log($event);

@@ -6,25 +6,192 @@
 		},
 
 		{ 
-			"title": "angular.lowercase",
-			"sortContent": "Converts the specified string to lowercase.",
+			"title": "$anchorScroll",
+			"sortContent": "When called, it scrolls to the element related to the specified <code>hash</code> or (if omitted) to the current value of $location.hash(), according to the rules specified in the HTML5 spec.",
 			"keyword": "",
-			"link": "#angularAPI/function/lowercase"
+			"link": "#angularAPI/service/anchorScroll"
 		},
 		{ 
-			"title": "angular.uppercase",
-			"sortContent": "Converts the specified string to uppercase.",
+			"title": "$animate",
+			"sortContent": "The $animate service exposes a series of DOM utility methods that provide support for animation hooks. The default behavior is the application of DOM operations, however, when an animation is detected (and animations are enabled), $animate will do the heavy lifting to ensure that animation runs with the triggered DOM operation.",
 			"keyword": "",
-			"link": "#angularAPI/function/uppercase"
+			"link": "#angularAPI/service/animate"
 		},
 		{ 
-			"title": "angular.forEach",
-			"sortContent": "Invokes the iterator function once for each item in obj collection, which can be either an object or an array.<br>The iterator function is invoked with iterator(value, key, obj), where value is the value of an object property or an array element, key is the object property key or array element index and obj is the obj itself.<br>Specifying a context for the function is optional.",
+			"title": "$animateCss",
+			"sortContent": "This is the core version of <code><span class='pln'>$animateCss</span></code>. By default, only when the <code><span class='pln'>ngAnimate</span></code> is included, then the <code><span class='pln'>$animateCss</span></code> service will actually perform animations.",
 			"keyword": "",
-			"link": "#angularAPI/function/forEach"
+			"link": "#angularAPI/service/animateCss"
 		},
-		{ 	"type": "clearfix"	}
+		{ 	"type": "clearfix"	},
 
+		{ 
+			"title": "$cacheFactory",
+			"sortContent": "Factory that constructs Cache objects and gives access to them.",
+			"keyword": "",
+			"link": "#angularAPI/service/cacheFactory"
+		},
+		{ 
+			"title": "$templateCache",
+			"sortContent": "The first time a template is used, it is loaded in the template cache for quick retrieval. You can load templates directly into the cache in a <code><span class='pln'>script</span></code> tag, or by consuming the <code><span class='pln'>$templateCache</span></code> service directly.",
+			"keyword": "",
+			"link": "#angularAPI/service/templateCache"
+		},
+		{ 
+			"title": "$compile",
+			"sortContent": "Compiles an HTML string or DOM into a template and produces a template function, which can then be used to link <code>scope</code> and the template together.",
+			"keyword": "",
+			"link": "#angularAPI/service/compile"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$controller",
+			"sortContent": "<code>$controller</code> service is responsible for instantiating controllers.",
+			"keyword": "",
+			"link": "#angularAPI/service/controller"
+		},
+		{ 
+			"title": "$document",
+			"sortContent": "A jQuery or jqLite wrapper for the browser's <code>window.document</code> object.",
+			"keyword": "",
+			"link": "#angularAPI/service/document"
+		},
+		{ 
+			"title": "$exceptionHandler",
+			"sortContent": "Any uncaught exception in angular expressions is delegated to this service. The default implementation simply delegates to <code>$log.error</code> which logs it into the browser console.",
+			"keyword": "",
+			"link": "#angularAPI/service/exceptionHandler"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$filter",
+			"sortContent": "Filters are used for formatting data displayed to the user.",
+			"keyword": "",
+			"link": "#angularAPI/service/filter"
+		},
+		{ 
+			"title": "$httpParamSerializer",
+			"sortContent": "Default <code>$http</code> params serializer that converts objects to strings according to the following rules:",
+			"keyword": "",
+			"link": "#angularAPI/service/httpParamSerializer"
+		},
+		{ 
+			"title": "$httpParamSerializerJQLike",
+			"sortContent": "Alternative <code>$http</code> params serializer that follows jQuery's <code>param()</code> method logic. The serializer will also sort the params alphabetically.",
+			"keyword": "",
+			"link": "#angularAPI/service/httpParamSerializerJQLike"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$http",
+			"sortContent": "The <code>$http</code> service is a core Angular service that facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object or via JSONP.",
+			"keyword": "",
+			"link": "#angularAPI/service/http"
+		},
+		{ 
+			"title": "$httpBackend",
+			"sortContent": "HTTP backend used by the service that delegates to XMLHttpRequest object or JSONP and deals with browser incompatibilities.",
+			"keyword": "",
+			"link": "#angularAPI/service/httpBackend"
+		},
+		{ 
+			"title": "$interpolate",
+			"sortContent": "Compiles a string with markup into an interpolation function. This service is used by the HTML $compile service for data binding. See $interpolateProvider for configuring the interpolation markup.",
+			"keyword": "",
+			"link": "#angularAPI/service/interpolate"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$interval",
+			"sortContent": "Angular's wrapper for <code><span class='pln'>window</span><span class='pun'>.</span><span class='pln'>setInterval</span></code>. The <code><span class='pln'>fn</span></code> function is executed every <code><span class='pln'>delay</span></code> milliseconds.",
+			"keyword": "",
+			"link": "#angularAPI/service/interval"
+		},
+		{ 
+			"title": "$locale",
+			"sortContent": "$locale service provides localization rules for various Angular components. As of right now the only public api is:",
+			"keyword": "",
+			"link": "#angularAPI/service/locale"
+		},
+		{ 
+			"title": "$location",
+			"sortContent": "The $location service parses the URL in the browser address bar (based on the window.location) and makes the URL available to your application. Changes to the URL in the address bar are reflected into $location service and changes to $location are reflected into the browser address bar.",
+			"keyword": "",
+			"link": "#angularAPI/service/location"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$log",
+			"sortContent": "Simple service for logging. Default implementation safely writes the message into the browser's console (if present).",
+			"keyword": "",
+			"link": "#angularAPI/service/log"
+		},
+		{ 
+			"title": "$parse",
+			"sortContent": "Converts Angular expression into a function.",
+			"keyword": "",
+			"link": "#angularAPI/service/parse"
+		},
+		{ 
+			"title": "$q",
+			"sortContent": "A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.",
+			"keyword": "",
+			"link": "#angularAPI/service/q"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$rootElement",
+			"sortContent": "The root element of Angular application. This is either the element where ngApp was declared or the element passed into <code>angular.bootstrap</code>. The element represents the root element of application. It is also the location where the application's $injector service gets published, and can be retrieved using <code>$rootElement.injector()</code>.",
+			"keyword": "",
+			"link": "#angularAPI/service/rootElement"
+		},
+		{ 
+			"title": "$rootScope",
+			"sortContent": "Every application has a single root scope. All other scopes are descendant scopes of the root scope. Scopes provide separation between the model and the view, via a mechanism for watching the model for changes. They also provide an event emission/broadcast and subscription facility. See the developer guide on scopes.",
+			"keyword": "",
+			"link": "#angularAPI/service/rootScope"
+		},
+		{ 
+			"title": "$sceDelegate",
+			"sortContent": "<code>$sceDelegate</code> is a service that is used by the <code>$sce</code> service to provide Strict Contextual Escaping (SCE) services to AngularJS.",
+			"keyword": "",
+			"link": "#angularAPI/service/sceDelegate"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$sce",
+			"sortContent": "<code>$sce</code> is a service that provides Strict Contextual Escaping services to AngularJS.",
+			"keyword": "",
+			"link": "#angularAPI/service/sce"
+		},
+		{ 
+			"title": "$templateRequest",
+			"sortContent": "The <code><span class='pln'>$templateRequest</span></code> service runs security checks then downloads the provided template using <code><span class='pln'>$http</span></code> and, upon success, stores the contents inside of <code><span class='pln'>$templateCache</span></code>. If the HTTP request fails or the response data of the HTTP request is empty, a <code><span class='pln'>$compile</span></code> error will be thrown (the exception can be thwarted by setting the 2nd parameter of the function to true). Note that the contents of <code><span class='pln'>$templateCache</span></code> are trusted, so the call to <code><span class='pln'>$sce</span><span class='pun'>.</span><span class='pln'>getTrustedUrl</span><span class='pun'>(</span><span class='pln'>tpl</span><span class='pun'>)</span></code> is omitted when <code><span class='pln'>tpl</span></code> is of type string and <code><span class='pln'>$templateCache</span></code> has the matching entry.",
+			"keyword": "",
+			"link": "#angularAPI/service/templateRequest"
+		},
+		{ 
+			"title": "$timeout",
+			"sortContent": "Angular's wrapper for <code>window.setTimeout</code>. The <code>fn</code> function is wrapped into a try/catch block and delegates any exceptions to $exceptionHandler service.",
+			"keyword": "",
+			"link": "#angularAPI/service/timeout"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$window",
+			"sortContent": "A reference to the browser's <code>window</code> object. While <code>window</code> is globally available in JavaScript, it causes testability problems, because it is a global variable. In angular we always refer to it through the <code>$window</code> service, so it may be overridden, removed or mocked for testing.",
+			"keyword": "",
+			"link": "#angularAPI/service/window"
+		},
 		
+		{ 	"type": "clearfix"	}
 	]
 }

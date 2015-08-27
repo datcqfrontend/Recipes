@@ -6,23 +6,92 @@
 		},
 
 		{ 
-			"title": "angular.lowercase",
-			"sortContent": "Converts the specified string to lowercase.",
+			"title": "$anchorScrollProvider",
+			"sortContent": "Use <code><span class='pln'>$anchorScrollProvider</span></code> to disable automatic scrolling whenever <a href='api/ng/service/$location#hash'>$location.hash()</a> changes.",
 			"keyword": "",
-			"link": "#angularAPI/function/lowercase"
+			"link": "#angularAPI/provider/anchorScrollProvider"
 		},
 		{ 
-			"title": "angular.uppercase",
-			"sortContent": "Converts the specified string to uppercase.",
+			"title": "$animateProvider",
+			"sortContent": "Default implementation of $animate that doesn't perform any animations, instead just synchronously performs DOM updates and resolves the returned runner promise.",
 			"keyword": "",
-			"link": "#angularAPI/function/uppercase"
+			"link": "#angularAPI/provider/animateProvider"
 		},
 		{ 
-			"title": "angular.forEach",
-			"sortContent": "Invokes the iterator function once for each item in obj collection, which can be either an object or an array.<br>The iterator function is invoked with iterator(value, key, obj), where value is the value of an object property or an array element, key is the object property key or array element index and obj is the obj itself.<br>Specifying a context for the function is optional.",
+			"title": "$compileProvider",
+			"sortContent": "",
 			"keyword": "",
-			"link": "#angularAPI/function/forEach"
+			"link": "#angularAPI/provider/compileProvider"
 		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$controllerProvider",
+			"sortContent": "The $controller service is used by Angular to create new controllers.",
+			"keyword": "",
+			"link": "#angularAPI/provider/controllerProvider"
+		},
+		{ 
+			"title": "$filterProvider",
+			"sortContent": "Filters are just functions which transform input to an output. However filters need to be Dependency Injected. To achieve this a filter definition consists of a factory function which is annotated with dependencies and is responsible for creating a filter function.",
+			"keyword": "",
+			"link": "#angularAPI/provider/filterProvider"
+		},
+		{ 
+			"title": "$httpProvider",
+			"sortContent": "Use <code><span class='pln'>$httpProvider</span></code> to change the default behavior of the <a href='api/ng/service/$http'>$http</a> service.",
+			"keyword": "",
+			"link": "#angularAPI/provider/httpProvider"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$interpolateProvider",
+			"sortContent": "Used for configuring the interpolation markup. Defaults to <code><span class='pun'>{{</span></code> and <code><span class='pun'>}}</span></code>.",
+			"keyword": "",
+			"link": "#angularAPI/provider/interpolateProvider"
+		},
+		{ 
+			"title": "$locationProvider",
+			"sortContent": "Use the <code><span class='pln'>$locationProvider</span></code> to configure how the application deep linking paths are stored.",
+			"keyword": "",
+			"link": "#angularAPI/provider/locationProvider"
+		},
+		{ 
+			"title": "$logProvider",
+			"sortContent": "Use the <code><span class='pln'>$logProvider</span></code> to configure how the application logs messages",
+			"keyword": "",
+			"link": "#angularAPI/provider/logProvider"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$parseProvider",
+			"sortContent": "<code><span class='pln'>$parseProvider</span></code> can be used for configuring the default behavior of the <a href='api/ng/service/$parse'>$parse</a> service.",
+			"keyword": "",
+			"link": "#angularAPI/provider/parseProvider"
+		},
+		{ 
+			"title": "$rootScopeProvider",
+			"sortContent": "Provider for the $rootScope service.",
+			"keyword": "",
+			"link": "#angularAPI/provider/rootScopeProvider"
+		},
+		{ 
+			"title": "$sceDelegateProvider",
+			"sortContent": "The <code><span class='pln'>$sceDelegateProvider</span></code> provider allows developers to configure the <a href='api/ng/service/$sceDelegate'>$sceDelegate</a> service.  This allows one to get/set the whitelists and blacklists used to ensure that the URLs used for sourcing Angular templates are safe.  Refer <a href='api/ng/provider/$sceDelegateProvider#resourceUrlWhitelist'>$sceDelegateProvider.resourceUrlWhitelist</a> and <a href='api/ng/provider/$sceDelegateProvider#resourceUrlBlacklist'>$sceDelegateProvider.resourceUrlBlacklist</a>",
+			"keyword": "",
+			"link": "#angularAPI/provider/sceDelegateProvider"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "$sceProvider",
+			"sortContent": "The $sceProvider provider allows developers to configure the <a href='api/ng/service/$sce'>$sce</a> service. <ul> <li>enable/disable Strict Contextual Escaping (SCE) in a module</li> <li>override the default implementation with a custom delegate</li> </ul>",
+			"keyword": "",
+			"link": "#angularAPI/provider/sceProvider"
+		},
+		
 		{ 	"type": "clearfix"	}
 
 		

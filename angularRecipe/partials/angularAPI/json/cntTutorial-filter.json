@@ -6,25 +6,63 @@
 		},
 
 		{ 
-			"title": "angular.lowercase",
-			"sortContent": "Converts the specified string to lowercase.",
+			"title": "filter",
+			"sortContent": "Selects a subset of items from <code>array</code> and returns it as a new array.",
 			"keyword": "",
-			"link": "#angularAPI/function/lowercase"
+			"link": "#angularAPI/filter/filter"
 		},
 		{ 
-			"title": "angular.uppercase",
-			"sortContent": "Converts the specified string to uppercase.",
+			"title": "currency",
+			"sortContent": "Formats a number as a currency (ie $1,234.56). When no currency symbol is provided, default symbol for current locale is used.",
 			"keyword": "",
-			"link": "#angularAPI/function/uppercase"
+			"link": "#angularAPI/filter/currency"
 		},
 		{ 
-			"title": "angular.forEach",
-			"sortContent": "Invokes the iterator function once for each item in obj collection, which can be either an object or an array.<br>The iterator function is invoked with iterator(value, key, obj), where value is the value of an object property or an array element, key is the object property key or array element index and obj is the obj itself.<br>Specifying a context for the function is optional.",
+			"title": "number",
+			"sortContent": "Formats a number as text.",
 			"keyword": "",
-			"link": "#angularAPI/function/forEach"
+			"link": "#angularAPI/filter/number"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "date",
+			"sortContent": "Formats <code>date</code> to a string based on the requested <code>format</code>.",
+			"keyword": "",
+			"link": "#angularAPI/filter/date"
+		},
+		{ 
+			"title": "json",
+			"sortContent": "Allows you to convert a JavaScript object into JSON string.",
+			"keyword": "",
+			"link": "#angularAPI/filter/json"
+		},
+		{ 
+			"title": "lowercase",
+			"sortContent": "Converts string to lowercase.",
+			"keyword": "",
+			"link": "#angularAPI/filter/lowercase"
+		},
+		{ 	"type": "clearfix"	},
+
+		{ 
+			"title": "uppercase",
+			"sortContent": "Converts string to uppercase.",
+			"keyword": "",
+			"link": "#angularAPI/filter/uppercase"
+		},
+		{ 
+			"title": "limitTo",
+			"sortContent": "Creates a new array or string containing only a specified number of elements. The elements are taken from either the beginning or the end of the source array, string or number, as specified by the value and sign (positive or negative) of <code>limit</code>. If a number is used as input, it is converted to a string.",
+			"keyword": "",
+			"link": "#angularAPI/filter/limitTo"
+		},
+		{ 
+			"title": "orderBy",
+			"sortContent": "Orders a specified <code>array</code> by the <code>expression</code> predicate. It is ordered alphabetically for strings and numerically for numbers. Note: if you notice numbers are not being sorted as expected, make sure they are actually being saved as numbers and not strings.",
+			"keyword": "",
+			"link": "#angularAPI/filter/orderBy"
 		},
 		{ 	"type": "clearfix"	}
-
-		
 	]
 }
