@@ -1,0 +1,137 @@
+<div class="analytics section">
+
+    <div class="container">
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Introduction to Analytics.js</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        Analytics.js is a JavaScript library for measuring how users interact with your website. It is similar to the previous tracking library, ga.js, but offers more flexibility for developers to customize their implementations.
+                    </p>
+
+                    <p>
+                        The analytics.js snippet is part of Universal Analytics. If you're using Classic Analytics (ga.js) visit the <spanRed>Upgrade Center</spanRed> to learn how to migrate your property to analytics.js.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Quick Start</h3> </div>
+                  <div class="panel-body">  
+                    <p>
+                        To begin tracking a website using analytics.js, paste the following JavaScript snippet into your website templates so that it appears before the closing <code>&lt;/head&gt;</code> tag. The <code>'UA-XXXX-Y'</code> parameter must be replaced with the Property ID for the Google Analytics Property you wish to track.
+
+                        <br><b>Note:</b> If you do not know your Property ID, you can use the Account Explorer to find it.
+                    </p>
+
+                    <codeBody>
+                        &lt;!-- Google Analytics --&gt;
+                        <br>&lt;script&gt;
+                        <br>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        <br>(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        <br>m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        <br>})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                        <br>
+                        <br><spanYellow>ga('create', 'UA-XXXX-Y', 'auto');</spanYellow>
+                        <br><spanYellow>ga('send', 'pageview');</spanYellow>
+                        <br>
+                        <br>&lt;/script&gt;
+                        <br>&lt;!-- End Google Analytics --&gt;
+                    </codeBody>
+                    <br>
+                    <p>
+                        When this code runs, it asynchronously loads the analytics.js library onto the page, creates a tracker object for the property you specified via the <code>'UA-XXXX-Y'</code> parameter, and then sends a pageview hit for the current page to Google Analytics.
+                    </p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>How analytics.js works</h3> </div>
+                  <div class="panel-body">  
+                    <p>The JavaScript snippet above works by default for most websites. It will record pageviews for every page on your site containing that code.</p>
+
+                    <p>To measure more than pageviews (e.g. events, exceptions, social interaction) you will need additional code. The following sections provide a basic understanding of how the analytics.js library works to help you write your own custom implementation(s).</p>
+
+                    <h3>The <code>ga</code> function</h3>
+                    <p>The <code>ga</code> function provides a single access point for everything in the analytics.js library. Having a single function that does everything allows the JavaScript snippet to be very small, and it minimizes the chances that the analytics.js library will conflict with other code on the page.</p>
+                    <p>The JavaScript snippet above initially defines the <code>ga</code> function as a simple queue. All arguments passed to it are stored in an internal array. Once the analytics.js library is loaded, each call in the queue is executed and the <code>ga</code> function is redefined so all subsequent calls execute immediately. Initializing the <code>ga</code> function as a queue gives developers a consistent API to use regardless of whether the analytics.js library has finished loading.
+                    </p>
+                    <p>It's important to note that although all tracking calls are made via the <code>ga</code> function, the <code>ga</code> function is not the tracker object itself. Tracker objects are stored privately and made accessible through the <code>ga</code> function's interface.
+                    </p>
+
+                    <h3>Creating a tracker</h3>
+                    <p>Tracker objects (also known as "trackers") are objects that can collect data and send that data as a Measurement Protocol hit to a Google Analytics property.</p>
+                    <p>When a new tracker object is created, analytics.js gathers information about the current browsing context and stores that information on the tracker. This includes the client ID (which it reads from the cookie or creates if the cookie doesn't exist), information about the page such as its title and URL, and information about the device such as screen resolution, viewport size, and document encoding. When it's time to send hits to Google Analytics, all of the information currently stored on the tracker gets sent.</p>
+                    <p>To create a tracker, call the <code>create</code> method and pass it the Google Analytics property ID as well as an optional configuration object.</p>
+                    <p>The following code creates a tracker for the property <code>'UA-XXXX-Y'</code> and passes the <code>'auto'</code> option to signify automatic cookie domain configuration. Note, the <code>'auto'</code> option is recommended for most implementations.</p>
+
+                    <codeBody>
+                        <spanYellow>ga('create', 'UA-XXXX-Y', 'auto');</spanYellow>
+                    </codeBody>
+                    <br>
+
+                    <h3>Sending hits</h3>
+                    <p>The last line in the JavaScript snippet invokes the <code>send</code> method and sends a pageview hit to Google Analytics.</p>
+                    <codeBody>
+                        <spanYellow>ga('create', 'UA-XXXX-Y', 'auto');</spanYellow>
+                        <br><spanYellow>ga('send', 'pageview');</spanYellow>
+                    </codeBody>
+                    <br>
+                    <p>The data that gets sent is whatever data is currently stored on the tracker object that was created in the previous line of code.</p>
+                    <p><b>Note:</b> The <code>send</code> method uses the data stored on the current tracker, but it never references that tracker in its call. This works because most websites only create one tracker, so analytics.js optimizes for this case. When using the <code>send</code> method without specifying a tracker name, the default tracker (the first one created) is assumed. For information about using analytics.js with more than one tracker, see the Working with multiple tracking object section of the Advanced configuration guide.</p>
+
+                    <p>When sending hits, you can also override the data that is sent. The <code>send</code> method accepts an optional object of field/value pairs that will be used for that hit only.</p>
+                    <codeBody>
+                        <spanYellow>ga('send', 'pageview', {
+                        <br>&nbsp;&nbsp;&nbsp;  page: '/about',
+                        <br>&nbsp;&nbsp;&nbsp;  title: 'About Us'
+                        <br>});</spanYellow>
+                    </codeBody>
+                    <br>
+                    <p>It's important to emphasize that these overrides will only apply to the current hit that's being sent. They will not update the data stored on the tracker object, and they will not be applied to subsequent hits.</p>
+
+                    <p>For single page applications or other sites that load new content dynamically, it's usually better to update the tracker object itself rather than specify overrides in a <code>send</code> call. Keeping the tracker object as the single source of truth will help ensure all the data you send to Google Analytics is correct.
+                    </p>
+
+                    <h3>Updating a tracker</h3>
+                    <p>Tracker objects can be updated using the <code>set</code> method.</p>
+
+                    <codeBody>
+                        // Set a single field.
+                        <br><spanYellow>ga('set', 'page', '/about');</spanYellow>
+                        <br>
+                        <br>// Set multiple fields.
+                        <br><spanYellow>ga('set', {
+                        <br>&nbsp;&nbsp;&nbsp;  page: '/about',
+                        <br>&nbsp;&nbsp;&nbsp;  title: 'About Us'
+                        <br>});</spanYellow>
+                    </codeBody>
+                    <br>
+                    <p><b>Note:</b> as with the send method, calling set without specifying a tracker name will update the default tracker object.</p>
+
+                    <p>Once a tracker object has been updated, future calls to <code>send</code> will use the updated data rather than the original data gathered at creation time.</p>
+
+                    <p><b>Note:</b> Tracker objects do not update themselves. If a user changes the size of the window, or if code running on the page updates the URL, tracker objects do not automatically capture this information. In order for the tracker object to reflect these changes, you must manually update it.</p>
+                  </div>
+                </div>
+            </div> 
+
+            
+
+        </div>       
+        <!-- /.row -->
+
+        <div ng-include='"templates/pager.html"'></div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+

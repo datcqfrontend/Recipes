@@ -81,7 +81,8 @@ function activeNavBar(){
 		$('.navbar li#group-js').addClass(fw.currentGroupName+' active');
 	}else if(fw.currentGroupName=='angular' || fw.currentGroupName=='angularAPI'){
 		$('.navbar li#group-angular').addClass(fw.currentGroupName+' active');
-	}else if(fw.currentGroupName=='requirejs' || fw.currentGroupName=='gruntjs'){
+	}else if(fw.currentGroupName=='requirejs' || fw.currentGroupName=='gruntjs' || fw.currentGroupName=='googleAnalyticsJs'){
 		$('.navbar li#group-more').addClass(fw.currentGroupName+' active');
 	}
+
 }

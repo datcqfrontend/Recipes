@@ -252,6 +252,9 @@ spanRed, .spanRed {
   .navbar-nav > #group-angular.angular.active>a, .navbar-nav > #group-angular #angular.active>a {    background-color: #B92933; background-image: none;}
   .navbar-nav > #group-angular.angularAPI.active>a, .navbar-nav > #group-angular #angularAPI.active>a {    background-color: #B92933; background-image: none;}
 
+  .navbar-nav > #group-more.googleAnalyticsJs.active>a, .navbar-nav > #group-more #googleAnalyticsJs.active>a {    background-color: #FB8C00; background-image: none;}
+  
+
 /* END NAVBAR*/
  
 /* HTML5 */
@@ -416,3 +419,16 @@ spanRed, .spanRed {
 
 
 /* END REQUIREJS */
+
+/* ANALYTICS */
+  .analytics .jumbotron-page {
+      background-color: #EF6C00;
+      color: #fff;
+  }
+
+  .analytics a.btn-link {
+    margin-left: 85%;
+  }
+
+
+/* END ANALYTICS */

@@ -487,6 +487,40 @@ var fw = {
 					{"page":"optimization", "topic":"Optimization", "breadcrumb":"Optimization"  }
 				],
 
+				"analytics":[
+					{"page":"tutorial"  },
+
+					{"page":"intro", "topic":"Introduction", "breadcrumb":"Introduction"  },
+					{"page":"advanced", "topic":"Advanced Configuration", "breadcrumb":"Advanced Configuration"  },
+					{"page":"screen", "topic":"App/Screen Tracking", "breadcrumb":"App/Screen Tracking"  },
+
+					{"page":"crossDomainTracking", "topic":"Cross Domain Tracking", "breadcrumb":"Cross Domain Tracking"  },
+					{"page":"customDimensionsMetrics", "topic":"Custom Dimensions & Metrics", "breadcrumb":"Custom Dimensions & Metrics"  },
+					{"page":"displayFeatures", "topic":"Display Features", "breadcrumb":"Display Features"  },
+
+					{"page":"domainsCookies", "topic":"Domains & Cookies", "breadcrumb":"Domains & Cookies"  },
+					{"page":"ecommerce", "topic":"Ecommerce", "breadcrumb":"Ecommerce"  },
+					{"page":"enhancedEcommerce", "topic":"Enhanced Ecommerce", "breadcrumb":"Enhanced Ecommerce"  },
+
+					{"page":"eventTracking", "topic":"Event Tracking", "breadcrumb":"Event Tracking"  },
+					{"page":"exeptionTracking", "topic":"Exception Tracking", "breadcrumb":"Exception Tracking"  },
+					{"page":"experiments", "topic":"Experiments", "breadcrumb":"Experiments"  },
+
+					{"page":"pageTracking", "topic":"Page Tracking", "breadcrumb":"Page Tracking"  },
+					{"page":"plugins", "topic":"Plugins", "breadcrumb":"Plugins"  },
+					{"page":"socialInteractions", "topic":"Social Interactions", "breadcrumb":"Social Interactions"  },
+
+					{"page":"tasks", "topic":"Tasks", "breadcrumb":"Tasks"  },
+					{"page":"userId", "topic":"User ID", "breadcrumb":"User ID"  },
+					{"page":"userTimings", "topic":"User Timings", "breadcrumb":"User Timings"  },
+
+					{"page":"singlePageApplications", "topic":"Single Page Applications", "breadcrumb":"Single Page Applications"  },
+					{"page":"cookieUsage", "topic":"Cookie Usage", "breadcrumb":"Cookie Usage"  },
+					{"page":"limitsQuotas", "topic":"Limits And Quotas", "breadcrumb":"Limits And Quotas"  }
+
+					
+				],
+
 				"about":[],
 				"contact":[]
 			}
