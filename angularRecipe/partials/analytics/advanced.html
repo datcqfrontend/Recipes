@@ -6,14 +6,460 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Advanced Configuration - Web Tracking (analytics.js)</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>This document provides an overview of the analytics.js collection library.</p>
                   </div>
                 </div>
             </div> 
 
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>The JavaScript Snippet</h3> </div>
+                  <div class="panel-body">  
+                    <p>To enable Google Analytics on your site, you add a piece of JavaScript before the closing <code>&lt;/head&gt;</code> tag of your page. Here's a portion of the snippet:</p>
+                    <codeBody>
+                        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        <br>(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        <br>m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        <br>})<spanYellow>(window,document,'script','//www.google-analytics.com/analytics.js','ga')</spanYellow>;
+                    </codeBody>
+                    <br>
+
+                    <p>When the snippet runs, it first creates an new global function named <code>ga</code>. Next, the snippet asynchronously loads the analytics.js library onto the page.</p>
+
+                    <p>The <code>ga</code> global function is the main way you interact with the analytics.js library. The function accepts a sequence of parameters, where the first parameter represents a Google Analytics command. For example, in the default snippet:</p>
+
+                    <codeBody>
+                        <spanYellow>ga('create', 'UA-XXXX-Y', 'auto');</spanYellow>  // Creates a tracker.
+                        <br><spanYellow>ga('send', 'pageview');</spanYellow>    // Sends a pageview.
+                    </codeBody>
+                    <br>
+
+                    <p>The first line calls the <code>create</code> command, and the second line calls the <code>send</code> command.</p>
+
+                    <p>Even though the JavaScript loads the analytics.js library asynchronously, the <code>ga</code> function is designed to be used before the library has loaded. When you first start executing commands, each command is added to a queue. Once the library is done loading, all commands in the queue are executed, and new commands are executed immediately. This lets developers ignore the asynchronous nature of Google Analytics and focus on using the <code>ga</code> function.</p>
+
+                    <h3>Renaming the Global Object</h3>
+                    <p>In some cases the <code>ga</code> variable name might already be used by an existing object on your page. To avoid overriding your existing object, you can rename the <code>ga</code> function, for example to <code>__gaTracker</code>. To do this, simply replace the <code>ga</code> parameter in the snippet above:</p>
+                    <codeBody>
+                        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        <br>(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        <br>m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        <br>})<spanYellow>(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker')</spanYellow>;
+                    </codeBody>
+                    <br>
+
+                    <p>Then you can use <code>__gaTracker</code> instead of <code>ga</code> when calling commands:</p>
+                    <codeBody>
+                        <spanYellow>__gaTracker('create', 'UA-XXXX-Y', 'auto');</spanYellow>  // Creates a tracker.
+                        <br><spanYellow>__gaTracker('send', 'pageview');</spanYellow>    // Sends a pageview.
+                    </codeBody>
+                    <br>
+
+                    <h3>JavaScript Snippet Reference</h3>
+                    <p>The following reference shows the basic JavaScript snippet with comments and whitespace added:</p>
+
+                    <codeBody>
+                        &lt;!-- Google Analytics --&gt;
+                        <br>&lt;script&gt;
+                        <br>/**
+                        <br> * Creates a temporary global ga object and loads analy  tics.js.
+                        <br> * Paramenters o, a, and m are all used internally.  They could have been declared using 'var',
+                        <br> * instead they are declared as parameters to save 4 bytes ('var ').
+                        <br> *
+                        <br> * @param {Window}      i The global context object.
+                        <br> * @param {Document}    s The DOM document object.
+                        <br> * @param {string}      o Must be 'script'.
+                        <br> * @param {string}      g URL of the analytics.js script. Inherits protocol from page.
+                        <br> * @param {string}      r Global name of analytics object.  Defaults to 'ga'.
+                        <br> * @param {DOMElement?} a Async script tag.
+                        <br> * @param {DOMElement?} m First script tag in document.
+                        <br> */
+                        <br>(function(i, s, o, g, r, a, m){
+                        <br>  i['GoogleAnalyticsObject'] = r; // Acts as a pointer to support renaming.
+                        <br>
+                        <br>  // Creates an initial ga() function.  The queued commands will be executed once analytics.js loads.
+                        <br>  i[r] = i[r] || function() {
+                        <br>    (i[r].q = i[r].q || []).push(arguments)
+                        <br>  },
+                        <br>
+                        <br>  // Sets the time (as an integer) this tag was executed.  Used for timing hits.
+                        <br>  i[r].l = 1 * new Date();
+                        <br>
+                        <br>  // Insert the script tag asynchronously.  Inserts above current tag to prevent blocking in
+                        <br>  // addition to using the async attribute.
+                        <br>  a = s.createElement(o),
+                        <br>  m = s.getElementsByTagName(o)[0];
+                        <br>  a.async = 1;
+                        <br>  a.src = g;
+                        <br>  m.parentNode.insertBefore(a, m)
+                        <br>})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+                        <br>
+                        <br>ga('create', 'UA-XXXX-Y', 'auto'); // Creates the tracker with default parameters.
+                        <br>ga('send', 'pageview');            // Sends a pageview hit.
+                        <br>&lt;/script&gt;
+                        <br>&lt;!-- End Google Analytics --&gt;
+                    </codeBody>
+                    <br>
+
+                    <h3>Alternative Asynchronous Snippet</h3>
+                    <p>While the canonical analytics.js snippet described above ensures the script will be loaded and executed asynchronously on all browsers, it has the disadvantage of not allowing modern browsers to preload the script.</p>
+
+                    <p>The alternative snippet below adds support for preloading, which will provide a small performance boost on modern browsers, but can degrade to synchronous loading and execution on IE 9 and older mobile browsers which do not recognize the <code>async</code> attribute. We suggest you use this snippet if your visitors primarily use modern browsers to access your site.</p>
+
+                    <codeBody>
+                        &lt;!-- Google Analytics --&gt;
+                        <br>&lt;script <spanYellow>async</spanYellow> src='//www.google-analytics.com/analytics.js'&gt;&lt;/script&gt;
+                        <br>&lt;script&gt;
+                        <br>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                        <br>ga('create', 'UA-XXXX-Y', 'auto');
+                        <br>ga('send', 'pageview');
+                        <br>&lt;/script&gt;
+                        <br>&lt;!-- End Google Analytics --&gt;
+                    </codeBody>
+                  </div>
+                </div>
+            </div> 
             
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Creating Tracker Objects</h3> </div>
+                  <div class="panel-body">  
+                    <p>To send data to Google Analytics, you must create a tracking object. Each tracking object can send data to a single Google Analytics web property. To create a tracking object, the default snippet uses the following code:</p>
+
+                    <codeBody>
+                        <spanYellow>ga('create', 'UA-XXXX-Y', 'auto');</spanYellow>
+                    </codeBody>
+                    <br>
+
+                    <p>Where the first parameter to the ga function is the create command, and the second parameter is the web property ID to which to send data.</p>
+                    <p><b>Note:</b> You must replace the value UA-XXXX-Y with the property ID listed in the management interface within Google Analytics.</p>
+
+                    <h3>Customizing Tracker Objects</h3>
+                    <p>All tracking object customization must be done when the object is initially created, by passing the <code>ga</code> function a configuration object as the last parameter. For example to override some of the cookie settings, you would use:</p>
+                    <codeBody>
+                        ga('create', 'UA-12345-6', {
+                        <br>&nbsp;&nbsp;&nbsp;   <spanYellow>'cookieDomain': 'foo.example.com',
+                        <br>&nbsp;&nbsp;&nbsp;   'cookieName': 'myNewName',
+                        <br>&nbsp;&nbsp;&nbsp;   'cookieExpires': 20000</spanYellow>
+                        <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>In the example above, the cookie domain, name, and expiration time have all been modified through the optional configuration object.</p>
+
+                    <p>Read the create only section in the Field Reference document for complete details on all the fields that may be configured in the create command.</p>
+
+                    <h3>Testing on localhost</h3>
+                    <p>In some cases you might want to test analytics.js from a webserver running on localhost. To set analytics.js cookies, you need to disable the default cookie domain using:</p>
+                    <codeBody>
+                        ga('create', 'UA-12345-6', {
+                        <br>&nbsp;&nbsp;&nbsp;   <spanYellow>'cookieDomain': 'none'</spanYellow>
+                        <br>});
+                    </codeBody>
+                    <br>
+
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Sending Data</h3> </div>
+                  <div class="panel-body">  
+                    <p>Once a tracking object is created and associated with a web property, you can use the <code>send</code> command to send data to that web property. The data you send to Google Analytics is called a <code>Hit</code>, and the analytics.js library allows you to send various types of data by specifying a <code>hitType</code>. When you use the <code>send</code> command, you must also specify the <code>hitType</code> of data you want to send.</p>
+
+                    <p>For example to send a pageview hit, you use:</p>
+                    <codeBody>
+                        ga('send', 'pageview');
+                    </codeBody>
+                    <br>
+                    <p>This sends data for the default URL to Google Analytics.</p>
+
+                    <h3>Field Name Object</h3>
+                    <p>In some cases you might want to override multiple values that are sent as a pageview. The analytics.js library allows you to pass a field name object as the last parameter in the <code>send</code> command. This is useful as it allows you to set many additional properties of the pageview, for example the page title:</p>
+                    <codeBody>
+                        ga('send', 'pageview', {
+                        <br>&nbsp;&nbsp;&nbsp;   <spanYellow>'page': '/my-new-page',</spanYellow>
+                        <br>&nbsp;&nbsp;&nbsp;   <spanYellow>'title': 'My New Page Title'</spanYellow>
+                        <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>Read the <a href="#/analytics/fieldReference"><spanRed>Field Reference</spanRed></a> document for complete details on all the ways a tracker object may be configured.</p>
+
+                    <h3>Setting the Hit Callback</h3>
+                    <p>In some cases, like when you track outbound links, you might want to know when the tracker is done sending data. That way you can send a user to their destination only after their click has been reported to Google Analytics. To solve this, the <code>send</code> command allows you to specify a <code>hitCallback</code> function in the field name object that will execute as soon as analytics.js has completed sending data. Here's how to set the <code>hitCallback</code> function:</p>
+                    <codeBody>
+                        ga('send', 'pageview', {
+                        <br>&nbsp;&nbsp;&nbsp;   <spanYellow>'page': '/my-new-page',</spanYellow>
+                        <br>&nbsp;&nbsp;&nbsp;   <spanYellow>'hitCallback': function(){
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('analytics.js done sending data');                        
+                        <br>&nbsp;&nbsp;&nbsp;}</spanYellow>
+                        <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>In this example, the field name object configures both the <code>page</code> parameter, as well as setting the <code>hitCallback</code>. Once the tracker has completed sending data, an alert box will be shown to the user.</p>
+
+                    <h3>Setting Parameters Across Multiple Send Commands</h3>
+                    <p>In some cases you might want to set a parameter and have the value persist across multiple <code>send</code> commands. For example, if you have a webpage in which you want to track one pageview and two events. If you wanted to override the page path of each hit with your own custom path, you could either set the new path on each <code>send</code> command, or you can use the <code>set</code> method like this:</p>
+                    <codeBody>
+                        <spanYellow>ga('set', 'page', '/my-custom-page');</spanYellow>
+                        <br>
+                        <br>ga('send', 'pageview');
+                        <br>ga('send', 'event', 'image1', 'clicked');
+                        <br>ga('send', 'event', 'image2', 'clicked');
+                        
+                    </codeBody>
+                    <br>
+                    <p>When the following code is executed, the overridden page <code>/my-custom-page</code> will be sent for all 3 send commands.</p>
+
+                    <h3>Sending hits with useBeacon</h3>
+                    <p>To send hits using <code>navigator.sendBeacon</code>, set the <code>useBeacon</code> parameter to <code>true</code>. The <code>navigator.sendBeacon</code> method ensures that data is transmitted even if the user navigates away from your page or closes the browser before the request has completed. This is especially useful in cases where you wish to track an event just before a user navigates away from your site, without delaying the navigation.</p>
+
+                    <p><b>Note:</b> If the browser doesn't support sendBeacon, it will fall back to the default hit mechanism.</p>
+
+                    <codeBody>
+                        ga('send', 'event', 'click', 'download-me', <spanYellow>{useBeacon: true}</spanYellow>);                        
+                    </codeBody>
+                    <br>
+
+                    <h3>Pushing Functions</h3>
+                    <p>Sometimes you will want to execute code only once the analytics.js library has loaded. To do this you can pass a function as a parameter to the <code>ga</code> function.</p>
+
+                    <codeBody>
+                        ga(function() {
+                        <br>&nbsp;&nbsp;&nbsp;  alert('library done loading');
+                        <br>});
+                    </codeBody>
+                    <br>
+                    <p>Once the library is done loading, the user will see an alert box.</p>
+
+                    <h3>Getting Parameters</h3>
+                    <p>With analytics.js, you can retrieve any of the values that have been set in the tracking object using the <code>get</code> command. Because the tracker object is only created once the library has loaded, you must get parameters within a pushed function.</p>
+                    <codeBody>
+                        ga(function(tracker) {
+                        <br>&nbsp;&nbsp;&nbsp;  var defaultPage = tracker.get('page');
+                        <br>});
+                    </codeBody>
+                    <br>
+                    <p>In this example, the function uses a parameter named <code>tracker</code>. Once the library is done loading, the function will execute and the value of <code>tracker</code> will be the default tracking object that has been created as a result of the first <code>create</code> command. The <code>tracker</code> is then used to get the default page value.</p>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Forcing SSL (HTTPS)</h3> </div>
+                  <div class="panel-body">  
+                    <p>By default, Google Analytics will match the protocol of the host page when sending outbound requests. To force Google Analytics to always send data using SSL, even from insecure pages (HTTP), set the forceSSL field to <code>true</code>:</p>
+                    <codeBody>
+                        ga('create', 'UA-XXXX-Y', 'auto');
+                        <br><spanYellow>ga('set', 'forceSSL', true);<spanYellow>        // Send all data using SSL, even from insecure (HTTP) pages.
+                        <br>ga('send', 'pageview');
+                    </codeBody>
+                    <br>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Working with Multiple Tracking Objects</h3> </div>
+                  <div class="panel-body">  
+                    <p>In some cases you might want to send data to multiple web properties from a single page. This is useful for sites that have multiple owners overseeing sections of a site; each owner could view their own web property.</p>
+
+                    <p>To solve this, you must create a tracking object for each web property to which you want to send data:</p>
+
+                    <codeBody>
+                        ga('create', 'UA-XXXX-Y', 'auto');
+                        <br><spanYellow>ga('create', 'UA-12345-6', 'auto', {'name': 'newTracker'});</spanYellow>  // New tracker.
+                    </codeBody>
+                    <br>
+
+                    <p>Once run, two tracker objects will be created. The first tracker will be the default tracking object, and not have a name. The second tracker will have the name of <code>newTracker</code>.</p>
+
+                    <p>To send a pageview using both trackers, you prepend the name of the tracker to the beginning of the command, followed by a dot. So for example:</p>
+                    <codeBody>
+                        ga('send', 'pageview');
+                        <br><spanYellow>ga('newTracker.send', 'pageview');</spanYellow>  // // Send page view for new tracker.
+                    </codeBody>
+                    <br>
+
+                    <p>Would send a pageview to both default and new trackers.</p>
+                    <p>To access a tracker object by name within a function, you use the <code>getByName</code> method:</p>
+                    <codeBody>
+                        ga(function() {
+                        <br>&nbsp;&nbsp;&nbsp;  <spanYellow>var newTracker = ga.getByName('newTracker');</spanYellow>
+                        <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>To get an array of all the trackers that have been configured, use the <code>getAll</code> method:</p>
+                    <codeBody>
+                        ga(function() {
+                        <br>&nbsp;&nbsp;&nbsp;  <spanYellow>var allTrackers = ga.getAll();</spanYellow>
+                        <br>});
+                    </codeBody>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Enhanced Link Attribution</h3> </div>
+                  <div class="panel-body">  
+                    <p>Enhanced Link Attribution improves the accuracy of your In-Page Analytics report by automatically differentiating between multiple links to the same URL on a single page by using link element IDs.</p>
+
+                    <p>To enable enhanced link attribution:</p>
+                    <ol>    
+                        <li>Enable enhanced link attribution in the Admin UI of your Google Analytics account.</li>
+                        <li>Update your code on each page to load the Enhanced Link Attribution plug-in, as in this example:
+                            <codeBody>
+                                ga('create', 'UA-XXXX-Y', 'auto');
+                                <br><spanYellow>ga('require', 'linkid');</spanYellow>   // Load the plug-in. Note: this call will block until the plug-in is loaded.
+                                <br>ga('send', 'pageview');
+                            </codeBody>
+                        </li>
+                    </ol>
+
+                    <p><b>Note:</b> For the most accurate link attribution, each of the links on your page should have a unique element ID.</p>
+
+                    <h3>Customizing Enhanced Link Attribution</h3>
+                    <p>The enhanced link attribution plug-in differentiates between links to the same URL using the element IDs of a link or a parent element, as well as a cookie. You can customize how far up the DOM the plug-in will look for an element ID, as well as the behavior of this cookie, by providing configuration options when loading the plug-in:</p>
+
+                    <codeBody>
+                        ga('create', 'UA-XXXX-Y', 'auto');
+                        <br><spanYellow>ga('require', 'linkid', {</spanYellow>
+                        <br>&nbsp;&nbsp;&nbsp;           <spanYellow>'cookieName': '_ela',</spanYellow>        // Cookie name. _gali by default.
+                        <br>&nbsp;&nbsp;&nbsp;           <spanYellow>'duration': 45,</spanYellow>              // Cookie duration. 30 seconds by default.
+                        <br>&nbsp;&nbsp;&nbsp;           <spanYellow>'levels': 5}); </spanYellow>              // Max DOM levels from link to look for element ID. 3 by default.
+                        <br>ga('send', 'pageview');
+                    </codeBody>
+
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>IP Anonymization</h3> </div>
+                  <div class="panel-body">  
+                    <p>In some cases, you might need to anonymize the IP address of the hit (http request) sent to Google Analytics. You can anonymize the IP addresses for all the hits sent from a page (the lifetime of the tracker object) by using the <code>set</code> command and setting the <code>anonymizeIp</code> field to <code>true</code>:</p>
+
+                    <codeBody>
+                        <spanYellow>ga('set', 'anonymizeIp', true);</spanYellow>
+                    </codeBody>
+                    <br>
+
+                    <p>To anonymize the IP address of an individual hit, you can set the <code>anonymizeIp</code> field in the optional configuration object for that hit:</p>
+                    <codeBody>
+                        ga('send', 'pageview', {
+                        <br>&nbsp;&nbsp;&nbsp; <spanYellow>'anonymizeIp': true</spanYellow>
+                        <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>To learn more about how IP anonymization works, read the <spanRed>IP Anonymization in Google Analytics</spanRed> article in the help center.</p>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>User Opt-out</h3> </div>
+                  <div class="panel-body">  
+                    <p>In some cases, it may be necessary to disable the Google Analytics tracking code on a page without having to remove the JavaScript snippet. For example, you might do this if your site's privacy policy includes the ability for a user to opt-out of Google Analytics tracking.</p>
+
+                    <p>The analytics.js library now includes a window property that, when set to <code>true</code>, disables analytics.js from sending data to Google Analytics. When Google Analytics attempts to set a cookie or send data back to the Google Analytics servers, it will check for whether this property is set to true. If it is, it will have the same effect as if the user had the Google Analytics Opt-out Browser Plugin installed.</p>
+
+                    <p>To disable tracking, set the following window property to <code>true</code>:</p>
+
+                    <codeBody>
+                        <spanYellow>window['ga-disable-UA-XXXX-Y'] = true;</spanYellow>
+                    </codeBody>
+                    <br>
+
+                    <p>Where the value <code>UA-XXXX-Y</code> corresponds to the web property ID on which you would like to disable tracking.
+                    </p>
+
+                    <p>This window property must be set before the tracking code is called. This property must be set on each page where you want to disable Google Analytics tracking. If the property is not set or set to false then the tracking will work as usual.</p>
+
+                    <h3>Example</h3>
+                    <p>Here's a simple example of some code you can use to provide opt-out functionality for your users.</p>
+                    <p>First, add a new HTML link to your site to execute the opt-out logic:</p>
+
+                    <codeBody>
+                        <a href="javascript:gaOptout()">Click here to opt-out of Google Analytics</a>
+                    </codeBody>
+                    <br>
+
+                    <p>Then add the following snippet of code <spanRed>before</spanRed> the analytics.js code snippet. Make sure to replace the value of <code>gaProperty</code> from <code>UA-XXXX-Y</code> to the property used on your site. This is the same value that you pass to the <code>create</code> command.</p>
+
+                    <codeBody>
+                        &lt;script&gt;
+                        <br>// Set to the same value as the web property used on the site
+                        <br>var gaProperty = 'UA-XXXX-Y';
+                        <br>
+                        <br>// Disable tracking if the opt-out cookie exists.
+                        <br>var disableStr = 'ga-disable-' + gaProperty;
+                        <br>if (document.cookie.indexOf(disableStr + '=true') &gt; -1) {
+                        <br>&nbsp;&nbsp;&nbsp;  window[disableStr] = true;
+                        <br>}
+                        <br>
+                        <br>// Opt-out function
+                        <br>function gaOptout() {
+                        <br>&nbsp;&nbsp;&nbsp;  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                        <br>&nbsp;&nbsp;&nbsp;  window[disableStr] = true;
+                        <br>}
+                        <br>&lt;/script&gt;
+                    </codeBody>
+                    <br>
+
+                    <p>When a user clicks the opt-out HTML link, the custom <code>gaOptout</code> function will execute. It will set a cookie for a long time in the future and disable analytics.js data collection. When a user returns to this site, the script above will check to see if the opt-out cookie has been set. If it has, then the analytics.js data collection will also be disabled.</p>
+
+                    <p><b>Note:</b> This example code assumes that you are using a single web property on your site and are only using a single domain. It only provides an opt-out function which is based on a long-term cookie. If you require opt-in functionality or if your site uses multiple web properties or domains, you will need to modify this example code, write your own opt-out code, or use other opt-out tools.</p>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Debugging</h3> </div>
+                  <div class="panel-body">  
+                    <p>You can enable the debug version of <code>analytics.js</code> by using <code>analytics_debug.js</code>:</p>
+
+                    <codeBody>
+                        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        <br>(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        <br>m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        <br>})(window,document,'script',<spanYellow>'//www.google-analytics.com/analytics_debug.js'</spanYellow>,'ga');
+                        <br>ga('create', 'UA-XXXX-Y', 'auto');
+                        <br>ga('send', 'pageview');
+                    </codeBody>
+                    <br>
+
+                    <p>This should only be used temporarily or during development, as <code>analytics_debug.js</code> is larger and will delay hits to google-analytics.com.</p>
+
+                    <h3>Trace Debugging</h3>
+                    <p>Trace debugging will output more verbose information to the console. To enabled trace debugging, use <code>https://www.google-analytics.com/analytics_debug.js</code> and this line of code before the snippet.</p>
+
+                    <codeBody>
+                        <spanYellow>window.ga_debug = {trace: true};</spanYellow>
+                    </codeBody>
+
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->
