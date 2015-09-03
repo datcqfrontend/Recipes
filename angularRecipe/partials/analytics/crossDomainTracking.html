@@ -112,9 +112,46 @@
 
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Decorate Utility Method</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>To simplify appending linker parameters to URLs, analytics.js provides the <code>decorate</code> utility method. This method accepts a URL and an optional boolean and returns the same URL with the linker parameter appended either in the query or hash portion of the URL.</p>
+
+                    <p>To retrieve the linker parameter in the query portion of the URL, use:</p>
+                    <codeBody>
+                      ga(function(tracker) {
+                      <br>&nbsp;&nbsp;&nbsp;  var linker = new window.gaplugins.Linker(tracker);
+                      <br>&nbsp;&nbsp;&nbsp;  var output = linker.decorate('//destination.com');
+                      <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>This code will execute once the analytics.js library loads. It will create a new <code>Linker</code> object and use the <code>decorate</code> method to get an updated URL. Once complete, the value of <code>output</code> will look like:</p>
+
+                    <codeBody>
+                      //destination.com?_ga=1.182119591.1441315536.1362115890410
+                    </codeBody>
+                    <br>
+
+                    <p>linker:decorate also accepts &lt;a&gt;, &lt;area&gt; and &lt;form&gt; Elements. Please see Decorating HTML Links and Decorating HTML Forms</p>
+
+                    <p><b>Note:</b> The decorate method will overwrite any existing linker parameter in the URL. This allows you to call decorate multiple times on a URL and ensure that only the most recent values are present.</p>
+
+                    <h3>Decorate the Hash Portion of the URL</h3>
+                    <p>You can also append the linker parameter to the hash portion of the URL by passing <code>true</code> as a second parameter to the decorate method:</p>
+
+                    <codeBody>
+                      ga(function(tracker) {
+                      <br>&nbsp;&nbsp;&nbsp;  var linker = new window.gaplugins.Linker(tracker);
+                      <br>&nbsp;&nbsp;&nbsp;  var output = linker.decorate('//destination.com',true);
+                      <br>});
+                    </codeBody>
+                    <br>
+
+                    The value of <code>output</code> will now look like:
+                    <codeBody>
+                      //destination.com#_ga=1.182119591.1441315536.1362115890410
+                    </codeBody>
+
                   </div>
                 </div>
             </div> 
