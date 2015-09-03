@@ -20,13 +20,13 @@
 		},
 		{ 
 			"title": "App / Screen Tracking",
-			"sortContent":  "",
+			"sortContent":  "This guide describes how to use screen tracking with analytics.js",
 			"keyword": "",
 			"link": "#analytics/screen"
 		},	
 		{ 
 			"title": "Cross Domain Tracking",
-			"sortContent":  "",
+			"sortContent":  "This guide describes how to track users across domains (cross domain tracking) using analytics.js.",
 			"keyword": "",
 			"link": "#analytics/crossDomainTracking"
 		},				

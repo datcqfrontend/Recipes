@@ -6,14 +6,135 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-heading"><h3>Overview</h3> </div>
                   <div class="panel-body">  
-                    <p></p>
+                    <p>Screens in Google Analytics represent content users are viewing within an app. The equivalent concept for a website is pages. Measuring screen views allows you to see which content is being viewed most by your users, and how are they are navigating between different pieces of content.</p>
+
+                    <p>There is 1 field that is recommended to send with each tracking beacon to identify a screen:</p>
+                    <table class="table table-striped">
+                      <tbody><tr>
+                        <th>Value</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td>Screen Name</td>
+                        <td><code><span>String</span></code></td>
+                        <td>No</td>
+                        <td>The name of the screen.</td>
+                      </tr>
+                    </tbody></table>
+
+                    <p>There are also 4 app tracking fields that, if applicable to your implementation, you may want to send for app tracking.</p>
+                    <table class="table table-striped">
+                      <tbody><tr>
+                        <th>Value</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td>Application Name</td>
+                        <td><code><span>String</span></code></td>
+                        <td><strong>Yes</strong></td>
+                        <td>The name of the application.</td>
+                      </tr>
+                      <tr>
+                        <td>Application Id</td>
+                        <td><code><span>String</span></code></td>
+                        <td>No</td>
+                        <td>The Id of the application.</td>
+                      </tr>
+                      <tr>
+                        <td>Application Version</td>
+                        <td><code><span>String</span></code></td>
+                        <td>No</td>
+                        <td>The application version.</td>
+                      </tr>
+                      <tr>
+                        <td>Application Installer Id</td>
+                        <td><code><span>String</span></code></td>
+                        <td>No</td>
+                        <td>The Id of the application installer.</td>
+                      </tr>
+                    </tbody></table>
+
+
                   </div>
                 </div>
             </div> 
 
             
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Implementation</h3> </div>
+                  <div class="panel-body">  
+                    <p>To send a screenview, you pass the <code>ga</code> function a <code>send</code> command with the <code>screenview</code> hit type and include a configuration object to set the screen name field.</p>
+
+                    <codeBody>
+                        ga('send', 'screenview', {
+                        <br>&nbsp;&nbsp;&nbsp;  'appName': 'myAppName',
+                        <br>&nbsp;&nbsp;&nbsp;  'screenName': 'Home'
+                        <br>});
+                    </codeBody>
+                    <br>
+                    You can also pass a configuration object to set additional app fields with the hit:
+
+                    <codeBody>
+                        ga('send', 'screenview', {
+                        <br>&nbsp;&nbsp;&nbsp;  'appName': 'myAppName',
+                        <br>&nbsp;&nbsp;&nbsp;  'appId': 'myAppId'
+                        <br>&nbsp;&nbsp;&nbsp;  'appVersion': '1.0'
+                        <br>&nbsp;&nbsp;&nbsp;  'appInstallerId': 'myInstallerId'
+                        <br>&nbsp;&nbsp;&nbsp;  'screenName': 'my overridden screen name'
+                        <br>});
+                    </codeBody>
+                    <br>
+                    Read the Field Reference document for a complete list of all the fields that can be used in the configuration object.
+
+                    <h3>Setting App Values Across Multiple Screen Views</h3>
+                    <p>In cases where your app shows multiple screens to the user without any page reloads, it's not convenient to have to set app fields for each screenview. Instead you can set fields across muitple send commands. For example, when the following code is executed the app fields will be sent for both <code>send</code> commands.</p>
+
+                    <codeBody>
+                        ga('create', 'UA-XXXX-Y', 'auto');
+                        <br>ga('set', {
+                        <br>&nbsp;&nbsp;&nbsp;  'appName': 'myAppName',
+                        <br>&nbsp;&nbsp;&nbsp;  'appId': 'myAppId',
+                        <br>&nbsp;&nbsp;&nbsp;  'appVersion': '1.0',
+                        <br>&nbsp;&nbsp;&nbsp;  'appInstallerId': 'myInstallerId'
+                        <br>});
+                        <br>
+                        <br>ga('send', 'screenview', {'screenName': 'Home'});
+                        <br>ga('send', 'event', 'video', 'started');
+                    </codeBody>
+
+                    <h3>Using Filters for App-only or Web-only Views</h3>
+                    <p>If you send web and app data for the same property (UA-XXXX-Y), Google Analytics will display both sets of data in views (profiles) for that property. This allows for combined app and web views.</p>
+                    <p>If you want to send app and web data for the same property but maintain a separate app and/or web view you can create Filters. For example, you can have a combined view (default), a web view, and an app view.</p>
+
+
+                    <h3>App View Filter</h3>
+                    <p>Create a <b>Custom Filter</b> to <b>Include</b> only app data by setting <code>Application?</code> to <code>yes</code>.</p>
+                    <figure id="fig-appview">
+                      <img class="img-responsive" src="media/images/screens-filter-appview.png" alt="The Google Analytics create filter form. The filter name field is set to 'App View', 'Custom Filter' type is selected, 'Include' is selected, Filter Field dropdown is set to 'Application?', Filter Pattern is set to 'yes', and Case Sensitive is set to 'No'.">
+                      <figcaption><strong>Figure 1</strong>: Filter settings for an App
+                        View.</figcaption>
+                    </figure>
+
+                    <h3>Web View Filter</h3>
+                    <p>Create a <b>Custom Filter</b> to <b>Include</b> only web data by setting <code>Application?</code> to <code>no</code>.</p>
+                    <figure id="fig-webview">
+                      <img class="img-responsive" src="media/images/screens-filter-webview.png" alt="The Google Analytics create filter form. The filter name field is set to 'Web View', 'Custom Filter' type is selected, 'Include' is selected, Filter Field dropdown is set to 'Application?', Filter Pattern is set to 'no', and Case Sensitive is set to 'No'.">
+                      <figcaption><strong>Figure 2</strong>: Filter settings for a Web
+                        View.</figcaption>
+                    </figure>
+
+                  </div>
+                </div>
+            </div> 
+
+
 
         </div>       
         <!-- /.row -->

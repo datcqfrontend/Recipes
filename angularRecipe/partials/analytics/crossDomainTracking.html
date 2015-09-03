@@ -6,6 +6,112 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Overview</h3> </div>
+                  <div class="panel-body">  
+                    <p>The analytics.js library uses a single first-party cookie to store the Client ID that can only be accessed by the domain on which it is set. If you own multiple domains and would like to track users across them, additional work must be done so that the analytics.js cookie data is maintained across each of those domains.</p>
+
+                    <p><b>Note:</b> This document is only for tracking users across domains where browser restrictions prevent cookies from being shared. Tracking users across subdomains does not require any additional configuration. Read the Domains & Cookies Document for more information about how analytics.js uses cookies.</p>
+
+                    <p>Lets assume you have 2 root domains, the current source domain: <code>source.com</code> and the target destination domain: <code>destination.com</code>. A common strategy to maintain the cookie data across both domains is as follows:</p>
+
+                    <ol>
+                        <li>On the source domain, retrieve the cookie data and append the data as a query parameter to all links pointing to the destination domain.</li>
+                        <li>When a user clicks a link from the source to the destination domain, the query parameter, including the cookie data, will be in the final URL of the destination domain.</li>
+                        <li>On the destination domain, if the query parameter is in the URL and valid, extract the cookie data from the URL and write it to a new cookie on the destination domain.</li>
+                    </ol>
+                    <p>To simplify these steps, analytics.js provides a bunch of helper functions to get cookie data, append to the URL, and retrieve the cookie data on destination domains.</p>
+
+                    <p><b>Important:</b> The Cross Domain Auto Link plugin is the recommended way to implement cross domain linking with analytics.js. The manual methods listed below will continue to work, but are more prone to error.</p>
+
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Ignoring Self Referrals</h3> </div>
+                  <div class="panel-body">  
+                    <p><b>Important:</b> Before you implement cross domain tracking, you should configure your Google Analytics property to ignore the destination domains as self-referrals through the admin section of the web interface.</p>
+
+                    <p>In Universal Analytics, a new referral campaign will be created whenever the document.referrer of a page comes from a hostname that does not match any of the entries in the Referral Exclusion list for your web property.</p>
+
+                    <p>By default, the Referral Exclusion list includes only the domain that you provided when the web property was first created. To prevent new referral campaigns from being generated when users navigate across domains, you must add an entry for each domain you wish to track across in the Referral Exclusion list. For example, if your default URL was configured as <code>source.com</code>, and you need to track a user across both <code>source.com</code> and <code>destination.com</code>, you will need to add <code>destination.com</code> to the referral exclusion list.</p>
+
+                    <p>For information about referral exclusion lists and where to do this in the administration interface, read Referral Exclusions in the Help Center.</p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Retrieving / Setting Cookie Data</h3> </div>
+                  <div class="panel-body">  
+                    <p>The analytics.js library uses a single cookie, named <code>_ga</code>, to store an anonymous client ID.</p>
+
+                    <p>On the source domain, you can retrieve the stored client ID, using the following command:</p>
+                    <codeBody>
+                        ga(function(tracker) {
+                        <br>&nbsp;&nbsp;&nbsp;  var clientId = tracker.get('clientId');
+                        <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>Once run, the value of <code>clientId</code> will look similar to:</p>
+                    <codeBody>
+                        182119591.1441315536
+                    </codeBody>
+                    <br>
+
+                    <p>This value can then be appended as a query parameter to a URL pointing to a destination domain. On the destination domain, the <code>clientId</code> value can be written to the cookie when the tracker is created:</p>
+                    <codeBody>
+                        ga('create', 'UA-XXXX-Y', 'auto', {
+                        <br>&nbsp;&nbsp;&nbsp;  'clientId': clientId        // Value is retrieved from method above.
+                        <br>})
+                    </codeBody>
+                    <br>
+
+                    <p>This solution is very flexible as it allows developers to pass cookie data between domains, the client and the server, and even between online and offline environments. One downside is that this solution requires significant JavaScript to read and write the client ID to / from the URL. Another issue arises when users share URLs that contain client IDs.</p>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Linker Parameters</h3> </div>
+                  <div class="panel-body">  
+                    <p>One challenge with putting the <code>clientId</code> directly in URLs is if a user bookmarks and then shares that link. If many users use a link with the same client ID, all of those users will appear as the same user in Google Analytics.</p>
+
+                    <p>To solve the problem, the analytics.js library provides a command to retrieve a special linker parameter that includes both the client ID as well as a hashed timestamp. You get the special linker parameter using the following command:</p>
+
+                    <codeBody>
+                        ga(function(tracker) {
+                        <br>&nbsp;&nbsp;&nbsp;  var linkerParam = tracker.get('linkerParam');
+                        <br>});
+                    </codeBody>
+                    <br>
+
+                    <p>Once run, the value of <code>linkerParam</code> will look similar to:</p>
+                    <codeBody>
+                        _ga=1.182119591.1441315536.1362115890410
+                    </codeBody>
+                    <br>
+
+                    <p>This query parameter can then be added to all the URLs that point to the destination domain. To write this to the cookie on the destination domain, you must update all the <code>create</code> commands on the destination domain by setting the <code>allowLinker</code> tracking configuration parameter to <code>true</code>:</p>
+                    <codeBody>
+                        ga('create', 'UA-XXXX-Y', 'auto', {'allowLinker': true});
+                    </codeBody>
+                    <br>
+                    <p>When the tracker is created with <code>allowLinker</code> set to <code>true</code>, analytics.js will check to see if the linker parameter exists in the URL and that the timestamp is no less than 2 minutes old. If it is less than 2 minutes, analytics.js will extract the client ID value from the linker parameter and set the value into the cookie. If the timestamp is older than 2 minutes, then the linker parameter will be ignored.</p>
+
+                    <p><b>Important:</b> Linker parameters are only valid for 2 minutes after they are created. Read the Decorating HTML Links section below for best practices on when to generate the linker parameters.</p>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
                   <div class="panel-heading"><h3></h3> </div>
                   <div class="panel-body">  
                     <p></p>
@@ -13,7 +119,50 @@
                 </div>
             </div> 
 
-            
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+                    <p></p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+                    <p></p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+                    <p></p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+                    <p></p>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+                    <p></p>
+                  </div>
+                </div>
+            </div> 
 
         </div>       
         <!-- /.row -->
