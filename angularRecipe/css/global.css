@@ -252,8 +252,13 @@ spanRed, .spanRed {
   .navbar-nav > #group-angular.angular.active>a, .navbar-nav > #group-angular #angular.active>a {    background-color: #B92933; background-image: none;}
   .navbar-nav > #group-angular.angularAPI.active>a, .navbar-nav > #group-angular #angularAPI.active>a {    background-color: #B92933; background-image: none;}
 
-  .navbar-nav > #group-more.googleAnalyticsJs.active>a, .navbar-nav > #group-more #googleAnalyticsJs.active>a {    background-color: #FB8C00; background-image: none;}
-  
+  .navbar-nav > #group-more.requirejs.active>a, .navbar-nav > #group-more #requirejs.active>a {    background-color: #FB8C00; background-image: none;}
+  .navbar-nav > #group-more.analytics.active>a, .navbar-nav > #group-more #analytics.active>a {    background-color: #FB8C00; background-image: none;}
+  .navbar-nav > #group-more.seo.active>a, .navbar-nav > #group-more #seo.active>a {    background-color: #FB8C00; background-image: none;}
+
+  a.btn-link {
+    margin-left: 85%;
+  }
 
 /* END NAVBAR*/
  
@@ -269,10 +274,6 @@ spanRed, .spanRed {
       background-color: #e44d26;
       color: #fff;
   }
-
-  .html5 a.btn-link {
-    margin-left: 85%;
-  }
 /* END HTML5 */
 
 /* CSS3 */
@@ -281,14 +282,9 @@ spanRed, .spanRed {
       background-color: #1572b6;
       color: #fff;
   }
-
-  .css a.btn-link {
-    margin-left: 85%;
-  }
 /* END CSS3 */
 
 /* JS */
-
   .js .jumbotron-page {
       background-color: #efc825;
       color: #fff;
@@ -296,7 +292,6 @@ spanRed, .spanRed {
 /* END JS */
 
 /* JQUERY */
-
   .jQ .jumbotron-page {
       background-color: #00529c;
       color: #fff;
@@ -366,20 +361,12 @@ spanRed, .spanRed {
     width: 70%;
     margin: auto;
   }
-
-  #bsTutorial a.btn-link {
-    margin-left: 85%;
-  }
 /* END BOOTSTRAP*/
 
 /* ANGULAR */
   .ang .jumbotron-page {
       background-color: #B92933;
       color: #fff;
-  }
-
-  #angTutorial a.btn-link {
-    margin-left: 85%;
   }
 
   .ang table.reference {
@@ -413,9 +400,6 @@ spanRed, .spanRed {
 /* END ANGULAR */
 
 /* REQUIREJS */
-  .reqjs a.btn-link {
-    margin-left: 85%;
-  }
 
 
 /* END REQUIREJS */
@@ -425,10 +409,4 @@ spanRed, .spanRed {
       background-color: #EF6C00;
       color: #fff;
   }
-
-  .analytics a.btn-link {
-    margin-left: 85%;
-  }
-
-
 /* END ANALYTICS */

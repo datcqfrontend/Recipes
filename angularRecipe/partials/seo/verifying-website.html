@@ -1,0 +1,146 @@
+<div  id="seoVerifyingWebsite" class="seo section">
+
+    <div class="container">
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>SEO Verifying Web Site</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>You design and develop a website but how would you know if you have put all the HTML syntax in a correct way. Most browsers do not complain against your wrong syntax, but wrong is wrong.</p>
+
+                    <p>There are many SEO experts who claim that SEO is not dependent on site HTML/XHTML verification. But we will discuss various reasons why your site should be W3C Compliance.</p>
+                  </div>
+                </div>
+            </div>            
+
+        </div>       
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Why HTML/XHTML Verification is Required?</h3> </div>
+                  <div class="panel-body">  
+
+                    <p> There are various reasons to verify your website before hosting it over the internet.</p>
+                    <ul>
+                      <li>Any webpage quality depends on how well you have written your webpage.It should be syntactically correct and should pass all the Quality Gates.</li>
+                      <li>When any search engine does indexing for your web page content, it might get confused if the HTML tags are not written properly, and much of the web page content might not be indexed properly.</li>
+                      <li>There might be many HTML tags, which you are using in your webpage but then have been depreciated and many of the search engines do not support them.</li>
+                      <li>Consistency, HTML Code Beauty, Process Compliance are always appreciated by good webmasters.</li>
+                    </ul>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div>  
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>What is W3C Compliance?</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>W3C is the World Wide Web Consortium and since 1994, the W3C has provided the guidelines by which, websites and webpages should be structured and created. Here are the links to validate your web pages:</p>
+
+                    <ul>
+                      <li>Validate HTML/XHTML File against <a href="http://validator.w3.org/" target="_blank">W3C Standard HTML/XHTML Validator</a>.</li>
+                      <li>Validate CSS File against <a href="http://jigsaw.w3.org/css-validator/" target="_blank">W3C Standard CSS Validator</a>.</li>
+                    </ul>
+
+                    <p>While verification, you may get errors along with appropriate reasons. All the validations will be done using XHTML DTD, which is a refined version of HTML.</p>
+                    
+                  </div>
+                </div>
+            </div>            
+
+        </div>  
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Rules for W3C Compliance</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>There following rules, are to be following while developing a webpage.</p>
+
+                    <ul>
+                      <li>Use XHTML declaration statements to start every XHTML page:
+                        <codeBody>
+                          &lt;!DOCTYPE html PUBLIC 
+                          <br>"-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd"&gt;
+                        </codeBody>
+                      </li>
+                      <li>Every tag must be closed.</li>
+                      <li>The head and body tags are now mandatory.</li>
+                      <li>Empty tags get a terminating slash. An empty tag is a tag that doesn't require an end tag. Examples include &lt;br&gt; and &lt;hr&gt;.
+                        <codeBody>
+                          &lt;BR&gt; is now &lt;br /&gt;.
+                          <br>&lt;HR&gt; is now &lt;hr /&gt;.
+                          <br>&lt;IMG SRC="--"&gt; is now &lt;img src="--" /&gt;
+                        </codeBody>
+                      </li>
+                      <li>All tags must be lower-case. This does not apply to attributes, only tags. For example, both of these formats are acceptable under the XHTML DTD:
+                        &lt;FONT color="#ffffcc"&gt; is invalid
+                        <br>&lt;font color="#ffffcc"&gt; is valid
+                        <br>&lt;font color="#FFFFCC"&gt; is also valid
+                      </li>
+                      <li>All the attribute values should be put with in double quotes.</li>
+
+                      <li>Tags may not be nested.
+                        <codeBody>
+                          &lt;b&gt;&lt;i&gt;Text&lt;/b&gt;&lt;/i&gt; This is invalid
+                          <br>&lt;b&gt;&lt;i&gt;Text&lt;/i&gt;&lt;/b&gt; This is valid
+                        </codeBody>
+                      </li>
+                      
+                      <li>The &lt;pre&gt; tag should not contain: img, object, big, small, sub, or sup.</li>
+                      <li>One &lt;form&gt; tag cannot be inside another &lt;form&gt; tag.</li>
+                      <li>If your code contains a &, it must be written as /&amp;.</li>
+                      <li>Any use of CSS should use all lower-case letter.</li>
+                    </ul>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+            </div>            
+
+        </div>  
+        <!-- /.row -->
+
+        <div ng-include='"templates/pager.html"'></div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+

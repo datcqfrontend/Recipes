@@ -523,6 +523,35 @@ var fw = {
 					
 				],
 
+				"seo":[
+					{"page":"tutorial"  },
+
+					{"page":"home", "topic":"SEO Home", "breadcrumb":"SEO Home"  },
+					{"page":"what", "topic":"What's SEO?", "breadcrumb":"What's SEO"  },
+					{"page":"tactics-methods", "topic":"SEO Tactics & Methods", "breadcrumb":"SEO Tactics & Methods"  },
+
+					{"page":"website-domain", "topic":"SEO Website Domain", "breadcrumb":"SEO Website Domain"  },
+					{"page":"relevant-filenames", "topic":"SEO Relevant Filenames", "breadcrumb":"SEO Relevant Filenames"  },
+					{"page":"design-layout", "topic":"SEO Design Layout", "breadcrumb":"SEO Design & Layout"  },
+
+					{"page":"optimized-keywords", "topic":"SEO Optimized Keywords", "breadcrumb":"SEO Optimized Keywords"  },
+					{"page":"optimized-metatags", "topic":"SEO Optimized Metatags", "breadcrumb":"SEO Optimized Metatags"  },
+					{"page":"title-optimization", "topic":"SEO Title Optimization", "breadcrumb":"SEO Title Optimization"  },					
+
+					{"page":"optimized-anchor", "topic":"SEO Optimized Anchor", "breadcrumb":"SEO Optimized Anchor"  },
+					{"page":"content-is-the-king", "topic":"SEO Content Is The King", "breadcrumb":"SEO Content Is The King"  },
+					{"page":"verifying-website", "topic":"SEO Verifying Website", "breadcrumb":"SEO Verifying Website"  },					
+
+					{"page":"hiring-an-expert", "topic":"SEO Hiring An Expert", "breadcrumb":"SEO Hiring An Expert"  },
+					{"page":"link-building", "topic":"SEO Link Building", "breadcrumb":"SEO Link Building"  },
+					{"page":"mobile-seo-techniques", "topic":"Mobile SEO Techniques", "breadcrumb":"Mobile SEO Techniques"  },					
+
+					{"page":"misc-techniques", "topic":"SEO Misc Techniques", "breadcrumb":"SEO Misc Techniques"  },
+					{"page":"summary", "topic":"SEO Summary", "breadcrumb":"SEO Summay"  }
+					
+				],
+
+
 				"about":[],
 				"contact":[]
 			}
