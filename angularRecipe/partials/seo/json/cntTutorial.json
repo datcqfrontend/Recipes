@@ -22,19 +22,19 @@
 
 		{ 
 			"title": "SEO Website Domain",
-			"sortContent":  "",
+			"sortContent":  "When you start thinking of doing a business through internet, the first thing that you think about is your website domain name.",
 			"keyword": "",
 			"link": "#seo/website-domain"
 		},
 		{ 
 			"title": "SEO Relevant Filenames",
-			"sortContent":  "",
+			"sortContent":  "One of the simplest methods to improve your search engine optimization is to look at the way you name your files.",
 			"keyword": "",
 			"link": "#seo/relevant-filenames"
 		},
 		{ 
 			"title": "SEO Design & Layout",
-			"sortContent":  "",
+			"sortContent":  "The website design and layout gives the first impression about your site. There are sites which are too fancy and regular net surfers just reach those sites and come out even without creating a single click",
 			"keyword": "",
 			"link": "#seo/design-layout"
 		},							
@@ -42,19 +42,19 @@
 
 		{ 
 			"title": "SEO Optimized Keywords",
-			"sortContent":  "",
+			"sortContent":  "A keyword is a term that is used to match with the query a person enters into a search engine to find specific information.",
 			"keyword": "",
 			"link": "#seo/optimized-keywords"
 		},
 		{ 
 			"title": "SEO Optimized Metatags",
-			"sortContent":  "",
+			"sortContent":  "<p>There are two important meta tags:</p><ul><li>Meta <spanRed>description</spanRed> tags</li><li>Meta <spanRed>keyword</spanRed> tags</li></ul>",
 			"keyword": "",
 			"link": "#seo/optimized-metatags"
 		},
 		{ 
 			"title": "SEO Title Optimization",
-			"sortContent":  "",
+			"sortContent":  "An HTML TITLE tag is put inside the head tag. The page title (not to be confused with the heading for a page) is what is displayed in the title bar of your browser window, and is also what is displayed when you bookmark a page or add it to your browser Favorites.",
 			"keyword": "",
 			"link": "#seo/title-optimization"
 		},							
@@ -62,19 +62,19 @@
 
 		{ 
 			"title": "SEO Optimized Anchor",
-			"sortContent":  "",
+			"sortContent":  "Use descriptive anchor text for all your text links. Most search engines consider anchor text of incoming links when ranking pages.",
 			"keyword": "",
 			"link": "#seo/optimized-anchor"
 		},
 		{ 
 			"title": "SEO Content Is The King",
-			"sortContent":  "",
+			"sortContent":  "Content basically includes what you see on the site: the text, graphics, and even links to other websites. You should not use excessive graphics because they are not Search Engine Friendly plus heavy graphics normally put the users out when they get downloaded, especially over a slow network.",
 			"keyword": "",
 			"link": "#seo/content-is-the-king"
 		},
 		{ 
 			"title": "SEO Verifying Website",
-			"sortContent":  "",
+			"sortContent":  "You design and develop a website but how would you know if you have put all the HTML syntax in a correct way. Most browsers do not complain against your wrong syntax, but wrong is wrong.",
 			"keyword": "",
 			"link": "#seo/verifying-website"
 		},							
@@ -82,19 +82,19 @@
 
 		{ 
 			"title": "SEO Hiring An Expert",
-			"sortContent":  "",
+			"sortContent":  "Creating, editing, and promoting unique high-quality content is difficult and time consuming. If you are really serious about SEO and you are not getting expected result, then it would be better to hire an SEO expert.",
 			"keyword": "",
 			"link": "#seo/hiring-an-expert"
 		},
 		{ 
 			"title": "SEO Link Building",
-			"sortContent":  "",
+			"sortContent":  "Link building is the SEO practice of obtaining links from external websites to your own to improve both direct referrals (i.e., people clicking on the links), and search engine ranking. Link building is all about increasing your site link popularity.",
 			"keyword": "",
 			"link": "#seo/link-building"
 		},
 		{ 
 			"title": "Mobile SEO Techniques",
-			"sortContent":  "",
+			"sortContent":  "Millions of users these days access the web using smartphones running on Android, iOS, or Windows. Hence, it has become imperative that websites adapt themselves to this changing environment and make suitable changes in their website design to attract more viewership.",
 			"keyword": "",
 			"link": "#seo/mobile-seo-techniques"
 		},							
@@ -102,13 +102,13 @@
 
 		{ 
 			"title": "SEO Misc Techniques",
-			"sortContent":  "",
+			"sortContent":  "There are various other tips related to SEO. We have not categorized them into any special category and hence, putting these in miscellaneous category. Go through these tips one by one.",
 			"keyword": "",
 			"link": "#seo/misc-techniques"
 		},	
 		{ 
 			"title": "SEO Summary",
-			"sortContent":  "",
+			"sortContent":  "We have covered almost all major concepts related to Search Engine Optimization. Now you are familiar with most frequently used SEO related terminologies as well.",
 			"keyword": "",
 			"link": "#seo/summary"
 		},
