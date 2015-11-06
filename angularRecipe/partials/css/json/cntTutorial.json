@@ -2,19 +2,19 @@
 	"content":[
 		{ 
 			"title": "Introduction",
-			"sortContent":  "What is CSS?<br> Why Use CSS?",
+			"shortContent":  "What is CSS?<br> Why Use CSS?",
             "keyword": "",
 			"link": "#css/intro"
 		},
 		{ 
 			"title": "Syntax",
-			"sortContent":  "A CSS rule set consists of a selector and a declaration block: <img src='media/images/selector.gif' alt='CSS selector' style='width:569px;height:auto;' class='img-responsive'>",
+			"shortContent":  "A CSS rule set consists of a selector and a declaration block: <img src='media/images/selector.gif' alt='CSS selector' style='width:569px;height:auto;' class='img-responsive'>",
 			"keyword": "",
 			"link": "#css/syntax"
 		},
 		{ 
 			"title": "Selectors",
-			"sortContent":  "CSS selectors allow you to select and manipulate HTML elements.<br> CSS selectors are used to 'find' (or select) HTML elements based on their id, class, type, attribute, and more.",
+			"shortContent":  "CSS selectors allow you to select and manipulate HTML elements.<br> CSS selectors are used to 'find' (or select) HTML elements based on their id, class, type, attribute, and more.",
 			"keyword": "",
 			"link": "#css/selectors"
 		},							
@@ -22,19 +22,19 @@
 
 		{ 
 			"title": "How To",
-			"sortContent":  "When a browser reads a style sheet, it will format the document according to the information in the style sheet.",
+			"shortContent":  "When a browser reads a style sheet, it will format the document according to the information in the style sheet.",
 			"keyword": "",
 			"link": "#css/howTo"
 		},
 		{ 
 			"title": "Backgrounds",
-			"sortContent":  "CSS background properties are used to define the background effects of an element.<br>CSS properties used for background effects:<ul><li>background-color</li><li>background-image</li><li>background-repeat</li><li>background-attachment</li><li>background-position</li></ul>",
+			"shortContent":  "CSS background properties are used to define the background effects of an element.<br>CSS properties used for background effects:<ul><li>background-color</li><li>background-image</li><li>background-repeat</li><li>background-attachment</li><li>background-position</li></ul>",
 			"keyword": "",
 			"link": "#css/backgrounds"
 		},							
 		{ 
 			"title": "Text",
-			"sortContent":  "Text can style with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from the 'Try it yourself' link.",
+			"shortContent":  "Text can style with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from the 'Try it yourself' link.",
 			"keyword": "",
 			"link": "#css/text"
 		},
@@ -42,19 +42,19 @@
 
 		{ 
 			"title": "Fonts",
-			"sortContent":  "CSS font properties define the font family, boldness, size, and the style of a text.",
+			"shortContent":  "CSS font properties define the font family, boldness, size, and the style of a text.",
 			"keyword": "",
 			"link": "#css/fonts"
 		},
 		{ 
 			"title": "Links",
-			"sortContent":  "Links can be styled in different ways.",
+			"shortContent":  "Links can be styled in different ways.",
 			"keyword": "",
 			"link": "#css/links"
 		},							
 		{ 
 			"title": "Lists",
-			"sortContent":  "The CSS list properties allow you to:<ul style='list-style-type:none;padding:0px;margin:0px;'><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set different list item markers for ordered lists</li><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set different list item markers for unordered lists</li><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set an image as the list item marker</li></ul>",
+			"shortContent":  "The CSS list properties allow you to:<ul style='list-style-type:none;padding:0px;margin:0px;'><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set different list item markers for ordered lists</li><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set different list item markers for unordered lists</li><li style='background-image:url(media/images/sqorange.gif);background-repeat:no-repeat;background-position:40px 3px; padding-left:56px;'>Set an image as the list item marker</li></ul>",
 			"keyword": "",
 			"link": "#css/lists"
 		},
@@ -63,19 +63,19 @@
 
 		{ 
 			"title": "Tables",
-			"sortContent":  "The look of an HTML table can be greatly improved with CSS.",
+			"shortContent":  "The look of an HTML table can be greatly improved with CSS.",
 			"keyword": "",
 			"link": "#css/tables"
 		},
 		{ 
 			"title": "Box Model",
-			"sortContent":  "<img src='media/images/box-model.gif' alt='CSS box-model' width='436' height='auto' class='img-responsive'>",
+			"shortContent":  "<img src='media/images/box-model.gif' alt='CSS box-model' width='436' height='auto' class='img-responsive'>",
 			"keyword": "box model",
 			"link": "#css/boxModel"
 		},							
 		{ 
 			"title": "Border",
-			"sortContent":  "<div style='width:100%;border:10px groove #98bf21;padding:8px;'><h2>CSS Border Properties</h2><p>The CSS border properties allow you to specify the style, size, and color of an element's border.</p></div>",
+			"shortContent":  "<div style='width:100%;border:10px groove #98bf21;padding:8px;'><h2>CSS Border Properties</h2><p>The CSS border properties allow you to specify the style, size, and color of an element's border.</p></div>",
 			"keyword": "",
 			"link": "#css/border"
 		},
@@ -83,19 +83,19 @@
 
 		{ 
 			"title": "Outline",
-			"sortContent":  "<img src='media/images/box_outline.gif' alt='Outline' width='536' height='auto' class='img-responsive'>",
+			"shortContent":  "<img src='media/images/box_outline.gif' alt='Outline' width='536' height='auto' class='img-responsive'>",
 			"keyword": "outline",
 			"link": "#css/outline"
 		},
 		{ 
 			"title": "Margin",
-			"sortContent":  "The CSS margin properties define the space around elements.",
+			"shortContent":  "The CSS margin properties define the space around elements.",
 			"keyword": "",
 			"link": "#css/margin"
 		},							
 		{ 
 			"title": "Padding",
-			"sortContent":  "The CSS padding properties define the space between the element border and the element content.",
+			"shortContent":  "The CSS padding properties define the space between the element border and the element content.",
 			"keyword": "",
 			"link": "#css/padding"
 		},
@@ -103,19 +103,19 @@
 
 		{ 
 			"title": "Dimension",
-			"sortContent":  "The CSS dimension properties allow you to control the height and width of an element.",
+			"shortContent":  "The CSS dimension properties allow you to control the height and width of an element.",
 			"keyword": "",
 			"link": "#css/dimension"
 		},
 		{ 
 			"title": "Display",
-			"sortContent":  "The display property is the most important CSS property for controlling layout.",
+			"shortContent":  "The display property is the most important CSS property for controlling layout.",
 			"keyword": "",
 			"link": "#css/display"
 		},							
 		{ 
 			"title": "Max-width",
-			"sortContent":  "Max-width will improve the browser's handling of small windows. This is important when making a site usable on small devices",
+			"shortContent":  "Max-width will improve the browser's handling of small windows. This is important when making a site usable on small devices",
 			"keyword": "",
 			"link": "#css/maxWidth"
 		},
@@ -123,19 +123,19 @@
 
 		{ 
 			"title": "Position",
-			"sortContent":  "The position property specifies the type of positioning method used for an element (static, relative, fixed or absolute).",
+			"shortContent":  "The position property specifies the type of positioning method used for an element (static, relative, fixed or absolute).",
 			"keyword": "",
 			"link": "#css/position"
 		},
 		{ 
 			"title": "Float",
-			"sortContent":  "The float property specifies whether or not an element should float.<br>The clear property is used to control the behavior of floating elements.",
+			"shortContent":  "The float property specifies whether or not an element should float.<br>The clear property is used to control the behavior of floating elements.",
 			"keyword": "",
 			"link": "#css/float"
 		},							
 		{ 
 			"title": "Inline-block",
-			"sortContent":  "inline-block elements are like inline elements but they can have a width and height.",
+			"shortContent":  "inline-block elements are like inline elements but they can have a width and height.",
 			"keyword": "",
 			"link": "#css/inlineBlock"
 		},
@@ -143,19 +143,19 @@
 
 		{ 
 			"title": "Align",
-			"sortContent":  "In CSS, several properties can be used to align elements horizontally.",
+			"shortContent":  "In CSS, several properties can be used to align elements horizontally.",
 			"keyword": "",
 			"link": "#css/align"
 		},
 		{ 
 			"title": "Combinators",
-			"sortContent":  "A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.<br>There are four different combinators in CSS3:<ul><li>descendant selector</li><li>child selector</li><li>adjacent sibling selector</li><li>general sibling selector</li></ul>",
+			"shortContent":  "A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.<br>There are four different combinators in CSS3:<ul><li>descendant selector</li><li>child selector</li><li>adjacent sibling selector</li><li>general sibling selector</li></ul>",
 			"keyword": "",
 			"link": "#css/combinators"
 		},							
 		{ 
 			"title": "Pseudo-class",
-			"sortContent":  "A pseudo-class is used to define a special state of an element.<br>For example, it can be used to:<ul><li>Style an element when a user mouses over it</li><li>Style visited and unvisited links differently</li></ul>",
+			"shortContent":  "A pseudo-class is used to define a special state of an element.<br>For example, it can be used to:<ul><li>Style an element when a user mouses over it</li><li>Style visited and unvisited links differently</li></ul>",
 			"keyword": "",
 			"link": "#css/pseudoClass"
 		},
@@ -163,19 +163,19 @@
 
 		{ 
 			"title": "Pseudo-element",
-			"sortContent":  "A CSS pseudo-element is used to style specified parts of an element.<brFor example, it can be used to:<ul>li>Style the first letter, or line, of an element</li>li>Insert content before, or after, the content of an element</li><ul>",
+			"shortContent":  "A CSS pseudo-element is used to style specified parts of an element.<brFor example, it can be used to:<ul>li>Style the first letter, or line, of an element</li>li>Insert content before, or after, the content of an element</li><ul>",
 			"keyword": "",
 			"link": "#css/pseudoElement"
 		},
 		{ 
 			"title": "Navigation Bar",
-			"sortContent":  "Having easy-to-use navigation is important for any web site.<br>With CSS you can transform boring HTML menus into good-looking navigation bars.",
+			"shortContent":  "Having easy-to-use navigation is important for any web site.<br>With CSS you can transform boring HTML menus into good-looking navigation bars.",
 			"keyword": "",
 			"link": "#css/navigationBar"
 		},							
 		{ 
 			"title": "Image Gallery",
-			"sortContent":  "CSS can be used to create an image gallery.",
+			"shortContent":  "CSS can be used to create an image gallery.",
 			"keyword": "",
 			"link": "#css/imageGallery"
 		},
@@ -183,19 +183,19 @@
 
 		{ 
 			"title": "Image Opacity",
-			"sortContent":  "Creating transparent images with CSS is easy.<br>The CSS opacity property is a part of the CSS3 recommendation.",
+			"shortContent":  "Creating transparent images with CSS is easy.<br>The CSS opacity property is a part of the CSS3 recommendation.",
 			"keyword": "",
 			"link": "#css/imageOpacity"
 		},
 		{ 
 			"title": "Image Sprites",
-			"sortContent":  "An image sprite is a collection of images put into a single image.<br>A web page with many images can take a long time to load and generates multiple server requests.<br>Using image sprites will reduce the number of server requests and save bandwidth.",
+			"shortContent":  "An image sprite is a collection of images put into a single image.<br>A web page with many images can take a long time to load and generates multiple server requests.<br>Using image sprites will reduce the number of server requests and save bandwidth.",
 			"keyword": "",
 			"link": "#css/imageSprites"
 		},
 		{ 
 			"title": "Media Types",
-			"sortContent":  "Some CSS properties are designed for a specific type of media. For example the voice-family property is designed for aural user agents.<br>Some other CSS properties can be used for different media types. For example, the font-size property can be used for both screen and print media, but perhaps with different values. A document usually needs a larger font-size on a screen than on paper, and sans-serif fonts are easier to read on the screen, while serif fonts are easier to read on paper.",
+			"shortContent":  "Some CSS properties are designed for a specific type of media. For example the voice-family property is designed for aural user agents.<br>Some other CSS properties can be used for different media types. For example, the font-size property can be used for both screen and print media, but perhaps with different values. A document usually needs a larger font-size on a screen than on paper, and sans-serif fonts are easier to read on the screen, while serif fonts are easier to read on paper.",
 			"keyword": "",
 			"link": "#css/mediaTypes"
 		},
@@ -203,7 +203,7 @@
 
 		{ 
 			"title": "Attr Selectors",
-			"sortContent":  "The [attribute] selector is used to select elements with a specified attribute.",
+			"shortContent":  "The [attribute] selector is used to select elements with a specified attribute.",
 			"keyword": "",
 			"link": "#css/attrSelectors"
 		}

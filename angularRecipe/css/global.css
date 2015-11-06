@@ -243,6 +243,8 @@ spanRed, .spanRed {
   .navbar-nav > #group-css.css.active>a, .navbar-nav > #group-css #css.active>a {    background-color: #1572b6; background-image: none;}
   .navbar-nav > #group-css.css3.active>a, .navbar-nav > #group-css #css3.active>a {    background-color: #1572b6; background-image: none;}
   .navbar-nav > #group-css.cssRWD.active>a, .navbar-nav > #group-css #cssRWD.active>a {    background-color: #1572b6; background-image: none;}
+  .navbar-nav > #group-css.less.active>a, .navbar-nav > #group-css #less.active>a {    background-color: #2c5084; background-image: none;}
+  .navbar-nav > #group-css.sass.active>a, .navbar-nav > #group-css #sass.active>a {    background-color: #cd669a; background-image: none;}
 
   .navbar-nav > #group-js.javascript.active>a, .navbar-nav > #group-js #javascript.active>a {    background-color: #efc825;  background-image: none;}
   .navbar-nav > #group-js.jquery.active>a, .navbar-nav > #group-js #jquery.active>a {    background-color: #00529c;  background-image: none;}
@@ -253,6 +255,7 @@ spanRed, .spanRed {
   .navbar-nav > #group-angular.angularAPI.active>a, .navbar-nav > #group-angular #angularAPI.active>a {    background-color: #B92933; background-image: none;}
 
   .navbar-nav > #group-more.requirejs.active>a, .navbar-nav > #group-more #requirejs.active>a {    background-color: #FB8C00; background-image: none;}
+  .navbar-nav > #group-more.grunt.active>a, .navbar-nav > #group-more #grunt.active>a {    background-color: #FBA919; background-image: none;}
   .navbar-nav > #group-more.analytics.active>a, .navbar-nav > #group-more #analytics.active>a {    background-color: #FB8C00; background-image: none;}
   .navbar-nav > #group-more.seo.active>a, .navbar-nav > #group-more #seo.active>a {    background-color: #FB8C00; background-image: none;}
 
@@ -283,6 +286,13 @@ spanRed, .spanRed {
       color: #fff;
   }
 /* END CSS3 */
+
+/* LESS */
+  .less .jumbotron-page {
+      background-color: #2c5084;
+      color: #fff;
+  }
+/* END LESS */
 
 /* JS */
   .js .jumbotron-page {
@@ -398,11 +408,14 @@ spanRed, .spanRed {
     border-top: 1px solid #ddd;
   }
 /* END ANGULAR */
+  
+/* GRUNTJS */
+  .grunt .jumbotron-page {
+      background-color: #FBA919;
+      color: #fff;
+  }
 
-/* REQUIREJS */
-
-
-/* END REQUIREJS */
+/* END GRUNTJS */
 
 /* ANALYTICS */
   .analytics .jumbotron-page {

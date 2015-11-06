@@ -26,13 +26,13 @@
                 
                 <div ng-if="tut.type=='header'">
                     <h3 style="font-weight: bold;">{{tut.title}}</h3>
-                    <p ng-bind-html="decodeText(tut.sortContent)"></p>
+                    <p ng-bind-html="decodeText(tut.shortContent)"></p>
                     <hr>
                 </div>
 
                 <div ng-if="tut.type=='subheader'">
                     <h3 >{{tut.title}}</h3>
-                    <p ng-bind-html="decodeText(tut.sortContent)"></p>                    
+                    <p ng-bind-html="decodeText(tut.shortContent)"></p>                    
                 </div>
                 
                 <div ng-if="tut.type=='clearfix'" class="col-sm-12 hidden-xs"> 
@@ -40,7 +40,7 @@
 
                 <div ng-if="tut.type==undefined">                    
                     <h3 style="overflow:hidden;text-overflow: ellipsis;">{{tut.title}}</h3>
-                    <p ng-bind-html="decodeText(tut.sortContent)"></p> 
+                    <p ng-bind-html="decodeText(tut.shortContent)"></p> 
                     <a href="{{tut.link}}" class="btn btn-link btn-sm ">More <i class="fa fa-angle-right"></i></a> 
                 </div>
             </div>

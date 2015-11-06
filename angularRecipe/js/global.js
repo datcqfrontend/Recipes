@@ -69,13 +69,19 @@ function hideMenu(){
 
 function activeNavBar(){
 	//Active navbar header
-	$('.navbar li').removeClass('javascript jquery active');	
+	$('.navbar li').removeClass('active');
+
+	$('.navbar li').removeClass('html html5');
+	$('.navbar li').removeClass('css css3 cssRWD less sass');
+	$('.navbar li').removeClass('javascript jquery');	
+	$('.navbar li').removeClass('angular angularAPI');
+	$('.navbar li').removeClass('requirejs gruntjs analytics seo');
 
 	$('.navbar li#'+fw.currentGroupName).addClass('active');
 	
 	if(fw.currentGroupName=='html' || fw.currentGroupName=='html5'){
 		$('.navbar li#group-html').addClass(fw.currentGroupName+' active');
-	}else if(fw.currentGroupName=='css' || fw.currentGroupName=='css3' || fw.currentGroupName=='cssRWD'){
+	}else if(fw.currentGroupName=='css' || fw.currentGroupName=='css3' || fw.currentGroupName=='cssRWD' || fw.currentGroupName=='less' || fw.currentGroupName=='sass'){
 		$('.navbar li#group-css').addClass(fw.currentGroupName+' active');
 	}else if(fw.currentGroupName=='javascript' || fw.currentGroupName=='jquery'){
 		$('.navbar li#group-js').addClass(fw.currentGroupName+' active');

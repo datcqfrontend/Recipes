@@ -2,12 +2,12 @@
 	"content":[
 		{ 	"type": "subheader", 
 			"title": "Object: ",
-			"sortContent": ""
+			"shortContent": ""
 		},
 
 		{ 
 			"title": "angular.version",
-			"sortContent": "An object that contains information about the current AngularJS version. This object has the following properties.",
+			"shortContent": "An object that contains information about the current AngularJS version. This object has the following properties.",
 			"keyword": "",
 			"link": "#angularAPI/object/angularVersion"
 		},

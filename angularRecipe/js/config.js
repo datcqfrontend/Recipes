@@ -179,6 +179,26 @@ var fw = {
 					{"page":"frameworks", "topic":"RWD Frameworks", "breadcrumb":"Frameworks"  }					
 				],
 
+				"less":[
+					{"page":"tutorial"},
+
+					{"page":"less", "topic":"Less", "breadcrumb":"Less"  },
+					{"page":"language-features", "topic":"Language Features", "breadcrumb":"Language Features"  },
+					{"page":"function-reference", "topic":"Function Reference", "breadcrumb":"Function Reference"  },
+					{"page":"usage", "topic":"Usage", "breadcrumb":"Usage"  }
+
+				],
+
+				"sass":[
+					{"page":"tutorial"},
+
+					{"page":"less", "topic":"Less", "breadcrumb":"Less"  },
+					{"page":"language-features", "topic":"Language Features", "breadcrumb":"Language Features"  },
+					{"page":"function-reference", "topic":"Function Reference", "breadcrumb":"Function Reference"  },
+					{"page":"usage", "topic":"Usage", "breadcrumb":"Usage"  }
+
+				],
+
 				"javascript":[
 					{"page":"tutorial"  }
 				],
@@ -485,6 +505,13 @@ var fw = {
 					{"page":"start", "topic":"Start", "breadcrumb":"Start"  },
 					{"page":"api", "topic":"API", "breadcrumb":"API"  },
 					{"page":"optimization", "topic":"Optimization", "breadcrumb":"Optimization"  }
+				],
+
+				"gruntjs":[
+					{"page":"tutorial"  },
+					{"page":"home", "topic":"Home", "breadcrumb":"Home"  },
+					{"page":"config", "topic":"Configuring Tasks", "breadcrumb":"Configuring Tasks"  },
+					{"page":"sample", "topic":"Sample Gruntfile", "breadcrumb":"Sample Gruntfile"  }
 				],
 
 				"analytics":[

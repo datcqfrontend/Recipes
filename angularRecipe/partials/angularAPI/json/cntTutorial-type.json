@@ -2,24 +2,24 @@
 	"content":[
 		{ 	"type": "subheader", 
 			"title": "Type: ",
-			"sortContent": ""
+			"shortContent": ""
 		},
 
 		{ 
 			"title": "angular.Module",
-			"sortContent": "Interface for configuring angular modules.",
+			"shortContent": "Interface for configuring angular modules.",
 			"keyword": "",
 			"link": "#angularAPI/type/angular-Module"
 		},
 		{ 
 			"title": "$cacheFactory.Cache",
-			"sortContent": "A cache object used to store and retrieve data, primarily used by $http and the script directive to cache templates and other data.",
+			"shortContent": "A cache object used to store and retrieve data, primarily used by $http and the script directive to cache templates and other data.",
 			"keyword": "",
 			"link": "#angularAPI/type/cacheFactory-Cache"
 		},
 		{ 
 			"title": "$compile.directive.Attributes",
-			"sortContent": "A shared object between directive compile / linking functions which contains normalized DOM element attributes. The values reflect current binding state <code><span class='pun'>{{</span><span class='pln'> </span><span class='pun'>}}</span></code>. The normalization is needed since all of these are treated as equivalent in Angular:",
+			"shortContent": "A shared object between directive compile / linking functions which contains normalized DOM element attributes. The values reflect current binding state <code><span class='pun'>{{</span><span class='pln'> </span><span class='pun'>}}</span></code>. The normalization is needed since all of these are treated as equivalent in Angular:",
 			"keyword": "",
 			"link": "#angularAPI/type/compile-directive-Attributes"
 		},
@@ -27,19 +27,19 @@
 
 		{ 
 			"title": "form.FormController",
-			"sortContent": "<code><span class='typ'>FormController</span></code> keeps track of all its controls and nested forms as well as the state of them, such as being valid/invalid or dirty/pristine.",
+			"shortContent": "<code><span class='typ'>FormController</span></code> keeps track of all its controls and nested forms as well as the state of them, such as being valid/invalid or dirty/pristine.",
 			"keyword": "",
 			"link": "#angularAPI/type/form-FormController"
 		},
 		{ 
 			"title": "ngModel.NgModelController",
-			"sortContent": "<code><span class='typ'>NgModelController</span></code> provides API for the <a href='api/ng/directive/ngModel'><code><span class='pln'>ngModel</span></code></a> directive. The controller contains services for data-binding, validation, CSS updates, and value formatting and parsing. It purposefully does not contain any logic which deals with DOM rendering or listening to DOM events. Such DOM related logic should be provided by other directives which make use of <code><span class='typ'>NgModelController</span></code> for data-binding to control elements. Angular provides this DOM logic for most <a href='api/ng/directive/input'><code><span class='pln'>input</span></code></a> elements. At the end of this page you can find a <a href='api/ng/type/ngModel.NgModelController#custom-control-example'>custom control example</a> that uses <code><span class='pln'>ngModelController</span></code> to bind to <code><span class='pln'>contenteditable</span></code> elements.",
+			"shortContent": "<code><span class='typ'>NgModelController</span></code> provides API for the <a href='api/ng/directive/ngModel'><code><span class='pln'>ngModel</span></code></a> directive. The controller contains services for data-binding, validation, CSS updates, and value formatting and parsing. It purposefully does not contain any logic which deals with DOM rendering or listening to DOM events. Such DOM related logic should be provided by other directives which make use of <code><span class='typ'>NgModelController</span></code> for data-binding to control elements. Angular provides this DOM logic for most <a href='api/ng/directive/input'><code><span class='pln'>input</span></code></a> elements. At the end of this page you can find a <a href='api/ng/type/ngModel.NgModelController#custom-control-example'>custom control example</a> that uses <code><span class='pln'>ngModelController</span></code> to bind to <code><span class='pln'>contenteditable</span></code> elements.",
 			"keyword": "",
 			"link": "#angularAPI/type/ngModel-NgModelController"
 		},
 		{ 
 			"title": "select.SelectController",
-			"sortContent": "The controller for the <code><span class='tag'>&lt;select&gt;</span></code> directive. This provides support for reading and writing the selected value(s) of the control and also coordinates dynamically added <code><span class='tag'>&lt;option&gt;</span></code> elements, perhaps by an <code><span class='pln'>ngRepeat</span></code> directive.",
+			"shortContent": "The controller for the <code><span class='tag'>&lt;select&gt;</span></code> directive. This provides support for reading and writing the selected value(s) of the control and also coordinates dynamically added <code><span class='tag'>&lt;option&gt;</span></code> elements, perhaps by an <code><span class='pln'>ngRepeat</span></code> directive.",
 			"keyword": "",
 			"link": "#angularAPI/type/select-SelectController"
 		},
@@ -47,7 +47,7 @@
 
 		{ 
 			"title": "$rootScope.Scope",
-			"sortContent": "A root scope can be retrieved using the <a href='api/ng/service/$rootScope'>$rootScope</a> key from the <a href='api/auto/service/$injector'>$injector</a>. Child scopes are created using the <a href='api/ng/type/$rootScope.Scope#$new'>$new()</a> method. (Most scopes are created automatically when compiled HTML template is executed.) See also the <a href='guide/scope'>Scopes guide</a> for an in-depth introduction and usage examples.",
+			"shortContent": "A root scope can be retrieved using the <a href='api/ng/service/$rootScope'>$rootScope</a> key from the <a href='api/auto/service/$injector'>$injector</a>. Child scopes are created using the <a href='api/ng/type/$rootScope.Scope#$new'>$new()</a> method. (Most scopes are created automatically when compiled HTML template is executed.) See also the <a href='guide/scope'>Scopes guide</a> for an in-depth introduction and usage examples.",
 			"keyword": "",
 			"link": "#angularAPI/type/rootScope-Scope"
 		},

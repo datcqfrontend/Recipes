@@ -142,6 +142,19 @@ app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $
  	};
  	//End init jumbotron-topic 	
 
+ 	$scope.gotoAnchor = function(x) {
+      var newHash = x;
+      if ($location.hash() !== newHash) {
+        // set the $location.hash to `newHash` and
+        // $anchorScroll will automatically scroll to it
+        $location.hash(x);
+      } else {
+        // call $anchorScroll() explicitly,
+        // since $location.hash hasn't changed
+        $anchorScroll();
+      }
+    };
+
  	/*console.log("Page Controller reporting for duty.");
 	  // Activates the Carousel
 	  $('.carousel').carousel({

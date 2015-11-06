@@ -2,19 +2,19 @@
 	"content":[
 		{ 
 			"title": "H5 Intro",
-			"sortContent":  "The DOCTYPE declaration for HTML5 is very simple:<div class='code-body'>&lt;!DOCTYPE html&gt;</div><br>The character encoding (charset) declaration is also very simple:<div class='code-body'>&lt;meta charset='UTF-8'&gt;</div><br>The default character encoding in HTML5 is UTF-8.",
+			"shortContent":  "The DOCTYPE declaration for HTML5 is very simple:<div class='code-body'>&lt;!DOCTYPE html&gt;</div><br>The character encoding (charset) declaration is also very simple:<div class='code-body'>&lt;meta charset='UTF-8'&gt;</div><br>The default character encoding in HTML5 is UTF-8.",
 			"keyword": "",
 			"link": "#html5/h5Intro"
 		},	
 		{ 
 			"title": "H5 Support",
-			"sortContent":  "HTML5 is supported in all modern browsers.<br>In addition, all browsers, old and new, automatically handle unrecognized elements as inline elements.<br>Because of this, you can 'teach' older browsers to handle 'unknown' HTML elements.",
+			"shortContent":  "HTML5 is supported in all modern browsers.<br>In addition, all browsers, old and new, automatically handle unrecognized elements as inline elements.<br>Because of this, you can 'teach' older browsers to handle 'unknown' HTML elements.",
 			"keyword": "",
 			"link": "#html5/h5Support"
 		},
 		{ 
 			"title": "H5 Elements",
-			"sortContent":  "List of the new HTML5 elements, and a description of what they are used for.",
+			"shortContent":  "List of the new HTML5 elements, and a description of what they are used for.",
 			"keyword": "",
 			"link": "#html5/h5Elements"
 		},	
@@ -22,19 +22,19 @@
 
 		{ 
 			"title": "H5 Semantics",
-			"sortContent":  "Semantics is the study of the meanings of words and phrases in language.<br>Semantic elements are elements with a meaning.",
+			"shortContent":  "Semantics is the study of the meanings of words and phrases in language.<br>Semantic elements are elements with a meaning.",
 			"keyword": "",
 			"link": "#html5/h5Semantics"
 		},	
 		{ 
 			"title": "H5 Migration",
-			"sortContent":  "This chapter is entirely about how to migrate from a typical HTML4 page to a typical HTML5 page. This chapter demonstrates how to convert an HTML4 page into an HTML5 page, without destroying anything of the original content or structure.",
+			"shortContent":  "This chapter is entirely about how to migrate from a typical HTML4 page to a typical HTML5 page. This chapter demonstrates how to convert an HTML4 page into an HTML5 page, without destroying anything of the original content or structure.",
 			"keyword": "",
 			"link": "#html5/h5Migration"
 		},
 		{ 
 			"title": "H5 Style Guide",
-			"sortContent":  "Web developers are often uncertain about the coding style and syntax to use in HTML.<br>Between 2000 and 2010, many web developers converted from HTML to XHTML.<br>With XHTML, developers were forced to write valid and 'well-formed' code.<br>HTML5 is a bit more sloppy when it comes to code validation.<br>With HTML5, you must create your own Best Practice, Style Guide and Coding Conventions.",
+			"shortContent":  "Web developers are often uncertain about the coding style and syntax to use in HTML.<br>Between 2000 and 2010, many web developers converted from HTML to XHTML.<br>With XHTML, developers were forced to write valid and 'well-formed' code.<br>HTML5 is a bit more sloppy when it comes to code validation.<br>With HTML5, you must create your own Best Practice, Style Guide and Coding Conventions.",
 			"keyword": "",
 			"link": "#html5/h5StyleGuide"
 		},	
@@ -42,19 +42,19 @@
 
 		{ 
 			"title": "H5 Canvas",
-			"sortContent":  "The HTML &lt;canvas&gt; element is used to draw graphics on a web page.<br>The graphic to the left is created with &lt;canvas&gt;. It shows four elements: a red rectangle, a gradient rectangle, a multicolor rectangle, and a multicolor text.",
+			"shortContent":  "The HTML &lt;canvas&gt; element is used to draw graphics on a web page.<br>The graphic to the left is created with &lt;canvas&gt;. It shows four elements: a red rectangle, a gradient rectangle, a multicolor rectangle, and a multicolor text.",
 			"keyword": "",
 			"link": "#html5/h5Canvas"
 		},	
 		{ 
 			"title": "H5 SVG",
-			"sortContent":  "<ul><li>SVG stands for Scalable Vector Graphics</li><li>SVG is used to define graphics for the Web</li><li>SVG is a W3C recommendation</li></ul>",
+			"shortContent":  "<ul><li>SVG stands for Scalable Vector Graphics</li><li>SVG is used to define graphics for the Web</li><li>SVG is a W3C recommendation</li></ul>",
 			"keyword": "",
 			"link": "#html5/h5SVG"
 		},
 		{ 
 			"title": "H5 Media",
-			"sortContent":  "Multimedia on the web, is sound, music, videos, movies, and animations.",
+			"shortContent":  "Multimedia on the web, is sound, music, videos, movies, and animations.",
 			"keyword": "",
 			"link": "#html5/h5Media"
 		},	
@@ -62,19 +62,19 @@
 
 		{ 
 			"title": "H5 Video",
-			"sortContent":  "Before HTML5, there was no standard for showing videos on a web page.<br>Before HTML5, videos could only be played with a plug-in (like flash).<br>The HTML5 &lt;video&gt; element specifies a standard way to embed a video in a web page.",
+			"shortContent":  "Before HTML5, there was no standard for showing videos on a web page.<br>Before HTML5, videos could only be played with a plug-in (like flash).<br>The HTML5 &lt;video&gt; element specifies a standard way to embed a video in a web page.",
 			"keyword": "",
 			"link": "#html5/h5Video"
 		},	
 		{ 
 			"title": "H5 Audio",
-			"sortContent":  "Before HTML5, there was no standard for playing audio files on a web page.<br>Before HTML5, audio files could only be played with a plug-in (like flash).<br>The HTML5 &lt;audio&gt; element specifies a standard way to embed audio in a web page.",
+			"shortContent":  "Before HTML5, there was no standard for playing audio files on a web page.<br>Before HTML5, audio files could only be played with a plug-in (like flash).<br>The HTML5 &lt;audio&gt; element specifies a standard way to embed audio in a web page.",
 			"keyword": "",
 			"link": "#html5/h5Audio"
 		},
 		{ 
 			"title": "H5 Plugins",
-			"sortContent":  "The purpose of a plug-in, is to extend the functionality of the HTML browser.",
+			"shortContent":  "The purpose of a plug-in, is to extend the functionality of the HTML browser.",
 			"keyword": "",
 			"link": "#html5/h5Plugins"
 		},	
@@ -83,19 +83,19 @@
 
 		{ 
 			"title": "H5 Youtube",
-			"sortContent":  "The easiest way to play videos in HTML, is to use YouTube.",
+			"shortContent":  "The easiest way to play videos in HTML, is to use YouTube.",
 			"keyword": "",
 			"link": "#html5/h5Youtube"
 		},	
 		{ 
 			"title": "H5 Geolocation",
-			"sortContent":  "HTML Geolocation is used to locate a user's position.",
+			"shortContent":  "HTML Geolocation is used to locate a user's position.",
 			"keyword": "",
 			"link": "#html5/h5Geolocation"
 		},
 		{ 
 			"title": "H5 Drag/Drop",
-			"sortContent":  "Drag and drop is a very common feature. It is when you 'grab' an object and drag it to a different location.<br>In HTML5, drag and drop is part of the standard, and any element can be draggable.",
+			"shortContent":  "Drag and drop is a very common feature. It is when you 'grab' an object and drag it to a different location.<br>In HTML5, drag and drop is part of the standard, and any element can be draggable.",
 			"keyword": "",
 			"link": "#html5/h5DragDrop"
 		},	
@@ -103,19 +103,19 @@
 
 		{ 
 			"title": "H5 Local Storage",
-			"sortContent":  "With local storage, web applications can store data locally within the user's browser.<br>Before HTML5, application data had to be stored in cookies, included in every server request. Local storage is more secure, and large amounts of data can be stored locally, without affecting website performance.<br>Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.<br>Local storage is per domain. All pages, from one domain, can store and access the same data.",
+			"shortContent":  "With local storage, web applications can store data locally within the user's browser.<br>Before HTML5, application data had to be stored in cookies, included in every server request. Local storage is more secure, and large amounts of data can be stored locally, without affecting website performance.<br>Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.<br>Local storage is per domain. All pages, from one domain, can store and access the same data.",
 			"keyword": "",
 			"link": "#html5/h5LocalStorage"
 		},	
 		{ 
 			"title": "H5 App Cache",
-			"sortContent":  "With application cache it is easy to make an offline version of a web application, by creating a cache manifest file.",
+			"shortContent":  "With application cache it is easy to make an offline version of a web application, by creating a cache manifest file.",
 			"keyword": "",
 			"link": "#html5/h5AppCache"
 		},
 		{ 
 			"title": "H5 Web Workers",
-			"sortContent":  "When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.<br>A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.",
+			"shortContent":  "When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.<br>A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.",
 			"keyword": "",
 			"link": "#html5/h5WebWorkers"
 		},	
@@ -123,7 +123,7 @@
 
 		{ 
 			"title": "H5 SSE",
-			"sortContent":  "A server-sent event is when a web page automatically gets updates from a server.<br>This was also possible before, but the web page would have to ask if any updates were available. With server-sent events, the updates come automatically.<br>Examples: Facebook/Twitter updates, stock price updates, news feeds, sport results, etc.",
+			"shortContent":  "A server-sent event is when a web page automatically gets updates from a server.<br>This was also possible before, but the web page would have to ask if any updates were available. With server-sent events, the updates come automatically.<br>Examples: Facebook/Twitter updates, stock price updates, news feeds, sport results, etc.",
 			"keyword": "",
 			"link": "#html5/h5SSE"
 		},	

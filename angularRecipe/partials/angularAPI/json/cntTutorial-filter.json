@@ -2,24 +2,24 @@
 	"content":[
 		{ 	"type": "subheader", 
 			"title": "Filter: ",
-			"sortContent": ""
+			"shortContent": ""
 		},
 
 		{ 
 			"title": "filter",
-			"sortContent": "Selects a subset of items from <code>array</code> and returns it as a new array.",
+			"shortContent": "Selects a subset of items from <code>array</code> and returns it as a new array.",
 			"keyword": "",
 			"link": "#angularAPI/filter/filter"
 		},
 		{ 
 			"title": "currency",
-			"sortContent": "Formats a number as a currency (ie $1,234.56). When no currency symbol is provided, default symbol for current locale is used.",
+			"shortContent": "Formats a number as a currency (ie $1,234.56). When no currency symbol is provided, default symbol for current locale is used.",
 			"keyword": "",
 			"link": "#angularAPI/filter/currency"
 		},
 		{ 
 			"title": "number",
-			"sortContent": "Formats a number as text.",
+			"shortContent": "Formats a number as text.",
 			"keyword": "",
 			"link": "#angularAPI/filter/number"
 		},
@@ -27,19 +27,19 @@
 
 		{ 
 			"title": "date",
-			"sortContent": "Formats <code>date</code> to a string based on the requested <code>format</code>.",
+			"shortContent": "Formats <code>date</code> to a string based on the requested <code>format</code>.",
 			"keyword": "",
 			"link": "#angularAPI/filter/date"
 		},
 		{ 
 			"title": "json",
-			"sortContent": "Allows you to convert a JavaScript object into JSON string.",
+			"shortContent": "Allows you to convert a JavaScript object into JSON string.",
 			"keyword": "",
 			"link": "#angularAPI/filter/json"
 		},
 		{ 
 			"title": "lowercase",
-			"sortContent": "Converts string to lowercase.",
+			"shortContent": "Converts string to lowercase.",
 			"keyword": "",
 			"link": "#angularAPI/filter/lowercase"
 		},
@@ -47,19 +47,19 @@
 
 		{ 
 			"title": "uppercase",
-			"sortContent": "Converts string to uppercase.",
+			"shortContent": "Converts string to uppercase.",
 			"keyword": "",
 			"link": "#angularAPI/filter/uppercase"
 		},
 		{ 
 			"title": "limitTo",
-			"sortContent": "Creates a new array or string containing only a specified number of elements. The elements are taken from either the beginning or the end of the source array, string or number, as specified by the value and sign (positive or negative) of <code>limit</code>. If a number is used as input, it is converted to a string.",
+			"shortContent": "Creates a new array or string containing only a specified number of elements. The elements are taken from either the beginning or the end of the source array, string or number, as specified by the value and sign (positive or negative) of <code>limit</code>. If a number is used as input, it is converted to a string.",
 			"keyword": "",
 			"link": "#angularAPI/filter/limitTo"
 		},
 		{ 
 			"title": "orderBy",
-			"sortContent": "Orders a specified <code>array</code> by the <code>expression</code> predicate. It is ordered alphabetically for strings and numerically for numbers. Note: if you notice numbers are not being sorted as expected, make sure they are actually being saved as numbers and not strings.",
+			"shortContent": "Orders a specified <code>array</code> by the <code>expression</code> predicate. It is ordered alphabetically for strings and numerically for numbers. Note: if you notice numbers are not being sorted as expected, make sure they are actually being saved as numbers and not strings.",
 			"keyword": "",
 			"link": "#angularAPI/filter/orderBy"
 		},

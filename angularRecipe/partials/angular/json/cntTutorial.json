@@ -2,19 +2,19 @@
 	"content":[
 		{ 
 			"title": "Introduction",
-			"sortContent": "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
+			"shortContent": "AngularJS is a JavaScript framework. It is a library written in JavaScript. AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag.",
 			"keyword": "",
 			"link": "#angular/intro"
 		},
 		{ 
 			"title": "Expressions",
-			"sortContent": "AngularJS expressions are written inside double braces. AngularJS expressions binds data to HTML the same way as the <span class='spanRed'>ng-bind</span> directive.",
+			"shortContent": "AngularJS expressions are written inside double braces. AngularJS expressions binds data to HTML the same way as the <span class='spanRed'>ng-bind</span> directive.",
 			"keyword": "",
 			"link": "#angular/expressions"
 		},
 		{ 
 			"title": "Directives",
-			"sortContent": "AngularJS <span class='spanRed'>directives</span> are extended HTML attributes with the prefix <span class='spanRed'>ng-</span>.<br>The <span class='spanRed'>ng-app</span> directive initializes an AngularJS application.<br>The <span class='spanRed'>ng-init</span> directive initializes application data.<br>The <span class='spanRed'>ng-model</span> directive binds the value of HTML controls (input, select, textarea) to application data.",
+			"shortContent": "AngularJS <span class='spanRed'>directives</span> are extended HTML attributes with the prefix <span class='spanRed'>ng-</span>.<br>The <span class='spanRed'>ng-app</span> directive initializes an AngularJS application.<br>The <span class='spanRed'>ng-init</span> directive initializes application data.<br>The <span class='spanRed'>ng-model</span> directive binds the value of HTML controls (input, select, textarea) to application data.",
 			"keyword": "",
 			"link": "#angular/directives"
 		},
@@ -22,19 +22,19 @@
 
 		{ 
 			"title": "Controllers",								
-			"sortContent": "AngularJS applications are controlled by controllers. <br>The <span class='spanRed'>ng-controller</span> directive defines the application controller. <br>A controller is a JavaScript Object, created by a standard JavaScript object constructor.",
+			"shortContent": "AngularJS applications are controlled by controllers. <br>The <span class='spanRed'>ng-controller</span> directive defines the application controller. <br>A controller is a JavaScript Object, created by a standard JavaScript object constructor.",
 			"keyword": "",
 			"link": "#angular/controllers"
 		},
 		{ 
 			"title": "Filters",
-			"sortContent": "Filters can be added to expressions and directives using a pipe character ( '|' ). <br>AngularJS filters can be used to transform data: <span class='spanRed'>currency, filter, lowercase, orderBy, uppercase</span>.",
+			"shortContent": "Filters can be added to expressions and directives using a pipe character ( '|' ). <br>AngularJS filters can be used to transform data: <span class='spanRed'>currency, filter, lowercase, orderBy, uppercase</span>.",
 			"keyword": "",
 			"link": "#angular/filters"
 		},
 		{ 
 			"title": "Http",								
-			"sortContent": "<span class='spanRed'>$http</span> is an AngularJS service for reading data from remote servers.",
+			"shortContent": "<span class='spanRed'>$http</span> is an AngularJS service for reading data from remote servers.",
 			"keyword": "",
 			"link": "#angular/http"
 		},
@@ -42,19 +42,19 @@
 
 		{ 
 			"title": "Tables",
-			"sortContent": "The <span class='spanRed'>ng-repeat</span> directive is perfect for displaying tables.",
+			"shortContent": "The <span class='spanRed'>ng-repeat</span> directive is perfect for displaying tables.",
 			"keyword": "",
 			"link": "#angular/tables"
 		},
 		{ 
 			"title": "SQL",
-			"sortContent": "With the code from the chapter <span class='spanRed'>$http</span>, it can used to read from databases.",
+			"shortContent": "With the code from the chapter <span class='spanRed'>$http</span>, it can used to read from databases.",
 			"keyword": "",
 			"link": "#angular/sql"
 		},
 		{ 
 			"title": "DOM",
-			"sortContent": "AngularJS has directives for binding application data to the attributes of HTML DOM elements.",
+			"shortContent": "AngularJS has directives for binding application data to the attributes of HTML DOM elements.",
 			"keyword": "",
 			"link": "#angular/dom"
 		},
@@ -62,19 +62,19 @@
 
 		{ 
 			"title": "Events",
-			"sortContent": "AngularJS has its own HTML events directives.",
+			"shortContent": "AngularJS has its own HTML events directives.",
 			"keyword": "",
 			"link": "#angular/events"
 		},
 		{ 
 			"title": "Modules",
-			"sortContent": "An AngularJS module defines an application.<br>A module is a container for the different parts of an application.<br>All application controllers should belong to a module.",
+			"shortContent": "An AngularJS module defines an application.<br>A module is a container for the different parts of an application.<br>All application controllers should belong to a module.",
 			"keyword": "",
 			"link": "#angular/modules"
 		},
 		{ 
 			"title": "Forms",
-			"sortContent": "An AngularJS form is a collection of input controls.",
+			"shortContent": "An AngularJS form is a collection of input controls.",
 			"keyword": "",
 			"link": "#angular/forms"
 		},
@@ -82,19 +82,19 @@
 
 		{ 
 			"title": "Validation",
-			"sortContent": "AngularJS forms and controls can validate input data.",
+			"shortContent": "AngularJS forms and controls can validate input data.",
 			"keyword": "",
 			"link": "#angular/validation"
 		},
 		{ 
 			"title": "API",
-			"sortContent": "The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:<ul><li>Comparing objects</li><li>Iterating objects</li><li>Converting data</li></ul> The Global API functions are accessed using the angular object.",
+			"shortContent": "The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:<ul><li>Comparing objects</li><li>Iterating objects</li><li>Converting data</li></ul> The Global API functions are accessed using the angular object.",
 			"keyword": "",
 			"link": "#angular/api"
 		},
 		{ 
 			"title": "Bootstrap",
-			"sortContent": "Bootstrap is a popular style sheet. This chapter demonstrates how to use it with AngularJS.",
+			"shortContent": "Bootstrap is a popular style sheet. This chapter demonstrates how to use it with AngularJS.",
 			"keyword": "",
 			"link": "#angular/bootstrap"
 		},
@@ -102,20 +102,20 @@
 
 		{ 
 			"title": "Includes",
-			"sortContent": "With AngularJS, you can include HTML content, using the <span class='spanRed'>ng-include</span> directive",
+			"shortContent": "With AngularJS, you can include HTML content, using the <span class='spanRed'>ng-include</span> directive",
 			"keyword": "",
 			"link": "#angular/includes"
 		},
 		{ 
 			"title": "Application",
-			"sortContent": "It is time to create a real AngularJS Single Page Application (SPA).",
+			"shortContent": "It is time to create a real AngularJS Single Page Application (SPA).",
 			"keyword": "",
 			"link": "#angular/application"
 		}
 		,
 		{ 
 			"title": "References",
-			"sortContent": "AngularJS References.",
+			"shortContent": "AngularJS References.",
 			"keyword": "",
 			"link": "#angular/references"
 		}

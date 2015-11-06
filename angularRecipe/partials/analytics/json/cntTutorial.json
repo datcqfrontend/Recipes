@@ -2,7 +2,7 @@
 	"content":[
 		{ 
 			"title": "Introduction",
-			"sortContent":  "Analytics.js is a JavaScript library for measuring how users interact with your website. It is similar to the previous tracking library, ga.js, but offers more flexibility for developers to customize their implementations.",
+			"shortContent":  "Analytics.js is a JavaScript library for measuring how users interact with your website. It is similar to the previous tracking library, ga.js, but offers more flexibility for developers to customize their implementations.",
 			"keyword": "",
 			"link": "#analytics/intro"
 		},
@@ -10,23 +10,23 @@
 		{ 
 			"type": "header",
 			"title": "Fundamentals",
-			"sortContent":  ""					
+			"shortContent":  ""					
 		},
 		{ 
 			"title": "Advanced Configuration",
-			"sortContent":  "This document provides an overview of the analytics.js collection library.",
+			"shortContent":  "This document provides an overview of the analytics.js collection library.",
 			"keyword": "",
 			"link": "#analytics/advanced"
 		},
 		{ 
 			"title": "App / Screen Tracking",
-			"sortContent":  "This guide describes how to use screen tracking with analytics.js",
+			"shortContent":  "This guide describes how to use screen tracking with analytics.js",
 			"keyword": "",
 			"link": "#analytics/screen"
 		},	
 		{ 
 			"title": "Cross Domain Tracking",
-			"sortContent":  "This guide describes how to track users across domains (cross domain tracking) using analytics.js.",
+			"shortContent":  "This guide describes how to track users across domains (cross domain tracking) using analytics.js.",
 			"keyword": "",
 			"link": "#analytics/crossDomainTracking"
 		},				
@@ -34,19 +34,19 @@
 
 		{ 
 			"title": "Custom Dimensions & Metrics",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/customDimensionsMetrics"
 		},
 		{ 
 			"title": "Display Features",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/displayFeatures"
 		},	
 		{ 
 			"title": "Domains & Cookies",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/domainsCookies"
 		},				
@@ -54,19 +54,19 @@
 
 		{ 
 			"title": "Ecommerce",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/ecommerce"
 		},
 		{ 
 			"title": "Enhanced Ecommerce",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/enhancedEcommerce"
 		},	
 		{ 
 			"title": "Event Tracking",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/eventTracking"
 		},				
@@ -74,19 +74,19 @@
 
 		{ 
 			"title": "Exception Tracking",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/exceptionTracking"
 		},
 		{ 
 			"title": "Experiments",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/experiments"
 		},	
 		{ 
 			"title": "Page Tracking",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/pageTracking"
 		},				
@@ -94,19 +94,19 @@
 
 		{ 
 			"title": "Plugins",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/plugins"
 		},
 		{ 
 			"title": "Social Interactions",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/socialInteractions"
 		},	
 		{ 
 			"title": "Tasks",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/tasks"
 		},				
@@ -114,13 +114,13 @@
 
 		{ 
 			"title": "User ID",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/userId"
 		},
 		{ 
 			"title": "User Timings",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/userTimings"
 		},
@@ -129,11 +129,11 @@
 		{ 
 			"type": "header",
 			"title": "Advanced Topics",
-			"sortContent":  ""					
+			"shortContent":  ""					
 		},
 		{ 
 			"title": "Single Page Applications",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/singlePageApplications"
 		},
@@ -142,17 +142,17 @@
 		{ 
 			"type": "header",
 			"title": "Resources",
-			"sortContent":  ""					
+			"shortContent":  ""					
 		},
 		{ 
 			"title": "Cookie Usage",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/cookieUsage"
 		},
 		{ 
 			"title": "Limits And Quotas",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/limitsQuotas"
 		},
@@ -161,11 +161,11 @@
 		{ 
 			"type": "header",
 			"title": "Reference",
-			"sortContent":  ""					
+			"shortContent":  ""					
 		},
 		{ 
 			"title": "Field Reference",
-			"sortContent":  "",
+			"shortContent":  "",
 			"keyword": "",
 			"link": "#analytics/fieldReference"
 		},
