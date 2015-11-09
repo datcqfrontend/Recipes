@@ -6,10 +6,20 @@
         <div class="row">
             <div class="col-lg-12"> 
               <ul class="list-inline">
-                <li><a href="" ng-click="gotoAnchor('overview')">#Overview</a></li>
-                <li><a href="" ng-click="gotoAnchor('variables')">#Variables</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href="" ng-click="gotoAnchor('overview')">Overview</a></li>
+                <li><a href="" ng-click="gotoAnchor('variables')">Variables</a></li>
+                <li><a href="" ng-click="gotoAnchor('extend')">Extend</a></li>
+                <li><a href="" ng-click="gotoAnchor('mixins')">Mixins</a></li>
+                <li><a href="" ng-click="gotoAnchor('parametric-mixins')">Parametric Mixins</a></li>
+                <li><a href="" ng-click="gotoAnchor('mixins-as-functions')">Mixins as Functions</a></li>
+                <li><a href="" ng-click="gotoAnchor('passing-rulesets-to-mixins')">Passing Rulesets to Mixins</a></li>
+                <li><a href="" ng-click="gotoAnchor('import-directives')">Import Directives</a></li>
+                <li><a href="" ng-click="gotoAnchor('import-options')">Import Options</a></li>
+                <li><a href="" ng-click="gotoAnchor('mixin-guards')">Mixin Guards</a></li>
+                <li><a href="" ng-click="gotoAnchor('css-guards')">CSS Guards</a></li>
+                <li><a href="" ng-click="gotoAnchor('loops')">Loops</a></li>
+                <li><a href="" ng-click="gotoAnchor('merge')">Merge</a></li>
+                <li><a href="" ng-click="gotoAnchor('parent-selectors')">Parent Selectors</a></li>
               </ul>
             </div>
         </div>
@@ -564,7 +574,7 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3>Extend</h3> </div>
+                  <div id="extend" class="panel-heading"><h3>Extend</h3> </div>
                   <div class="panel-body">  
 
                     <blockquote>Extend is a Less pseudo-class which merges the selector it is put on with ones that match what it references.</blockquote>
@@ -607,6 +617,553 @@
 
                     <p>Notice how the <code>nav ul:extend(.inline)</code> selector gets output as <code>nav ul</code> - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output (but the extend still may affect other selectors).</p>
 
+                    <h3>Extend Syntax</h3>
+                    <p>The extend is either attached to a selector or placed into a ruleset. It looks like a pseudo-class with selector parameter optionally followed by the keyword <code>all</code>:</p>
+
+                    <p>Example:</p>
+
+                    <codeBody>
+                      .a:extend(.b) {}
+                      <br>
+                      <br>// the above block does the same thing as the below block
+                      <br>.a {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(.b);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <codeBody>
+                      .c:extend(.d all) {
+                      <br>  // extends all instances of ".d" e.g. ".x.d" or ".d.x"
+                      <br>}
+                      <br>.c:extend(.d) {
+                      <br>  // extends only instances where the selector will be output as just ".d"
+                      <br>}
+                    </codeBody>
+
+                    <p>It can contain one or more classes to extend, separated by commas.</p>
+
+                    <p>Example:</p>
+                    <codeBody>
+                      .e:extend(.f) {}
+                      <br>.e:extend(.g) {}
+                      <br>
+                      <br>// the above an the below do the same thing
+                      <br>.e:extend(.f, .g) {}
+                    </codeBody>
+
+                    <h4>Extend Attached to Selector</h4>
+                    <p>Extend attached to a selector looks like an ordinary pseudo-class with selector as a parameter. A selector can contain multiple extend clauses, but all extends must be at the end of the selector.</p>
+
+                    <ul>
+                    <li>Extend after the selector: <code>pre:hover:extend(div pre)</code>.</li>
+                    <li>Space between selector and extend is allowed: <code>pre:hover :extend(div pre)</code>.</li>
+                    <li>Multiple extends are allowed: <code>pre:hover:extend(div pre):extend(.bucket tr)</code> - Note this is the same as <code>pre:hover:extend(div pre, .bucket tr)</code></li>
+                    <li>This is NOT allowed: <code>pre:hover:extend(div pre).nth-child(odd)</code>. Extend must be last.</li>
+                    </ul>
+
+                    <p>If a ruleset contains multiple selectors, any of them can have the extend keyword. Multiple selectors with extend in one ruleset:</p>
+
+                    <codeBody>
+                      .big-division,
+                      <br>.big-bag:extend(.bag),
+                      <br>.big-bucket:extend(.bucket) {
+                      <br>&nbsp;&nbsp;&nbsp;  // body
+                      <br>}
+                    </codeBody>
+
+                    <h4>Extend Inside Ruleset</h4>
+                    <p>Extend can be placed into a ruleset's body using <code>&amp;:extend(selector)</code> syntax. Placing extend into a body is a shortcut for placing it into every single selector of that ruleset.</p>
+
+                    <p>Extend inside a body:</p>
+                    <codeBody>
+                      pre:hover,
+                      <br>.some-class {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(div pre);
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>is exactly the same as adding an extend after each selector:</p>
+
+                    <codeBody>
+                      pre:hover:extend(div pre),
+                      <br>.some-class:extend(div pre) {}
+                    </codeBody>
+
+                    <h4>Extending Nested Selectors</h4>
+                    <p>Extend is able to match nested selectors. Following less:</p>
+                    <p>Example:</p>
+
+                    <codeBody>
+                      .bucket {
+                      <br>&nbsp;&nbsp;&nbsp;  tr { // nested ruleset with target selector
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>.some-class:extend(.bucket tr) {} // nested ruleset is recognized
+                    </codeBody>
+                    <br>
+                    <p>Outputs</p>
+                    <codeBody>
+                      .bucket tr,
+                      <br>.some-class {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+
+                    <p>Essentially the extend looks at the compiled css, not the original less.</p>
+
+                    <p>Example:</p>
+                    <codeBody>
+                      .bucket {
+                      <br>&nbsp;&nbsp;&nbsp;  tr & { // nested ruleset with target selector
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>.some-class:extend(tr .bucket) {} // nested ruleset is recognized
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      tr .bucket,
+                      <br>.some-class {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+
+                    <h4>Exact Matching with Extend</h4>
+                    <p>Extend by default looks for exact match between selectors. It does matter whether selector uses leading star or not. It does not matter that two nth-expressions have the same meaning, they need to have to same form in order to be matched. The only exception are quotes in attribute selector, less knows they have the same meaning and matches them.</p>
+
+                    <p>Example:</p>
+                    <codeBody>
+                      .a.class,
+                      <br>.class.a,
+                      <br>.class > .a {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>.test:extend(.class) {} // this will NOT match the any selectors above
+                    </codeBody>
+                    <br>
+
+                    <p>Leading star does matter. Selectors <code>*.class</code> and <code>.class</code> are equivalent, but extend will not match them:</p>
+
+                    <codeBody>
+                      *.class {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>.noStar:extend(.class) {} // this will NOT match the *.class selector
+                    </codeBody>
+                    <br>
+                    <p>Outputs</p>
+                    <codeBody>
+                      *.class {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Order of pseudo-classes does matter. Selectors <code>link:hover:visited</code> and <code>link:visited:hover</code> match the same set of elements, but extend treats them as different:</p>
+
+                    <codeBody>
+                      link:hover:visited {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>.selector:extend(link:visited:hover) {}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      link:hover:visited {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+
+                    <h4>nth Expression</h4>
+                    <p>Nth expression form does matter. Nth-expressions <code>1n+3</code> and <code>n+3</code> are equivalent, but extend will not match them:</p>
+
+                    <codeBody>
+                      :nth-child(1n+3) {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>.child:extend(:nth-child(n+3)) {}
+                    </codeBody>
+                    <br>
+                    
+                    <p>Outputs</p>
+                    <codeBody>
+                      .nth-child(1n+3) {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Quote type in attribute selector does not matter. All of the following are equivalent.</p>
+
+                    <codeBody>
+                      [title=identifier] {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>[title='identifier'] {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>[title="identifier"] {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>
+                      <br>.noQuote:extend([title=identifier]) {}
+                      <br>.singleQuote:extend([title='identifier']) {}
+                      <br>.doubleQuote:extend([title="identifier"]) {}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      [title=identifier],
+                      <br>.noQuote,
+                      <br>.singleQuote,
+                      <br>.doubleQuote {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>
+                      <br>[title='identifier'],
+                      <br>.noQuote,
+                      <br>.singleQuote,
+                      <br>.doubleQuote {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>
+                      <br>[title="identifier"],
+                      <br>.noQuote,
+                      <br>.singleQuote,
+                      <br>.doubleQuote {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Extend "all"</h3>
+                    <p>When you specify the all keyword last in an extend argument it tells Less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.</p>
+
+                    <p>Example:</p>
+
+                    <codeBody>
+                      .a.b.test,
+                      <br>.test.c {
+                      <br>&nbsp;&nbsp;&nbsp;  color: orange;
+                      <br>}
+                      <br>.test {
+                      <br>&nbsp;&nbsp;&nbsp;  &:hover {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: green;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>
+                      <br>.replacement:extend(.test all) {}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      .a.b.test,
+                      <br>.test.c,
+                      <br>.a.b.replacement,
+                      <br>.replacement.c {
+                      <br>&nbsp;&nbsp;&nbsp;  color: orange;
+                      <br>}
+                      <br>.test:hover,
+                      <br>.replacement:hover {
+                      <br>&nbsp;&nbsp;&nbsp;  color: green;
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>You can think of this mode of operation as essentially doing a non-destructive search and replace.</p>
+
+                    <h4>Selector Interpolation with Extend</h4>
+                    <blockquote>Extend is NOT able to match selectors with variables. If selector contains variable, extend will ignore it.</blockquote>
+
+                    <p>There is a pending feature request for this but it is not an easy change. However, extend can be attached to interpolated selector.</p>
+                    <p>Selector with variable will not be matched:</p>
+
+                    <codeBody>
+                      @variable: .bucket;
+                      <br>@{variable} { // interpolated selector
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>.some-class:extend(.bucket) {} // does nothing, no match is found
+                    </codeBody>
+                    <br>
+
+                    <p>and extend with variable in target selector matches nothing:</p>
+                    <codeBody>
+                      .bucket {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>.some-class:extend(@{variable}) {} // interpolated selector matches nothing
+                      <br>@variable: .bucket;
+                    </codeBody>
+                    <br>
+
+                    <p>Both of the previous examples compile into:</p>
+                    <codeBody>
+                      .bucket {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+
+                    <p>However, <code>:extend</code> attached to an interpolated selector works:</p>
+                    <codeBody>
+                      .bucket {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>@{variable}:extend(.bucket) {}
+                      <br>@variable: .selector;
+                    </codeBody>
+                    <br>
+
+                    <p>previous less compiles into:</p>
+                    <codeBody>
+                      .bucket, .selector {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Scoping / Extend Inside @media</h3>
+                    <p>Extend written inside a media declaration should match only selectors inside the same media declaration:</p>
+
+                    <codeBody>
+                    @media print {
+                    <br>&nbsp;&nbsp;&nbsp;  .screenClass:extend(.selector) {} // extend inside media
+                    <br>&nbsp;&nbsp;&nbsp;  .selector { // this will be matched - it is in the same media
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: black;
+                    <br>&nbsp;&nbsp;&nbsp;  }
+                    <br>}
+                    <br>.selector { // ruleset on top of style sheet - extend ignores it
+                    <br>&nbsp;&nbsp;&nbsp;  color: red;
+                    <br>}
+                    <br>@media screen {
+                    <br>&nbsp;&nbsp;&nbsp;  .selector {  // ruleset inside another media - extend ignores it
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                    <br>&nbsp;&nbsp;&nbsp;  }
+                    <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                    @media print {
+                    <br>&nbsp;&nbsp;&nbsp;  .selector,
+                    <br>&nbsp;&nbsp;&nbsp;  .screenClass { /*  ruleset inside the same media was extended */
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: black;
+                    <br>&nbsp;&nbsp;&nbsp;  }
+                    <br>}
+                    <br>.selector { /* ruleset on top of style sheet was ignored */
+                    <br>&nbsp;&nbsp;&nbsp;  color: red;
+                    <br>}
+                    <br>@media screen {
+                    <br>&nbsp;&nbsp;&nbsp;  .selector { /* ruleset inside another media was ignored */
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                    <br>&nbsp;&nbsp;&nbsp;  }
+                    <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Extend written inside a media declaration does not match selectors inside nested declaration:</p>
+
+                    <codeBody>
+                      @media screen {
+                      <br>&nbsp;&nbsp;&nbsp;  .screenClass:extend(.selector) {} // extend inside media
+                      <br>&nbsp;&nbsp;&nbsp;  @media (min-width: 1023px) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    .selector {  // ruleset inside nested media - extend ignores it
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      @media screen and (min-width: 1023px) {
+                      <br>&nbsp;&nbsp;&nbsp;  .selector { /* ruleset inside another nested media was ignored */
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Top level extend matches everything including selectors inside nested media:</p>
+
+                    <codeBody>
+                      @media screen {
+                      <br>&nbsp;&nbsp;&nbsp;  .selector {  /* ruleset inside nested media - top level extend works */
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>&nbsp;&nbsp;&nbsp;  @media (min-width: 1023px) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    .selector {  /* ruleset inside nested media - top level extend works */
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>
+                      <br>.topLevel:extend(.selector) {} /* top level extend matches everything */
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      @media screen {
+                      <br>&nbsp;&nbsp;&nbsp;  .selector,
+                      <br>&nbsp;&nbsp;&nbsp;  .topLevel { /* ruleset inside media was extended */
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>@media screen and (min-width: 1023px) {
+                      <br>&nbsp;&nbsp;&nbsp;  .selector,
+                      <br>&nbsp;&nbsp;&nbsp;  .topLevel { /* ruleset inside nested media was extended */
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+
+                    <h4>Duplication Detection</h4>
+                    <p>Currently there is no duplication detection.</p>
+                    <p>Example</p>
+
+                    <codeBody>
+                      .alert-info,
+                      <br>.widget {
+                      <br>&nbsp;&nbsp;&nbsp;  /* declarations */
+                      <br>}
+                      <br>
+                      <br>.alert:extend(.alert-info, .widget) {}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      .alert-info,
+                      .widget,
+                      .alert,
+                      .alert {
+                      <br>&nbsp;&nbsp;&nbsp;  /* declarations */
+                      <br>}
+                    </codeBody>
+
+                    <h3>Use Cases for Extend</h3>
+                    <h4>Classic Use Case</h4>
+                    <p>The classic use case is to avoid adding a base class. For example, if you have</p>
+
+                    <codeBody>
+                      .animal {
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  color: white;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>and you want to have a subtype of animal which overrides the background color then you have two options, firstly change your HTML</p>
+
+                    <codeBody>
+                      &lg;a class="animal bear"&gt;Bear&lt;/a&gt;
+                    </codeBody>
+                    <br>
+
+                    <codeBody>
+                      .animal {
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  color: white;
+                      <br>}
+                      <br>.bear {
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: brown;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>or have simplified html and use extend in your less. e.g.</p>
+
+                    <codeBody>
+                      &lg;a class="bear"&gt;Bear&lt;/a&gt;
+                    </codeBody>
+                    <br>
+
+                    <codeBody>
+                      .animal {
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  color: white;
+                      <br>}
+                      <br>.bear {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(.animal);
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: brown;
+                      <br>}
+                    </codeBody>
+
+                    <h4>Reducing CSS Size</h4>
+                    <p>Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less css being generated.</p>
+
+                    <p>Example - with mixin:</p>
+                    <codeBody>
+                      .my-inline-block() {
+                      <br>&nbsp;&nbsp;&nbsp;  display: inline-block;
+                      <br>&nbsp;&nbsp;&nbsp;  font-size: 0;
+                      <br>}
+                      <br>.thing1 {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-inline-block;
+                      <br>}
+                      <br>.thing2 {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-inline-block;
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>Outputs</p>
+                    <codeBody>
+                      .thing1 {
+                      <br>&nbsp;&nbsp;&nbsp;  display: inline-block;
+                      <br>&nbsp;&nbsp;&nbsp;  font-size: 0;
+                      <br>}
+                      <br>.thing2 {
+                      <br>&nbsp;&nbsp;&nbsp;  display: inline-block;
+                      <br>&nbsp;&nbsp;&nbsp;  font-size: 0;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Example (with extends):</p>
+                    <codeBody>
+                      .my-inline-block {
+                      <br>&nbsp;&nbsp;&nbsp;  display: inline-block;
+                      <br>&nbsp;&nbsp;&nbsp;  font-size: 0;
+                      <br>}
+                      <br>.thing1 {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(.my-inline-block);
+                      <br>}
+                      <br>.thing2 {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(.my-inline-block);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      .my-inline-block,
+                      <br>.thing1,
+                      <br>.thing2 {
+                      <br>&nbsp;&nbsp;&nbsp;  display: inline-block;
+                      <br>&nbsp;&nbsp;&nbsp;  font-size: 0;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <h4>Combining Styles / A More Advanced Mixin</h4>
+                    <p>Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks of html, but need to apply the same styles to both you can use extends to relate two areas.</p>
+                    <p>Example:</p>
+                    <codeBody>
+                      li.list > a {
+                      <br>&nbsp;&nbsp;&nbsp;  // list styles
+                      <br>}
+                      <br>button.list-style {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(li.list > a); // use the same list styles
+                      <br>}
+                    </codeBody>
                   </div>
                 </div>
             </div>            
@@ -616,10 +1173,195 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div id="mixins" class="panel-heading"><h3>Mixins</h3> </div>
                   <div class="panel-body">  
+                    <blockquote>"mix-in" properties from existing styles</blockquote>
 
-                    <p></p>
+                    <p>You can mix-in class selectors and id selectors, e.g.</p>
+
+                    <codeBody>
+                      .a, #b {
+                      <br>&nbsp;&nbsp;&nbsp;  color: red;
+                      <br>}
+                      <br>.mixin-class {
+                      <br>&nbsp;&nbsp;&nbsp;  .a();
+                      <br>}
+                      <br>.mixin-id {
+                      <br>&nbsp;&nbsp;&nbsp;  #b();
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>which results in:</p>
+                    <codeBody>
+                      .a, #b {
+                      <br>&nbsp;&nbsp;&nbsp;  color: red;
+                      <br>}
+                      <br>.mixin-class {
+                      <br>&nbsp;&nbsp;&nbsp;  color: red;
+                      <br>}
+                      <br>.mixin-id {
+                      <br>&nbsp;&nbsp;&nbsp;  color: red;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Notice that when you call the mixin, the parentheses are optional.</p
+                      >
+                    <codeBody>
+                      // these two statements do the same thing:
+                      <br>.a(); 
+                      <br>.a;
+                    </codeBody>
+
+                    <h3>Not Outputting the Mixin</h3>
+                    <p>If you want to create a mixin but you do not want that mixin to be output, you can put parentheses after it.</p>
+
+                    <codeBody>
+                      .my-mixin {
+                      <br>&nbsp;&nbsp;&nbsp;  color: black;
+                      <br>}
+                      <br><spanYellow>.my-other-mixin()</spanYellow> {
+                      <br>&nbsp;&nbsp;&nbsp;  background: white;
+                      <br>}
+                      <br>.class {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-mixin;
+                      <br>&nbsp;&nbsp;&nbsp;  .my-other-mixin;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      .my-mixin {
+                      <br>&nbsp;&nbsp;&nbsp;  color: black;
+                      <br>}
+                      <br>.class {
+                      <br>&nbsp;&nbsp;&nbsp;  color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  background: white;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Selectors in Mixins</h3>
+                    <p>Mixins can contain more than just properties, they can contain selectors too.</p>
+                    <p>For example:</p>
+
+                    <codeBody>
+                      .my-hover-mixin() {
+                      <br>&nbsp;&nbsp;&nbsp;  &:hover {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    border: 1px solid red;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>button {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-hover-mixin();
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      button:hover {
+                      <br>&nbsp;&nbsp;&nbsp;  border: 1px solid red;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Namespaces</h3>
+                    <p>If you want to mixin properties inside a more complicated selector, you can stack up multiple id's or classes.</p>
+
+                    <codeBody>
+                      #outer {
+                      <br>&nbsp;&nbsp;&nbsp;  .inner {
+                      <br>&nbsp;&nbsp;&nbsp;    color: red;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>
+                      <br>.c {
+                      <br>&nbsp;&nbsp;&nbsp;  #outer > .inner;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>and again both > and whitespace are optional</p>
+
+                    <codeBody>
+                      // all do the same thing
+                      <br>#outer > .inner;
+                      <br>#outer > .inner();
+                      <br>#outer .inner;
+                      <br>#outer .inner();
+                      <br>#outer.inner;
+                      <br>#outer.inner();
+                    </codeBody>
+                    <br>
+
+                    <p>One use of this is known as namespacing. You can put your mixins under a id selector and this makes sure it won't conflict with another library.</p>
+
+                    <p>Example:</p>
+                    <codeBody>
+                      #my-library {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-mixin() {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>// which can be used like this
+                      <br>.class {
+                      <br>&nbsp;&nbsp;&nbsp;  #my-library > .my-mixin();
+                      <br>}
+                    </codeBody>
+
+                    <h3>Guarded Namespaces</h3>
+                    <p>If namespace have a guard, mixins defined by it are used only if guard condition returns true. Namespace guard is evaluated exactly the same way as guard on mixin, so next two mixins work the same way:</p>
+
+                    <codeBody>
+                      #namespace when (@mode=huge) {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin() { /* */ }
+                      <br>}
+                      <br>
+                      <br>#namespace {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin() when (@mode=huge) { /* */ }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>The <code>default</code> function is assumed to have the same value for all nested namespaces and mixin. Following mixin is never evaluated, one of its guards is guaranteed to be false:</p>
+
+                    <codeBody>
+                      #sp_1 when (default()) {
+                      <br>&nbsp;&nbsp;&nbsp;  #sp_2 when (default()) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    .mixin() when not(default()) { /* */ }
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+
+                    <h3>The <code>!important</code> keyword</h3>
+                    <p>Use the <code>!important</code> keyword after mixin call to mark all properties inherited by it as <code>!important</code>:</p>
+                    
+                    <p>Example:</p>
+                    <codeBody>
+                      .foo (@bg: #f5f5f5, @color: #900) {
+                      <br>&nbsp;&nbsp;&nbsp;  background: @bg;
+                      <br>&nbsp;&nbsp;&nbsp;  color: @color;
+                      <br>}
+                      <br>.unimportant {
+                      <br>&nbsp;&nbsp;&nbsp;  .foo();
+                      <br>}
+                      <br>.important {
+                      <br>&nbsp;&nbsp;&nbsp;  .foo() !important;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Results in:</p>
+                    <codeBody>
+                      .unimportant {
+                      <br>&nbsp;&nbsp;&nbsp;  background: #f5f5f5;
+                      <br>&nbsp;&nbsp;&nbsp;  color: #900;
+                      <br>}
+                      <br>.important {
+                      <br>&nbsp;&nbsp;&nbsp;  background: #f5f5f5 !important;
+                      <br>&nbsp;&nbsp;&nbsp;  color: #900 !important;
+                      <br>}
+                    </codeBody>
 
                   </div>
                 </div>
@@ -630,10 +1372,268 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div id="parametric-mixins" class="panel-heading"><h3>Parametric Mixins</h3> </div>
                   <div class="panel-body">  
+                    <blockquote>How to pass arguments to mixins</blockquote>
 
-                    <p></p>
+                    <p>Mixins can also take arguments, which are variables passed to the block of selectors when it is mixed in.</p>
+
+                    <p>For example:</p>
+                    <codeBody>
+                      .border-radius(@radius) {
+                      <br>&nbsp;&nbsp;&nbsp;  -webkit-border-radius: @radius;
+                      <br>&nbsp;&nbsp;&nbsp;     -moz-border-radius: @radius;
+                      <br>&nbsp;&nbsp;&nbsp;          border-radius: @radius;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>And here's how we can mix it into various rulesets:</p>
+
+                    <codeBody>
+                      #header {
+                      <br>&nbsp;&nbsp;&nbsp;  .border-radius(4px);
+                      <br>}
+                      <br>.button {
+                      <br>&nbsp;&nbsp;&nbsp;  .border-radius(6px);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Parametric mixins can also have default values for their parameters:</p>
+                    <codeBody>
+                      .border-radius(@radius: 5px) {
+                      <br>&nbsp;&nbsp;&nbsp;  -webkit-border-radius: @radius;
+                      <br>&nbsp;&nbsp;&nbsp;     -moz-border-radius: @radius;
+                      <br>&nbsp;&nbsp;&nbsp;          border-radius: @radius;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>We can invoke it like this now:</p>
+                    <codeBody>
+                      #header {
+                      <br>&nbsp;&nbsp;&nbsp;  .border-radius;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>And it will include a 5px border-radius.</p>
+                    <p>You can also use parametric mixins which don't take parameters. This is useful if you want to hide the ruleset from the CSS output, but want to include its properties in other rulesets:</p>
+
+                    <codeBody>
+                      .wrap() {
+                      <br>&nbsp;&nbsp;&nbsp;  text-wrap: wrap;
+                      <br>&nbsp;&nbsp;&nbsp;  white-space: -moz-pre-wrap;
+                      <br>&nbsp;&nbsp;&nbsp;  white-space: pre-wrap;
+                      <br>&nbsp;&nbsp;&nbsp;  word-wrap: break-word;
+                      <br>}
+                      <br>
+                      <br>pre { .wrap }
+                    </codeBody>
+                    <br>
+
+                    <p>Which would output:</p>
+                    <codeBody>
+                      pre {
+                      <br>&nbsp;&nbsp;&nbsp;  text-wrap: wrap;
+                      <br>&nbsp;&nbsp;&nbsp;  white-space: -moz-pre-wrap;
+                      <br>&nbsp;&nbsp;&nbsp;  white-space: pre-wrap;
+                      <br>&nbsp;&nbsp;&nbsp;  word-wrap: break-word;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <h3>Mixins with Multiple Parameters</h3>
+                    <p>Parameters are either semicolon or comma separated. It is recommended to use semicolon. The symbol comma has double meaning: it can be interpreted either as a mixin parameters separator or css list separator.</p>
+
+                    <p>Using comma as mixin separator makes it impossible to create comma separated lists as an argument. On the other hand, if the compiler sees at least one semicolon inside mixin call or declaration, it assumes that arguments are separated by semicolons and all commas belong to css lists:</p>
+
+                    <ul>
+                    <li>two arguments and each contains comma separated list: <code>.name(1, 2, 3; something, else)</code>,</li>
+                    <li>three arguments and each contains one number: <code>.name(1, 2, 3)</code>,</li>
+                    <li>use dummy semicolon to create mixin call with one argument containing comma separated css list: <code>.name(1, 2, 3;)</code>,</li>
+                    <li>comma separated default value: <code>.name(@param1: red, blue;)</code>.</li>
+                    </ul>
+
+                    <p>It is legal to define multiple mixins with the same name and number of parameters. Less will use properties of all that can apply. If you used the mixin with one parameter e.g. <code>.mixin(green);</code>, then properties of all mixins with exactly one mandatory parameter will be used:</p>
+
+                    <codeBody>
+                      .mixin(@color) {
+                      <br>&nbsp;&nbsp;&nbsp;  color-1: @color;
+                      <br>}
+                      <br>.mixin(@color; @padding: 2) {
+                      <br>&nbsp;&nbsp;&nbsp;  color-2: @color;
+                      <br>&nbsp;&nbsp;&nbsp;  padding-2: @padding;
+                      <br>}
+                      <br>.mixin(@color; @padding; @margin: 2) {
+                      <br>&nbsp;&nbsp;&nbsp;  color-3: @color;
+                      <br>&nbsp;&nbsp;&nbsp;  padding-3: @padding;
+                      <br>&nbsp;&nbsp;&nbsp;  margin: @margin @margin @margin @margin;
+                      <br>}
+                      <br>.some .selector div {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin(#008000);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      .some .selector div {
+                      <br>&nbsp;&nbsp;&nbsp;  color-1: #008000;
+                      <br>&nbsp;&nbsp;&nbsp;  color-2: #008000;
+                      <br>&nbsp;&nbsp;&nbsp;  padding-2: 2;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Named Parameters</h3>
+                    <p>A mixin reference can supply parameters values by their names instead of just positions. Any parameter can be referenced by its name and they do not have to be in any special order:</p>
+
+                    <codeBody>
+                      .mixin(@color: black; @margin: 10px; @padding: 20px) {
+                      <br>&nbsp;&nbsp;&nbsp;  color: @color;
+                      <br>&nbsp;&nbsp;&nbsp;  margin: @margin;
+                      <br>&nbsp;&nbsp;&nbsp;  padding: @padding;
+                      <br>}
+                      <br>.class1 {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin(@margin: 20px; @color: #33acfe);
+                      <br>}
+                      <br>.class2 {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin(#efca44; @padding: 40px);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      .class1 {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #33acfe;
+                      <br>&nbsp;&nbsp;&nbsp;  margin: 20px;
+                      <br>&nbsp;&nbsp;&nbsp;  padding: 20px;
+                      <br>}
+                      <br>.class2 {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #efca44;
+                      <br>&nbsp;&nbsp;&nbsp;  margin: 10px;
+                      <br>&nbsp;&nbsp;&nbsp;  padding: 40px;
+                      <br>}
+                    </codeBody>
+
+                    <h3>The <code>@arguments</code> Variable</h3>
+
+                    <p><code>@arguments</code> has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful if you don't want to deal with individual parameters:</p>
+
+                    <codeBody>
+                      .box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000) {
+                      <br>&nbsp;&nbsp;&nbsp;  -webkit-box-shadow: <spanYellow>@arguments</spanYellow>;
+                      <br>&nbsp;&nbsp;&nbsp;     -moz-box-shadow: <spanYellow>@arguments</spanYellow>;
+                      <br>&nbsp;&nbsp;&nbsp;          box-shadow: <spanYellow>@arguments</spanYellow>;
+                      <br>}
+                      <br>.big-block {
+                      <br>&nbsp;&nbsp;&nbsp;  .box-shadow(2px; 5px);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Which results in:</p>
+                    <codeBody>
+                      .big-block {
+                      <br>&nbsp;&nbsp;&nbsp;  -webkit-box-shadow: 2px 5px 1px #000;
+                      <br>&nbsp;&nbsp;&nbsp;     -moz-box-shadow: 2px 5px 1px #000;
+                      <br>&nbsp;&nbsp;&nbsp;          box-shadow: 2px 5px 1px #000;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Advanced Arguments and the <code>@rest</code> Variable</h3>
+
+                    <p>You can use <code>...</code> if you want your mixin to take a variable number of arguments. Using this after a variable name will assign those arguments to the variable.</p>
+
+                    <codeBody>
+                      .mixin(...) {        // matches 0-N arguments
+                      <br>.mixin() {           // matches exactly 0 arguments
+                      <br>.mixin(@a: 1) {      // matches 0-1 arguments
+                      <br>.mixin(@a: 1; ...) { // matches 0-N arguments
+                      <br>.mixin(@a; ...) {    // matches 1-N arguments
+                    </codeBody>
+                    <br>
+
+                    <p>Furthermore:</p>
+                    <codeBody>
+                      .mixin(@a; @rest...) {
+                      <br>&nbsp;&nbsp;&nbsp;   // @rest is bound to arguments after @a
+                      <br>&nbsp;&nbsp;&nbsp;   // @arguments is bound to all arguments
+                      <br>}
+                    </codeBody>
+
+                    <h3>Pattern-matching</h3>
+                    <p>Sometimes, you may want to change the behavior of a mixin, based on the parameters you pass to it. Let's start with something basic:</p>
+                    <codeBody>
+                      .mixin(@s; @color) { ... }
+                      <br>
+                      <br>.class {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin(@switch; #888);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Now let's say we want <code>.mixin</code> to behave differently, based on the value of <code>@switch</code>, we could define <code>.mixin</code> as such:</p>
+
+                    <codeBody>
+                      .mixin(dark; @color) {
+                      <br>&nbsp;&nbsp;&nbsp;  color: darken(@color, 10%);
+                      <br>}
+                      <br>.mixin(light; @color) {
+                      <br>&nbsp;&nbsp;&nbsp;  color: lighten(@color, 10%);
+                      <br>}
+                      <br>.mixin(@_; @color) {
+                      <br>&nbsp;&nbsp;&nbsp;  display: block;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Now, if we run:</p>
+                    <codeBody>
+                      @switch: light;
+                      <br>
+                      <br>.class {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin(@switch; #888);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>We will get the following CSS:</p>
+                    <codeBody>
+                      .class {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #a2a2a2;
+                      <br>&nbsp;&nbsp;&nbsp;  display: block;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Where the color passed to <code>.mixin</code> was lightened. If the value of <code>@switch</code> was <code>dark</code>, the result would be a darker color.</p>
+
+                    <p>Here's what happened:</p>
+                    <ul>
+                    <li>The first mixin definition didn't match because it expected <code>dark</code> as the first argument.</li>
+                    <li>The second mixin definition matched, because it expected <code>light</code>.</li>
+                    <li>The third mixin definition matched because it expected any value.</li>
+                    </ul>
+
+                    <p>Only mixin definitions which matched were used. Variables match and bind to any value. Anything other than a variable matches only with a value equal to itself.</p>
+
+                    <p>We can also match on arity, here's an example:</p>
+
+                    <codeBody>
+                      .mixin(@a) {
+                      <br>&nbsp;&nbsp;&nbsp;  color: @a;
+                      <br>}
+                      <br>.mixin(@a; @b) {
+                      <br>&nbsp;&nbsp;&nbsp;  color: fade(@a; @b);
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Now if we call <code>.mixin</code> with a single argument, we will get the output of the first definition,
+                    but if we call it with <em>two</em> arguments, we will get the second definition, namely <code>@a</code> faded to <code>@b</code>.</p>
 
                   </div>
                 </div>
@@ -644,11 +1644,483 @@
         <div class="row">
             <div class="col-lg-12">                
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h3></h3> </div>
+                  <div id="mixins-as-functions" class="panel-heading"><h3>Mixins as Functions</h3> </div>
                   <div class="panel-body">  
+                    <blockquote>Return variables or mixins from mixins</blockquote>
 
-                    <p></p>
+                    <p>Variables and mixins defined in a mixin are visible and can be used in caller's scope. There is only one exception, variable is not copied if the caller contains a variable with the same name (that includes variables defined by another mixin call). Only variables present in callers local scope are protected. Variables inherited from parent scopes are overridden.</p>
+                    <p>Example:</p>
 
+                    <codeBody>
+                      .mixin() {
+                      <br>&nbsp;&nbsp;&nbsp;  @width:  100%;
+                      <br>&nbsp;&nbsp;&nbsp;  @height: 200px;
+                      <br>}
+                      <br>
+                      <br>.caller {
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin();
+                      <br>&nbsp;&nbsp;&nbsp;  width:  @width;
+                      <br>&nbsp;&nbsp;&nbsp;  height: @height;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Results in:</p>
+                    <codeBody>
+                      .caller {
+                      <br>&nbsp;&nbsp;&nbsp;  width:  100%;
+                      <br>&nbsp;&nbsp;&nbsp;  height: 200px;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Thus variables defined in a mixin can act as its return values. This allows us to create a mixin that can be used almost like a function.</p>
+                    
+                    <p>Example:</p>
+                    <codeBody>
+                      .average(@x, @y) {
+                      <br>&nbsp;&nbsp;&nbsp;  @average: ((@x + @y) / 2);
+                      <br>}
+                      <br>
+                      <br>div {
+                      <br>&nbsp;&nbsp;&nbsp;  .average(16px, 50px); // "call" the mixin
+                      <br>&nbsp;&nbsp;&nbsp;  padding: @average;    // use its "return" value
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Results in:</p>
+                    <codeBody>
+                      div {
+                      <br>&nbsp;&nbsp;&nbsp;  padding: 33px;
+                      <br>}
+                    </codeBody>
+
+                    <p>Variables defined directly in callers scope cannot be overridden. However, variables defined in callers parent scope is not protected and will be overridden:</p>
+
+                    <codeBody>
+                      .mixin() {
+                      <br>&nbsp;&nbsp;&nbsp;  @size: in-mixin;
+                      <br>&nbsp;&nbsp;&nbsp;  @definedOnlyInMixin: in-mixin;
+                      <br>}
+                      <br>
+                      <br>.class {
+                      <br>&nbsp;&nbsp;&nbsp;  margin: @size @definedOnlyInMixin;
+                      <br>&nbsp;&nbsp;&nbsp;  .mixin();
+                      <br>}
+                      <br>
+                      <br>@size: globaly-defined-value; // callers parent scope - no protection
+                    </codeBody>  
+
+                    <p>Results in:</p>
+                    <codeBody>
+                      .class {
+                      <br>  margin: in-mixin in-mixin;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Finally, mixin defined in mixin acts as return value too:</p>
+                    <codeBody>
+                      .unlock(@value) { // outer mixin
+                      <br>&nbsp;&nbsp;&nbsp;  .doSomething() { // nested mixin
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    declaration: @value;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>
+                      <br>#namespace {
+                      <br>&nbsp;&nbsp;&nbsp;  .unlock(5); // unlock doSomething mixin
+                      <br>&nbsp;&nbsp;&nbsp;  .doSomething(); //nested mixin was copied here and is usable
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Results in:</p>
+                    <codeBody>
+                      #namespace {
+                      <br>&nbsp;&nbsp;&nbsp;  declaration: 5;
+                      <br>}
+                    </codeBody>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="passing-rulesets-to-mixins" class="panel-heading"><h3>Passing Rulesets to Mixins</h3> </div>
+                  <div class="panel-body">  
+                    <blockquote>Allow wrapping of a css block, defined in a mixin</blockquote>
+                    <p>Released v1.7.0</p>
+
+                    <p>A detached ruleset is a group of css properties, nested rulesets, media declarations or anything else stored in a variable. You can include it into a ruleset or another structure and all its properties are going to be copied there. You can also use it as a mixin argument and pass it around as any other variable.</p>
+
+                    <p>Simple example:</p>
+
+                    <codeBody>
+                      // declare detached ruleset
+                      <br>@detached-ruleset: { background: red; };
+                      <br>
+                      <br>// use detached ruleset
+                      <br>.top {
+                      <br>&nbsp;&nbsp;&nbsp;    @detached-ruleset(); 
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      .top {
+                      <br>&nbsp;&nbsp;&nbsp;  background: red;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Parentheses after a detached ruleset call are mandatory. The call <code>@detached-ruleset;</code> would NOT work.</p>
+
+                    <p>It is useful when you want to define a mixin that abstracts out either wrapping a piece of code in a media query or a non-supported browser class name. The rulesets can be passed to mixin so that the mixin can wrap the content, e.g.</p>
+
+                    <codeBody>
+                      .desktop-and-old-ie(@rules) {
+                      <br>&nbsp;&nbsp;&nbsp;  @media screen and (min-width: 1200) { @rules(); }
+                      <br>&nbsp;&nbsp;&nbsp;  html.lt-ie9 &                       { @rules(); }
+                      <br>}
+                      <br>
+                      <br>header {
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: blue; 
+                      <br>
+                      <br>&nbsp;&nbsp;&nbsp;  .desktop-and-old-ie({
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    background-color: red;
+                      <br>&nbsp;&nbsp;&nbsp;  });
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Here the <code>desktop-and-old-ie</code> mixin defines the media query and root class so that you can use a mixin to wrap a piece of code. This will output</p>
+
+                    <codeBody>
+                      header {
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: blue;
+                      <br>}
+                      <br>@media screen and (min-width: 1200) {
+                      <br>&nbsp;&nbsp;&nbsp;  header {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    background-color: red;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>html.lt-ie9 header {
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: red;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>A ruleset can be now assigned to a variable or passed in to a mixin and can contain the full set of less features, e.g.</p>
+
+                    <codeBody>
+                      @my-ruleset: {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-selector {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    background-color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>};
+                    </codeBody>
+                    <br>
+
+                    <p>You can even take advantage of media query bubbling, for instance</p>
+
+                    <codeBody>
+                      @my-ruleset: {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-selector {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @media tv {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      background-color: black;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>};
+                      <br>@media (orientation:portrait) {
+                      <br>&nbsp;&nbsp;&nbsp;    @my-ruleset();
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>which will output</p>
+                    <codeBody>
+                      @media (orientation: portrait) and tv {
+                      <br>&nbsp;&nbsp;&nbsp;  .my-selector {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    background-color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>A detached ruleset call unlocks (returns) all its mixins into caller the same way as mixin calls do. However, it does NOT return variables.</p>
+
+                    <p>Returned mixin:</p>
+                    <codeBody>
+                      // detached ruleset with a mixin
+                      <br>@detached-ruleset: { 
+                      <br>&nbsp;&nbsp;&nbsp;    .mixin() {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        color:blue;
+                      <br>&nbsp;&nbsp;&nbsp;    }
+                      <br>};
+                      <br>// call detached ruleset
+                      <br>.caller {
+                      <br>&nbsp;&nbsp;&nbsp;    @detached-ruleset(); 
+                      <br>&nbsp;&nbsp;&nbsp;    .mixin();
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Results in:</p>
+                    <codeBody>
+                      .caller {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Private variables:</p>
+                    <codeBody>
+                      detached-ruleset: { 
+                      <br>&nbsp;&nbsp;&nbsp;    @color:blue; // this variable is private
+                      <br>};
+                      <br>.caller {
+                      <br>&nbsp;&nbsp;&nbsp;    color: @color; // syntax error
+                      <br>}
+                    </codeBody>
+                    
+                    <h3>Scoping</h3>
+                    <p>A detached ruleset can use all variables and mixins accessible where it is defined and where it is called. Otherwise said, both definition and caller scopes are available to it. If both scopes contains the same variable or mixin, declaration scope value takes precedence.</p>
+
+                    <p>Declaration scope is the one where detached ruleset body is defined. Copying a detached ruleset from one variable into another cannot modify its scope. The ruleset does not gain access to new scopes just by being referenced there.</p>
+
+                    <p>Lastly, a detached ruleset can gain access to scope by being unlocked (imported) into it.</p>
+
+                    <h4>Definition and Caller Scope Visibility</h4>
+                    <p>A detached ruleset sees the caller's variables and mixins:</p>
+
+                    <codeBody>
+                      @detached-ruleset: {
+                      <br>&nbsp;&nbsp;&nbsp;  caller-variable: @caller-variable; // variable is undefined here
+                      <br>&nbsp;&nbsp;&nbsp;  .caller-mixin(); // mixin is undefined here
+                      <br>};
+                      <br>
+                      <br>selector {
+                      <br>&nbsp;&nbsp;&nbsp;  // use detached ruleset
+                      <br>&nbsp;&nbsp;&nbsp;  @detached-ruleset(); 
+                      <br>
+                      <br>&nbsp;&nbsp;&nbsp;  // define variable and mixin needed inside the detached ruleset
+                      <br>&nbsp;&nbsp;&nbsp;  @caller-variable: value;
+                      <br>&nbsp;&nbsp;&nbsp;  .caller-mixin() {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    variable: declaration;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      selector {
+                      <br>&nbsp;&nbsp;&nbsp;  caller-variable: value;
+                      <br>&nbsp;&nbsp;&nbsp;  variable: declaration;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Variable and mixins accessible form definition win over those available in the caller:</p>
+                    <codeBody>
+                      @variable: global;
+                      <br>@detached-ruleset: {
+                      <br>&nbsp;&nbsp;&nbsp;  // will use global variable, because it is accessible
+                      <br>&nbsp;&nbsp;&nbsp;  // from detached-ruleset definition
+                      <br>&nbsp;&nbsp;&nbsp;  variable: @variable; 
+                      <br>};
+                      <br>
+                      <br>selector {
+                      <br>&nbsp;&nbsp;&nbsp;  @detached-ruleset();
+                      <br>&nbsp;&nbsp;&nbsp;  @variable: value; // variable defined in caller - will be ignored
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      selector {
+                      <br>&nbsp;&nbsp;&nbsp;  variable: global;
+                      <br>}
+                    </codeBody>
+                    
+                    <h4>Referencing Won't Modify Detached Ruleset Scope</h4>
+                    <p>A ruleset does not gain access to new scopes just by being referenced there:</p>
+
+                    <codeBody>
+                      @detached-1: { scope-detached: @one @two; };
+                      <br>.one {
+                      <br>&nbsp;&nbsp;&nbsp;  @one: visible;
+                      <br>&nbsp;&nbsp;&nbsp;  .two {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @detached-2: @detached-1; // copying/renaming ruleset 
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @two: visible; // ruleset can not see this variable
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>
+                      <br>.use-place {
+                      <br>&nbsp;&nbsp;&nbsp;  .one > .two(); 
+                      <br>&nbsp;&nbsp;&nbsp;  @detached-2();
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>throws an error:</p>
+                    <codeBody>
+                      ERROR 1:32 The variable "@one" was not declared.
+                    </codeBody>
+                    
+                    <h4>Unlocking Will Modify Detached Ruleset Scope</h4>
+                    <p>A detached ruleset gains access by being unlocked (imported) inside a scope:</p>
+
+                    <codeBody>
+                      #space {
+                      <br>&nbsp;&nbsp;&nbsp;  .importer-1() {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @detached: { scope-detached: @variable; }; // define detached ruleset
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                      <br>
+                      <br>.importer-2() {
+                      <br>&nbsp;&nbsp;&nbsp;  @variable: value; // unlocked detached ruleset CAN see this variable
+                      <br>&nbsp;&nbsp;&nbsp;  #space > .importer-1(); // unlock/import detached ruleset
+                      <br>}
+                      <br>
+                      <br>.use-place {
+                      <br>&nbsp;&nbsp;&nbsp;  .importer-2(); // unlock/import detached ruleset second time
+                      <br>&nbsp;&nbsp;&nbsp;   @detached();
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>compiles into:</p>
+                    <codeBody>
+                      .use-place {
+                      <br>&nbsp;&nbsp;&nbsp;  scope-detached: value;
+                      <br>}
+                    </codeBody>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="import-directives" class="panel-heading"><h3>Import Directives</h3> </div>
+                  <div class="panel-body">  
+                    <blockquote>Import styles from other style sheets</blockquote>
+
+                    <p>In standard CSS, <code>@import</code> at-rules must precede all other types of rules. But Less.js doesn't care where you put <code>@import</code> statements.</p>
+
+                    <p>Example:</p>
+                    <codeBody>
+                      .foo {
+                      <br>&nbsp;&nbsp;&nbsp;  background: #900;
+                      <br>}
+                      <br>@import "this-is-valid.less";
+                    </codeBody>
+
+                    <h4>File Extensions</h4>
+                    <p><code>@import</code> statements may be treated differently by Less depending on the file extension:</p>
+                    <ul>
+                    <li>If the file has a <code>.css</code> extension it will be treated as CSS and the <code>@import</code> statement left as-is (see the <a href="#import-options-inline">inline option</a> below).</li>
+                    <li>If it has <em>any other extension</em> it will be treated as Less and imported.</li>
+                    <li>If it does not have an extension, <code>.less</code> will be appended and it will be included as a imported Less file.</li>
+                    </ul>
+
+                    <p>Examples:</p>
+                    <codeBody>
+                      @import "foo";      // foo.less is imported
+                      <br>@import "foo.less"; // foo.less is imported
+                      <br>@import "foo.php";  // foo.php imported as a less file
+                      <br>@import "foo.css";  // statement left in place, as-is
+                    </codeBody>
+                    <br>
+
+                    <p>The following options can be used to override this behavior.</p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="import-options" class="panel-heading"><h3>Import Options</h3> </div>
+                  <div class="panel-body">  
+                    
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="mixin-guards" class="panel-heading"><h3>Mixin Guards</h3> </div>
+                  <div class="panel-body">  
+                    
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="css-guards" class="panel-heading"><h3>CSS Guards</h3> </div>
+                  <div class="panel-body">  
+                    
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="loops" class="panel-heading"><h3>Loops</h3> </div>
+                  <div class="panel-body">  
+                    
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="merge" class="panel-heading"><h3>Merge</h3> </div>
+                  <div class="panel-body">  
+                    
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="parent-selectors" class="panel-heading"><h3>Parent Selectors</h3> </div>
+                  <div class="panel-body">  
+                    
                   </div>
                 </div>
             </div>            
@@ -662,5 +2134,6 @@
     <!-- /.container -->
 </div>
 <!-- /.section -->
+
 
 

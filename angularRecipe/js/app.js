@@ -99,7 +99,7 @@ app.controller('HomeCtrl', function ( $scope, $location, $http ) {
 	$('.navbar li').removeClass('active');	
 });
 
-app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $http ) {
+app.controller('PageCtrl', function ( $rootScope, $scope, $route, $routeParams, $location, $http ) {
 	window.scrollTo(0,0);
 
 	/*$('body').on('swipe',function(){
@@ -142,10 +142,14 @@ app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $
  	};
  	//End init jumbotron-topic 	
 
- 	$scope.gotoAnchor = function(x) {
-
+ 	$rootScope.gotoAnchor = function(x) {
  		//console.log($('#'+x)[0].parentNode.parentNode.offsetTop);
  		window.scrollTo(0,$('#'+x)[0].parentNode.parentNode.offsetTop-50);
+    };
+
+    $rootScope.gotoTop = function(){
+    	console.log("Top!");
+    	window.scrollTo(0,0);
     };
 
  	/*console.log("Page Controller reporting for duty.");
