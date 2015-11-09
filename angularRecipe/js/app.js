@@ -143,16 +143,9 @@ app.controller('PageCtrl', function ( $scope, $route, $routeParams, $location, $
  	//End init jumbotron-topic 	
 
  	$scope.gotoAnchor = function(x) {
-      var newHash = x;
-      if ($location.hash() !== newHash) {
-        // set the $location.hash to `newHash` and
-        // $anchorScroll will automatically scroll to it
-        $location.hash(x);
-      } else {
-        // call $anchorScroll() explicitly,
-        // since $location.hash hasn't changed
-        $anchorScroll();
-      }
+
+ 		//console.log($('#'+x)[0].parentNode.parentNode.offsetTop);
+ 		window.scrollTo(0,$('#'+x)[0].parentNode.parentNode.offsetTop-50);
     };
 
  	/*console.log("Page Controller reporting for duty.");

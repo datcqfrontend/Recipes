@@ -1,0 +1,23 @@
+{ 
+	"content":[
+		{ 
+			"title": "Home",
+			"shortContent":  "Why use a task runner?<br>Why use Grunt?<br>How to use Grunt?",
+			"keyword": "",
+			"link": "#gruntjs/home"
+		},
+		{ 
+			"title": "Configuring tasks",
+			"shortContent":  "This guide explains how to configure tasks for your project using a Gruntfile.",
+			"keyword": "",
+			"link": "#gruntjs/config"
+		},
+		{ 
+			"title": "GruntJS Home",
+			"shortContent":  "",
+			"keyword": "",
+			"link": "#gruntjs/home"
+		},							
+		{ 	"title": "Clearfix"	}
+	]
+}

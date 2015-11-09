@@ -1,0 +1,345 @@
+<div  id="less" class="less section">
+
+    <div class="container">
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Getting Started</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable.</p>
+
+                    <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes. The quickest place for first experiments with less is our online editor <a href="http://lesscss.org/less-preview/" target="_blank">http://lesscss.org/less-preview/</a>.</p>
+
+                    <p>For example:</p>
+
+                    <codeBody>
+                      /* Variables */
+                      <br>@base: #f938ab;
+                      <br>
+                      <br>/* Functions */
+                      <br>.box-shadow(@style, @c) when (iscolor(@c)) {
+                      <br>&nbsp;&nbsp;&nbsp;  -webkit-box-shadow: @style @c;
+                      <br>&nbsp;&nbsp;&nbsp;  box-shadow:         @style @c;
+                      <br>}
+                      <br>.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+                      <br>&nbsp;&nbsp;&nbsp;  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+                      <br>}
+                      <br>/* Usage */
+                      <br>.box {
+                      <br>&nbsp;&nbsp;&nbsp;  color: saturate(@base, 5%);
+                      <br>&nbsp;&nbsp;&nbsp;  border-color: lighten(@base, 30%);
+                      <br>&nbsp;&nbsp;&nbsp;  div { .box-shadow(0 0 5px, 30%) }
+                      <br>}
+                    </codeBody>
+
+                    <br>
+
+                    <codeBody>
+                      .box {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #fe33ac;
+                      <br>&nbsp;&nbsp;&nbsp;  border-color: #fdcdea;
+                      <br>}
+                      <br>.box div {
+                      <br>&nbsp;&nbsp;&nbsp;  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                      <br>&nbsp;&nbsp;&nbsp;  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                      <br>}
+                    </codeBody>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div>       
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Using Less</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the Usage section for more detailed information.</p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Installation</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>The easiest way to install Less on the server, is via npm, the node.js package manager, as so:</p>
+
+                    <codeBody>
+                      npm install -g less
+                    </codeBody>  
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Command-line Usage</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>Once installed, you can invoke the compiler from the command-line, as such:</p>
+
+                    <codeBody>
+                      lessc styles.less
+                    </codeBody>
+                    <br>
+
+                    <p>This will output the compiled CSS to <code>stdout</code>. To save the CSS result to a file of your choice use:</p>
+                    <codeBody>
+                      lessc styles.less styles.css
+                    </codeBody>
+                    <br>
+
+                    <p>To output minified you can CSS use <code>clean-css</code> plugin. When the plugin is installed, a minified CSS output is specified with <code>--clean-css</code> option:</p>
+                    <codeBody>
+                      lessc --clean-css styles.less styles.min.css
+                    </codeBody>
+                    <br>
+
+                    <p>To see all the command line options run <code>lessc</code> without parameters or see <a href="#less/usage">Usage</a>.</p>
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Usage in Code</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>You can invoke the compiler from node, as such:</p>
+
+                    <codeBody>
+                      var less = require('less');
+                      <br>
+                      <br>less.render('.class { width: (1 + 1) }', function (e, output) {
+                      <br>&nbsp;&nbsp;&nbsp;  console.log(output.css);
+                      <br>});
+                    </codeBody>  
+                    <br>
+
+                    <p>which will output</p>
+                    <codeBody>
+                      .class {
+                      <br>&nbsp;&nbsp;&nbsp;  width: 2;
+                      <br>}
+                    </codeBody>
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Configuration</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>You may pass some options to the compiler:</p>
+
+                    <codeBody>
+                      var less = require('less');
+                      <br>
+                      <br>less.render('.class { width: (1 + 1) }',
+                      <br>&nbsp;&nbsp;&nbsp;    {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      paths: ['.', './lib'],  // Specify search paths for @import directives
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      filename: 'style.less', // Specify a filename, for better error messages
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      compress: true          // Minify CSS output
+                      <br>&nbsp;&nbsp;&nbsp;    },
+                      <br>&nbsp;&nbsp;&nbsp;    function (e, output) {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       console.log(output.css);
+                      <br>&nbsp;&nbsp;&nbsp;    });
+                    </codeBody>
+                    <br>
+                    <p>See <a href="#less/usage">Usage</a> for more information.</p>
+                  </div>  
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Third Party Tools</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>See <a href="#less/usage">Usage</a> section for details of other tools.</p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Client-side Usage</h3> </div>
+                  <div class="panel-body">  
+
+                    <blockquote>Using less.js in the browser is great for development, but it's not recommended for production</blockquote>
+
+                    <p>Client-side is the easiest way to get started and good for developing with Less, but in production, when performance and reliability is important, we recommend pre-compiling using node.js or one of the many third party tools available.</p>
+
+                    <p>To start off, link your <code>.less</code> stylesheets with the <code>rel</code> attribute set to <code>"stylesheet/less"</code>:</p>
+
+                    <codeBody>
+                      &lt;link rel="stylesheet/less" type="text/css" href="styles.less" /&gt;
+                    </codeBody>
+                    <br>
+
+                    <p>Next, download less.js and include it in a <code>&lt;script&gt;&lt;/script&gt;</code> tag in the <code>&lt;head&gt;</code> element of your page:</p>
+
+                    <codeBody>&lt;script src="less.js" type="text/javascript"&gt;&lt;/script&gt;</codeBody>
+                    <br>
+
+                    <h3>Tips:</h3>
+                    <ul>
+                      <li>Make sure you include your stylesheets before the script.</li>
+                      <li>When you link more than one <code>.less</code> stylesheet each of them is compiled independently. So any variables, mixins or namespaces you define in a stylesheet are not accessible in any other.</li>
+                      <li>Due to the same origin policy of browsers loading external resources requires enabling CORS (cross-origin resource sharing)</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Browser Options</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>Options are defined by setting them on a global <code>less</code> object before the <code>&lt;script src="less.js"&gt;&lt;/script&gt;</code>:</p>
+
+                    <codeBody>
+                      &lt;!-- set options before less.js script --&gt;
+                      <br>&lt;script&gt;
+                      <br>&nbsp;&nbsp;&nbsp;  less = {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    env: "development",
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    async: false,
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    fileAsync: false,
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    poll: 1000,
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    functions: {},
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    dumpLineNumbers: "comments",
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    relativeUrls: false,
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    rootpath: ":/a.com/"
+                      <br>&nbsp;&nbsp;&nbsp;  };
+                      <br>&lt;/script&gt;
+                      <br>&lt;script src="less.js"&gt;&lt;/script&gt;
+                    </codeBody>
+                    <br>
+
+                    <p>Or for brevity they can be set as attributes on the script and link tags (requires JSON.parse browser support or polyfill).</p>
+
+                    <codeBody>
+                      &lt;script src="less.js" data-poll="1000" data-relative-urls="false"&gt;&lt;/script&gt;
+                      <br>&lt;link data-dump-line-numbers="all" data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="less/styles.less"&gt;
+                    </codeBody>
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Get Less.js</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>Browser downloads: <a class="btn btn-default" href="https://raw.github.com/less/less.js/v2.5.3/dist/less.min.js">Download Less.js v2.5.3</a></p>
+
+                    <p><a href="https://github.com/less/less.js/archive/v2.5.3.zip">Download Source Code</a>: Get the latest Less.js source code by downloading it directly from GitHub.</p>
+
+                    <p>Install the Less.js project and JavaScript by running the following in the command line:</p>
+                    <codeBody>
+                      bower install less
+                    </codeBody>  
+                    <br>
+
+                    <p>Less CDN</p>
+                    <codeBody>
+                      &lt;script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"&gt;&lt;/script&gt;
+                    </codeBody>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>License FAQs</h3> </div>
+                  <div class="panel-body">  
+
+                    <p>Less.js is released under the Apache 2 License (though there are plans to dual license it). Copyright 2009-2015, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
+
+                    <p>It allows you to:
+                      <ul>
+                        <li>Freely download and use Less.js, in whole or in part, for personal, company internal or commercial purposes</li>
+                        <li>Use Less.js in packages or distributions that you create</li>
+                      </ul>
+                    </p>
+
+                    <p>It forbids you to:
+                      <ul>
+                        <li>Redistribute any piece of Less.js without proper attribution</li>
+                      </ul>
+                    </p>
+
+                    <p>It requires you to:
+                      <ul>
+                        <li>Include a copy of the license in any redistribution you may make that includes Less.js</li>
+                        <li>Provide clear attribution to The Less Core Team for any distributions that include Less.js</li>
+                      </ul>
+                    </p>
+
+                    <p>It does not require you to:
+                      <ul>
+                        <li>Include the source of Less.js itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</li>
+                        <li>Submit changes that you make to Less.js back to the Less.js project (though such feedback is encouraged)</li>
+                      </ul>
+                    </p>
+
+                    <p>The full Less.js license is located in the project repository for more information.</p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        
+        
+        <!-- /.row -->
+
+        <div ng-include='"templates/pager.html"'></div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+

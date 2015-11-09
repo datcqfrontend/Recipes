@@ -1,0 +1,666 @@
+<div  id="less" class="less section">
+
+    <div class="container">
+        <div ng-include='"templates/jumbotron-topic.html"'></div>
+
+        <div class="row">
+            <div class="col-lg-12"> 
+              <ul class="list-inline">
+                <li><a href="" ng-click="gotoAnchor('overview')">#Overview</a></li>
+                <li><a href="" ng-click="gotoAnchor('variables')">#Variables</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="overview" class="panel-heading"><h3>Overview</h3> </div>
+                  <div class="panel-body">  
+
+                    <blockquote>As an extension to CSS, Less is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning Less a breeze, and if in doubt, lets you fall back to vanilla CSS.</blockquote>
+
+                    <h3>Variables</h3>
+                    <p>
+                      These are pretty self-explanatory:
+                    </p>
+                    <codeBody>
+                      <spanYellow>@nice-blue: #5B83AD;
+                      <br>@light-blue: @nice-blue + #111;</spanYellow>
+                      <br>
+                      <br>#header {
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>color: @light-blue;</spanYellow>
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs:</p>
+                    <codeBody>
+                      #header {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #6c94be;
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>Note that variables are actually "constants" in that they can only be defined once.</p>
+
+                    <h3>Mixins</h3>
+                    <p>Mixins are a way of including ("mixing in") a bunch of properties from one rule-set into another rule-set. So say we have the following class:</p>
+
+                    <codeBody>
+                      <spanYellow>.bordered</spanYellow> {
+                      <br>&nbsp;&nbsp;&nbsp;  border-top: dotted 1px black;
+                      <br>&nbsp;&nbsp;&nbsp;  border-bottom: solid 2px black;
+                      <br>}
+                    </codeBody> 
+                    <br>
+
+                    <p>And we want to use these properties inside other rule-sets. Well, we just have to drop in the name of the class where we want the properties, like so:</p>
+
+                    <codeBody>
+                      #menu a {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #111;
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>.bordered;</spanYellow>
+                      <br>}
+                      <br>
+                      <br>.post a {
+                      <br>&nbsp;&nbsp;&nbsp;  color: red;
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>.bordered;</spanYellow>
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>The properties of the <code>.bordered</code> class will now appear in both <code>#menu a</code> and <code>.post a.</code> (Note that you can also use <code>#ids</code> as mixins.)</p>
+
+                    <h3>Nested Rules</h3>
+
+                    <p>Less gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:</p>
+
+                    <codeBody>
+                      #header {
+                      <br>&nbsp;&nbsp;&nbsp;  color: black;
+                      <br>}
+                      <br>#header .navigation {
+                      <br>&nbsp;&nbsp;&nbsp;  font-size: 12px;
+                      <br>}
+                      <br>#header .logo {
+                      <br>&nbsp;&nbsp;&nbsp;  width: 300px;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>In Less, we can also write it this way:</p>
+                    <codeBody>
+                      #header {
+                      <br>&nbsp;&nbsp;&nbsp;  color: black;
+                      <br>&nbsp;&nbsp;&nbsp;  .navigation {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    font-size: 12px;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>&nbsp;&nbsp;&nbsp;  .logo {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    width: 300px;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>The resulting code is more concise, and mimics the structure of your HTML.</p>
+
+                    <p>You can also bundle pseudo-selectors with your mixins using this method. Here's the classic clearfix hack, rewritten as a mixin (<code>&</code> represents the current selector parent):</p>
+
+                    <codeBody>
+                      .clearfix {
+                      <br>&nbsp;&nbsp;&nbsp;  display: block;
+                      <br>&nbsp;&nbsp;&nbsp;  zoom: 1;
+                      <br>
+                      <br>&nbsp;&nbsp;&nbsp;  &:after {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    content: " ";
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    display: block;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    font-size: 0;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    height: 0;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    clear: both;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    visibility: hidden;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+
+                    <h3>Nested Directives and Bubbling</h3>
+                    <p>Directives such as <code>media</code> or <code>keyframe</code> can be nested in the same way as selectors. Directive is placed on top and relative order against other elements inside the same ruleset remains unchanged. This is called bubbling.</p>
+
+                    <p>Conditional directives e.g. <code>@Media</code>, <code>@supports</code> and <code>@document</code> have also selectors copied into their bodies:</p>
+
+                    <codeBody>
+                      .screen-color {
+                    <br>&nbsp;&nbsp;&nbsp;    <spanYellow>@media screen</spanYellow> {
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      color: green;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <spanYellow>@media (min-width: 768px)</spanYellow> {
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        color: red;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      }
+                    <br>&nbsp;&nbsp;&nbsp;    }
+                    <br>&nbsp;&nbsp;&nbsp;    <spanYellow>@media tv</spanYellow> {
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      color: black;
+                    <br>&nbsp;&nbsp;&nbsp;    }
+                    <br>  }
+                    </codeBody>
+                    <br>
+                    <p>outputs:</p>
+
+                    <codeBody>
+                      <spanYellow>@media screen</spanYellow> {
+                    <br>&nbsp;&nbsp;&nbsp;    .screen-color {
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      color: green;
+                    <br>&nbsp;&nbsp;&nbsp;    }
+                    <br>  }
+                    <br>  <spanYellow>@media screen and (min-width: 768px)</spanYellow> {
+                    <br>&nbsp;&nbsp;&nbsp;    .screen-color {
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      color: red;
+                    <br>&nbsp;&nbsp;&nbsp;    }
+                    <br>  }
+                    <br>  <spanYellow>@media tv</spanYellow> {
+                    <br>&nbsp;&nbsp;&nbsp;    .screen-color {
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      color: black;
+                    <br>&nbsp;&nbsp;&nbsp;    }
+                    <br>  }
+                    </codeBody>
+                    <br>
+
+                    <p>Remaining non-conditional directives, for example <code>font-face</code> or <code>keyframes</code>, are bubbled up too. Their bodies do not change:</p>
+
+                    <codeBody>
+                      #a {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>&nbsp;&nbsp;&nbsp;  @font-face {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    src: made-up-url;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>&nbsp;&nbsp;&nbsp;  padding: 2 2 2 2;
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>outputs</p>
+
+                    <codeBody>
+                      #a {
+                      <br>&nbsp;&nbsp;&nbsp;  color: blue;
+                      <br>}
+                      <br>@font-face {
+                      <br>&nbsp;&nbsp;&nbsp;  src: made-up-url;
+                      <br>}
+                      <br>#a {
+                      <br>&nbsp;&nbsp;&nbsp;  padding: 2 2 2 2;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Operations</h3>
+                    <p>Arithmetical operations <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> can operate on any number, color or variable. If it is possible, mathematical operations take units into account and convert numbers before adding, subtracting or comparing them. The result has leftmost explicitly stated unit type. If the conversion is impossible or not meaningful, units are ignored. Example of impossible conversion: px to cm or rad to %.</p>
+
+                    <codeBody>
+                      // numbers are converted into the same units
+                      <br>@conversion-1: 5cm + 10mm; // result is 6cm
+                      <br>@conversion-2: 2 - 3cm - 5mm; // result is 1.5cm
+                      <br>
+                      <br>// conversion is impossible
+                      <br>@incompatible-units: 2 + 5px - 3cm; // result is 4px
+                      <br>
+                      <br>// example with variables
+                      <br>@base: 5%;
+                      <br>@filler: @base * 2; // result is 10%
+                      <br>@other: @base + @filler; // result is 15%
+                    </codeBody>
+                    <br>
+
+                    <p>Multiplication and division do not convert numbers. It would not be meaningful in most cases - a length multiplied by a length gives an area and css does not support specifying areas. Less will operate on numbers as they are and assign explicitly stated unit type to the result.</p>
+
+                    <codeBody>
+                      @base: 2cm * 3mm; // result is 6cm
+                    </codeBody>
+                    <br>
+
+                    <p>Colors are split into their red, green, blue and alpha dimensions. The operation is applied to each color dimension separately. E.g., if the user added two colors, then the green dimension of the result is equal to sum of green dimensions of input colors. If the user multiplied a color by a number, each color dimension will get multiplied.</p>
+
+                    <p>Note: arithmetic operation on alpha is not defined, because math operation on colors do not have standard agreed upon meaning. Do not rely on current implemention as it may change in later versions.</p>
+
+                    <p>An operation on colors always produces valid color. If some color dimension of the result ends up being bigger than ff or smaller than 00, the dimension is rounded to either ff or 00. If alpha ends up being bigger than 1.0 or smaller than 0.0, the alpha is rounded to either 1.0 or 0.0.</p>
+
+                    <codeBody>
+                      @color: #224488 / 2; //results in #112244
+                      <br>background-color: #112244 + #111; // result is #223355
+                    </codeBody>
+
+                    <h3>Escaping</h3>
+                    <p>Escaping allows you to use any arbitrary string as property or variable value. Anything inside ~"anything" or ~'anything' is used as is with no changes except interpolation.</p>
+
+                    <codeBody>
+                      .weird-element {
+                      <br>&nbsp;&nbsp;&nbsp;  content: ~"^//* some horrible but needed css hack";
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>results in:</p>
+                    <codeBody>
+                      .weird-element {
+                      <br>&nbsp;&nbsp;&nbsp;  content: ^//* some horrible but needed css hack;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Functions</h3>
+                    <p>Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.</p>
+
+                    <p>Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spun by 8 degrees:</p>
+
+                    <codeBody>
+                      <spanYellow>@base: #f04615;
+                    <br>  @width: 0.5;</spanYellow>
+                    <br>
+                    <br>  .class {
+                    <br>&nbsp;&nbsp;&nbsp;    width: <spanYellow>percentage(@width)</spanYellow>; // returns `50%`
+                    <br>&nbsp;&nbsp;&nbsp;    color: <spanYellow>saturate(@base, 5%)</spanYellow>;
+                    <br>&nbsp;&nbsp;&nbsp;    background-color: <spanYellow>spin(lighten(@base, 25%), 8)</spanYellow>;
+                    <br>  }
+                    </codeBody>
+
+                    <h3>Namespaces and Accessors</h3>
+                    <p>(Not to be confused with CSS @namespace or namespace selectors).</p>
+
+                    <p>Sometimes, you may want to group your mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in Less, say you want to bundle some mixins and variables under <code>#bundle</code>, for later reuse or distributing:</p>
+
+                    <codeBody>
+                      <spanYellow>#bundle</spanYellow> {
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>.button</spanYellow> {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    display: block;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    border: 1px solid black;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    background-color: grey;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &:hover {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      background-color: white
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>&nbsp;&nbsp;&nbsp;  .tab { ... }
+                      <br>&nbsp;&nbsp;&nbsp;  .citation { ... }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Now if we want to mixin the <code>.button</code> class in our <code>#header a</code>, we can do:</p>
+
+                    <codeBody>
+                      #header a {
+                      <br>&nbsp;&nbsp;&nbsp;  color: orange;
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>#bundle > .button</spanYellow>;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Note that variables declared within a namespace will be scoped to that namespace only and will not be available outside of the scope via the same syntax that you would use to reference a mixin (<code>#Namespace > .mixin-name</code>). So, for example, you can't do the following: (<code>#Namespace > @this-will-not-work</code>).</p>
+
+                    <h3>Scope</h3>
+                    <p>Scope in Less is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.</p>
+
+                    <codeBody>
+                      <spanYellow>@var: red;</spanYellow>
+                      <br>
+                      <br>#page {
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>@var: white;</spanYellow>
+                      <br>&nbsp;&nbsp;&nbsp;  #header {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <spanYellow>color: @var;</spanYellow> // white
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Variables and mixins do not have to be declared before being used so the following Less code is identical to the previous example:</p>
+
+                    <codeBody>
+                      <spanYellow>@var: red;</spanYellow>
+                      <br>
+                      <br>#page {
+                      <br>&nbsp;&nbsp;&nbsp;  #header {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <spanYellow>color: @var;</spanYellow> // white
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>@var: white;</spanYellow>
+                      <br>}
+                    </codeBody>
+
+                    <h3>Comments</h3>
+                    <p>Both block-style and inline comments may be used:</p>
+
+                    <codeBody>
+                      <spanYellow>/* One hell of a block
+                      <br>style comment! */</spanYellow>
+                      <br>@var: red;
+                      <br>
+                      <br><spanYellow>// Get in line!</spanYellow>
+                      <br>@var: white;
+                    </codeBody>
+
+                    <h3>Importing</h3>
+                     <p>Importing works pretty much as expected. You can import a <code>.less</code> file, and all the variables in it will be available. The extension is optionally specified for <code>.less</code> files.</p>
+
+                    <codeBody>
+                      <spanYellow>@import "library";</spanYellow> // library.less
+                      <br><spanYellow>@import "typo.css";</spanYellow>
+                    </codeBody>
+
+
+
+                  </div>
+                </div>
+            </div>            
+
+        </div>      
+        
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div id="variables" class="panel-heading"><h3>Variables</h3> </div>
+                  <div class="panel-body">  
+                    <blockquote>Control commonly used values in a single location.</blockquote>
+
+                    <h3>Overview</h3>
+                    <p>It's not uncommon to see the same value repeated dozens if not hundreds of times across your stylesheets:</p>
+
+                    <codeBody>
+                      a,
+                      <br>.link {
+                      <br>&nbsp;&nbsp;&nbsp;  color: <spanYellow>#428bca</spanYellow>;
+                      <br>}
+                      <br>.widget {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #fff;
+                      <br>&nbsp;&nbsp;&nbsp;  background: <spanYellow>#428bca</spanYellow>;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Variables make your code easier to maintain by giving you a way to control those values from a single location:</p>
+
+                    <codeBody>
+                      // Variables
+                      <br><spanYellow>@link-color:        #428bca;</spanYellow> // sea blue
+                      <br><spanYellow>@link-color-hover:  darken(@link-color, 10%);</spanYellow>
+                      <br>
+                      <br>// Usage
+                      <br>a,
+                      <br>.link {
+                      <br>&nbsp;&nbsp;&nbsp;  color: <spanYellow>@link-color</spanYellow>;
+                      <br>}
+                      <br>a:hover {
+                      <br>&nbsp;&nbsp;&nbsp;  color: <spanYellow>@link-color-hover</spanYellow>;
+                      <br>}
+                      <br>.widget {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #fff;
+                      <br>&nbsp;&nbsp;&nbsp;  background: <spanYellow>@link-color</spanYellow>;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Variable Interpolation</h3>
+                    <p>The examples above focused on using variables to control values in CSS rules, but they can also be used in other places as well, such as selector names, property names, URLs and <code>@import</code> statements.</p>
+
+                    <h4>Selectors</h4>
+                    <p>Version: 1.4.0</p>
+                    <codeBody>
+                      // Variables
+                      <br><spanYellow>@my-selector: banner;</spanYellow>
+                      <br>
+                      <br>// Usage
+                      <br><spanYellow>.@{my-selector}</spanYellow> {
+                      <br>&nbsp;&nbsp;&nbsp;  font-weight: bold;
+                      <br>&nbsp;&nbsp;&nbsp;  line-height: 40px;
+                      <br>&nbsp;&nbsp;&nbsp;  margin: 0 auto;
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>Compiles to:</p>
+                    <codeBody>
+                      <spanYellow>.banner</spanYellow> {
+                      <br>&nbsp;&nbsp;&nbsp;  font-weight: bold;
+                      <br>&nbsp;&nbsp;&nbsp;  line-height: 40px;
+                      <br>&nbsp;&nbsp;&nbsp;  margin: 0 auto;
+                      <br>}
+                    </codeBody>
+
+                    <h4>URLs</h4>
+                    <codeBody>
+                      // Variables
+                      <br><spanYellow>@images: "../img"</spanYellow>;
+                      <br>
+                      <br>// Usage
+                      <br>body {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #444;
+                      <br>&nbsp;&nbsp;&nbsp;  background: url("<spanYellow>@{images}</spanYellow>/white-sand.png");
+                      <br>}
+                    </codeBody>
+
+                    <h4>Import Statements</h4>
+                    <p>Version: 1.4.0</p>
+
+                    <p>Syntax: <code>@import "@{themes}/tidal-wave.less";</code></p>
+
+                    <p>Note that before v2.0.0, only variables which have been declared in the root or current scope were considered and that only the current file and calling files were considered when looking for a variable.</p>
+
+                    <p>Example:</p>
+
+                    <codeBody>
+                      // Variables
+                      <br><spanYellow>@themes: "../../src/themes";</spanYellow>
+                      <br>
+                      <br>// Usage
+                      <br>@import "<spanYellow>@{themes}</spanYellow>/tidal-wave.less";
+                    </codeBody>
+
+                    <h4>Properties</h4>
+                    <p>Version: 1.6.0</p>
+                    <codeBody>
+                      <spanYellow>@property: color;</spanYellow>
+                      <br>
+                      <br>.widget {
+                      <br>&nbsp;&nbsp;&nbsp;  <spanYellow>@{property}</spanYellow>: #0ee;
+                      <br>&nbsp;&nbsp;&nbsp;  background-<spanYellow>@{property}</spanYellow>: #999;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Compiles to:</p>
+                    <codeBody>
+                      .widget {
+                      <br>&nbsp;&nbsp;&nbsp;  color: #0ee;
+                      <br>&nbsp;&nbsp;&nbsp;  background-color: #999;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Variable Names</h3>
+                    <p>It is also possible to define variables with a variable name:</p>
+
+                    <codeBody>
+                      @fnord:  "I am fnord.";
+                      <br>@var:    "fnord";
+                      <br>content: <spanYellow>@@var</spanYellow>;
+                    </codeBody>
+                    <br>
+                    <codeBody>
+                      content: "I am fnord.";
+                    </codeBody>
+
+                    <h3>Lazy Loading</h3>
+                    <blockquote>Variables are lazy loaded and do not have to be declared before being used.</blockquote>
+
+                    <p>Valid Less snippet:</p>
+                    <codeBody>
+                      .lazy-eval {
+                      <br>&nbsp;&nbsp;&nbsp;  width: @var;
+                      <br>} 
+                      <br>
+                      <br>@var: @a;
+                      <br>@a: 9%;
+                    </codeBody>
+                    <br>
+                    <p>this is valid Less too:</p>
+
+                    <codeBody>
+                      .lazy-eval-scope {
+                      <br>&nbsp;&nbsp;&nbsp;  width: @var;
+                      <br>&nbsp;&nbsp;&nbsp;  @a: 9%;
+                      <br>}
+                      <br>
+                      <br>@var: @a;
+                      <br>@a: 100%;
+                    </codeBody>
+                    <br>
+                    <p>both compile into:</p>
+
+                    <codeBody>
+                      .lazy-eval-scope {
+                      <br>&nbsp;&nbsp;&nbsp;  width: 9%;
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.</p>
+
+                    <p>For instance:</p>
+                    <codeBody>
+                      @var: 0;
+                      <br>.class {
+                      <br>&nbsp;&nbsp;&nbsp;  @var: 1;
+                      <br>&nbsp;&nbsp;&nbsp;  .brass {
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @var: 2;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    three: @var;
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    @var: 3;
+                      <br>&nbsp;&nbsp;&nbsp;  }
+                      <br>&nbsp;&nbsp;&nbsp;  one: @var;
+                      <br>}
+                    </codeBody>
+                    <br>
+                    <p>Compiles to:</p>
+                    <codeBody>
+                      .class {
+                      <br>&nbsp;&nbsp;&nbsp;  one: 1;
+                      <br>}
+                      <br>.class .brass {
+                      <br>&nbsp;&nbsp;&nbsp;  three: 3;
+                      <br>}
+                    </codeBody>
+
+                    <h3>Default Variables</h3>
+                    <p>We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.</p>
+
+                    <p>For instance:</p>
+
+                    <codeBody>
+                      // library
+                      <br>@base-color: green;
+                      <br>@dark-color: darken(@base-color, 10%);
+                      <br>
+                      <br>// use of library
+                      <br>@import "library.less";
+                      <br>@base-color: red;
+                    </codeBody>
+                    <br>
+
+                    <p>This works fine because of Lazy Loading - base-color is overridden and dark-color is a dark red.</p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Extend</h3> </div>
+                  <div class="panel-body">  
+
+                    <blockquote>Extend is a Less pseudo-class which merges the selector it is put on with ones that match what it references.</blockquote>
+
+                    <p>Released v1.4.0</p>
+
+                    <codeBody>
+                      nav ul {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(.inline);
+                      <br>&nbsp;&nbsp;&nbsp;  background: blue;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>In the rule set above, the <code>:extend</code> selector will apply the "extending selector" (<code>nav ul</code>) onto the <code>.inline</code> class wherever the <code>.inline</code> class appears. The declaration block will be kept as-is, but without any reference to the extend (because extend isn't css).</p>
+
+                    <p>So the following:</p>
+                    <codeBody>
+                      nav ul {
+                      <br>&nbsp;&nbsp;&nbsp;  &:extend(.inline);
+                      <br>&nbsp;&nbsp;&nbsp;  background: blue;
+                      <br>}
+                      <br>.inline {
+                      <br>&nbsp;&nbsp;&nbsp;  color: red;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Outputs</p>
+                    <codeBody>
+                      nav ul {
+                      <br>&nbsp;&nbsp;&nbsp;  background: blue;
+                      <br>}
+                      <br>.inline,
+                      <br>nav ul {
+                      <br>&nbsp;&nbsp;&nbsp;  color: red;
+                      <br>}
+                    </codeBody>
+                    <br>
+
+                    <p>Notice how the <code>nav ul:extend(.inline)</code> selector gets output as <code>nav ul</code> - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output (but the extend still may affect other selectors).</p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+
+                    <p></p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+
+                    <p></p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <div class="row">
+            <div class="col-lg-12">                
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3></h3> </div>
+                  <div class="panel-body">  
+
+                    <p></p>
+
+                  </div>
+                </div>
+            </div>            
+
+        </div> 
+
+        <!-- /.row -->
+
+        <div ng-include='"templates/pager.html"'></div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+
